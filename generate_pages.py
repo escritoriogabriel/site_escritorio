@@ -371,7 +371,25 @@ template = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{{{TITLE}}}} | Escritório de Advocacia</title>
+    <title>{{{{TITLE}}}} | Advocacia Estratégica</title>
+    <meta name="description" content="{{{{DESCRIPTION}}}}">
+    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
+    <link rel="canonical" href="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
+    <meta property="og:title" content="{{{{TITLE}}}} | Advocacia Estratégica">
+    <meta property="og:description" content="{{{{DESCRIPTION}}}}">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
+    <meta property="twitter:title" content="{{{{TITLE}}}} | Advocacia Estratégica">
+    <meta property="twitter:description" content="{{{{DESCRIPTION}}}}">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -409,7 +427,9 @@ template = f"""<!DOCTYPE html>
         </nav>
     </header>
 
-    {{{{BODY}}}}
+    <main>
+        {{{{BODY}}}}
+    </main>
 
     <footer>
         <div class="footer-grid">
@@ -437,7 +457,7 @@ template = f"""<!DOCTYPE html>
         </div>
     </footer>
 
-    <a href="https://wa.me/5500000000000" class="whatsapp-float">
+    <a href="https://wa.me/5500000000000" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -466,7 +486,8 @@ template = f"""<!DOCTYPE html>
 pages = [
     {
         'filename': 'index.html',
-        'title': 'Início',
+        'title': 'Advocacia Estratégica | Seu Direito com Seriedade e Agilidade',
+        'description': 'Escritório de advocacia especializado em Direito Trabalhista, Previdenciário, Civil, Família, Consumidor e Empresarial. Atendimento humanizado e estratégico.',
         'body': '''
     <section class="hero">
         <h1>Seu Direito Merece Ser Defendido com Seriedade e Agilidade.</h1>
@@ -604,7 +625,8 @@ pages = [
     },
     {
         'filename': 'trabalhista.html',
-        'title': 'Direito Trabalhista',
+        'title': 'Direito Trabalhista | Especialista em Causas do Trabalho',
+        'description': 'Advogado trabalhista especializado em rescisões, horas extras, assédio moral e reconhecimento de vínculo. Defenda seus direitos trabalhistas.',
         'body': '''
     <section class="page-header">
         <h1>Seus Direitos Trabalhistas Merecem Respeito.</h1>
@@ -628,7 +650,8 @@ pages = [
     },
     {
         'filename': 'previdenciario.html',
-        'title': 'Direito Previdenciário',
+        'title': 'Direito Previdenciário | Aposentadorias e Benefícios INSS',
+        'description': 'Especialista em Direito Previdenciário. Auxílio em aposentadorias, auxílio-doença, BPC/LOAS e revisões de benefícios.',
         'body': '''
     <section class="page-header">
         <h1>Seu Benefício Pode Estar Mais Próximo do Que Você Imagina.</h1>
@@ -652,7 +675,8 @@ pages = [
     },
     {
         'filename': 'civil.html',
-        'title': 'Direito Civil',
+        'title': 'Direito Civil | Proteção de Patrimônio e Indenizações',
+        'description': 'Advocacia Civil especializada em contratos, cobranças, indenizações e responsabilidade civil. Proteja seus bens e direitos.',
         'body': '''
     <section class="page-header">
         <h1>Proteção Jurídica Para Seu Patrimônio e Seus Direitos.</h1>
@@ -675,7 +699,8 @@ pages = [
     },
     {
         'filename': 'familia.html',
-        'title': 'Direito de Família',
+        'title': 'Direito de Família | Divórcio, Guarda e Pensão',
+        'description': 'Atendimento humanizado em Direito de Família. Especialista em divórcio, pensão alimentícia, guarda e inventário.',
         'body': '''
     <section class="page-header">
         <h1>Soluções Humanizadas Para Momentos Delicados.</h1>
@@ -698,7 +723,8 @@ pages = [
     },
     {
         'filename': 'consumidor.html',
-        'title': 'Direito do Consumidor',
+        'title': 'Direito do Consumidor | Defesa contra Abusos',
+        'description': 'Proteja seus direitos como consumidor. Especialista em cobranças indevidas, negativação abusiva e problemas com produtos.',
         'body': '''
     <section class="page-header">
         <h1>Quando Seus Direitos São Violados, Nós Atuamos.</h1>
@@ -721,7 +747,8 @@ pages = [
     },
     {
         'filename': 'empresarial.html',
-        'title': 'Direito Empresarial',
+        'title': 'Direito Empresarial | Segurança Jurídica para Empresas',
+        'description': 'Consultoria jurídica empresarial. Contratos, cobranças, proteção patrimonial e recuperação de crédito para sua empresa.',
         'body': '''
     <section class="page-header">
         <h1>Segurança Jurídica Para Sua Empresa Crescer.</h1>
@@ -744,7 +771,8 @@ pages = [
     },
     {
         'filename': 'sobre.html',
-        'title': 'Sobre Nós',
+        'title': 'Sobre Nós | Advocacia Estratégica e Humanizada',
+        'description': 'Conheça nosso escritório. Oferecemos soluções jurídicas claras, seguras e personalizadas com foco em resultados para nossos clientes.',
         'body': '''
     <section class="page-header">
         <h1>Advocacia Moderna, Próxima e Eficiente.</h1>
@@ -769,7 +797,8 @@ pages = [
     },
     {
         'filename': 'depoimentos.html',
-        'title': 'Depoimentos',
+        'title': 'Depoimentos | O que nossos clientes dizem',
+        'description': 'Confira os depoimentos de quem já utilizou nossos serviços jurídicos. Resultados que geram confiança e segurança.',
         'body': '''
     <section class="page-header">
         <h1>Resultados que Geram Confiança</h1>
@@ -794,7 +823,8 @@ pages = [
     },
     {
         'filename': 'blog.html',
-        'title': 'Blog',
+        'title': 'Blog Jurídico | Informação e Direitos',
+        'description': 'Artigos e notícias sobre seus direitos. Informação jurídica sem complicação sobre trabalho, aposentadoria, família e mais.',
         'body': '''
     <section class="page-header">
         <h1>Informação Jurídica Sem Complicação</h1>
@@ -817,7 +847,8 @@ pages = [
     },
     {
         'filename': 'contato.html',
-        'title': 'Contato',
+        'title': 'Contato | Fale com um Advogado Especialista',
+        'description': 'Entre em contato conosco para uma análise inicial do seu caso. Atendimento rápido via WhatsApp, telefone ou e-mail.',
         'body': '''
     <section class="page-header">
         <h1>Fale com Nossa Equipe</h1>
@@ -862,6 +893,8 @@ pages = [
 
 for page in pages:
     content = template.replace('{{TITLE}}', page['title'])
+    content = content.replace('{{DESCRIPTION}}', page['description'])
+    content = content.replace('{{FILENAME}}', page['filename'])
     content = content.replace('{{BODY}}', page['body'])
     
     with open(page['filename'], 'w', encoding='utf-8') as f:
