@@ -6,7 +6,339 @@
     <title>Direito do Consumidor | Escritório de Advocacia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        
+:root {
+    --primary-blue: #172B41;
+    --accent-gold: #C9A961;
+    --bg-light: #F8F8F8;
+    --whatsapp-green: #25D366;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 5px 5%;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--white);
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 80px;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%;
+    border-top: 3px solid var(--accent-gold);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+}
+
+.btn-nav-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.btn-nav-whatsapp:hover {
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+/* Page Header (for subpages) */
+.page-header {
+    padding: 60px 5%;
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cta-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 40px;
+}
+
+.btn-cta {
+    background-color: var(--whatsapp-green);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
+    nav { flex-direction: column; gap: 15px; margin-top: 20px; width: 100%; }
+    .nav-links { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; }
+    .top-bar { text-align: center; }
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 5%;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+    border-bottom: 1px solid #eee;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Trust Section */
+.trust-section {
+    padding: 60px 5%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.trust-item i {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+/* Specialty Cards */
+.specialties {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary-blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--accent-gold);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+}
+
+    </style>
 </head>
 <body>
 
@@ -39,27 +371,25 @@
         </nav>
     </header>
 
+    
     <section class="page-header">
         <h1>Quando Seus Direitos São Violados, Nós Atuamos.</h1>
     </section>
-
     <section class="content-section">
-        
-            <h2>Serviços</h2>
-            <ul style="margin-top: 20px; margin-left: 20px;">
-                <li>Cobrança indevida</li>
-                <li>Negativação abusiva</li>
-                <li>Produtos defeituosos</li>
-                <li>Serviços mal prestados</li>
-            </ul>
-        
-
+        <h2>Serviços</h2>
+        <ul style="margin-top: 20px; margin-left: 20px;">
+            <li>Cobrança indevida</li>
+            <li>Negativação abusiva</li>
+            <li>Produtos defeituosos</li>
+            <li>Serviços mal prestados</li>
+        </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
             <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
             <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Resolver Meu Problema</a>
         </div>
     </section>
+        
 
     <footer>
         <div class="footer-grid">
