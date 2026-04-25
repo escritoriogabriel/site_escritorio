@@ -16,7 +16,7 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         
 :root {
@@ -416,16 +416,22 @@ footer {
     .hero h1 { font-size: 2rem; }
 }
 
+    
+    .top-bar a { color: white; text-decoration: none; }
+    @media (max-width: 768px) {
+        .top-bar { text-align: center; }
+        .top-bar a { color: white; text-decoration: underline; font-weight: 600; }
+    }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-phone"></i> (00) 0000-0000 | <i class="fab fa-whatsapp"></i> (00) 90000-0000
+        <i class="fas fa-phone"></i> <a href="tel:47996756766">(47) 99675-6766</a> | <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a>
     </div>
 
     <header>
-        <a href="index.html" class="logo">Advocacia Estratégica</a>
+        <a href="index.html" class="logo" style="font-family: 'Playfair Display', serif;">Advogado Gabriel Corrêa</a>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
@@ -445,7 +451,7 @@ footer {
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5500000000000" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </nav>
     </header>
 
@@ -464,11 +470,11 @@ footer {
                 <div style="display: flex; flex-direction: column; gap: 15px;">
                     <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
                         <i class="fab fa-whatsapp" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
-                        <span>(00) 90000-0000</span>
+                        <span>(47) 99675-6766</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
                         <i class="fas fa-phone" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
-                        <span>(00) 0000-0000</span>
+                        <span>(47) 99675-6766</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
                         <i class="fas fa-envelope" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
@@ -483,7 +489,7 @@ footer {
                         <span>Seg–Sex: 08h às 18h | Online 24h</span>
                     </div>
                 </div>
-                <a href="https://wa.me/5500000000000" style="display: inline-flex; align-items: center; gap: 8px; background-color: var(--whatsapp-green); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 30px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.35);">
+                <a href="https://wa.me/5547996756766" style="display: inline-flex; align-items: center; gap: 8px; background-color: var(--whatsapp-green); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 30px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.35);">
                     <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
                 </a>
             </div>
@@ -496,7 +502,7 @@ footer {
                     </div>
                     <div>
                         <label style="display: block; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 6px;">WhatsApp <span style="color: #c0392b;">*</span></label>
-                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" required style="width: 100%; padding: 12px 15px; border: 1.5px solid #ddd; border-radius: 7px; font-size: 0.97rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s;">
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(47) 99675-6766" required style="width: 100%; padding: 12px 15px; border: 1.5px solid #ddd; border-radius: 7px; font-size: 0.97rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s;">
                     </div>
                     <div>
                         <label style="display: block; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 6px;">E-mail <span style="font-weight: 400; color: var(--text-muted); font-size: 0.82rem; margin-left: 5px;">(opcional)</span></label>
@@ -533,17 +539,17 @@ footer {
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(00) 0000-0000</p>
+                <p>(47) 99675-6766</p>
                 <p>contato@escritorio.com.br</p>
                 <p>Rua Exemplo, 123 - Centro</p>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 Advocacia Estratégica. Todos os direitos reservados. | <a href="#" style="color: #888;">Política de Privacidade</a> | LGPD
+            &copy; 2025 Advogado Gabriel Corrêa. Todos os direitos reservados. | <a href="#" style="color: #888;">Política de Privacidade</a> | LGPD
         </div>
     </footer>
 
-    <a href="https://wa.me/5500000000000" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -559,7 +565,7 @@ footer {
             msg += `*WhatsApp:* ${whatsapp}%0A`;
             if (email) msg += `*E-mail:* ${email}%0A`;
             msg += `*Caso:* ${descricao}`;
-            window.open(`https://wa.me/5500000000000?text=${msg}`, '_blank');
+            window.open(`https://wa.me/5547996756766?text=${msg}`, '_blank');
         }
     </script>
 </body>
