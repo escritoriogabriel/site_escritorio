@@ -361,7 +361,41 @@ footer {
     color: var(--text-muted);
 }
 
+/* Profile Section */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 20px 20px 0 var(--accent-gold);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #888;
+    font-style: italic;
+}
+
 @media (max-width: 768px) {
+    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
     .hero h1 { font-size: 2rem; }
 }
 """
@@ -382,13 +416,6 @@ template = f"""<!DOCTYPE html>
     <meta property="og:title" content="{{{{TITLE}}}} | Advocacia Estratégica">
     <meta property="og:description" content="{{{{DESCRIPTION}}}}">
     <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
-    <meta property="twitter:title" content="{{{{TITLE}}}} | Advocacia Estratégica">
-    <meta property="twitter:description" content="{{{{DESCRIPTION}}}}">
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -418,6 +445,7 @@ template = f"""<!DOCTYPE html>
                         <a href="empresarial.html">Direito Empresarial</a>
                     </div>
                 </li>
+                <li><a href="quem-sou-eu.html">Quem Sou Eu</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="depoimentos.html">Depoimentos</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -440,6 +468,7 @@ template = f"""<!DOCTYPE html>
             </div>
             <div class="footer-col">
                 <h4>Links Úteis</h4>
+                <a href="quem-sou-eu.html">Quem Sou Eu</a>
                 <a href="sobre.html">Sobre Nós</a>
                 <a href="depoimentos.html">Depoimentos</a>
                 <a href="blog.html">Blog</a>
@@ -619,6 +648,66 @@ pages = [
             <a href="contato.html" style="background-color: var(--primary-blue); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block;">
                 📅 Agendar Atendimento
             </a>
+        </div>
+    </section>
+        '''
+    },
+    {
+        'filename': 'quem-sou-eu.html',
+        'title': 'Quem Sou Eu | Dr. Gabriel Corrêa',
+        'description': 'Conheça o Dr. Gabriel Corrêa, advogado com foco em soluções jurídicas práticas e eficientes. Proximidade, clareza e compromisso real com cada cliente.',
+        'body': '''
+    <section class="content-section">
+        <div class="profile-grid">
+            <div class="profile-image">
+                <div class="profile-placeholder">
+                    <i class="fas fa-user-tie" style="font-size: 5rem; margin-bottom: 10px;"></i><br>
+                    Espaço para sua Foto Profissional
+                </div>
+                <!-- <img src="sua-foto.jpg" alt="Dr. Gabriel Corrêa"> -->
+            </div>
+            <div>
+                <h2 style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">Dr. Gabriel Corrêa</h2>
+                <p style="font-size: 1.2rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">Advogado com foco em soluções jurídicas práticas e eficientes.</p>
+                <p>Acredito que a advocacia se constrói pela proximidade, clareza e compromisso real com cada cliente. Meu trabalho é transformar questões jurídicas complexas em caminhos objetivos, sempre com transparência e diálogo aberto.</p>
+                <p style="margin-top: 20px;">Com uma atuação estratégica e focada na resolução de problemas, busco não apenas defender direitos, mas oferecer a segurança jurídica necessária para que você ou sua empresa possam prosperar.</p>
+                
+                <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <i class="fas fa-graduation-cap" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                        <h4 style="margin-bottom: 5px;">Formação</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Especialista em Direito Estratégico.</p>
+                    </div>
+                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <i class="fas fa-award" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                        <h4 style="margin-bottom: 5px;">Experiência</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Anos de atuação em casos complexos.</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5500000000000" class="btn-cta" style="margin-top: 40px;">🟢 Falar Diretamente Comigo</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: var(--primary-blue); color: white; padding: 80px 5%; text-align: center;">
+        <h2 class="section-title" style="color: white;">Minha Filosofia de Trabalho</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1000px; margin: 40px auto 0;">
+            <div>
+                <i class="fas fa-eye" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                <h4>Transparência</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Você sempre saberá exatamente o que está acontecendo no seu caso.</p>
+            </div>
+            <div>
+                <i class="fas fa-handshake" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                <h4>Proximidade</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Atendimento direto e humanizado, sem intermediários que dificultam o contato.</p>
+            </div>
+            <div>
+                <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                <h4>Resultados</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;">Foco total na melhor estratégia para alcançar o objetivo desejado.</p>
+            </div>
         </div>
     </section>
         '''
