@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Chat Widget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .admin-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            overflow: hidden;
+            max-height: 90vh;
+        }
+
+        .admin-sidebar {
+            background: linear-gradient(180deg, #172B41 0%, #1a3a52 100%);
+            color: white;
+            padding: 30px 20px;
+            overflow-y: auto;
+        }
+
+        .admin-sidebar h2 {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .admin-nav-item {
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .admin-nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: #C9A961;
+        }
+
+        .admin-nav-item.active {
+            background: rgba(201, 169, 97, 0.2);
+            border-left-color: #C9A961;
+            font-weight: 600;
+        }
+
+        .admin-content {
+            padding: 40px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .admin-section {
+            display: none;
+        }
+
+        .admin-section.active {
+            display: block;
+        }
+
+        .admin-section h1 {
+            font-size: 1.8rem;
+            color: #172B41;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .admin-section p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #172B41;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #C9A961;
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1fbb4d;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #172B41;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #1a3a52;
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            color: #172B41;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .table th {
+            background: #172B41;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-novo {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-em-contato {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-convertido {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .color-picker-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .color-picker-wrapper input[type="color"] {
+            width: 50px;
+            height: 40px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .flow-editor {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flow-step {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #C9A961;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flow-step-content {
+            flex: 1;
+        }
+
+        .flow-step-type {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #C9A961;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .flow-step-text {
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            font-size: 1.3rem;
+            color: #172B41;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .admin-container {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-sidebar {
+                display: none;
+            }
+
+            .admin-content {
+                padding: 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- SIDEBAR -->
+        <div class="admin-sidebar">
+            <h2><i class="fas fa-cog"></i> Admin</h2>
+            <div class="admin-nav">
+                <div class="admin-nav-item active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </div>
+                <div class="admin-nav-item" data-section="settings">
+                    <i class="fas fa-sliders-h"></i> Configurações
+                </div>
+                <div class="admin-nav-item" data-section="messages">
+                    <i class="fas fa-envelope"></i> Mensagens por Página
+                </div>
+                <div class="admin-nav-item" data-section="flow">
+                    <i class="fas fa-project-diagram"></i> Fluxo de Atendimento
+                </div>
+                <div class="admin-nav-item" data-section="ia">
+                    <i class="fas fa-brain"></i> IA Generativa
+                </div>
+                <div class="admin-nav-item" data-section="leads">
+                    <i class="fas fa-users"></i> Leads Capturados
+                </div>
+                <div class="admin-nav-item" data-section="security">
+                    <i class="fas fa-lock"></i> Segurança
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="admin-content">
+            <!-- DASHBOARD -->
+            <section class="admin-section active" id="dashboard">
+                <h1>Dashboard</h1>
+                <p>Visão geral do seu widget de atendimento</p>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Configurações salvas com sucesso!
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3><i class="fas fa-comments"></i> Leads Capturados</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: #25D366;" id="leadsCount">0</div>
+                        <p style="color: #999; margin-top: 10px;">Neste mês</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-check-circle"></i> Conversões</h3>
+                        <div style="font-size: 2rem; font-weight: 700; color: #172B41;" id="conversionsCount">0</div>
+                        <p style="color: #999; margin-top: 10px;">Enviados ao WhatsApp</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-eye"></i> Status do Widget</h3>
+                        <div style="font-size: 1.2rem; color: #25D366; font-weight: 700;">
+                            <i class="fas fa-circle"></i> Online
+                        </div>
+                        <p style="color: #999; margin-top: 10px;">Ativo e funcionando</p>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 30px;">
+                    <h3>URL de Acesso ao Painel</h3>
+                    <p style="color: #999; margin-bottom: 15px;">Compartilhe esta URL para acessar o painel (mantenha em segredo)</p>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="adminUrl" readonly style="flex: 1;" />
+                        <button class="btn btn-secondary btn-small" onclick="copyAdminUrl()">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONFIGURAÇÕES GERAIS -->
+            <section class="admin-section" id="settings">
+                <h1>Configurações Gerais</h1>
+                <p>Personalize as informações do seu escritório</p>
+
+                <div class="card">
+                    <form id="settingsForm">
+                        <div class="form-group">
+                            <label>Nome do Escritório</label>
+                            <input type="text" id="businessName" placeholder="Ex: Advogado Gabriel Corrêa" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>WhatsApp (apenas números)</label>
+                            <input type="text" id="whatsapp" placeholder="Ex: 5547996756766" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cor Primária</label>
+                            <div class="color-picker-wrapper">
+                                <input type="color" id="primaryColor" />
+                                <input type="text" id="primaryColorHex" readonly />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cor de Destaque</label>
+                            <div class="color-picker-wrapper">
+                                <input type="color" id="accentColor" />
+                                <input type="text" id="accentColorHex" readonly />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Modo de Atendimento</label>
+                            <select id="mode">
+                                <option value="flow">Fluxo Estruturado</option>
+                                <option value="ia">IA Generativa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Delay de Abertura Automática (ms)</label>
+                            <input type="number" id="autoOpenDelay" placeholder="5000" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Prova Social</label>
+                            <textarea id="socialProof" placeholder="Ex: Mais de 500 clientes já confiaram em nosso trabalho."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Salvar Configurações
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- MENSAGENS POR PÁGINA -->
+            <section class="admin-section" id="messages">
+                <h1>Mensagens por Página</h1>
+                <p>Configure mensagens específicas para cada página</p>
+
+                <button class="btn btn-primary" onclick="openAddMessageModal()">
+                    <i class="fas fa-plus"></i> Adicionar Mensagem
+                </button>
+
+                <table class="table" style="margin-top: 20px;">
+                    <thead>
+                        <tr>
+                            <th>Página</th>
+                            <th>Mensagem</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messagesTableBody">
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- FLUXO DE ATENDIMENTO -->
+            <section class="admin-section" id="flow">
+                <h1>Fluxo de Atendimento</h1>
+                <p>Configure as etapas de conversa automática</p>
+
+                <button class="btn btn-primary" onclick="openAddFlowStepModal()">
+                    <i class="fas fa-plus"></i> Adicionar Etapa
+                </button>
+
+                <div id="flowStepsContainer" style="margin-top: 20px;"></div>
+            </section>
+
+            <!-- IA GENERATIVA -->
+            <section class="admin-section" id="ia">
+                <h1>IA Generativa</h1>
+                <p>Configure a integração com OpenAI</p>
+
+                <div class="card">
+                    <form id="iaForm">
+                        <div class="form-group">
+                            <label>API Key OpenAI</label>
+                            <input type="password" id="apiKey" placeholder="sk-..." />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Prompt do Sistema</label>
+                            <textarea id="systemPrompt" placeholder="Você é um assistente jurídico profissional..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Modelo</label>
+                            <select id="model">
+                                <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                                <option value="gpt-4">GPT-4</option>
+                                <option value="gpt-4-turbo">GPT-4 Turbo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Temperatura (0-2)</label>
+                            <input type="number" id="temperature" min="0" max="2" step="0.1" placeholder="0.7" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Salvar Configurações
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- LEADS CAPTURADOS -->
+            <section class="admin-section" id="leads">
+                <h1>Leads Capturados</h1>
+                <p>Gerencie e exporte seus leads</p>
+
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <input type="text" id="leadsSearch" placeholder="Pesquisar por nome..." style="flex: 1; padding: 12px; border: 1.5px solid #ddd; border-radius: 8px;" />
+                    <button class="btn btn-secondary" onclick="exportLeadsCSV()">
+                        <i class="fas fa-download"></i> Exportar CSV
+                    </button>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Área</th>
+                            <th>Telefone</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leadsTableBody">
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SEGURANÇA -->
+            <section class="admin-section" id="security">
+                <h1>Segurança</h1>
+                <p>Gerencie a segurança do painel administrativo</p>
+
+                <div class="card">
+                    <h3>URL Secreta do Painel</h3>
+                    <p style="color: #999; margin-bottom: 15px;">Gere uma nova URL secreta para acessar o painel</p>
+                    <button class="btn btn-secondary" onclick="generateNewSecretUrl()">
+                        <i class="fas fa-refresh"></i> Gerar Nova URL
+                    </button>
+                    <p style="color: #999; margin-top: 15px; font-size: 0.85rem;">
+                        <i class="fas fa-info-circle"></i> Ao gerar uma nova URL, a anterior deixará de funcionar.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-top: 20px;">
+                    <h3>Limpar Dados</h3>
+                    <p style="color: #999; margin-bottom: 15px;">Limpe todos os dados armazenados localmente</p>
+                    <button class="btn btn-danger" onclick="clearAllData()">
+                        <i class="fas fa-trash"></i> Limpar Tudo
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- MODAIS -->
+    <div class="modal" id="addMessageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Adicionar Mensagem</h2>
+                <button class="modal-close" onclick="closeModal('addMessageModal')">&times;</button>
+            </div>
+            <form id="addMessageForm">
+                <div class="form-group">
+                    <label>Página (caminho)</label>
+                    <input type="text" id="messagePage" placeholder="/sobre.html" required />
+                </div>
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea id="messageText" placeholder="Digite a mensagem..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="addFlowStepModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Adicionar Etapa</h2>
+                <button class="modal-close" onclick="closeModal('addFlowStepModal')">&times;</button>
+            </div>
+            <form id="addFlowStepForm">
+                <div class="form-group">
+                    <label>Tipo</label>
+                    <select id="flowStepType" required>
+                        <option value="message">Mensagem</option>
+                        <option value="input">Input</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Conteúdo</label>
+                    <textarea id="flowStepContent" placeholder="Digite o conteúdo..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/admin.js"></script>
+</body>
+</html>
