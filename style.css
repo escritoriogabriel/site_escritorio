@@ -221,9 +221,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    header { flex-direction: column; height: auto; padding: 20px; }
-    nav { flex-direction: column; gap: 15px; margin-top: 20px; }
-    .nav-links { flex-direction: column; align-items: center; gap: 10px; }
+    header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
+    nav { flex-direction: column; gap: 15px; margin-top: 20px; width: 100%; }
+    .nav-links { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; }
+    .top-bar { text-align: center; }
 }
 
 /* Hero Section */
@@ -314,6 +316,7 @@ footer {
     font-size: 2.5rem;
     color: var(--accent-gold);
     margin-bottom: 20px;
+    display: block;
 }
 
 .card h3 {
