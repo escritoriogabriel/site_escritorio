@@ -440,13 +440,12 @@ footer {
                         <a href="empresarial.html">Direito Empresarial</a>
                     </div>
                 </li>
-                <li><a href="quem-sou-eu.html">Quem Sou Eu</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="depoimentos.html">Depoimentos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5500000000000" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+            <a href="https://wa.me/5500000000000" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </nav>
     </header>
 
@@ -454,39 +453,64 @@ footer {
         
     <section class="page-header">
         <h1>Fale com Nossa Equipe</h1>
+        <p style="margin-top: 10px; font-size: 1.1rem; color: rgba(255,255,255,0.85);">Atendimento ágil, transparente e sem burocracia.</p>
     </section>
-    <section class="content-section">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+
+    <section style="padding: 80px 5%; background-color: var(--bg-light);">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; max-width: 1000px; margin: 0 auto; align-items: start;">
             <div>
-                <h3>Envie uma mensagem</h3>
-                <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                    <input type="text" placeholder="Nome" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <input type="text" placeholder="Telefone" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <input type="email" placeholder="E-mail" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <select style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                        <option>Área do Direito</option>
-                        <option>Trabalhista</option>
-                        <option>Previdenciário</option>
-                        <option>Civil</option>
-                        <option>Família</option>
-                        <option>Consumidor</option>
-                        <option>Empresarial</option>
-                    </select>
-                    <textarea placeholder="Mensagem" rows="4" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                <h2 style="font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 20px;">Entre em Contato</h2>
+                <p style="color: var(--text-muted); margin-bottom: 30px; line-height: 1.75;">Não deixe seu direito para depois. Preencha o formulário ou fale diretamente pelo WhatsApp — nossa equipe responde com agilidade.</p>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
+                        <i class="fab fa-whatsapp" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
+                        <span>(00) 90000-0000</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
+                        <i class="fas fa-phone" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
+                        <span>(00) 0000-0000</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
+                        <i class="fas fa-envelope" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
+                        <span>contato@escritorio.com.br</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
+                        <span>Rua Exemplo, 123 — Centro</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); font-size: 0.97rem;">
+                        <i class="fas fa-clock" style="color: var(--accent-gold); font-size: 1.1rem; width: 20px; text-align: center;"></i>
+                        <span>Seg–Sex: 08h às 18h | Online 24h</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/5500000000000" style="display: inline-flex; align-items: center; gap: 8px; background-color: var(--whatsapp-green); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 30px; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.35);">
+                    <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
+                </a>
+            </div>
+            <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.06);">
+                <h3 style="color: var(--primary-blue); margin-bottom: 25px; font-size: 1.3rem;"><i class="fas fa-paper-plane" style="color: var(--accent-gold);"></i> Envie uma Mensagem</h3>
+                <form id="contactForm" onsubmit="submitForm(event)" style="display: flex; flex-direction: column; gap: 18px;">
+                    <div>
+                        <label style="display: block; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 6px;">Nome <span style="color: #c0392b;">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required style="width: 100%; padding: 12px 15px; border: 1.5px solid #ddd; border-radius: 7px; font-size: 0.97rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 6px;">WhatsApp <span style="color: #c0392b;">*</span></label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" required style="width: 100%; padding: 12px 15px; border: 1.5px solid #ddd; border-radius: 7px; font-size: 0.97rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 6px;">E-mail <span style="font-weight: 400; color: var(--text-muted); font-size: 0.82rem; margin-left: 5px;">(opcional)</span></label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com.br" style="width: 100%; padding: 12px 15px; border: 1.5px solid #ddd; border-radius: 7px; font-size: 0.97rem; font-family: 'Inter', sans-serif; transition: border-color 0.3s;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 6px;">Breve descrição do seu caso <span style="color: #c0392b;">*</span></label>
+                        <textarea id="descricao" name="descricao" placeholder="Descreva brevemente sua situação..." required style="width: 100%; padding: 12px 15px; border: 1.5px solid #ddd; border-radius: 7px; font-size: 0.97rem; font-family: 'Inter', sans-serif; height: 110px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" style="background-color: var(--whatsapp-green); color: white; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: 'Montserrat', sans-serif; display: flex; align-items: center; justify-content: center; gap: 8px; transition: transform 0.3s;">
+                        <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
+                    </button>
                 </form>
             </div>
-            <div>
-                <h3>Opções de Contato</h3>
-                <ul style="list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
-                    <li><i class="fab fa-whatsapp"></i> WhatsApp: (00) 90000-0000</li>
-                    <li><i class="fas fa-phone"></i> Telefone: (00) 0000-0000</li>
-                    <li><i class="fas fa-envelope"></i> E-mail: contato@escritorio.com.br</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Centro</li>
-                </ul>
-            </div>
-        </div>
-        <div class="cta-box">
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Enviar Mensagem</a>
         </div>
     </section>
         
@@ -515,7 +539,7 @@ footer {
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 Advocacia Estratégica. Todos os direitos reservados. | Política de Privacidade | LGPD
+            &copy; 2025 Advocacia Estratégica. Todos os direitos reservados. | <a href="#" style="color: #888;">Política de Privacidade</a> | LGPD
         </div>
     </footer>
 
@@ -524,22 +548,19 @@ footer {
     </a>
 
     <script>
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                } else {
-                    answer.style.display = 'block';
-                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                }
-            });
-        });
+        function submitForm(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const descricao = document.getElementById('descricao').value;
+            let msg = `Olá! Gostaria de uma orientação jurídica.%0A%0A`;
+            msg += `*Nome:* ${nome}%0A`;
+            msg += `*WhatsApp:* ${whatsapp}%0A`;
+            if (email) msg += `*E-mail:* ${email}%0A`;
+            msg += `*Caso:* ${descricao}`;
+            window.open(`https://wa.me/5500000000000?text=${msg}`, '_blank');
+        }
     </script>
 </body>
 </html>
