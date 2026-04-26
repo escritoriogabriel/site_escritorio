@@ -30,23 +30,36 @@ class AdminPanel {
     verifyAccess() {
         const currentPath = window.location.pathname;
         const currentHash = window.location.hash.substring(1);
+        const storedSecret = localStorage.getItem('adminSecretUrl');
 
-        // Se não está na URL secreta, redirecionar para a página inicial
-        if (!currentPath.includes(this.secretUrl) && !currentHash.includes(this.secretUrl)) {
-            // Mostrar mensagem de acesso negado
-            document.body.innerHTML = `
-                <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: Inter, sans-serif;">
-                    <div style="background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-                        <i class="fas fa-lock" style="font-size: 3rem; color: #e74c3c; margin-bottom: 20px;"></i>
-                        <h1 style="color: #172B41; margin-bottom: 10px;">Acesso Negado</h1>
-                        <p style="color: #666; margin-bottom: 20px;">Você não tem permissão para acessar este painel.</p>
-                        <a href="/" style="color: #25D366; text-decoration: none; font-weight: 600;">Voltar para o site</a>
-                    </div>
-                </div>
-            `;
+        // Se não há chave armazenada, permitir primeiro acesso (criar chave)
+        if (!storedSecret) {
+            return true;
+        }
+
+        // Se há chave armazenada, verificar se está na URL
+        if (!currentPath.includes('admin.html')) {
+            this.showAccessDenied();
             return false;
         }
+
         return true;
+    }
+
+    /**
+     * Mostrar página de acesso negado
+     */
+    showAccessDenied() {
+        document.body.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: Inter, sans-serif;">
+                <div style="background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                    <i class="fas fa-lock" style="font-size: 3rem; color: #e74c3c; margin-bottom: 20px;"></i>
+                    <h1 style="color: #172B41; margin-bottom: 10px;">Acesso Negado</h1>
+                    <p style="color: #666; margin-bottom: 20px;">Você não tem permissão para acessar este painel.</p>
+                    <a href="/" style="color: #25D366; text-decoration: none; font-weight: 600;">Voltar para o site</a>
+                </div>
+            </div>
+        `;
     }
 
     /**
