@@ -29,7 +29,7 @@
       "description": "Escritório de advocacia especializado em Direito Previdenciário, Trabalhista, Cível e do Consumidor.",
       "url": "https://escritoriogabriel.github.io/site_escritorio/",
       "telephone": "(47) 99675-6766",
-      "email": "contato@escritorio.com.br",
+      "email": "escritorio.gabrielcorrea@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Exemplo, 123",
@@ -112,11 +112,15 @@ header {
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.logo img {
+    height: 35px;
+    width: auto;
+    max-width: 300px;
 }
 
 nav {
@@ -314,13 +318,15 @@ nav {
     padding: 70px 5%;
     background-color: var(--primary-blue);
     text-align: center;
+    align-content: inline-block;
 }
+
 
 .social-proof-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 40px;
-    max-width: 900px;
+    max-width: 90%;
     margin: 0 auto;
 }
 
@@ -330,12 +336,23 @@ nav {
 
 .proof-number {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--accent-gold);
     display: block;
-    line-height: 1.2;
+    line-height: 1.5;
     margin-bottom: 8px;
+}
+
+.atendimentoimediato {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+    padding: 1px 1px;
 }
 
 .proof-label {
@@ -369,7 +386,9 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    width: 100%;
 }
+
 
 .card {
     background: var(--white);
@@ -833,24 +852,20 @@ nav {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding-bottom: 20px
 }
 
 .contact-form h3 {
     color: var(--primary-blue);
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     font-size: 1.3rem;
 }
 
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    margin-bottom: 6px;
+.contact-note {
+    color: var(--text-muted);
+    margin: 0 0 24px;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .form-group input,
@@ -1016,6 +1031,40 @@ footer {
     transform: scale(1.1);
 }
 
+.whatsapp-bubble {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    transform: translateY(10px);
+    background: #25d366;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.whatsapp-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 18px;
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: #25d366 transparent transparent transparent;
+}
+
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
@@ -1079,7 +1128,7 @@ footer {
     </div>
 
     <header>
-        <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </button>
@@ -1135,7 +1184,7 @@ footer {
                 <span class="proof-label">Clientes atendidos</span>
             </div>
             <div class="proof-item">
-                <span class="proof-number">Atendimento online e Imediato</span>
+                <span class="atendimentoimediato">Atendimento online e Imediato</span>
                 <span class="proof-label">Disponibilidade total</span>
             </div>
             <div class="proof-item">
@@ -1293,10 +1342,10 @@ footer {
                 <img src="assets/img/advogado.jpg" alt="Advogado Gabriel Corrêa">
             </div>
             <div class="about-text">
-                <h2 class="section-title">Sobre o Escritório</h2>
-                <p>Com anos de experiência na defesa de direitos individuais e empresariais, nosso escritório nasceu da convicção de que advocacia de qualidade deve ser acessível, transparente e humanizada.</p>
-                <p>Nossa trajetória é marcada por casos complexos resolvidos com estratégia, dedicação e um olhar atento para as necessidades reais de cada cliente. Não tratamos processos — tratamos pessoas.</p>
-                <p>Acreditamos que o cliente não contrata diplomas; contrata <strong>segurança, clareza e resultados</strong>. Por isso, mantemos comunicação direta, sem juridiquês, em cada etapa do processo.</p>
+                <h2 class="section-title">Dr. Gabriel Corrêa</h2>
+                <p>Com anos de experiência na defesa de direitos individuais e empresariais, o escritório nasceu da convicção de que advocacia de qualidade deve ser acessível, transparente e humanizada.</p>
+                <p>Minha trajetória é marcada por casos complexos resolvidos com estratégia, dedicação e um olhar atento para as necessidades reais de cada cliente. Não trato processos, trato pessoas.</p>
+                <p>Acredito que o cliente não contrata diplomas; contrata <strong>segurança, clareza e resultados</strong>. Por isso, mantenho uma comunicação direta, sem juridiquês, em cada etapa do processo.</p>
                 <div class="about-differentials">
                     <div class="differential-item"><i class="fas fa-check-circle"></i> Atendimento direto com advogado</div>
                     <div class="differential-item"><i class="fas fa-check-circle"></i> Comunicação clara e objetiva</div>
@@ -1391,11 +1440,7 @@ footer {
                 </div>
                 <div class="contact-detail">
                     <i class="fas fa-envelope"></i>
-                    <span>contato@escritorio.com.br</span>
-                </div>
-                <div class="contact-detail">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Rua Exemplo, 123 — Centro</span>
+                    <span>escritorio.gabrielcorrea@gmail.com</span>
                 </div>
                 <div class="contact-detail">
                     <i class="fas fa-clock"></i>
@@ -1404,6 +1449,7 @@ footer {
             </div>
             <div class="contact-form">
                 <h3><i class="fas fa-paper-plane" style="color: var(--accent-gold);"></i> Fale Conosco</h3>
+                <p class="contact-note">Em poucos minutos entro em contato através do WhatsApp.</p>
                 <form id="contactForm" onsubmit="submitForm(event)">
                     <div class="form-group">
                         <label for="nome">Nome <span style="color: #c0392b;">*</span></label>
@@ -1478,7 +1524,7 @@ footer {
                 <h4>Contato</h4>
                 <p><i class="fas fa-phone" style="color: var(--accent-gold); margin-right: 6px;"></i> (47) 99675-6766</p>
                 <p><i class="fab fa-whatsapp" style="color: var(--accent-gold); margin-right: 6px;"></i> (47) 99675-6766</p>
-                <p><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 6px;"></i> contato@escritorio.com.br</p>
+                <p><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 6px;"></i> escritorio.gabrielcorrea@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt" style="color: var(--accent-gold); margin-right: 6px;"></i> Rua Exemplo, 123 — Centro</p>
             </div>
         </div>
@@ -1637,6 +1683,21 @@ footer {
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        const whatsappFloat = document.querySelector('.whatsapp-float');
+        if (whatsappFloat) {
+            setTimeout(() => {
+                const bubble = document.createElement('span');
+                bubble.className = 'whatsapp-bubble';
+                bubble.textContent = 'Advogado online no WhatsApp agora.';
+                whatsappFloat.appendChild(bubble);
+                requestAnimationFrame(() => bubble.classList.add('show'));
+
+                setTimeout(() => {
+                    bubble.classList.remove('show');
+                }, 7000);
+            }, 7000);
+        }
     </script>
 
     <!-- Chat Widget -->
