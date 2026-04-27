@@ -183,7 +183,10 @@
             width: 100%;
             height: 220px;
             overflow: hidden;
-            background: #e0e0e0;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .post-card-image img {
@@ -191,6 +194,18 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s;
+            display: block;
+        }
+
+        .post-card-image.loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
 
         .post-card:hover .post-card-image img {
@@ -416,6 +431,7 @@
     <script>
         let allPosts = [];
         let currentFilter = 'all';
+        const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
         async function loadPosts() {
             try {
@@ -460,6 +476,23 @@
             renderPosts(filtered);
         }
 
+        function getImageUrl(imageUrl) {
+            // Se a imagem começa com http, é uma URL completa
+            if (imageUrl && imageUrl.startsWith('http')) {
+                return imageUrl;
+            }
+            // Se começa com /, é um caminho absoluto
+            if (imageUrl && imageUrl.startsWith('/')) {
+                return imageUrl;
+            }
+            // Se é um caminho relativo, adiciona o prefixo
+            if (imageUrl) {
+                return '/' + imageUrl;
+            }
+            // Fallback padrão
+            return DEFAULT_IMAGE;
+        }
+
         function renderPosts(posts) {
             const grid = document.getElementById('postsGrid');
             const empty = document.getElementById('emptyState');
@@ -472,22 +505,31 @@
             
             grid.style.display = 'grid';
             empty.style.display = 'none';
-            grid.innerHTML = posts.map(post => `
-                <div class="post-card">
-                    <div class="post-card-image">
-                        <img src="${post.image}" alt="${post.title}" onerror="this.src='/site_escritorio/assets/img/default-blog-post.jpg'">
-                    </div>
-                    <div class="post-card-content">
-                        <span class="post-category">${post.categories[0]}</span>
-                        <h3>${post.title}</h3>
-                        <p>${post.excerpt}</p>
-                        <div class="post-meta">
-                            <span>${new Date(post.date).toLocaleDateString('pt-BR')}</span>
-                            <a href="${post.url}" class="post-link">Leia Mais <i class="fas fa-arrow-right"></i></a>
+            grid.innerHTML = posts.map(post => {
+                const imageUrl = getImageUrl(post.image);
+                return `
+                    <div class="post-card">
+                        <div class="post-card-image loading" id="img-container-${post.slug}">
+                            <img 
+                                src="${imageUrl}" 
+                                alt="${post.title}"
+                                onload="document.getElementById('img-container-${post.slug}').classList.remove('loading')"
+                                onerror="this.src='${DEFAULT_IMAGE}'; document.getElementById('img-container-${post.slug}').classList.remove('loading')"
+                                style="display: block;"
+                            >
+                        </div>
+                        <div class="post-card-content">
+                            <span class="post-category">${post.categories[0]}</span>
+                            <h3>${post.title}</h3>
+                            <p>${post.excerpt}</p>
+                            <div class="post-meta">
+                                <span>${new Date(post.date).toLocaleDateString('pt-BR')}</span>
+                                <a href="${post.url}" class="post-link">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         document.addEventListener('DOMContentLoaded', loadPosts);

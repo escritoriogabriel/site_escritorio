@@ -12,7 +12,10 @@ POSTS_DIR = PROJECT_ROOT / "blog" / "posts"
 IMAGES_DIR = PROJECT_ROOT / "blog" / "images"
 INDEX_FILE = POSTS_DIR / "index.json"
 
-# Imagem padrão caso nenhuma seja encontrada (Caminho absoluto para o site)
+# Prefixo do site no GitHub Pages
+SITE_PREFIX = "/site_escritorio/"
+
+# Imagem padrão caso nenhuma seja encontrada
 DEFAULT_POST_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
 
 # Template HTML sofisticado para o post
@@ -224,7 +227,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 def slugify(text):
     text = text.lower()
-    # Remove acentos e caracteres especiais
     text = re.sub(r'[áàâãä]', 'a', text)
     text = re.sub(r'[éèêë]', 'e', text)
     text = re.sub(r'[íìîï]', 'i', text)
@@ -263,31 +265,25 @@ def parse_md_with_front_matter(md_path):
             metadata[key] = val
     
     if metadata.get('title'):
-        # Remover títulos H1 duplicados no início do Markdown
         content_md = re.sub(r'^#\s+.*?\n', '', content_md, flags=re.MULTILINE).strip()
         content_md = re.sub(r'^#+.*?\n', '', content_md, count=1).strip()
 
     return metadata, content_md
 
 def find_image(slug, title):
-    """Busca imagem por slug, título ou nome de arquivo."""
     if not IMAGES_DIR.exists():
         return DEFAULT_POST_IMAGE
         
     image_files = list(IMAGES_DIR.glob("*"))
-    
-    # Criar variações de nomes possíveis para o slug e título
     clean_slug = slug.replace('-', '')
     clean_title = slugify(title).replace('-', '')
-    
     possible_names = [slug, slugify(title), clean_slug, clean_title]
     
-    # Busca flexível
     for name in possible_names:
         for img_file in image_files:
             if name.lower() in img_file.stem.lower() or img_file.stem.lower() in name.lower():
-                # Retorna caminho relativo para o site
-                return f"blog/images/{img_file.name}"
+                # Retorna caminho absoluto para o site no GitHub Pages
+                return f"{SITE_PREFIX}blog/images/{img_file.name}"
     
     return DEFAULT_POST_IMAGE
 
@@ -301,7 +297,6 @@ def sync_posts():
     all_posts_metadata = []
     processed_slugs = set()
 
-    # Processar novos posts
     for md_file_path in NEW_POSTS_DIR.glob("*.md"):
         print(f"🆕 Processando: {md_file_path.name}")
         metadata, content_md = parse_md_with_front_matter(md_file_path)
@@ -340,7 +335,7 @@ def sync_posts():
         post_data = {
             "title": metadata['title'],
             "slug": slug,
-            "url": f"blog/posts/{slug}.html",
+            "url": f"{SITE_PREFIX}blog/posts/{slug}.html",
             "date": full_date,
             "author": metadata.get('author', 'Gabriel Corrêa'),
             "excerpt": metadata.get('excerpt') or metadata.get('description', 'Clique para ler mais...'),
@@ -351,7 +346,6 @@ def sync_posts():
         all_posts_metadata.append(post_data)
         processed_slugs.add(slug)
 
-    # Re-processar existentes
     for md_file_path in POSTS_DIR.glob("*.md"):
         slug = md_file_path.stem
         if slug in processed_slugs: continue
@@ -382,7 +376,7 @@ def sync_posts():
         post_data = {
             "title": metadata['title'],
             "slug": slug,
-            "url": f"blog/posts/{slug}.html",
+            "url": f"{SITE_PREFIX}blog/posts/{slug}.html",
             "date": full_date,
             "author": metadata.get('author', 'Gabriel Corrêa'),
             "excerpt": metadata.get('excerpt') or metadata.get('description', 'Clique para ler mais...'),

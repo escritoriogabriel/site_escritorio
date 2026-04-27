@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
     let postsPerPage = 3; 
+    const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
     const updatePostsPerPage = () => {
         if (window.innerWidth <= 768) {
@@ -38,19 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
             blogCarouselWrapper.innerHTML = ''; 
 
             posts.forEach(post => {
-                // Ajustar caminhos de imagem e URL para serem relativos à base do site
-                const fullImageUrl = post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`;
-                const fullPostUrl = post.url.startsWith('http') ? post.url : `${baseUrl}${post.url}`;
-                const defaultImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
+                const imageUrl = post.image.startsWith('http') ? post.image : post.image;
+                const postUrl = post.url;
 
                 const postCard = `
                     <div class="blog-post-card">
                         <div class="blog-post-card-inner">
-                            <img src="${fullImageUrl}" alt="${post.title}" onerror="this.src='${defaultImage}'">
+                            <div class="blog-post-image-container" id="carousel-img-container-${post.slug}" style="background: #eee; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                <img 
+                                    src="${imageUrl}" 
+                                    alt="${post.title}" 
+                                    style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                                    onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';"
+                                >
+                            </div>
                             <div class="blog-post-content">
                                 <h3>${post.title}</h3>
                                 <p>${post.excerpt}</p>
-                                <a href="${fullPostUrl}" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                                <a href="${postUrl}" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
