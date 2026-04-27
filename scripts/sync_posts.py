@@ -3,11 +3,17 @@ import json
 import re
 from pathlib import Path
 import markdown
+import shutil
 
-# Configurações
+# Configurações de diretórios
 PROJECT_ROOT = Path(__file__).parent.parent.absolute()
+NEW_POSTS_DIR = PROJECT_ROOT / "blog" / "novos_posts"
 POSTS_DIR = PROJECT_ROOT / "blog" / "posts"
+IMAGES_DIR = PROJECT_ROOT / "blog" / "images"
 INDEX_FILE = POSTS_DIR / "index.json"
+
+# Imagem padrão caso nenhuma seja especificada ou encontrada
+DEFAULT_POST_IMAGE = "/site_escritorio/assets/img/default-blog-post.jpg" # Caminho relativo ao root do site
 
 # Template HTML básico para o post
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -60,13 +66,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </body>
 </html>"""
 
-def parse_md(md_path):
+def slugify(text):
+    """Gera um slug limpo a partir de um texto."""
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9\s-]', '', text) # Remove caracteres especiais, exceto hifens e espaços
+    text = re.sub(r'[\s-]+', '-', text).strip('-') # Substitui espaços e múltiplos hifens por um único hifen
+    return text
+
+def parse_md_with_front_matter(md_path):
+    """Extrai o front matter e o conteúdo Markdown de um arquivo."""
     with open(md_path, 'r', encoding='utf-8') as f:
         text = f.read()
     
     fm_match = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)', text, re.DOTALL)
     if not fm_match:
-        return None, text
+        return None, text # Sem front matter, retorna None para metadados
     
     fm_text = fm_match.group(1)
     content_md = fm_match.group(2)
@@ -75,33 +89,66 @@ def parse_md(md_path):
     for line in fm_text.split('\n'):
         if ':' in line:
             key, val = line.split(':', 1)
-            metadata[key.strip()] = val.strip().strip('"').strip("'")
+            key = key.strip()
+            val = val.strip().strip('"').strip("'")
+            
+            # Tentar parsear listas de tags e categorias
+            if key in ['tags', 'categories']:
+                try:
+                    # Remove colchetes e aspas, depois divide por vírgula
+                    val = [item.strip() for item in val.replace('[', '').replace(']', '').replace('"', '').split(',') if item.strip()]
+                except:
+                    val = [val] # Caso não seja uma lista válida, mantém como string única
+            metadata[key] = val
             
     return metadata, content_md
 
-def sync():
-    print(f"🔍 Sincronizando posts em: {POSTS_DIR}")
+def sync_posts():
+    print(f"🔍 Iniciando sincronização de posts...")
     
-    md_files = list(POSTS_DIR.glob("*.md"))
-    updated_index = []
-    
-    # Processar cada arquivo Markdown encontrado
-    for md_file in md_files:
-        print(f"📄 Processando: {md_file.name}")
-        metadata, content_md = parse_md(md_file)
+    # Certificar-se de que os diretórios existem
+    POSTS_DIR.mkdir(parents=True, exist_ok=True)
+    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    NEW_POSTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    all_posts_metadata = []
+    processed_slugs = set()
+
+    # 1. Processar novos posts da pasta 'novos_posts'
+    for md_file_path in NEW_POSTS_DIR.glob("*.md"):
+        print(f"🆕 Processando novo post: {md_file_path.name}")
+        metadata, content_md = parse_md_with_front_matter(md_file_path)
         
-        if not metadata:
-            print(f"⚠️  Aviso: Front matter não encontrado em {md_file.name}. Pulando.")
+        if not metadata or not metadata.get('title'):
+            print(f"⚠️  Aviso: Arquivo {md_file_path.name} não possui Front Matter válido ou título. Pulando.")
             continue
-            
-        real_slug = md_file.stem
+        
+        # Gerar slug a partir do título para consistência
+        slug = slugify(metadata['title'])
+        
+        # Caminhos de destino
+        dest_md_path = POSTS_DIR / f"{slug}.md"
+        dest_html_path = POSTS_DIR / f"{slug}.html"
+
+        # Mover o arquivo Markdown para a pasta definitiva
+        try:
+            shutil.move(str(md_file_path), str(dest_md_path))
+            print(f"➡️ Movido {md_file_path.name} para {dest_md_path.name}")
+        except Exception as e:
+            print(f"❌ Erro ao mover {md_file_path.name}: {e}. Pulando.")
+            continue
+
+        # Converter MD para HTML
         content_html = markdown.markdown(content_md, extensions=['extra'])
         
-        # Formatar data para exibição
+        # Obter data formatada
         full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
         display_date = full_date.split('T')[0]
-        
-        # Gerar o arquivo HTML
+
+        # Verificar imagem do post
+        post_image_path = IMAGES_DIR / f"{slug}.jpg"
+        image_url = f"/site_escritorio/blog/images/{slug}.jpg" if post_image_path.exists() else DEFAULT_POST_IMAGE
+
         final_html = HTML_TEMPLATE.format(
             title=metadata.get('title', 'Sem Título'),
             author=metadata.get('author', 'Gabriel Corrêa'),
@@ -109,34 +156,86 @@ def sync():
             content=content_html
         )
         
-        html_file = POSTS_DIR / f"{real_slug}.html"
-        with open(html_file, 'w', encoding='utf-8') as f:
+        with open(dest_html_path, 'w', encoding='utf-8') as f:
             f.write(final_html)
-        
-        # Adicionar ao novo índice
+        print(f"✅ HTML gerado: {dest_html_path.name}")
+
+        # Adicionar metadados ao índice
         post_data = {
             "title": metadata.get('title', 'Sem Título'),
-            "slug": real_slug,
-            "url": f"/site_escritorio/blog/posts/{real_slug}.html",
+            "slug": slug,
+            "url": f"/site_escritorio/blog/posts/{slug}.html",
             "date": full_date,
             "author": metadata.get('author', 'Gabriel Corrêa'),
             "excerpt": metadata.get('excerpt', 'Clique para ler mais...'),
-            "image": f"/site_escritorio/blog/images/{real_slug}.jpg",
-            "tags": [t.strip() for t in metadata.get('tags', '').replace("[", "").replace("]", "").replace('"', '').split(",")] if metadata.get('tags') else ["Direito"],
-            "categories": ["Direito"]
+            "image": image_url,
+            "tags": metadata.get('tags', ['Geral']),
+            "categories": metadata.get('categories', ['Geral'])
         }
-        updated_index.append(post_data)
-        print(f"✅ HTML gerado e índice preparado para: {real_slug}")
+        all_posts_metadata.append(post_data)
+        processed_slugs.add(slug)
+
+    # 2. Reconstruir o índice a partir de todos os arquivos .md na pasta 'posts' (incluindo os recém-movidos)
+    # Isso garante que posts antigos que não passaram por 'novos_posts' também sejam incluídos/atualizados
+    for md_file_path in POSTS_DIR.glob("*.md"):
+        slug = md_file_path.stem
+        if slug in processed_slugs: # Já processado acima
+            continue
+
+        print(f"🔄 Re-processando post existente: {md_file_path.name}")
+        metadata, content_md = parse_md_with_front_matter(md_file_path)
+
+        if not metadata or not metadata.get('title'):
+            print(f"⚠️  Aviso: Arquivo {md_file_path.name} não possui Front Matter válido ou título. Pulando.")
+            continue
+
+        # Converter MD para HTML
+        content_html = markdown.markdown(content_md, extensions=['extra'])
+        
+        # Obter data formatada
+        full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
+        display_date = full_date.split('T')[0]
+
+        # Verificar imagem do post
+        post_image_path = IMAGES_DIR / f"{slug}.jpg"
+        image_url = f"/site_escritorio/blog/images/{slug}.jpg" if post_image_path.exists() else DEFAULT_POST_IMAGE
+
+        final_html = HTML_TEMPLATE.format(
+            title=metadata.get('title', 'Sem Título'),
+            author=metadata.get('author', 'Gabriel Corrêa'),
+            date=display_date,
+            content=content_html
+        )
+        
+        html_file = POSTS_DIR / f"{slug}.html"
+        with open(html_file, 'w', encoding='utf-8') as f:
+            f.write(final_html)
+        print(f"✅ HTML atualizado: {html_file.name}")
+
+        # Adicionar metadados ao índice
+        post_data = {
+            "title": metadata.get('title', 'Sem Título'),
+            "slug": slug,
+            "url": f"/site_escritorio/blog/posts/{slug}.html",
+            "date": full_date,
+            "author": metadata.get('author', 'Gabriel Corrêa'),
+            "excerpt": metadata.get('excerpt', 'Clique para ler mais...'),
+            "image": image_url,
+            "tags": metadata.get('tags', ['Geral']),
+            "categories": metadata.get('categories', ['Geral'])
+        }
+        all_posts_metadata.append(post_data)
+        processed_slugs.add(slug)
 
     # Ordenar por data (mais recente primeiro)
-    updated_index.sort(key=lambda x: x['date'], reverse=True)
+    all_posts_metadata.sort(key=lambda x: x['date'], reverse=True)
 
     # Salvar o índice limpo e atualizado
     with open(INDEX_FILE, 'w', encoding='utf-8') as f:
-        json.dump(updated_index, f, ensure_ascii=False, indent=2)
+        json.dump(all_posts_metadata, f, ensure_ascii=False, indent=2)
     
     print(f"\n✨ Sincronização concluída!")
-    print(f"📋 Total de posts no índice: {len(updated_index)}")
+    print(f"📋 Total de posts no índice: {len(all_posts_metadata)}")
 
 if __name__ == "__main__":
-    sync()
+    sync_posts()
