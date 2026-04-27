@@ -218,14 +218,15 @@ excerpt: "{metadata['excerpt']}"
         
         print(f"✅ Post criado: {filename}")
         
+        slug = metadata['slug']
         return {
             'title': metadata['title'],
-            'slug': metadata['slug'],
-            'url': f"/site_escritorio/blog/posts/{metadata['slug']}.html",
+            'slug': slug,
+            'url': f"/site_escritorio/blog/posts/{slug}.html",
             'date': datetime.datetime.now().isoformat(),
             'author': "Advogado Gabriel Corrêa",
             'excerpt': metadata['excerpt'],
-            'image': f"/site_escritorio/blog/images/{metadata['slug']}.jpg",
+            'image': f"/site_escritorio/blog/images/{slug}.jpg",
             'tags': metadata['keywords'],
             'categories': [metadata['category']]
         }
@@ -352,7 +353,8 @@ Exemplos de uso:
             sys.exit(1)
         
         # Criar imagem placeholder
-        create_placeholder_image(metadata['slug'])
+        slug = metadata['slug']
+        create_placeholder_image(slug)
         
         # Atualizar índice
         update_posts_index(post_metadata)
@@ -363,7 +365,8 @@ Exemplos de uso:
         print(f"Título: {post_metadata['title']}")
         print(f"Slug: {post_metadata['slug']}")
         print(f"Data: {post_metadata['date']}")
-        print(f"Arquivo: {POSTS_DIR / f'{metadata['slug']}.md'}")
+        slug = metadata['slug']
+        print(f"Arquivo: {POSTS_DIR / f'{slug}.md'}")
         print("\n📌 Próximos passos:")
         print("  1. Revise o conteúdo gerado")
         print("  2. Substitua a imagem placeholder por uma real")
