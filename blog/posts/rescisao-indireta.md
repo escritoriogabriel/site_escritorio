@@ -1,3 +1,13 @@
+---
+title: "Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos"
+date: 2026-04-27T14:47:26.772572
+author: "Advogado Gabriel Corrêa"
+categories: ["Direito Trabalhista"]
+tags: ["rescisão indireta", "direitos do trabalhador", "CLT"]
+image: "/site_escritorio/blog/images/rescisao-indireta.jpg"
+excerpt: "Saiba como funciona a rescisão indireta, a 'justa causa do empregador', e garanta seus direitos mesmo quando a empresa descumpre o contrato."
+---
+
 # Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos
 
 **Categoria:** Direito Trabalhista | **Público:** Trabalhadores
@@ -138,6 +148,8 @@ Se você está vivenciando alguma das situações descritas neste artigo, não t
 ## Precisa de Ajuda?
 
 Nossa equipe está pronta para analisar o seu caso e orientá-lo sobre a melhor estratégia jurídica. Entre em contato conosco para uma consulta e defenda os seus direitos com segurança.
+
+**Precisa de ajuda profissional?** Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: [📞 (47) 99675-6766](https://wa.me/5547996756766)
 
 ---
 

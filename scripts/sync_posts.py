@@ -9,7 +9,7 @@ PROJECT_ROOT = Path(__file__).parent.parent.absolute()
 POSTS_DIR = PROJECT_ROOT / "blog" / "posts"
 INDEX_FILE = POSTS_DIR / "index.json"
 
-# Template HTML básico para o post (simplificado para manter o estilo do site)
+# Template HTML básico para o post
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -64,7 +64,6 @@ def parse_md(md_path):
     with open(md_path, 'r', encoding='utf-8') as f:
         text = f.read()
     
-    # Extrair Front Matter
     fm_match = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)', text, re.DOTALL)
     if not fm_match:
         return None, text
@@ -83,41 +82,61 @@ def parse_md(md_path):
 def sync():
     print(f"🔍 Sincronizando posts em: {POSTS_DIR}")
     
-    if not INDEX_FILE.exists():
-        print("⚠️  Arquivo index.json não encontrado.")
-        return
-
-    with open(INDEX_FILE, 'r', encoding='utf-8') as f:
-        posts_index = json.load(f)
-
-    for post in posts_index:
-        slug = post['slug']
-        md_file = POSTS_DIR / f"{slug}.md"
-        html_file = POSTS_DIR / f"{slug}.html"
+    md_files = list(POSTS_DIR.glob("*.md"))
+    updated_index = []
+    
+    # Processar cada arquivo Markdown encontrado
+    for md_file in md_files:
+        print(f"📄 Processando: {md_file.name}")
+        metadata, content_md = parse_md(md_file)
         
-        if md_file.exists():
-            print(f"📄 Processando: {slug}")
-            metadata, content_md = parse_md(md_file)
+        if not metadata:
+            print(f"⚠️  Aviso: Front matter não encontrado em {md_file.name}. Pulando.")
+            continue
             
-            # Converter MD para HTML
-            content_html = markdown.markdown(content_md, extensions=['extra'])
-            
-            # Formatar data
-            date_str = post['date'].split('T')[0]
-            
-            # Gerar HTML final
-            final_html = HTML_TEMPLATE.format(
-                title=post['title'],
-                author=post.get('author', 'Gabriel Corrêa'),
-                date=date_str,
-                content=content_html
-            )
-            
-            with open(html_file, 'w', encoding='utf-8') as f:
-                f.write(final_html)
-            print(f"✅ Gerado: {html_file.name}")
-        else:
-            print(f"❓ Markdown não encontrado para o slug: {slug}")
+        real_slug = md_file.stem
+        content_html = markdown.markdown(content_md, extensions=['extra'])
+        
+        # Formatar data para exibição
+        full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
+        display_date = full_date.split('T')[0]
+        
+        # Gerar o arquivo HTML
+        final_html = HTML_TEMPLATE.format(
+            title=metadata.get('title', 'Sem Título'),
+            author=metadata.get('author', 'Gabriel Corrêa'),
+            date=display_date,
+            content=content_html
+        )
+        
+        html_file = POSTS_DIR / f"{real_slug}.html"
+        with open(html_file, 'w', encoding='utf-8') as f:
+            f.write(final_html)
+        
+        # Adicionar ao novo índice
+        post_data = {
+            "title": metadata.get('title', 'Sem Título'),
+            "slug": real_slug,
+            "url": f"/site_escritorio/blog/posts/{real_slug}.html",
+            "date": full_date,
+            "author": metadata.get('author', 'Gabriel Corrêa'),
+            "excerpt": metadata.get('excerpt', 'Clique para ler mais...'),
+            "image": f"/site_escritorio/blog/images/{real_slug}.jpg",
+            "tags": [t.strip() for t in metadata.get('tags', '').replace("[", "").replace("]", "").replace('"', '').split(",")] if metadata.get('tags') else ["Direito"],
+            "categories": ["Direito"]
+        }
+        updated_index.append(post_data)
+        print(f"✅ HTML gerado e índice preparado para: {real_slug}")
+
+    # Ordenar por data (mais recente primeiro)
+    updated_index.sort(key=lambda x: x['date'], reverse=True)
+
+    # Salvar o índice limpo e atualizado
+    with open(INDEX_FILE, 'w', encoding='utf-8') as f:
+        json.dump(updated_index, f, ensure_ascii=False, indent=2)
+    
+    print(f"\n✨ Sincronização concluída!")
+    print(f"📋 Total de posts no índice: {len(updated_index)}")
 
 if __name__ == "__main__":
     sync()
