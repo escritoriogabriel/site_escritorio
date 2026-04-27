@@ -30,7 +30,7 @@ CONFIG_FILE = SCRIPT_DIR / "blog_config.json"
 
 # Configurações do Ollama
 OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://localhost:11434/api/generate")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3")
 
 def setup_directories():
     """Criar diretórios se não existirem"""
@@ -112,7 +112,7 @@ def test_ollama_connection():
                 return True
             else:
                 print("⚠️  Ollama está rodando, mas nenhum modelo foi encontrado.")
-                print("   Tente rodar: ollama run llama3")
+                print("   Tente rodar: ollama run phi3")
                 return False
         else:
             print(f"❌ Ollama respondeu com erro: {response.status_code}")
