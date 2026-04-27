@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const blogGridWrapper = document.querySelector('.blog-grid-wrapper');
+    const blogMagazineContainer = document.querySelector('.blog-magazine-container');
 
-    if (!blogGridWrapper) return; 
+    if (!blogMagazineContainer) return; 
 
     const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
@@ -22,40 +22,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const posts = await response.json();
 
-            blogGridWrapper.innerHTML = ''; 
+            blogMagazineContainer.innerHTML = ''; 
 
-            // Mostrar apenas os 3 posts mais recentes no grid da home
+            // Mostrar apenas os 3 posts mais recentes
             const recentPosts = posts.slice(0, 3);
 
-            recentPosts.forEach(post => {
-                const imageUrl = post.image.startsWith('http') ? post.image : post.image;
-                const postUrl = post.url;
+            if (recentPosts.length > 0) {
+                const featured = recentPosts[0];
+                const sidePosts = recentPosts.slice(1);
 
-                const postCard = `
-                    <div class="blog-post-card">
-                        <div class="blog-post-card-inner">
-                            <div class="blog-post-image-container" id="grid-img-container-${post.slug}" style="background: #eee; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                                <img 
-                                    src="${imageUrl}" 
-                                    alt="${post.title}" 
-                                    style="width: 100%; height: 100%; object-fit: cover; display: block;"
-                                    onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';"
-                                >
+                let html = `
+                    <div class="blog-featured-post">
+                        <div class="magazine-card featured" onclick="window.location.href='${featured.url}'">
+                            <div class="magazine-image">
+                                <img src="${featured.image}" alt="${featured.title}" onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';">
                             </div>
-                            <div class="blog-post-content">
-                                <h3>${post.title}</h3>
-                                <p>${post.excerpt}</p>
-                                <a href="${postUrl}" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                            <div class="magazine-content">
+                                <h3>${featured.title}</h3>
+                                <p>${featured.excerpt}</p>
                             </div>
                         </div>
                     </div>
+                    <div class="blog-side-posts">
                 `;
-                blogGridWrapper.innerHTML += postCard;
-            });
+
+                sidePosts.forEach(post => {
+                    html += `
+                        <div class="magazine-card compact" onclick="window.location.href='${post.url}'">
+                            <div class="magazine-image">
+                                <img src="${post.image}" alt="${post.title}" onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';">
+                            </div>
+                            <div class="magazine-content">
+                                <h3>${post.title}</h3>
+                                <p class="mobile-hide">${post.excerpt}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `</div>`;
+                blogMagazineContainer.innerHTML = html;
+            }
 
         } catch (error) {
             console.error('Erro ao carregar posts do blog:', error);
-            blogGridWrapper.innerHTML = '<p>Não foi possível carregar as publicações do blog no momento.</p>';
+            blogMagazineContainer.innerHTML = '<p>Não foi possível carregar as publicações do blog no momento.</p>';
         }
     };
 

@@ -297,12 +297,11 @@ template = f"""<!DOCTYPE html>
                 <li class="dropdown">
                     <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="trabalhista.html">Direito Trabalhista</a>
-                        <a href="previdenciario.html">Direito Previdenciário</a>
-                        <a href="civil.html">Direito Civil</a>
-                        <a href="familia.html">Direito de Família</a>
-                        <a href="consumidor.html">Direito do Consumidor</a>
-                        <a href="empresarial.html">Direito Empresarial</a>
+                        <a href="familia.html">Família</a>
+                        <a href="contrato.html">Contratos</a>
+                        <a href="criminal.html">Criminal</a>
+                        <a href="trabalhista.html">Trabalhista</a>
+                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
                     </div>
                 </li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -419,6 +418,81 @@ pages = [
         '''
     },
     {
+        'filename': 'familia.html',
+        'title': 'Direito de Família | Divórcio, Guarda e Pensão',
+        'description': 'Atendimento humanizado em Direito de Família. Especialista em divórcio, pensão alimentícia, guarda e inventário.',
+        'body': '''
+    <section class="page-header">
+        <h1>Soluções Humanizadas Para Momentos Delicados.</h1>
+    </section>
+    <section class="content-section">
+        <h2>Serviços</h2>
+        <ul style="margin-top: 20px; margin-left: 20px;">
+            <li>Divórcio Consensual e Litigioso</li>
+            <li>Pensão Alimentícia</li>
+            <li>Guarda e Regulamentação de Visitas</li>
+            <li>Inventário e Partilha de Bens</li>
+            <li>União Estável</li>
+        </ul>
+        <div class="cta-box">
+            <h3>Precisa de ajuda com este assunto?</h3>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Receber Orientação</a>
+        </div>
+    </section>
+        '''
+    },
+    {
+        'filename': 'contrato.html',
+        'title': 'Contratos | Elaboração e Revisão de Contratos',
+        'description': 'Segurança jurídica para seus negócios. Elaboração e revisão de contratos de aluguel, compra e venda, prestação de serviços e mais.',
+        'body': '''
+    <section class="page-header">
+        <h1>Segurança Jurídica em Cada Cláusula.</h1>
+    </section>
+    <section class="content-section">
+        <h2>Serviços</h2>
+        <ul style="margin-top: 20px; margin-left: 20px;">
+            <li>Elaboração de Contratos Personalizados</li>
+            <li>Revisão de Contratos de Aluguel</li>
+            <li>Contratos de Compra e Venda</li>
+            <li>Prestação de Serviços</li>
+            <li>Distratos e Rescisões Contratuais</li>
+        </ul>
+        <div class="cta-box">
+            <h3>Precisa de ajuda com este assunto?</h3>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Analisar Meu Contrato</a>
+        </div>
+    </section>
+        '''
+    },
+    {
+        'filename': 'criminal.html',
+        'title': 'Direito Criminal | Defesa Criminal Estratégica',
+        'description': 'Defesa criminal técnica e estratégica. Acompanhamento em delegacias, audiências de custódia e processos criminais.',
+        'body': '''
+    <section class="page-header">
+        <h1>Defesa Técnica e Estratégica em Matéria Criminal.</h1>
+    </section>
+    <section class="content-section">
+        <h2>Serviços</h2>
+        <ul style="margin-top: 20px; margin-left: 20px;">
+            <li>Acompanhamento em Delegacia</li>
+            <li>Audiência de Custódia</li>
+            <li>Defesa em Processos Criminais</li>
+            <li>Pedidos de Liberdade</li>
+            <li>Recursos Criminais</li>
+        </ul>
+        <div class="cta-box">
+            <h3>Precisa de ajuda com este assunto?</h3>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Falar com Advogado</a>
+        </div>
+    </section>
+        '''
+    },
+    {
         'filename': 'trabalhista.html',
         'title': 'Direito Trabalhista | Especialista em Causas do Trabalho',
         'description': 'Advogado trabalhista especializado em rescisões, horas extras, assédio moral e reconhecimento de vínculo. Defenda seus direitos trabalhistas.',
@@ -444,122 +518,26 @@ pages = [
         '''
     },
     {
-        'filename': 'previdenciario.html',
-        'title': 'Direito Previdenciário | Aposentadorias e Benefícios INSS',
-        'description': 'Especialista em Direito Previdenciário. Auxílio em aposentadorias, auxílio-doença, BPC/LOAS e revisões de benefícios.',
+        'filename': 'busca-e-apreensao.html',
+        'title': 'Busca e Apreensão | Defesa em Ações de Veículos',
+        'description': 'Defesa em ações de busca e apreensão de veículos. Revisão de contratos de financiamento e proteção do seu patrimônio.',
         'body': '''
     <section class="page-header">
-        <h1>Seu Benefício Pode Estar Mais Próximo do Que Você Imagina.</h1>
+        <h1>Proteja Seu Veículo de Busca e Apreensão Abusiva.</h1>
     </section>
     <section class="content-section">
         <h2>Serviços</h2>
         <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Aposentadoria</li>
-            <li>Auxílio-doença</li>
-            <li>BPC/LOAS</li>
-            <li>Revisões</li>
-            <li>Planejamento previdenciário</li>
+            <li>Defesa em Ação de Busca e Apreensão</li>
+            <li>Revisão de Juros Abusivos</li>
+            <li>Negociação de Dívidas de Financiamento</li>
+            <li>Liminares para Manutenção de Posse</li>
+            <li>Proteção do Patrimônio</li>
         </ul>
         <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
+            <h3>Seu veículo corre risco?</h3>
             <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Solicitar Análise Previdenciária</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'civil.html',
-        'title': 'Direito Civil | Proteção de Patrimônio e Indenizações',
-        'description': 'Advocacia Civil especializada em contratos, cobranças, indenizações e responsabilidade civil. Proteja seus bens e direitos.',
-        'body': '''
-    <section class="page-header">
-        <h1>Proteção Jurídica Para Seu Patrimônio e Seus Direitos.</h1>
-    </section>
-    <section class="content-section">
-        <h2>Serviços</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Indenizações</li>
-            <li>Cobranças</li>
-            <li>Contratos</li>
-            <li>Responsabilidade civil</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Falar com Especialista</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'familia.html',
-        'title': 'Direito de Família | Divórcio, Guarda e Pensão',
-        'description': 'Atendimento humanizado em Direito de Família. Especialista em divórcio, pensão alimentícia, guarda e inventário.',
-        'body': '''
-    <section class="page-header">
-        <h1>Soluções Humanizadas Para Momentos Delicados.</h1>
-    </section>
-    <section class="content-section">
-        <h2>Serviços</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Divórcio</li>
-            <li>Pensão alimentícia</li>
-            <li>Guarda</li>
-            <li>Inventário</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Receber Orientação</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'consumidor.html',
-        'title': 'Direito do Consumidor | Defesa contra Abusos',
-        'description': 'Proteja seus direitos como consumidor. Especialista em cobranças indevidas, negativação abusiva e problemas com produtos.',
-        'body': '''
-    <section class="page-header">
-        <h1>Quando Seus Direitos São Violados, Nós Atuamos.</h1>
-    </section>
-    <section class="content-section">
-        <h2>Serviços</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Cobrança indevida</li>
-            <li>Negativação abusiva</li>
-            <li>Produtos defeituosos</li>
-            <li>Serviços mal prestados</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Resolver Meu Problema</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'empresarial.html',
-        'title': 'Direito Empresarial | Segurança Jurídica para Empresas',
-        'description': 'Consultoria jurídica empresarial. Contratos, cobranças, proteção patrimonial e recuperação de crédito para sua empresa.',
-        'body': '''
-    <section class="page-header">
-        <h1>Segurança Jurídica Para Sua Empresa Crescer.</h1>
-    </section>
-    <section class="content-section">
-        <h2>Serviços</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Contratos</li>
-            <li>Cobranças</li>
-            <li>Consultoria preventiva</li>
-            <li>Recuperação de crédito</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Proteger Minha Empresa</a>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Proteger Meu Veículo</a>
         </div>
     </section>
         '''

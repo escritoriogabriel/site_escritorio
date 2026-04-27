@@ -45,6 +45,158 @@
     <link rel="stylesheet" href="assets/blog-styles.css">
     <style>
 
+/* Estilos das Áreas de Atuação */
+.services-section {
+    padding: 90px 5%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--accent-gold);
+}
+
+.service-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-card-header i {
+    font-size: 2rem;
+    color: var(--accent-gold);
+}
+
+.service-card-header h3 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Magazine Blog Layout */
+.blog-magazine-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    text-align: left;
+}
+
+.blog-featured-post {
+    width: 100%;
+}
+
+.blog-side-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.magazine-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.magazine-card:hover {
+    transform: translateY(-5px);
+}
+
+.magazine-card.featured {
+    height: 100%;
+}
+
+.magazine-card.compact {
+    flex-direction: row;
+    height: calc(50% - 10px);
+}
+
+.magazine-card.compact .magazine-image {
+    width: 120px;
+    min-width: 120px;
+}
+
+.magazine-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.magazine-card.featured .magazine-image {
+    height: 350px;
+}
+
+.magazine-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.magazine-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.magazine-card.compact .magazine-content {
+    padding: 15px;
+    justify-content: center;
+}
+
+.magazine-content h3 {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    line-height: 1.3;
+}
+
+.magazine-card.compact .magazine-content h3 {
+    font-size: 1rem;
+}
+
+.magazine-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 :root {
     --primary-blue: #172B41;
     --accent-gold: #C9A961;
@@ -432,9 +584,9 @@ nav {
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(201,169,97,0.4);
     color: white;
-    padding: 14px 24px;
+    padding: 10px 20px;
     border-radius: 50px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -857,19 +1009,36 @@ footer {
         }
         .top-bar a { color: white; text-decoration: underline; font-weight: 600; }
         
-        .hero { padding: 60px 5% 40px; }
-        .hero h1 { font-size: 1.8rem; }
-        .hero p { font-size: 1rem; }
-        .urgency-badge { font-size: 0.75rem; padding: 5px 10px; }
+        .hero { padding: 40px 5% 30px; }
+        .hero h1 { font-size: 1.6rem; }
+        .hero p { font-size: 0.95rem; margin-bottom: 1.5rem; }
         
-        .section-title { font-size: 1.6rem; }
-        .section-subtitle { font-size: 0.9rem; }
+        .section-title { font-size: 1.4rem; margin-bottom: 10px; }
+        .section-subtitle { font-size: 0.85rem; margin-bottom: 25px; }
         
-        .social-proof-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-        .proof-number, .atendimentoimediato { font-size: 1.5rem; }
+        .social-proof { padding: 40px 5%; }
+        .social-proof-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+        .proof-number, .atendimentoimediato { font-size: 1.3rem; }
+        .proof-label { font-size: 0.8rem; }
         
-        .cta-final h2 { font-size: 1.6rem; }
-        .contact-form { padding: 30px 20px; }
+        /* Mobile Service Card */
+        .service-card { padding: 20px; gap: 10px; }
+        .service-card-header { flex-direction: row; align-items: center; gap: 12px; }
+        .service-card-header i { font-size: 1.4rem; }
+        .service-card-header h3 { font-size: 1.1rem; }
+        .service-card p { font-size: 0.85rem; }
+
+        /* Mobile Magazine Blog */
+        .blog-magazine-container { grid-template-columns: 1fr; gap: 20px; }
+        .magazine-card.featured .magazine-image { height: 200px; }
+        .magazine-card.compact { flex-direction: column; height: auto; }
+        .magazine-card.compact .magazine-image { width: 100%; height: 150px; }
+        .magazine-content h3 { font-size: 1rem; }
+        .mobile-hide { display: none; }
+        
+        .cta-final { padding: 60px 5%; }
+        .cta-final h2 { font-size: 1.4rem; }
+        .contact-form { padding: 25px 15px; }
         
         .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
     }
@@ -917,9 +1086,6 @@ footer {
     
     <!-- Hero Section -->
     <section class="hero">
-        <div class="urgency-badge animate-fade-up" style="display: inline-block; background: #fff5f5; border: 1px solid #feb2b2; color: #c53030; padding: 6px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 20px;">
-            <i class="fas fa-exclamation-circle"></i> 🔴 Atenção: o prazo para sua causa trabalhista pode estar correndo
-        </div>
         <h1 class="animate-fade-up">Defendendo seus <span>direitos</span> com excelência e transparência.</h1>
         <p class="animate-fade-up">Advocacia estratégica e personalizada para resolver seus problemas jurídicos com agilidade em todo o Brasil.</p>
         <div class="hero-ctas animate-fade-up">
@@ -961,29 +1127,46 @@ footer {
         </div>
     </section>
 
-    <!-- ===== ÁREAS DE ATUAÇÃO (NOVA SEÇÃO) ===== -->
-    <section id="servicos" style="padding: 90px 5%; text-align: center; background-color: var(--white);">
+    <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
+    <section id="servicos" class="services-section">
         <h2 class="section-title">Áreas de Atuação</h2>
         <p class="section-subtitle">Especialistas prontos para defender seus interesses com estratégia e dedicação.</p>
-        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
-            <a href="trabalhista.html" class="card" style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s ease; border-bottom: 4px solid transparent; text-align: left;">
-                <i class="fas fa-briefcase" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;"></i>
-                <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Direito Trabalhista</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Rescisões, verbas trabalhistas, horas extras, assédio e reconhecimento de vínculo.</p>
+        <div class="services-grid">
+            <a href="familia.html" class="service-card">
+                <div class="service-card-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Família</h3>
+                </div>
+                <p>Divórcio, pensão, guarda e inventários com atendimento humanizado.</p>
             </a>
-            <a href="previdenciario.html" class="card" style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s ease; border-bottom: 4px solid transparent; text-align: left;">
-                <i class="fas fa-blind" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;"></i>
-                <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Direito Previdenciário</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Aposentadorias, benefícios, revisões e auxílio-doença.</p>
+            <a href="contrato.html" class="service-card">
+                <div class="service-card-header">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Contratos</h3>
+                </div>
+                <p>Elaboração e revisão de contratos com segurança jurídica total.</p>
             </a>
-            <a href="civil.html" class="card" style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s ease; border-bottom: 4px solid transparent; text-align: left;">
-                <i class="fas fa-gavel" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;"></i>
-                <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Direito Civil</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Contratos, cobranças, indenizações e responsabilidade civil.</p>
+            <a href="criminal.html" class="service-card">
+                <div class="service-card-header">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Criminal</h3>
+                </div>
+                <p>Defesa criminal estratégica e acompanhamento em todas as fases.</p>
             </a>
-        </div>
-        <div style="margin-top: 40px;">
-            <a href="contato.html" class="btn-secondary">Ver Todas as Áreas <i class="fas fa-arrow-right"></i></a>
+            <a href="trabalhista.html" class="service-card">
+                <div class="service-card-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Trabalhista</h3>
+                </div>
+                <p>Defesa dos direitos do trabalhador e consultoria preventiva.</p>
+            </a>
+            <a href="busca-e-apreensao.html" class="service-card">
+                <div class="service-card-header">
+                    <i class="fas fa-car"></i>
+                    <h3>Busca e Apreensão</h3>
+                </div>
+                <p>Ações de busca e apreensão de veículos e defesa do consumidor.</p>
+            </a>
         </div>
     </section>
 
@@ -1028,16 +1211,14 @@ footer {
         </div>
     </div>
 
-    <!-- ===== BLOG GRID (OTIMIZADO) ===== -->
-    <section class="blog-carousel-section">
-        <h2 class="section-title">Últimas Publicações do Blog</h2>
-        <p class="section-subtitle">Fique por dentro das novidades e dicas jurídicas.</p>
-        <div class="blog-grid-container">
-            <div class="blog-grid-wrapper">
-                <!-- Posts serão carregados aqui pelo JavaScript -->
-            </div>
+    <!-- ===== BLOG MAGAZINE (OTIMIZADO) ===== -->
+    <section class="blog-carousel-section" style="padding: 60px 5%;">
+        <h2 class="section-title">Blog & Notícias</h2>
+        <p class="section-subtitle">Informação jurídica clara e objetiva para você.</p>
+        <div class="blog-magazine-container">
+            <!-- Posts serão carregados aqui pelo JavaScript -->
         </div>
-        <div class="view-all-posts">
+        <div class="view-all-posts" style="margin-top: 30px;">
             <a href="blog.html" class="btn-secondary">Ver Todas as Publicações <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
