@@ -816,55 +816,74 @@ footer {
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 15px 5%;
-        gap: 10px;
+    /* Responsive */
+    @media (max-width: 900px) {
+        .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     }
 
-    .hamburger { display: flex; }
+    @media (max-width: 768px) {
+        header {
+            flex-wrap: wrap;
+            height: auto;
+            padding: 15px 5%;
+            gap: 10px;
+        }
 
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding-bottom: 15px;
+        .hamburger { display: flex; }
+
+        nav {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            padding-bottom: 15px;
+        }
+
+        nav.open { display: flex; }
+
+        .nav-links {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
+        
+        .top-bar { 
+            text-align: center; 
+            font-size: 0.75rem;
+            padding: 10px 5%;
+        }
+        .top-bar a { color: white; text-decoration: underline; font-weight: 600; }
+        
+        .hero { padding: 60px 5% 40px; }
+        .hero h1 { font-size: 1.8rem; }
+        .hero p { font-size: 1rem; }
+        .urgency-badge { font-size: 0.75rem; padding: 5px 10px; }
+        
+        .section-title { font-size: 1.6rem; }
+        .section-subtitle { font-size: 0.9rem; }
+        
+        .social-proof-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+        .proof-number, .atendimentoimediato { font-size: 1.5rem; }
+        
+        .cta-final h2 { font-size: 1.6rem; }
+        .contact-form { padding: 30px 20px; }
+        
+        .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 20px; right: 20px; }
     }
 
-    nav.open { display: flex; }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
+    @media (max-width: 480px) {
+        .social-proof-grid { grid-template-columns: 1fr; }
+        .hero-ctas .btn-primary, .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
     }
-
-    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-    
-    .top-bar { text-align: center; }
-    .top-bar a { color: white; text-decoration: underline; font-weight: 600; }
-    
-    .hero h1 { font-size: 2rem; }
-    .cta-final h2 { font-size: 1.8rem; }
-    .contact-form { padding: 30px 25px; }
-    
-    .profile-image { max-width: 280px; box-shadow: 15px 15px 0 var(--accent-gold); }
-}
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-phone"></i> <a href="tel:47996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento em todo o Brasil
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
     </div>
 
     <header>
@@ -898,6 +917,9 @@ footer {
     
     <!-- Hero Section -->
     <section class="hero">
+        <div class="urgency-badge animate-fade-up" style="display: inline-block; background: #fff5f5; border: 1px solid #feb2b2; color: #c53030; padding: 6px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 20px;">
+            <i class="fas fa-exclamation-circle"></i> 🔴 Atenção: o prazo para sua causa trabalhista pode estar correndo
+        </div>
         <h1 class="animate-fade-up">Defendendo seus <span>direitos</span> com excelência e transparência.</h1>
         <p class="animate-fade-up">Advocacia estratégica e personalizada para resolver seus problemas jurídicos com agilidade em todo o Brasil.</p>
         <div class="hero-ctas animate-fade-up">
@@ -910,6 +932,10 @@ footer {
             <span><i class="fas fa-check-circle"></i> Atendimento Online</span>
             <span><i class="fas fa-check-circle"></i> Resposta Rápida</span>
             <span><i class="fas fa-check-circle"></i> Especialistas</span>
+        </div>
+        <div class="oab-badge animate-fade-up" style="margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="assets/img/oab-sc.jpg" alt="Logo OAB/SC" style="height: 40px; width: auto; opacity: 0.9;">
+            <span style="font-size: 0.9rem; color: var(--text-dark); font-weight: 600;">✔ OAB/SC 63.737 — Advogado regularmente inscrito</span>
         </div>
     </section>
 
@@ -935,7 +961,60 @@ footer {
         </div>
     </section>
 
-    <!-- ===== CTA INTERMEDIÁRIO 1 ===== -->
+    <!-- ===== ÁREAS DE ATUAÇÃO (NOVA SEÇÃO) ===== -->
+    <section id="servicos" style="padding: 90px 5%; text-align: center; background-color: var(--white);">
+        <h2 class="section-title">Áreas de Atuação</h2>
+        <p class="section-subtitle">Especialistas prontos para defender seus interesses com estratégia e dedicação.</p>
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+            <a href="trabalhista.html" class="card" style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s ease; border-bottom: 4px solid transparent; text-align: left;">
+                <i class="fas fa-briefcase" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Direito Trabalhista</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Rescisões, verbas trabalhistas, horas extras, assédio e reconhecimento de vínculo.</p>
+            </a>
+            <a href="previdenciario.html" class="card" style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s ease; border-bottom: 4px solid transparent; text-align: left;">
+                <i class="fas fa-blind" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Direito Previdenciário</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Aposentadorias, benefícios, revisões e auxílio-doença.</p>
+            </a>
+            <a href="civil.html" class="card" style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s ease; border-bottom: 4px solid transparent; text-align: left;">
+                <i class="fas fa-gavel" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Direito Civil</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Contratos, cobranças, indenizações e responsabilidade civil.</p>
+            </a>
+        </div>
+        <div style="margin-top: 40px;">
+            <a href="contato.html" class="btn-secondary">Ver Todas as Áreas <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONA (REPOSICIONADO) ===== -->
+    <section class="how-it-works" style="background-color: var(--bg-light); padding: 90px 5%;">
+        <h2 class="section-title">Como Funciona</h2>
+        <p class="section-subtitle">Processo simples, transparente e focado na sua solução.</p>
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h4>Você entra em contato</h4>
+                <p>Explique sua situação em poucos minutos pelo WhatsApp ou formulário.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h4>Analisamos seu caso</h4>
+                <p>Avaliação jurídica rápida, objetiva e sem compromisso.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h4>Definimos a estratégia</h4>
+                <p>Apresentamos o melhor caminho para defender seus direitos.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h4>Defendemos seus direitos</h4>
+                <p>Com técnica, dedicação e acompanhamento próximo em cada etapa.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="cta-mid">
         <h3>Precisa de orientação jurídica?</h3>
         <p>Fale agora mesmo com nossa equipe. Atendimento ágil, sem burocracia.</p>
@@ -949,16 +1028,14 @@ footer {
         </div>
     </div>
 
-    <!-- ===== BLOG CAROUSEL (REPOSICIONADO) ===== -->
+    <!-- ===== BLOG GRID (OTIMIZADO) ===== -->
     <section class="blog-carousel-section">
         <h2 class="section-title">Últimas Publicações do Blog</h2>
         <p class="section-subtitle">Fique por dentro das novidades e dicas jurídicas.</p>
-        <div class="blog-carousel-container">
-            <div class="blog-carousel-wrapper">
+        <div class="blog-grid-container">
+            <div class="blog-grid-wrapper">
                 <!-- Posts serão carregados aqui pelo JavaScript -->
             </div>
-            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
         </div>
         <div class="view-all-posts">
             <a href="blog.html" class="btn-secondary">Ver Todas as Publicações <i class="fas fa-arrow-right"></i></a>
@@ -990,33 +1067,7 @@ footer {
         </div>
     </section>
 
-    <!-- ===== COMO FUNCIONA ===== -->
-    <section class="how-it-works">
-        <h2 class="section-title">Como Funciona</h2>
-        <p class="section-subtitle">Processo simples, transparente e focado na sua solução.</p>
-        <div class="steps-grid">
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <h4>Você entra em contato</h4>
-                <p>Explique sua situação em poucos minutos pelo WhatsApp ou formulário.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <h4>Analisamos seu caso</h4>
-                <p>Avaliação jurídica rápida, objetiva e sem compromisso.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <h4>Definimos a estratégia</h4>
-                <p>Apresentamos o melhor caminho para defender seus direitos.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">4</div>
-                <h4>Defendemos seus direitos</h4>
-                <p>Com técnica, dedicação e acompanhamento próximo em cada etapa.</p>
-            </div>
-        </div>
-    </section>
+
 
     <!-- ===== FAQ ===== -->
     <section class="faq">
@@ -1025,7 +1076,7 @@ footer {
 
         <div class="faq-item">
             <button class="faq-question">Quanto custa a consulta? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">O valor varia conforme a complexidade do caso. Entre em contato para uma avaliação inicial e saiba mais sobre nossas condições de atendimento.</div>
+            <div class="faq-answer">A consulta inicial é gratuita. Os honorários são definidos após análise do caso — em muitas ações trabalhistas trabalhamos com honorários apenas sobre o êxito, sem custo antecipado para o cliente.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question">O atendimento é online? <i class="fas fa-chevron-down"></i></button>
@@ -1109,7 +1160,7 @@ footer {
             <div class="footer-col">
                 <h4>Advogado Gabriel Corrêa</h4>
                 <p>OAB/SC 63.737</p>
-                <p>Atendimento em todo o Brasil</p>
+                <p>Atendimento 100% Online em todo o Brasil</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>

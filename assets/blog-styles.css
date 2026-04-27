@@ -5,11 +5,27 @@
     background-color: var(--bg-light);
 }
 
-.blog-carousel-container {
-    position: relative;
+.blog-grid-container {
     max-width: 1200px;
     margin: 40px auto;
-    overflow: hidden;
+}
+
+.blog-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .blog-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-carousel-wrapper {
@@ -19,9 +35,8 @@
 }
 
 .blog-post-card {
-    flex: 0 0 33.33%; /* Show 3 cards at a time */
-    max-width: 33.33%;
-    padding: 15px;
+    width: 100%;
+    padding: 0;
     box-sizing: border-box;
 }
 

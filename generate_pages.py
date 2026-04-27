@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
 .top-bar {
     background-color: var(--primary-blue);
     color: white;
-    padding: 5px 5%;
+    padding: 8px 5%;
     font-size: 0.85rem;
     text-align: right;
 }
@@ -223,144 +223,6 @@ footer {
     text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
-    nav { flex-direction: column; gap: 15px; margin-top: 20px; width: 100%; }
-    .nav-links { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; }
-    .top-bar { text-align: center; }
-}
-
-/* Hero Section */
-.hero {
-    padding: 100px 5%;
-    text-align: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-    border-bottom: 1px solid #eee;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: var(--primary-blue);
-    margin-bottom: 1.5rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Trust Section */
-.trust-section {
-    padding: 60px 5%;
-    background-color: var(--white);
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #eee;
-}
-
-.trust-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    color: var(--primary-blue);
-}
-
-.trust-item i {
-    color: var(--accent-gold);
-    font-size: 1.2rem;
-}
-
-/* Specialty Cards */
-.specialties {
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    color: var(--primary-blue);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-    border-bottom: 4px solid transparent;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-bottom-color: var(--accent-gold);
-}
-
-.card i {
-    font-size: 2.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-    display: block;
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: var(--primary-blue);
-}
-
-/* FAQ Section */
-.faq {
-    padding: 80px 5%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.faq-question {
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--primary-blue);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-answer {
-    padding: 0 20px 20px;
-    display: none;
-    color: var(--text-muted);
-}
-
 /* Profile Section */
 .profile-grid {
     display: grid;
@@ -394,9 +256,14 @@ footer {
     font-style: italic;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
+    header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
+    nav { flex-direction: column; gap: 15px; margin-top: 20px; width: 100%; }
+    .nav-links { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; }
+    .top-bar { text-align: center; }
     .profile-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero h1 { font-size: 2rem; }
 }
 """
 
@@ -405,18 +272,11 @@ template = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{{{TITLE}}}} | Advocacia Estratégica</title>
+    <title>{{{{TITLE}}}} | Advogado Gabriel Corrêa</title>
     <meta name="description" content="{{{{DESCRIPTION}}}}">
     <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
     <link rel="canonical" href="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
-    <meta property="og:title" content="{{{{TITLE}}}} | Advocacia Estratégica">
-    <meta property="og:description" content="{{{{DESCRIPTION}}}}">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -426,11 +286,11 @@ template = f"""<!DOCTYPE html>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-phone"></i> (00) 0000-0000 | <i class="fab fa-whatsapp"></i> (00) 90000-0000
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
 
     <header>
-        <a href="index.html" class="logo">Advocacia Estratégica</a>
+        <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
@@ -445,13 +305,11 @@ template = f"""<!DOCTYPE html>
                         <a href="empresarial.html">Direito Empresarial</a>
                     </div>
                 </li>
-                <li><a href="quem-sou-eu.html">Quem Sou Eu</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5500000000000" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale no WhatsApp</a>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </nav>
     </header>
 
@@ -462,31 +320,29 @@ template = f"""<!DOCTYPE html>
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Escritório</h4>
-                <p>Advocacia Estratégica</p>
-                <p>OAB/XX 000.000</p>
+                <h4>Advogado Gabriel Corrêa</h4>
+                <p>OAB/SC 63.737</p>
+                <p>Atendimento 100% Online em todo o Brasil</p>
             </div>
             <div class="footer-col">
                 <h4>Links Úteis</h4>
-                <a href="quem-sou-eu.html">Quem Sou Eu</a>
-                <a href="sobre.html">Sobre Nós</a>
-                <a href="depoimentos.html">Depoimentos</a>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
                 <a href="blog.html">Blog</a>
                 <a href="contato.html">Contato</a>
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(00) 0000-0000</p>
-                <p>contato@escritorio.com.br</p>
-                <p>Rua Exemplo, 123 - Centro</p>
+                <p>(47) 99675-6766</p>
+                <p>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 Advocacia Estratégica. Todos os direitos reservados. | Política de Privacidade | LGPD
+            &copy; 2024 Advogado Gabriel Corrêa. Todos os direitos reservados.
         </div>
     </footer>
 
-    <a href="https://wa.me/5500000000000" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -514,200 +370,50 @@ template = f"""<!DOCTYPE html>
 
 pages = [
     {
-        'filename': 'index.html',
-        'title': 'Advocacia Estratégica | Seu Direito com Seriedade e Agilidade',
-        'description': 'Escritório de advocacia especializado em Direito Trabalhista, Previdenciário, Civil, Família, Consumidor e Empresarial. Atendimento humanizado e estratégico.',
-        'body': '''
-    <section class="hero">
-        <h1>Seu Direito Merece Ser Defendido com Seriedade e Agilidade.</h1>
-        <p>Atuação jurídica estratégica, atendimento humanizado e soluções eficientes para proteger seus interesses.</p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="https://wa.me/5500000000000" style="background-color: var(--whatsapp-green); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block;">
-                🟢 Falar pelo WhatsApp Agora
-            </a>
-            <a href="contato.html" style="background-color: var(--primary-blue); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block;">
-                🔵 Agendar Consulta
-            </a>
-        </div>
-        <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">
-            <span>✔ Atendimento rápido</span>
-            <span>✔ Análise personalizada</span>
-            <span>✔ Sigilo absoluto</span>
-        </div>
-    </section>
-
-    <section class="trust-section" style="background-color: var(--white); padding: 80px 5%; text-align: center;">
-        <h2 class="section-title">Advocacia Estratégica, Atendimento de Verdade.</h2>
-        <div style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted);">
-            <p>Cada caso exige mais do que conhecimento jurídico: exige estratégia, dedicação e compromisso com resultados.</p>
-            <p style="margin-top: 20px;">Nosso escritório atua com excelência na defesa dos seus direitos, oferecendo orientação clara, soluções personalizadas e acompanhamento próximo em cada etapa.</p>
-            <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">Aqui, você fala com quem resolve.</p>
-        </div>
-    </section>
-
-    <section class="specialties">
-        <h2 class="section-title">Como Podemos Ajudar Você</h2>
-        <div class="grid">
-            <a href="trabalhista.html" class="card">
-                <i class="fas fa-briefcase"></i>
-                <h3>Direito Trabalhista</h3>
-                <p>Rescisões, verbas trabalhistas, horas extras, assédio e reconhecimento de vínculo.</p>
-            </a>
-            <a href="previdenciario.html" class="card">
-                <i class="fas fa-blind"></i>
-                <h3>Direito Previdenciário</h3>
-                <p>Aposentadorias, benefícios, revisões e auxílio-doença.</p>
-            </a>
-            <a href="civil.html" class="card">
-                <i class="fas fa-gavel"></i>
-                <h3>Direito Civil</h3>
-                <p>Contratos, cobranças, indenizações e responsabilidade civil.</p>
-            </a>
-            <a href="familia.html" class="card">
-                <i class="fas fa-users"></i>
-                <h3>Direito de Família</h3>
-                <p>Divórcio, pensão alimentícia, guarda e inventário.</p>
-            </a>
-            <a href="consumidor.html" class="card">
-                <i class="fas fa-shopping-cart"></i>
-                <h3>Direito do Consumidor</h3>
-                <p>Cobranças indevidas, negativação e problemas com produtos e serviços.</p>
-            </a>
-            <a href="empresarial.html" class="card">
-                <i class="fas fa-building"></i>
-                <h3>Direito Empresarial</h3>
-                <p>Consultoria jurídica, contratos e proteção patrimonial.</p>
-            </a>
-        </div>
-    </section>
-
-    <section style="background-color: var(--primary-blue); color: white; padding: 80px 5%; text-align: center;">
-        <h2 class="section-title" style="color: white;">Por Que Escolher Nosso Escritório</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
-            <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px;">Atendimento direto com advogado</div>
-            <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px;">Comunicação clara e sem juridiquês</div>
-            <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px;">Estratégia personalizada para cada caso</div>
-            <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px;">Transparência em todas as etapas</div>
-            <div style="background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 50px;">Agilidade no atendimento e retorno</div>
-        </div>
-    </section>
-
-    <section style="padding: 80px 5%; text-align: center; background-color: var(--bg-light);">
-        <h2 class="section-title">Como Funciona</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;">
-            <div>
-                <div style="width: 50px; height: 50px; background: var(--accent-gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700;">1</div>
-                <h4>Você entra em contato</h4>
-                <p>Explique sua situação em poucos minutos.</p>
-            </div>
-            <div>
-                <div style="width: 50px; height: 50px; background: var(--accent-gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700;">2</div>
-                <h4>Analisamos seu caso</h4>
-                <p>Avaliação jurídica rápida e objetiva.</p>
-            </div>
-            <div>
-                <div style="width: 50px; height: 50px; background: var(--accent-gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700;">3</div>
-                <h4>Definimos a melhor estratégia</h4>
-                <p>Atuação focada na solução.</p>
-            </div>
-            <div>
-                <div style="width: 50px; height: 50px; background: var(--accent-gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700;">4</div>
-                <h4>Defendemos seus direitos</h4>
-                <p>Com técnica, dedicação e eficiência.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq">
-        <h2 class="section-title" style="text-align: center;">Perguntas Frequentes</h2>
-        <div class="faq-item">
-            <button class="faq-question">Quanto custa a consulta? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">O valor varia conforme a complexidade do caso. Consulte nossa equipe.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">O atendimento é online? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Sim. Atendemos presencialmente e online em todo o Brasil.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Em quanto tempo terei retorno? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Nosso atendimento inicial é realizado com rapidez.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Meu caso tem solução? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Cada situação exige análise individual. Entre em contato para avaliação.</div>
-        </div>
-    </section>
-
-    <section style="padding: 100px 5%; text-align: center; background: linear-gradient(rgba(23, 43, 65, 0.9), rgba(23, 43, 65, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; color: white;">
-        <h2>Não Deixe Seu Direito Para Depois.</h2>
-        <p style="margin-top: 20px; font-size: 1.2rem;">Quanto antes você agir, maiores são as chances de alcançar o melhor resultado.</p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
-            <a href="https://wa.me/5500000000000" style="background-color: var(--whatsapp-green); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block;">
-                🟢 Falar com um Advogado Agora
-            </a>
-            <a href="contato.html" style="background-color: var(--primary-blue); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block;">
-                📅 Agendar Atendimento
-            </a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'quem-sou-eu.html',
-        'title': 'Quem Sou Eu | Dr. Gabriel Corrêa',
+        'filename': 'sobre.html',
+        'title': 'Sobre Mim | Advogado Gabriel Corrêa',
         'description': 'Conheça o Dr. Gabriel Corrêa, advogado com foco em soluções jurídicas práticas e eficientes. Proximidade, clareza e compromisso real com cada cliente.',
         'body': '''
+    <section class="page-header">
+        <h1>Quem Sou Eu</h1>
+        <p>Conheça a história e os valores por trás do atendimento.</p>
+    </section>
+
     <section class="content-section">
         <div class="profile-grid">
             <div class="profile-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user-tie" style="font-size: 5rem; margin-bottom: 10px;"></i><br>
-                    Espaço para sua Foto Profissional
-                </div>
-                <!-- <img src="sua-foto.jpg" alt="Dr. Gabriel Corrêa"> -->
+                <img src="assets/img/advogado.jpg" alt="Dr. Gabriel Corrêa" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'profile-placeholder\\'><i class=\\'fas fa-user-tie\\' style=\\'font-size: 5rem;\\'></i></div>'">
             </div>
             <div>
                 <h2 style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">Dr. Gabriel Corrêa</h2>
-                <p style="font-size: 1.2rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">Advogado com foco em soluções jurídicas práticas e eficientes.</p>
+                <p style="font-size: 1.2rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">Advogado regularmente inscrito na OAB/SC 63.737</p>
                 <p>Acredito que a advocacia se constrói pela proximidade, clareza e compromisso real com cada cliente. Meu trabalho é transformar questões jurídicas complexas em caminhos objetivos, sempre com transparência e diálogo aberto.</p>
-                <p style="margin-top: 20px;">Com uma atuação estratégica e focada na resolução de problemas, busco não apenas defender direitos, mas oferecer a segurança jurídica necessária para que você ou sua empresa possam prosperar.</p>
+                <p style="margin-top: 20px;">Com uma atuação estratégica e focada na resolução de problemas, busco não apenas defender direitos, mas oferecer a segurança jurídica necessária para que você possa ter tranquilidade.</p>
                 
                 <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                         <i class="fas fa-graduation-cap" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
-                        <h4 style="margin-bottom: 5px;">Formação</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Especialista em Direito Estratégico.</p>
+                        <h4 style="color: var(--primary-blue);">Formação</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Especialista em Direito do Trabalho e Previdenciário.</p>
                     </div>
-                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                         <i class="fas fa-award" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
-                        <h4 style="margin-bottom: 5px;">Experiência</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Anos de atuação em casos complexos.</p>
+                        <h4 style="color: var(--primary-blue);">Experiência</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Anos de atuação focada em resultados e satisfação do cliente.</p>
                     </div>
                 </div>
-
-                <a href="https://wa.me/5500000000000" class="btn-cta" style="margin-top: 40px;">🟢 Falar Diretamente Comigo</a>
             </div>
         </div>
-    </section>
 
-    <section style="background-color: var(--primary-blue); color: white; padding: 80px 5%; text-align: center;">
-        <h2 class="section-title" style="color: white;">Minha Filosofia de Trabalho</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1000px; margin: 40px auto 0;">
-            <div>
-                <i class="fas fa-eye" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
-                <h4>Transparência</h4>
-                <p style="font-size: 0.9rem; opacity: 0.8;">Você sempre saberá exatamente o que está acontecendo no seu caso.</p>
-            </div>
-            <div>
-                <i class="fas fa-handshake" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
-                <h4>Proximidade</h4>
-                <p style="font-size: 0.9rem; opacity: 0.8;">Atendimento direto e humanizado, sem intermediários que dificultam o contato.</p>
-            </div>
-            <div>
-                <i class="fas fa-bullseye" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
-                <h4>Resultados</h4>
-                <p style="font-size: 0.9rem; opacity: 0.8;">Foco total na melhor estratégia para alcançar o objetivo desejado.</p>
-            </div>
+        <div style="margin-top: 80px; padding: 40px; background-color: var(--primary-blue); color: white; border-radius: 15px; text-align: center;">
+            <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Minha Filosofia de Trabalho</h3>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">"Advogar não é apenas lidar com processos, é lidar com vidas e expectativas. Por isso, trato cada caso como se fosse único, com o máximo de dedicação, técnica e, acima de tudo, humanidade."</p>
+        </div>
+
+        <div class="cta-box">
+            <h3>Precisa de uma análise para o seu caso?</h3>
+            <p>Fale diretamente comigo e receba uma orientação clara e segura.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">Falar com o Dr. Gabriel</a>
         </div>
     </section>
         '''
@@ -731,8 +437,8 @@ pages = [
         </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Analisar Meu Caso</a>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Analisar Meu Caso</a>
         </div>
     </section>
         '''
@@ -756,8 +462,8 @@ pages = [
         </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Solicitar Análise Previdenciária</a>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Solicitar Análise Previdenciária</a>
         </div>
     </section>
         '''
@@ -780,8 +486,8 @@ pages = [
         </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Falar com Especialista</a>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Falar com Especialista</a>
         </div>
     </section>
         '''
@@ -804,8 +510,8 @@ pages = [
         </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Receber Orientação</a>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Receber Orientação</a>
         </div>
     </section>
         '''
@@ -828,8 +534,8 @@ pages = [
         </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Resolver Meu Problema</a>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Resolver Meu Problema</a>
         </div>
     </section>
         '''
@@ -852,34 +558,8 @@ pages = [
         </ul>
         <div class="cta-box">
             <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Proteger Minha Empresa</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'sobre.html',
-        'title': 'Sobre Nós | Advocacia Estratégica e Humanizada',
-        'description': 'Conheça nosso escritório. Oferecemos soluções jurídicas claras, seguras e personalizadas com foco em resultados para nossos clientes.',
-        'body': '''
-    <section class="page-header">
-        <h1>Advocacia Moderna, Próxima e Eficiente.</h1>
-    </section>
-    <section class="content-section">
-        <p>Nosso compromisso é oferecer soluções jurídicas claras, seguras e personalizadas, sempre com atendimento direto, transparência e foco em resultados.</p>
-        <p style="margin-top: 20px;">Aqui, cada cliente é tratado com a atenção que seu caso merece.</p>
-        <h2 style="margin-top: 40px;">Diferenciais</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Atendimento humanizado</li>
-            <li>Estratégia personalizada</li>
-            <li>Comunicação sem juridiquês</li>
-            <li>Transparência total</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de ajuda?</h3>
-            <p>Nossa equipe está pronta para analisar seu caso.</p>
-            <a href="https://wa.me/5500000000000" class="btn-cta">📞 Agendar Atendimento</a>
+            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Proteger Minha Empresa</a>
         </div>
     </section>
         '''
@@ -887,93 +567,80 @@ pages = [
     {
         'filename': 'depoimentos.html',
         'title': 'Depoimentos | O que nossos clientes dizem',
-        'description': 'Confira os depoimentos de quem já utilizou nossos serviços jurídicos. Resultados que geram confiança e segurança.',
+        'description': 'Confira os depoimentos de quem já utilizou nossos serviços e comprove nosso compromisso com resultados.',
         'body': '''
     <section class="page-header">
-        <h1>Resultados que Geram Confiança</h1>
+        <h1>O Que Nossos Clientes Dizem</h1>
+        <p>A satisfação de quem confia no nosso trabalho é o nosso maior prêmio.</p>
     </section>
     <section class="content-section">
-        <div style="display: grid; gap: 20px; margin-top: 30px;">
-            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                <p>"Fui atendido rapidamente e tive total clareza sobre meu caso desde o primeiro contato."</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="color: var(--accent-gold); margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="font-style: italic; color: var(--text-muted);">"Excelente atendimento! O Dr. Gabriel foi muito atencioso e resolveu meu problema trabalhista com muita agilidade."</p>
+                <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">— João Silva</p>
             </div>
-            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                <p>"Profissional extremamente competente, atencioso e transparente."</p>
+            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="color: var(--accent-gold); margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="font-style: italic; color: var(--text-muted);">"Consegui minha aposentadoria graças ao planejamento previdenciário feito pelo escritório. Recomendo muito!"</p>
+                <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">— Maria Oliveira</p>
             </div>
-            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                <p>"Resolveram meu problema com agilidade e segurança."</p>
+            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="color: var(--accent-gold); margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="font-style: italic; color: var(--text-muted);">"Atendimento transparente e direto. Me senti segura durante todo o processo do meu divórcio."</p>
+                <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">— Ana Santos</p>
             </div>
         </div>
         <div class="cta-box">
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Quero Ser Atendido</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'blog.html',
-        'title': 'Blog Jurídico | Informação e Direitos',
-        'description': 'Artigos e notícias sobre seus direitos. Informação jurídica sem complicação sobre trabalho, aposentadoria, família e mais.',
-        'body': '''
-    <section class="page-header">
-        <h1>Informação Jurídica Sem Complicação</h1>
-    </section>
-    <section class="content-section">
-        <p>Em breve, traremos conteúdos exclusivos sobre seus direitos.</p>
-        <h2 style="margin-top: 40px;">Categorias</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Direitos Trabalhistas</li>
-            <li>Aposentadoria</li>
-            <li>Direito do Consumidor</li>
-            <li>Família</li>
-            <li>Empresarial</li>
-        </ul>
-        <div class="cta-box">
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Ler Mais Artigos</a>
+            <h3>Quer ser nosso próximo caso de sucesso?</h3>
+            <p>Fale conosco agora e receba uma avaliação inicial.</p>
+            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Iniciar Atendimento</a>
         </div>
     </section>
         '''
     },
     {
         'filename': 'contato.html',
-        'title': 'Contato | Fale com um Advogado Especialista',
-        'description': 'Entre em contato conosco para uma análise inicial do seu caso. Atendimento rápido via WhatsApp, telefone ou e-mail.',
+        'title': 'Contato | Fale com o Dr. Gabriel Corrêa',
+        'description': 'Entre em contato para uma avaliação jurídica. Atendimento ágil via WhatsApp, e-mail ou formulário.',
         'body': '''
     <section class="page-header">
-        <h1>Fale com Nossa Equipe</h1>
+        <h1>Fale Conosco</h1>
+        <p>Estamos prontos para atender você com agilidade e transparência.</p>
     </section>
     <section class="content-section">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
             <div>
-                <h3>Envie uma mensagem</h3>
-                <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                    <input type="text" placeholder="Nome" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <input type="text" placeholder="Telefone" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <input type="email" placeholder="E-mail" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <select style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                        <option>Área do Direito</option>
-                        <option>Trabalhista</option>
-                        <option>Previdenciário</option>
-                        <option>Civil</option>
-                        <option>Família</option>
-                        <option>Consumidor</option>
-                        <option>Empresarial</option>
-                    </select>
-                    <textarea placeholder="Mensagem" rows="4" style="padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                <h2 style="color: var(--primary-blue); margin-bottom: 20px;">Canais de Atendimento</h2>
+                <div style="margin-bottom: 20px;">
+                    <p style="font-weight: 700; color: var(--primary-blue);"><i class="fab fa-whatsapp" style="color: var(--whatsapp-green); margin-right: 10px;"></i> WhatsApp</p>
+                    <p><a href="https://wa.me/5547996756766" style="color: var(--text-dark); text-decoration: none;">(47) 99675-6766</a></p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p style="font-weight: 700; color: var(--primary-blue);"><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 10px;"></i> E-mail</p>
+                    <p><a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: var(--text-dark); text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a></p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p style="font-weight: 700; color: var(--primary-blue);"><i class="fas fa-clock" style="color: var(--accent-gold); margin-right: 10px;"></i> Horário de Atendimento</p>
+                    <p>Segunda a Sexta: 08h às 18h</p>
+                    <p>Atendimento Online 24h</p>
+                </div>
+            </div>
+            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--primary-blue); margin-bottom: 20px;">Envie uma Mensagem</h3>
+                <form onsubmit="window.location.href='https://wa.me/5547996756766?text=' + encodeURIComponent('Olá, gostaria de uma avaliação para o meu caso.'); return false;">
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="tel" placeholder="Seu WhatsApp" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <textarea placeholder="Descreva brevemente seu caso" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; height: 100px;" required></textarea>
+                    </div>
+                    <button type="submit" style="width: 100%; background: var(--whatsapp-green); color: white; border: none; padding: 15px; border-radius: 5px; font-weight: 700; cursor: pointer;">Enviar pelo WhatsApp</button>
                 </form>
             </div>
-            <div>
-                <h3>Opções de Contato</h3>
-                <ul style="list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
-                    <li><i class="fab fa-whatsapp"></i> WhatsApp: (00) 90000-0000</li>
-                    <li><i class="fas fa-phone"></i> Telefone: (00) 0000-0000</li>
-                    <li><i class="fas fa-envelope"></i> E-mail: contato@escritorio.com.br</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Centro</li>
-                </ul>
-            </div>
-        </div>
-        <div class="cta-box">
-            <a href="https://wa.me/5500000000000" class="btn-cta">🟢 Enviar Mensagem</a>
         </div>
     </section>
         '''
