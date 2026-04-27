@@ -5,424 +5,339 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Jurídico | Informação e Direitos | Advocacia Estratégica</title>
     <meta name="description" content="Artigos e notícias sobre seus direitos. Informação jurídica sem complicação sobre trabalho, aposentadoria, família e mais.">
-    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
     <link rel="canonical" href="https://escritoriogabriel.github.io/site_escritorio/blog.html">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://escritoriogabriel.github.io/site_escritorio/blog.html">
-    <meta property="og:title" content="Blog Jurídico | Informação e Direitos | Advocacia Estratégica">
-    <meta property="og:description" content="Artigos e notícias sobre seus direitos. Informação jurídica sem complicação sobre trabalho, aposentadoria, família e mais.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/blog-styles.css">
-    <style>
-        
-:root {
-    --primary-blue: #172B41;
-    --accent-gold: #C9A961;
-    --bg-light: #F8F8F8;
-    --whatsapp-green: #25D366;
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --white: #FFFFFF;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-/* Top Bar */
-.top-bar {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 5px 5%;
-    font-size: 0.85rem;
-    text-align: right;
-}
-
-/* Header & Navigation */
-header {
-    background-color: var(--white);
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 80px;
-}
-
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--primary-blue);
-    text-decoration: none;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--accent-gold);
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    z-index: 1;
-    top: 100%;
-    border-top: 3px solid var(--accent-gold);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: var(--text-dark);
-    padding: 12px 16px;
-    display: block;
-    font-size: 0.9rem;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--bg-light);
-}
-
-.btn-nav-whatsapp {
-    background-color: var(--whatsapp-green);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.btn-nav-whatsapp:hover {
-    transform: translateY(-2px);
-    color: white !important;
-}
-
-/* Page Header (for subpages) */
-.page-header {
-    padding: 60px 5%;
-    background-color: var(--primary-blue);
-    color: white;
-    text-align: center;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* Content Sections */
-.content-section {
-    padding: 80px 5%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.cta-box {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top: 40px;
-}
-
-.btn-cta {
-    background-color: var(--whatsapp-green);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 60px 5% 20px;
-    margin-top: 80px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-col h4 {
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-}
-
-.footer-col a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.8rem;
-    color: #888;
-}
-
-/* Floating WhatsApp */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp-green);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
-    nav { flex-direction: column; gap: 15px; margin-top: 20px; width: 100%; }
-    .nav-links { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; }
-    .top-bar { text-align: center; }
-}
-
-/* Hero Section */
-.hero {
-    padding: 100px 5%;
-    text-align: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-    border-bottom: 1px solid #eee;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: var(--primary-blue);
-    margin-bottom: 1.5rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Trust Section */
-.trust-section {
-    padding: 60px 5%;
-    background-color: var(--white);
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #eee;
-}
-
-.trust-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    color: var(--primary-blue);
-}
-
-.trust-item i {
-    color: var(--accent-gold);
-    font-size: 1.2rem;
-}
-
-/* Specialty Cards */
-.specialties {
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    color: var(--primary-blue);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-    border-bottom: 4px solid transparent;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-bottom-color: var(--accent-gold);
-}
-
-.card i {
-    font-size: 2.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-    display: block;
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: var(--primary-blue);
-}
-
-/* FAQ Section */
-.faq {
-    padding: 80px 5%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.faq-question {
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: var(--primary-blue);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-answer {
-    padding: 0 20px 20px;
-    display: none;
-    color: var(--text-muted);
-}
-
-/* Profile Section */
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.profile-image {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background-color: #ddd;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 20px 20px 0 var(--accent-gold);
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: #888;
-    font-style: italic;
-}
-
-@media (max-width: 768px) {
-    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero h1 { font-size: 2rem; }
-}
-
     
-    .top-bar a { color: white; text-decoration: none; }
-    @media (max-width: 768px) {
-        .top-bar { text-align: center; }
-        .top-bar a { color: white; text-decoration: underline; font-weight: 600; }
-    }
+    <style>
+        :root {
+            --primary-blue: #172B41;
+            --accent-gold: #C9A961;
+            --bg-light: #F8F8F8;
+            --whatsapp-green: #25D366;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            text-align: right;
+        }
+        .top-bar a { color: white; text-decoration: none; }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        nav { display: flex; align-items: center; gap: 30px; }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--primary-blue); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-gold); }
+
+        .btn-nav-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .btn-nav-whatsapp:hover { transform: translateY(-2px); }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content */
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 5%;
+        }
+
+        /* Filtros */
+        .filters-section {
+            margin-bottom: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 1.05rem;
+        }
+
+        .filter-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-chip {
+            padding: 10px 20px;
+            border: 2px solid var(--accent-gold);
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .filter-chip:hover {
+            background: var(--accent-gold);
+            color: var(--white);
+        }
+
+        .filter-chip.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+
+        /* Grid de Posts */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .post-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .post-card-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #e0e0e0;
+        }
+
+        .post-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover .post-card-image img {
+            transform: scale(1.05);
+        }
+
+        .post-card-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .post-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .post-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .post-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .post-link:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Estado Vazio */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .empty-state h2 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 60px 5% 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-col h4 { color: var(--accent-gold); margin-bottom: 20px; }
+        .footer-col a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--accent-gold); }
+        .footer-col p { color: #ccc; font-size: 0.92rem; margin-bottom: 8px; }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { flex-direction: column; height: auto; padding: 15px 5%; }
+            nav { flex-direction: column; gap: 15px; width: 100%; margin-top: 15px; }
+            .nav-links { flex-direction: column; gap: 10px; width: 100%; }
+            .btn-nav-whatsapp { width: 100%; text-align: center; }
+            .hero h1 { font-size: 2rem; }
+            .blog-container { padding: 40px 5%; }
+            .posts-grid { grid-template-columns: 1fr; gap: 30px; }
+            .filters-section { flex-direction: column; align-items: flex-start; }
+        }
     </style>
 </head>
 <body>
@@ -432,24 +347,10 @@ footer {
     </div>
 
     <header>
-        <a href="index.html" class="logo" style="font-family: 'Playfair Display', serif;">Advogado Gabriel Corrêa</a>
+        <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
-                <li class="dropdown">
-                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="trabalhista.html">Direito Trabalhista</a>
-                        <a href="previdenciario.html">Direito Previdenciário</a>
-                        <a href="civil.html">Direito Civil</a>
-                        <a href="familia.html">Direito de Família</a>
-                        <a href="consumidor.html">Direito do Consumidor</a>
-                        <a href="empresarial.html">Direito Empresarial</a>
-                    </div>
-                </li>
-                
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="depoimentos.html">Depoimentos</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
@@ -457,26 +358,31 @@ footer {
         </nav>
     </header>
 
-    <main>
-        
-    <section class="page-header">
+    <section class="hero">
         <h1>Informação Jurídica Sem Complicação</h1>
+        <p>Artigos práticos e atualizados sobre seus direitos. Aprenda com especialistas.</p>
     </section>
-    <section class="content-section">
-        <p>Em breve, traremos conteúdos exclusivos sobre seus direitos.</p>
-        <h2 style="margin-top: 40px;">Categorias</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Direitos Trabalhistas</li>
-            <li>Aposentadoria</li>
-            <li>Direito do Consumidor</li>
-            <li>Família</li>
-            <li>Empresarial</li>
-        </ul>
-        <div class="cta-box">
-            <a href="index.html#blog" class="btn-cta">🟢 Ver Artigos Recentes</a>
+
+    <main class="blog-container">
+        <!-- Filtros -->
+        <div class="filters-section">
+            <span class="filter-label">Filtrar por área:</span>
+            <div class="filter-chips">
+                <button class="filter-chip active" data-category="all">Todas</button>
+            </div>
         </div>
-    </section>
-        
+
+        <!-- Grid de Posts -->
+        <div class="posts-grid" id="postsGrid">
+            <!-- Carregado via JavaScript -->
+        </div>
+
+        <!-- Estado Vazio -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h2>Nenhum artigo encontrado</h2>
+            <p>Tente ajustar os filtros ou volte em breve para novos conteúdos.</p>
+        </div>
     </main>
 
     <footer>
@@ -484,13 +390,11 @@ footer {
             <div class="footer-col">
                 <h4>Escritório</h4>
                 <p>Advocacia Estratégica</p>
-                <p>OAB/XX 000.000</p>
+                <p>OAB/SC 000.000</p>
             </div>
             <div class="footer-col">
                 <h4>Links Úteis</h4>
-                <a href="quem-sou-eu.html">Quem Sou Eu</a>
-                <a href="sobre.html">Sobre Nós</a>
-                <a href="depoimentos.html">Depoimentos</a>
+                <a href="index.html">Início</a>
                 <a href="blog.html">Blog</a>
                 <a href="contato.html">Contato</a>
             </div>
@@ -498,11 +402,10 @@ footer {
                 <h4>Contato</h4>
                 <p>(47) 99675-6766</p>
                 <p>contato@escritorio.com.br</p>
-                <p>Rua Exemplo, 123 - Centro</p>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 Advogado Gabriel Corrêa. Todos os direitos reservados. | <a href="#" style="color: #888;">Política de Privacidade</a> | LGPD
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
         </div>
     </footer>
 
@@ -511,27 +414,84 @@ footer {
     </a>
 
     <script>
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
+        let allPosts = [];
+        let currentFilter = 'all';
+
+        async function loadPosts() {
+            try {
+                const response = await fetch('/site_escritorio/blog/posts/index.json');
+                if (!response.ok) throw new Error('Erro ao carregar posts');
+                allPosts = await response.json();
                 
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                } else {
-                    answer.style.display = 'block';
-                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                // Extrair categorias únicas
+                const categories = [...new Set(allPosts.flatMap(p => p.categories))];
+                
+                // Criar filtros
+                const filterChips = document.querySelector('.filter-chips');
+                categories.forEach(cat => {
+                    const chip = document.createElement('button');
+                    chip.className = 'filter-chip';
+                    chip.textContent = cat;
+                    chip.dataset.category = cat;
+                    chip.addEventListener('click', () => filterPosts(cat));
+                    filterChips.appendChild(chip);
+                });
+                
+                renderPosts(allPosts);
+            } catch (error) {
+                console.error('Erro:', error);
+                document.getElementById('postsGrid').innerHTML = '<p>Erro ao carregar posts.</p>';
+            }
+        }
+
+        function filterPosts(category) {
+            currentFilter = category;
+            
+            // Atualizar chips ativos
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.classList.remove('active');
+                if (chip.dataset.category === category) {
+                    chip.classList.add('active');
                 }
             });
-        });
+            
+            // Filtrar e renderizar
+            const filtered = category === 'all' ? allPosts : allPosts.filter(p => p.categories.includes(category));
+            renderPosts(filtered);
+        }
+
+        function renderPosts(posts) {
+            const grid = document.getElementById('postsGrid');
+            const empty = document.getElementById('emptyState');
+            
+            if (posts.length === 0) {
+                grid.style.display = 'none';
+                empty.style.display = 'block';
+                return;
+            }
+            
+            grid.style.display = 'grid';
+            empty.style.display = 'none';
+            grid.innerHTML = posts.map(post => `
+                <div class="post-card">
+                    <div class="post-card-image">
+                        <img src="${post.image}" alt="${post.title}" onerror="this.src='/site_escritorio/assets/img/default-blog-post.jpg'">
+                    </div>
+                    <div class="post-card-content">
+                        <span class="post-category">${post.categories[0]}</span>
+                        <h3>${post.title}</h3>
+                        <p>${post.excerpt}</p>
+                        <div class="post-meta">
+                            <span>${new Date(post.date).toLocaleDateString('pt-BR')}</span>
+                            <a href="${post.url}" class="post-link">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPosts);
     </script>
 
-    <!-- Chat Widget -->
-    <link rel="stylesheet" href="assets/chat-widget.css">
-    <script src="assets/chat-widget.js"></script>
-    <script src="assets/blog-loader.js"></script>
 </body>
 </html>

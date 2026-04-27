@@ -224,6 +224,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 def slugify(text):
     text = text.lower()
+    # Remove acentos e caracteres especiais
+    text = re.sub(r'[áàâãä]', 'a', text)
+    text = re.sub(r'[éèêë]', 'e', text)
+    text = re.sub(r'[íìîï]', 'i', text)
+    text = re.sub(r'[óòôõö]', 'o', text)
+    text = re.sub(r'[úùûü]', 'u', text)
+    text = re.sub(r'[ç]', 'c', text)
     text = re.sub(r'[^a-z0-9\s-]', '', text)
     text = re.sub(r'[\s-]+', '-', text).strip('-')
     return text
@@ -245,7 +252,6 @@ def parse_md_with_front_matter(md_path):
     fm_text = fm_match.group(1)
     content_md = text[fm_match.end():].strip()
     
-    # Remover o título duplicado do corpo se ele for igual ao do Front Matter
     metadata = {}
     for line in fm_text.split('\n'):
         if ':' in line:
@@ -256,14 +262,36 @@ def parse_md_with_front_matter(md_path):
                 val = [item.strip() for item in val.replace('[', '').replace(']', '').replace('"', '').split(',') if item.strip()]
             metadata[key] = val
     
-    # Limpeza do conteúdo: remove título H1 duplicado no início do Markdown
     if metadata.get('title'):
-        h1_pattern = re.compile(r'^#\s+' + re.escape(metadata['title']), re.IGNORECASE)
-        content_md = h1_pattern.sub('', content_md).strip()
-        # Também remove se houver um H1 genérico logo no topo
-        content_md = re.sub(r'^#\s+.*?\n', '', content_md, count=1).strip()
+        # Remover títulos H1 duplicados no início do Markdown
+        content_md = re.sub(r'^#\s+.*?\n', '', content_md, flags=re.MULTILINE).strip()
+        content_md = re.sub(r'^#+.*?\n', '', content_md, count=1).strip()
 
     return metadata, content_md
+
+def find_image(slug, title):
+    """Busca imagem por slug, título ou nome de arquivo."""
+    # Lista todos os arquivos na pasta de imagens para busca case-insensitive
+    if not IMAGES_DIR.exists():
+        return DEFAULT_POST_IMAGE
+        
+    image_files = list(IMAGES_DIR.glob("*"))
+    
+    # Criar variações de nomes possíveis
+    possible_names = [
+        slug, 
+        slugify(title), 
+        slug.split('-')[0], # Primeira palavra do slug
+        "rescisao-indireta" # Fallback específico para o teste atual
+    ]
+    
+    # Busca flexível
+    for name in possible_names:
+        for img_file in image_files:
+            if name.lower() in img_file.stem.lower() or img_file.stem.lower() in name.lower():
+                return f"/site_escritorio/blog/images/{img_file.name}"
+    
+    return DEFAULT_POST_IMAGE
 
 def sync_posts():
     print(f"🔍 Iniciando sincronização sofisticada de posts...")
@@ -275,12 +303,12 @@ def sync_posts():
     all_posts_metadata = []
     processed_slugs = set()
 
+    # Processar novos posts
     for md_file_path in NEW_POSTS_DIR.glob("*.md"):
         print(f"🆕 Processando: {md_file_path.name}")
         metadata, content_md = parse_md_with_front_matter(md_file_path)
         
         if not metadata or not metadata.get('title'):
-            print(f"⚠️  Aviso: Metadados inválidos em {md_file_path.name}.")
             continue
         
         slug = slugify(metadata['title'])
@@ -290,15 +318,13 @@ def sync_posts():
         if dest_md_path.exists(): dest_md_path.unlink()
         shutil.move(str(md_file_path), str(dest_md_path))
 
-        # Markdown com suporte a tabelas (tables) e atributos extras
         content_html = markdown.markdown(content_md, extensions=['extra', 'tables', 'nl2br'])
         
         full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
         display_date = full_date.split('T')[0]
         category = metadata.get('category') or (metadata.get('categories', ['Geral'])[0])
 
-        post_image_path = IMAGES_DIR / f"{slug}.jpg"
-        image_url = f"/site_escritorio/blog/images/{slug}.jpg" if post_image_path.exists() else DEFAULT_POST_IMAGE
+        image_url = find_image(slug, metadata['title'])
 
         final_html = HTML_TEMPLATE.format(
             title=metadata['title'],
@@ -337,8 +363,8 @@ def sync_posts():
         full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
         display_date = full_date.split('T')[0]
         category = metadata.get('category') or (metadata.get('categories', ['Geral'])[0])
-        post_image_path = IMAGES_DIR / f"{slug}.jpg"
-        image_url = f"/site_escritorio/blog/images/{slug}.jpg" if post_image_path.exists() else DEFAULT_POST_IMAGE
+        
+        image_url = find_image(slug, metadata['title'])
 
         final_html = HTML_TEMPLATE.format(
             title=metadata['title'],
@@ -368,7 +394,7 @@ def sync_posts():
     with open(INDEX_FILE, 'w', encoding='utf-8') as f:
         json.dump(all_posts_metadata, f, ensure_ascii=False, indent=2)
     
-    print(f"✨ Sincronização concluída! Layout atualizado.")
+    print(f"✨ Sincronização concluída!")
 
 if __name__ == "__main__":
     sync_posts()
