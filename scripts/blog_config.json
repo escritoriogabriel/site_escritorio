@@ -1,0 +1,27 @@
+{
+  "blog_topics": [
+    {
+      "title": "Direitos do Consumidor em Compras Online",
+      "keywords": ["direitos consumidor", "compras online", "devolução produto", "e-commerce", "advogado consumidor"],
+      "target_audience": "Consumidores que realizam compras pela internet e têm dúvidas sobre seus direitos.",
+      "category": "Direito do Consumidor"
+    },
+    {
+      "title": "Demissão Sem Justa Causa: Seus Direitos Trabalhistas",
+      "keywords": ["demissão sem justa causa", "direitos trabalhistas", "indenização", "aviso prévio", "fundo de garantia"],
+      "target_audience": "Trabalhadores que foram demitidos e desejam conhecer seus direitos.",
+      "category": "Direito Trabalhista"
+    },
+    {
+      "title": "Como Revisar sua Aposentadoria: Guia Completo",
+      "keywords": ["aposentadoria", "INSS", "revisão aposentadoria", "benefício previdenciário", "direitos do aposentado"],
+      "target_audience": "Aposentados e contribuintes do INSS que desejam revisar seus benefícios.",
+      "category": "Direito Previdenciário"
+    }
+  ],
+  "generation_settings": {
+    "model": "gpt-4o",
+    "temperature": 0.7,
+    "max_tokens": 3000
+  }
+}
