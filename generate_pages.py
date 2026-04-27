@@ -424,19 +424,22 @@ pages = [
         'body': '''
     <section class="page-header">
         <h1>Soluções Humanizadas Para Momentos Delicados.</h1>
+        <p>Em momentos de fragilidade, oferecemos suporte jurídico com empatia e expertise.</p>
     </section>
     <section class="content-section">
-        <h2>Serviços</h2>
+        <p>O Direito de Família lida com as relações mais íntimas e complexas da vida humana. Entendemos que cada caso é único e exige uma abordagem sensível, mas ao mesmo tempo estratégica, para proteger seus interesses e os de sua família. Nosso objetivo é buscar soluções que minimizem o desgaste emocional e garantam a melhor resolução possível.</p>
+        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
         <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Divórcio Consensual e Litigioso</li>
-            <li>Pensão Alimentícia</li>
-            <li>Guarda e Regulamentação de Visitas</li>
-            <li>Inventário e Partilha de Bens</li>
-            <li>União Estável</li>
+            <li>**Divórcio Consensual e Litigioso:** Orientação completa para a dissolução do casamento, buscando acordos ou defendendo seus direitos em juízo.</li>
+            <li>**Pensão Alimentícia:** Fixação, revisão ou exoneração de pensão para filhos e ex-cônjuges.</li>
+            <li>**Guarda e Regulamentação de Visitas:** Definição da guarda dos filhos e do regime de convivência que melhor atenda ao interesse da criança.</li>
+            <li>**Inventário e Partilha de Bens:** Condução do processo de sucessão, seja judicial ou extrajudicial, para a correta divisão do patrimônio.</li>
+            <li>**Reconhecimento e Dissolução de União Estável:** Regularização ou término de uniões informais.</li>
+            <li>**Adoção:** Assessoria jurídica em processos de adoção.</li>
         </ul>
         <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <h3>Sua família merece a melhor proteção jurídica.</h3>
+            <p>Fale conosco para uma análise detalhada e encontre a solução que você precisa.</p>
             <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Receber Orientação</a>
         </div>
     </section>
@@ -449,19 +452,22 @@ pages = [
         'body': '''
     <section class="page-header">
         <h1>Segurança Jurídica em Cada Cláusula.</h1>
+        <p>Proteja seus interesses com contratos claros, justos e legalmente sólidos.</p>
     </section>
     <section class="content-section">
-        <h2>Serviços</h2>
+        <p>Um contrato bem elaborado é a base para qualquer relação comercial ou pessoal segura. Ele previne conflitos, estabelece direitos e deveres e garante que as expectativas de todas as partes sejam atendidas. Oferecemos assessoria completa na elaboração, análise e revisão de contratos, assegurando que seus acordos estejam em conformidade com a legislação e protejam seus interesses.</p>
+        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
         <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Elaboração de Contratos Personalizados</li>
-            <li>Revisão de Contratos de Aluguel</li>
-            <li>Contratos de Compra e Venda</li>
-            <li>Prestação de Serviços</li>
-            <li>Distratos e Rescisões Contratuais</li>
+            <li>**Elaboração de Contratos Personalizados:** Criamos documentos sob medida para suas necessidades, sejam eles de compra e venda, prestação de serviços, locação, entre outros.</li>
+            <li>**Revisão de Contratos:** Analisamos contratos existentes para identificar cláusulas abusivas, riscos e oportunidades de melhoria.</li>
+            <li>**Contratos de Aluguel:** Assessoria para locadores e locatários, garantindo um acordo equilibrado e seguro.</li>
+            <li>**Contratos de Compra e Venda:** Segurança na aquisição ou alienação de bens móveis e imóveis.</li>
+            <li>**Distratos e Rescisões Contratuais:** Orientação para o encerramento de contratos de forma legal e justa.</li>
+            <li>**Análise de Contratos Bancários:** Identificação de juros abusivos e cláusulas ilegais.</li>
         </ul>
         <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <h3>Precisa de segurança em seus acordos?</h3>
+            <p>Entre em contato para elaborar ou revisar seu contrato com a expertise de um especialista.</p>
             <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Analisar Meu Contrato</a>
         </div>
     </section>
@@ -474,19 +480,22 @@ pages = [
         'body': '''
     <section class="page-header">
         <h1>Defesa Técnica e Estratégica em Matéria Criminal.</h1>
+        <p>Garantindo seus direitos e a busca pela justiça em momentos críticos.</p>
     </section>
     <section class="content-section">
-        <h2>Serviços</h2>
+        <p>Em situações que envolvem o Direito Criminal, a agilidade e a expertise são fundamentais. Atuamos na defesa de indivíduos em todas as fases do processo, desde a investigação policial até o julgamento e recursos. Nosso compromisso é garantir a ampla defesa, o devido processo legal e a proteção dos direitos fundamentais de nossos clientes, buscando sempre a melhor estratégia para cada caso.</p>
+        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
         <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Acompanhamento em Delegacia</li>
-            <li>Audiência de Custódia</li>
-            <li>Defesa em Processos Criminais</li>
-            <li>Pedidos de Liberdade</li>
-            <li>Recursos Criminais</li>
+            <li>**Acompanhamento em Delegacia:** Suporte imediato em flagrantes e depoimentos.</li>
+            <li>**Audiência de Custódia:** Atuação para garantir a legalidade da prisão e a liberdade provisória.</li>
+            <li>**Defesa em Processos Criminais:** Representação em todas as instâncias, desde crimes de menor potencial ofensivo até crimes complexos.</li>
+            <li>**Pedidos de Liberdade:** Habeas Corpus, relaxamento de prisão e revogação de preventiva.</li>
+            <li>**Recursos Criminais:** Interposição de recursos para reverter decisões desfavoráveis.</li>
+            <li>**Atuação em Inquéritos Policiais:** Defesa dos interesses do investigado durante a fase de investigação.</li>
         </ul>
         <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <h3>Precisa de defesa criminal urgente?</h3>
+            <p>Entre em contato imediatamente. A agilidade pode ser crucial para o seu caso.</p>
             <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Falar com Advogado</a>
         </div>
     </section>
@@ -499,18 +508,22 @@ pages = [
         'body': '''
     <section class="page-header">
         <h1>Seus Direitos Trabalhistas Merecem Respeito.</h1>
+        <p>Defendemos o trabalhador para garantir o cumprimento da lei e a justa reparação.</p>
     </section>
     <section class="content-section">
-        <h2>Problemas Atendidos</h2>
+        <p>O Direito Trabalhista é a área que protege a relação entre empregados e empregadores. Se você se sente lesado em seus direitos, seja por demissão injusta, falta de pagamento de verbas, assédio ou qualquer outra irregularidade, estamos aqui para ajudar. Atuamos de forma estratégica para garantir que você receba tudo o que lhe é devido, buscando a reparação justa e o reconhecimento de seus direitos.</p>
+        <h2 style="margin-top: 40px;">Problemas Atendidos:</h2>
         <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Demissão sem justa causa</li>
-            <li>Verbas rescisórias</li>
-            <li>Horas extras</li>
-            <li>Reconhecimento de vínculo</li>
-            <li>Assédio moral</li>
+            <li>**Demissão sem Justa Causa:** Cálculo e recebimento de todas as verbas rescisórias.</li>
+            <li>**Verbas Rescisórias:** Férias, 13º salário, FGTS, seguro-desemprego não pagos.</li>
+            <li>**Horas Extras:** Cobrança de horas trabalhadas além da jornada legal, incluindo adicionais noturnos e feriados.</li>
+            <li>**Reconhecimento de Vínculo Empregatício:** Para trabalhadores sem carteira assinada.</li>
+            <li>**Assédio Moral e Sexual:** Proteção e indenização por danos sofridos no ambiente de trabalho.</li>
+            <li>**Acidente de Trabalho e Doenças Ocupacionais:** Busca por indenizações e benefícios previdenciários.</li>
+            <li>**Reversão de Justa Causa:** Análise e defesa em casos de demissão por justa causa indevida.</li>
         </ul>
         <div class="cta-box">
-            <h3>Precisa de ajuda com este assunto?</h3>
+            <h3>Precisa de ajuda com seus direitos trabalhistas?</h3>
             <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
             <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Analisar Meu Caso</a>
         </div>
@@ -524,19 +537,22 @@ pages = [
         'body': '''
     <section class="page-header">
         <h1>Proteja Seu Veículo de Busca e Apreensão Abusiva.</h1>
+        <p>Atuação rápida e eficaz para evitar a perda do seu bem.</p>
     </section>
     <section class="content-section">
-        <h2>Serviços</h2>
+        <p>A ação de busca e apreensão de veículos é um processo delicado que exige atuação jurídica especializada e ágil. Se você está enfrentando essa situação, é crucial agir rapidamente para proteger seu patrimônio. Oferecemos defesa completa para reverter a apreensão, revisar contratos de financiamento com juros abusivos e buscar soluções que garantam a manutenção da posse do seu veículo.</p>
+        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
         <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>Defesa em Ação de Busca e Apreensão</li>
-            <li>Revisão de Juros Abusivos</li>
-            <li>Negociação de Dívidas de Financiamento</li>
-            <li>Liminares para Manutenção de Posse</li>
-            <li>Proteção do Patrimônio</li>
+            <li>**Defesa em Ação de Busca e Apreensão:** Medidas judiciais para suspender ou reverter a apreensão do veículo.</li>
+            <li>**Revisão de Juros Abusivos:** Análise do contrato de financiamento para identificar e contestar cobranças indevidas.</li>
+            <li>**Negociação de Dívidas de Financiamento:** Busca por acordos favoráveis para quitar o débito e evitar a perda do bem.</li>
+            <li>**Liminares para Manutenção de Posse:** Ações urgentes para impedir a apreensão ou reaver o veículo.</li>
+            <li>**Proteção do Patrimônio:** Estratégias para resguardar seus bens em situações de endividamento.</li>
+            <li>**Consultoria Preventiva:** Orientação para evitar problemas com financiamentos e garantir a segurança do seu veículo.</li>
         </ul>
         <div class="cta-box">
-            <h3>Seu veículo corre risco?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
+            <h3>Seu veículo corre risco de busca e apreensão?</h3>
+            <p>Não perca tempo! Entre em contato para uma análise urgente do seu caso.</p>
             <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Proteger Meu Veículo</a>
         </div>
     </section>
