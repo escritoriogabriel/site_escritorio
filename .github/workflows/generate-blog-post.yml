@@ -1,0 +1,24 @@
+name: Generate Blog Post
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * 1,4'
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    - run: pip install openai
+    - run: python scripts/generate_blog_post_v2.py
+    - name: Commit and push
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add blog/posts/*.md blog/images/* blog/posts/index.json
+        git commit -m "feat: New AI-generated blog post" || echo "No changes"
+        git push
