@@ -2,7 +2,7 @@
 """
 BLOG POST GENERATOR - Gera posts de blog automaticamente com Google Gemini (GRATUITO)
 Compatível com GitHub Pages (site estático)
-Usa a nova biblioteca oficial: google-genai
+Usa a biblioteca estável: google-generativeai
 """
 
 import os
@@ -14,9 +14,9 @@ import random
 from pathlib import Path
 
 try:
-    from google import genai
+    import google.generativeai as genai
 except ImportError:
-    print("❌ Erro: google-genai não está instalado. Execute: pip install google-genai")
+    print("❌ Erro: google-generativeai não está instalado. Execute: pip install google-generativeai")
     sys.exit(1)
 
 # Configurações - Usar caminhos relativos para compatibilidade com GitHub Actions
@@ -50,9 +50,9 @@ if not GEMINI_API_KEY:
 print(f"✅ Google Gemini API Key carregada")
 
 try:
-    client = genai.Client(api_key=GEMINI_API_KEY)
+    genai.configure(api_key=GEMINI_API_KEY)
 except Exception as e:
-    print(f"❌ Erro ao inicializar Google Gemini: {e}")
+    print(f"❌ Erro ao configurar Google Gemini: {e}")
     sys.exit(1)
 
 def load_config():
@@ -115,10 +115,8 @@ Gere o artigo completo em Markdown, pronto para publicação.
 
     try:
         print(f"🤖 Gerando conteúdo para: {topic['title']}...")
-        response = client.models.generate_content(
-            model="gemini-1.5-flash",
-            contents=prompt
-        )
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
         content = response.text
         print(f"✅ Conteúdo gerado com sucesso ({len(content)} caracteres)")
         return content
