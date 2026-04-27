@@ -98,6 +98,35 @@ def fetch_link_content(url):
         print(f"❌ Erro ao processar conteúdo do link: {e}")
         return None
 
+def test_ollama_connection():
+    """Testar se o Ollama está acessível"""
+    try:
+        print("🔍 Testando conexão com Ollama...")
+        response = requests.get("http://localhost:11434/api/tags", timeout=5)
+        if response.status_code == 200:
+            models = response.json().get('models', [])
+            if models:
+                print(f"✅ Ollama conectado! Modelos disponíveis: {len(models)}")
+                model_names = [m.get('name', 'desconhecido') for m in models]
+                print(f"   Modelos: {', '.join(model_names[:3])}...")
+                return True
+            else:
+                print("⚠️  Ollama está rodando, mas nenhum modelo foi encontrado.")
+                print("   Tente rodar: ollama run llama3")
+                return False
+        else:
+            print(f"❌ Ollama respondeu com erro: {response.status_code}")
+            return False
+    except requests.exceptions.ConnectionError:
+        print("❌ Não consegui conectar ao Ollama em http://localhost:11434")
+        print("   Certifique-se de que o Ollama está rodando no seu computador.")
+        print("   No Windows, abra o aplicativo Ollama.")
+        print("   No Mac/Linux, tente: ollama serve")
+        return False
+    except Exception as e:
+        print(f"❌ Erro ao testar Ollama: {e}")
+        return False
+
 def generate_post_content_ollama(tema, instrucoes_customizadas, conteudo_link, config):
     """Gerar conteúdo completo do post usando Ollama"""
     
@@ -141,32 +170,59 @@ EXEMPLO DE CTA:
 
     try:
         print(f"🤖 Gerando conteúdo para: '{tema}' com Ollama ({OLLAMA_MODEL})...")
+        print(f"   Conectando a: {OLLAMA_API_URL}")
+        
         payload = {
             "model": OLLAMA_MODEL,
             "prompt": prompt_base,
             "stream": False
         }
         headers = {"Content-Type": "application/json"}
-        response = requests.post(OLLAMA_API_URL, headers=headers, json=payload, timeout=300)
+        
+        # Tentar a requisição com timeout mais longo
+        response = requests.post(OLLAMA_API_URL, headers=headers, json=payload, timeout=600)
+        
+        if response.status_code == 404:
+            print("❌ Erro 404: Endpoint não encontrado ou modelo não está carregado.")
+            print(f"   Modelo: {OLLAMA_MODEL}")
+            print("   Tente rodar no terminal: ollama run " + OLLAMA_MODEL)
+            return None
+        
         response.raise_for_status()
         
         result = response.json()
-        content = result['response']
+        content = result.get('response', '')
+        
+        if not content:
+            print("❌ Ollama retornou uma resposta vazia.")
+            print("   Tente novamente ou reinicie o Ollama.")
+            return None
         
         print(f"✅ Conteúdo gerado com sucesso ({len(content)} caracteres)")
         return content
+        
     except requests.exceptions.ConnectionError:
-        print("❌ Erro de conexão com Ollama. Certifique-se de que o Ollama está rodando.")
-        print(f"   Tente rodar no terminal: ollama run {OLLAMA_MODEL}")
+        print("❌ Erro de conexão com Ollama.")
+        print("   Certifique-se de que o Ollama está rodando no seu computador.")
+        print("   No Windows: Abra o aplicativo Ollama")
+        print("   No Mac/Linux: tente rodar 'ollama serve' em outro terminal")
         return None
     except requests.exceptions.Timeout:
-        print("❌ Timeout ao conectar com Ollama. Tente novamente ou aumente o timeout.")
+        print("❌ Timeout ao conectar com Ollama (levou mais de 10 minutos).")
+        print("   Tente novamente com um prompt mais curto.")
+        return None
+    except requests.exceptions.HTTPError as e:
+        print(f"❌ Erro HTTP ao gerar conteúdo: {e}")
+        print(f"   Status: {response.status_code}")
+        print(f"   Resposta: {response.text[:200]}")
         return None
     except requests.exceptions.RequestException as e:
         print(f"❌ Erro ao gerar conteúdo com Ollama: {e}")
         return None
     except Exception as e:
         print(f"❌ Erro inesperado ao gerar conteúdo: {e}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def extract_metadata(content, tema):
@@ -325,6 +381,11 @@ Exemplos de uso:
     try:
         # Setup
         if not setup_directories():
+            sys.exit(1)
+        
+        # Testar conexão com Ollama
+        if not test_ollama_connection():
+            print("\n⚠️  Não foi possível conectar ao Ollama. Abortando...")
             sys.exit(1)
         
         config = load_config()
