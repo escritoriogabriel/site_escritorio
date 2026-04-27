@@ -1,87 +1,70 @@
-# Guia de Geração de Posts de Blog Local com Ollama
+# Guia de Geração de Posts de Blog Local com Ollama (Versão PRO)
 
-Este guia detalha como configurar e usar o Ollama para gerar posts de blog localmente, de forma gratuita e com controle total sobre o processo. Os posts gerados serão compatíveis com o seu site estático no GitHub Pages.
+Este guia detalha como usar o novo script altamente configurável para gerar posts de blog usando o Ollama localmente. Agora você pode definir temas, usar links de referência e dar instruções específicas para a IA.
 
-## 1. O que é Ollama?
+## 1. Instalação e Requisitos
 
-O [Ollama](https://ollama.com/) é uma ferramenta que permite rodar modelos de linguagem grandes (LLMs) localmente no seu computador. Isso significa que você pode usar IAs como Llama 3, Mistral, Gemma, entre outros, sem precisar de uma conexão com a internet (após o download inicial do modelo) e sem custos de API. É ideal para geração de conteúdo em massa, pois o processamento é feito na sua máquina.
+Certifique-se de ter o Ollama instalado e rodando (veja a versão básica deste guia se precisar de ajuda com a instalação).
 
-## 2. Instalação do Ollama
-
-### 2.1. Baixar e Instalar o Ollama
-
-1.  Acesse o site oficial do Ollama: [https://ollama.com/download](https://ollama.com/download)
-2.  Baixe o instalador para o seu sistema operacional (Windows, macOS, Linux).
-3.  Siga as instruções de instalação. É um processo simples de "próximo, próximo, finalizar".
-
-### 2.2. Baixar um Modelo de Linguagem
-
-Após instalar o Ollama, você precisará baixar um modelo de linguagem para usar. Sugiro o `llama3` ou `mistral`, que são excelentes para geração de texto.
-
-1.  Abra o **Terminal** (macOS/Linux) ou **Prompt de Comando/PowerShell** (Windows).
-2.  Execute o comando para baixar o modelo:
-    ```bash
-    ollama run llama3
-    ```
-    ou
-    ```bash
-    ollama run mistral
-    ```
-    O Ollama fará o download do modelo (pode levar alguns minutos, dependendo da sua conexão e do tamanho do modelo). Após o download, ele iniciará uma sessão de chat com o modelo. Você pode digitar ` /bye` para sair da sessão.
-
-## 3. Usando o Script de Geração de Posts
-
-Você tem um script Python chamado `generate_blog_post_ollama.py` no diretório `scripts/` do seu repositório. Este script se conecta ao Ollama que está rodando localmente e gera um post de blog completo.
-
-### 3.1. Pré-requisitos
-
-Certifique-se de ter o Python 3 instalado no seu sistema. Você também precisará instalar a biblioteca `requests`:
+Além do Python 3, instale as bibliotecas necessárias para o novo script:
 
 ```bash
-pip install requests
+pip install requests beautifulsoup4
 ```
 
-### 3.2. Executando o Script
+## 2. Como usar o Script PRO
 
-1.  **Certifique-se de que o Ollama está rodando:** O Ollama deve estar ativo em segundo plano. Se você acabou de baixar um modelo com `ollama run <modelo>`, ele já estará rodando. Caso contrário, você pode iniciá-lo (geralmente ele inicia automaticamente com o sistema ou você pode abri-lo como um aplicativo).
-2.  **Navegue até o diretório do seu site:**
+O script `generate_blog_post_ollama.py` agora aceita comandos via terminal. Abra o terminal na pasta do seu projeto e use os seguintes comandos:
+
+### 2.1. Gerar por Tema Específico
+Se você já sabe sobre o que quer escrever:
+```bash
+python scripts/generate_blog_post_ollama.py --tema "Como funciona a Revisão da Vida Toda no INSS"
+```
+
+### 2.2. Usar um Link de Referência
+Se você viu uma notícia ou artigo e quer que a IA use como base (ela vai ler o link e criar um post novo baseado nele):
+```bash
+python scripts/generate_blog_post_ollama.py --tema "Novas regras da Aposentadoria" --link "https://g1.globo.com/economia/noticia/link-da-noticia"
+```
+
+### 2.3. Dar Instruções Personalizadas
+Se você quer que a IA foque em algo específico ou use um tom de voz diferente:
+```bash
+python scripts/generate_blog_post_ollama.py --tema "Pensão Alimentícia" --instrucoes "Foque nos direitos dos pais e explique como o cálculo é feito na prática."
+```
+
+### 2.4. Combinar Tudo (Poder Total)
+Você pode usar todos os argumentos juntos para um resultado perfeito:
+```bash
+python scripts/generate_blog_post_ollama.py --tema "Indenização por Atraso de Voo" --link "https://www.anac.gov.br/noticia" --instrucoes "Cite exemplos de valores de indenização e mencione que atendemos casos em todo o Brasil."
+```
+
+## 3. Parâmetros Disponíveis
+
+| Parâmetro | Descrição | Obrigatório |
+| :--- | :--- | :--- |
+| `--tema` | O título ou assunto principal do post. | **Sim** |
+| `--link` | URL de um site para a IA ler e usar como contexto. | Não |
+| `--instrucoes` | Comandos extras para a IA (ex: "seja formal", "use listas"). | Não |
+| `--modelo` | Mudar o modelo do Ollama (ex: `--modelo mistral`). | Não |
+
+## 4. O que acontece após rodar o comando?
+
+1.  **Leitura:** O script lê o link (se fornecido) e prepara o comando para a IA.
+2.  **Geração:** O Ollama processa o pedido e gera o texto em Markdown.
+3.  **Arquivos:** O script cria o arquivo `.md` em `blog/posts/` e atualiza o `index.json`.
+4.  **Imagem:** Um "espaço reservado" para imagem é criado em `blog/images/`.
+
+## 5. Publicando no Site
+
+Após gerar o post no seu computador:
+1.  Substitua a imagem na pasta `blog/images/` por uma foto real (opcional, mas recomendado).
+2.  No terminal, envie para o GitHub:
     ```bash
-    cd /caminho/para/seu/site_escritorio
-    ```
-3.  **Execute o script:**
-    ```bash
-    python scripts/generate_blog_post_ollama.py
-    ```
-
-O script selecionará um tópico do arquivo `scripts/blog_config.json`, gerará o conteúdo usando o Ollama e criará um novo arquivo `.md` na pasta `blog/posts/` e um `index.json` atualizado.
-
-### 3.3. Personalizando o Script (Opcional)
-
-Você pode editar o arquivo `scripts/blog_config.json` para adicionar mais tópicos, palavras-chave e públicos-alvo. Quanto mais detalhado for o tópico, melhor será a qualidade do post gerado.
-
-Você também pode editar o `generate_blog_post_ollama.py` para mudar o `OLLAMA_MODEL` (linha 30) para o modelo que você baixou (ex: `mistral`).
-
-## 4. Publicando os Posts no GitHub Pages
-
-Após gerar os posts localmente, você precisará adicioná-los ao seu repositório e fazer o push para o GitHub:
-
-1.  **Adicione os novos arquivos:**
-    ```bash
-    git add blog/posts/*.md blog/images/* blog/posts/index.json
-    ```
-2.  **Faça o commit:**
-    ```bash
-    git commit -m "feat: Novo post de blog gerado localmente com Ollama"
-    ```
-3.  **Faça o push:**
-    ```bash
+    git add .
+    git commit -m "Novo post: [Título do Post]"
     git push origin main
     ```
 
-O GitHub Pages detectará as mudanças e publicará automaticamente os novos posts no seu blog. Lembre-se de que o `blog-loader.js` (que já está no seu site) é responsável por ler o `index.json` e exibir os posts dinamicamente.
-
-## 5. Próximos Passos (Melhorias)
-
-*   **Geração de Imagens:** Você pode integrar APIs de geração de imagens (como DALL-E ou Stable Diffusion) ao script para gerar imagens automaticamente para cada post, ou usar APIs de bancos de imagens gratuitos (Unsplash, Pexels) para buscar imagens relevantes.
-*   **Revisão e Otimização:** Sempre revise os posts gerados pela IA para garantir a precisão jurídica, a qualidade e a otimização para SEO antes de publicar. O script é uma ferramenta de produtividade, mas a curadoria humana é essencial.
-*   **Agendamento:** Você pode criar um script de automação no seu próprio computador (usando `cron` no Linux/macOS ou `Task Scheduler` no Windows) para rodar o `generate_blog_post_ollama.py` em intervalos regulares, automatizando ainda mais o processo.
+Seu novo post aparecerá no carrossel da página inicial e na página do blog automaticamente!

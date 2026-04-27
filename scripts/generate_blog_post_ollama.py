@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-BLOG POST GENERATOR - Gera posts de blog localmente com Ollama (GRATUITO)
+BLOG POST GENERATOR PRO - Gera posts de blog localmente com Ollama (GRATUITO)
+Altamente configurável com suporte a temas, links de referência e instruções personalizadas
 Compatível com GitHub Pages (site estático)
 """
 
@@ -9,9 +10,15 @@ import sys
 import json
 import datetime
 import re
-import random
-from pathlib import Path
+import argparse
 import requests
+from pathlib import Path
+from urllib.parse import urlparse
+
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    BeautifulSoup = None
 
 # Configurações - Usar caminhos relativos para compatibilidade com GitHub Actions
 SCRIPT_DIR = Path(__file__).parent.absolute()
@@ -21,23 +28,20 @@ POSTS_DIR = BLOG_DIR / "posts"
 IMAGES_DIR = BLOG_DIR / "images"
 CONFIG_FILE = SCRIPT_DIR / "blog_config.json"
 
-print(f"📁 Script Dir: {SCRIPT_DIR}")
-print(f"📁 Project Root: {PROJECT_ROOT}")
-print(f"📁 Blog Dir: {BLOG_DIR}")
-print(f"📁 Posts Dir: {POSTS_DIR}")
-
-# Criar diretórios se não existirem
-try:
-    POSTS_DIR.mkdir(parents=True, exist_ok=True)
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-    print(f"✅ Diretórios criados/verificados")
-except Exception as e:
-    print(f"❌ Erro ao criar diretórios: {e}")
-    sys.exit(1)
-
 # Configurações do Ollama
 OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://localhost:11434/api/generate")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3") # Ou "mistral", "gemma", etc.
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
+
+def setup_directories():
+    """Criar diretórios se não existirem"""
+    try:
+        POSTS_DIR.mkdir(parents=True, exist_ok=True)
+        IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+        print(f"✅ Diretórios criados/verificados")
+        return True
+    except Exception as e:
+        print(f"❌ Erro ao criar diretórios: {e}")
+        return False
 
 def load_config():
     """Carregar configurações do arquivo JSON"""
@@ -47,23 +51,58 @@ def load_config():
             print(f"✅ Configurações carregadas de: {CONFIG_FILE}")
             return config
     except FileNotFoundError:
-        print(f"❌ Arquivo de configuração não encontrado: {CONFIG_FILE}")
-        sys.exit(1)
+        print(f"⚠️  Arquivo de configuração não encontrado: {CONFIG_FILE}")
+        return {}
     except Exception as e:
         print(f"❌ Erro ao carregar configurações: {e}")
-        sys.exit(1)
+        return {}
 
-def select_topic(config):
-    """Selecionar um tópico aleatório da lista"""
-    if not config.get('blog_topics'):
-        print("❌ Nenhum tópico encontrado na configuração")
-        sys.exit(1)
-    return random.choice(config['blog_topics'])
+def fetch_link_content(url):
+    """Buscar e extrair conteúdo de um link (Web Scraping)"""
+    if not url:
+        return None
+    
+    try:
+        if BeautifulSoup is None:
+            print("⚠️  BeautifulSoup não está instalado. Pulando leitura de link.")
+            print("    Para ativar: pip install beautifulsoup4")
+            return None
+        
+        print(f"🔗 Buscando conteúdo de: {url}")
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # Remover scripts e estilos
+        for script in soup(["script", "style"]):
+            script.decompose()
+        
+        # Extrair texto
+        text = soup.get_text()
+        lines = (line.strip() for line in text.splitlines())
+        chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+        text = ' '.join(chunk for chunk in chunks if chunk)
+        
+        # Limitar a 2000 caracteres para não sobrecarregar o prompt
+        content = text[:2000]
+        print(f"✅ Conteúdo extraído ({len(content)} caracteres)")
+        return content
+    except requests.exceptions.RequestException as e:
+        print(f"❌ Erro ao buscar link: {e}")
+        return None
+    except Exception as e:
+        print(f"❌ Erro ao processar conteúdo do link: {e}")
+        return None
 
-def generate_post_content_ollama(topic, config):
+def generate_post_content_ollama(tema, instrucoes_customizadas, conteudo_link, config):
     """Gerar conteúdo completo do post usando Ollama"""
     
-    prompt = f"""Você é um advogado especialista em direito brasileiro e um excelente redator de conteúdo para blog. Seu objetivo é criar um artigo de blog informativo, envolvente e focado em conversão para o escritório de advocacia Gabriel Corrêa.
+    # Construir o prompt base
+    prompt_base = f"""Você é um advogado especialista em direito brasileiro e um excelente redator de conteúdo para blog. Seu objetivo é criar um artigo de blog informativo, envolvente e focado em conversão para o escritório de advocacia Gabriel Corrêa.
 
 INSTRUÇÕES CRÍTICAS:
 1. O artigo DEVE ser em Markdown puro (sem HTML)
@@ -76,12 +115,7 @@ INSTRUÇÕES CRÍTICAS:
 8. Use negrito (**texto**) para destacar pontos importantes
 9. Use listas com - para melhor legibilidade
 
-DETALHES DO ARTIGO:
-- Tópico: {topic['title']}
-- Palavras-chave: {', '.join(topic['keywords'])}
-- Público-alvo: {topic['target_audience']}
-- Categoria: {topic['category']}
-- Foco: Informar, educar e converter para contato via WhatsApp
+TEMA DO ARTIGO: {tema}
 
 ESTRUTURA OBRIGATÓRIA:
 1. Introdução (2-3 parágrafos explicando o problema)
@@ -93,20 +127,28 @@ ESTRUTURA OBRIGATÓRIA:
 
 EXEMPLO DE CTA:
 **Precisa de ajuda profissional?** Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: [📞 (47) 99675-6766](https://wa.me/5547996756766)
-
-Gere o artigo completo em Markdown, pronto para publicação.
 """
 
+    # Adicionar conteúdo do link se disponível
+    if conteudo_link:
+        prompt_base += f"\n\nCONTEÚDO DE REFERÊNCIA (do link fornecido):\n{conteudo_link}\n\nUse este conteúdo como inspiração e contexto para o artigo, mas reescreva com suas próprias palavras e foco em direito."
+
+    # Adicionar instruções customizadas se fornecidas
+    if instrucoes_customizadas:
+        prompt_base += f"\n\nINSTRUÇÕES ADICIONAIS DO USUÁRIO:\n{instrucoes_customizadas}"
+
+    prompt_base += "\n\nGere o artigo completo em Markdown, pronto para publicação."
+
     try:
-        print(f"🤖 Gerando conteúdo para: {topic['title']} com Ollama ({OLLAMA_MODEL})...")
+        print(f"🤖 Gerando conteúdo para: '{tema}' com Ollama ({OLLAMA_MODEL})...")
         payload = {
             "model": OLLAMA_MODEL,
-            "prompt": prompt,
-            "stream": False # Não usar stream para obter a resposta completa de uma vez
+            "prompt": prompt_base,
+            "stream": False
         }
         headers = {"Content-Type": "application/json"}
-        response = requests.post(OLLAMA_API_URL, headers=headers, json=payload)
-        response.raise_for_status() # Levanta um erro para status HTTP ruins (4xx ou 5xx)
+        response = requests.post(OLLAMA_API_URL, headers=headers, json=payload, timeout=300)
+        response.raise_for_status()
         
         result = response.json()
         content = result['response']
@@ -114,8 +156,11 @@ Gere o artigo completo em Markdown, pronto para publicação.
         print(f"✅ Conteúdo gerado com sucesso ({len(content)} caracteres)")
         return content
     except requests.exceptions.ConnectionError:
-        print("❌ Erro de conexão com Ollama. Certifique-se de que o Ollama está rodando e o modelo está baixado.")
-        print(f"Tente rodar: ollama run {OLLAMA_MODEL}")
+        print("❌ Erro de conexão com Ollama. Certifique-se de que o Ollama está rodando.")
+        print(f"   Tente rodar no terminal: ollama run {OLLAMA_MODEL}")
+        return None
+    except requests.exceptions.Timeout:
+        print("❌ Timeout ao conectar com Ollama. Tente novamente ou aumente o timeout.")
         return None
     except requests.exceptions.RequestException as e:
         print(f"❌ Erro ao gerar conteúdo com Ollama: {e}")
@@ -124,7 +169,7 @@ Gere o artigo completo em Markdown, pronto para publicação.
         print(f"❌ Erro inesperado ao gerar conteúdo: {e}")
         return None
 
-def extract_metadata(content, topic):
+def extract_metadata(content, tema):
     """Extrair metadados do conteúdo gerado"""
     
     try:
@@ -133,20 +178,20 @@ def extract_metadata(content, topic):
         excerpt = (paragraphs[0][:200] + "...") if paragraphs else "Artigo jurídico informativo"
         
         # Gerar slug do título
-        slug = re.sub(r'[^a-z0-9]+', '-', topic['title'].lower()).strip('-')
+        slug = re.sub(r'[^a-z0-9]+', '-', tema.lower()).strip('-')
         
         return {
-            'title': topic['title'],
+            'title': tema,
             'excerpt': excerpt,
             'slug': slug,
-            'keywords': topic['keywords'],
-            'category': topic['category']
+            'keywords': [tema.lower()],
+            'category': 'Direito'
         }
     except Exception as e:
         print(f"❌ Erro ao extrair metadados: {e}")
         return None
 
-def create_blog_post(content, metadata, config):
+def create_blog_post(content, metadata):
     """Criar arquivo Markdown do post"""
     
     try:
@@ -237,34 +282,71 @@ def create_placeholder_image(slug):
         print(f"❌ Erro ao criar placeholder de imagem: {e}")
 
 def main():
-    """Função principal"""
+    """Função principal com argumentos de linha de comando"""
+    
+    parser = argparse.ArgumentParser(
+        description="Gerador de Posts de Blog com Ollama (Local e Gratuito)",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Exemplos de uso:
+  
+  # Gerar post com tema específico
+  python generate_blog_post_ollama.py --tema "Revisão da Vida Toda no INSS"
+  
+  # Gerar post com tema e link de referência
+  python generate_blog_post_ollama.py --tema "Demissão Sem Justa Causa" --link "https://exemplo.com/noticia"
+  
+  # Gerar post com instruções customizadas
+  python generate_blog_post_ollama.py --tema "Pensão Alimentícia" --instrucoes "Foque em direitos das crianças e valores mínimos"
+  
+  # Combinar tudo
+  python generate_blog_post_ollama.py --tema "Indenização por Dano Moral" --link "https://exemplo.com/caso" --instrucoes "Inclua exemplos de valores recentes"
+        """
+    )
+    
+    parser.add_argument('--tema', type=str, help='Tema específico para o artigo (obrigatório)')
+    parser.add_argument('--link', type=str, help='Link de referência para usar como contexto')
+    parser.add_argument('--instrucoes', type=str, help='Instruções customizadas para a IA')
+    parser.add_argument('--modelo', type=str, default=OLLAMA_MODEL, help=f'Modelo Ollama a usar (padrão: {OLLAMA_MODEL})')
+    
+    args = parser.parse_args()
+    
+    # Validar argumentos
+    if not args.tema:
+        parser.print_help()
+        print("\n❌ Erro: O argumento --tema é obrigatório!")
+        sys.exit(1)
     
     print("\n" + "=" * 70)
-    print("🚀 GERADOR DE POSTS DO BLOG - OLLAMA (LOCAL E GRATUITO)")
+    print("🚀 GERADOR DE POSTS DO BLOG - OLLAMA PRO (LOCAL E GRATUITO)")
     print("=" * 70 + "\n")
     
     try:
-        # Carregar configurações
+        # Setup
+        if not setup_directories():
+            sys.exit(1)
+        
         config = load_config()
         
-        # Selecionar tópico
-        topic = select_topic(config)
-        print(f"📝 Tópico selecionado: {topic['title']}\n")
+        # Buscar conteúdo do link se fornecido
+        conteudo_link = None
+        if args.link:
+            conteudo_link = fetch_link_content(args.link)
         
         # Gerar conteúdo
-        content = generate_post_content_ollama(topic, config)
+        content = generate_post_content_ollama(args.tema, args.instrucoes, conteudo_link, config)
         if not content:
             print("❌ Falha ao gerar conteúdo. Abortando...")
             sys.exit(1)
         
         # Extrair metadados
-        metadata = extract_metadata(content, topic)
+        metadata = extract_metadata(content, args.tema)
         if not metadata:
             print("❌ Falha ao extrair metadados. Abortando...")
             sys.exit(1)
         
         # Criar post
-        post_metadata = create_blog_post(content, metadata, config)
+        post_metadata = create_blog_post(content, metadata)
         if not post_metadata:
             print("❌ Falha ao criar post. Abortando...")
             sys.exit(1)
@@ -282,6 +364,10 @@ def main():
         print(f"Slug: {post_metadata['slug']}")
         print(f"Data: {post_metadata['date']}")
         print(f"Arquivo: {POSTS_DIR / f'{metadata['slug']}.md'}")
+        print("\n📌 Próximos passos:")
+        print("  1. Revise o conteúdo gerado")
+        print("  2. Substitua a imagem placeholder por uma real")
+        print("  3. Faça git add, commit e push para publicar no blog")
         print("=" * 70 + "\n")
         
         sys.exit(0)
