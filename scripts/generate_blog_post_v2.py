@@ -116,7 +116,7 @@ Gere o artigo completo em Markdown, pronto para publicação.
     try:
         print(f"🤖 Gerando conteúdo para: {topic['title']}...")
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-1.5-flash",
             contents=prompt
         )
         content = response.text
