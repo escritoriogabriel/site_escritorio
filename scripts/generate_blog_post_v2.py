@@ -115,7 +115,7 @@ Gere o artigo completo em Markdown, pronto para publicação.
 
     try:
         print(f"🤖 Gerando conteúdo para: {topic['title']}...")
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         response = model.generate_content(prompt)
         content = response.text
         print(f"✅ Conteúdo gerado com sucesso ({len(content)} caracteres)")
