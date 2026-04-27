@@ -32,7 +32,6 @@
       "email": "escritorio.gabrielcorrea@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Exemplo, 123",
         "addressLocality": "Centro",
         "addressCountry": "BR"
       },
@@ -375,84 +374,6 @@ nav {
     margin: 0 auto 45px;
 }
 
-/* Specialty Cards */
-.specialties {
-    padding: 90px 5%;
-    text-align: center;
-    background-color: var(--bg-light);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    width: 100%;
-}
-
-
-.card {
-    background: var(--white);
-    padding: 40px 35px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.35s ease;
-    border-bottom: 4px solid transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-bottom-color: var(--accent-gold);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-.card i {
-    font-size: 2.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-    display: block;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-    color: var(--primary-blue);
-    font-size: 1.15rem;
-}
-
-.card .card-pain {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-}
-
-.card .card-solution {
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
-
-.card .btn-card {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 0.88rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    align-self: flex-start;
-}
-
-.card .btn-card:hover {
-    background-color: var(--accent-gold);
-}
-
 /* CTA Intermediário */
 .cta-mid {
     padding: 70px 5%;
@@ -474,193 +395,7 @@ nav {
     font-size: 1.05rem;
 }
 
-/* Blog Carousel (Substituindo Depoimentos) */
-.blog-carousel {
-    padding: 90px 5%;
-    background-color: var(--bg-light);
-    text-align: center;
-}
-
-.carousel-wrapper {
-    position: relative;
-    overflow: hidden;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.blog-card {
-    min-width: 33.333%;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-.blog-card-inner {
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: left;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
-}
-
-.blog-card-inner:hover {
-    transform: translateY(-5px);
-}
-
-.blog-img {
-    width: 100%;
-    height: 180px;
-    background-color: #ddd;
-    background-size: cover;
-    background-position: center;
-}
-
-.blog-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.blog-category {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.blog-content h4 {
-    font-size: 1.1rem;
-    color: var(--primary-blue);
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.blog-content p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.blog-link {
-    margin-top: auto;
-    color: var(--primary-blue);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.blog-link:hover {
-    color: var(--accent-gold);
-}
-
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.carousel-btn {
-    background: var(--primary-blue);
-    color: white;
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-btn:hover {
-    background-color: var(--accent-gold);
-}
-
 /* Sobre */
-.about-section {
-    padding: 90px 5%;
-    background-color: var(--white);
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: 70px;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.profile-image {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 3/4;
-    background-color: #ddd;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 20px 20px 0 var(--accent-gold);
-    margin: 0 auto;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.about-text .section-title {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    color: var(--text-muted);
-    margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.75;
-}
-
-.about-differentials {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 25px 0;
-}
-
-.differential-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--primary-blue);
-}
-
-.differential-item i {
-    color: var(--accent-gold);
-    font-size: 1rem;
-}
-
 /* Diferenciais */
 .differentials-section {
     padding: 90px 5%;
@@ -1073,11 +808,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .profile-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-    .about-text .section-title { text-align: center; }
-    .about-differentials { grid-template-columns: 1fr; text-align: left; max-width: 300px; margin: 25px auto; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-    .blog-card { min-width: 50%; }
 }
 
 @media (max-width: 768px) {
@@ -1115,7 +846,6 @@ footer {
     .hero h1 { font-size: 2rem; }
     .cta-final h2 { font-size: 1.8rem; }
     .contact-form { padding: 30px 25px; }
-    .blog-card { min-width: 100%; }
     
     .profile-image { max-width: 280px; box-shadow: 15px 15px 0 var(--accent-gold); }
 }
@@ -1135,7 +865,7 @@ footer {
         <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown-content">
                         <a href="trabalhista.html">Direito Trabalhista</a>
@@ -1147,7 +877,7 @@ footer {
                     </div>
                 </li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="contato.html">Contato</a></li>
             </ul>
             <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -1198,56 +928,6 @@ footer {
         </div>
     </section>
 
-    <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
-    <section class="specialties">
-        <h2 class="section-title">Como Podemos Ajudar Você</h2>
-        <p class="section-subtitle">Cada caso é único. Conheça nossas áreas de atuação e descubra como podemos resolver o seu problema.</p>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-blind"></i>
-                <h3>Aposentadoria e Benefícios do INSS</h3>
-                <p class="card-pain"><strong>Problema:</strong> INSS negou seu benefício ou você não sabe se tem direito à aposentadoria?</p>
-                <p class="card-solution">Atuamos em concessão, revisão e recursos de aposentadorias, auxílio-doença e demais benefícios previdenciários.</p>
-                <a href="previdenciario.html" class="btn-card">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-briefcase"></i>
-                <h3>Reclamações Trabalhistas</h3>
-                <p class="card-pain"><strong>Problema:</strong> Foi demitido sem receber o que é seu ou sofreu assédio no trabalho?</p>
-                <p class="card-solution">Defendemos seus direitos em rescisões, horas extras, verbas trabalhistas, assédio e reconhecimento de vínculo.</p>
-                <a href="trabalhista.html" class="btn-card">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-file-contract"></i>
-                <h3>Revisão de Contratos e Cobranças Indevidas</h3>
-                <p class="card-pain"><strong>Problema:</strong> Está pagando juros abusivos ou recebendo cobranças que não reconhece?</p>
-                <p class="card-solution">Revisamos contratos bancários, financiamentos e combatemos cobranças indevidas e negativações injustas.</p>
-                <a href="consumidor.html" class="btn-card">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-gavel"></i>
-                <h3>Indenizações e Responsabilidade Civil</h3>
-                <p class="card-pain"><strong>Problema:</strong> Sofreu um dano moral, acidente ou prejuízo causado por terceiros?</p>
-                <p class="card-solution">Buscamos indenizações por danos morais e materiais, acidentes, negligência médica e responsabilidade civil.</p>
-                <a href="civil.html" class="btn-card">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h3>Direito de Família</h3>
-                <p class="card-pain"><strong>Problema:</strong> Passando por divórcio, disputa de guarda ou questões de herança?</p>
-                <p class="card-solution">Atuamos com sensibilidade e técnica em divórcio, pensão alimentícia, guarda de filhos e inventário.</p>
-                <a href="familia.html" class="btn-card">Saiba Mais</a>
-            </div>
-            <div class="card">
-                <i class="fas fa-building"></i>
-                <h3>Direito Empresarial</h3>
-                <p class="card-pain"><strong>Problema:</strong> Sua empresa precisa de segurança jurídica em contratos e operações?</p>
-                <p class="card-solution">Consultoria jurídica preventiva, elaboração de contratos e proteção patrimonial para empresas de todos os portes.</p>
-                <a href="empresarial.html" class="btn-card">Saiba Mais</a>
-            </div>
-        </div>
-    </section>
-
     <!-- ===== CTA INTERMEDIÁRIO 1 ===== -->
     <div class="cta-mid">
         <h3>Precisa de orientação jurídica?</h3>
@@ -1262,70 +942,6 @@ footer {
         </div>
     </div>
 
-    <!-- ===== BLOG CAROUSEL ===== -->
-    <section class="blog-carousel">
-        <h2 class="section-title">Últimas do Blog</h2>
-        <p class="section-subtitle">Informação jurídica clara e objetiva para você conhecer seus direitos.</p>
-        <div class="carousel-wrapper">
-            <div class="carousel-track" id="carouselTrack">
-
-                <div class="blog-card">
-                    <div class="blog-card-inner">
-                        <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=500&q=80');"></div>
-                        <div class="blog-content">
-                            <span class="blog-category">Previdenciário</span>
-                            <h4>Como se aposentar em 2026: Guia Completo</h4>
-                            <p>Entenda as novas regras de transição e como planejar sua aposentadoria com segurança.</p>
-                            <a href="blog.html" class="blog-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-card-inner">
-                        <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=500&q=80');"></div>
-                        <div class="blog-content">
-                            <span class="blog-category">Trabalhista</span>
-                            <h4>Direitos do trabalhador demitido sem justa causa</h4>
-                            <p>Saiba exatamente o que você deve receber na sua rescisão contratual.</p>
-                            <a href="blog.html" class="blog-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-card-inner">
-                        <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=500&q=80');"></div>
-                        <div class="blog-content">
-                            <span class="blog-category">Consumidor</span>
-                            <h4>Cobrança indevida: Como agir e pedir indenização</h4>
-                            <p>Seu nome foi negativado injustamente? Veja como limpar seu nome e ser indenizado.</p>
-                            <a href="blog.html" class="blog-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-card-inner">
-                        <div class="blog-img" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500&q=80');"></div>
-                        <div class="blog-content">
-                            <span class="blog-category">Cível</span>
-                            <h4>Quando cabe indenização por dano moral?</h4>
-                            <p>Entenda os critérios da justiça para conceder indenizações por danos morais.</p>
-                            <a href="blog.html" class="blog-link">Ler Artigo <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="carousel-controls">
-            <button class="carousel-btn" id="prevBtn" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-            <div class="carousel-dots" id="carouselDots"></div>
-            <button class="carousel-btn" id="nextBtn" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </section>
-
     <!-- ===== CTA INTERMEDIÁRIO 2 ===== -->
     <div class="cta-mid" style="background-color: var(--bg-light);">
         <h3>Seu caso merece atenção especializada.</h3>
@@ -1334,32 +950,6 @@ footer {
             <i class="fab fa-whatsapp"></i> Falar com um Advogado Agora
         </a>
     </div>
-
-    <!-- ===== SOBRE O ESCRITÓRIO ===== -->
-    <section class="about-section">
-        <div class="profile-grid">
-            <div class="profile-image">
-                <img src="assets/img/advogado.jpg" alt="Advogado Gabriel Corrêa">
-            </div>
-            <div class="about-text">
-                <h2 class="section-title">Dr. Gabriel Corrêa</h2>
-                <p>Com anos de experiência na defesa de direitos individuais e empresariais, o escritório nasceu da convicção de que advocacia de qualidade deve ser acessível, transparente e humanizada.</p>
-                <p>Minha trajetória é marcada por casos complexos resolvidos com estratégia, dedicação e um olhar atento para as necessidades reais de cada cliente. Não trato processos, trato pessoas.</p>
-                <p>Acredito que o cliente não contrata diplomas; contrata <strong>segurança, clareza e resultados</strong>. Por isso, mantenho uma comunicação direta, sem juridiquês, em cada etapa do processo.</p>
-                <div class="about-differentials">
-                    <div class="differential-item"><i class="fas fa-check-circle"></i> Atendimento direto com advogado</div>
-                    <div class="differential-item"><i class="fas fa-check-circle"></i> Comunicação clara e objetiva</div>
-                    <div class="differential-item"><i class="fas fa-check-circle"></i> Estratégia personalizada</div>
-                    <div class="differential-item"><i class="fas fa-check-circle"></i> Transparência em todas as etapas</div>
-                    <div class="differential-item"><i class="fas fa-check-circle"></i> Resposta rápida</div>
-                    <div class="differential-item"><i class="fas fa-check-circle"></i> Online em todo o Brasil</div>
-                </div>
-                <a href="sobre.html" class="btn-secondary" style="margin-top: 10px;">
-                    <i class="fas fa-arrow-right"></i> Conheça Nossa História
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== DIFERENCIAIS ===== -->
     <section class="differentials-section">
@@ -1420,7 +1010,7 @@ footer {
         </div>
         <div class="faq-item">
             <button class="faq-question">Em quanto tempo terei retorno? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Nosso atendimento inicial é realizado com rapidez. Após o contato, nossa equipe retorna em até 24 horas úteis para agendar a análise do seu caso.</div>
+            <div class="faq-answer">Nosso atendimento inicial é realizado com rapidez. Após o contato, nossa equipe retorna em até 1 hora para agendar a análise do seu caso.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question">Meu caso tem solução? <i class="fas fa-chevron-down"></i></button>
@@ -1495,7 +1085,7 @@ footer {
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Advogado Gabriel Corrêa</h4>
-                <p>OAB/XX 000.000</p>
+                <p>OAB/SC 63.737</p>
                 <p>Atendimento em todo o Brasil</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -1507,25 +1097,24 @@ footer {
             <div class="footer-col">
                 <h4>Links Úteis</h4>
                 <a href="index.html">Início</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="blog.html">Blog</a>
+                <!-- <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a> -->
                 <a href="contato.html">Contato</a>
             </div>
             <div class="footer-col">
-                <h4>Áreas de Atuação</h4>
+                <!-- <h4>Áreas de Atuação</h4>
                 <a href="previdenciario.html">Direito Previdenciário</a>
                 <a href="trabalhista.html">Direito Trabalhista</a>
                 <a href="civil.html">Direito Civil</a>
                 <a href="consumidor.html">Direito do Consumidor</a>
                 <a href="familia.html">Direito de Família</a>
-                <a href="empresarial.html">Direito Empresarial</a>
+                <a href="empresarial.html">Direito Empresarial</a> -->
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
                 <p><i class="fas fa-phone" style="color: var(--accent-gold); margin-right: 6px;"></i> (47) 99675-6766</p>
                 <p><i class="fab fa-whatsapp" style="color: var(--accent-gold); margin-right: 6px;"></i> (47) 99675-6766</p>
                 <p><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 6px;"></i> escritorio.gabrielcorrea@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt" style="color: var(--accent-gold); margin-right: 6px;"></i> Rua Exemplo, 123 — Centro</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1567,89 +1156,6 @@ footer {
             });
         });
 
-        // ===== CARROSSEL DO BLOG =====
-        const track = document.getElementById('carouselTrack');
-        const cards = track.querySelectorAll('.blog-card');
-        const dotsContainer = document.getElementById('carouselDots');
-        let current = 0;
-        let autoSlide;
-
-        function getVisibleCards() {
-            if (window.innerWidth <= 768) return 1;
-            if (window.innerWidth <= 900) return 2;
-            return 3;
-        }
-
-        function updateCarousel() {
-            const visible = getVisibleCards();
-            const maxIndex = cards.length - visible;
-            if (current > maxIndex) current = maxIndex;
-            
-            const width = 100 / visible;
-            track.style.transform = `translateX(-${current * width}%)`;
-            
-            // Atualizar dots
-            document.querySelectorAll('.dot').forEach((d, i) => {
-                d.classList.toggle('active', i === current);
-            });
-        }
-
-        // Criar dots baseados no número de slides possíveis
-        function createDots() {
-            dotsContainer.innerHTML = '';
-            const visible = getVisibleCards();
-            const numDots = cards.length - visible + 1;
-            for (let i = 0; i < numDots; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if (i === current) dot.classList.add('active');
-                dot.addEventListener('click', () => {
-                    current = i;
-                    updateCarousel();
-                    resetAutoSlide();
-                });
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            if (current > 0) current--;
-            else current = cards.length - getVisibleCards();
-            updateCarousel();
-            resetAutoSlide();
-        });
-
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            const visible = getVisibleCards();
-            if (current < cards.length - visible) current++;
-            else current = 0;
-            updateCarousel();
-            resetAutoSlide();
-        });
-
-        function startAutoSlide() {
-            autoSlide = setInterval(() => {
-                const visible = getVisibleCards();
-                if (current < cards.length - visible) current++;
-                else current = 0;
-                updateCarousel();
-            }, 5000);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlide);
-            startAutoSlide();
-        }
-
-        window.addEventListener('resize', () => {
-            createDots();
-            updateCarousel();
-        });
-
-        createDots();
-        updateCarousel();
-        startAutoSlide();
-
         // ===== FORMULÁRIO → WHATSAPP =====
         function submitForm(e) {
             e.preventDefault();
@@ -1677,7 +1183,7 @@ footer {
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.card, .step-item, .proof-item, .blog-card').forEach(el => {
+        document.querySelectorAll('.card, .step-item, .proof-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
