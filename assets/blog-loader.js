@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.carousel-button.prev');
     const nextButton = document.querySelector('.carousel-button.next');
 
-    if (!blogCarouselWrapper) return; // Exit if carousel wrapper not found
+    if (!blogCarouselWrapper) return; 
 
     let currentIndex = 0;
-    let postsPerPage = 3; // Default for desktop
+    let postsPerPage = 3; 
 
     const updatePostsPerPage = () => {
         if (window.innerWidth <= 768) {
@@ -18,25 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const getBaseUrl = () => {
+        const path = window.location.pathname;
+        if (path.includes('/site_escritorio/')) {
+            return '/site_escritorio/';
+        }
+        return '/';
+    };
+
     const loadBlogPosts = async () => {
         try {
-            const response = await fetch('/site_escritorio/blog/posts/index.json');
+            const baseUrl = getBaseUrl();
+            const response = await fetch(`${baseUrl}blog/posts/index.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const posts = await response.json();
 
-            blogCarouselWrapper.innerHTML = ''; // Clear existing posts
+            blogCarouselWrapper.innerHTML = ''; 
 
             posts.forEach(post => {
+                // Ajustar caminhos de imagem e URL para serem relativos à base do site
+                const fullImageUrl = post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`;
+                const fullPostUrl = post.url.startsWith('http') ? post.url : `${baseUrl}${post.url}`;
+                const defaultImage = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
+
                 const postCard = `
                     <div class="blog-post-card">
                         <div class="blog-post-card-inner">
-                            <img src="${post.image}" alt="${post.title}">
+                            <img src="${fullImageUrl}" alt="${post.title}" onerror="this.src='${defaultImage}'">
                             <div class="blog-post-content">
                                 <h3>${post.title}</h3>
                                 <p>${post.excerpt}</p>
-                                <a href="${post.url}" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                                <a href="${fullPostUrl}" class="read-more">Leia Mais <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -55,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateCarousel = () => {
         const totalPosts = blogCarouselWrapper.children.length;
+        if (totalPosts === 0) return;
+
         const maxIndex = Math.ceil(totalPosts / postsPerPage) - 1;
 
         if (currentIndex < 0) {
@@ -66,25 +82,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const offset = -currentIndex * (100 / postsPerPage);
         blogCarouselWrapper.style.transform = `translateX(${offset}%)`;
 
-        // Hide/show buttons if there are not enough posts to scroll
         if (totalPosts <= postsPerPage) {
-            prevButton.style.display = 'none';
-            nextButton.style.display = 'none';
+            if (prevButton) prevButton.style.display = 'none';
+            if (nextButton) nextButton.style.display = 'none';
         } else {
-            prevButton.style.display = 'block';
-            nextButton.style.display = 'block';
+            if (prevButton) prevButton.style.display = 'block';
+            if (nextButton) nextButton.style.display = 'block';
         }
     };
 
-    prevButton.addEventListener('click', () => {
-        currentIndex--;
-        updateCarousel();
-    });
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            currentIndex--;
+            updateCarousel();
+        });
+    }
 
-    nextButton.addEventListener('click', () => {
-        currentIndex++;
-        updateCarousel();
-    });
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            currentIndex++;
+            updateCarousel();
+        });
+    }
 
     window.addEventListener('resize', () => {
         updatePostsPerPage();

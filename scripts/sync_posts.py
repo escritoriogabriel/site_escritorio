@@ -12,8 +12,8 @@ POSTS_DIR = PROJECT_ROOT / "blog" / "posts"
 IMAGES_DIR = PROJECT_ROOT / "blog" / "images"
 INDEX_FILE = POSTS_DIR / "index.json"
 
-# Imagem padrão caso nenhuma seja encontrada
-DEFAULT_POST_IMAGE = "/site_escritorio/assets/img/default-blog-post.jpg"
+# Imagem padrão caso nenhuma seja encontrada (Caminho absoluto para o site)
+DEFAULT_POST_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
 
 # Template HTML sofisticado para o post
 HTML_TEMPLATE = """<!DOCTYPE html>
@@ -258,7 +258,7 @@ def parse_md_with_front_matter(md_path):
             key, val = line.split(':', 1)
             key = key.strip().lower()
             val = val.strip().strip('"').strip("'")
-            if key in ['tags', 'categories']:
+            if key in ['tags', 'categories', 'category']:
                 val = [item.strip() for item in val.replace('[', '').replace(']', '').replace('"', '').split(',') if item.strip()]
             metadata[key] = val
     
@@ -271,25 +271,23 @@ def parse_md_with_front_matter(md_path):
 
 def find_image(slug, title):
     """Busca imagem por slug, título ou nome de arquivo."""
-    # Lista todos os arquivos na pasta de imagens para busca case-insensitive
     if not IMAGES_DIR.exists():
         return DEFAULT_POST_IMAGE
         
     image_files = list(IMAGES_DIR.glob("*"))
     
-    # Criar variações de nomes possíveis
-    possible_names = [
-        slug, 
-        slugify(title), 
-        slug.split('-')[0], # Primeira palavra do slug
-        "rescisao-indireta" # Fallback específico para o teste atual
-    ]
+    # Criar variações de nomes possíveis para o slug e título
+    clean_slug = slug.replace('-', '')
+    clean_title = slugify(title).replace('-', '')
+    
+    possible_names = [slug, slugify(title), clean_slug, clean_title]
     
     # Busca flexível
     for name in possible_names:
         for img_file in image_files:
             if name.lower() in img_file.stem.lower() or img_file.stem.lower() in name.lower():
-                return f"/site_escritorio/blog/images/{img_file.name}"
+                # Retorna caminho relativo para o site
+                return f"blog/images/{img_file.name}"
     
     return DEFAULT_POST_IMAGE
 
@@ -322,7 +320,9 @@ def sync_posts():
         
         full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
         display_date = full_date.split('T')[0]
-        category = metadata.get('category') or (metadata.get('categories', ['Geral'])[0])
+        category = metadata.get('category') or metadata.get('categories')
+        if isinstance(category, list): category = category[0]
+        if not category: category = "Direito"
 
         image_url = find_image(slug, metadata['title'])
 
@@ -340,7 +340,7 @@ def sync_posts():
         post_data = {
             "title": metadata['title'],
             "slug": slug,
-            "url": f"/site_escritorio/blog/posts/{slug}.html",
+            "url": f"blog/posts/{slug}.html",
             "date": full_date,
             "author": metadata.get('author', 'Gabriel Corrêa'),
             "excerpt": metadata.get('excerpt') or metadata.get('description', 'Clique para ler mais...'),
@@ -362,7 +362,9 @@ def sync_posts():
         content_html = markdown.markdown(content_md, extensions=['extra', 'tables', 'nl2br'])
         full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
         display_date = full_date.split('T')[0]
-        category = metadata.get('category') or (metadata.get('categories', ['Geral'])[0])
+        category = metadata.get('category') or metadata.get('categories')
+        if isinstance(category, list): category = category[0]
+        if not category: category = "Direito"
         
         image_url = find_image(slug, metadata['title'])
 
@@ -380,7 +382,7 @@ def sync_posts():
         post_data = {
             "title": metadata['title'],
             "slug": slug,
-            "url": f"/site_escritorio/blog/posts/{slug}.html",
+            "url": f"blog/posts/{slug}.html",
             "date": full_date,
             "author": metadata.get('author', 'Gabriel Corrêa'),
             "excerpt": metadata.get('excerpt') or metadata.get('description', 'Clique para ler mais...'),

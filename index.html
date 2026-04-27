@@ -866,7 +866,7 @@ footer {
         <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
-                <!-- <li class="dropdown">
+                <li class="dropdown">
                     <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown-content">
                         <a href="trabalhista.html">Direito Trabalhista</a>
@@ -878,7 +878,7 @@ footer {
                     </div>
                 </li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="blog.html">Blog</a></li> -->
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
             <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -886,37 +886,34 @@ footer {
     </header>
 
     <main>
-
-    <!-- ===== HERO SECTION ===== -->
+    
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Advocacia Estratégica, <span>Humanizada</span> e Focada em Resultados</h1>
-        <p>Atuação especializada em Direito Previdenciário, Trabalhista, Cível e do Consumidor. Atendimento ágil, transparente e personalizado.</p>
-        <div class="hero-ctas">
+        <h1 class="animate-fade-up">Defendendo seus <span>direitos</span> com excelência e transparência.</h1>
+        <p class="animate-fade-up">Advocacia estratégica e personalizada para resolver seus problemas jurídicos com agilidade em todo o Brasil.</p>
+        <div class="hero-ctas animate-fade-up">
             <a href="https://wa.me/5547996756766" class="btn-primary">
                 <i class="fab fa-whatsapp"></i> Falar com um Advogado
             </a>
-            <a href="contato.html" class="btn-secondary">
-                <i class="fas fa-calendar-alt"></i> Agendar Consulta
-            </a>
+            <a href="#servicos" class="btn-secondary">Conhecer Áreas de Atuação</a>
         </div>
-        <div class="hero-badges">
-            <span><i class="fas fa-check-circle"></i> Atendimento rápido</span>
-            <span><i class="fas fa-check-circle"></i> Análise personalizada</span>
-            <span><i class="fas fa-check-circle"></i> Sigilo absoluto</span>
-            <span><i class="fas fa-check-circle"></i> Online em todo o Brasil</span>
+        <div class="hero-badges animate-fade-up">
+            <span><i class="fas fa-check-circle"></i> Atendimento Online</span>
+            <span><i class="fas fa-check-circle"></i> Resposta Rápida</span>
+            <span><i class="fas fa-check-circle"></i> Especialistas</span>
         </div>
     </section>
 
-    <!-- ===== PROVA SOCIAL ===== -->
+    <!-- Prova Social -->
     <section class="social-proof">
         <div class="social-proof-grid">
             <div class="proof-item">
                 <span class="proof-number">+500</span>
-                <span class="proof-label">Clientes atendidos</span>
+                <span class="proof-label">Clientes satisfeitos em todo o país</span>
             </div>
             <div class="proof-item">
-                <span class="atendimentoimediato">Atendimento online e Imediato</span>
-                <span class="proof-label">Disponibilidade total</span>
+                <span class="atendimentoimediato">IMEDIATO</span>
+                <span class="proof-label">Tempo médio de resposta inicial</span>
             </div>
             <div class="proof-item">
                 <span class="proof-number">100%</span>
@@ -942,6 +939,22 @@ footer {
             </a>
         </div>
     </div>
+
+    <!-- ===== BLOG CAROUSEL (REPOSICIONADO) ===== -->
+    <section class="blog-carousel-section">
+        <h2 class="section-title">Últimas Publicações do Blog</h2>
+        <p class="section-subtitle">Fique por dentro das novidades e dicas jurídicas.</p>
+        <div class="blog-carousel-container">
+            <div class="blog-carousel-wrapper">
+                <!-- Posts serão carregados aqui pelo JavaScript -->
+            </div>
+            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="view-all-posts">
+            <a href="blog.html" class="btn-secondary">Ver Todas as Publicações <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
 
     <!-- ===== CTA INTERMEDIÁRIO 2 ===== -->
     <div class="cta-mid" style="background-color: var(--bg-light);">
@@ -1066,22 +1079,6 @@ footer {
         </div>
     </section>
 
-        <!-- ===== BLOG CAROUSEL ===== -->
-    <section class="blog-carousel-section">
-        <h2 class="section-title">Últimas Publicações do Blog</h2>
-        <p class="section-subtitle">Fique por dentro das novidades e dicas jurídicas.</p>
-        <div class="blog-carousel-container">
-            <div class="blog-carousel-wrapper">
-                <!-- Posts serão carregados aqui pelo JavaScript -->
-            </div>
-            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <div class="view-all-posts">
-            <a href="blog.html" class="btn-secondary">Ver Todas as Publicações <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-
     <!-- ===== CTA FINAL ===== -->
     <section class="cta-final">
         <h2>Não Deixe Seu Direito Para Depois.</h2>
@@ -1108,124 +1105,72 @@ footer {
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://wa.me/5547996756766" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Links Úteis</h4>
                 <a href="index.html">Início</a>
-                <!-- <a href="sobre.html">Sobre</a>
-                <a href="blog.html">Blog</a> -->
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
                 <a href="contato.html">Contato</a>
             </div>
             <div class="footer-col">
-                <!-- <h4>Áreas de Atuação</h4>
-                <a href="previdenciario.html">Direito Previdenciário</a>
-                <a href="trabalhista.html">Direito Trabalhista</a>
-                <a href="civil.html">Direito Civil</a>
-                <a href="consumidor.html">Direito do Consumidor</a>
-                <a href="familia.html">Direito de Família</a>
-                <a href="empresarial.html">Direito Empresarial</a> -->
-            </div>
-            <div class="footer-col">
                 <h4>Contato</h4>
-                <p><i class="fas fa-phone" style="color: var(--accent-gold); margin-right: 6px;"></i> (47) 99675-6766</p>
-                <p><i class="fab fa-whatsapp" style="color: var(--accent-gold); margin-right: 6px;"></i> (47) 99675-6766</p>
-                <p><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 6px;"></i> escritorio.gabrielcorrea@gmail.com</p>
+                <p>(47) 99675-6766</p>
+                <p>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 Advogado Gabriel Corrêa. Todos os direitos reservados. | <a href="#" style="color: #888;">Política de Privacidade</a> | LGPD
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
         </div>
     </footer>
 
-    <!-- Botão flutuante WhatsApp -->
     <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-bubble" id="whatsappBubble">Olá! Precisa de ajuda jurídica? Fale comigo agora.</div>
     </a>
 
+    <script src="assets/blog-loader.js"></script>
     <script>
-        // ===== MENU HAMBURGER =====
+        // Hamburger Menu Toggle
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');
         hamburgerBtn.addEventListener('click', () => {
             mainNav.classList.toggle('open');
+            hamburgerBtn.classList.toggle('active');
         });
 
-        // ===== FAQ ACCORDION =====
+        // WhatsApp Bubble
+        setTimeout(() => {
+            document.getElementById('whatsappBubble').classList.add('show');
+        }, 3000);
+
+        // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
                 const icon = question.querySelector('i');
-                const isOpen = answer.style.display === 'block';
-
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-                document.querySelectorAll('.faq-question i').forEach(i => {
-                    i.classList.remove('fa-chevron-up');
-                    i.classList.add('fa-chevron-down');
-                });
-
-                if (!isOpen) {
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.className = 'fas fa-chevron-down';
+                } else {
                     answer.style.display = 'block';
-                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                    icon.className = 'fas fa-chevron-up';
                 }
             });
         });
 
-        // ===== FORMULÁRIO → WHATSAPP =====
-        function submitForm(e) {
-            e.preventDefault();
+        // Form Submit
+        function submitForm(event) {
+            event.preventDefault();
             const nome = document.getElementById('nome').value;
             const whatsapp = document.getElementById('whatsapp').value;
-            const email = document.getElementById('email').value;
             const descricao = document.getElementById('descricao').value;
-
-            let msg = `Olá! Gostaria de uma orientação jurídica.%0A%0A`;
-            msg += `*Nome:* ${nome}%0A`;
-            msg += `*WhatsApp:* ${whatsapp}%0A`;
-            if (email) msg += `*E-mail:* ${email}%0A`;
-            msg += `*Caso:* ${descricao}`;
-
-            window.open(`https://wa.me/5547996756766?text=${msg}`, '_blank');
-        }
-
-        // ===== ANIMAÇÃO DE SCROLL =====
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.card, .step-item, .proof-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        const whatsappFloat = document.querySelector('.whatsapp-float');
-        if (whatsappFloat) {
-            setTimeout(() => {
-                const bubble = document.createElement('span');
-                bubble.className = 'whatsapp-bubble';
-                bubble.textContent = 'Advogado online no WhatsApp agora.';
-                whatsappFloat.appendChild(bubble);
-                requestAnimationFrame(() => bubble.classList.add('show'));
-
-                setTimeout(() => {
-                    bubble.classList.remove('show');
-                }, 7000);
-            }, 7000);
+            const mensagem = `Olá! Meu nome é ${nome}. Meu WhatsApp é ${whatsapp}. Gostaria de falar sobre: ${descricao}`;
+            const url = `https://wa.me/5547996756766?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
         }
     </script>
-
-    <!-- Chat Widget -->
-    <link rel="stylesheet" href="assets/chat-widget.css">
-    <script src="assets/chat-widget.js"></script>
-    <script src="assets/blog-loader.js"></script>
 </body>
 </html>
