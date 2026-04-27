@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescisão Indireta: Seu Patrão Está Errado — e Você Ainda Tem Direito a Receber Tudo | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="../../blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="../../blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>
+        
+        <article>
+            <div class="post-header">
+                <h1>Rescisão Indireta: Seu Patrão Está Errado — e Você Ainda Tem Direito a Receber Tudo</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Trabalhista</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <h2>Por que você precisa saber disso?</h2>
+<p>Muita gente passa por situações insuportáveis no trabalho — salários atrasados, humilhações, assédio, ambiente insalubre — e acha que só tem duas opções: aguentar ou pedir demissão e perder tudo.</p>
+<p>Mas existe uma terceira saída, prevista na Consolidação das Leis do Trabalho (CLT): a <strong>rescisão indireta</strong>, também chamada de <strong>"justa causa do empregador"</strong>. Nela, é o patrão quem errou, mas quem encerra o contrato é o trabalhador — e com direito a receber todas as verbas como se tivesse sido demitido sem justa causa.</p>
+<p>Se você está nessa situação, continue lendo. Este artigo foi escrito para você entender seus direitos e saber exatamente o que fazer.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O artigo 483 da CLT lista as situações em que o trabalhador pode pedir a rescisão indireta. Em resumo, sempre que o empregador cometer uma falta grave que torne o ambiente de trabalho insuportável ou prejudicial, o empregado tem o direito de romper o contrato e ser indenizado.</p>
+<p>Pense assim: assim como o empregador pode demitir um funcionário por justa causa quando ele comete uma falta grave, <strong>o trabalhador também pode "demitir o empregador"</strong> quando a falta é cometida pela empresa.</p>
+<h3>Veja as situações mais comuns que configuram rescisão indireta:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação</th>
+<th style="text-align: left;">O que isso significa na prática</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Atraso ou falta de pagamento de salário</strong></td>
+<td style="text-align: left;">Empresa que paga com atrasos frequentes ou simplesmente deixa de pagar</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Não recolhimento do FGTS</strong></td>
+<td style="text-align: left;">Empregador que desconta mas não deposita o fundo de garantia do trabalhador</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Assédio moral ou sexual</strong></td>
+<td style="text-align: left;">Humilhações, pressão psicológica, cobranças abusivas ou propostas inapropriadas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exigência de tarefas além das forças</strong></td>
+<td style="text-align: left;">Obrigar o trabalhador a funções incompatíveis com o contrato ou perigosas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tratamento com rigor excessivo</strong></td>
+<td style="text-align: left;">Gritos, xingamentos, exposição vexatória perante colegas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ambiente com risco à saúde ou integridade</strong></td>
+<td style="text-align: left;">Falta de EPIs, exposição a agentes tóxicos, condições insalubres sem correção</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ofensa à honra do trabalhador ou família</strong></td>
+<td style="text-align: left;">Calúnias, difamações ou ataques à reputação praticados pelo empregador</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Redução unilateral do salário</strong></td>
+<td style="text-align: left;">Corte de salário sem acordo ou previsão legal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Agressão física</strong></td>
+<td style="text-align: left;">Qualquer ato de violência praticado pelo empregador ou seus prepostos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Quais verbas o trabalhador recebe?</h2>
+<p>Reconhecida a rescisão indireta — pela empresa ou pela Justiça do Trabalho —, o trabalhador tem direito a receber exatamente o mesmo que receberia numa <strong>demissão sem justa causa</strong>:</p>
+<ul>
+<li>Saldo de salário dos dias trabalhados no mês</li>
+<li>Aviso prévio indenizado</li>
+<li>13º salário proporcional ao período trabalhado no ano</li>
+<li>Férias vencidas (se houver) acrescidas de 1/3 constitucional</li>
+<li>Férias proporcionais + 1/3</li>
+<li>Liberação do saldo do FGTS acumulado</li>
+<li><strong>Multa de 40% sobre o saldo total do FGTS</strong></li>
+<li>Direito ao seguro-desemprego (desde que cumpridos os requisitos legais)</li>
+</ul>
+<blockquote>
+<p><strong>Atenção importante:</strong> quem <strong>pede demissão</strong> voluntariamente <strong>perde</strong> a multa de 40% do FGTS e o seguro-desemprego. Por isso, jamais assine um pedido de demissão se a culpa é do empregador.</p>
+</blockquote>
+<hr />
+<h2>Como resolver o seu problema: passo a passo</h2>
+<p>Descobriu que está numa situação que pode configurar rescisão indireta? Veja como agir:</p>
+<p><strong>1. Não peça demissão.</strong> Esse é o erro mais comum — e o mais prejudicial. Enquanto você avalia seus direitos, continue trabalhando normalmente.</p>
+<p><strong>2. Reúna provas.</strong> Salve mensagens, e-mails, prints de conversas, contracheques com valores errados, registros de ocorrências internas ou qualquer documento que comprove as faltas do empregador. Anote datas, horários e o nome de possíveis testemunhas.</p>
+<p><strong>3. Procure um advogado trabalhista.</strong> A rescisão indireta precisa ser bem fundamentada para ter sucesso na Justiça. Um advogado avaliará suas provas, estimará seus direitos e conduzirá o processo da forma correta.</p>
+<p><strong>4. Ajuíze a reclamação trabalhista.</strong> A ação é proposta na Vara do Trabalho da sua região. Você pode continuar trabalhando enquanto o processo tramita — o que é, inclusive, recomendável para não perder a renda durante a tramitação.</p>
+<p><strong>5. Aguarde o reconhecimento judicial.</strong> O juiz analisará as provas e, confirmada a falta grave do empregador, determinará o pagamento de todas as verbas rescisórias devidas.</p>
+<blockquote>
+<p>O prazo para ingressar com a ação é de <strong>2 anos após o fim do contrato de trabalho</strong>, mas não espere esse tempo. Quanto mais cedo você agir, melhor conservadas estarão as provas.</p>
+</blockquote>
+<hr />
+<h2>Conclusão</h2>
+<p>A rescisão indireta existe justamente para proteger quem trabalha de boa-fé e é prejudicado por empregadores que descumprem a lei. Você não é obrigado a aguentar humilhações, salários atrasados ou um ambiente que faz mal à sua saúde — e também não precisa abrir mão dos seus direitos para sair de uma situação assim.</p>
+<p>Se você se identificou com qualquer situação descrita neste artigo, não tome nenhuma decisão antes de conversar com um especialista. Cada caso tem suas particularidades, e a orientação jurídica correta pode fazer toda a diferença no valor que você vai receber.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>
