@@ -27,33 +27,46 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mostrar apenas os 3 posts mais recentes
             const recentPosts = posts.slice(0, 3);
 
-            if (recentPosts.length > 0) {
-                const featured = recentPosts[0];
-                const sidePosts = recentPosts.slice(1);
+                if (recentPosts.length > 0) {
+                    const featured = recentPosts[0];
+                    const sidePosts = recentPosts.slice(1);
 
-                let html = `
-                    <div class="blog-featured-post">
-                        <div class="magazine-card featured" onclick="window.location.href='${featured.url}'">
-                            <div class="magazine-image">
-                                <img src="${featured.image}" alt="${featured.title}" onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';">
-                            </div>
-                            <div class="magazine-content">
-                                <h3>${featured.title}</h3>
-                                <p>${featured.excerpt}</p>
+                    let featuredTitle = featured.title;
+                    if (featured.title.includes(':')) {
+                        const parts = featured.title.split(':');
+                        featuredTitle = `<span class="gold-highlight">${parts[0]}</span>:${parts.slice(1).join(':')}`;
+                    }
+
+                    let html = `
+                        <div class="blog-featured-post">
+                            <div class="magazine-card featured" onclick="window.location.href='${featured.url}'">
+                                <div class="magazine-image">
+                                    <img src="${featured.image}" alt="${featured.title}" onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';">
+                                </div>
+                                <div class="magazine-content">
+                                    <h3>${featuredTitle}</h3>
+                                    <p>${featured.excerpt}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <div class="blog-side-posts">
                 `;
 
                 sidePosts.forEach(post => {
+                    // Lógica para destacar a primeira parte do título antes de ":"
+                    let displayTitle = post.title;
+                    if (post.title.includes(':')) {
+                        const parts = post.title.split(':');
+                        displayTitle = `<span class="gold-highlight">${parts[0]}</span>:${parts.slice(1).join(':')}`;
+                    }
+
                     html += `
                         <div class="magazine-card compact" onclick="window.location.href='${post.url}'">
                             <div class="magazine-image">
                                 <img src="${post.image}" alt="${post.title}" onerror="this.onerror=null; this.src='${DEFAULT_IMAGE}';">
                             </div>
                             <div class="magazine-content">
-                                <h3>${post.title}</h3>
+                                <h3>${displayTitle}</h3>
                                 <p class="mobile-hide">${post.excerpt}</p>
                             </div>
                         </div>

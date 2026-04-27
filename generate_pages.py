@@ -85,6 +85,25 @@ nav {
     color: var(--accent-gold);
 }
 
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
 /* Dropdown */
 .dropdown {
     position: relative;
@@ -247,23 +266,25 @@ footer {
     object-fit: cover;
 }
 
-.profile-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: #888;
-    font-style: italic;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-    header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
-    nav { flex-direction: column; gap: 15px; margin-top: 20px; width: 100%; }
-    .nav-links { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; }
-    .top-bar { text-align: center; }
+    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
+    .hamburger { display: flex; }
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    nav.open { display: flex; }
+    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
+    .top-bar { text-align: center; font-size: 0.75rem; }
     .profile-grid { grid-template-columns: 1fr; gap: 40px; }
+    .profile-image { max-width: 250px; margin: 0 auto; box-shadow: 10px 10px 0 var(--accent-gold); }
+    .page-header h1 { font-size: 1.8rem; }
+    .content-section { padding: 40px 5%; }
 }
 """
 
@@ -291,7 +312,10 @@ template = f"""<!DOCTYPE html>
 
     <header>
         <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
-        <nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li class="dropdown">
@@ -337,7 +361,7 @@ template = f"""<!DOCTYPE html>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 Advogado Gabriel Corrêa. Todos os direitos reservados.
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
         </div>
     </footer>
 
@@ -346,6 +370,26 @@ template = f"""<!DOCTYPE html>
     </a>
 
     <script>
+        // Menu Sanduíche
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (hamburgerBtn && mainNav) {{
+            hamburgerBtn.addEventListener('click', () => {{
+                mainNav.classList.toggle('open');
+                const spans = hamburgerBtn.querySelectorAll('span');
+                if (mainNav.classList.contains('open')) {{
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                }} else {{
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }}
+            }});
+        }}
+
         // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {{
@@ -371,282 +415,205 @@ pages = [
     {
         'filename': 'sobre.html',
         'title': 'Sobre Mim | Advogado Gabriel Corrêa',
-        'description': 'Conheça o Dr. Gabriel Corrêa, advogado com foco em soluções jurídicas práticas e eficientes. Proximidade, clareza e compromisso real com cada cliente.',
-        'body': '''
-    <section class="page-header">
-        <h1>Quem Sou Eu</h1>
-        <p>Conheça a história e os valores por trás do atendimento.</p>
-    </section>
-
-    <section class="content-section">
-        <div class="profile-grid">
-            <div class="profile-image">
-                <img src="assets/img/advogado.jpg" alt="Dr. Gabriel Corrêa" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'profile-placeholder\\'><i class=\\'fas fa-user-tie\\' style=\\'font-size: 5rem;\\'></i></div>'">
-            </div>
-            <div>
-                <h2 style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">Dr. Gabriel Corrêa</h2>
-                <p style="font-size: 1.2rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 20px;">Advogado regularmente inscrito na OAB/SC 63.737</p>
-                <p>Acredito que a advocacia se constrói pela proximidade, clareza e compromisso real com cada cliente. Meu trabalho é transformar questões jurídicas complexas em caminhos objetivos, sempre com transparência e diálogo aberto.</p>
-                <p style="margin-top: 20px;">Com uma atuação estratégica e focada na resolução de problemas, busco não apenas defender direitos, mas oferecer a segurança jurídica necessária para que você possa ter tranquilidade.</p>
-                
-                <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                        <i class="fas fa-graduation-cap" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
-                        <h4 style="color: var(--primary-blue);">Formação</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Especialista em Direito do Trabalho e Previdenciário.</p>
+        'description': 'Conheça o Dr. Gabriel Corrêa, advogado com foco em soluções jurídicas práticas e eficientes. Proximidade, clareza e compromisso real com seus direitos.',
+        'body': """
+            <section class="page-header">
+                <h1>Sobre o Advogado</h1>
+                <p>Ética, transparência e dedicação em cada caso.</p>
+            </section>
+            <section class="content-section">
+                <div class="profile-grid">
+                    <div class="profile-image">
+                        <img src="assets/img/advogado-gabriel.webp" alt="Dr. Gabriel Corrêa">
                     </div>
-                    <div style="background: var(--white); padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                        <i class="fas fa-award" style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
-                        <h4 style="color: var(--primary-blue);">Experiência</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-muted);">Anos de atuação focada em resultados e satisfação do cliente.</p>
+                    <div class="profile-text">
+                        <h2 style="color: var(--primary-blue); margin-bottom: 15px;">Dr. Gabriel Corrêa</h2>
+                        <p style="color: var(--accent-gold); font-weight: 700; margin-bottom: 20px;">OAB/SC 63.737</p>
+                        <p style="margin-bottom: 20px;">Com uma trajetória pautada pela ética e pela busca incessante por justiça, o Dr. Gabriel Corrêa fundou seu escritório com um propósito claro: humanizar o atendimento jurídico e entregar resultados reais através de uma advocacia estratégica e moderna.</p>
+                        <p style="margin-bottom: 20px;">Especialista em lidar com questões complexas de forma simples e direta, Gabriel acredita que a tecnologia deve ser uma aliada para aproximar o advogado do cliente, permitindo um atendimento ágil e eficiente em qualquer lugar do Brasil.</p>
+                        <p>Seja em questões de família, contratos ou defesa criminal, cada caso é tratado com a máxima dedicação e sigilo, garantindo que você tenha não apenas um advogado, mas um parceiro estratégico na defesa dos seus direitos.</p>
+                        <div class="cta-box">
+                            <h3>Precisa de uma avaliação do seu caso?</h3>
+                            <p>Fale diretamente com o Dr. Gabriel pelo WhatsApp.</p>
+                            <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Iniciar Atendimento</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div style="margin-top: 80px; padding: 40px; background-color: var(--primary-blue); color: white; border-radius: 15px; text-align: center;">
-            <h3 style="color: var(--accent-gold); margin-bottom: 20px;">Minha Filosofia de Trabalho</h3>
-            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">"Advogar não é apenas lidar com processos, é lidar com vidas e expectativas. Por isso, trato cada caso como se fosse único, com o máximo de dedicação, técnica e, acima de tudo, humanidade."</p>
-        </div>
-
-        <div class="cta-box">
-            <h3>Precisa de uma análise para o seu caso?</h3>
-            <p>Fale diretamente comigo e receba uma orientação clara e segura.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">Falar com o Dr. Gabriel</a>
-        </div>
-    </section>
-        '''
+            </section>
+        """
     },
     {
         'filename': 'familia.html',
-        'title': 'Direito de Família | Divórcio, Guarda e Pensão',
-        'description': 'Atendimento humanizado em Direito de Família. Especialista em divórcio, pensão alimentícia, guarda e inventário.',
-        'body': '''
-    <section class="page-header">
-        <h1>Soluções Humanizadas Para Momentos Delicados.</h1>
-        <p>Em momentos de fragilidade, oferecemos suporte jurídico com empatia e expertise.</p>
-    </section>
-    <section class="content-section">
-        <p>O Direito de Família lida com as relações mais íntimas e complexas da vida humana. Entendemos que cada caso é único e exige uma abordagem sensível, mas ao mesmo tempo estratégica, para proteger seus interesses e os de sua família. Nosso objetivo é buscar soluções que minimizem o desgaste emocional e garantam a melhor resolução possível.</p>
-        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>**Divórcio Consensual e Litigioso:** Orientação completa para a dissolução do casamento, buscando acordos ou defendendo seus direitos em juízo.</li>
-            <li>**Pensão Alimentícia:** Fixação, revisão ou exoneração de pensão para filhos e ex-cônjuges.</li>
-            <li>**Guarda e Regulamentação de Visitas:** Definição da guarda dos filhos e do regime de convivência que melhor atenda ao interesse da criança.</li>
-            <li>**Inventário e Partilha de Bens:** Condução do processo de sucessão, seja judicial ou extrajudicial, para a correta divisão do patrimônio.</li>
-            <li>**Reconhecimento e Dissolução de União Estável:** Regularização ou término de uniões informais.</li>
-            <li>**Adoção:** Assessoria jurídica em processos de adoção.</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Sua família merece a melhor proteção jurídica.</h3>
-            <p>Fale conosco para uma análise detalhada e encontre a solução que você precisa.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Receber Orientação</a>
-        </div>
-    </section>
-        '''
+        'title': 'Direito de Família | Atendimento Humanizado',
+        'description': 'Soluções jurídicas para divórcio, pensão alimentícia, guarda de filhos e inventários. Atendimento focado na preservação de direitos e bem-estar familiar.',
+        'body': """
+            <section class="page-header">
+                <h1>Direito de Família</h1>
+                <p>Protegendo o que é mais importante para você.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Soluções Jurídicas com Empatia</h2>
+                <p style="margin-bottom: 20px;">Questões familiares exigem mais do que conhecimento técnico; exigem sensibilidade e equilíbrio. Atuamos para resolver conflitos de forma estratégica, priorizando sempre o bem-estar dos envolvidos e a segurança jurídica do seu patrimônio.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Divórcio e Dissolução de União Estável:</strong> Judicial ou extrajudicial, com foco em agilidade.</li>
+                    <li style="margin-bottom: 10px;"><strong>Pensão Alimentícia:</strong> Fixação, revisão e execução de alimentos.</li>
+                    <li style="margin-bottom: 10px;"><strong>Guarda e Regulamentação de Visitas:</strong> Proteção dos interesses dos menores.</li>
+                    <li style="margin-bottom: 10px;"><strong>Inventários e Partilha de Bens:</strong> Organização sucessória e divisão justa de patrimônio.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Dúvidas sobre seus direitos familiares?</h3>
+                    <p>Receba uma orientação inicial agora mesmo.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
+                </div>
+            </section>
+        """
     },
     {
         'filename': 'contrato.html',
-        'title': 'Contratos | Elaboração e Revisão de Contratos',
-        'description': 'Segurança jurídica para seus negócios. Elaboração e revisão de contratos de aluguel, compra e venda, prestação de serviços e mais.',
-        'body': '''
-    <section class="page-header">
-        <h1>Segurança Jurídica em Cada Cláusula.</h1>
-        <p>Proteja seus interesses com contratos claros, justos e legalmente sólidos.</p>
-    </section>
-    <section class="content-section">
-        <p>Um contrato bem elaborado é a base para qualquer relação comercial ou pessoal segura. Ele previne conflitos, estabelece direitos e deveres e garante que as expectativas de todas as partes sejam atendidas. Oferecemos assessoria completa na elaboração, análise e revisão de contratos, assegurando que seus acordos estejam em conformidade com a legislação e protejam seus interesses.</p>
-        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>**Elaboração de Contratos Personalizados:** Criamos documentos sob medida para suas necessidades, sejam eles de compra e venda, prestação de serviços, locação, entre outros.</li>
-            <li>**Revisão de Contratos:** Analisamos contratos existentes para identificar cláusulas abusivas, riscos e oportunidades de melhoria.</li>
-            <li>**Contratos de Aluguel:** Assessoria para locadores e locatários, garantindo um acordo equilibrado e seguro.</li>
-            <li>**Contratos de Compra e Venda:** Segurança na aquisição ou alienação de bens móveis e imóveis.</li>
-            <li>**Distratos e Rescisões Contratuais:** Orientação para o encerramento de contratos de forma legal e justa.</li>
-            <li>**Análise de Contratos Bancários:** Identificação de juros abusivos e cláusulas ilegais.</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de segurança em seus acordos?</h3>
-            <p>Entre em contato para elaborar ou revisar seu contrato com a expertise de um especialista.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Analisar Meu Contrato</a>
-        </div>
-    </section>
-        '''
+        'title': 'Direito de Contratos | Segurança Jurídica',
+        'description': 'Elaboração, revisão e análise de contratos civis e comerciais. Proteja seus negócios e evite riscos jurídicos desnecessários.',
+        'body': """
+            <section class="page-header">
+                <h1>Direito de Contratos</h1>
+                <p>Segurança e clareza em cada cláusula.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Blindagem Jurídica para seus Negócios</h2>
+                <p style="margin-bottom: 20px;">Um contrato bem redigido é a melhor forma de evitar prejuízos e litígios futuros. Atuamos na criação de instrumentos jurídicos personalizados que refletem fielmente a vontade das partes e garantem proteção total contra imprevistos.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Contratos de Compra e Venda:</strong> Imóveis, veículos e bens móveis.</li>
+                    <li style="margin-bottom: 10px;"><strong>Locação:</strong> Residencial e comercial, com foco em garantias.</li>
+                    <li style="margin-bottom: 10px;"><strong>Prestação de Serviços:</strong> Segurança para profissionais e empresas.</li>
+                    <li style="margin-bottom: 10px;"><strong>Análise de Riscos:</strong> Revisão detalhada de contratos já existentes.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Vai assinar um contrato importante?</h3>
+                    <p>Não corra riscos. Peça uma análise profissional antes.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Analisar meu Contrato</a>
+                </div>
+            </section>
+        """
     },
     {
         'filename': 'criminal.html',
-        'title': 'Direito Criminal | Defesa Criminal Estratégica',
-        'description': 'Defesa criminal técnica e estratégica. Acompanhamento em delegacias, audiências de custódia e processos criminais.',
-        'body': '''
-    <section class="page-header">
-        <h1>Defesa Técnica e Estratégica em Matéria Criminal.</h1>
-        <p>Garantindo seus direitos e a busca pela justiça em momentos críticos.</p>
-    </section>
-    <section class="content-section">
-        <p>Em situações que envolvem o Direito Criminal, a agilidade e a expertise são fundamentais. Atuamos na defesa de indivíduos em todas as fases do processo, desde a investigação policial até o julgamento e recursos. Nosso compromisso é garantir a ampla defesa, o devido processo legal e a proteção dos direitos fundamentais de nossos clientes, buscando sempre a melhor estratégia para cada caso.</p>
-        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>**Acompanhamento em Delegacia:** Suporte imediato em flagrantes e depoimentos.</li>
-            <li>**Audiência de Custódia:** Atuação para garantir a legalidade da prisão e a liberdade provisória.</li>
-            <li>**Defesa em Processos Criminais:** Representação em todas as instâncias, desde crimes de menor potencial ofensivo até crimes complexos.</li>
-            <li>**Pedidos de Liberdade:** Habeas Corpus, relaxamento de prisão e revogação de preventiva.</li>
-            <li>**Recursos Criminais:** Interposição de recursos para reverter decisões desfavoráveis.</li>
-            <li>**Atuação em Inquéritos Policiais:** Defesa dos interesses do investigado durante a fase de investigação.</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de defesa criminal urgente?</h3>
-            <p>Entre em contato imediatamente. A agilidade pode ser crucial para o seu caso.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Falar com Advogado</a>
-        </div>
-    </section>
-        '''
+        'title': 'Direito Criminal | Defesa Estratégica',
+        'description': 'Defesa criminal técnica e ágil. Acompanhamento em delegacias, audiências de custódia e processos criminais em todas as instâncias.',
+        'body': """
+            <section class="page-header">
+                <h1>Direito Criminal</h1>
+                <p>Defesa técnica e intransigente dos seus direitos.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Atuação Estratégica em Momentos Críticos</h2>
+                <p style="margin-bottom: 20px;">A liberdade é o bem mais precioso. Por isso, nossa atuação criminal é pautada pela agilidade e pelo rigor técnico, garantindo que o devido processo legal seja respeitado e que a melhor estratégia de defesa seja aplicada desde o primeiro momento.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Audiência de Custódia:</strong> Atuação imediata para garantir a liberdade.</li>
+                    <li style="margin-bottom: 10px;"><strong>Acompanhamento em Delegacia:</strong> Proteção de direitos desde o inquérito.</li>
+                    <li style="margin-bottom: 10px;"><strong>Defesa em Processos Criminais:</strong> Atuação em todas as instâncias e tribunais.</li>
+                    <li style="margin-bottom: 10px;"><strong>Habeas Corpus:</strong> Medidas urgentes para cessar constrangimento ilegal.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Precisa de defesa criminal urgente?</h3>
+                    <p>Atendimento imediato e sigiloso 24h via WhatsApp.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Atendimento de Urgência</a>
+                </div>
+            </section>
+        """
     },
     {
         'filename': 'trabalhista.html',
-        'title': 'Direito Trabalhista | Especialista em Causas do Trabalho',
-        'description': 'Advogado trabalhista especializado em rescisões, horas extras, assédio moral e reconhecimento de vínculo. Defenda seus direitos trabalhistas.',
-        'body': '''
-    <section class="page-header">
-        <h1>Seus Direitos Trabalhistas Merecem Respeito.</h1>
-        <p>Defendemos o trabalhador para garantir o cumprimento da lei e a justa reparação.</p>
-    </section>
-    <section class="content-section">
-        <p>O Direito Trabalhista é a área que protege a relação entre empregados e empregadores. Se você se sente lesado em seus direitos, seja por demissão injusta, falta de pagamento de verbas, assédio ou qualquer outra irregularidade, estamos aqui para ajudar. Atuamos de forma estratégica para garantir que você receba tudo o que lhe é devido, buscando a reparação justa e o reconhecimento de seus direitos.</p>
-        <h2 style="margin-top: 40px;">Problemas Atendidos:</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>**Demissão sem Justa Causa:** Cálculo e recebimento de todas as verbas rescisórias.</li>
-            <li>**Verbas Rescisórias:** Férias, 13º salário, FGTS, seguro-desemprego não pagos.</li>
-            <li>**Horas Extras:** Cobrança de horas trabalhadas além da jornada legal, incluindo adicionais noturnos e feriados.</li>
-            <li>**Reconhecimento de Vínculo Empregatício:** Para trabalhadores sem carteira assinada.</li>
-            <li>**Assédio Moral e Sexual:** Proteção e indenização por danos sofridos no ambiente de trabalho.</li>
-            <li>**Acidente de Trabalho e Doenças Ocupacionais:** Busca por indenizações e benefícios previdenciários.</li>
-            <li>**Reversão de Justa Causa:** Análise e defesa em casos de demissão por justa causa indevida.</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Precisa de ajuda com seus direitos trabalhistas?</h3>
-            <p>Estou pronto para analisar seu caso e oferecer a melhor estratégia jurídica.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Analisar Meu Caso</a>
-        </div>
-    </section>
-        '''
+        'title': 'Direito Trabalhista | Defesa do Trabalhador',
+        'description': 'Recupere seus direitos trabalhistas. Especialista em rescisão indireta, horas extras, assédio moral e acidentes de trabalho.',
+        'body': """
+            <section class="page-header">
+                <h1>Direito Trabalhista</h1>
+                <p>Justiça e reparação para quem trabalha.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Recupere o que é seu por Direito</h2>
+                <p style="margin-bottom: 20px;">Muitos trabalhadores sofrem irregularidades sem saber que podem buscar reparação. Atuamos para garantir que cada direito seja respeitado, desde o pagamento correto de verbas rescisórias até a indenização por danos sofridos no ambiente de trabalho.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Rescisão Indireta:</strong> Quando a empresa descumpre o contrato.</li>
+                    <li style="margin-bottom: 10px;"><strong>Verbas Rescisórias:</strong> Cálculo e cobrança de valores não pagos.</li>
+                    <li style="margin-bottom: 10px;"><strong>Assédio Moral e Sexual:</strong> Proteção da dignidade do trabalhador.</li>
+                    <li style="margin-bottom: 10px;"><strong>Acidente de Trabalho:</strong> Indenizações e estabilidade garantida.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Acha que seus direitos foram desrespeitados?</h3>
+                    <p>Faça uma análise gratuita do seu caso agora.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Consultar meus Direitos</a>
+                </div>
+            </section>
+        """
     },
     {
         'filename': 'busca-e-apreensao.html',
-        'title': 'Busca e Apreensão | Defesa em Ações de Veículos',
-        'description': 'Defesa em ações de busca e apreensão de veículos. Revisão de contratos de financiamento e proteção do seu patrimônio.',
-        'body': '''
-    <section class="page-header">
-        <h1>Proteja Seu Veículo de Busca e Apreensão Abusiva.</h1>
-        <p>Atuação rápida e eficaz para evitar a perda do seu bem.</p>
-    </section>
-    <section class="content-section">
-        <p>A ação de busca e apreensão de veículos é um processo delicado que exige atuação jurídica especializada e ágil. Se você está enfrentando essa situação, é crucial agir rapidamente para proteger seu patrimônio. Oferecemos defesa completa para reverter a apreensão, revisar contratos de financiamento com juros abusivos e buscar soluções que garantam a manutenção da posse do seu veículo.</p>
-        <h2 style="margin-top: 40px;">Nossos Serviços Incluem:</h2>
-        <ul style="margin-top: 20px; margin-left: 20px;">
-            <li>**Defesa em Ação de Busca e Apreensão:** Medidas judiciais para suspender ou reverter a apreensão do veículo.</li>
-            <li>**Revisão de Juros Abusivos:** Análise do contrato de financiamento para identificar e contestar cobranças indevidas.</li>
-            <li>**Negociação de Dívidas de Financiamento:** Busca por acordos favoráveis para quitar o débito e evitar a perda do bem.</li>
-            <li>**Liminares para Manutenção de Posse:** Ações urgentes para impedir a apreensão ou reaver o veículo.</li>
-            <li>**Proteção do Patrimônio:** Estratégias para resguardar seus bens em situações de endividamento.</li>
-            <li>**Consultoria Preventiva:** Orientação para evitar problemas com financiamentos e garantir a segurança do seu veículo.</li>
-        </ul>
-        <div class="cta-box">
-            <h3>Seu veículo corre risco de busca e apreensão?</h3>
-            <p>Não perca tempo! Entre em contato para uma análise urgente do seu caso.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Proteger Meu Veículo</a>
-        </div>
-    </section>
-        '''
-    },
-    {
-        'filename': 'depoimentos.html',
-        'title': 'Depoimentos | O que nossos clientes dizem',
-        'description': 'Confira os depoimentos de quem já utilizou nossos serviços e comprove nosso compromisso com resultados.',
-        'body': '''
-    <section class="page-header">
-        <h1>O Que Nossos Clientes Dizem</h1>
-        <p>A satisfação de quem confia no nosso trabalho é o nosso maior prêmio.</p>
-    </section>
-    <section class="content-section">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <div style="color: var(--accent-gold); margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p style="font-style: italic; color: var(--text-muted);">"Excelente atendimento! O Dr. Gabriel foi muito atencioso e resolveu meu problema trabalhista com muita agilidade."</p>
-                <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">— João Silva</p>
-            </div>
-            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <div style="color: var(--accent-gold); margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p style="font-style: italic; color: var(--text-muted);">"Consegui minha aposentadoria graças ao planejamento previdenciário feito pelo escritório. Recomendo muito!"</p>
-                <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">— Maria Oliveira</p>
-            </div>
-            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <div style="color: var(--accent-gold); margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p style="font-style: italic; color: var(--text-muted);">"Atendimento transparente e direto. Me senti segura durante todo o processo do meu divórcio."</p>
-                <p style="margin-top: 20px; font-weight: 700; color: var(--primary-blue);">— Ana Santos</p>
-            </div>
-        </div>
-        <div class="cta-box">
-            <h3>Quer ser nosso próximo caso de sucesso?</h3>
-            <p>Fale conosco agora e receba uma avaliação inicial.</p>
-            <a href="https://wa.me/5547996756766" class="btn-cta">🟢 Iniciar Atendimento</a>
-        </div>
-    </section>
-        '''
+        'title': 'Busca e Apreensão | Proteja seu Veículo',
+        'description': 'Defesa contra busca e apreensão de veículos. Revisão de juros abusivos e estratégias para manter seu patrimônio.',
+        'body': """
+            <section class="page-header">
+                <h1>Busca e Apreensão</h1>
+                <p>Defesa ágil para proteger seu patrimônio.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Não perca seu veículo para o banco</h2>
+                <p style="margin-bottom: 20px;">Ações de busca e apreensão muitas vezes contêm irregularidades ou baseiam-se em contratos com juros abusivos. Atuamos de forma rápida para contestar a apreensão, purgar a mora ou renegociar a dívida em condições justas.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Defesa em Busca e Apreensão:</strong> Medidas para evitar a perda do bem.</li>
+                    <li style="margin-bottom: 10px;"><strong>Revisão de Juros Abusivos:</strong> Redução do valor das parcelas e do saldo devedor.</li>
+                    <li style="margin-bottom: 10px;"><strong>Purgação da Mora:</strong> Estratégias para quitar o débito e recuperar o veículo.</li>
+                    <li style="margin-bottom: 10px;"><strong>Negociação Bancária:</strong> Acordos diretos para regularização do contrato.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Recebeu notificação de busca e apreensão?</h3>
+                    <p>O tempo é curto. Fale com um advogado agora para agir rápido.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Proteger meu Veículo</a>
+                </div>
+            </section>
+        """
     },
     {
         'filename': 'contato.html',
-        'title': 'Contato | Fale com o Dr. Gabriel Corrêa',
-        'description': 'Entre em contato para uma avaliação jurídica. Atendimento ágil via WhatsApp, e-mail ou formulário.',
-        'body': '''
-    <section class="page-header">
-        <h1>Fale Conosco</h1>
-        <p>Estamos prontos para atender você com agilidade e transparência.</p>
-    </section>
-    <section class="content-section">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-            <div>
-                <h2 style="color: var(--primary-blue); margin-bottom: 20px;">Canais de Atendimento</h2>
-                <div style="margin-bottom: 20px;">
-                    <p style="font-weight: 700; color: var(--primary-blue);"><i class="fab fa-whatsapp" style="color: var(--whatsapp-green); margin-right: 10px;"></i> WhatsApp</p>
-                    <p><a href="https://wa.me/5547996756766" style="color: var(--text-dark); text-decoration: none;">(47) 99675-6766</a></p>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <p style="font-weight: 700; color: var(--primary-blue);"><i class="fas fa-envelope" style="color: var(--accent-gold); margin-right: 10px;"></i> E-mail</p>
-                    <p><a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: var(--text-dark); text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a></p>
-                </div>
-                <div style="margin-bottom: 20px;">
-                    <p style="font-weight: 700; color: var(--primary-blue);"><i class="fas fa-clock" style="color: var(--accent-gold); margin-right: 10px;"></i> Horário de Atendimento</p>
-                    <p>Segunda a Sexta: 08h às 18h</p>
-                    <p>Atendimento Online 24h</p>
-                </div>
-            </div>
-            <div style="background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                <h3 style="color: var(--primary-blue); margin-bottom: 20px;">Envie uma Mensagem</h3>
-                <form onsubmit="window.location.href='https://wa.me/5547996756766?text=' + encodeURIComponent('Olá, gostaria de uma avaliação para o meu caso.'); return false;">
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" required>
+        'title': 'Contato | Agende sua Consulta',
+        'description': 'Entre em contato com o escritório do Dr. Gabriel Corrêa. Atendimento online em todo o Brasil via WhatsApp, e-mail ou formulário.',
+        'body': """
+            <section class="page-header">
+                <h1>Fale Conosco</h1>
+                <p>Estamos prontos para ouvir você e buscar a melhor solução.</p>
+            </section>
+            <section class="content-section">
+                <div class="profile-grid">
+                    <div class="contact-info">
+                        <h2 style="color: var(--primary-blue); margin-bottom: 20px;">Canais de Atendimento</h2>
+                        <p style="margin-bottom: 30px;">Escolha a forma mais confortável para você. Nosso atendimento inicial é rápido e focado em entender sua necessidade.</p>
+                        <div style="margin-bottom: 20px;">
+                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5547996756766" style="color: var(--whatsapp-green); text-decoration: none; font-weight: 700;">(47) 99675-6766</a></p>
+                            <p><strong>E-mail:</strong> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: var(--primary-blue); text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a></p>
+                            <p><strong>Horário:</strong> Seg a Sex, das 08h às 18h (Atendimento online 24h)</p>
+                        </div>
+                        <a href="https://wa.me/5547996756766" class="btn-cta" style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Iniciar Conversa Agora</a>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="tel" placeholder="Seu WhatsApp" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;" required>
+                    <div class="contact-form-placeholder" style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 20px;">Localização</h3>
+                        <p style="margin-bottom: 15px;">Atendimento 100% Online em todo o Brasil.</p>
+                        <p>Nossa estrutura digital permite que você tenha acesso à melhor defesa jurídica sem precisar sair de casa, com total segurança e validade jurídica.</p>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <textarea placeholder="Descreva brevemente seu caso" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; height: 100px;" required></textarea>
-                    </div>
-                    <button type="submit" style="width: 100%; background: var(--whatsapp-green); color: white; border: none; padding: 15px; border-radius: 5px; font-weight: 700; cursor: pointer;">Enviar pelo WhatsApp</button>
-                </form>
-            </div>
-        </div>
-    </section>
-        '''
+                </div>
+            </section>
+        """
     }
 ]
 
-for page in pages:
-    content = template.replace('{{TITLE}}', page['title'])
-    content = content.replace('{{DESCRIPTION}}', page['description'])
-    content = content.replace('{{FILENAME}}', page['filename'])
-    content = content.replace('{{BODY}}', page['body'])
-    
-    with open(page['filename'], 'w', encoding='utf-8') as f:
-        f.write(content)
-    print(f"Generated {page['filename']}")
+def generate():
+    for page in pages:
+        content = template.replace('{{TITLE}}', page['title'])
+        content = content.replace('{{DESCRIPTION}}', page['description'])
+        content = content.replace('{{FILENAME}}', page['filename'])
+        content = content.replace('{{BODY}}', page['body'])
+        
+        with open(page['filename'], 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Gerada: {page['filename']}")
+
+if __name__ == "__main__":
+    generate()
