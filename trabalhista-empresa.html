@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direito de Família | Divórcio, Guarda e Pensão | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Advogado especializado em Direito de Família. Divórcio, pensão alimentícia, guarda de filhos, inventário e adoção. Atendimento humanizado e online em todo o Brasil.">
-    <meta name="keywords" content="advogado família, divórcio, pensão alimentícia, guarda filhos, inventário, adoção, alienação parental, Gabriel Corrêa">
-    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/familia.html">
+    <title>Direito Trabalhista para Empresa | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Assessoria jurídica trabalhista para empresas. Defesa em reclamações, consultoria preventiva, compliance e gestão de riscos. Atendimento online em todo o Brasil.">
+    <meta name="keywords" content="advogado trabalhista empresa, defesa reclamação trabalhista, consultoria trabalhista, compliance trabalhista, gestão riscos, Gabriel Corrêa">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/trabalhista-empresa.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.gabrielcorrea.adv.br/familia.html">
-    <meta property="og:title" content="Direito de Família | Advogado Gabriel Corrêa">
-    <meta property="og:description" content="Atendimento humanizado em Direito de Família. Divórcio, pensão, guarda e inventário.">
+    <meta property="og:url" content="https://www.gabrielcorrea.adv.br/trabalhista-empresa.html">
+    <meta property="og:title" content="Direito Trabalhista para Empresa | Advogado Gabriel Corrêa">
+    <meta property="og:description" content="Assessoria jurídica trabalhista para proteger seu negócio. Consultoria preventiva e defesa em reclamações.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
 :root {
     --primary-blue: #172B41;
     --accent-gold: #C9A961;
+    --accent-blue: #4a90d9;
     --bg-light: #F8F8F8;
     --whatsapp-green: #25D366;
     --text-dark: #333333;
@@ -51,10 +52,10 @@ nav { display: flex; align-items: center; gap: 28px; }
 .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 5px; }
 .hamburger span { width: 24px; height: 2.5px; background-color: var(--primary-blue); border-radius: 3px; transition: all 0.3s; }
 
-/* Page Hero */
+/* Page Hero - tom diferente para empresa */
 .page-hero {
     padding: 60px 5% 50px;
-    background: linear-gradient(135deg, #1a2f45 0%, #172B41 60%, #1f3550 100%);
+    background: linear-gradient(135deg, #0f1f30 0%, #172B41 50%, #1a3350 100%);
     color: white;
     position: relative;
     overflow: hidden;
@@ -62,9 +63,9 @@ nav { display: flex; align-items: center; gap: 28px; }
 .page-hero::before {
     content: '';
     position: absolute;
-    top: -60px; right: -60px;
-    width: 280px; height: 280px;
-    background: rgba(201,169,97,0.08);
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    background: rgba(74,144,217,0.08);
     border-radius: 50%;
 }
 .page-hero-content { max-width: 820px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
@@ -72,9 +73,9 @@ nav { display: flex; align-items: center; gap: 28px; }
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    background: rgba(201,169,97,0.18);
-    border: 1px solid rgba(201,169,97,0.4);
-    color: var(--accent-gold);
+    background: rgba(74,144,217,0.18);
+    border: 1px solid rgba(74,144,217,0.4);
+    color: #7eb8d4;
     padding: 6px 16px;
     border-radius: 30px;
     font-size: 0.8rem;
@@ -84,13 +85,15 @@ nav { display: flex; align-items: center; gap: 28px; }
     margin-bottom: 18px;
 }
 .page-hero h1 { font-size: 2.4rem; margin-bottom: 16px; line-height: 1.2; }
-.page-hero h1 span { color: var(--accent-gold); }
+.page-hero h1 span { color: #7eb8d4; }
 .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 28px; max-width: 640px; margin-left: auto; margin-right: auto; }
 .page-hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .btn-primary { background-color: var(--whatsapp-green); color: white; padding: 14px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.35); }
-.btn-primary:hover { transform: translateY(-3px); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37,211,102,0.45); }
 .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); padding: 14px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
 .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+.btn-secondary { background-color: var(--primary-blue); color: white; padding: 14px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.3s; }
+.btn-secondary:hover { transform: translateY(-2px); }
 
 .trust-bar { background: var(--white); padding: 18px 5%; border-bottom: 1px solid #eee; }
 .trust-bar-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
@@ -99,10 +102,17 @@ nav { display: flex; align-items: center; gap: 28px; }
 
 /* Intro */
 .intro-section { padding: 60px 5%; background: var(--white); }
-.intro-inner { max-width: 900px; margin: 0 auto; }
-.intro-inner h2 { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 14px; }
-.intro-inner p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; font-size: 0.97rem; }
-.intro-highlight { background: linear-gradient(135deg, #f8f4ec 0%, #fdf9f0 100%); border-left: 4px solid var(--accent-gold); padding: 18px 20px; border-radius: 0 10px 10px 0; font-size: 0.95rem; color: var(--primary-blue); font-weight: 600; line-height: 1.6; margin-top: 20px; }
+.intro-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.intro-text h2 { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 14px; }
+.intro-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; font-size: 0.97rem; }
+.intro-highlight { background: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 100%); border-left: 4px solid var(--accent-blue); padding: 18px 20px; border-radius: 0 10px 10px 0; font-size: 0.95rem; color: var(--primary-blue); font-weight: 600; line-height: 1.6; }
+.risk-cards { display: flex; flex-direction: column; gap: 14px; }
+.risk-card { background: var(--bg-light); border-radius: 12px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; border-left: 4px solid #e74c3c; }
+.risk-card.medium { border-left-color: #f39c12; }
+.risk-card.low { border-left-color: var(--accent-gold); }
+.risk-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.risk-card h4 { color: var(--primary-blue); font-size: 0.95rem; margin-bottom: 4px; }
+.risk-card p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; }
 
 /* Services */
 .services-section { padding: 60px 5%; background: var(--bg-light); }
@@ -116,16 +126,16 @@ nav { display: flex; align-items: center; gap: 28px; }
 .service-card h3 { color: var(--primary-blue); font-size: 1.05rem; margin-bottom: 10px; }
 .service-card p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.6; }
 
-/* Approach */
-.approach-section { padding: 60px 5%; background: var(--white); }
-.approach-section h2 { text-align: center; font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 10px; }
-.approach-section .sub { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 38px; }
-.approach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; max-width: 900px; margin: 0 auto; }
-.approach-item { text-align: center; padding: 26px 18px; background: var(--bg-light); border-radius: 14px; }
-.approach-icon { width: 54px; height: 54px; background: linear-gradient(135deg, var(--accent-gold), #e8c87a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
-.approach-icon i { color: white; font-size: 1.3rem; }
-.approach-item h4 { color: var(--primary-blue); font-size: 0.97rem; margin-bottom: 8px; }
-.approach-item p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.6; }
+/* Benefícios */
+.benefits-section { padding: 60px 5%; background: var(--white); }
+.benefits-section h2 { text-align: center; font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 10px; }
+.benefits-section .sub { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 38px; }
+.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; max-width: 1000px; margin: 0 auto; }
+.benefit-item { text-align: center; padding: 28px 20px; background: var(--bg-light); border-radius: 14px; }
+.benefit-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--accent-gold), #e8c87a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+.benefit-icon i { color: white; font-size: 1.4rem; }
+.benefit-item h4 { color: var(--primary-blue); font-size: 1rem; margin-bottom: 8px; }
+.benefit-item p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.6; }
 
 /* FAQ */
 .faq-section { padding: 60px 5%; background: var(--bg-light); }
@@ -138,7 +148,7 @@ nav { display: flex; align-items: center; gap: 28px; }
 .faq-answer { padding: 0 20px 15px; display: none; color: var(--text-muted); background: var(--white); font-size: 0.9rem; line-height: 1.7; }
 
 /* CTA */
-.cta-section { padding: 70px 5%; background: linear-gradient(135deg, #172B41 0%, #1e3a55 100%); text-align: center; color: white; }
+.cta-section { padding: 70px 5%; background: linear-gradient(135deg, #0f1f30 0%, #172B41 100%); text-align: center; color: white; }
 .cta-section h2 { font-size: 2rem; margin-bottom: 14px; }
 .cta-section p { font-size: 1rem; color: rgba(255,255,255,0.82); margin-bottom: 30px; max-width: 540px; margin-left: auto; margin-right: auto; }
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -170,11 +180,12 @@ footer { background-color: var(--primary-blue); color: white; padding: 50px 5% 1
     .trust-bar-inner { gap: 16px; }
     .trust-item { font-size: 0.82rem; }
     .intro-section { padding: 44px 5%; }
-    .intro-inner h2 { font-size: 1.45rem; }
+    .intro-inner { grid-template-columns: 1fr; gap: 28px; }
+    .intro-text h2 { font-size: 1.45rem; }
     .services-section { padding: 44px 5%; }
     .services-grid { grid-template-columns: 1fr; gap: 14px; }
-    .approach-section { padding: 44px 5%; }
-    .approach-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .benefits-section { padding: 44px 5%; }
+    .benefits-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
     .faq-section { padding: 44px 5%; }
     .faq-question { font-size: 0.88rem; padding: 15px 16px; }
     .cta-section { padding: 50px 5%; }
@@ -183,7 +194,7 @@ footer { background-color: var(--primary-blue); color: white; padding: 50px 5% 1
     .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 18px; right: 18px; }
 }
 @media (max-width: 480px) {
-    .approach-grid { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr; }
 }
     </style>
 </head>
@@ -223,12 +234,12 @@ footer { background-color: var(--primary-blue); color: white; padding: 50px 5% 1
 <!-- Hero -->
 <section class="page-hero">
     <div class="page-hero-content">
-        <div class="page-hero-badge"><i class="fas fa-users"></i> Direito de Família</div>
-        <h1>Soluções <span>Humanizadas</span> para Momentos Delicados</h1>
-        <p>Divórcio, guarda de filhos, pensão alimentícia, inventário e adoção. Atendimento com empatia, discrição e estratégia jurídica especializada.</p>
+        <div class="page-hero-badge"><i class="fas fa-building"></i> Direito do Trabalho — Para Empresa</div>
+        <h1>Proteja Seu Negócio <span>com Assessoria Trabalhista Especializada</span></h1>
+        <p>Reduza riscos, evite passivos trabalhistas e tenha suporte jurídico estratégico para gerir sua equipe com segurança e conformidade.</p>
         <div class="page-hero-ctas">
             <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Falar com um Advogado</a>
-            <a href="#servicos" class="btn-outline"><i class="fas fa-arrow-down"></i> Ver Áreas de Atuação</a>
+            <a href="#servicos" class="btn-outline"><i class="fas fa-arrow-down"></i> Ver Serviços</a>
         </div>
     </div>
 </section>
@@ -236,98 +247,123 @@ footer { background-color: var(--primary-blue); color: white; padding: 50px 5% 1
 <!-- Trust bar -->
 <div class="trust-bar">
     <div class="trust-bar-inner">
-        <div class="trust-item"><i class="fas fa-heart"></i> Atendimento Humanizado</div>
-        <div class="trust-item"><i class="fas fa-lock"></i> Total Discrição</div>
-        <div class="trust-item"><i class="fas fa-laptop"></i> 100% Online</div>
-        <div class="trust-item"><i class="fas fa-balance-scale"></i> Especialista em Família</div>
+        <div class="trust-item"><i class="fas fa-shield-alt"></i> Defesa em Reclamações</div>
+        <div class="trust-item"><i class="fas fa-search"></i> Consultoria Preventiva</div>
+        <div class="trust-item"><i class="fas fa-file-contract"></i> Compliance Trabalhista</div>
+        <div class="trust-item"><i class="fas fa-laptop"></i> Atendimento Online</div>
     </div>
 </div>
 
 <!-- Intro -->
 <section class="intro-section">
     <div class="intro-inner">
-        <h2>Direito de Família Exige Mais do que Técnica Jurídica</h2>
-        <p>Questões familiares envolvem emoções intensas, vínculos afetivos e decisões que afetam a vida de todos os envolvidos, especialmente das crianças. Por isso, nosso atendimento combina rigor jurídico com escuta ativa e respeito à sua situação.</p>
-        <p>Seja em um divórcio consensual, uma disputa de guarda ou um inventário, atuamos para encontrar a solução mais justa e menos traumática para todas as partes, priorizando sempre o bem-estar dos filhos quando envolvidos.</p>
-        <div class="intro-highlight">
-            <i class="fas fa-quote-left" style="color: var(--accent-gold); margin-right: 8px;"></i>
-            "Cada família é única. Nossa abordagem é personalizada para encontrar a melhor solução para a sua situação específica, com o menor desgaste possível."
+        <div class="intro-text">
+            <h2>Passivo Trabalhista é Risco Real para o Seu Negócio</h2>
+            <p>Uma reclamação trabalhista mal gerenciada pode custar muito mais do que o valor da causa. Além dos custos diretos, há impacto na reputação, no clima organizacional e no fluxo de caixa da empresa.</p>
+            <p>Nossa assessoria jurídica trabalhista atua em duas frentes: <strong>prevenção</strong>, para evitar que problemas surjam, e <strong>defesa</strong>, quando a empresa já está diante de uma reclamação.</p>
+            <div class="intro-highlight">
+                <i class="fas fa-lightbulb" style="color: var(--accent-gold); margin-right: 8px;"></i>
+                Empresas que contam com assessoria jurídica preventiva reduzem significativamente o número de reclamações trabalhistas e o valor médio dos acordos.
+            </div>
+        </div>
+        <div class="risk-cards">
+            <div class="risk-card">
+                <div class="risk-icon">🔴</div>
+                <div>
+                    <h4>Alto Risco: Sem Assessoria</h4>
+                    <p>Contratos irregulares, jornadas mal controladas e demissões sem procedimento adequado geram passivos elevados.</p>
+                </div>
+            </div>
+            <div class="risk-card medium">
+                <div class="risk-icon">🟡</div>
+                <div>
+                    <h4>Risco Moderado: Parcialmente Adequado</h4>
+                    <p>Alguns processos corretos, mas lacunas que podem ser exploradas em reclamações trabalhistas.</p>
+                </div>
+            </div>
+            <div class="risk-card low">
+                <div class="risk-icon">🟢</div>
+                <div>
+                    <h4>Baixo Risco: Com Assessoria Especializada</h4>
+                    <p>Processos conformes, documentação adequada e defesa eficiente quando necessário.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Serviços -->
 <section id="servicos" class="services-section">
-    <h2>Áreas de Atuação em Direito de Família</h2>
-    <p class="sub">Atendimento especializado para cada situação familiar.</p>
+    <h2>Serviços para Empresas</h2>
+    <p class="sub">Soluções jurídicas trabalhistas completas para proteger e fortalecer seu negócio.</p>
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-ring"></i></div>
-            <h3>Divórcio</h3>
-            <p>Divórcio consensual (cartório ou judicial), litigioso, partilha de bens, regime de bens e todos os aspectos legais da dissolução do casamento. Buscamos sempre a solução mais rápida e menos conflituosa.</p>
+            <div class="service-icon"><i class="fas fa-gavel"></i></div>
+            <h3>Defesa em Reclamações Trabalhistas</h3>
+            <p>Representação completa em processos na Justiça do Trabalho, desde a contestação até os recursos, com estratégia focada na redução do passivo.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-child"></i></div>
-            <h3>Guarda de Filhos</h3>
-            <p>Guarda compartilhada, unilateral, regulamentação de visitas e convivência. Atuamos sempre priorizando o melhor interesse da criança e o direito de ambos os pais de participar da vida dos filhos.</p>
+            <div class="service-icon"><i class="fas fa-search"></i></div>
+            <h3>Consultoria Preventiva</h3>
+            <p>Análise dos processos internos de RH, contratos de trabalho, jornadas e políticas da empresa para identificar e corrigir riscos antes que virem processos.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
-            <h3>Pensão Alimentícia</h3>
-            <p>Fixação, revisão, exoneração e execução de alimentos. Seja para filhos menores, maiores estudantes ou ex-cônjuges, garantimos que os valores sejam justos e adequados à realidade de cada parte.</p>
+            <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+            <h3>Elaboração de Contratos</h3>
+            <p>Contratos de trabalho, acordos de confidencialidade, cláusulas de não concorrência e documentos de admissão e demissão com segurança jurídica.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-scroll"></i></div>
-            <h3>Inventário e Herança</h3>
-            <p>Inventário judicial e extrajudicial (cartório), partilha de bens, testamento e planejamento sucessório. Orientamos famílias a resolver questões de herança com agilidade e o mínimo de conflito.</p>
+            <div class="service-icon"><i class="fas fa-sign-out-alt"></i></div>
+            <h3>Gestão de Demissões</h3>
+            <p>Orientação sobre o procedimento correto para demissões com e sem justa causa, reduzindo o risco de reclamações e garantindo conformidade legal.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-baby"></i></div>
-            <h3>Adoção</h3>
-            <p>Acompanhamento jurídico completo no processo de adoção nacional, desde a habilitação até a sentença. Orientamos sobre requisitos, etapas e prazos para realizar o sonho de construir uma família.</p>
+            <div class="service-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Negociação e Acordos</h3>
+            <p>Condução de negociações extrajudiciais e homologação de acordos para resolver conflitos com rapidez e menor custo para a empresa.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-user-slash"></i></div>
-            <h3>Alienação Parental</h3>
-            <p>Identificação, comprovação e combate à alienação parental. Atuamos para proteger o vínculo entre pais e filhos quando um dos genitores interfere de forma prejudicial nessa relação.</p>
+            <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>Compliance Trabalhista</h3>
+            <p>Implementação de políticas internas, treinamentos e procedimentos para garantir conformidade com a legislação trabalhista vigente.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-home"></i></div>
-            <h3>União Estável</h3>
-            <p>Reconhecimento, dissolução e partilha de bens em união estável. Contrato de convivência e todos os direitos e deveres decorrentes da relação.</p>
+            <div class="service-icon"><i class="fas fa-users-cog"></i></div>
+            <h3>Terceirização e Prestação de Serviços</h3>
+            <p>Estruturação jurídica de contratos de terceirização, análise de responsabilidade subsidiária e gestão de riscos em contratos de prestação de serviços.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Violência Doméstica</h3>
-            <p>Medidas protetivas, representação de vítimas e orientação jurídica em casos de violência doméstica e familiar. Atendimento sigiloso e prioritário.</p>
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Auditoria Trabalhista</h3>
+            <p>Levantamento completo dos passivos trabalhistas da empresa para due diligence, fusões, aquisições ou reorganização societária.</p>
         </div>
     </div>
 </section>
 
-<!-- Abordagem -->
-<section class="approach-section">
-    <h2>Nossa Abordagem</h2>
-    <p class="sub">Como trabalhamos para encontrar a melhor solução para sua família.</p>
-    <div class="approach-grid">
-        <div class="approach-item">
-            <div class="approach-icon"><i class="fas fa-ear-listen"></i></div>
-            <h4>Escuta Ativa</h4>
-            <p>Ouvimos com atenção e sem julgamentos para entender toda a complexidade da sua situação.</p>
+<!-- Benefícios -->
+<section class="benefits-section">
+    <h2>Por Que Contar com Assessoria Especializada</h2>
+    <p class="sub">Vantagens concretas para o seu negócio.</p>
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-piggy-bank"></i></div>
+            <h4>Redução de Custos</h4>
+            <p>Prevenção e defesa eficiente reduzem o valor médio de acordos e condenações.</p>
         </div>
-        <div class="approach-item">
-            <div class="approach-icon"><i class="fas fa-handshake"></i></div>
-            <h4>Mediação</h4>
-            <p>Sempre que possível, buscamos acordos que preservem a relação familiar e reduzam o conflito.</p>
+        <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Segurança Jurídica</h4>
+            <p>Processos conformes e documentação adequada protegem a empresa em qualquer auditoria.</p>
         </div>
-        <div class="approach-item">
-            <div class="approach-icon"><i class="fas fa-gavel"></i></div>
-            <h4>Defesa Firme</h4>
-            <p>Quando necessário, atuamos com toda a força jurídica para proteger seus direitos e os dos seus filhos.</p>
+        <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+            <h4>Agilidade</h4>
+            <p>Respostas rápidas e estratégicas para situações urgentes, como notificações e prazos processuais.</p>
         </div>
-        <div class="approach-item">
-            <div class="approach-icon"><i class="fas fa-lock"></i></div>
-            <h4>Sigilo Total</h4>
-            <p>Todas as informações compartilhadas são tratadas com absoluta confidencialidade e discrição.</p>
+        <div class="benefit-item">
+            <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
+            <h4>Parceria Contínua</h4>
+            <p>Assessoria permanente para consultas do dia a dia, não apenas quando surgem problemas.</p>
         </div>
     </div>
 </section>
@@ -335,38 +371,38 @@ footer { background-color: var(--primary-blue); color: white; padding: 50px 5% 1
 <!-- FAQ -->
 <section class="faq-section">
     <h2>Dúvidas Frequentes</h2>
-    <p class="sub">Respostas para as perguntas mais comuns sobre Direito de Família.</p>
+    <p class="sub">Respostas objetivas para empresários e gestores.</p>
     <div class="faq">
         <div class="faq-item">
-            <button class="faq-question">Qual a diferença entre divórcio em cartório e divórcio judicial? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">O divórcio em cartório é mais rápido e barato, mas só é possível quando o casal não tem filhos menores ou incapazes e está de acordo com todos os termos. O divórcio judicial é necessário quando há filhos menores, discordâncias sobre partilha ou quando um dos cônjuges não coopera.</div>
+            <button class="faq-question">Minha empresa recebeu uma reclamação trabalhista. O que fazer? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">O primeiro passo é não ignorar o prazo de resposta. Entre em contato imediatamente com um advogado trabalhista. Analisaremos a reclamação, reuniremos documentos e definiremos a melhor estratégia de defesa — seja contestar, negociar ou propor acordo.</div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Como funciona a guarda compartilhada na prática? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Na guarda compartilhada, ambos os pais participam igualmente das decisões sobre a vida dos filhos (educação, saúde, lazer). A residência pode ser alternada ou ficar fixada com um dos pais, com amplo direito de convivência do outro. É o modelo preferido pela legislação brasileira.</div>
+            <button class="faq-question">Vale a pena fazer acordo ou é melhor ir a julgamento? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">Depende de cada caso. Em geral, acordos bem negociados são mais rápidos e custam menos do que uma condenação judicial. Analisamos o mérito, os riscos e o valor envolvido para recomendar a melhor decisão estratégica para a empresa.</div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Como é calculado o valor da pensão alimentícia? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">A pensão é calculada com base no binômio necessidade-possibilidade: as necessidades de quem recebe (filhos ou ex-cônjuge) e a capacidade financeira de quem paga. Em geral, para filhos, varia entre 15% e 30% dos rendimentos líquidos do alimentante, mas cada caso é analisado individualmente.</div>
+            <button class="faq-question">Como posso reduzir o risco de reclamações trabalhistas? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">Através de consultoria preventiva: revisão de contratos, adequação de jornadas, treinamento de gestores, procedimentos de demissão corretos e documentação adequada. Nossa assessoria identifica os pontos de risco antes que se tornem processos.</div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">O que fazer quando o pai ou a mãe não paga a pensão? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">É possível executar judicialmente a pensão em atraso, com possibilidade de desconto em folha de pagamento, bloqueio de contas bancárias e, em casos graves, até prisão civil do devedor de alimentos. Agimos rapidamente para garantir o pagamento.</div>
+            <button class="faq-question">A empresa pode ser responsabilizada por terceirizados? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">Sim. A empresa tomadora de serviços pode ter responsabilidade subsidiária pelas obrigações trabalhistas da prestadora. Por isso, é fundamental estruturar corretamente os contratos de terceirização e monitorar o cumprimento das obrigações.</div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Preciso de advogado para fazer inventário em cartório? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Sim. A lei exige a presença de um advogado em todos os inventários, mesmo os extrajudiciais (em cartório). O advogado orienta sobre os direitos de cada herdeiro, a partilha dos bens e os aspectos tributários envolvidos.</div>
+            <button class="faq-question">Como funciona a assessoria trabalhista contínua? <i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">Oferecemos consultoria mensal ou por demanda, com análise de casos concretos, revisão de documentos, orientação sobre admissões e demissões e suporte para o RH da empresa. Tudo de forma online e ágil.</div>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-    <h2>Estamos Aqui para Ajudar</h2>
-    <p>Momentos difíceis pedem apoio especializado. Fale conosco com total sigilo e sem julgamentos.</p>
+    <h2>Proteja Sua Empresa Agora</h2>
+    <p>Não espere uma reclamação para buscar assessoria. Fale conosco e descubra como reduzir seus riscos trabalhistas.</p>
     <div class="cta-btns">
         <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Falar com um Advogado</a>
-        <a href="contato.html" class="btn-outline"><i class="fas fa-envelope"></i> Enviar Mensagem</a>
+        <a href="contato.html" class="btn-outline"><i class="fas fa-envelope"></i> Solicitar Proposta</a>
     </div>
 </section>
 
