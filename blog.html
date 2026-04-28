@@ -111,9 +111,17 @@
             padding: 80px 5%;
         }
 
-        /* Filtros */
+        /* Filtros e Paginação Superior */
+        .controls-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
         .filters-section {
-            margin-bottom: 60px;
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
@@ -133,7 +141,7 @@
         }
 
         .filter-chip {
-            padding: 10px 20px;
+            padding: 8px 18px;
             border: 2px solid var(--accent-gold);
             background: var(--white);
             color: var(--primary-blue);
@@ -141,7 +149,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .filter-chip:hover {
@@ -155,12 +163,62 @@
             border-color: var(--primary-blue);
         }
 
+        /* Paginação */
+        .pagination {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            background: var(--white);
+            color: var(--primary-blue);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .pagination-btn:hover:not(.disabled) {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .pagination-btn.active {
+            background: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+
+        .pagination-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #f0f0f0;
+        }
+
         /* Grid de Posts */
         .posts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
             margin-bottom: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            .posts-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .posts-grid { grid-template-columns: 1fr; }
+            .controls-wrapper { flex-direction: column; align-items: flex-start; }
+            .pagination { width: 100%; justify-content: center; }
         }
 
         .post-card {
@@ -339,22 +397,16 @@
             text-decoration: none;
             transition: transform 0.3s;
         }
-
         .whatsapp-float:hover { transform: scale(1.1); }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header { flex-direction: column; height: auto; padding: 15px 5%; }
-            nav { flex-direction: column; gap: 15px; width: 100%; margin-top: 15px; }
-            .nav-links { flex-direction: column; gap: 10px; width: 100%; }
-            .btn-nav-whatsapp {        /* Hamburger menu */
+        /* Hamburger Menu */
         .hamburger {
             display: none;
             flex-direction: column;
-            cursor: pointer;
             gap: 5px;
             background: none;
             border: none;
+            cursor: pointer;
             padding: 5px;
         }
         .hamburger span {
@@ -362,38 +414,13 @@
             height: 3px;
             background-color: var(--primary-blue);
             border-radius: 3px;
-            transition: all 0.3s;
+            transition: 0.3s;
         }
-
         @media (max-width: 768px) {
-            header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
             .hamburger { display: flex; }
-            nav {
-                display: none;
-                flex-direction: column;
-                gap: 15px;
-                width: 100%;
-                padding-bottom: 15px;
-            }
-            nav.open { display: flex; }
-            .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
-            .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-
-            .hero h1 { font-size: 1.6rem; }
-            .hero p { font-size: 0.95rem; }
-            .blog-container { padding: 30px 5%; }
-            
-            .posts-grid { grid-template-columns: 1fr; gap: 20px; }
-            .post-card { flex-direction: row; height: auto; align-items: center; }
-            .post-card-image { width: 100px; min-width: 100px; height: 100px; }
-            .post-card-content { padding: 15px; }
-            .post-card h3 { font-size: 0.95rem; margin-bottom: 5px; }
-            .post-card p { font-size: 0.8rem; -webkit-line-clamp: 2; margin-bottom: 10px; }
-            .post-category { padding: 3px 8px; font-size: 0.65rem; margin-bottom: 8px; }
-            .post-meta { font-size: 0.75rem; padding-top: 8px; }
-
-            .filters-section { flex-direction: column; align-items: flex-start; margin-bottom: 30px; }
-            .filter-chip { padding: 8px 15px; font-size: 0.8rem; }
+            nav { display: none; width: 100%; position: absolute; top: 80px; left: 0; background: white; padding: 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+            nav.open { display: flex; flex-direction: column; }
+            .nav-links { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -424,16 +451,26 @@
     </section>
 
     <main class="blog-container">
-        <!-- Filtros -->
-        <div class="filters-section">
-            <span class="filter-label">Filtrar por área:</span>
-            <div class="filter-chips">
-                <button class="filter-chip active" data-category="all">Todas</button>
+        <!-- Filtros e Paginação Superior -->
+        <div class="controls-wrapper">
+            <div class="filters-section">
+                <span class="filter-label">Filtrar por área:</span>
+                <div class="filter-chips">
+                    <button class="filter-chip active" data-category="all">Todas</button>
+                </div>
+            </div>
+            <div class="pagination" id="paginationTop">
+                <!-- Carregado via JavaScript -->
             </div>
         </div>
 
         <!-- Grid de Posts -->
         <div class="posts-grid" id="postsGrid">
+            <!-- Carregado via JavaScript -->
+        </div>
+
+        <!-- Paginação Inferior -->
+        <div class="pagination" id="paginationBottom" style="justify-content: center; margin-top: 40px;">
             <!-- Carregado via JavaScript -->
         </div>
 
@@ -475,18 +512,21 @@
 
     <script>
         let allPosts = [];
+        let filteredPosts = [];
         let currentFilter = 'all';
+        let currentPage = 1;
+        const postsPerPage = 12; // 3 colunas x 4 linhas
         const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
         async function loadPosts() {
             try {
-                // Tenta carregar o JSON de forma relativa primeiro, depois absoluta
                 let response = await fetch('blog/posts/index.json');
                 if (!response.ok) {
                     response = await fetch('/blog/posts/index.json');
                 }
                 if (!response.ok) throw new Error('Erro ao carregar posts');
                 allPosts = await response.json();
+                filteredPosts = allPosts;
                 
                 // Extrair categorias únicas
                 const categories = [...new Set(allPosts.flatMap(p => p.categories))];
@@ -502,7 +542,7 @@
                     filterChips.appendChild(chip);
                 });
                 
-                renderPosts(allPosts);
+                updateDisplay();
             } catch (error) {
                 console.error('Erro:', error);
                 document.getElementById('postsGrid').innerHTML = '<p>Erro ao carregar posts.</p>';
@@ -511,6 +551,7 @@
 
         function filterPosts(category) {
             currentFilter = category;
+            currentPage = 1;
             
             // Atualizar chips ativos
             document.querySelectorAll('.filter-chip').forEach(chip => {
@@ -520,25 +561,30 @@
                 }
             });
             
-            // Filtrar e renderizar
-            const filtered = category === 'all' ? allPosts : allPosts.filter(p => p.categories.includes(category));
-            renderPosts(filtered);
+            // Filtrar
+            filteredPosts = category === 'all' ? allPosts : allPosts.filter(p => p.categories.includes(category));
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+            const startIndex = (currentPage - 1) * postsPerPage;
+            const endIndex = startIndex + postsPerPage;
+            const postsToDisplay = filteredPosts.slice(startIndex, endIndex);
+            
+            renderPosts(postsToDisplay);
+            renderPagination(totalPages);
+            
+            // Scroll para o topo da lista ao mudar de página
+            if (currentPage > 1) {
+                document.querySelector('.controls-wrapper').scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         function getImageUrl(imageUrl) {
-            // Se a imagem começa com http, é uma URL completa
-            if (imageUrl && imageUrl.startsWith('http')) {
-                return imageUrl;
-            }
-            // Se começa com /, é um caminho absoluto
-            if (imageUrl && imageUrl.startsWith('/')) {
-                return imageUrl;
-            }
-            // Se é um caminho relativo, adiciona o prefixo
-            if (imageUrl) {
-                return '/' + imageUrl;
-            }
-            // Fallback padrão
+            if (imageUrl && imageUrl.startsWith('http')) return imageUrl;
+            if (imageUrl && imageUrl.startsWith('/')) return imageUrl;
+            if (imageUrl) return '/' + imageUrl;
             return DEFAULT_IMAGE;
         }
 
@@ -581,10 +627,48 @@
             }).join('');
         }
 
+        function renderPagination(totalPages) {
+            const topContainer = document.getElementById('paginationTop');
+            const bottomContainer = document.getElementById('paginationBottom');
+            
+            if (totalPages <= 1) {
+                topContainer.innerHTML = '';
+                bottomContainer.innerHTML = '';
+                return;
+            }
+
+            let paginationHtml = `
+                <button class="pagination-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            `;
+
+            for (let i = 1; i <= totalPages; i++) {
+                paginationHtml += `
+                    <button class="pagination-btn ${currentPage === i ? 'active' : ''}" onclick="changePage(${i})">
+                        ${i}
+                    </button>
+                `;
+            }
+
+            paginationHtml += `
+                <button class="pagination-btn ${currentPage === totalPages ? 'disabled' : ''}" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            `;
+
+            topContainer.innerHTML = paginationHtml;
+            bottomContainer.innerHTML = paginationHtml;
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            updateDisplay();
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             loadPosts();
             
-            // Menu Sanduíche
             const hamburgerBtn = document.getElementById('hamburgerBtn');
             const mainNav = document.getElementById('mainNav');
             
