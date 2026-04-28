@@ -338,15 +338,6 @@ nav {
     margin: 0 auto;
 }
 
-/* Cards trabalhistas em destaque */
-.services-grid-highlight {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    max-width: 1200px;
-    margin: 0 auto 18px;
-}
-
 .service-card {
     background: var(--bg-light);
     padding: 26px 22px;
@@ -413,20 +404,6 @@ nav {
     width: 100px; height: 100px;
     background: rgba(126,184,212,0.12);
     border-radius: 50%;
-}
-.service-card.highlight-empresa .service-card-header h3 { color: white; }
-.service-card.highlight-empresa p { color: rgba(255,255,255,0.82); }
-.service-card.highlight-empresa .service-badge {
-    background: #7eb8d4;
-    color: #172B41;
-    font-size: 0.7rem;
-    font-weight: 800;
-    padding: 3px 10px;
-    border-radius: 20px;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 4px;
 }
 
 .service-card-header {
@@ -1325,10 +1302,9 @@ footer {
         <h2 class="section-title">Áreas de Atuação</h2>
         <p class="section-subtitle">Especialistas prontos para defender seus interesses com estratégia e dedicação.</p>
 
-        <!-- Destaque Trabalhista -->
-        <div class="services-grid-highlight">
-            <a href="trabalhista-empregado.html" class="service-card highlight-empregado">
-                <span class="service-badge">Destaque</span>
+        <!-- Áreas de Atuação -->
+        <div class="services-grid">
+            <a href="trabalhista-empregado.html" class="service-card">
                 <div class="service-card-header">
                     <i class="fas fa-hard-hat"></i>
                     <h3>Direito do Trabalho — Para Empregado</h3>
@@ -1336,8 +1312,8 @@ footer {
                 <p>Demissão injusta, horas extras não pagas, assédio moral, reconhecimento de vínculo e muito mais. Defenda seus direitos trabalhistas.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
-            <a href="trabalhista-empresa.html" class="service-card highlight-empresa">
-                <span class="service-badge">Destaque</span>
+
+            <a href="trabalhista-empresa.html" class="service-card">
                 <div class="service-card-header">
                     <i class="fas fa-building"></i>
                     <h3>Direito do Trabalho — Para Empresa</h3>
@@ -1345,10 +1321,7 @@ footer {
                 <p>Consultoria preventiva, defesa em reclamações trabalhistas, compliance e gestão de riscos para proteger seu negócio.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
-        </div>
 
-        <!-- Demais áreas -->
-        <div class="services-grid">
             <a href="familia.html" class="service-card">
                 <div class="service-card-header">
                     <i class="fas fa-users"></i>
@@ -1357,6 +1330,7 @@ footer {
                 <p>Divórcio, pensão alimentícia, guarda de filhos e inventários com atendimento humanizado.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
+
             <a href="criminal.html" class="service-card">
                 <div class="service-card-header">
                     <i class="fas fa-gavel"></i>
@@ -1365,6 +1339,7 @@ footer {
                 <p>Defesa criminal estratégica e acompanhamento em todas as fases do processo.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
+
             <a href="contrato.html" class="service-card">
                 <div class="service-card-header">
                     <i class="fas fa-file-contract"></i>
@@ -1373,6 +1348,7 @@ footer {
                 <p>Elaboração e revisão de contratos com segurança jurídica total.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
+
             <a href="busca-e-apreensao.html" class="service-card">
                 <div class="service-card-header">
                     <i class="fas fa-car"></i>
