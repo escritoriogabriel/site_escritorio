@@ -480,7 +480,11 @@
 
         async function loadPosts() {
             try {
-                const response = await fetch('/site_escritorio/blog/posts/index.json');
+                // Tenta carregar o JSON de forma relativa primeiro, depois absoluta
+                let response = await fetch('blog/posts/index.json');
+                if (!response.ok) {
+                    response = await fetch('/site_escritorio/blog/posts/index.json');
+                }
                 if (!response.ok) throw new Error('Erro ao carregar posts');
                 allPosts = await response.json();
                 

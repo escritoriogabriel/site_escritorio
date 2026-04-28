@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadBlogPosts = async () => {
         try {
             const baseUrl = getBaseUrl();
-            const response = await fetch(`${baseUrl}blog/posts/index.json`);
+            let response = await fetch(`${baseUrl}blog/posts/index.json`);
+            
+            // Fallback caso o baseUrl falhe
+            if (!response.ok) {
+                response = await fetch('blog/posts/index.json');
+            }
+            
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
