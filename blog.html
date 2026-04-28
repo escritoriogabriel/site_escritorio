@@ -584,9 +584,11 @@
 
         function getImageUrl(imageUrl) {
             if (imageUrl && imageUrl.startsWith('http')) return imageUrl;
-            if (imageUrl && imageUrl.startsWith('/')) return imageUrl;
-            if (imageUrl) return '/' + imageUrl;
-            return DEFAULT_IMAGE;
+            if (imageUrl && imageUrl.startsWith('/')) {
+                // Se começar com /, remove para tratar como relativo à raiz do domínio
+                return imageUrl.substring(1);
+            }
+            return imageUrl || DEFAULT_IMAGE;
         }
 
         function renderPosts(posts) {
