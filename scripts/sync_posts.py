@@ -13,7 +13,7 @@ IMAGES_DIR = PROJECT_ROOT / "blog" / "images"
 INDEX_FILE = POSTS_DIR / "index.json"
 
 # Prefixo do site no GitHub Pages
-SITE_PREFIX = "/site_escritorio/"
+SITE_PREFIX = "/"
 
 # Imagem padrão caso nenhuma seja encontrada
 DEFAULT_POST_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"

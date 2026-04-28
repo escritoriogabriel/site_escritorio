@@ -138,7 +138,7 @@ INSTRUÇÕES CRÍTICAS:
 2. Use ## para subtítulos (não use #)
 3. Inclua pelo menos 3 subtítulos principais
 4. Adicione uma seção FAQ com 3-5 perguntas e respostas
-5. Inclua 1-2 links internos no formato [Texto](/site_escritorio/pagina.html)
+5. Inclua 1-2 links internos no formato [Texto](/pagina.html)
 6. Inclua 1-2 links externos para fontes confiáveis
 7. Termine com um CTA claro para o WhatsApp
 8. Use negrito (**texto**) para destacar pontos importantes
@@ -258,7 +258,7 @@ date: {datetime.datetime.now().isoformat()}
 author: "Advogado Gabriel Corrêa"
 categories: ["{metadata['category']}"]
 tags: {json.dumps(metadata['keywords'])}
-image: "/site_escritorio/blog/images/{metadata['slug']}.jpg"
+image: "/blog/images/{metadata['slug']}.jpg"
 excerpt: "{metadata['excerpt']}"
 ---
 
@@ -278,11 +278,11 @@ excerpt: "{metadata['excerpt']}"
         return {
             'title': metadata['title'],
             'slug': slug,
-            'url': f"/site_escritorio/blog/posts/{slug}.html",
+            'url': f"/blog/posts/{slug}.html",
             'date': datetime.datetime.now().isoformat(),
             'author': "Advogado Gabriel Corrêa",
             'excerpt': metadata['excerpt'],
-            'image': f"/site_escritorio/blog/images/{slug}.jpg",
+            'image': f"/blog/images/{slug}.jpg",
             'tags': metadata['keywords'],
             'categories': [metadata['category']]
         }

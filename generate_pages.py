@@ -296,7 +296,7 @@ template = f"""<!DOCTYPE html>
     <title>{{{{TITLE}}}} | Advogado Gabriel Corrêa</title>
     <meta name="description" content="{{{{DESCRIPTION}}}}">
     <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
-    <link rel="canonical" href="https://escritoriogabriel.github.io/site_escritorio/{{{{FILENAME}}}}">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/{{{{FILENAME}}}}">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">

@@ -6,10 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const DEFAULT_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
     const getBaseUrl = () => {
-        const path = window.location.pathname;
-        if (path.includes('/site_escritorio/')) {
-            return '/site_escritorio/';
-        }
         return '/';
     };
 

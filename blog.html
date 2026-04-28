@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Jurídico | Informação e Direitos | Advocacia Estratégica</title>
     <meta name="description" content="Artigos e notícias sobre seus direitos. Informação jurídica sem complicação sobre trabalho, aposentadoria, família e mais.">
-    <link rel="canonical" href="https://escritoriogabriel.github.io/site_escritorio/blog.html">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/blog.html">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -483,7 +483,7 @@
                 // Tenta carregar o JSON de forma relativa primeiro, depois absoluta
                 let response = await fetch('blog/posts/index.json');
                 if (!response.ok) {
-                    response = await fetch('/site_escritorio/blog/posts/index.json');
+                    response = await fetch('/blog/posts/index.json');
                 }
                 if (!response.ok) throw new Error('Erro ao carregar posts');
                 allPosts = await response.json();

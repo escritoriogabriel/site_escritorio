@@ -4,7 +4,7 @@ date: 2026-04-27T14:47:26.772572
 author: "Advogado Gabriel Corrêa"
 categories: ["Direito Trabalhista"]
 tags: ["rescisão indireta", "direitos do trabalhador", "CLT"]
-image: "/site_escritorio/blog/images/rescisao-indireta.jpg"
+image: "/blog/images/rescisao-indireta.jpg"
 excerpt: "Saiba como funciona a rescisão indireta, a 'justa causa do empregador', e garanta seus direitos mesmo quando a empresa descumpre o contrato."
 ---
 

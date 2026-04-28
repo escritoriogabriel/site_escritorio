@@ -124,7 +124,7 @@ class ChatWidget {
             const link = document.createElement('link');
             link.id = 'chatWidgetStyles';
             link.rel = 'stylesheet';
-            link.href = '/site_escritorio/assets/chat-widget.css';
+            link.href = '/assets/chat-widget.css';
             document.head.appendChild(link);
         }
     }
