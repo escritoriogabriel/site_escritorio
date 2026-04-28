@@ -269,19 +269,36 @@ def parse_md_with_front_matter(md_path):
 
     return metadata, content_md
 
-def find_image(slug, title):
+def find_image(slug, title, metadata_image=None):
+    # Se já existe uma imagem definida no metadata, tenta usá-la
+    if metadata_image:
+        # Se for um caminho relativo sem o prefixo, adiciona
+        if not metadata_image.startswith('http') and not metadata_image.startswith('/'):
+            metadata_image = f"{SITE_PREFIX}{metadata_image}"
+        
+        # Verifica se o arquivo existe localmente (se for um caminho local)
+        if metadata_image.startswith(f"{SITE_PREFIX}blog/images/"):
+            img_name = metadata_image.split('/')[-1]
+            if (IMAGES_DIR / img_name).exists():
+                return metadata_image
+
     if not IMAGES_DIR.exists():
         return DEFAULT_POST_IMAGE
         
     image_files = list(IMAGES_DIR.glob("*"))
     clean_slug = slug.replace('-', '')
     clean_title = slugify(title).replace('-', '')
-    possible_names = [slug, slugify(title), clean_slug, clean_title]
     
+    # Tenta encontrar por nome de arquivo exato primeiro
+    for img_file in image_files:
+        if img_file.stem.lower() == slug.lower() or img_file.stem.lower() == slugify(title).lower():
+            return f"{SITE_PREFIX}blog/images/{img_file.name}"
+
+    # Tenta encontrar por similaridade
+    possible_names = [slug, slugify(title), clean_slug, clean_title]
     for name in possible_names:
         for img_file in image_files:
             if name.lower() in img_file.stem.lower() or img_file.stem.lower() in name.lower():
-                # Retorna caminho absoluto para o site no GitHub Pages
                 return f"{SITE_PREFIX}blog/images/{img_file.name}"
     
     return DEFAULT_POST_IMAGE
@@ -318,7 +335,7 @@ def sync_posts():
         if isinstance(category, list): category = category[0]
         if not category: category = "Direito"
 
-        image_url = find_image(slug, metadata['title'])
+        image_url = find_image(slug, metadata['title'], metadata.get('image'))
 
         final_html = HTML_TEMPLATE.format(
             title=metadata['title'],
@@ -359,7 +376,7 @@ def sync_posts():
         if isinstance(category, list): category = category[0]
         if not category: category = "Direito"
         
-        image_url = find_image(slug, metadata['title'])
+        image_url = find_image(slug, metadata['title'], metadata.get('image'))
 
         final_html = HTML_TEMPLATE.format(
             title=metadata['title'],
