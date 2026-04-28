@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União Estável: Quais São os Direitos, Deveres e o Que Você Precisa Formalizar | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>União Estável: Quais São os Direitos, Deveres e o Que Você Precisa Formalizar</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Milhões de casais no Brasil vivem juntos sem passar pelo altar ou pelo cartório. Muitos acreditam que, por não terem casado formalmente, não têm nenhum direito legal. Outros acreditam que o simples fato de morar junto já garante automaticamente todos os direitos de um casamento. A realidade está no meio — e entendê-la pode fazer uma grande diferença na sua vida financeira e emocional.</p>
+<p>A união estável é reconhecida pela <strong>Constituição Federal</strong> como entidade familiar. Ela gera direitos reais — mas também pode gerar conflitos sérios quando não é formalizada. Se você vive ou viveu em união estável, continue lendo.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>Para que uma relação seja reconhecida legalmente como união estável, ela precisa reunir algumas características essenciais:</p>
+<ul>
+<li><strong>Convivência pública:</strong> não é um relacionamento escondido ou secreto</li>
+<li><strong>Continuidade:</strong> não é uma relação casual ou esporádica</li>
+<li><strong>Estabilidade:</strong> a relação tem perspectiva de permanência</li>
+<li><strong>Objetivo de constituir família:</strong> o casal se trata como tal perante a sociedade</li>
+</ul>
+<p>Não é necessário ter filhos, não é obrigatório morar na mesma casa (embora seja o mais comum) e <strong>não existe prazo mínimo definido em lei</strong> — a estabilidade é avaliada pelas circunstâncias de cada caso.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Direito</th>
+<th style="text-align: center;">União Estável</th>
+<th style="text-align: center;">Casamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Herança (concorre com filhos)</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Partilha de bens adquiridos durante a união</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pensão por morte (INSS/previdência privada)</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Plano de saúde como dependente</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Imposto de Renda como dependente</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Adoção conjunta</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Proteção automática sem necessidade de prova</td>
+<td style="text-align: center;">❌ Precisa comprovar</td>
+<td style="text-align: center;">✅ Automático</td>
+</tr>
+<tr>
+<td style="text-align: left;">Conversão em casamento simplificada</td>
+<td style="text-align: center;">✅ Possível em cartório</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Como formalizar a união estável?</h2>
+<p>A formalização pode ser feita de duas formas:</p>
+<p><strong>Contrato de União Estável em Cartório:</strong> Um documento lavrado em cartório de notas que formaliza a relação e permite que o casal defina o regime de bens. É a forma mais segura e recomendada. Pode ser feito a qualquer momento durante a relação — inclusive logo no início.</p>
+<p><strong>Declaração particular:</strong> Alguns órgãos aceitam declarações assinadas e reconhecidas em cartório. Mas esse documento tem força jurídica limitada e pode ser mais facilmente contestado em situações de conflito.</p>
+<hr />
+<h2>O que acontece com os bens sem formalização?</h2>
+<p>Sem o contrato, a regra que vale é a <strong>comunhão parcial de bens</strong> — ou seja, o que foi adquirido durante a união pertence a ambos, em partes iguais. Mas <strong>provar que a relação existia</strong> pode ser um problema quando não há formalização, especialmente em caso de falecimento ou separação litigiosa.</p>
+<p>Para comprovar a união estável informalmente, costumam ser utilizados:</p>
+<ul>
+<li>Conta bancária conjunta ou cartão adicional</li>
+<li>Declaração de IR com o companheiro como dependente</li>
+<li>Seguro de vida com o companheiro como beneficiário</li>
+<li>Fotografias, mensagens e redes sociais que demonstrem a relação pública</li>
+<li>Testemunhas de amigos, familiares e vizinhos</li>
+<li>Contratos firmados em conjunto (aluguel, financiamento, compra de imóvel)</li>
+</ul>
+<hr />
+<h2>Quais são os deveres em uma união estável?</h2>
+<p>A união estável não é só sobre direitos. Ela também gera deveres entre os companheiros:</p>
+<ul>
+<li>Lealdade e respeito mútuo</li>
+<li>Assistência mútua (incluindo financeira, em caso de necessidade)</li>
+<li>Sustento, guarda e educação dos filhos em comum</li>
+<li>Respeito ao regime de bens estabelecido (ou à comunhão parcial, se nenhum foi definido)</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre União Estável</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Depois de dois anos juntos, somos automaticamente considerados em união estável."<br />
+<strong>Verdade:</strong> Não existe prazo legal fixo. A união estável depende das características da relação, não de um tempo específico.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "União estável é inferior ao casamento em termos de direitos."<br />
+<strong>Verdade:</strong> Em termos de direitos, são muito semelhantes. A principal diferença está na facilidade de comprovação — o casamento é automático, a união estável precisa ser demonstrada.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Posso converter minha união estável em casamento a qualquer momento."<br />
+<strong>Verdade:</strong> Sim! A lei permite a conversão em casamento com um processo simplificado no cartório, sem precisar de processo judicial.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se meu companheiro morrer sem testamento, minha família dele vai ficar com tudo."<br />
+<strong>Verdade:</strong> O companheiro em união estável tem direito à herança. Mas sem formalização e documentos, pode ser difícil provar a relação numa eventual disputa com outros herdeiros.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>Viver em união estável sem qualquer formalização é um risco que muitos casais assumem sem perceber. Em caso de separação, falecimento ou qualquer situação jurídica relevante, a ausência de documentação pode trazer dor de cabeça — e prejuízo financeiro significativo — para quem mais merecia proteção.</p>
+<p>Formalizar a união estável é um ato simples, rápido e que garante segurança jurídica para os dois lados. Não espere o conflito aparecer para buscar seus direitos.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

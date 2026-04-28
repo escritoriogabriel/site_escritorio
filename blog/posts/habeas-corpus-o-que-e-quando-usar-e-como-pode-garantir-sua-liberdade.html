@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habeas Corpus: O Que é, Quando Usar e Como Pode Garantir Sua Liberdade | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Habeas Corpus: O Que é, Quando Usar e Como Pode Garantir Sua Liberdade</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>"Habeas Corpus" é uma expressão latina que significa, literalmente, "que você tenha o corpo" — ou seja, que a pessoa seja apresentada livre perante a justiça. É um dos instrumentos jurídicos mais antigos e importantes do mundo, e no Brasil tem status de remédio constitucional: está na Constituição Federal justamente para proteger cidadãos de prisões ilegais ou abusivas.</p>
+<p>Se alguém está preso de forma irregular, ou se há ameaça concreta de uma prisão ilegal, o habeas corpus pode ser a solução mais rápida e eficaz. Mas ele tem requisitos, limitações e precisa ser usado no momento certo. Neste artigo, explicamos tudo de forma clara.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O habeas corpus está previsto no <strong>artigo 5º, inciso LXVIII</strong> da Constituição Federal: <em>"conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder."</em></p>
+<p>Existem dois tipos principais:</p>
+<ul>
+<li><strong>Habeas Corpus Liberatório:</strong> para quem já está preso ilegalmente e quer ser solto</li>
+<li><strong>Habeas Corpus Preventivo:</strong> para quem ainda não foi preso, mas há ameaça concreta e iminente de uma prisão ilegal</li>
+</ul>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação</th>
+<th style="text-align: left;">Habeas corpus é cabível?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Preso há meses sem sentença e sem fundamentação adequada</td>
+<td style="text-align: left;">✅ Sim — prisão preventiva excessiva</td>
+</tr>
+<tr>
+<td style="text-align: left;">Preso sem mandado e sem flagrante</td>
+<td style="text-align: left;">✅ Sim — prisão claramente ilegal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Preso por dívida civil comum (não alimentar)</td>
+<td style="text-align: left;">✅ Sim — vedado pela Constituição</td>
+</tr>
+<tr>
+<td style="text-align: left;">Condenado, cumprindo pena corretamente</td>
+<td style="text-align: left;">❌ Não — a prisão é legal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Indiciado com inquérito em aberto, sem prisão decretada</td>
+<td style="text-align: left;">✅ Sim (preventivo) — se houver ameaça real</td>
+</tr>
+<tr>
+<td style="text-align: left;">Preso com excesso de prazo na investigação</td>
+<td style="text-align: left;">✅ Sim — constrangimento ilegal por demora</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Quais são os principais motivos para pedir um habeas corpus?</h2>
+<p>Na prática forense, os habeas corpus mais comuns são impetrados nas seguintes situações:</p>
+<ul>
+<li><strong>Prisão preventiva sem fundamentação:</strong> o juiz decretou a prisão sem indicar claramente o motivo legal</li>
+<li><strong>Excesso de prazo:</strong> a pessoa está presa há muito tempo sem que o processo tenha avançado</li>
+<li><strong>Falta de audiência de custódia:</strong> o preso não foi apresentado ao juiz em até 24 horas</li>
+<li><strong>Prisão civil por dívida que não é alimentar:</strong> a Constituição só permite prisão civil para dívida de pensão alimentícia</li>
+<li><strong>Ilegalidade no flagrante:</strong> a prisão em flagrante foi realizada fora das hipóteses legais</li>
+<li><strong>Cumprimento de pena em regime mais gravoso do que o devido:</strong> condenado em regime aberto sendo mantido em fechado, por exemplo</li>
+</ul>
+<hr />
+<h2>Como funciona o habeas corpus na prática?</h2>
+<p>O habeas corpus é uma <strong>ação judicial</strong> que pode ser impetrada por qualquer pessoa — inclusive pelo próprio preso, sem advogado. Mas a complexidade técnica exige, na prática, um advogado criminalista para redigir a peça corretamente.</p>
+<p>O caminho é:</p>
+<ol>
+<li>O advogado analisa a situação e identifica a ilegalidade</li>
+<li>Redige a petição de habeas corpus com os fundamentos legais</li>
+<li>Apresenta ao tribunal competente (pode ser TJ, STJ ou STF, dependendo do caso)</li>
+<li>O tribunal pode conceder uma <strong>liminar</strong> imediata — liberando a pessoa enquanto analisa o mérito</li>
+<li>O pedido é julgado em plenário pelo colegiado</li>
+</ol>
+<p>Em casos urgentes, o habeas corpus com pedido de liminar pode resultar na soltura da pessoa em <strong>horas</strong>.</p>
+<hr />
+<h2>Para qual tribunal devo entrar com o habeas corpus?</h2>
+<p>Depende de quem decretou a prisão:</p>
+<ul>
+<li>Se foi um juiz de 1ª instância → o habeas corpus vai para o <strong>Tribunal de Justiça do Estado</strong></li>
+<li>Se foi um tribunal estadual → vai para o <strong>Superior Tribunal de Justiça (STJ)</strong></li>
+<li>Se foi o STJ → vai para o <strong>Supremo Tribunal Federal (STF)</strong></li>
+<li>Se envolve matéria federal → pode ir direto para o <strong>Tribunal Regional Federal</strong></li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Habeas Corpus</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Habeas corpus garante que a pessoa nunca mais vai ser presa pelo mesmo crime."<br />
+<strong>Verdade:</strong> O habeas corpus resolve a ilegalidade da prisão atual. O processo criminal continua e a pessoa pode ser presa novamente se os requisitos legais forem preenchidos.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Qualquer pessoa presa pode entrar com habeas corpus e ser solta."<br />
+<strong>Verdade:</strong> O habeas corpus só é cabível quando há ilegalidade ou abuso de poder. Prisões legais não são atacadas por esse instrumento.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Habeas corpus demora meses para ser julgado."<br />
+<strong>Verdade:</strong> Quando há urgência, o relator pode conceder uma liminar em horas — soltando a pessoa imediatamente, enquanto o mérito é analisado pelo colegiado.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Só advogado famoso consegue habeas corpus."<br />
+<strong>Verdade:</strong> O que define o sucesso do habeas corpus é a qualidade dos argumentos jurídicos e a real existência de uma ilegalidade — não a fama do advogado.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>O habeas corpus é um dos maiores escudos que o cidadão tem contra o abuso do poder do Estado. Ele existe para garantir que ninguém fique preso sem uma razão legal e fundamentada — e que qualquer ilegalidade seja corrigida com rapidez.</p>
+<p>Se você ou alguém que você conhece está preso de forma que parece irregular, não espere. A cada dia de prisão indevida é um direito fundamental sendo violado.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

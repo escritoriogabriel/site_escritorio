@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiência de Custódia: O Que é, Como Funciona e o Que Define Sua Liberdade | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Audiência de Custódia: O Que é, Como Funciona e o Que Define Sua Liberdade</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Você foi preso. Ou um familiar seu foi detido. O coração acelera, o desespero bate — e então vem a pergunta mais urgente: <strong>quando ele sai daqui?</strong></p>
+<p>A resposta está, em grande parte, num momento decisivo chamado <strong>audiência de custódia</strong>. É uma audiência que acontece em até 24 horas após a prisão, na presença de um juiz — e é nesse momento que se decide se a pessoa vai para casa ou fica presa aguardando o processo. Entender como ela funciona pode mudar tudo.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A audiência de custódia foi consolidada no Brasil pelo <strong>Código de Processo Penal</strong> (art. 310) e por resolução do Conselho Nacional de Justiça. Ela é um direito fundamental e deve acontecer <strong>em até 24 horas</strong> após a prisão em flagrante.</p>
+<p>O objetivo principal não é julgar se a pessoa é culpada ou inocente — esse é o papel do processo. O objetivo da audiência de custódia é verificar:</p>
+<ul>
+<li>Se a prisão foi legal e respeitou os direitos fundamentais</li>
+<li>Se houve tortura, maus-tratos ou abuso policial</li>
+<li>Se é necessário manter a pessoa presa até o julgamento</li>
+<li>Qual medida é adequada para o caso</li>
+</ul>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Decisão possível do juiz</th>
+<th style="text-align: left;">O que significa na prática</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Liberdade provisória sem fiança</td>
+<td style="text-align: left;">Solto sem pagar nada, responde em liberdade</td>
+</tr>
+<tr>
+<td style="text-align: left;">Liberdade provisória com fiança</td>
+<td style="text-align: left;">Solto após pagamento de valor fixado pelo juiz</td>
+</tr>
+<tr>
+<td style="text-align: left;">Medidas cautelares</td>
+<td style="text-align: left;">Solto com restrições: tornozeleira, proibição de contato, apresentação periódica etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Prisão preventiva</td>
+<td style="text-align: left;">Continua preso até o julgamento final</td>
+</tr>
+<tr>
+<td style="text-align: left;">Relaxamento da prisão</td>
+<td style="text-align: left;">Prisão declarada ilegal — solto imediatamente</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Quem participa da audiência de custódia?</h2>
+<p>A audiência envolve quatro personagens principais:</p>
+<ul>
+<li><strong>O preso:</strong> tem o direito de falar — e de contar se sofreu violência ou abuso durante a prisão</li>
+<li><strong>O advogado de defesa:</strong> apresenta argumentos em favor da liberdade do cliente</li>
+<li><strong>O promotor de justiça:</strong> manifesta a posição do Ministério Público, que pode pedir prisão preventiva ou concordar com a liberdade</li>
+<li><strong>O juiz:</strong> ouve todos e decide, de forma fundamentada, o destino imediato do preso</li>
+</ul>
+<p>É uma audiência relativamente rápida — costuma durar entre 15 e 40 minutos — mas com consequências enormes.</p>
+<hr />
+<h2>O que o juiz leva em consideração para decidir?</h2>
+<p>Para decidir se a pessoa fica presa ou é solta, o juiz analisa:</p>
+<ul>
+<li><strong>Gravidade do crime:</strong> crimes com maior potencial ofensivo têm mais chances de gerar prisão preventiva</li>
+<li><strong>Antecedentes criminais:</strong> se a pessoa tem histórico de crimes anteriores</li>
+<li><strong>Risco de fuga:</strong> se há indicativo de que o preso pode fugir antes do julgamento</li>
+<li><strong>Risco à ordem pública:</strong> se soltar a pessoa pode representar risco à comunidade</li>
+<li><strong>Risco à investigação:</strong> se o preso pode destruir provas ou intimidar testemunhas</li>
+<li><strong>Vínculos com a comunidade:</strong> emprego, residência fixa, família — fatores que indicam que a pessoa não vai fugir</li>
+</ul>
+<hr />
+<h2>O que seu advogado faz nessa audiência?</h2>
+<p>Essa é a hora em que um bom advogado faz toda a diferença. Na audiência de custódia, o defensor vai:</p>
+<ul>
+<li>Apresentar os vínculos do cliente com a comunidade (emprego, residência, filhos)</li>
+<li>Apontar eventuais ilegalidades na prisão em flagrante (falta de mandado, ausência de situação de flagrância real)</li>
+<li>Solicitar a substituição da prisão por medidas cautelares alternativas</li>
+<li>Relatar ao juiz qualquer violência ou abuso sofrido pelo cliente durante a detenção</li>
+<li>Argumentar tecnicamente pelos requisitos da liberdade provisória</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Audiência de Custódia</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Na audiência de custódia, o juiz já decide se a pessoa é culpada."<br />
+<strong>Verdade:</strong> Não. A audiência de custódia trata apenas da necessidade de manter a prisão. A culpa ou inocência é analisada no processo principal.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se o crime foi grave, a pessoa vai ficar presa de qualquer jeito."<br />
+<strong>Verdade:</strong> A gravidade do crime importa, mas não é o único fator. Pessoas acusadas de crimes graves são soltas todos os dias quando os requisitos da prisão preventiva não estão presentes.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Meu familiar vai ficar preso por meses esperando a audiência de custódia."<br />
+<strong>Verdade:</strong> A audiência deve acontecer em até 24 horas. Se não acontecer, a prisão pode ser declarada ilegal.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Na audiência de custódia, o preso não pode falar."<br />
+<strong>Verdade:</strong> O preso tem o direito de falar diretamente com o juiz — e esse é um momento importante para relatar eventuais abusos sofridos.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A audiência de custódia é o primeiro e mais urgente momento de defesa após uma prisão. É nela que se definem as próximas semanas ou meses da vida de uma pessoa — e estar bem representado por um advogado experiente faz toda a diferença entre voltar para casa ou aguardar o processo atrás das grades.</p>
+<p>Se alguém da sua família foi preso, não perca tempo. O relógio já está correndo.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

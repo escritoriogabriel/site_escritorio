@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordo de Não Persecução Penal: Como Evitar um Processo Criminal de Forma Legal | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Acordo de Não Persecução Penal: Como Evitar um Processo Criminal de Forma Legal</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Nem todo crime precisa resultar em julgamento público, condenação e ficha criminal. Para crimes de menor potencial ofensivo, o direito brasileiro criou um mecanismo que permite ao investigado resolver a situação de forma extrajudicial — cumprindo algumas condições e evitando todo o desgaste de um processo penal.</p>
+<p>Esse instrumento se chama <strong>Acordo de Não Persecução Penal (ANPP)</strong> e foi introduzido na legislação brasileira pelo <strong>Pacote Anticrime (Lei nº 13.964/2019)</strong>. Muita gente que se beneficiaria do ANPP simplesmente não sabe que ele existe. Este artigo vai mudar isso.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O ANPP é um acordo celebrado entre o investigado e o <strong>Ministério Público</strong> — com a participação obrigatória do advogado e homologação pelo juiz. Por meio dele, o investigado confessa a prática do crime, cumpre determinadas condições e, em troca, o Ministério Público se compromete a não oferecer a denúncia (ou seja, não iniciar formalmente o processo criminal).</p>
+<p>Se o acordo for cumprido integralmente, o juiz declara extinta a punibilidade — e o fato não gera condenação nem antecedente criminal.</p>
+<h3>Requisitos para o ANPP:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Requisito</th>
+<th style="text-align: left;">O que significa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Crime sem violência ou grave ameaça à pessoa</td>
+<td style="text-align: left;">Crimes patrimoniais, alguns crimes contra a fé pública etc.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pena mínima inferior a 4 anos</td>
+<td style="text-align: left;">Crimes com penas mais baixas na faixa de aplicação</td>
+</tr>
+<tr>
+<td style="text-align: left;">Réu primário</td>
+<td style="text-align: left;">Sem condenação criminal anterior transitada em julgado</td>
+</tr>
+<tr>
+<td style="text-align: left;">Confissão formal e circunstanciada</td>
+<td style="text-align: left;">O investigado reconhece a autoria do fato</td>
+</tr>
+<tr>
+<td style="text-align: left;">Acordo suficiente para reprovação e prevenção do crime</td>
+<td style="text-align: left;">O MP avalia se as condições impostas são proporcionais</td>
+</tr>
+<tr>
+<td style="text-align: left;">Não ser caso de arquivamento</td>
+<td style="text-align: left;">Se o fato já deveria ser arquivado, o ANPP não é necessário</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Quais condições podem ser impostas no ANPP?</h2>
+<p>O Ministério Público pode propor diferentes condições, sempre de forma proporcional à gravidade do caso. As mais comuns são:</p>
+<ul>
+<li><strong>Reparação do dano</strong> causado à vítima (quando identificável)</li>
+<li><strong>Prestação de serviços à comunidade</strong> por período determinado</li>
+<li><strong>Prestação pecuniária</strong> (pagamento em dinheiro para entidade pública ou de interesse social)</li>
+<li><strong>Renúncia voluntária a bens e direitos</strong> ligados ao crime</li>
+<li>Cumprimento de outras condições estabelecidas pelo MP e aceitas pelo investigado</li>
+</ul>
+<hr />
+<h2>Como funciona o processo na prática?</h2>
+<ol>
+<li>O investigado (com seu advogado) é chamado pelo Ministério Público para negociação</li>
+<li>O MP apresenta uma proposta de acordo com as condições</li>
+<li>O investigado, assessorado pelo advogado, analisa se as condições são razoáveis</li>
+<li>Se houver acordo, a proposta vai ao juiz para <strong>homologação</strong></li>
+<li>O juiz verifica se os requisitos foram preenchidos e se o investigado está agindo livremente</li>
+<li>Com a homologação, o investigado começa a cumprir as condições</li>
+<li>Após o cumprimento integral, o juiz <strong>declara extinta a punibilidade</strong> — sem processo, sem condenação</li>
+</ol>
+<hr />
+<h2>O que acontece se o acordo for descumprido?</h2>
+<p>Se o investigado não cumprir as condições dentro do prazo estabelecido, o Ministério Público pode <strong>revogar o acordo</strong> e oferecer a denúncia — iniciando o processo criminal normalmente. A confissão feita durante o ANPP, no entanto, não pode ser usada como prova no processo.</p>
+<p>Por isso, é fundamental contar com um advogado que monitore os prazos e garanta o cumprimento correto das condições.</p>
+<hr />
+<h2>O ANPP gera antecedente criminal?</h2>
+<p><strong>Não.</strong> Esta é uma das maiores vantagens do acordo. O ANPP não gera reincidência nem maus antecedentes. Isso significa que, após cumpridas as condições e declarada extinta a punibilidade, o episódio não aparece como condenação em certidões criminais para concursos, empregos ou outros fins.</p>
+<hr />
+<h2>Mitos e Verdades sobre o ANPP</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Se eu confesso no ANPP, estou admitindo culpa para sempre."<br />
+<strong>Verdade:</strong> A confissão feita para fins do ANPP não pode ser usada como prova em outros processos. E se o acordo for cumprido, não há condenação — então a confissão não produz efeitos negativos.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "O ANPP é automático — qualquer crime leve me dá direito a ele."<br />
+<strong>Verdade:</strong> O ANPP depende da concordância do Ministério Público. Em alguns casos, o MP pode se recusar — e o investigado pode questionar isso judicialmente.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Não preciso de advogado para fazer o ANPP."<br />
+<strong>Verdade:</strong> A presença do advogado é obrigatória por lei. Além disso, é o advogado que vai garantir que as condições sejam razoáveis e que seus direitos estejam protegidos.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "ANPP é só para infrações insignificantes."<br />
+<strong>Verdade:</strong> O ANPP se aplica a crimes com pena mínima inferior a 4 anos — o que inclui crimes com consequências bastante relevantes.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>O Acordo de Não Persecução Penal é uma das ferramentas mais inteligentes do direito penal moderno. Ele permite que pessoas que cometeram um erro — sem violência e sem envolvimento com organizações criminosas — possam resolver a situação sem o peso de um processo criminal e sem uma condenação que perseguiria por anos.</p>
+<p>Se você está sendo investigado e quer entender se o ANPP é possível no seu caso, a análise com um advogado criminalista é o primeiro e mais importante passo.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

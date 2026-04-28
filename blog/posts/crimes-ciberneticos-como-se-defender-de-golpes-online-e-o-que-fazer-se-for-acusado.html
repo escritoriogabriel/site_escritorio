@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimes Cibernéticos: Como Se Defender de Golpes Online e o Que Fazer se For Acusado | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Crimes Cibernéticos: Como Se Defender de Golpes Online e o Que Fazer se For Acusado</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>O Brasil é um dos países com maior incidência de crimes digitais no mundo. Golpes via PIX, clonagem de WhatsApp, invasão de contas bancárias, sextorsão, ameaças nas redes sociais — essas situações deixaram de ser exceção para se tornarem parte do cotidiano de milhares de brasileiros.</p>
+<p>Ao mesmo tempo, pessoas inocentes são acusadas de crimes que não cometeram no ambiente digital — muitas vezes por terem seus dados usados por criminosos. Se você é vítima ou réu, saber como a lei brasileira trata os crimes cibernéticos é fundamental para proteger seus direitos.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>Os crimes cibernéticos no Brasil são regulados principalmente por duas leis:</p>
+<ul>
+<li><strong>Lei nº 12.737/2012 (Lei Carolina Dieckmann):</strong> tipifica invasão de dispositivos informáticos, interrupção de serviços e falsificação de dados</li>
+<li><strong>Lei nº 14.155/2021:</strong> agravou as penas para crimes de fraude e estelionato praticados por meio eletrônico, especialmente via celular e internet</li>
+</ul>
+<p>Além dessas, o <strong>Código Penal</strong> já tipificava crimes como estelionato, ameaça, calúnia, difamação e injúria — que quando praticados online recebem as mesmas punições, e em alguns casos com agravantes.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de crime cibernético</th>
+<th style="text-align: left;">O que é</th>
+<th style="text-align: left;">Pena prevista</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Estelionato virtual (golpe do PIX, falsa venda)</td>
+<td style="text-align: left;">Obter vantagem enganando a vítima online</td>
+<td style="text-align: left;">1 a 5 anos + multa</td>
+</tr>
+<tr>
+<td style="text-align: left;">Invasão de celular ou computador</td>
+<td style="text-align: left;">Acessar dispositivo alheio sem autorização</td>
+<td style="text-align: left;">3 meses a 1 ano + multa</td>
+</tr>
+<tr>
+<td style="text-align: left;">Clonagem de WhatsApp</td>
+<td style="text-align: left;">Acesso não autorizado + estelionato nos contatos</td>
+<td style="text-align: left;">Cumulativo — pode passar de 5 anos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ameaça por mensagem</td>
+<td style="text-align: left;">Causar temor por escrito (inclusive redes sociais)</td>
+<td style="text-align: left;">1 a 6 meses + multa</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sextorsão</td>
+<td style="text-align: left;">Extorsão com ameaça de divulgar imagens íntimas</td>
+<td style="text-align: left;">4 a 10 anos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Divulgação de imagem íntima sem consentimento</td>
+<td style="text-align: left;">Crime autônomo (Lei 13.718/2018)</td>
+<td style="text-align: left;">1 a 5 anos + multa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Se você foi vítima: o que fazer imediatamente?</h2>
+<p>A primeira regra é: <strong>não apague nada</strong>. Cada print, mensagem, e-mail ou comprovante é uma prova que pode ser fundamental para responsabilizar o criminoso.</p>
+<p>Passos práticos:</p>
+<ul>
+<li><strong>Registre um boletim de ocorrência</strong> — hoje é possível fazer online em Santa Catarina pelo portal da Polícia Civil</li>
+<li><strong>Salve e imprima todas as evidências:</strong> prints de conversas, comprovantes de transferência, perfis falsos, e-mails recebidos</li>
+<li><strong>Certifique digitalmente as provas</strong> com um advogado — há formas jurídicas de preservar provas digitais com validade legal</li>
+<li><strong>Acione seu banco imediatamente</strong> em caso de golpe financeiro — quanto antes o banco for notificado, maiores as chances de estorno</li>
+<li><strong>Registre a ocorrência junto à plataforma</strong> onde o golpe ocorreu (Instagram, WhatsApp, Mercado Livre etc.)</li>
+<li><strong>Procure um advogado criminalista</strong> para ingressar com a ação penal e, se for o caso, com ação indenizatória cível</li>
+</ul>
+<hr />
+<h2>Se você foi acusado de um crime cibernético</h2>
+<p>Ser investigado ou indiciado por crime digital é uma situação séria que exige atenção imediata. Alguns pontos fundamentais:</p>
+<ul>
+<li><strong>Não preste depoimento sem advogado.</strong> Mesmo que você seja completamente inocente, declarações mal-formuladas podem ser usadas contra você.</li>
+<li><strong>Preserve seus dispositivos</strong> e não os formate ou restaure — isso pode ser interpretado como destruição de prova.</li>
+<li><strong>Consulte um advogado imediatamente</strong> para entender o que está sendo investigado e qual a melhor estratégia de defesa.</li>
+<li>É possível que seus dados tenham sido usados por terceiros — o que exige prova técnica de que você não foi o autor do crime.</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Crimes Cibernéticos</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Crimes cibernéticos são difíceis de provar e raramente resultam em condenação."<br />
+<strong>Verdade:</strong> A tecnologia avançou muito. IPs, metadados, logs de acesso e dados bancários permitem rastrear criminosos com precisão crescente.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu for vítima de golpe via PIX, nunca vou recuperar o dinheiro."<br />
+<strong>Verdade:</strong> Em muitos casos é possível reverter a transação. O Banco Central tem mecanismos de devolução, e ações judiciais têm logrado êxito em casos de fraude.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Ameaças por WhatsApp não são crime porque é 'só uma mensagem'."<br />
+<strong>Verdade:</strong> Ameaças digitais têm o mesmo peso legal que ameaças presenciais. O print é prova suficiente para um boletim de ocorrência e ação penal.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Usar um perfil falso nas redes sociais não é crime."<br />
+<strong>Verdade:</strong> Dependendo do uso, pode configurar estelionato, falsidade ideológica, calúnia ou outros crimes.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>Os crimes digitais são uma realidade crescente e a lei brasileira está cada vez mais preparada para combatê-los. Se você foi vítima, agir rápido é essencial. Se você foi acusado, silêncio e advogado são sua melhor defesa.</p>
+<p>Em qualquer dos dois casos, a orientação de um advogado especializado em crimes cibernéticos pode ser a diferença entre recuperar o prejuízo — ou evitar uma condenação injusta.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

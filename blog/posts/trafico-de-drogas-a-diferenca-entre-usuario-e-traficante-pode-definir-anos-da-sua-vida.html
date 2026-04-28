@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tráfico de Drogas: A Diferença Entre Usuário e Traficante Pode Definir Anos da Sua Vida | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Tráfico de Drogas: A Diferença Entre Usuário e Traficante Pode Definir Anos da Sua Vida</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Ser abordado pela polícia com substância ilegal é uma das situações mais angustiantes que alguém pode enfrentar. E a linha que separa ser tratado como usuário ou como traficante pode parecer tênue — mas tem consequências radicalmente diferentes para a sua vida.</p>
+<p>Enquanto o usuário não vai preso e passa por medidas socioeducativas, o traficante pode receber pena de <strong>5 a 15 anos de reclusão</strong>. Entender como a lei e os tribunais fazem essa distinção é fundamental — seja para quem usa drogas recreativamente, seja para quem está sendo investigado.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A <strong>Lei nº 11.343/2006 (Lei de Drogas)</strong> não estabelece uma quantidade mínima para diferenciar usuário de traficante. Isso fica a critério do juiz, que deve analisar o conjunto de circunstâncias do caso.</p>
+<p>O artigo 28 trata do usuário: <strong>não há pena de prisão</strong>. As consequências são advertência, prestação de serviços à comunidade e medida educativa.</p>
+<p>O artigo 33 trata do traficante: <strong>pena de 5 a 15 anos de reclusão</strong> e multa elevada. Não admite fiança e, em regra, não permite conversão de pena em medidas alternativas.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Critério analisado pelo juiz</th>
+<th style="text-align: left;">Indica uso próprio</th>
+<th style="text-align: left;">Indica tráfico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Quantidade da droga</td>
+<td style="text-align: left;">Pequena</td>
+<td style="text-align: left;">Grande</td>
+</tr>
+<tr>
+<td style="text-align: left;">Local onde foi encontrada</td>
+<td style="text-align: left;">Casa, bolso</td>
+<td style="text-align: left;">Ponto de venda, via pública</td>
+</tr>
+<tr>
+<td style="text-align: left;">Forma de acondicionamento</td>
+<td style="text-align: left;">Solta ou em embrulho simples</td>
+<td style="text-align: left;">Dividida, pesada, embalada para venda</td>
+</tr>
+<tr>
+<td style="text-align: left;">Presença de balança ou caderno de anotações</td>
+<td style="text-align: left;">❌</td>
+<td style="text-align: left;">✅</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dinheiro em espécie</td>
+<td style="text-align: left;">Pouco ou nenhum</td>
+<td style="text-align: left;">Muito, em notas miúdas</td>
+</tr>
+<tr>
+<td style="text-align: left;">Antecedentes criminais</td>
+<td style="text-align: left;">Sem passagem</td>
+<td style="text-align: left;">Com passagens por tráfico</td>
+</tr>
+<tr>
+<td style="text-align: left;">Testemunhos ou câmeras</td>
+<td style="text-align: left;">Nenhuma venda registrada</td>
+<td style="text-align: left;">Flagrante de venda</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>O que é tráfico privilegiado?</h2>
+<p>O <strong>tráfico privilegiado</strong> — previsto no §4º do art. 33 da Lei de Drogas — é uma das defesas mais importantes em casos de tráfico. Ele permite a <strong>redução da pena de 1/6 a 2/3</strong> quando o réu:</p>
+<ul>
+<li>É primário (sem condenação anterior)</li>
+<li>Tem bons antecedentes</li>
+<li>Não se dedica a atividades criminosas</li>
+<li>Não integra organização criminosa</li>
+</ul>
+<p>Com a aplicação do tráfico privilegiado, a pena pode cair para patamares que permitem o regime aberto ou semiaberto — uma diferença enorme na vida do condenado.</p>
+<hr />
+<h2>Quais são os principais argumentos de defesa?</h2>
+<p>Um bom advogado criminalista vai explorar todas as possibilidades, incluindo:</p>
+<ul>
+<li><strong>Desclassificação para porte para uso:</strong> argumentar que a droga era para consumo próprio com base nas circunstâncias do caso</li>
+<li><strong>Nulidade da abordagem policial:</strong> se a busca foi feita sem fundamento legal (sem flagrante, sem mandado, sem fundada suspeita documentada)</li>
+<li><strong>Aplicação do tráfico privilegiado:</strong> para réus primários sem envolvimento com organizações criminosas</li>
+<li><strong>Ilicitude das provas:</strong> provas obtidas de forma ilegal não podem ser usadas contra o réu</li>
+<li><strong>Ausência de dolo:</strong> em casos de transporte involuntário ou desconhecimento do conteúdo</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Tráfico de Drogas</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Se estava com pouca droga, não pode ser tráfico."<br />
+<strong>Verdade:</strong> A quantidade é um fator relevante, mas não é o único. Um grama de cocaína dividida em 10 porções com balança ao lado pode ser caracterizada como tráfico.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu confessar que era para uso próprio, serei tratado como usuário."<br />
+<strong>Verdade:</strong> A confissão importa, mas o juiz analisa o conjunto das circunstâncias. A confissão de uso próprio não elimina automaticamente o risco de condenação por tráfico.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Tráfico privilegiado é o mesmo que absolvição."<br />
+<strong>Verdade:</strong> Não. O tráfico privilegiado reduz a pena, mas não absolve. O réu ainda é condenado por tráfico, com as consequências que isso traz.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se a droga não era minha, não posso ser preso."<br />
+<strong>Verdade:</strong> Posse ou guarda de drogas, mesmo sem ser o proprietário, pode configurar crime. A defesa nesse caso exige provas robustas.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A linha entre usuário e traficante é mais complexa do que parece — e as consequências dessa classificação são enormes. Um advogado criminalista experiente pode fazer a diferença entre anos de prisão e a liberdade, explorando os elementos do caso para construir a defesa mais adequada.</p>
+<p>Se você ou alguém da sua família está envolvido em um caso de drogas, não enfrente isso sem orientação especializada.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

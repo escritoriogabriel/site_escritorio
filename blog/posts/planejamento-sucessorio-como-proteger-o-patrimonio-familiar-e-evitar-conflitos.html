@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento Sucessório: Como Proteger o Patrimônio Familiar e Evitar Conflitos | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Planejamento Sucessório: Como Proteger o Patrimônio Familiar e Evitar Conflitos</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Construir patrimônio ao longo da vida exige esforço, disciplina e tempo. Mas muita gente nunca pensa no que vai acontecer com tudo isso depois que partir. O resultado? Brigas entre herdeiros, inventários que duram anos, impostos altíssimos e, em muitos casos, a perda de parte do patrimônio que levou décadas para ser construído.</p>
+<p>O planejamento sucessório existe justamente para evitar esse cenário. Ele não é um assunto sombrio reservado para quem está doente ou velho — é uma das decisões financeiras e jurídicas mais inteligentes que uma pessoa pode tomar enquanto está em plena saúde e capacidade. Se você tem bens, família e quer proteger ambos, leia até o final.</p>
+<hr />
+<h2>O que é planejamento sucessório, de forma simples?</h2>
+<p>Planejamento sucessório é o conjunto de estratégias legais utilizadas em vida para organizar a transmissão do patrimônio de forma eficiente, econômica e harmoniosa após o falecimento — ou mesmo durante a vida, na forma de doações e reorganizações patrimoniais.</p>
+<p>O objetivo é triplo:</p>
+<ul>
+<li><strong>Proteger o patrimônio</strong> de conflitos, dívidas e disputas familiares</li>
+<li><strong>Reduzir custos</strong> com impostos, inventário e honorários</li>
+<li><strong>Garantir que sua vontade seja cumprida</strong>, e não a ordem fria da lei</li>
+</ul>
+<hr />
+<h2>As principais ferramentas do planejamento sucessório</h2>
+<p><strong>1. Testamento</strong></p>
+<p>É a forma mais conhecida. Permite que você defina para quem vão seus bens (dentro dos limites da legítima), reconheça filhos, nomeie tutores e deixe instruções sobre questões pessoais. Pode ser revisado e atualizado ao longo da vida.</p>
+<p><strong>2. Doação em vida com reserva de usufruto</strong></p>
+<p>Você transfere o bem (imóvel, quotas de empresa) para o herdeiro agora, mas mantém o direito de usar e usufruir dele enquanto viver. Ao morrer, o bem já está no nome do herdeiro — sem precisar de inventário para esse bem. Economiza tempo e impostos.</p>
+<p><strong>3. Holding familiar</strong></p>
+<p>Uma empresa é criada para concentrar o patrimônio da família (imóveis, investimentos). As quotas da empresa são distribuídas entre os herdeiros. Isso facilita a gestão, reduz impostos sobre transmissão e protege os bens de eventuais dívidas pessoais dos herdeiros.</p>
+<p><strong>4. Previdência privada (PGBL/VGBL)</strong></p>
+<p>Os planos de previdência privada não entram no inventário e podem ser designados diretamente ao beneficiário escolhido. São uma ferramenta eficiente para transferir recursos de forma rápida e com tributação reduzida.</p>
+<p><strong>5. Seguro de vida</strong></p>
+<p>Assim como a previdência, o seguro de vida tem pagamento direto ao beneficiário sem passar por inventário. É especialmente útil para garantir liquidez imediata à família.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Ferramenta</th>
+<th style="text-align: center;">Passa pelo inventário?</th>
+<th style="text-align: center;">Reduz impostos?</th>
+<th style="text-align: left;">Ideal para</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Testamento</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: center;">Parcialmente</td>
+<td style="text-align: left;">Definir a vontade do titular</td>
+</tr>
+<tr>
+<td style="text-align: left;">Doação com usufruto</td>
+<td style="text-align: center;">❌ Não</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: left;">Imóveis e bens imóveis</td>
+</tr>
+<tr>
+<td style="text-align: left;">Holding familiar</td>
+<td style="text-align: center;">❌ Não (as quotas podem)</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: left;">Grandes patrimônios</td>
+</tr>
+<tr>
+<td style="text-align: left;">Previdência privada</td>
+<td style="text-align: center;">❌ Não</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: left;">Transferência de recursos líquidos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Seguro de vida</td>
+<td style="text-align: center;">❌ Não</td>
+<td style="text-align: center;">✅ Sim</td>
+<td style="text-align: left;">Garantir renda imediata à família</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Por que o planejamento sucessório reduz impostos?</h2>
+<p>O inventário é tributado pelo <strong>ITCMD</strong> (Imposto sobre Transmissão Causa Mortis e Doação). Em Santa Catarina, a alíquota varia de 1% a 8% sobre o valor dos bens. Além disso, há as custas judiciais ou cartoriais e os honorários de advogado.</p>
+<p>Com um planejamento bem estruturado, parte dos bens já terá sido transferida em vida (com menor incidência tributária) ou não precisará passar pelo inventário. A economia pode ser expressiva — especialmente em patrimônios acima de R$ 500 mil.</p>
+<hr />
+<h2>Quando devo começar o planejamento sucessório?</h2>
+<p>A resposta honesta é: <strong>quanto antes, melhor</strong>. Não existe "cedo demais" quando o assunto é proteger o patrimônio construído com esforço. O planejamento é mais eficiente quando feito com tempo, tranquilidade e sem pressão de doença ou conflito familiar já instalado.</p>
+<p>Situações que tornam o planejamento ainda mais urgente:</p>
+<ul>
+<li>Você tem filhos de relacionamentos diferentes</li>
+<li>Tem um sócio na empresa e não há acordo de sócios claro</li>
+<li>Tem herdeiros com necessidades especiais que precisarão de cuidados contínuos</li>
+<li>Possui imóvel em nome de terceiros ou em situação irregular</li>
+<li>Há desentendimentos latentes entre os herdeiros</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Planejamento Sucessório</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Planejamento sucessório é só para quem tem muita riqueza."<br />
+<strong>Verdade:</strong> Qualquer pessoa com imóvel, carro, investimentos ou empresa se beneficia de um planejamento — independentemente do valor total.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Meus filhos vão se entender, não preciso planejar."<br />
+<strong>Verdade:</strong> As disputas mais amargas entre irmãos surgem exatamente após a morte dos pais. O planejamento elimina a ambiguidade antes que vire conflito.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Fazer doação em vida significa perder o controle dos bens."<br />
+<strong>Verdade:</strong> Com a reserva de usufruto, você continua usando, alugando e administrando o bem normalmente enquanto viver.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Inventário não custa tanto assim."<br />
+<strong>Verdade:</strong> Somando ITCMD, custas judiciais ou cartoriais e honorários, o custo do inventário pode representar de 10% a 20% do valor do patrimônio — dependendo do estado e das circunstâncias.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>O planejamento sucessório é, acima de tudo, um ato de amor pela família. É a decisão de não deixar aqueles que você ama numa situação de conflito, insegurança e custos desnecessários num momento já tão difícil quanto a perda de um ente querido.</p>
+<p>Cada família tem uma realidade única — e por isso o planejamento precisa ser personalizado. Um advogado especializado em direito das sucessões vai analisar seu patrimônio, sua composição familiar e seus objetivos para montar a estratégia mais eficiente para o seu caso.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca e Apreensão de Veículo: O Que Fazer Quando o Oficial de Justiça Chega | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Busca e Apreensão de Veículo: O Que Fazer Quando o Oficial de Justiça Chega</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Busca e Apreensão</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Você abre a porta e está lá: o oficial de justiça com um mandado de busca e apreensão do seu veículo. O coração dispara. O desespero bate. E, nesse momento, a maioria das pessoas não sabe absolutamente o que fazer — e acaba tomando decisões que pioram ainda mais a situação.</p>
+<p>A boa notícia é que ter um advogado acionado imediatamente pode mudar completamente o desfecho. Existem direitos do devedor que precisam ser respeitados, prazos que ainda podem ser aproveitados e argumentos jurídicos que, muitas vezes, conseguem suspender ou reverter a apreensão. Mas para isso, você precisa saber como agir nos primeiros minutos.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A busca e apreensão de veículo financiado é regulada pelo <strong>Decreto-Lei nº 911/1969</strong>, que trata da alienação fiduciária. Quando você financia um veículo, ele fica em nome do banco até a quitação — e o banco tem o direito de retomá-lo judicialmente se você atrasar as parcelas.</p>
+<p>O processo funciona assim: o banco entra com a ação na justiça, o juiz expede o mandado de busca e apreensão, e o oficial de justiça vai até o local onde o veículo se encontra para retirá-lo.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação no momento da chegada do oficial</th>
+<th style="text-align: left;">O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Oficial chegou mas o carro não está no local</td>
+<td style="text-align: left;">Não minta sobre o paradeiro — pode ser crime. Informe que vai acionar seu advogado</td>
+</tr>
+<tr>
+<td style="text-align: left;">Oficial chegou com o mandado em mãos</td>
+<td style="text-align: left;">Peça para ler o mandado na íntegra. Fotografe o documento</td>
+</tr>
+<tr>
+<td style="text-align: left;">Oficial não tem o mandado impresso</td>
+<td style="text-align: left;">Exija a apresentação do documento antes de qualquer ação</td>
+</tr>
+<tr>
+<td style="text-align: left;">Você quer entregar o carro mas quer um recibo</td>
+<td style="text-align: left;">Exija recibo detalhado com data, hora, estado do veículo e identificação do oficial</td>
+</tr>
+<tr>
+<td style="text-align: left;">Você acha que há irregularidade no mandado</td>
+<td style="text-align: left;">Não impeça fisicamente, mas ligue para um advogado imediatamente</td>
+</tr>
+<tr>
+<td style="text-align: left;">Você consegue pagar agora</td>
+<td style="text-align: left;">Informe ao oficial e acione um advogado para calcular a purgação da mora</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>O que o oficial de justiça pode e não pode fazer?</h2>
+<p>O oficial de justiça tem poderes limitados pela lei. Ele <strong>pode:</strong></p>
+<ul>
+<li>Retirar o veículo do local onde está, se estiver em via pública ou área de acesso comum</li>
+<li>Entrar em garagem de condomínio com autorização do síndico ou morador</li>
+<li>Registrar a ocorrência caso o veículo não seja encontrado</li>
+</ul>
+<p>Ele <strong>não pode:</strong></p>
+<ul>
+<li>Arrombar porta ou violentar o morador para acessar o veículo dentro de uma residência fechada (para isso, precisa de mandado judicial específico com autorização de arrombamento)</li>
+<li>Agredir, ameaçar ou humilhar o devedor</li>
+<li>Ignorar um pagamento feito no ato (purgação da mora)</li>
+<li>Pegar um veículo diferente do descrito no mandado</li>
+</ul>
+<hr />
+<h2>Você tem 5 dias para reagir — não perca esse prazo</h2>
+<p>Após a apreensão, abre-se um prazo de <strong>5 dias úteis</strong> para o devedor realizar a chamada <strong>purgação da mora</strong> — ou seja, pagar as parcelas em atraso e recuperar o veículo. Esse é um direito garantido pela legislação.</p>
+<p>Se esse prazo passar sem pagamento ou contestação, o banco pode consolidar a propriedade do veículo em seu nome e levá-lo a leilão.</p>
+<p>Acionar um advogado imediatamente após a apreensão é fundamental para aproveitar esse prazo.</p>
+<hr />
+<h2>Mitos e Verdades sobre Busca e Apreensão de Veículo</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Se o oficial chegou, não tem mais nada a fazer."<br />
+<strong>Verdade:</strong> Ainda há várias possibilidades: purgação da mora, contestação por nulidades, adimplemento substancial, revisão de contrato.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Posso impedir fisicamente a retirada do carro."<br />
+<strong>Verdade:</strong> Não. Impedir a ação do oficial pode configurar crime de desobediência. A contestação deve ser feita pela via jurídica, não física.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "O banco pode vir pegar o carro a qualquer hora e sem aviso."<br />
+<strong>Verdade:</strong> A apreensão só pode ser feita com mandado judicial expedido por um juiz. Não é ação direta do banco.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu esconder o carro, o processo para."<br />
+<strong>Verdade:</strong> Ocultar o bem pode configurar crime e agrava ainda mais sua situação jurídica.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A chegada do oficial de justiça não é o fim do caminho — é o início de uma janela de tempo curta, mas real, para reverter ou minimizar os danos. Saber seus direitos, manter a calma e acionar um advogado imediatamente são os três passos mais importantes que você pode dar nesse momento.</p>
+<p>Não espere o carro sair para agir. Cada minuto conta.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção no Brasil: Quais São as Etapas, os Requisitos e o Que Ninguém Te Conta | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Adoção no Brasil: Quais São as Etapas, os Requisitos e o Que Ninguém Te Conta</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>A adoção é um dos atos mais bonitos e transformadores que uma família pode viver. Mas também é um processo que gera muitas dúvidas, medos e expectativas — especialmente porque envolve burocracia, prazos e uma série de etapas que poucos conhecem de antemão.</p>
+<p>Muita gente desiste antes de começar por achar que é impossível, que vai demorar décadas, ou que só pessoas ricas conseguem adotar. Nada disso é verdade. Neste artigo, vamos explicar como funciona o processo de adoção no Brasil de forma clara e honesta — incluindo as partes difíceis que poucos falam.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A adoção no Brasil é regulada pelo <strong>Estatuto da Criança e do Adolescente (ECA)</strong> e pela <strong>Lei nº 12.010/2009</strong> (Lei Nacional da Adoção). Ela é irrevogável — uma vez concluída, o vínculo é definitivo e tem os mesmos efeitos jurídicos de uma filiação biológica: nome, herança, alimentos, afeto e todos os direitos.</p>
+<p>Para adotar, é necessário atender a alguns requisitos básicos:</p>
+<ul>
+<li>Ter no mínimo <strong>18 anos de idade</strong> (independentemente do estado civil)</li>
+<li>Ter pelo menos <strong>16 anos a mais</strong> do que a criança a ser adotada</li>
+<li>Ser aprovado nos estudos psicossociais realizados pela equipe técnica da Vara da Infância</li>
+<li>Estar inscrito no <strong>Cadastro Nacional de Adoção (CNA)</strong></li>
+<li>Cumprir o período de convivência (estágio de adaptação) com a criança antes da sentença final</li>
+</ul>
+<hr />
+<h2>As etapas do processo de adoção</h2>
+<p><strong>1. Decisão e preparação</strong><br />
+Antes de tudo, é fundamental que os pretendentes reflitam sobre suas expectativas, incluindo a faixa etária que estão dispostos a aceitar, se aceitam grupos de irmãos, crianças com deficiência ou de outras etnias. Quanto mais aberto o perfil, menor o tempo de espera.</p>
+<p><strong>2. Habilitação na Vara da Infância e Juventude</strong><br />
+Os candidatos apresentam documentos pessoais, comprovante de renda e residência e passam por entrevistas com assistentes sociais e psicólogos da equipe técnica do tribunal.</p>
+<p><strong>3. Curso de Preparação</strong><br />
+Obrigatório por lei. Os candidatos participam de grupos de estudo, palestras e encontros com famílias adotivas. É uma etapa enriquecedora e essencial.</p>
+<p><strong>4. Inscrição no Cadastro Nacional de Adoção</strong><br />
+Após aprovação, o nome dos candidatos é incluído no CNA. A partir daqui, aguarda-se o chamado.</p>
+<p><strong>5. Aproximação e estágio de convivência</strong><br />
+Quando uma criança compatível com o perfil é identificada, inicia-se o estágio de adaptação. Esse período varia conforme a criança e é acompanhado pela equipe técnica. Pode durar dias, semanas ou meses.</p>
+<p><strong>6. Sentença judicial</strong><br />
+Com o relatório positivo da equipe técnica, o juiz profere a sentença de adoção. A partir daí, a criança recebe nova certidão de nascimento com o nome dos pais adotivos — sem qualquer indicação de que foi adotada.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Etapa</th>
+<th style="text-align: left;">Responsável</th>
+<th style="text-align: left;">Tempo médio estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Habilitação e documentos</td>
+<td style="text-align: left;">Candidatos + tribunal</td>
+<td style="text-align: left;">3 a 6 meses</td>
+</tr>
+<tr>
+<td style="text-align: left;">Curso de preparação</td>
+<td style="text-align: left;">Vara da Infância</td>
+<td style="text-align: left;">1 a 3 meses</td>
+</tr>
+<tr>
+<td style="text-align: left;">Inscrição no CNA e espera</td>
+<td style="text-align: left;">Sistema nacional</td>
+<td style="text-align: left;">Variável (meses a anos)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Estágio de convivência</td>
+<td style="text-align: left;">Candidatos + criança</td>
+<td style="text-align: left;">30 a 90 dias (em média)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sentença e nova certidão</td>
+<td style="text-align: left;">Juiz</td>
+<td style="text-align: left;">Semanas após o relatório</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Qual é o perfil mais aguardado?</h2>
+<p>Essa é a parte que muitos candidatos não querem ouvir, mas precisa ser dita com honestidade: a maioria das crianças disponíveis para adoção no Brasil tem <strong>mais de 5 anos</strong>, são adolescentes, fazem parte de <strong>grupos de irmãos</strong> ou têm alguma condição de saúde.</p>
+<p>A demanda por bebês recém-nascidos é muito maior do que a oferta — e a espera pode ser de muitos anos. Por outro lado, candidatos que ampliam o perfil costumam ser chamados muito mais rapidamente.</p>
+<hr />
+<h2>Mitos e Verdades sobre Adoção</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Adoção particular (por fora do sistema) é mais rápida e segura."<br />
+<strong>Verdade:</strong> Adoção fora do sistema judicial é ilegal no Brasil e pode resultar em processo criminal. Toda adoção deve passar pelo Poder Judiciário.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Preciso ser rico para adotar."<br />
+<strong>Verdade:</strong> O processo de adoção é gratuito. O que se avalia é a capacidade de oferecer ambiente saudável, não riqueza financeira.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "A criança adotada pode ser devolvida se não der certo."<br />
+<strong>Verdade:</strong> A adoção é irrevogável. No entanto, durante o estágio de convivência — antes da sentença —, o processo pode ser interrompido. Após a sentença, não há devolução legal.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Casais homoafetivos não podem adotar."<br />
+<strong>Verdade:</strong> Podem. O STF reconhece o direito de casais homoafetivos à adoção, e os tribunais brasileiros têm deferido esses pedidos regularmente.</p>
+</li>
+</ul>
+<hr />
+<h2>Qual é o papel do advogado na adoção?</h2>
+<p>O acompanhamento jurídico não é obrigatório em todas as fases, mas é altamente recomendado. Um advogado pode:</p>
+<ul>
+<li>Orientar sobre a documentação necessária e evitar erros que atrasam o processo</li>
+<li>Acompanhar as audiências e interagir com a equipe técnica do tribunal</li>
+<li>Auxiliar em casos de adoção internacional</li>
+<li>Defender os direitos dos candidatos em caso de indeferimento ou demora injustificada</li>
+<li>Orientar sobre adoção de enteado (quando o padrasto ou madrasta quer adotar formalmente o filho do cônjuge)</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A adoção é um caminho longo, mas absolutamente possível e imensamente recompensador. Cada criança adotada é uma história de amor que começa com coragem e responsabilidade. E cada família que se abre para esse processo transforma não só a vida de uma criança — mas a própria vida.</p>
+<p>Se você está pensando em adotar ou quer entender melhor o processo, a orientação de um advogado especializado pode fazer toda a diferença desde o início.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

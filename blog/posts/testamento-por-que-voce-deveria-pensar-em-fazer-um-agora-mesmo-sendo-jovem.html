@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testamento: Por Que Você Deveria Pensar em Fazer Um Agora (Mesmo Sendo Jovem) | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Testamento: Por Que Você Deveria Pensar em Fazer Um Agora (Mesmo Sendo Jovem)</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Existe uma crença popular de que testamento é coisa de idoso, de rico, ou de quem está doente. Mas a realidade é bem diferente: <strong>qualquer pessoa maior de 16 anos pode — e em muitos casos deveria — ter um testamento</strong>.</p>
+<p>Pensa bem: você já se preocupou em fazer seguro para o carro, seguro de vida, ou guardar uma reserva de emergência. O testamento é exatamente isso: uma proteção preventiva para as pessoas que você ama. Ele não é um presságio de morte — é um ato de responsabilidade e cuidado. Neste artigo, vamos desmistificar o assunto e mostrar como funciona na prática.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O testamento é um documento legal em que uma pessoa expressa sua vontade sobre a distribuição dos seus bens e outros assuntos relevantes após a morte. No Brasil, ele é regulado pelo <strong>Código Civil</strong> e pode ser feito de três formas principais:</p>
+<p><strong>Testamento Público:</strong> Lavrado pelo próprio tabelião em cartório, na presença de duas testemunhas. É a forma mais segura e recomendada — fica arquivado no cartório e registrado no sistema nacional, com menor risco de perda ou contestação.</p>
+<p><strong>Testamento Cerrado:</strong> Escrito pelo testador (ou por outra pessoa a seu pedido) e entregue ao tabelião em envelope fechado. O tabelião aprova o ato, mas não conhece o conteúdo. Mais privacidade, mas exige mais cuidados para ter validade.</p>
+<p><strong>Testamento Particular:</strong> Escrito de próprio punho pelo testador, assinado e redigido na presença de pelo menos três testemunhas. É o mais simples, mas também o mais frágil juridicamente e o mais sujeito a contestações.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de Testamento</th>
+<th style="text-align: center;">Segurança jurídica</th>
+<th style="text-align: center;">Custo</th>
+<th style="text-align: center;">Privacidade</th>
+<th style="text-align: left;">Indicado para</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Público</td>
+<td style="text-align: center;">⭐⭐⭐ Alta</td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: center;">Baixa</td>
+<td style="text-align: left;">Maioria dos casos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cerrado</td>
+<td style="text-align: center;">⭐⭐ Média</td>
+<td style="text-align: center;">Médio</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Quem preza pelo sigilo total</td>
+</tr>
+<tr>
+<td style="text-align: left;">Particular</td>
+<td style="text-align: center;">⭐ Baixa</td>
+<td style="text-align: center;">Zero</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Situações de urgência extrema</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>O que pode ser definido no testamento?</h2>
+<p>Muita gente não sabe, mas o testamento vai muito além da divisão de bens materiais. Você pode usar o documento para:</p>
+<ul>
+<li>Destinar bens específicos a pessoas específicas (filhos, amigos, parceiro, instituição)</li>
+<li>Reconhecer formalmente um filho que não foi registrado</li>
+<li>Nomear um tutor para seus filhos menores</li>
+<li>Definir o responsável pelos seus animais de estimação</li>
+<li>Deixar instruções sobre seu funeral e disposição do corpo</li>
+<li>Fazer doações para instituições de caridade ou causas que você apoia</li>
+<li>Excluir herdeiros facultativos (sobrinhos, primos) da herança, se desejar</li>
+</ul>
+<hr />
+<h2>Existe um limite para o que posso deixar?</h2>
+<p>Sim. A lei brasileira protege os chamados <strong>herdeiros necessários</strong> — filhos, pais e cônjuge ou companheiro. Eles têm direito garantido a pelo menos <strong>50% do patrimônio</strong>, chamado de legítima. Essa parte não pode ser retirada deles por testamento.</p>
+<p>A outra metade é a <strong>parte disponível</strong>: você pode deixar para quem quiser, inclusive para alguém que não é da família.</p>
+<p>Se você não tem filhos, pais vivos ou cônjuge, pode testar <strong>100% do seu patrimônio</strong> para quem desejar.</p>
+<hr />
+<h2>E se eu não fizer testamento?</h2>
+<p>Sem testamento, a herança segue a <strong>ordem de vocação hereditária</strong> definida pela lei:</p>
+<ul>
+<li>1º lugar: filhos (e cônjuge/companheiro)</li>
+<li>2º lugar: pais (e cônjuge/companheiro)</li>
+<li>3º lugar: irmãos e sobrinhos</li>
+<li>4º lugar: tios e primos</li>
+<li>Último: o Estado (municípios, Distrito Federal ou União)</li>
+</ul>
+<p>Isso significa que seu melhor amigo, seu parceiro não formalizado, aquela pessoa que realmente cuidou de você — não recebem nada, a menos que você deixe expresso em testamento.</p>
+<hr />
+<h2>Mitos e Verdades sobre Testamento</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Testamento é só para quem tem muito dinheiro."<br />
+<strong>Verdade:</strong> Mesmo com bens modestos — um carro, uma conta poupança, um terreno —, o testamento evita brigas e simplifica o inventário para quem você ama.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu fizer testamento, não posso mudar depois."<br />
+<strong>Verdade:</strong> O testamento pode ser alterado ou revogado a qualquer momento enquanto você tiver capacidade legal. Muitas pessoas atualizam o testamento após grandes mudanças de vida.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Minha família vai se entender, não preciso de testamento."<br />
+<strong>Verdade:</strong> As brigas familiares mais intensas surgem exatamente após mortes — mesmo em famílias que pareciam completamente harmoniosas.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Fazer testamento dá muito trabalho e custa caro."<br />
+<strong>Verdade:</strong> O testamento público custa algumas centenas de reais e pode ser feito em uma única visita ao cartório. É um dos investimentos mais baratos e importantes que você pode fazer pela sua família.</p>
+</li>
+</ul>
+<hr />
+<h2>Dicas práticas antes de fazer seu testamento</h2>
+<ul>
+<li>Faça um <strong>inventário dos seus bens</strong> antes de ir ao cartório: imóveis, veículos, investimentos, contas, bens digitais</li>
+<li>Defina com clareza <strong>quem receberá o quê</strong> — quanto mais específico, menos margem para contestação</li>
+<li>Revise seu testamento sempre que houver mudanças importantes: casamento, filhos, divórcio, falecimento de herdeiros</li>
+<li>Informe a alguém de confiança que o testamento existe e onde está registrado</li>
+<li>Consulte um advogado antes de lavrar — ele vai garantir que o documento seja válido e reflita exatamente a sua vontade</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>Fazer um testamento não é pensar na morte — é pensar nas pessoas que você ama e no que vai acontecer com elas quando você não estiver mais aqui. É o ato mais generoso e responsável que você pode praticar em vida.</p>
+<p>Não deixe para depois. Um advogado especializado em direito sucessório pode te ajudar a estruturar o documento de forma clara, legal e à prova de conflitos.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

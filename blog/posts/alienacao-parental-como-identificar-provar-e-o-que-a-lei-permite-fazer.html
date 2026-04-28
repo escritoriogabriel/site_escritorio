@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alienação Parental: Como Identificar, Provar e o Que a Lei Permite Fazer | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Alienação Parental: Como Identificar, Provar e o Que a Lei Permite Fazer</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Depois de uma separação difícil, alguns pais passam a usar os filhos como instrumento de vingança contra o ex-parceiro. Às vezes de forma consciente, às vezes sem perceber. O resultado é sempre devastador: a criança cresce acreditando que um dos pais é ruim, perigoso ou ausente — quando na verdade foi afastada artificialmente.</p>
+<p>Isso tem nome, é reconhecido pela lei brasileira como crime e causa danos profundos ao desenvolvimento emocional dos filhos. Se você está vivendo essa situação — seja como pai ou mãe alienado, ou como alguém que suspeita estar praticando alienação sem querer —, este artigo é fundamental.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A <strong>Lei nº 12.318/2010</strong> define a alienação parental como qualquer interferência na formação psicológica da criança ou adolescente que prejudique o vínculo com o genitor ou com familiares próximos.</p>
+<p>Em 2022, a alienação parental foi <strong>incluída no Código Penal</strong> (Lei nº 14.340/2022), tornando-se crime com pena de <strong>3 meses a 3 anos de detenção</strong>, além das sanções cíveis já previstas.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Comportamento</th>
+<th style="text-align: left;">É alienação parental?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Falar mal do outro pai para o filho</td>
+<td style="text-align: left;">✅ Sim — mesmo que "seja verdade"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Impedir visitas sem motivo justo</td>
+<td style="text-align: left;">✅ Sim — viola direito de convivência</td>
+</tr>
+<tr>
+<td style="text-align: left;">Inventar que o pai/mãe fez algo grave ao filho</td>
+<td style="text-align: left;">✅ Sim — forma gravíssima de alienação</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mudar de cidade sem autorização judicial</td>
+<td style="text-align: left;">✅ Sim — pode configurar alienação</td>
+</tr>
+<tr>
+<td style="text-align: left;">Não informar sobre escola, saúde e atividades</td>
+<td style="text-align: left;">✅ Sim — omissão deliberada de informações</td>
+</tr>
+<tr>
+<td style="text-align: left;">Apresentar novo parceiro como "o verdadeiro pai/mãe"</td>
+<td style="text-align: left;">✅ Sim — usurpação de identidade parental</td>
+</tr>
+<tr>
+<td style="text-align: left;">Deixar de levar ao médico por irresponsabilidade</td>
+<td style="text-align: left;">❌ Não — é negligência, não alienação</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Como identificar a alienação parental?</h2>
+<p>Os sinais podem aparecer tanto no comportamento da criança quanto nas atitudes do genitor alienador:</p>
+<p><strong>Sinais na criança:</strong><br />
+- Recusa súbita e injustificada em visitar o outro pai<br />
+- Repetição de frases negativas sobre o outro genitor que claramente não são dela (vocabulário de adulto)<br />
+- Medo ou ansiedade exagerada antes das visitas<br />
+- Relatos de situações que nunca aconteceram ou que são impossíveis de terem ocorrido<br />
+- Sentimento de culpa ao demonstrar afeto pelo genitor alienado</p>
+<p><strong>Sinais no comportamento do genitor alienador:</strong><br />
+- Cancelar visitas com frequência usando pretextos variados<br />
+- Não repassar recados, presentes ou ligações do outro genitor<br />
+- Agendar atividades propositalmente nos dias de visita do outro<br />
+- Levar a criança ao médico, psicólogo ou delegacia com relatos fabricados<br />
+- Dificultar a comunicação da criança com o outro pai durante suas viagens ou períodos de convivência</p>
+<hr />
+<h2>Como provar a alienação parental?</h2>
+<p>A prova em casos de alienação parental é complexa e precisa ser cuidadosamente construída. Os meios mais utilizados são:</p>
+<ul>
+<li><strong>Registro em boletim de ocorrência</strong> sempre que uma visita for impedida</li>
+<li><strong>Captura de mensagens</strong> (WhatsApp, e-mail, SMS) que demonstrem a obstrução deliberada</li>
+<li><strong>Relatórios escolares e médicos</strong> que mostrem ausência ou afastamento do genitor alienado</li>
+<li><strong>Depoimento de testemunhas</strong> (familiares, professores, vizinhos, amigos da criança)</li>
+<li><strong>Avaliação psicológica</strong> realizada por profissional indicado pelo juízo — é a prova mais robusta</li>
+<li><strong>Diário de ocorrências</strong> com datas, horários e descrições de cada episódio</li>
+</ul>
+<hr />
+<h2>Quais são as medidas que o juiz pode tomar?</h2>
+<p>A lei prevê medidas progressivas, dependendo da gravidade:</p>
+<ul>
+<li>Advertência ao genitor alienador</li>
+<li>Ampliação do tempo de convivência do genitor alienado com o filho</li>
+<li>Multa (astreintes) por descumprimento de ordens judiciais</li>
+<li>Inversão da guarda — o filho passa a morar com o genitor alienado</li>
+<li>Suspensão da guarda</li>
+<li><strong>Prisão do genitor alienador</strong> (com a inclusão no Código Penal)</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Alienação Parental</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Só a mãe pratica alienação parental."<br />
+<strong>Verdade:</strong> Qualquer genitor — pai ou mãe — pode praticar alienação. O que define é o comportamento, não o gênero.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se a criança não quer ver o pai, é porque algo de errado aconteceu."<br />
+<strong>Verdade:</strong> A rejeição pode ser plantada e cultivada pelo genitor alienador. A avaliação psicológica é fundamental para distinguir.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Falar mal do ex para o filho não tem consequência legal."<br />
+<strong>Verdade:</strong> Tem. Dependendo da frequência e do impacto, pode ser enquadrado como alienação parental e até como crime.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "A alienação parental só prejudica quem não vê o filho."<br />
+<strong>Verdade:</strong> Quem mais sofre é a criança. Os danos emocionais da alienação parental podem perdurar por toda a vida adulta.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A alienação parental é uma das formas mais cruéis de violência que uma criança pode sofrer — porque parte de quem deveria amá-la e protegê-la. Se você está sendo afastado do seu filho de forma injusta, não normalize essa situação e não espere o problema se resolver sozinho.</p>
+<p>A lei está do seu lado. O que você precisa é de orientação jurídica especializada para reunir as provas certas e acionar os mecanismos legais no momento certo.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimes de Trânsito: Embriaguez, Acidente e Suspensão da CNH — Conheça Seus Direitos | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Crimes de Trânsito: Embriaguez, Acidente e Suspensão da CNH — Conheça Seus Direitos</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Acidentes de trânsito acontecem todos os dias — e nem sempre a pessoa envolvida entende que pode estar cometendo um crime. Dirigir embriagado, causar lesões graves ou morte no trânsito, rachar com outro carro ou fugir do local do acidente: todas essas situações têm consequências penais que muita gente subestima.</p>
+<p>Se você foi parado numa blitz, está sendo investigado por um acidente ou perdeu a carteira de habilitação por decisão judicial, entender seus direitos pode mudar muito o rumo das coisas.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>Os crimes de trânsito são regulados principalmente pelo <strong>Código de Trânsito Brasileiro (Lei nº 9.503/1997)</strong> — especificamente pelos artigos 291 a 312. Diferentemente da maioria dos crimes, no trânsito muitas infrações são <strong>culposas</strong> — ou seja, não há intenção de causar dano, mas há negligência, imprudência ou imperícia.</p>
+<p>Isso é relevante porque crimes culposos têm penas menores e permitem mais alternativas à prisão. Mas existem exceções graves.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Crime</th>
+<th style="text-align: left;">Pena mínima</th>
+<th style="text-align: left;">Pena máxima</th>
+<th style="text-align: left;">Permite alternativa à prisão?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Homicídio culposo no trânsito</td>
+<td style="text-align: left;">2 anos</td>
+<td style="text-align: left;">4 anos</td>
+<td style="text-align: left;">✅ Sim (suspensão de pena)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Homicídio culposo com agravantes (embriaguez)</td>
+<td style="text-align: left;">2 anos</td>
+<td style="text-align: left;">4 anos + 1/3 a 1/2</td>
+<td style="text-align: left;">⚠️ Depende</td>
+</tr>
+<tr>
+<td style="text-align: left;">Lesão corporal culposa no trânsito</td>
+<td style="text-align: left;">6 meses</td>
+<td style="text-align: left;">2 anos</td>
+<td style="text-align: left;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Embriaguez ao volante</td>
+<td style="text-align: left;">6 meses</td>
+<td style="text-align: left;">3 anos</td>
+<td style="text-align: left;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Racha (participação em competição proibida)</td>
+<td style="text-align: left;">6 meses</td>
+<td style="text-align: left;">3 anos</td>
+<td style="text-align: left;">✅ Sim</td>
+</tr>
+<tr>
+<td style="text-align: left;">Racha com resultado morte</td>
+<td style="text-align: left;">5 anos</td>
+<td style="text-align: left;">10 anos</td>
+<td style="text-align: left;">❌ Não</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fuga do local do acidente</td>
+<td style="text-align: left;">6 meses</td>
+<td style="text-align: left;">3 anos</td>
+<td style="text-align: left;">✅ Sim</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Embriaguez ao volante: o que acontece na prática?</h2>
+<p>Dirigir com teor alcoólico acima de <strong>0,33 mg/L de ar expelido</strong> (ou 0,6 g/L no sangue) é crime — não apenas infração administrativa. As consequências são:</p>
+<ul>
+<li><strong>Autuação e detenção</strong> no local da blitz</li>
+<li><strong>Retenção do veículo</strong> até que um condutor habilitado e sóbrio o assuma</li>
+<li><strong>Suspensão ou cassação da CNH</strong></li>
+<li><strong>Processo criminal</strong> com pena de 6 meses a 3 anos + multa + suspensão da CNH</li>
+</ul>
+<p>Se a embriaguez envolver acidente com vítima, as penas são agravadas consideravelmente.</p>
+<p><strong>O motorista é obrigado a fazer o bafômetro?</strong><br />
+Não. O STJ consolidou entendimento de que a recusa ao bafômetro é permitida. No entanto, a recusa pode ser usada como indício e outros meios de prova (comportamento, câmeras, testemunhas) podem ser usados.</p>
+<hr />
+<h2>Homicídio culposo no trânsito: o que acontece?</h2>
+<p>Quando alguém morre num acidente de trânsito por culpa do motorista, ele pode ser indiciado por <strong>homicídio culposo no trânsito</strong>. As penas são menores do que o homicídio doloso (intencional), mas ainda assim impactantes.</p>
+<p>Agravantes que aumentam a pena:</p>
+<ul>
+<li>Dirigir sob efeito de álcool ou drogas</li>
+<li>Excesso de velocidade</li>
+<li>Disputar racha</li>
+<li>Não possuir habilitação</li>
+<li>Fugir do local do acidente sem prestar socorro</li>
+</ul>
+<p>Se o motorista prestou socorro imediatamente e não havia embriaguez nem excesso de velocidade, é possível pleitear a <strong>suspensão condicional da pena (sursis)</strong> — evitando a prisão.</p>
+<hr />
+<h2>Como funciona a suspensão ou cassação da CNH por crime?</h2>
+<p>A suspensão da CNH pode ser imposta como pena principal ou acessória em crimes de trânsito. O prazo varia de 2 meses a 5 anos. Em casos mais graves, pode ser determinada a <strong>cassação</strong> — que impede a obtenção de nova habilitação pelo prazo fixado.</p>
+<p>A defesa pode questionar a proporcionalidade da suspensão, especialmente quando a CNH é instrumento de trabalho (motoristas profissionais, entregadores, taxistas).</p>
+<hr />
+<h2>Mitos e Verdades sobre Crimes de Trânsito</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Se foi acidente sem intenção, não é crime."<br />
+<strong>Verdade:</strong> O crime culposo não exige intenção. Negligência, imprudência ou imperícia já são suficientes para configurar o crime.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Recusar o bafômetro me livra de qualquer processo."<br />
+<strong>Verdade:</strong> A recusa evita a prova técnica, mas não elimina outras provas. Câmeras, testemunhas e comportamento do condutor podem fundamentar o indiciamento.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Paguei o conserto do carro da vítima, então estou quite."<br />
+<strong>Verdade:</strong> O acordo civil não extingue a responsabilidade criminal. As esferas são independentes.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Crimes de trânsito sempre resultam em prisão."<br />
+<strong>Verdade:</strong> A maioria dos crimes de trânsito culposos admite alternativas à prisão: suspensão condicional da pena, prestação de serviços à comunidade, multa. A prisão efetiva é exceção.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>Crimes de trânsito são muito mais comuns do que as pessoas imaginam — e muitos motoristas só descobrem que cometeram um crime depois de receber a intimação do inquérito policial. Quanto antes você buscar orientação jurídica, mais ferramentas o advogado terá para construir uma defesa eficaz.</p>
+<p>Se você se envolveu em um acidente grave, foi preso em blitz ou está com a CNH suspensa por decisão judicial, não enfrente isso sozinho.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

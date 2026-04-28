@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fui Preso: O Que Fazer nas Primeiras Horas e Quais São Seus Direitos | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Fui Preso: O Que Fazer nas Primeiras Horas e Quais São Seus Direitos</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Ser abordado e preso pela polícia é uma das situações mais assustadoras que alguém pode vivenciar. O desespero é natural — mas é exatamente nesse momento que as decisões erradas podem comprometer toda a sua defesa.</p>
+<p>A maioria das pessoas presas não sabe que tem direitos que precisam ser exercidos imediatamente. E muitas acabam se prejudicando por falar demais, assinar documentos sem entender ou simplesmente não chamar um advogado a tempo. Este artigo pode fazer uma diferença enorme na sua vida ou na vida de alguém que você conhece.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A Constituição Federal garante uma série de direitos fundamentais a qualquer pessoa presa — independentemente do crime que lhe é imputado. Esses direitos existem justamente para proteger o cidadão do abuso de poder e garantir um julgamento justo.</p>
+<p>São direitos que entram em vigor <strong>no exato momento da prisão</strong>:</p>
+<ul>
+<li>Ser informado dos motivos da prisão</li>
+<li>Permanecer em silêncio (e isso não pode ser interpretado contra você)</li>
+<li>Ser assistido por um advogado imediatamente</li>
+<li>Comunicar sua prisão à família ou pessoa de confiança</li>
+<li>Não ser submetido a tortura, maus-tratos ou humilhação</li>
+<li>Ser apresentado à autoridade judicial em até 24 horas (audiência de custódia)</li>
+</ul>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação</th>
+<th style="text-align: left;">O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Policial pede para você falar o que aconteceu</td>
+<td style="text-align: left;">Exercer o direito ao silêncio — só fale com advogado presente</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pedem para você assinar um documento</td>
+<td style="text-align: left;">Não assine nada sem que um advogado tenha lido e orientado</td>
+</tr>
+<tr>
+<td style="text-align: left;">Não deixam você ligar para a família</td>
+<td style="text-align: left;">Exija o direito — isso é garantido pela Constituição</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sofre agressão ou ameaça durante a prisão</td>
+<td style="text-align: left;">Memorize detalhes: horário, local, quem fez — para relatar ao advogado</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dizem que é "só para esclarecer"</td>
+<td style="text-align: left;">Não existe "esclarecer" sem advogado. Você pode ser preso ali mesmo</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pedem que você colabore para "diminuir a pena"</td>
+<td style="text-align: left;">Jamais faça qualquer acordo sem orientação jurídica</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>O direito ao silêncio: use-o sem culpa</h2>
+<p>O direito ao silêncio está previsto no artigo 5º da Constituição Federal e é uma das proteções mais importantes que você tem. Ele significa que você <strong>não é obrigado a produzir provas contra si mesmo</strong>.</p>
+<p>Você pode — e deve — dizer apenas o seguinte: <em>"Quero exercer meu direito ao silêncio e falar apenas na presença do meu advogado."</em></p>
+<p>Nada do que você disser espontaneamente à polícia deixa de existir depois. Tudo pode ser usado como prova. Por isso, o silêncio não é sinal de culpa — é inteligência jurídica.</p>
+<hr />
+<h2>O que acontece após a prisão em flagrante?</h2>
+<p>Após ser preso em flagrante, você deve ser conduzido à delegacia, onde o delegado lavrará o auto de prisão em flagrante. Em seguida, em até <strong>24 horas</strong>, você deve ser apresentado a um juiz na chamada <strong>audiência de custódia</strong>.</p>
+<p>Nessa audiência, o juiz vai decidir:</p>
+<ul>
+<li>Se você é liberado com ou sem fiança</li>
+<li>Se responde ao processo em liberdade com medidas cautelares (tornozeleira, proibição de sair do estado etc.)</li>
+<li>Se vai para a prisão preventiva</li>
+</ul>
+<p>A presença de um advogado nessa audiência é fundamental. Ela pode ser a diferença entre ir para casa ou para a cadeia.</p>
+<hr />
+<h2>O papel do advogado nas primeiras horas</h2>
+<p>Nas primeiras horas após uma prisão, o advogado é o bem mais valioso que você pode ter. Ele vai:</p>
+<ul>
+<li>Garantir que seus direitos não estejam sendo violados na delegacia</li>
+<li>Orientar você sobre o que dizer (ou não dizer) antes da audiência de custódia</li>
+<li>Analisar o auto de prisão em flagrante e identificar possíveis nulidades</li>
+<li>Preparar os argumentos para a audiência de custódia</li>
+<li>Contatar sua família e mantê-la informada</li>
+</ul>
+<p>Se você não tem advogado particular, tem direito à <strong>Defensoria Pública</strong> — mas ela pode não chegar tão rápido quanto a situação exige.</p>
+<hr />
+<h2>Mitos e Verdades sobre Prisão</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Se eu falar tudo e colaborar, vou ser solto mais rápido."<br />
+<strong>Verdade:</strong> Colaborar sem orientação jurídica pode piorar sua situação. Qualquer colaboração deve ser feita com estratégia e acompanhamento de advogado.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Só culpado exercita o direito ao silêncio."<br />
+<strong>Verdade:</strong> O direito ao silêncio é constitucional e foi criado exatamente para proteger inocentes de confissões forçadas ou induzidas.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Posso assinar o boletim de ocorrência sem ler, é só formalidade."<br />
+<strong>Verdade:</strong> Qualquer documento assinado numa delegacia tem valor legal. Nunca assine sem ler e sem orientação.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu não fiz nada, não preciso de advogado."<br />
+<strong>Verdade:</strong> Inocentes precisam de advogados tanto quanto — ou até mais — do que culpados. A defesa técnica é o que garante que a verdade seja apurada corretamente.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>Ninguém planeja ser preso. Mas saber o que fazer nesse momento pode mudar completamente o desfecho da situação. O direito ao silêncio, o direito ao advogado e o direito à audiência de custódia existem para proteger você — e precisam ser exercidos imediatamente.</p>
+<p>Se você ou alguém próximo foi preso agora, não perca tempo. Cada hora conta.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

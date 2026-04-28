@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressão de Regime: Como Funciona o Caminho da Prisão para a Liberdade | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Progressão de Regime: Como Funciona o Caminho da Prisão para a Liberdade</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito Criminal</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Quando um familiar é condenado, a primeira pergunta é: "quando ele sai?" A resposta raramente é simples — mas existe um caminho legal e estruturado para que condenados cumpram suas penas de forma progressiva, passando por regimes menos restritivos até alcançar a liberdade.</p>
+<p>Esse caminho se chama <strong>progressão de regime</strong> — e ele não acontece automaticamente. Precisa ser solicitado, demonstrado e fundamentado. Muitos condenados ficam mais tempo do que o necessário atrás das grades simplesmente porque ninguém acompanhou sua execução penal de forma adequada. Este artigo explica como funciona e o que você pode fazer.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A <strong>Lei de Execução Penal (Lei nº 7.210/1984)</strong> e o <strong>Código Penal</strong> estabelecem que as penas privativas de liberdade devem ser cumpridas de forma progressiva — iniciando no regime mais severo e avançando para regimes menos restritivos conforme o condenado demonstra mérito.</p>
+<p>Os três regimes são:</p>
+<ul>
+<li><strong>Regime Fechado:</strong> cumprido em penitenciária, sem saídas. Para condenações mais graves.</li>
+<li><strong>Regime Semiaberto:</strong> cumprido em colônia agrícola, industrial ou similar. Permite trabalho externo e saídas autorizadas.</li>
+<li><strong>Regime Aberto:</strong> cumprido em casa de albergado. O condenado trabalha ou estuda durante o dia e recolhe à noite e nos fins de semana.</li>
+</ul>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de crime</th>
+<th style="text-align: left;">Fração mínima para progredir</th>
+<th style="text-align: left;">Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Crime comum (réu primário)</td>
+<td style="text-align: left;">1/6 da pena</td>
+<td style="text-align: left;">Regra geral</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crime hediondo ou equiparado (réu primário)</td>
+<td style="text-align: left;">40% da pena</td>
+<td style="text-align: left;">Lei 8.072/1990 com alterações</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crime hediondo com resultado morte (primário)</td>
+<td style="text-align: left;">50% da pena</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crime hediondo (reincidente)</td>
+<td style="text-align: left;">60% da pena</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Crime hediondo com resultado morte (reincidente)</td>
+<td style="text-align: left;">70% da pena</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Quais são os requisitos para a progressão?</h2>
+<p>Para progredir de um regime para outro, o condenado precisa preencher <strong>dois tipos de requisitos</strong>:</p>
+<p><strong>Requisito Objetivo (tempo):</strong><br />
+Cumprir a fração mínima da pena no regime atual, conforme a tabela acima.</p>
+<p><strong>Requisito Subjetivo (comportamento):</strong><br />
+Apresentar bom comportamento carcerário, comprovado por atestado emitido pelo diretor do estabelecimento. Isso inclui: não ter sofrido sanções disciplinares recentes, demonstrar disciplina, respeito e participação em atividades de ressocialização.</p>
+<p>Desde 2021, a lei passou a exigir também a <strong>ausência de sanção disciplinar nos últimos 12 meses</strong> para os crimes mais graves.</p>
+<hr />
+<h2>Como funciona o processo de progressão na prática?</h2>
+<p>A progressão não é automática. É necessário:</p>
+<ol>
+<li><strong>Verificar se os requisitos estão preenchidos</strong> — contagem de tempo e situação disciplinar</li>
+<li><strong>Solicitar o atestado de conduta carcerária</strong> junto à direção do presídio</li>
+<li><strong>Protocolar o pedido de progressão</strong> na Vara de Execuções Penais</li>
+<li><strong>O juiz analisa o pedido</strong>, pode determinar exame criminológico (em alguns casos) e decide</li>
+<li><strong>Com a progressão deferida</strong>, o condenado é transferido para o regime menos restritivo</li>
+</ol>
+<p>O papel do advogado é fundamental para garantir que o pedido seja feito no momento correto, com a documentação completa e os argumentos adequados.</p>
+<hr />
+<h2>O que é o exame criminológico e quando é exigido?</h2>
+<p>O <strong>exame criminológico</strong> é uma avaliação psicossocial do condenado realizada por equipe técnica do presídio. Ele pode ser determinado pelo juiz — especialmente em crimes hediondos ou quando há histórico de violência grave — para avaliar se o condenado representa risco à sociedade.</p>
+<p>Embora não seja obrigatório em todos os casos, sua exigência precisa ser fundamentada pelo juiz. Decisões que exigem o exame sem justificativa adequada podem ser contestadas.</p>
+<hr />
+<h2>Mitos e Verdades sobre Progressão de Regime</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Quem cumpriu a fração da pena é solto automaticamente."<br />
+<strong>Verdade:</strong> Não existe progressão automática. É necessário peticionar ao juiz e aguardar a decisão.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Condenado por crime hediondo não tem direito à progressão."<br />
+<strong>Verdade:</strong> Tem sim. A diferença é que o tempo mínimo é maior. A vedação total à progressão foi declarada inconstitucional pelo STF.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Uma infração disciplinar na cadeia cancela para sempre o direito à progressão."<br />
+<strong>Verdade:</strong> Não. Ela pode atrasar o pedido, mas não impede definitivamente. Após um período de bom comportamento, o pedido pode ser renovado.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Sem advogado, o condenado não consegue progressão."<br />
+<strong>Verdade:</strong> Tecnicamente, a Defensoria Pública pode fazer o pedido. Mas a atuação de um advogado particular com atenção dedicada ao caso aumenta significativamente as chances de sucesso e agilidade.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A progressão de regime é um direito do condenado — não um favor do sistema. Ela existe para permitir a ressocialização gradual e humanizar o cumprimento da pena. Mas para que esse direito seja exercido de forma eficaz, é fundamental ter acompanhamento jurídico que monitore os prazos, a situação disciplinar e faça os pedidos no momento certo.</p>
+<p>Se você tem um familiar preso e quer entender em que fase da pena ele está e quais direitos já podem ser exercidos, um advogado especializado em execução penal pode fazer essa análise de forma rápida.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>
