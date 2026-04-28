@@ -492,7 +492,7 @@ nav {
     font-weight: 700;
     color: var(--accent-gold);
     display: block;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 8px;
 }
 
@@ -502,7 +502,7 @@ nav {
     font-weight: 700;
     color: var(--accent-gold);
     display: block;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 8px;
 }
 
@@ -952,6 +952,11 @@ footer {
     transform: translateY(0);
 }
 
+@media (max-width: 900px) {
+        .whatsapp-bubble.show { font-size:0.8rem;}
+        ::after {font-size:1rem;}
+    }
+
 .whatsapp-bubble::after {
     content: '';
     position: absolute;
@@ -1059,7 +1064,7 @@ footer {
     }
 
     @media (max-width: 480px) {
-        .social-proof-grid { grid-template-columns: 1fr; }
+        .social-proof-grid { grid-template-columns: 1fr; gap:40px; }
         .hero-ctas .btn-primary, .hero-ctas .btn-secondary { width: 100%; justify-content: center; }
     }
     </style>
@@ -1120,20 +1125,16 @@ footer {
     <section class="social-proof">
         <div class="social-proof-grid">
             <div class="proof-item">
-                <span class="proof-number">+500</span>
-                <span class="proof-label">Clientes atendidos em todo o país</span>
+                <span class="proof-number">CONSULTORIA</br>PREVENTIVA</span>
+                <span class="proof-label">Diminua riscos e evite processos judiciais.</span>
             </div>
             <div class="proof-item">
-                <span class="atendimentoimediato">IMEDIATO</span>
-                <span class="proof-label">Tempo médio de resposta inicial</span>
+                <span class="atendimentoimediato">ACOMPANHAMENTO</br>PROCESSUAL</span>
+                <span class="proof-label">Representação em processos do início ao fim.</span>
             </div>
             <div class="proof-item">
-                <span class="proof-number">100%</span>
-                <span class="proof-label">Transparência em cada etapa</span>
-            </div>
-            <div class="proof-item">
-                <span class="proof-number">GRATUITO</span>
-                <span class="proof-label">Análise inicial do seu caso — sem compromisso</span>
+                <span class="proof-number">SOLUÇÕES</br>EXTRAJUDICIAIS</span>
+                <span class="proof-label">Resolução de conflitos através de negociação e acordos, evitando custos e demora em processo judicial.</span>
             </div>
         </div>
     </section>
@@ -1421,7 +1422,7 @@ footer {
 
     <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
-        <div class="whatsapp-bubble" id="whatsappBubble">Um AdvogadoO Advogado acabou de ficar online no WhatsApp!</div>
+        <div class="whatsapp-bubble" id="whatsappBubble">Um Advogado acabou de ficar online no WhatsApp!</div>
     </a>
 
     <script src="assets/blog-loader.js"></script>
