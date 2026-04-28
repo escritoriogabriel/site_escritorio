@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direito Criminal | Advogado Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .page-header { margin-bottom: 50px; text-align: center; }
+        .page-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section { font-size: 1.15rem; color: #333; }
+        .content-section h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .content-section h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .content-section p { margin-bottom: 25px; }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--accent);
+        }
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .page-header h1 { font-size: 2rem; }
+            .content-section { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <nav>
+            <a href="index.html" style="text-decoration: none; color: var(--primary); font-weight: 600; margin-right: 20px;">Início</a>
+            <a href="blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <a href="index.html#servicos" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para Áreas de Atuação</a>       
+        
+        <div class="page-header">
+            <h1>Direito Criminal</h1>
+            <p>Defesa técnica, ágil e estratégica para garantir sua liberdade e o respeito aos seus direitos fundamentais.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>O que abrange esta área?</h2>
+            <p>O Direito Criminal (ou Penal) é a área que lida com as situações mais críticas da vida de um cidadão. Nossa atuação é focada em garantir que ninguém seja punido injustamente e que todos os procedimentos legais sejam seguidos à risca, protegendo a liberdade e a dignidade do indivíduo perante o Estado.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-gavel"></i>
+                    <h4>Defesa em Processos</h4>
+                    <p>Acompanhamento completo desde o inquérito policial até as instâncias superiores do tribunal.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-unlock-alt"></i>
+                    <h4>Liberdade Provisória</h4>
+                    <p>Pedidos de revogação de prisão, relaxamento de flagrante e Habeas Corpus para garantir o direito de responder em liberdade.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Acordos Penais</h4>
+                    <p>Negociação de Acordos de Não Persecução Penal (ANPP) para resolver casos de forma rápida e sem processo.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Vítimas de Crimes</h4>
+                    <p>Assistência de acusação para garantir que a justiça seja feita e os direitos da vítima sejam preservados.</p>
+                </div>
+            </div>
+
+            <h2>Como posso ajudar?</h2>
+            <p>Em um momento de acusação criminal, o tempo é o seu maior inimigo. Eu atuo de forma imediata para analisar as provas, identificar falhas no processo e construir uma defesa sólida. Meu objetivo é garantir que você tenha voz e que sua versão dos fatos seja ouvida e respeitada.</p>
+
+            <h2>Principais cenários de atuação</h2>
+            <ul>
+                <li><strong>Audiência de Custódia:</strong> Atendimento urgente nas primeiras 24 horas após uma prisão para buscar a liberdade imediata.</li>
+                <li><strong>Crimes de Trânsito:</strong> Defesa em casos de embriaguez ao volante, acidentes ou suspensão da CNH.</li>
+                <li><strong>Crimes Cibernéticos:</strong> Atuação em casos de golpes online, invasão de dispositivos ou crimes contra a honra na internet.</li>
+                <li><strong>Lei Maria da Penha:</strong> Defesa técnica e acompanhamento em medidas protetivas e processos de violência doméstica.</li>
+            </ul>
+
+            <blockquote>
+                "A defesa criminal não é sobre defender o crime, mas sobre defender a lei, a justiça e os direitos que todo ser humano possui, independente da acusação."
+            </blockquote>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Precisa de uma defesa técnica e urgente?</h2>
+            <p>Não responda a nenhum questionamento sem a presença de um advogado. Fale conosco agora mesmo.</p>
+            <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento especializado em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

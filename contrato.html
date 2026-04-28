@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratos e Negócios | Advogado Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .page-header { margin-bottom: 50px; text-align: center; }
+        .page-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-section { font-size: 1.15rem; color: #333; }
+        .content-section h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .content-section h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .content-section p { margin-bottom: 25px; }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--accent);
+        }
+        .feature-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .page-header h1 { font-size: 2rem; }
+            .content-section { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <nav>
+            <a href="index.html" style="text-decoration: none; color: var(--primary); font-weight: 600; margin-right: 20px;">Início</a>
+            <a href="blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <a href="index.html#servicos" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para Áreas de Atuação</a>       
+        
+        <div class="page-header">
+            <h1>Contratos e Negócios</h1>
+            <p>Segurança jurídica personalizada para proteger seus acordos, evitar prejuízos e garantir tranquilidade em seus negócios.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>O que abrange esta área?</h2>
+            <p>Um contrato bem feito é o melhor seguro que você pode ter. Nossa atuação foca em criar documentos claros, seguros e personalizados para a sua realidade, evitando que "letras miúdas" ou cláusulas mal escritas se tornem problemas caros e demorados no futuro.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-pen-nib"></i>
+                    <h4>Elaboração de Contratos</h4>
+                    <p>Criação de documentos do zero, focados na sua proteção e nos objetivos específicos do seu negócio.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-search"></i>
+                    <h4>Análise e Revisão</h4>
+                    <p>Leitura técnica minuciosa de contratos que te enviaram, identificando riscos e sugerindo melhorias.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-signature"></i>
+                    <h4>Contratos Imobiliários</h4>
+                    <p>Segurança total em compra, venda ou aluguel de imóveis, protegendo seu maior patrimônio.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Rescisão e Distrato</h4>
+                    <p>Orientação segura para encerrar contratos sem sofrer multas abusivas ou prejuízos injustos.</p>
+                </div>
+            </div>
+
+            <h2>Como posso ajudar?</h2>
+            <p>Muitas pessoas usam modelos prontos da internet que não protegem nada. Eu atuo para entender exatamente o que você precisa e colocar isso no papel de forma que a lei te proteja de verdade. Seja para um negócio pessoal ou para sua empresa, o foco é sempre a prevenção de conflitos.</p>
+
+            <h2>Principais cenários de atuação</h2>
+            <ul>
+                <li><strong>Compra e Venda:</strong> Garantia de que o bem será entregue e o pagamento será feito conforme o combinado.</li>
+                <li><strong>Prestação de Serviços:</strong> Definição clara de prazos, valores e responsabilidades para evitar discussões futuras.</li>
+                <li><strong>Contratos de Aluguel:</strong> Proteção tanto para o dono do imóvel quanto para quem está alugando.</li>
+                <li><strong>Acordos de Confidencialidade:</strong> Proteção de ideias e informações importantes do seu negócio.</li>
+            </ul>
+
+            <blockquote>
+                "O melhor contrato não é o mais longo, mas o mais claro. Ele deve ser um mapa seguro para que ambas as partes saibam exatamente onde estão e para onde vão."
+            </blockquote>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Vai assinar um contrato ou precisa criar um?</h2>
+            <p>Não assine nada com dúvida. Vamos garantir que seus interesses estejam protegidos por escrito.</p>
+            <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento especializado em todo o Brasil.</p>
+    </footer>
+</body>
+</html>
