@@ -40,7 +40,16 @@
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preconnect para otimizar carregamento de recursos externos -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS Prefetch para melhorar resolução de domínios -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- Carregamento otimizado de CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/blog-styles.css">
     <style>
@@ -1430,8 +1439,8 @@ footer {
         <div class="whatsapp-bubble" id="whatsappBubble">Um Advogado acabou de ficar online no WhatsApp!</div>
     </a>
 
-    <script src="assets/blog-loader.js"></script>
-    <script>
+    <script src="assets/blog-loader.js" defer></script>
+    <script defer>
         // Hamburger Menu Toggle
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');

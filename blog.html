@@ -7,7 +7,16 @@
     <meta name="description" content="Artigos e notícias sobre seus direitos. Informação jurídica sem complicação sobre trabalho, aposentadoria, família e mais.">
     <link rel="canonical" href="https://www.gabrielcorrea.adv.br/blog.html">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preconnect para otimizar carregamento de recursos externos -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- DNS Prefetch para melhorar resolução de domínios -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- Carregamento otimizado de CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <style>
@@ -511,7 +520,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
+    <script defer>
         let allPosts = [];
         let filteredPosts = [];
         let currentFilter = 'all';
@@ -583,12 +592,12 @@
         }
 
         function getImageUrl(imageUrl) {
-            if (imageUrl && imageUrl.startsWith('http')) return imageUrl;
-            if (imageUrl && imageUrl.startsWith('/')) {
-                // Se começar com /, remove para tratar como relativo à raiz do domínio
-                return imageUrl.substring(1);
-            }
-            return imageUrl || DEFAULT_IMAGE;
+            if (!imageUrl) return DEFAULT_IMAGE;
+            if (imageUrl.startsWith('http')) return imageUrl;
+            // Garante que o caminho seja relativo à raiz do domínio
+            if (imageUrl.startsWith('/')) return imageUrl;
+            // Se não começar com /, adiciona para garantir que seja relativo à raiz
+            return '/' + imageUrl;
         }
 
         function renderPosts(posts) {
@@ -609,11 +618,13 @@
                     <div class="post-card" onclick="window.location.href='${post.url}'" style="cursor: pointer;">
                         <div class="post-card-image loading" id="img-container-${post.slug}">
                             <img 
+                                loading="lazy"
                                 src="${imageUrl}" 
                                 alt="${post.title}"
+                                decoding="async"
                                 onload="document.getElementById('img-container-${post.slug}').classList.remove('loading')"
                                 onerror="this.src='${DEFAULT_IMAGE}'; document.getElementById('img-container-${post.slug}').classList.remove('loading')"
-                                style="display: block;"
+                                style="display: block; width: 100%; height: 100%; object-fit: cover;"
                             >
                         </div>
                         <div class="post-card-content">
@@ -628,6 +639,21 @@
                     </div>
                 `;
             }).join('');
+            
+            // Observar imagens para lazy loading
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                grid.querySelectorAll('img').forEach(img => imageObserver.observe(img));
+            }
         }
 
         function renderPagination(totalPages) {

@@ -6,7 +6,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Sabia que é possível se divorciar sem ir ao tribunal? Entenda quando o divórcio em cartório é permitido, quais documentos você precisa e como o processo funciona.",
-    "image": "blog/images/FAMILIA_divorcio_tipos.webp",
+    "image": "/blog/images/FAMILIA_divorcio_tipos.webp",
     "tags": [
       "divórcio em cartório",
       "divórcio extrajudicial",
@@ -25,7 +25,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Seu filho vai morar onde? Quem decide a escola e o médico? Entenda como a guarda compartilhada funciona na prática e proteja o bem-estar dos seus filhos.",
-    "image": "blog/images/FAMILIA_2.jpg",
+    "image": "/blog/images/FAMILIA_2.jpg",
     "tags": [
       "guarda compartilhada",
       "guarda unilateral",
@@ -44,7 +44,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Alguém da sua família faleceu e você precisa regularizar os bens? Entenda como funciona o inventário no Brasil, prazos, custos e como evitar conflitos entre herdeiros.",
-    "image": "blog/images/FAMILIA_1.jpg",
+    "image": "/blog/images/FAMILIA_1.jpg",
     "tags": [
       "inventário",
       "inventário extrajudicial",
@@ -63,7 +63,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "O que é seu, o que é do casal e o que fica com cada um após o divórcio? A resposta depende do regime de bens. Entenda agora antes que seja tarde.",
-    "image": "blog/images/FAMILIA_divorcio_direitos.jpg",
+    "image": "/blog/images/FAMILIA_divorcio_direitos.jpg",
     "tags": [
       "partilha de bens",
       "regime de bens",
@@ -82,7 +82,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Quanto deve ser a pensão do seu filho? Entenda em 2026 como o juiz calcula o valor, o que pode ser revisado e o que fazer quando o pagamento atrasa.",
-    "image": "blog/images/FAMILIA_pensao.webp",
+    "image": "/blog/images/FAMILIA_pensao.webp",
     "tags": [
       "pensão alimentícia",
       "cálculo pensão alimentícia",
@@ -101,7 +101,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Você está sofrendo assédio, atrasos de salário ou humilhações no trabalho? Saiba que a lei permite que você encerre o contrato por culpa do empregador — e receba todos os seus direitos.",
-    "image": "blog/images/TRABALHISTA_guia.png",
+    "image": "/blog/images/TRABALHISTA_guia.png",
     "tags": [
       "rescisão indireta",
       "direitos trabalhistas",
@@ -121,7 +121,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Sabia que em muitos casos é possível resolver um processo criminal sem julgamento e sem ficha? Entenda o Acordo de Não Persecução Penal e quando ele pode te ajudar.",
-    "image": "blog/images/CRIMINAL_1.jpg",
+    "image": "/blog/images/CRIMINAL_1.jpg",
     "tags": [
       "ANPP",
       "acordo não persecução penal",
@@ -140,7 +140,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Quer adotar uma criança mas não sabe por onde começar? Entenda todas as etapas do processo de adoção no Brasil, os requisitos legais e como um advogado pode te ajudar.",
-    "image": "blog/images/FAMILIA_conceito.jpg",
+    "image": "/blog/images/FAMILIA_conceito.jpg",
     "tags": [
       "adoção",
       "como adotar",
@@ -159,7 +159,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Seu filho está sendo afastado de você após a separação? Conheça a alienação parental, como identificá-la e quais medidas legais existem para proteger sua família.",
-    "image": "blog/images/FAMILIA_direito.png",
+    "image": "/blog/images/FAMILIA_direito.png",
     "tags": [
       "alienação parental",
       "o que é alienação parental",
@@ -178,7 +178,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Após a prisão, você tem até 24 horas para ser apresentado a um juiz. Entenda o que é a audiência de custódia, o que o juiz decide e como se preparar para ela.",
-    "image": "blog/images/CRIMINAL_2.jpg",
+    "image": "/blog/images/CRIMINAL_2.jpg",
     "tags": [
       "audiência de custódia",
       "o que é audiência de custódia",
@@ -197,7 +197,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "O oficial de justiça bateu na sua porta para pegar seu carro? Saiba exatamente o que fazer, o que não fazer e como um advogado pode mudar essa situação agora.",
-    "image": "blog/images/BUSCA_veiculo_1.jpeg",
+    "image": "/blog/images/BUSCA_veiculo_1.jpeg",
     "tags": [
       "busca e apreensão veículo",
       "oficial de justiça busca e apreensão",
@@ -215,7 +215,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Caiu num golpe online ou está sendo acusado de um crime digital? Entenda como funcionam os crimes cibernéticos no Brasil e quais são seus direitos em cada situação.",
-    "image": "blog/images/CRIMINAL_penal_1.webp",
+    "image": "/blog/images/CRIMINAL_penal_1.webp",
     "tags": [
       "crimes cibernéticos",
       "estelionato virtual",
@@ -234,7 +234,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Se envolveu em um acidente ou foi pego na Lei Seca? Entenda as consequências criminais e como garantir uma defesa técnica para proteger sua liberdade e sua CNH.",
-    "image": "blog/images/TRANSITO_acidente.jpg",
+    "image": "/blog/images/TRANSITO_acidente.jpg",
     "tags": [
       "crimes de trânsito",
       "lei seca",
@@ -253,7 +253,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "A liberdade é um direito fundamental. Entenda como o Habeas Corpus funciona como uma ferramenta de urgência para combater prisões ilegais ou abusos de autoridade.",
-    "image": "blog/images/GERAL_direito_1.jpg",
+    "image": "/blog/images/GERAL_direito_1.jpg",
     "tags": [
       "habeas corpus",
       "liberdade",
@@ -272,7 +272,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Entenda os detalhes da Lei Maria da Penha, as medidas protetivas de urgência e como funciona o processo judicial tanto para quem busca proteção quanto para quem se defende.",
-    "image": "blog/images/GERAL_direito_2.png",
+    "image": "/blog/images/GERAL_direito_2.png",
     "tags": [
       "lei maria da penha",
       "violência doméstica",
@@ -291,7 +291,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Não deixe para depois a organização do que você construiu. Saiba como o planejamento sucessório pode reduzir impostos e evitar brigas judiciais entre herdeiros no futuro.",
-    "image": "blog/images/FAMILIA_divorcio_recomecar.webp",
+    "image": "/blog/images/FAMILIA_divorcio_recomecar.webp",
     "tags": [
       "planejamento sucessório",
       "herança",
@@ -310,7 +310,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "A prisão preventiva não é uma sentença antecipada. Entenda os requisitos que o juiz deve seguir e quais são os caminhos legais para buscar a liberdade durante o processo.",
-    "image": "blog/images/GERAL_direito_3.jpg",
+    "image": "/blog/images/GERAL_direito_3.jpg",
     "tags": [
       "prisão preventiva",
       "revogação de prisão",
@@ -329,7 +329,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Saiba como funciona a passagem do regime fechado para o semiaberto e aberto. Conheça os prazos, requisitos de comportamento e como garantir que o direito seja aplicado no tempo certo.",
-    "image": "blog/images/BUSCA_2.jpg",
+    "image": "/blog/images/BUSCA_2.jpg",
     "tags": [
       "progressão de regime",
       "execução penal",
@@ -348,7 +348,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "O patrão não cumpre o contrato? Saiba como a rescisão indireta permite que você saia da empresa recebendo todas as indenizações, como se tivesse sido demitido.",
-    "image": "blog/images/TRABALHISTA_1.jpg",
+    "image": "/blog/images/TRABALHISTA_1.jpg",
     "tags": [
       "rescisão indireta",
       "falta do empregador",
@@ -367,7 +367,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Testamento não é coisa de filme ou de quem está no fim da vida. Entenda como essa ferramenta pode garantir que sua vontade seja respeitada e seus entes queridos protegidos.",
-    "image": "blog/images/FAMILIA_divorcio_2.jpg",
+    "image": "/blog/images/FAMILIA_divorcio_2.jpg",
     "tags": [
       "testamento",
       "herança",
@@ -386,7 +386,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "A linha entre consumo e tráfico é tênue e muitas vezes subjetiva. Entenda os critérios da lei e como uma defesa técnica é essencial para evitar condenações injustas.",
-    "image": "blog/images/BUSCA_1.png",
+    "image": "/blog/images/BUSCA_1.png",
     "tags": [
       "tráfico de drogas",
       "lei de drogas",
@@ -405,7 +405,7 @@
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Viver junto é o mesmo que casar? Entenda as regras da união estável, como formalizar em cartório e quais são os impactos no seu patrimônio e na herança.",
-    "image": "blog/images/FAMILIA_divorcio_3.png",
+    "image": "/blog/images/FAMILIA_divorcio_3.png",
     "tags": [
       "união estável",
       "contrato de convivência",
