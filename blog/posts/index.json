@@ -1,5 +1,100 @@
 [
   {
+    "title": "Guarda Compartilhada: Como Funciona no Dia a Dia e o Que Ninguém Te Conta",
+    "slug": "guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta",
+    "url": "/site_escritorio/blog/posts/guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Seu filho vai morar onde? Quem decide a escola e o médico? Entenda como a guarda compartilhada funciona na prática e proteja o bem-estar dos seus filhos.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "guarda compartilhada",
+      "guarda unilateral",
+      "direitos dos pais",
+      "convivência com filhos",
+      "divórcio com filhos"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Pensão Alimentícia em 2026: Como o Valor é Calculado e Quais São Seus Direitos",
+    "slug": "pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos",
+    "url": "/site_escritorio/blog/posts/pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Quanto deve ser a pensão do seu filho? Entenda em 2026 como o juiz calcula o valor, o que pode ser revisado e o que fazer quando o pagamento atrasa.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "pensão alimentícia",
+      "cálculo pensão alimentícia",
+      "revisão de pensão",
+      "pensão para filhos",
+      "alimentos"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer",
+    "slug": "divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer",
+    "url": "/site_escritorio/blog/posts/divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Sabia que é possível se divorciar sem ir ao tribunal? Entenda quando o divórcio em cartório é permitido, quais documentos você precisa e como o processo funciona.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "divórcio em cartório",
+      "divórcio extrajudicial",
+      "divórcio consensual",
+      "divórcio rápido",
+      "como se divorciar"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Partilha de Bens no Divórcio: O Que Entra na Divisão em Cada Regime?",
+    "slug": "partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime",
+    "url": "/site_escritorio/blog/posts/partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "O que é seu, o que é do casal e o que fica com cada um após o divórcio? A resposta depende do regime de bens. Entenda agora antes que seja tarde.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "partilha de bens",
+      "regime de bens",
+      "comunhão parcial",
+      "separação de bens",
+      "divórcio bens"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Inventário: O Passo a Passo Completo para Evitar Problemas e Brigas na Família",
+    "slug": "inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia",
+    "url": "/site_escritorio/blog/posts/inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Alguém da sua família faleceu e você precisa regularizar os bens? Entenda como funciona o inventário no Brasil, prazos, custos e como evitar conflitos entre herdeiros.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "inventário",
+      "inventário extrajudicial",
+      "inventário judicial",
+      "partilha de herança",
+      "documentos inventário"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
     "title": "Rescisão Indireta: Seu Patrão Está Errado — e Você Ainda Tem Direito a Receber Tudo",
     "slug": "resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo",
     "url": "/site_escritorio/blog/posts/resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo.html",

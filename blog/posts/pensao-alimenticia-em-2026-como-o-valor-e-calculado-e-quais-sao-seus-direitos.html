@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensão Alimentícia em 2026: Como o Valor é Calculado e Quais São Seus Direitos | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="../../blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="../../blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>
+        
+        <article>
+            <div class="post-header">
+                <h1>Pensão Alimentícia em 2026: Como o Valor é Calculado e Quais São Seus Direitos</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Pagar ou receber pensão alimentícia é uma das questões mais sensíveis e conflituosas no direito de família. Quem paga acha que paga demais. Quem recebe acha que recebe de menos. E no meio disso tudo, o filho precisa de escola, roupa, médico e comida — sem parar.</p>
+<p>Se você está prestes a formalizar uma pensão, quer rever o valor que já paga ou recebe, ou está com dificuldade de receber os valores em dia, este artigo foi feito para você. Vamos explicar de forma clara como o cálculo funciona no Brasil em 2026 e quais são seus direitos em cada situação.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O Código Civil estabelece que a pensão alimentícia é baseada em dois pilares fundamentais: a <strong>necessidade de quem recebe</strong> e a <strong>possibilidade de quem paga</strong>. Esse é o chamado <strong>binômio necessidade-possibilidade</strong>.</p>
+<p>Na prática, o juiz vai analisar:</p>
+<ul>
+<li>Quanto o filho precisa para uma vida digna (alimentação, saúde, educação, lazer, moradia)</li>
+<li>Quanto o pai ou mãe que deve pagar realmente ganha e pode pagar sem comprometer seu próprio sustento</li>
+</ul>
+<p>Não existe uma fórmula matemática universal — cada caso é analisado individualmente. Mas na prática, os tribunais costumam trabalhar com <strong>percentuais sobre o salário líquido</strong> do alimentante como ponto de partida.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação do alimentante</th>
+<th style="text-align: left;">Percentual comumente praticado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1 filho, sem outros dependentes</td>
+<td style="text-align: left;">25% a 33% do salário líquido</td>
+</tr>
+<tr>
+<td style="text-align: left;">2 filhos, sem outros dependentes</td>
+<td style="text-align: left;">30% a 40% do salário líquido</td>
+</tr>
+<tr>
+<td style="text-align: left;">3 ou mais filhos</td>
+<td style="text-align: left;">35% a 50% do salário líquido</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pai desempregado ou informal</td>
+<td style="text-align: left;">Valor fixo próximo ao salário mínimo proporcional</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pai com renda variável (autônomo)</td>
+<td style="text-align: left;">Percentual sobre o faturamento médio mensal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pai com renda muito elevada</td>
+<td style="text-align: left;">O juiz avalia as necessidades reais do filho como teto</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ Esses percentuais são referências práticas — o valor final depende sempre das circunstâncias específicas do seu caso.</p>
+</blockquote>
+<hr />
+<h2>O que entra na conta das "necessidades do filho"?</h2>
+<p>Muita gente pensa que pensão é só para comida. Mas as necessidades consideradas incluem muito mais:</p>
+<ul>
+<li>Alimentação e vestuário</li>
+<li>Material escolar e mensalidade (se escola particular)</li>
+<li>Plano de saúde e consultas médicas</li>
+<li>Medicamentos e tratamentos</li>
+<li>Atividades esportivas e culturais</li>
+<li>Moradia (incluída indiretamente quando o filho mora com um dos pais)</li>
+<li>Cursos de idioma, reforço escolar e outros dependendo da realidade da criança</li>
+</ul>
+<hr />
+<h2>É possível revisar o valor da pensão?</h2>
+<p>Sim, e isso é mais comum do que parece. A revisão é cabível quando há <strong>mudança significativa na situação financeira</strong> de qualquer uma das partes — seja de quem paga ou de quem recebe.</p>
+<p>Casos que costumam justificar revisão:</p>
+<ul>
+<li>Quem paga perdeu o emprego ou teve redução de renda comprovada</li>
+<li>Quem paga foi promovido e teve aumento expressivo de salário</li>
+<li>O filho cresceu e suas necessidades aumentaram</li>
+<li>O filho atingiu a maioridade e ingressou na faculdade</li>
+<li>Quem recebe passou a ter renda própria suficiente</li>
+</ul>
+<p>A revisão <strong>não é automática</strong> — é necessário entrar com uma ação judicial de revisão de alimentos no tribunal.</p>
+<hr />
+<h2>O que fazer quando a pensão atrasa?</h2>
+<p>Se quem deve pagar atrasar, existem dois caminhos principais:</p>
+<ul>
+<li><strong>Execução de alimentos pelo rito da penhora:</strong> bens do devedor podem ser penhorados para quitar a dívida. É mais lento.</li>
+<li><strong>Execução de alimentos com prisão civil:</strong> o devedor pode ser preso por até 3 meses em regime fechado, podendo ser renovada. É a ferramenta mais eficaz e rápida.</li>
+</ul>
+<p>A prisão civil por dívida alimentar é legal no Brasil e frequentemente utilizada. O devedor só é solto quando paga as parcelas dos <strong>últimos 3 meses em atraso</strong> — as mais antigas vão para execução normal com penhora de bens.</p>
+<hr />
+<h2>Mitos e Verdades sobre Pensão Alimentícia</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Quando o filho faz 18 anos, a pensão acaba automaticamente."<br />
+<strong>Verdade:</strong> Não. É necessária uma ação judicial de exoneração. Se o filho está na faculdade, a pensão pode continuar até os 24 anos.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu estiver desempregado, não preciso pagar nada."<br />
+<strong>Verdade:</strong> O desemprego pode justificar a revisão do valor, mas não extingue a obrigação. Um valor mínimo pode ser mantido.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "A pensão é sempre paga pelo pai."<br />
+<strong>Verdade:</strong> Qualquer genitor pode ser obrigado a pagar, independentemente do gênero. O que define é quem tem maior capacidade econômica.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Posso descontar da pensão gastos que tive diretamente com o filho."<br />
+<strong>Verdade:</strong> Em regra, não. Gastos diretos não substituem automaticamente o pagamento. Isso precisaria estar previsto em acordo homologado judicialmente.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A pensão alimentícia existe para garantir que seu filho tenha uma vida digna, independentemente da relação dos pais. O valor correto é aquele que equilibra as necessidades reais da criança com a capacidade real de quem paga — e ele pode ser ajustado sempre que a vida mudar.</p>
+<p>Se você está enfrentando problemas — seja para receber o que é seu, seja porque está pagando um valor que não consegue mais arcar — a solução mais inteligente é buscar orientação jurídica antes que a situação piore.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

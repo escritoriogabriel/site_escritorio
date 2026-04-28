@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário: O Passo a Passo Completo para Evitar Problemas e Brigas na Família | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="../../blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="../../blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>
+        
+        <article>
+            <div class="post-header">
+                <h1>Inventário: O Passo a Passo Completo para Evitar Problemas e Brigas na Família</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>A perda de um familiar já é dolorosa por si só. O último que qualquer família precisa é de uma briga judicial sobre a herança que se arrasta por anos. Infelizmente, quando o inventário não é feito corretamente — ou é simplesmente ignorado — é exatamente isso que costuma acontecer.</p>
+<p>O inventário é o processo legal para identificar, avaliar e dividir os bens deixados por alguém que faleceu. Ele <strong>não é opcional</strong>: sem o inventário, os herdeiros ficam impedidos de vender imóveis, transferir veículos ou movimentar contas bancárias do falecido. Neste artigo, você vai entender como esse processo funciona do início ao fim.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O prazo para abertura do inventário é de <strong>60 dias a partir da data do falecimento</strong>. Quem não respeita esse prazo paga multa sobre o imposto de transmissão (ITCMD), que varia por estado — em Santa Catarina, a multa pode chegar a <strong>50% do imposto devido</strong>. Portanto, quanto antes o processo for iniciado, melhor para o bolso da família.</p>
+<p>Existem dois caminhos para o inventário:</p>
+<p><strong>Inventário Extrajudicial (em cartório):</strong> Mais rápido, mais barato, feito em cartório de notas. Exige que todos os herdeiros sejam maiores e capazes, estejam em acordo e que não haja testamento pendente de homologação.</p>
+<p><strong>Inventário Judicial:</strong> Feito no tribunal. Obrigatório quando há herdeiros menores ou incapazes, conflito entre os herdeiros ou testamento a ser cumprido e homologado.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação da família</th>
+<th style="text-align: left;">Tipo de inventário indicado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Todos herdeiros adultos e em acordo</td>
+<td style="text-align: left;">✅ Extrajudicial (cartório) — mais rápido e barato</td>
+</tr>
+<tr>
+<td style="text-align: left;">Há filho menor de 18 anos entre os herdeiros</td>
+<td style="text-align: left;">⚖️ Judicial — obrigatório por lei</td>
+</tr>
+<tr>
+<td style="text-align: left;">Herdeiros em conflito e sem acordo</td>
+<td style="text-align: left;">⚖️ Judicial — litigioso</td>
+</tr>
+<tr>
+<td style="text-align: left;">Há testamento ainda não homologado</td>
+<td style="text-align: left;">⚖️ Judicial — para homologação do testamento</td>
+</tr>
+<tr>
+<td style="text-align: left;">Falecido só deixou saldo bancário pequeno</td>
+<td style="text-align: left;">✅ Alvará judicial simplificado</td>
+</tr>
+<tr>
+<td style="text-align: left;">Falecido com dívidas</td>
+<td style="text-align: left;">⚖️ Judicial — para proteger os herdeiros de cobranças</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Passo a passo do inventário extrajudicial</h2>
+<p><strong>1. Reúna os documentos essenciais:</strong><br />
+- Certidão de óbito do falecido<br />
+- Documentos pessoais do falecido (RG, CPF, certidão de casamento)<br />
+- Certidões de nascimento ou casamento de todos os herdeiros<br />
+- Documentação de todos os bens (escritura de imóvel, CRLV de veículos, extratos bancários, contratos)</p>
+<p><strong>2. Contrate um advogado:</strong><br />
+É obrigatório por lei, mesmo no cartório. O advogado vai orientar sobre a divisão, calcular os impostos e elaborar a minuta da escritura.</p>
+<p><strong>3. Calcule e pague o ITCMD:</strong><br />
+O Imposto de Transmissão Causa Mortis e Doação é estadual. Em Santa Catarina, a alíquota varia de <strong>1% a 8%</strong> dependendo do valor do espólio.</p>
+<p><strong>4. Lavratura da escritura pública:</strong><br />
+O tabelião lavra a escritura de inventário e partilha no cartório de notas.</p>
+<p><strong>5. Registro e transferência dos bens:</strong><br />
+Após a escritura, cada bem precisa ser transferido para o nome do(s) herdeiro(s) nos órgãos competentes: Cartório de Registro de Imóveis, DETRAN, Banco etc.</p>
+<hr />
+<h2>Quais bens entram no inventário?</h2>
+<ul>
+<li>Imóveis (casas, apartamentos, terrenos, sítios, salas comerciais)</li>
+<li>Veículos (carros, motos, caminhões, embarcações)</li>
+<li>Saldos em contas bancárias e aplicações financeiras</li>
+<li>Cotas em empresas e participações societárias</li>
+<li>Criptomoedas e ativos digitais</li>
+<li>Móveis e objetos de valor expressivo</li>
+<li>Direitos de crédito (alguém devia dinheiro ao falecido?)</li>
+<li>Direitos de propriedade intelectual</li>
+</ul>
+<hr />
+<h2>Mitos e Verdades sobre Inventário</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Não preciso de inventário se os herdeiros estão em acordo."<br />
+<strong>Verdade:</strong> O acordo entre herdeiros é ótimo, mas sem o inventário os bens não saem legalmente do nome do falecido. Ninguém pode vender ou transferir nada.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Inventário leva anos e custa uma fortuna."<br />
+<strong>Verdade:</strong> O inventário extrajudicial pode ser concluído em semanas e é significativamente mais barato que o processo judicial.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Posso esperar um tempo para fazer o inventário."<br />
+<strong>Verdade:</strong> Esperar gera multas sobre o imposto, juros e pode dificultar a venda de bens que os herdeiros precisam urgentemente.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se o falecido não deixou imóvel, não precisa de inventário."<br />
+<strong>Verdade:</strong> Qualquer patrimônio relevante — veículos, investimentos, cotas de empresa — precisa ser regularizado formalmente.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>O inventário é uma das obrigações legais mais importantes após a morte de um familiar. Fazê-lo corretamente poupa sua família de dores de cabeça que podem durar décadas. Quanto mais cedo você iniciar o processo, menos custará e menos conflito haverá entre os herdeiros.</p>
+<p>Um advogado especializado em direito das sucessões vai orientar sua família desde a coleta de documentos até o registro final dos bens — garantindo que tudo seja feito dentro da lei e no menor tempo possível.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

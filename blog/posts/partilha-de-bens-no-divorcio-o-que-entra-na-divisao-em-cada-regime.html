@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partilha de Bens no Divórcio: O Que Entra na Divisão em Cada Regime? | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="../../blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="../../blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>
+        
+        <article>
+            <div class="post-header">
+                <h1>Partilha de Bens no Divórcio: O Que Entra na Divisão em Cada Regime?</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Quando um casamento chega ao fim, uma das discussões mais acaloradas costuma ser: "quem fica com o quê?" E a resposta para essa pergunta depende, em grande parte, de uma decisão que o casal tomou — muitas vezes sem pensar muito nisso — lá no início da relação: o <strong>regime de bens</strong>.</p>
+<p>O problema é que a maioria das pessoas não sabe exatamente em qual regime casou, e muito menos o que ele significa na prática. Isso gera surpresas muito desagradáveis na hora da separação. Neste artigo, vamos explicar de forma clara o que entra e o que não entra na partilha em cada regime previsto pela lei brasileira.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>O Código Civil brasileiro prevê quatro regimes de bens. O mais comum — aplicado automaticamente quando o casal não escolhe outro — é a <strong>comunhão parcial de bens</strong>.</p>
+<p><strong>1. Comunhão Parcial de Bens (o mais comum)</strong></p>
+<p>Entram na partilha os bens adquiridos <strong>durante</strong> o casamento. O que cada um tinha antes de casar permanece seu. Exemplo: se você comprou um apartamento antes do casamento, ele não entra na divisão. Mas se o casal comprou um carro durante o casamento, ele é dividido igualmente.</p>
+<p><strong>2. Comunhão Universal de Bens</strong></p>
+<p>Tudo se comunica — tanto o que foi adquirido antes quanto durante o casamento. Herança e doações recebidas durante o casamento também entram, salvo se houver cláusula de incomunicabilidade expressa.</p>
+<p><strong>3. Separação Total de Bens</strong></p>
+<p>Cada um fica com o que é seu. Nenhum bem se comunica, independentemente de quando foi adquirido. Exige <strong>pacto antenupcial</strong> lavrado em cartório antes do casamento.</p>
+<p><strong>4. Participação Final nos Aquestos</strong></p>
+<p>Um regime híbrido: durante o casamento cada um administra seu próprio patrimônio de forma independente; na dissolução, divide-se apenas o que foi adquirido durante o casamento. É pouco utilizado na prática brasileira.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tipo de bem</th>
+<th style="text-align: center;">Comunhão Parcial</th>
+<th style="text-align: center;">Comunhão Universal</th>
+<th style="text-align: center;">Separação Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Imóvel comprado antes do casamento</td>
+<td style="text-align: center;">❌ Não entra</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Imóvel comprado durante o casamento</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Herança recebida durante o casamento</td>
+<td style="text-align: center;">❌ Não entra</td>
+<td style="text-align: center;">✅ Entra*</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Salário acumulado durante o casamento</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+<tr>
+<td style="text-align: left;">FGTS acumulado durante o casamento</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dívidas contraídas durante o casamento</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cotas de empresa criada durante o casamento</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">✅ Entra</td>
+<td style="text-align: center;">❌ Não entra</td>
+</tr>
+</tbody>
+</table>
+<p>*Salvo cláusula de incomunicabilidade imposta por quem doou ou deixou em testamento.</p>
+<hr />
+<h2>O que nunca entra na partilha?</h2>
+<p>Independentemente do regime de bens, alguns bens têm proteção legal especial:</p>
+<ul>
+<li>Objetos de uso pessoal (roupas, acessórios, documentos)</li>
+<li>Bens adquiridos com recursos exclusivamente anteriores ao casamento, desde que comprovado documentalmente</li>
+<li>Pensões e indenizações de caráter personalíssimo (por dano moral, por exemplo)</li>
+<li>Bens gravados com cláusula de incomunicabilidade por quem os doou ou deixou em herança</li>
+</ul>
+<hr />
+<h2>E as dívidas — também são divididas?</h2>
+<p>Muita gente pensa apenas nos bens, mas as <strong>dívidas também entram na partilha</strong>. Na comunhão parcial e universal, as dívidas contraídas durante o casamento em benefício da família — mesmo que em nome de apenas um dos cônjuges — podem ser cobradas do patrimônio comum.</p>
+<p>Dívidas pessoais e contraídas antes do casamento, em regra, ficam com quem as contraiu.</p>
+<hr />
+<h2>Mitos e Verdades sobre Partilha de Bens</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Quem tem o bem registrado no próprio nome fica com ele."<br />
+<strong>Verdade:</strong> O registro não define tudo. Um imóvel registrado só em nome do marido pode ser partilhado se foi comprado durante o casamento em comunhão parcial.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Minha empresa não entra na partilha."<br />
+<strong>Verdade:</strong> Cotas de empresa constituída durante o casamento entram na partilha em muitos casos, ao menos em relação ao valor do patrimônio construído durante a união.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se separei informalmente há anos, já não preciso fazer a partilha."<br />
+<strong>Verdade:</strong> Enquanto o divórcio não for formalizado, o regime de bens continua valendo. Bens adquiridos após a separação de fato podem ser objeto de disputas.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Na separação total de bens, nada é dividido nunca."<br />
+<strong>Verdade:</strong> Em alguns casos, o STJ reconheceu o direito à partilha mesmo na separação total quando há comprovação de esforço comum, especialmente em uniões estáveis.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>Entender o seu regime de bens antes de chegar ao divórcio é fundamental para que você não seja surpreendido na hora da separação. A partilha pode ser feita de forma amigável — no cartório — ou judicial, mas em qualquer caso, saber o que é seu por lei é o primeiro passo para proteger seus interesses.</p>
+<p>Se você não tem certeza sobre o seu regime de bens ou está em processo de separação, um advogado especialista em direito de família pode revisar sua situação e garantir que você não deixe para trás o que é seu por direito.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

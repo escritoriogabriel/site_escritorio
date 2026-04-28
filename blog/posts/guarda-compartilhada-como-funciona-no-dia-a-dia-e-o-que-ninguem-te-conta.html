@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarda Compartilhada: Como Funciona no Dia a Dia e o Que Ninguém Te Conta | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="../../blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="../../blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>
+        
+        <article>
+            <div class="post-header">
+                <h1>Guarda Compartilhada: Como Funciona no Dia a Dia e o Que Ninguém Te Conta</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Quando um casal se separa, a primeira pergunta que surge é: "e os filhos, como fica?" É uma das situações mais delicadas que uma família pode enfrentar, e a resposta nem sempre é simples. A guarda compartilhada é hoje a <strong>regra no Brasil</strong> — mas isso não significa que todo mundo sabe como ela funciona na prática.</p>
+<p>Muitos pais ficam confusos achando que guarda compartilhada significa que o filho passa a mesma quantidade de dias na casa de cada um. Outros pensam que é impossível porque não se dão bem com o ex-parceiro. Neste artigo, vamos desfazer esses mitos e mostrar exatamente o que a lei diz — e o que você pode esperar no cotidiano.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>Desde 2014, com a <strong>Lei nº 13.058</strong>, a guarda compartilhada se tornou a regra padrão no Brasil. Isso quer dizer que, salvo situações excepcionais — como violência doméstica ou total incapacidade de um dos pais —, o juiz vai preferir esse modelo.</p>
+<p><strong>Mas o que é guarda compartilhada, afinal?</strong></p>
+<p>É um arranjo em que ambos os pais participam ativamente das <strong>decisões importantes</strong> na vida do filho: escola, saúde, religião, viagens internacionais e atividades extracurriculares. Nenhum dos dois manda sozinho nessas questões.</p>
+<p>Isso é diferente de "residência alternada". A criança pode morar principalmente na casa de um dos pais — chamada de <strong>residência habitual</strong> — e ainda assim ter guarda compartilhada. O que está sendo dividido é o <strong>poder de decisão</strong>, não necessariamente os dias.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação do dia a dia</th>
+<th style="text-align: left;">Quem decide na guarda compartilhada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Trocar de escola</td>
+<td style="text-align: left;">Ambos os pais, juntos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Levar ao médico de rotina</td>
+<td style="text-align: left;">Qualquer um dos pais pode levar</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fazer uma cirurgia eletiva</td>
+<td style="text-align: left;">Ambos os pais precisam concordar</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viajar dentro do Brasil</td>
+<td style="text-align: left;">Qualquer um dos pais pode levar</td>
+</tr>
+<tr>
+<td style="text-align: left;">Viajar para o exterior</td>
+<td style="text-align: left;">Precisa da autorização do outro pai</td>
+</tr>
+<tr>
+<td style="text-align: left;">Escolher a religião</td>
+<td style="text-align: left;">Ambos os pais decidem juntos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Determinar horário de dormir</td>
+<td style="text-align: left;">Cada um define em sua própria casa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Como funciona a divisão do tempo?</h2>
+<p>A lei não estabelece uma fórmula fixa. O que vale é o <strong>melhor interesse da criança</strong>. Na prática, alguns arranjos comuns são:</p>
+<ul>
+<li>Filho mora com a mãe durante a semana e com o pai nos fins de semana alternados</li>
+<li>Filho divide as semanas igualmente (uma semana com cada um)</li>
+<li>Filho mora com um dos pais e passa as férias escolares com o outro</li>
+</ul>
+<p>O mais importante é que a rotina seja <strong>estável e previsível</strong> para a criança. Mudanças constantes e imprevisíveis prejudicam o desenvolvimento emocional dos filhos.</p>
+<hr />
+<h2>E se os pais não se derem bem?</h2>
+<p>Esta é a dúvida mais comum. A resposta honesta é: a guarda compartilhada <strong>não exige que os pais sejam amigos</strong>, mas exige que sejam capazes de se comunicar minimamente pelo bem do filho.</p>
+<p>Se há conflito intenso, o juiz pode determinar que a comunicação aconteça por aplicativos específicos, cadernos de recados ou por meio dos próprios advogados. O que não é aceito é usar o filho como mensageiro ou como arma entre os pais — isso pode configurar <strong>alienação parental</strong>, que é crime.</p>
+<hr />
+<h2>Mitos e Verdades sobre Guarda Compartilhada</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "Guarda compartilhada significa que meu filho fica metade do tempo em cada casa."<br />
+<strong>Verdade:</strong> Não necessariamente. O tempo pode ser distribuído de forma diferente conforme as necessidades da criança.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se a mãe tem a guarda, o pai não tem direitos."<br />
+<strong>Verdade:</strong> Na guarda compartilhada, ambos têm os mesmos direitos de decisão, independentemente de onde o filho mora.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Posso pedir guarda unilateral porque meu ex é difícil."<br />
+<strong>Verdade:</strong> Dificuldade de relacionamento entre os pais, por si só, não justifica retirar a guarda compartilhada.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Guarda compartilhada elimina a pensão alimentícia."<br />
+<strong>Verdade:</strong> As duas coisas são independentes. A pensão pode continuar sendo devida mesmo com guarda compartilhada.</p>
+</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>A guarda compartilhada existe para garantir que seus filhos mantenham uma relação saudável com ambos os pais após a separação. Ela protege não apenas a criança, mas também garante que nenhum pai fique excluído da vida do filho.</p>
+<p>Se você está passando por um divórcio ou separação e tem dúvidas sobre como organizar a guarda, não tente resolver isso informalmente. Um acordo bem feito agora evita brigas judiciais caras e dolorosas no futuro — e, principalmente, protege quem mais importa: seus filhos.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>

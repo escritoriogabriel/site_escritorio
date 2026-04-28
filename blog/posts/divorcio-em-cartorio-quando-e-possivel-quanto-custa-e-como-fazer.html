@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        header { 
+            background: var(--white); 
+            padding: 20px 5%; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 1.5rem; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="../../blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+    </header>
+    
+    <div class="container">
+        <a href="../../blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>
+        
+        <article>
+            <div class="post-header">
+                <h1>Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
+                    <span><i class="far fa-folder"></i> Direito de Família</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>A palavra "divórcio" ainda assusta muita gente — e a imagem mais comum é a de uma batalha judicial longa, cara e desgastante. Mas desde 2007, o Brasil permite que casais se divorciem em cartório, sem precisar de juiz ou processo judicial. É mais rápido, mais barato e muito menos estressante.</p>
+<p>Se você e seu cônjuge estão em acordo sobre todos os termos da separação, existe uma boa chance de que vocês possam resolver tudo em poucas semanas, num cartório, com a ajuda de um advogado. Neste artigo vamos explicar exatamente como esse caminho funciona — e quando ele não é possível.</p>
+<hr />
+<h2>O que a lei diz de forma simples</h2>
+<p>A <strong>Lei nº 11.441/2007</strong> — depois consolidada no Código de Processo Civil de 2015 — permitiu que casais realizem o divórcio de forma extrajudicial, diretamente no cartório de notas. Para isso, é preciso atender a alguns requisitos básicos:</p>
+<ul>
+<li>O casal deve estar em <strong>acordo total</strong> sobre a separação e seus termos</li>
+<li><strong>Não pode haver filhos menores de idade ou incapazes</strong> do casal (se houver filhos adultos, não há problema)</li>
+<li>Ambas as partes devem estar representadas por <strong>advogado</strong> (pode ser o mesmo para os dois)</li>
+<li>Se houver bens, a <strong>partilha</strong> deve estar definida e acordada entre as partes</li>
+</ul>
+<p>Se todos esses requisitos estiverem presentes, o processo é ágil e pode ser concluído em dias ou semanas.</p>
+<h3>Veja este exemplo:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Situação do casal</th>
+<th style="text-align: left;">Pode fazer divórcio em cartório?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sem filhos, em acordo, com bens</td>
+<td style="text-align: left;">✅ Sim — a partilha entra na escritura</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sem filhos, em acordo, sem bens</td>
+<td style="text-align: left;">✅ Sim — processo mais simples e barato</td>
+</tr>
+<tr>
+<td style="text-align: left;">Com filhos maiores de 18 anos, em acordo</td>
+<td style="text-align: left;">✅ Sim — filhos adultos não impedem</td>
+</tr>
+<tr>
+<td style="text-align: left;">Com filhos menores de idade</td>
+<td style="text-align: left;">❌ Não — obrigatório ir ao judiciário</td>
+</tr>
+<tr>
+<td style="text-align: left;">Com desacordo sobre bens ou guarda</td>
+<td style="text-align: left;">❌ Não — precisa de processo judicial</td>
+</tr>
+<tr>
+<td style="text-align: left;">Um dos cônjuges mora fora do Brasil</td>
+<td style="text-align: left;">✅ Sim — com procuração específica</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Quais documentos são necessários?</h2>
+<p>Os documentos variam um pouco de cartório para cartório, mas em geral são:</p>
+<ul>
+<li>RG e CPF de ambos os cônjuges</li>
+<li>Certidão de casamento atualizada (emitida há menos de 90 dias)</li>
+<li>Comprovante de endereço de ambos</li>
+<li>Documentos dos bens a serem partilhados (escritura do imóvel, CRLV do veículo, extratos bancários)</li>
+<li>Dados da OAB do advogado que vai assinar a escritura</li>
+</ul>
+<p>O cartório vai lavrar uma <strong>escritura pública de divórcio</strong> e o casamento estará oficialmente desfeito após o registro — que o próprio cartório costuma encaminhar.</p>
+<hr />
+<h2>Quanto custa um divórcio em cartório?</h2>
+<p>Os custos variam conforme o estado e o valor dos bens envolvidos, mas costumam ser bem menores do que um processo judicial. Em Santa Catarina, as custas cartoriais para divórcio sem bens ficam em torno de <strong>R$ 600 a R$ 1.300</strong>. Se houver bens, há incidência de <strong>ITCMD</strong> (imposto sobre a transmissão de bens na partilha), calculado sobre o valor dos bens partilhados.</p>
+<p>Além das custas do cartório, você precisa considerar os honorários do advogado — que é obrigatório mesmo no divórcio extrajudicial.</p>
+<hr />
+<h2>Posso fazer o divórcio em qualquer cartório?</h2>
+<p>Sim! O divórcio extrajudicial pode ser feito em <strong>qualquer cartório de notas do Brasil</strong>, independentemente de onde o casamento foi registrado. Você e seu cônjuge escolhem o cartório mais conveniente para vocês.</p>
+<hr />
+<h2>Mitos e Verdades sobre o Divórcio em Cartório</h2>
+<ul>
+<li>
+<p><strong>Mito:</strong> "No cartório não precisa de advogado."<br />
+<strong>Verdade:</strong> O advogado é obrigatório por lei. Ele assina a escritura junto com os cônjuges e garante que os direitos de ambos estejam protegidos.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Divórcio em cartório é só para quem não tem bens a dividir."<br />
+<strong>Verdade:</strong> Casais com imóveis, veículos e outros bens podem fazer o divórcio no cartório, desde que estejam em acordo sobre como dividir.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Preciso ir ao mesmo cartório onde me casei."<br />
+<strong>Verdade:</strong> O divórcio pode ser feito em qualquer cartório de notas do Brasil.</p>
+</li>
+<li>
+<p><strong>Mito:</strong> "Se eu fizer no cartório, fico desprotegido."<br />
+<strong>Verdade:</strong> A escritura pública tem plena validade jurídica. É um documento tão seguro quanto uma sentença judicial.</p>
+</li>
+</ul>
+<hr />
+<h2>Dicas para tornar o processo mais tranquilo</h2>
+<ul>
+<li>Antes de ir ao cartório, <strong>formalize todos os acordos com seu advogado</strong> (guarda, pensão, partilha) para que a escritura reflita exatamente o que foi combinado</li>
+<li>Verifique se há <strong>dívidas pendentes em nome do casal</strong> — elas podem complicar a partilha e precisam ser resolvidas antes</li>
+<li>Se houver <strong>imóvel financiado</strong>, converse com o banco antes de definir como ele será dividido</li>
+<li>Providencie a <strong>certidão de casamento atualizada</strong> com antecedência — ela tem prazo de validade de 90 dias</li>
+</ul>
+<hr />
+<h2>Conclusão</h2>
+<p>O divórcio em cartório é uma das melhores ferramentas que o direito brasileiro oferece para casais que conseguem chegar a um acordo. Ele preserva a dignidade de todos, poupa tempo e dinheiro e permite que cada um siga em frente mais rapidamente — sem os desgastes de um processo judicial.</p>
+<p>Se você tem dúvidas se o seu caso se enquadra nesse formato, a consulta com um advogado de família esclarece tudo em pouco tempo — e pode te poupar meses de processo desnecessário.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>
