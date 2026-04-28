@@ -347,11 +347,53 @@
             header { flex-direction: column; height: auto; padding: 15px 5%; }
             nav { flex-direction: column; gap: 15px; width: 100%; margin-top: 15px; }
             .nav-links { flex-direction: column; gap: 10px; width: 100%; }
-            .btn-nav-whatsapp { width: 100%; text-align: center; }
-            .hero h1 { font-size: 2rem; }
-            .blog-container { padding: 40px 5%; }
-            .posts-grid { grid-template-columns: 1fr; gap: 30px; }
-            .filters-section { flex-direction: column; align-items: flex-start; }
+            .btn-nav-whatsapp {        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
+            .hamburger { display: flex; }
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                padding-bottom: 15px;
+            }
+            nav.open { display: flex; }
+            .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
+            .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
+
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 0.95rem; }
+            .blog-container { padding: 30px 5%; }
+            
+            .posts-grid { grid-template-columns: 1fr; gap: 20px; }
+            .post-card { flex-direction: row; height: auto; align-items: center; }
+            .post-card-image { width: 100px; min-width: 100px; height: 100px; }
+            .post-card-content { padding: 15px; }
+            .post-card h3 { font-size: 0.95rem; margin-bottom: 5px; }
+            .post-card p { font-size: 0.8rem; -webkit-line-clamp: 2; margin-bottom: 10px; }
+            .post-category { padding: 3px 8px; font-size: 0.65rem; margin-bottom: 8px; }
+            .post-meta { font-size: 0.75rem; padding-top: 8px; }
+
+            .filters-section { flex-direction: column; align-items: flex-start; margin-bottom: 30px; }
+            .filter-chip { padding: 8px 15px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -363,7 +405,10 @@
 
     <header>
         <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
-        <nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -508,7 +553,7 @@
             grid.innerHTML = posts.map(post => {
                 const imageUrl = getImageUrl(post.image);
                 return `
-                    <div class="post-card">
+                    <div class="post-card" onclick="window.location.href='${post.url}'" style="cursor: pointer;">
                         <div class="post-card-image loading" id="img-container-${post.slug}">
                             <img 
                                 src="${imageUrl}" 
@@ -524,7 +569,7 @@
                             <p>${post.excerpt}</p>
                             <div class="post-meta">
                                 <span>${new Date(post.date).toLocaleDateString('pt-BR')}</span>
-                                <a href="${post.url}" class="post-link">Leia Mais <i class="fas fa-arrow-right"></i></a>
+                                <span class="post-link">Leia Mais <i class="fas fa-arrow-right"></i></span>
                             </div>
                         </div>
                     </div>
@@ -532,7 +577,29 @@
             }).join('');
         }
 
-        document.addEventListener('DOMContentLoaded', loadPosts);
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPosts();
+            
+            // Menu Sanduíche
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (hamburgerBtn && mainNav) {
+                hamburgerBtn.addEventListener('click', () => {
+                    mainNav.classList.toggle('open');
+                    const spans = hamburgerBtn.querySelectorAll('span');
+                    if (mainNav.classList.contains('open')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+            }
+        });
     </script>
 
 </body>
