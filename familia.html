@@ -5,746 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direito de Família | Atendimento Humanizado | Advogado Gabriel Corrêa</title>
     <meta name="description" content="Soluções jurídicas para divórcio, pensão alimentícia, guarda de filhos e inventários. Atendimento focado na preservação de direitos e bem-estar familiar.">
-    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
     <link rel="canonical" href="https://www.gabrielcorrea.adv.br/familia.html">
-    
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Direito de Família | Atendimento Humanizado | Advogado Gabriel Corrêa">
+    <meta property="og:description" content="Soluções jurídicas para divórcio, pensão alimentícia, guarda de filhos e inventários. Atendimento focado na preservação de direitos e bem-estar familiar.">
+    <meta property="og:url" content="https://www.gabrielcorrea.adv.br/familia.html">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <style>
-        
-:root {
-    --primary-blue: #172B41;
-    --accent-gold: #C9A961;
-    --bg-light: #F8F8F8;
-    --whatsapp-green: #25D366;
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --white: #FFFFFF;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-/* Top Bar */
-.top-bar {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 8px 5%;
-    font-size: 0.85rem;
-    text-align: right;
-}
-.top-bar a { color: white; text-decoration: none; }
-
-/* Header & Navigation */
-header {
-    background-color: var(--white);
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-    height: 80px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-.logo img {
-    height: 34px;
-    width: auto;
-    max-width: 260px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 22px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.92rem;
-    transition: color 0.3s;
-}
-.nav-links a:hover { color: var(--accent-gold); }
-
-/* Dropdown */
-.dropdown { position: relative; }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 260px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    z-index: 100;
-    top: 100%;
-    left: 0;
-    border-top: 3px solid var(--accent-gold);
-    border-radius: 0 0 8px 8px;
-}
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a {
-    color: var(--text-dark);
-    padding: 11px 16px;
-    display: block;
-    font-size: 0.88rem;
-    border-bottom: 1px solid #f0f0f0;
-    transition: background 0.2s;
-}
-.dropdown-content a:last-child { border-bottom: none; }
-.dropdown-content a:hover { background-color: var(--bg-light); color: var(--accent-gold); }
-
-.btn-nav-whatsapp {
-    background-color: var(--whatsapp-green);
-    color: white !important;
-    padding: 12px 22px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-    border: none;
-    cursor: pointer;
-}
-.btn-nav-whatsapp:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    background-color: #22c55e;
-}
-
-/* Hamburger */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    background: none;
-    border: none;
-    padding: 5px;
-}
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-blue);
-    border-radius: 3px;
-    transition: all 0.3s;
-}
-
-/* ===== PAGE HERO ===== */
-.page-hero {
-    padding: 80px 5% 60px;
-    background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(201,169,97,0.1) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.page-hero::after {
-    content: '';
-    position: absolute;
-    bottom: -80px;
-    left: -80px;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(37,211,102,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.page-hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.page-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(201,169,97,0.15);
-    border: 1px solid rgba(201,169,97,0.35);
-    color: var(--primary-blue);
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin-bottom: 20px;
-}
-
-.page-hero h1 {
-    font-size: 2.8rem;
-    color: var(--primary-blue);
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-.page-hero h1 span {
-    color: var(--accent-gold);
-}
-
-.page-hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.page-hero-ctas {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.btn-primary {
-    background-color: var(--whatsapp-green);
-    color: white;
-    padding: 16px 32px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37,211,102,0.3);
-    border: none;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37,211,102,0.4);
-    background-color: #22c55e;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--primary-blue);
-    border: 2px solid var(--primary-blue);
-    padding: 14px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-    background: var(--primary-blue);
-    color: white;
-}
-
-/* ===== CONTENT SECTION ===== */
-.content-section {
-    padding: 80px 5%;
-    background: var(--white);
-}
-
-.content-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.content-section h2 {
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 20px;
-}
-
-.content-section > p {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
-
-/* Scenario Cards */
-.scenarios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 60px 0;
-}
-
-.scenario-card {
-    background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
-    border: 1px solid #e0e8f0;
-    border-radius: 16px;
-    padding: 32px;
-    transition: all 0.3s ease;
-}
-
-.scenario-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-    border-color: var(--accent-gold);
-}
-
-.scenario-icon {
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(135deg, var(--accent-gold), #e8c87a);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    color: white;
-    margin-bottom: 16px;
-}
-
-.scenario-card h3 {
-    font-size: 1.2rem;
-    color: var(--primary-blue);
-    margin-bottom: 12px;
-}
-
-.scenario-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 16px;
-}
-
-.scenario-solution {
-    background: white;
-    border-left: 4px solid var(--accent-gold);
-    padding: 14px 16px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    color: var(--primary-blue);
-    font-weight: 600;
-}
-
-/* Solutions Section */
-.solutions-section {
-    background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
-    padding: 80px 5%;
-    margin: 60px 0;
-}
-
-.solutions-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.solutions-section h2 {
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.solution-item {
-    background: white;
-    border-radius: 12px;
-    padding: 32px;
-    margin-bottom: 24px;
-    border-left: 5px solid var(--accent-gold);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.solution-item h3 {
-    font-size: 1.3rem;
-    color: var(--primary-blue);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.solution-item h3 i {
-    color: var(--accent-gold);
-    font-size: 1.4rem;
-}
-
-.solution-item p {
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 16px;
-}
-
-.solution-steps {
-    background: #f8fafc;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 16px;
-}
-
-.solution-steps h4 {
-    color: var(--primary-blue);
-    font-size: 0.95rem;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.solution-steps ol {
-    margin-left: 20px;
-}
-
-.solution-steps li {
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
-
-/* FAQ Section */
-.faq-section {
-    padding: 80px 5%;
-    background: var(--white);
-}
-
-.faq-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-section h2 {
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.faq-item {
-    margin-bottom: 16px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.faq-question {
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    background: var(--white);
-    border: 1px solid #e0e8f0;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--primary-blue);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s;
-}
-
-.faq-question:hover {
-    background: #f8fafc;
-    border-color: var(--accent-gold);
-}
-
-.faq-answer {
-    padding: 0 20px 20px;
-    display: none;
-    color: var(--text-muted);
-    background: #f8fafc;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    border-left: 4px solid var(--accent-gold);
-}
-
-/* Related Posts Section */
-.related-posts-section {
-    padding: 80px 5%;
-    background-color: var(--white);
-}
-
-.related-posts-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.related-posts-section h2 {
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.related-posts-subtitle {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 1rem;
-    margin-bottom: 50px;
-}
-
-.related-posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.related-post-card {
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #f0f0f0;
-}
-
-.related-post-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    border-color: var(--accent-gold);
-}
-
-.related-post-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background: var(--bg-light);
-}
-
-.related-post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.related-post-card:hover .related-post-image img {
-    transform: scale(1.05);
-}
-
-.related-post-content {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex-grow: 1;
-}
-
-.related-post-content h3 {
-    font-size: 1.1rem;
-    color: var(--primary-blue);
-    line-height: 1.4;
-    margin: 0;
-}
-
-.related-post-content p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin: 0;
-}
-
-.related-post-meta {
-    display: flex;
-    gap: 16px;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-top: auto;
-}
-
-.related-post-meta span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.related-post-meta i {
-    color: var(--accent-gold);
-}
-
-/* Contact Section Area */
-.contact-section-area {
-    padding: 80px 5%;
-    background: linear-gradient(135deg, #0f1f30 0%, #172B41 50%, #1a3350 100%);
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-section-area::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(201,169,97,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.contact-section-area::after {
-    content: '';
-    position: absolute;
-    bottom: -80px;
-    right: -80px;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(37,211,102,0.06) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.contact-content {
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-.contact-section-area h2 {
-    font-size: 2.2rem;
-    margin-bottom: 16px;
-    color: white;
-}
-
-.contact-section-area p {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 36px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 60px 5% 20px;
-    margin-top: 80px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-col h4 {
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-}
-
-.footer-col a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.8rem;
-    color: #888;
-}
-
-/* Floating WhatsApp */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp-green);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
-    .hamburger { display: flex; }
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding-bottom: 15px;
-    }
-    nav.open { display: flex; }
-    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-    .top-bar { text-align: center; font-size: 0.75rem; }
-    .page-hero h1 { font-size: 2rem; }
-    .content-section { padding: 40px 5%; }
-    .scenarios-grid { grid-template-columns: 1fr; }
-    .solutions-section { padding: 40px 5%; }
-    .faq-section { padding: 40px 5%; }
-    .related-posts-grid { grid-template-columns: 1fr; }
-    .related-posts-section { padding: 40px 5%; }
-    .contact-section-area { padding: 40px 5%; }
-    .contact-section-area h2 { font-size: 1.6rem; }
-}
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pages-style.css">
 </head>
 <body>
 
@@ -780,296 +52,204 @@ footer {
     </header>
 
     <main>
-        
-            <section class="page-hero">
-                <div class="page-hero-content">
-                    <span class="page-hero-badge"><i class="fas fa-heart"></i> Direito de Família</span>
-                    <h1>Quando a vida familiar muda, <span>nós estamos aqui</span>.</h1>
-                    <p class="page-hero-subtitle">Separações, divórcios, guarda de filhos, pensão alimentícia... Situações difíceis que exigem mais do que conhecimento jurídico: exigem empatia, sensibilidade e uma verdadeira preocupação com o seu bem-estar e o de sua família.</p>
-                    <div class="page-hero-ctas">
-                        <a href="https://wa.me/5547996756766" class="btn-primary">
-                            <i class="fab fa-whatsapp"></i> Fale com um Especialista
-                        </a>
-                        <a href="#scenarios" class="btn-secondary">Conheça Nossas Soluções</a>
+
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <span class="page-hero-badge"><i class="fas fa-heart"></i> Direito de Família</span>
+                <h1>Quando a vida familiar muda, <span>nós estamos aqui</span>.</h1>
+                <p class="page-hero-subtitle">Separação, guarda, pensão, inventário. Mais do que técnica jurídica, esses momentos pedem escuta, sensibilidade e uma estratégia clara — para que a sua vida (e a de quem você ama) volte a fazer sentido o quanto antes.</h>
+                <div class="page-hero-ctas">
+                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale com um Especialista</a>
+                    <a href="#desenvolvimento" class="btn-secondary">Conheça nossa abordagem <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPO 70/30 -->
+        <section id="desenvolvimento" class="area-body">
+
+            <article class="prose-legal">
+                <h class="eyebrow">Sobre a área</h>
+                <h2>Direito de Família é, antes de tudo, sobre pessoas.</h2>
+
+                <h>Poucos momentos na vida exigem tanta clareza quanto uma mudança familiar. Você não está procurando um advogado porque quer — está aqui porque algo mudou, ou precisa mudar, e essa transição mexe com tudo: seus filhos, suas finanças, sua rotina, a casa em que você vive. <strong>O nosso papel é traduzir o jurídico para a sua realidade</strong> e devolver previsibilidade ao que parece caótico.</h>
+            <h>Trabalhamos com a premissa de que a melhor decisão não é necessariamente a mais dura, nem a mais rápida — é a que protege quem precisa ser protegido sem destruir o que ainda pode ser preservado. Quando há acordo possível, mediamos. Quando é hora de litigar, litigamos com técnica e firmeza.</h>
+
+                <h3>As situações mais comuns que você pode estar vivendo</h3>
+                <h>Talvez você tenha aberto esta página depois de uma conversa difícil em casa. Ou de uma audiência marcada às pressas. Ou só porque está pensando: <em>"e se um dia precisar?"</em> Em qualquer dos casos, vale conhecer os cenários mais frequentes — porque entender o terreno é o primeiro passo para escolher o caminho.</h>
+            <h><strong>Divórcio com dúvidas sobre bens e filhos.</strong> A maioria dos casais não sabe se cabe consensual ou litigioso — e essa decisão muda tudo. Avaliamos o regime de casamento, o que foi adquirido, como ficam guarda e visitas, e propomos o caminho mais curto e menos custoso emocionalmente.</h>
+            <h><strong>Guarda compartilhada que não está funcionando.</strong> Acordos antigos envelhecem: muda o trabalho, muda a escola, muda a maturidade da criança. A lei permite revisar, e em geral o juiz acolhe quando há prova de que a mudança atende ao melhor interesse do filho.</h>
+            <h><strong>Pensão alimentícia injusta — para quem paga ou para quem recebe.</strong> Valores fixados há anos podem estar defasados ou desproporcionais. Calculamos o que faz sentido hoje, à luz da renda real, das despesas comprovadas e da jurisprudência do seu estado.</h>
+            <h><strong>Inventário travado por desentendimento entre herdeiros.</strong> O luto já é pesado; não precisa virar processo de 5 anos. Quando há consenso possível, fazemos extrajudicial em cartório. Quando não há, organizamos a partilha com o mínimo de desgaste familiar.</h>
+
+                <blockquote class="pull-quote">
+                    <h>Em Direito de Família, o cliente raramente quer &#x27;ganhar&#x27;. Quer apenas continuar a viver — com dignidade, com os filhos por perto e sem medo do amanhã. Esse é o resultado que perseguimos.</h>
+                    <cite>— Gabriel Corrêa, advogado responsável</cite>
+                </blockquote>
+
+                <h3>Como conduzimos o seu caso, do primeiro contato à solução</h3>
+                <h>Toda demanda começa com uma conversa franca — sem juridiquês, sem promessa vazia. Ouvimos primeiro. Depois mapeamos riscos, custos e prazos realistas, e só então escolhemos a estratégia: cartório, mediação, ação judicial ou uma combinação delas. Você acompanha tudo por canal direto, com atendimento online em todo o Brasil.</h>
+            <h>Não cobramos consulta inicial e não inflamos processo. Se o caminho mais curto é um acordo de uma página, é isso que vamos perseguir. Se o outro lado obriga a litigar, brigamos com a documentação certa e a tese certa — não no grito.</h>
+
+                <h3>O que esperar de resultado</h3>
+                <h>Resultado, em Direito de Família, é uma palavra que precisa ser desarmada. Não prometemos sentenças — ninguém sério faz isso. Prometemos <strong>condução técnica, agilidade e proteção dos seus direitos</strong>, com relatório claro a cada passo e recomendação honesta nos momentos de decisão. Em mais de 90% dos casos consensuais que conduzimos, o cliente sai com o processo encerrado em menos de 90 dias.</h>
+            </article>
+
+            <aside class="area-sidebar">
+                <div class="sidebar-card">
+                    <span class="label">Cenários que atendemos</span>
+                    <ul>
+                <li>
+                    <span class="ico"><i class="fas fa-balance-scale"></i></span>
+                    <span class="txt"><strong>Divórcio</strong><span>Consensual ou litigioso, com proteção patrimonial.</span></span>
+                </li>
+                <li>
+                    <span class="ico"><i class="fas fa-users"></i></span>
+                    <span class="txt"><strong>Guarda &amp; visitas</strong><span>Acordos centrados no melhor interesse da criança.</span></span>
+                </li>
+                <li>
+                    <span class="ico"><i class="fas fa-coins"></i></span>
+                    <span class="txt"><strong>Pensão alimentícia</strong><span>Fixação, revisão e execução com valores justos.</span></span>
+                </li>
+                <li>
+                    <span class="ico"><i class="fas fa-shield-alt"></i></span>
+                    <span class="txt"><strong>Proteção &amp; urgência</strong><span>Medidas protetivas e combate à alienação parental.</span></span>
+                </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-cta">
+                    <h4>Não tem certeza por onde começar?</h4>
+                    <h>Conversa inicial sem custo, 100% online, em até 24h.</h>
+                    <a href="https://wa.me/5547996756766">Agendar conversa <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </aside>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="differentials">
+            <div class="differentials-grid">
+            <div class="differential-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Acordo antes de litígio</h3>
+                <h>Mediação familiar estruturada. Mais rápido, mais barato, menos doloroso para os filhos.</h>
+            </div>
+            <div class="differential-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Urgência tratada como urgência</h3>
+                <h>Medidas protetivas e ações cautelares ajuizadas no mesmo dia quando o caso exige.</h>
+            </div>
+            <div class="differential-item">
+                <i class="fas fa-check-circle"></i>
+                <h3>Transparência total</h3>
+                <h>Você sabe o custo, o prazo e o próximo passo. Sem surpresa, sem juridiquês.</h>
+            </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="faq-wrapper">
+                <h class="page-hero-badge">Perguntas Frequentes</h>
+                <h2>As dúvidas que mais ouvimos</h2>
+            <details class="faq-item">
+                <summary>Quanto tempo leva um divórcio?</summary>
+                <div class="faq-body"><h>O consensual costuma ser resolvido em poucas semanas, especialmente quando feito em cartório. O litigioso, quando há disputa sobre bens, guarda ou pensão, pode levar de 1 a 3 anos. Trabalhamos para encurtar prazos sempre que possível, priorizando acordos.</h></div>
+            </details>
+            <details class="faq-item">
+                <summary>Como é calculada a pensão alimentícia?</summary>
+                <div class="faq-body"><h>Não existe fórmula fixa. A lei manda equilibrar três coisas: a necessidade de quem recebe, a possibilidade de quem paga e o padrão de vida que a família tinha. Calculamos o valor justo e negociamos antes de judicializar.</h></div>
+            </details>
+            <details class="faq-item">
+                <summary>Posso mudar a guarda depois de definida?</summary>
+                <div class="faq-body"><h>Sim. Mudança de cidade, novo emprego, comportamento dos pais ou do próprio adolescente são motivos legítimos para revisar. O critério sempre é o melhor interesse da criança, comprovado por documentos e, quando preciso, por estudo psicossocial.</h></div>
+            </details>
+            <details class="faq-item">
+                <summary>Preciso de advogado em divórcio consensual?</summary>
+                <div class="faq-body"><h>Tecnicamente, no cartório, basta um advogado para o casal. Mas vale ter o seu — para garantir que o acordo não te faz abrir mão de direitos sobre bens, previdência ou pensão sem perceber.</h></div>
+            </details>
+            <details class="faq-item">
+                <summary>O que é alienação parental e o que a lei permite?</summary>
+                <div class="faq-body"><h>É quando um dos pais (ou outro familiar) afasta a criança do outro com mentiras, manipulação ou bloqueio de visitas. A Lei 12.318/2010 prevê desde advertência até alteração de guarda. Reagimos rápido com provas e medidas urgentes.</h></div>
+            </details>
+            <details class="faq-item">
+                <summary>Mediação familiar funciona mesmo?</summary>
+                <div class="faq-body"><h>Funciona, e em geral é mais rápida, mais barata e muito menos traumática para os filhos. Conduzimos mediações estruturadas e levamos o acordo para homologação judicial — com a mesma força de uma sentença.</h></div>
+            </details>
+            </div>
+        </section>
+
+        <!-- POSTS RELACIONADOS -->
+        <section class="related-posts-section">
+            <div class="related-posts-wrapper">
+                <p class="eyebrow">Do Blog</h>
+                <h2>Leituras que conversam com esta área</h2>
+                <p class="related-posts-subtitle">Conteúdos publicados (ou em breve) sobre Direito de Família.</h>
+                <div class="related-posts-grid">
+            <a href="blog.html" class="related-post-card" aria-label="Publicação relacionada — em breve">
+                <div class="related-post-image"></div>
+                <div class="related-post-content">
+                    <h3 style="opacity:0.45">Publicação relacionada em breve</h3>
+                    <p style="opacity:0.55">Artigo do blog conectado a esta área de atuação será exibido aqui.</h>
+                    <div class="related-post-meta">
+                        <span><i class="far fa-calendar"></i> A publicar</span>
                     </div>
                 </div>
-            </section>
-
-            <section class="content-section">
-                <div class="content-wrapper">
-                    <h2>Situações que você pode estar vivendo agora</h2>
-                    <p>Cada caso é único, mas muitas pessoas enfrentam desafios semelhantes. Aqui estão alguns cenários comuns que atendemos e como podemos ajudar:</p>
-
-                    <div class="scenarios-grid" id="scenarios">
-                        <div class="scenario-card">
-                            <div class="scenario-icon">
-                                <i class="fas fa-ring"></i>
-                            </div>
-                            <h3>Você quer se separar, mas tem dúvidas</h3>
-                            <p>Não sabe se deve fazer divórcio litigioso ou consensual? Tem filhos e não sabe como funciona a guarda? Está preocupado com os bens que serão divididos?</p>
-                            <div class="scenario-solution">
-                                <i class="fas fa-check-circle"></i> Orientamos sobre as melhores opções para seu caso
-                            </div>
-                        </div>
-
-                        <div class="scenario-card">
-                            <div class="scenario-icon">
-                                <i class="fas fa-child"></i>
-                            </div>
-                            <h3>Questões sobre guarda e visitas</h3>
-                            <p>Quer compartilhar a guarda? Está com dificuldades para exercer seu direito de visita? Precisa modificar um acordo anterior?</p>
-                            <div class="scenario-solution">
-                                <i class="fas fa-check-circle"></i> Defendemos seus direitos como pai ou mãe
-                            </div>
-                        </div>
-
-                        <div class="scenario-card">
-                            <div class="scenario-icon">
-                                <i class="fas fa-coins"></i>
-                            </div>
-                            <h3>Pensão alimentícia é complicada</h3>
-                            <p>Precisa fixar, revisar ou cobrar pensão alimentícia? Está pagando e acha que o valor é injusto? Não sabe como calcular o que é justo?</p>
-                            <div class="scenario-solution">
-                                <i class="fas fa-check-circle"></i> Negociamos valores justos e executamos quando necessário
-                            </div>
-                        </div>
-
-                        <div class="scenario-card">
-                            <div class="scenario-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h3>Herança e bens da família</h3>
-                            <p>Precisa fazer inventário? Tem conflitos sobre a partilha de bens? Quer proteger o patrimônio familiar?</p>
-                            <div class="scenario-solution">
-                                <i class="fas fa-check-circle"></i> Organizamos sucessões e evitamos conflitos futuros
-                            </div>
-                        </div>
-
-                        <div class="scenario-card">
-                            <div class="scenario-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h3>Proteção contra abuso ou alienação</h3>
-                            <p>Está sofrendo abuso? Seu ex está afastando os filhos de você? Precisa de medidas de proteção?</p>
-                            <div class="scenario-solution">
-                                <i class="fas fa-check-circle"></i> Agimos rápido para proteger você e sua família
-                            </div>
-                        </div>
-
-                        <div class="scenario-card">
-                            <div class="scenario-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <h3>Quer resolver tudo de forma amigável</h3>
-                            <p>Prefere negociar a ir para a justiça? Quer um processo rápido e menos traumático para os filhos?</p>
-                            <div class="scenario-solution">
-                                <i class="fas fa-check-circle"></i> Mediamos acordos que respeitam todos os envolvidos
-                            </div>
-                        </div>
+            </a>
+            <a href="blog.html" class="related-post-card" aria-label="Publicação relacionada — em breve">
+                <div class="related-post-image"></div>
+                <div class="related-post-content">
+                    <h3 style="opacity:0.45">Publicação relacionada em breve</h3>
+                    <p style="opacity:0.55">Artigo do blog conectado a esta área de atuação será exibido aqui.</h>
+                    <div class="related-post-meta">
+                        <span><i class="far fa-calendar"></i> A publicar</span>
                     </div>
                 </div>
-            </section>
-
-            <section class="solutions-section">
-                <div class="solutions-wrapper">
-                    <h2>Como resolvemos seus problemas</h2>
-
-                    <div class="solution-item">
-                        <h3><i class="fas fa-gavel"></i> Divórcio Consensual ou Litigioso</h3>
-                        <p>Se você e seu cônjuge conseguem chegar a um acordo, o divórcio consensual é mais rápido, barato e menos traumático. Se não conseguem, lutamos pelos seus direitos na justiça.</p>
-                        <div class="solution-steps">
-                            <h4>O que fazemos:</h4>
-                            <ol>
-                                <li>Avaliamos se o caso é consensual ou litigioso</li>
-                                <li>Negociamos os termos quando possível</li>
-                                <li>Preparamos toda a documentação necessária</li>
-                                <li>Representamos você em audiências e julgamentos</li>
-                                <li>Garantimos que seus direitos sejam respeitados</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="solution-item">
-                        <h3><i class="fas fa-users"></i> Guarda e Regulamentação de Visitas</h3>
-                        <p>Queremos que você tenha o máximo de tempo possível com seus filhos. Trabalhamos para estabelecer arranjos de guarda que funcionem para sua família.</p>
-                        <div class="solution-steps">
-                            <h4>O que fazemos:</h4>
-                            <ol>
-                                <li>Discutimos as melhores opções (guarda unilateral, compartilhada, etc.)</li>
-                                <li>Preparamos argumentos baseados no melhor interesse da criança</li>
-                                <li>Negociamos com a outra parte</li>
-                                <li>Representamos você em juízo se necessário</li>
-                                <li>Modificamos acordos quando as circunstâncias mudam</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="solution-item">
-                        <h3><i class="fas fa-dollar-sign"></i> Pensão Alimentícia</h3>
-                        <p>Ajudamos a fixar valores justos e a garantir que sejam pagos. Se você está recebendo, protegemos seu direito. Se está pagando, buscamos valores equitativos.</p>
-                        <div class="solution-steps">
-                            <h4>O que fazemos:</h4>
-                            <ol>
-                                <li>Calculamos o valor justo baseado na lei</li>
-                                <li>Negociamos com a outra parte</li>
-                                <li>Executamos judicialmente quando necessário</li>
-                                <li>Revisamos valores quando há mudanças de circunstâncias</li>
-                                <li>Protegemos seus direitos em todas as instâncias</li>
-                            </ol>
-                        </div>
-                    </div>
-
-                    <div class="solution-item">
-                        <h3><i class="fas fa-scroll"></i> Inventário e Partilha de Bens</h3>
-                        <p>Quando alguém falece, é necessário organizar a sucessão. Fazemos isso de forma clara, justa e sem conflitos desnecessários entre herdeiros.</p>
-                        <div class="solution-steps">
-                            <h4>O que fazemos:</h4>
-                            <ol>
-                                <li>Levantamos todos os bens e direitos do falecido</li>
-                                <li>Preparamos toda a documentação necessária</li>
-                                <li>Negociamos a partilha entre herdeiros</li>
-                                <li>Resolvemos conflitos quando surgem</li>
-                                <li>Finalizamos o processo de forma segura</li>
-                            </ol>
-                        </div>
+            </a>
+            <a href="blog.html" class="related-post-card" aria-label="Publicação relacionada — em breve">
+                <div class="related-post-image"></div>
+                <div class="related-post-content">
+                    <h3 style="opacity:0.45">Publicação relacionada em breve</h3>
+                    <p style="opacity:0.55">Artigo do blog conectado a esta área de atuação será exibido aqui.</h>
+                    <div class="related-post-meta">
+                        <span><i class="far fa-calendar"></i> A publicar</span>
                     </div>
                 </div>
-            </section>
-
-            <section class="faq-section">
-                <div class="faq-wrapper">
-                    <h2>Dúvidas Frequentes</h2>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Quanto tempo leva um divórcio?
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Um divórcio consensual pode ser finalizado em poucas semanas ou meses. Um divórcio litigioso pode levar de 1 a 3 anos, dependendo da complexidade do caso e da carga do tribunal. Trabalhamos para agilizar o processo ao máximo.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Como é calculada a pensão alimentícia?
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>A pensão é calculada considerando a renda de ambos os pais, as necessidades da criança e o padrão de vida que tinham. Não há uma fórmula fixa, mas a lei estabelece diretrizes. Negociamos valores justos para ambas as partes.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Posso mudar a guarda depois de estabelecida?
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Sim, a guarda pode ser modificada se houver mudanças significativas nas circunstâncias. Por exemplo, se um dos pais se muda para longe ou se há problemas de comportamento. Precisamos comprovar que a mudança é no melhor interesse da criança.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Preciso de advogado para um divórcio consensual?
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Tecnicamente não é obrigatório, mas é altamente recomendado. Um advogado garante que você não está abrindo mão de direitos importantes e que todos os documentos estão corretos. Isso protege você a longo prazo.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            O que é alienação parental?
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>É quando um dos pais afasta deliberadamente a criança do outro. Pode incluir falar mal do outro pai, impedir visitas ou manipular a criança. É crime e prejudica a criança. Se está acontecendo, podemos ajudar.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Como funciona a mediação familiar?
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Na mediação, um terceiro neutro (mediador) ajuda as partes a chegarem a um acordo. É menos adversarial que um processo judicial e geralmente mais rápido e barato. Muitos conflitos familiares são resolvidos assim.</p>
-                        </div>
-                    </div>
+            </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="related-posts-section">
-                <div class="related-posts-wrapper">
-                    <h2>Publicações Relacionadas</h2>
-                    <p class="related-posts-subtitle">Confira artigos do nosso blog que podem te interessar.</p>
-                    <div class="related-posts-grid">
-
-                        <a href="/blog/posts/adocao-no-brasil-quais-sao-as-etapas-os-requisitos-e-o-que-ninguem-te-conta.html" class="related-post-card">
-                            <div class="related-post-image">
-                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Adoção no Brasil: Quais São as Etapas, os Requisitos e o Que Ninguém Te Conta">
-                            </div>
-                            <div class="related-post-content">
-                                <h3>Adoção no Brasil: Quais São as Etapas, os Requisitos e o Que Ninguém Te Conta</h3>
-                                <p>Quer adotar uma criança mas não sabe por onde começar? Entenda todas as etapas do processo de adoção no Brasil, os requisitos legais e como um advogado pode te ajudar.</p>
-                                <div class="related-post-meta">
-                                    <span><i class="far fa-calendar"></i> 2026-04-27</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="/blog/posts/alienacao-parental-como-identificar-provar-e-o-que-a-lei-permite-fazer.html" class="related-post-card">
-                            <div class="related-post-image">
-                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Alienação Parental: Como Identificar, Provar e o Que a Lei Permite Fazer">
-                            </div>
-                            <div class="related-post-content">
-                                <h3>Alienação Parental: Como Identificar, Provar e o Que a Lei Permite Fazer</h3>
-                                <p>Seu filho está sendo afastado de você após a separação? Conheça a alienação parental, como identificá-la e quais medidas legais existem para proteger sua família.</p>
-                                <div class="related-post-meta">
-                                    <span><i class="far fa-calendar"></i> 2026-04-27</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="/blog/posts/divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer.html" class="related-post-card">
-                            <div class="related-post-image">
-                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer">
-                            </div>
-                            <div class="related-post-content">
-                                <h3>Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer</h3>
-                                <p>Sabia que é possível se divorciar sem ir ao tribunal? Entenda quando o divórcio em cartório é permitido, quais documentos você precisa e como o processo funciona.</p>
-                                <div class="related-post-meta">
-                                    <span><i class="far fa-calendar"></i> 2026-04-27</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact-section-area">
-                <div class="contact-content">
-                    <h2>Pronto para resolver sua situação?</h2>
-                    <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e receba uma orientação personalizada.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
-                </div>
-            </section>
+        <!-- CTA FINAL -->
+        <section class="contact-section-area">
+            <div class="contact-content">
+                <h2>Pronto para resolver sua situação?</h2>
+                <h>Conversa inicial sem custo, sigilo absoluto e atendimento 100% online em todo o Brasil.</h>
+                <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
+            </div>
+        </section>
 
     </main>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Advogado Gabriel Corrêa</h4>
-                <p>OAB/SC 63.737</p>
-                <p>Atendimento 100% Online em todo o Brasil</p>
+                <h4>Gabriel Corrêa</h4>
+                <h>OAB/SC 63.737</h>
+                <h>Atendimento 100% Online em todo o Brasil</h>
             </div>
             <div class="footer-col">
-                <h4>Links Úteis</h4>
+                <h4>Áreas de Atuação</h4>
+                <a href="trabalhista-empregado.html">Trabalhista — Empregado</a>
+                <a href="trabalhista-empresa.html">Trabalhista — Empresa</a>
+                <a href="familia.html">Direito de Família</a>
+                <a href="criminal.html">Direito Criminal</a>
+                <a href="contrato.html">Contratos</a>
+                <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+            </div>
+            <div class="footer-col">
+                <h4>Institucional</h4>
                 <a href="index.html">Início</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="blog.html">Blog</a>
@@ -1077,54 +257,20 @@ footer {
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(47) 99675-6766</p>
-                <p>escritorio.gabrielcorrea@gmail.com</p>
+                <h>(47) 99675-6766</h>
+                <h>escritorio.gabrielcorrea@gmail.com</h>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
+            &copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.
         </div>
     </footer>
 
-    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
     <script>
-        // Menu Sanduíche
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mainNav = document.getElementById('mainNav');
-        
-        if (hamburgerBtn && mainNav) {
-            hamburgerBtn.addEventListener('click', () => {
-                mainNav.classList.toggle('open');
-                const spans = hamburgerBtn.querySelectorAll('span');
-                if (mainNav.classList.contains('open')) {
-                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                    spans[1].style.opacity = '0';
-                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
-                } else {
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
-                }
-            });
-        }
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                } else {
-                    answer.style.display = 'block';
-                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                }
-            });
+        document.getElementById('hamburgerBtn')?.addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('open');
         });
     </script>
 </body>
