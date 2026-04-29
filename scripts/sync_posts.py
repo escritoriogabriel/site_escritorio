@@ -47,16 +47,28 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: var(--bg); 
         }}
 
+        /* Top Bar */
+        .top-bar {{
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            text-align: right;
+        }}
+        .top-bar a {{ color: white; text-decoration: none; }}
+
+        /* Header & Navigation */
         header {{ 
             background: var(--white); 
-            padding: 20px 5%; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            padding: 0 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            height: 80px;
         }}
 
         .logo {{
@@ -68,6 +80,95 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             height: 34px;
             width: auto;
             max-width: 260px;
+        }}
+
+        nav {{
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }}
+
+        .nav-links {{
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            align-items: center;
+        }}
+
+        .nav-links a {{
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: color 0.3s;
+        }}
+        .nav-links a:hover {{ color: var(--accent); }}
+
+        /* Dropdown */
+        .dropdown {{ position: relative; }}
+        .dropdown-content {{
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 260px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            z-index: 100;
+            top: 100%;
+            left: 0;
+            border-top: 3px solid var(--accent);
+            border-radius: 0 0 8px 8px;
+        }}
+        .dropdown:hover .dropdown-content {{ display: block; }}
+        .dropdown-content a {{
+            color: var(--text);
+            padding: 11px 16px;
+            display: block;
+            font-size: 0.88rem;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }}
+        .dropdown-content a:last-child {{ border-bottom: none; }}
+        .dropdown-content a:hover {{ background-color: #f8f8f8; color: var(--accent); }}
+
+        .btn-nav-whatsapp {{
+            background-color: var(--whatsapp);
+            color: white !important;
+            padding: 12px 22px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            border: none;
+            cursor: pointer;
+        }}
+        .btn-nav-whatsapp:hover {{
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            background-color: #22c55e;
+        }}
+
+        /* Hamburger */
+        .hamburger {{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }}
+        .hamburger span {{
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            transition: all 0.3s;
         }}
 
         .container {{ 
@@ -189,9 +290,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+    </div>
+
     <header>
         <a href="/index.html" class="logo"><img src="/assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-        <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="/index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="/trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
+                        <a href="/familia.html">Direito de Família</a>
+                        <a href="/criminal.html">Direito Criminal</a>
+                        <a href="/contrato.html">Contratos</a>
+                        <a href="/busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="/sobre.html">Sobre</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+        </nav>
     </header>
     
     <div class="container">

@@ -325,10 +325,11 @@ template = f"""<!DOCTYPE html>
                 <li class="dropdown">
                     <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="familia.html">Família</a>
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
+                        <a href="familia.html">Direito de Família</a>
+                        <a href="criminal.html">Direito Criminal</a>
                         <a href="contrato.html">Contratos</a>
-                        <a href="criminal.html">Criminal</a>
-                        <a href="trabalhista.html">Trabalhista</a>
                         <a href="busca-e-apreensao.html">Busca e Apreensão</a>
                     </div>
                 </li>
@@ -336,7 +337,7 @@ template = f"""<!DOCTYPE html>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         </nav>
     </header>
 
