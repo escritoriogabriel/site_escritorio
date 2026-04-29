@@ -256,10 +256,11 @@ nav { display: flex; align-items: center; gap: 28px; }
     line-height: 1.15;
     margin-bottom: 32px;
     color: var(--primary-blue);
+    text-align: left;
 }
 .prose-legal h3 {
     font-size: 1.5rem;
-    margin: 44px 0 16px;
+    margin: 10px 0px 10px 00px;
     color: var(--primary-blue);
 }
 .prose-legal p {
@@ -268,24 +269,15 @@ nav { display: flex; align-items: center; gap: 28px; }
     color: var(--text-body);
     margin-bottom: 1.3rem;
 }
-.prose-legal p:first-of-type::first-letter {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 3.6rem;
-    line-height: 0.9;
-    float: left;
-    padding: 0.4rem 0.7rem 0 0;
-    color: var(--primary-blue);
-    font-weight: 700;
-}
+
 .prose-legal strong { color: var(--primary-blue); font-weight: 600; }
 .prose-legal em { font-style: italic; color: var(--text-body); }
 
 /* Citação destacada */
 .pull-quote {
-    margin: 56px 0;
     background: var(--primary-blue);
     color: white;
-    padding: 48px 44px 40px;
+    padding: 20px 44px 20px;
     border-radius: 16px;
     box-shadow: var(--shadow-elegant);
     position: relative;
@@ -618,7 +610,6 @@ footer {
     .page-hero h1 { font-size: 2.1rem; }
     .page-hero-subtitle { font-size: 1.02rem; }
     .prose-legal h2 { font-size: 1.7rem; }
-    .prose-legal p:first-of-type::first-letter { font-size: 2.8rem; }
     .pull-quote { padding: 36px 26px 28px; }
     .pull-quote p { font-size: 1.18rem; }
     .faq-section { padding: 50px 5%; }
