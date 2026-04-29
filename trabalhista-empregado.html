@@ -3,196 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direito Trabalhista para Empregado | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Advogado trabalhista especializado na defesa do empregado. Demissão injusta, horas extras, assédio moral, reconhecimento de vínculo e muito mais. Atendimento online em todo o Brasil.">
-    <meta name="keywords" content="advogado trabalhista empregado, demissão sem justa causa, horas extras, assédio moral, reconhecimento de vínculo, verbas rescisórias, FGTS, Gabriel Corrêa">
+    <title>Direito Trabalhista | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Você trabalha todos os dias para ganhar seu salário. Merece ser tratado com respeito, receber tudo que é devido e ter um ambiente seguro. Se seus direitos estão sendo violados, estamos aqui para defender você.">
+    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
     <link rel="canonical" href="https://www.gabrielcorrea.adv.br/trabalhista-empregado.html">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.gabrielcorrea.adv.br/trabalhista-empregado.html">
-    <meta property="og:title" content="Direito Trabalhista para Empregado | Advogado Gabriel Corrêa">
-    <meta property="og:description" content="Defenda seus direitos trabalhistas com um advogado especializado. Atendimento online em todo o Brasil.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pages-style.css">
 </head>
 <body>
+
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
+    </div>
+
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="assets/img/logo.png" alt="Logo Gabriel Corrêa Advocacia"></a>
-        </div>
-        <nav>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)">Áreas de Atuação <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown-content">
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
                         <a href="familia.html">Direito de Família</a>
-                        <a href="trabalhista.html">Direito Trabalhista</a>
                         <a href="criminal.html">Direito Criminal</a>
                         <a href="contrato.html">Contratos</a>
                         <a href="busca-e-apreensao.html">Busca e Apreensão</a>
                     </div>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
             <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         </nav>
-        <button class="hamburger"><span></span><span></span><span></span></button>
     </header>
 
     <main>
         
             <section class="page-hero">
                 <div class="page-hero-content">
-                    <span class="page-hero-badge"><i class="fas fa-user-tie"></i> Direito Trabalhista para Empregados</span>
-                    <h1>Seus direitos no trabalho, <span>protegidos</span>.</h1>
-                    <p>O ambiente de trabalho deve ser um local de crescimento e respeito. Se você se sente lesado, desvalorizado ou teve seus direitos desrespeitados, estamos aqui para lutar por você. Oferecemos suporte jurídico especializado para que você receba tudo o que lhe é devido e encontre a justiça que merece.</p>
+                    <span class="page-hero-badge"><i class="fas fa-hard-hat"></i> Direito Trabalhista</span>
+                    <h1>Direito Trabalhista</h1>
+                    <p class="page-hero-subtitle">Você trabalha todos os dias para ganhar seu salário. Merece ser tratado com respeito, receber tudo que é devido e ter um ambiente seguro. Se seus direitos estão sendo violados, estamos aqui para defender você.</p>
                     <div class="page-hero-ctas">
                         <a href="https://wa.me/5547996756766" class="btn-primary">
-                            <i class="fab fa-whatsapp"></i> Fale Conosco
+                            <i class="fab fa-whatsapp"></i> Fale com um Especialista
                         </a>
-                        <a href="#areas-atuacao" class="btn-outline">Nossas Especialidades</a>
+                        <a href="#scenarios" class="btn-secondary">Conheça Nossas Soluções</a>
                     </div>
                 </div>
             </section>
 
-            <section class="content-section" id="areas-atuacao">
-                <h2 class="section-title">Nossas Especialidades em Direito Trabalhista para Empregados</h2>
-                <p class="section-subtitle">Entenda como podemos defender seus direitos e buscar a reparação que você merece.</p>
+            <section class="content-section">
+                <div class="content-wrapper">
+                    <h2>Situações que você pode estar vivendo agora</h2>
+                    <p>Cada caso é único, mas muitas pessoas enfrentam desafios semelhantes. Aqui estão alguns cenários comuns que atendemos e como podemos ajudar:</p>
 
-                <div class="service-area">
-                    <h3><i class="fas fa-gavel"></i> Rescisão Indireta: A "Justa Causa" do Empregado</h3>
-                    <p>Você sabia que, em algumas situações, é o empregador quem comete uma "justa causa" contra você? A rescisão indireta é o direito do trabalhador de "demitir" a empresa e receber todos os seus direitos, como se tivesse sido demitido sem justa causa. Isso acontece quando o empregador não cumpre o contrato de trabalho, como atrasar salários, não recolher o FGTS, praticar assédio moral ou exigir tarefas que coloquem sua saúde em risco.</p>
-                    <h4>Cenários Comuns:</h4>
-                    <ul>
-                        <li>**Atraso Constante de Salários:** Seu pagamento nunca chega na data certa.</li>
-                        <li>**Assédio Moral:** Você sofre humilhações, perseguições ou é constantemente desrespeitado.</li>
-                        <li>**Não Recolhimento de FGTS:** A empresa não deposita seu Fundo de Garantia.</li>
-                        <li>**Exigência de Tarefas Perigosas:** Você é obrigado a trabalhar em condições que colocam sua vida em risco.</li>
-                    </ul>
-                    <h4>Como Podemos Ajudar:</h4>
-                    <p>Analisamos seu caso, reunimos as provas necessárias e entramos com a ação para garantir que você saia da empresa com todos os seus direitos e indenizações devidas.</p>
+                    <div class="scenarios-grid" id="scenarios">
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <h3>Demissão sem justa causa</h3>
+                            <p>Perdeu o emprego do nada? Não sabe quais são seus direitos?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Cobramos todas as verbas e questionamos demissões injustas
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Horas extras não remuneradas</h3>
+                            <p>Trabalha além do horário sem receber?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Cobramos todas as horas com acréscimos legais
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3>Assédio no ambiente de trabalho</h3>
+                            <p>Sofre assédio moral ou sexual?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Protegemos você e cobramos indenização
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3>Acidente ou doença ocupacional</h3>
+                            <p>Sofreu acidente? Tem doença do trabalho?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Cobramos indenizações e benefícios
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <h3>Salário atrasado</h3>
+                            <p>Seu salário está atrasado?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Cobramos com juros e multa
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Direitos não respeitados</h3>
+                            <p>Empresa não respeita seus direitos?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Orientamos e cobramos judicialmente
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </section>
 
-                <div class="service-area">
-                    <h3><i class="fas fa-money-bill-wave"></i> Verbas Rescisórias e Horas Extras: Receba o que é Seu</h3>
-                    <p>Ao final de um contrato de trabalho, seja por demissão ou pedido de demissão, você tem direitos a receber. Muitas vezes, as empresas não pagam corretamente o aviso prévio, férias, 13º salário, FGTS e outras verbas. Além disso, se você trabalhou além do horário sem receber por isso (horas extras), ou em condições insalubres/perigosas sem o adicional devido, nós lutamos para que cada centavo seja pago.</p>
-                    <h4>Cenários Comuns:</h4>
-                    <ul>
-                        <li>**Demissão Injusta:** Você foi demitido e não recebeu todas as verbas rescisórias.</li>
-                        <li>**Horas Extras Não Pagas:** Você trabalha mais e não é remunerado por isso.</li>
-                        <li>**Diferenças Salariais:** Seu salário está abaixo do piso da categoria ou do que foi acordado.</li>
-                        <li>**Desvio de Função:** Você exerce uma função de maior responsabilidade, mas recebe salário de outra.</li>
-                    </ul>
-                    <h4>Como Podemos Ajudar:</h4>
-                    <p>Realizamos o cálculo detalhado de todas as suas verbas e entramos com a ação judicial para garantir o pagamento correto e a reparação por qualquer irregularidade.</p>
-                </div>
+            <section class="solutions-section">
+                <div class="solutions-wrapper">
+                    <h2>Como resolvemos seus problemas</h2>
 
-                <div class="service-area">
-                    <h3><i class="fas fa-user-times"></i> Assédio Moral e Sexual: Diga Não à Violência no Trabalho</h3>
-                    <p>Ninguém deve ser submetido a situações de assédio no trabalho. O assédio moral (humilhações, perseguições) e o assédio sexual (propostas indecorosas, toques indesejados) são crimes e condutas inaceitáveis que causam danos profundos. Se você está passando por isso, saiba que tem direito a proteção, indenização e a um ambiente de trabalho seguro. Atuamos com total discrição e rigor para coibir essas práticas e buscar a reparação pelos danos sofridos.</p>
-                    <h4>Cenários Comuns:</h4>
-                    <ul>
-                        <li>**Humilhações Constantes:** Você é alvo de piadas, críticas excessivas ou é isolado no ambiente de trabalho.</li>
-                        <li>**Pressão Psicológica Abusiva:** Seu chefe ou colegas usam táticas para desestabilizá-lo emocionalmente.</li>
-                        <li>**Propostas Indecorosas:** Você recebe investidas de cunho sexual de superiores ou colegas.</li>
-                        <li>**Discriminação:** Você é tratado de forma diferente por sua raça, gênero, orientação sexual, religião, etc.</li>
-                    </ul>
-                    <h4>Como Podemos Ajudar:</h4>
-                    <p>Oferecemos acolhimento, orientação sobre como reunir provas e representação jurídica para buscar a indenização e a cessação imediata do assédio.</p>
-                </div>
 
-                <div class="service-area">
-                    <h3><i class="fas fa-briefcase-medical"></i> Acidente de Trabalho e Doenças Ocupacionais: Sua Saúde em Primeiro Lugar</h3>
-                    <p>Um acidente ou uma doença desenvolvida por causa do trabalho pode mudar sua vida drasticamente. Além do sofrimento físico e emocional, há impactos financeiros. Se você sofreu um acidente de trabalho ou desenvolveu uma doença ocupacional (como LER/DORT, problemas de coluna, estresse crônico), você tem direitos como estabilidade no emprego, indenização por danos materiais e morais, e benefícios previdenciários. Lutamos para que você tenha todo o suporte necessário para sua recuperação e para garantir seus direitos.</p>
-                    <h4>Cenários Comuns:</h4>
-                    <ul>
-                        <li>**Lesões Físicas:** Você se machucou durante o expediente ou no trajeto casa-trabalho.</li>
-                        <li>**Doenças Relacionadas ao Trabalho:** LER/DORT, problemas de coluna, transtornos psicológicos.</li>
-                        <li>**Falta de Equipamentos de Segurança:** A empresa não forneceu os EPIs necessários, resultando em acidente.</li>
-                        <li>**Ambiente de Trabalho Insalubre:** Exposição a agentes nocivos à saúde sem a devida proteção.</li>
-                    </ul>
-                    <h4>Como Podemos Ajudar:</h4>
-                    <p>Auxiliamos na obtenção de laudos, na comunicação do acidente, na busca por benefícios previdenciários e na ação de indenização contra a empresa, garantindo sua proteção e reparação.</p>
+                    <div class="solution-item">
+                        <h3><i class="fas fa-check"></i> Cobrança de Verbas Rescisórias</h3>
+                        <p>Demitido? Você tem direito a: aviso prévio, 13º proporcional, férias não usadas, FGTS e mais.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Análise da demissão</li>
+                                <li>Cálculo de todas as verbas</li>
+                                <li>Negociação com empresa</li>
+                                <li>Ação judicial se necessário</li>
+                                <li>Recebimento com juros e multa</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-check"></i> Ação por Horas Extras</h3>
+                        <p>Trabalhou além do horário? Tem direito a 50% de acréscimo. Cobramos tudo.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Documentação das horas</li>
+                                <li>Cálculo com acréscimos</li>
+                                <li>Coleta de provas</li>
+                                <li>Ação judicial</li>
+                                <li>Cobrança com juros</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-check"></i> Proteção contra Assédio e Discriminação</h3>
+                        <p>Ninguém merece ser assediado ou discriminado. Agimos rápido.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Documentação do assédio</li>
+                                <li>Coleta de provas</li>
+                                <li>Comunicação à empresa</li>
+                                <li>Ação judicial</li>
+                                <li>Indenização por danos morais</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-check"></i> Benefícios Previdenciários</h3>
+                        <p>Acidente de trabalho ou doença ocupacional? Tem direito a benefícios.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Comunicação ao INSS</li>
+                                <li>Coleta de laudos médicos</li>
+                                <li>Acompanhamento do processo</li>
+                                <li>Ação contra empresa se necessário</li>
+                                <li>Indenização por danos</li>
+                            </ol>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
             <section class="faq-section">
-                <h2 class="section-title">Perguntas Frequentes</h2>
-                <p class="section-subtitle">Respostas claras para suas principais dúvidas sobre Direito Trabalhista para Empregados.</p>
-                <div class="faq">
-                    <button class="faq-question">
-                        Fui demitido sem justa causa, quais são os meus direitos?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Você tem direito a aviso prévio (trabalhado ou indenizado), saldo de salário, férias vencidas e proporcionais (com 1/3), 13º salário proporcional, saque do FGTS mais a multa de 40%, e seguro-desemprego. É crucial verificar se todos esses valores foram pagos corretamente.</p>
+                <div class="faq-wrapper">
+                    <h2>Dúvidas Frequentes</h2>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quanto tempo tenho para cobrar direitos?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Você tem até 2 anos para cobrar na justiça. Quanto mais cedo agir, melhor.</p>
+                        </div>
                     </div>
 
-                    <button class="faq-question">
-                        A empresa não está depositando meu FGTS, o que posso fazer?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>A falta de depósito do FGTS é uma falha grave do empregador. Você pode buscar a rescisão indireta do contrato de trabalho, o que lhe garante todos os direitos de uma demissão sem justa causa, além de poder cobrar os valores não depositados judicialmente. Um advogado trabalhista pode te orientar sobre como proceder.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Preciso pagar para processar a empresa?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. Você pode pedir justiça gratuita se não tiver recursos. Também pode pagar com parte da indenização.</p>
+                        </div>
                     </div>
 
-                    <button class="faq-question">
-                        Sofri um acidente no trabalho, tenho direito a indenização?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim, se o acidente ocorreu em decorrência do trabalho ou no trajeto casa-trabalho, você pode ter direito a indenização por danos materiais (gastos com tratamento, lucros cessantes) e morais. Além disso, pode ter direito a estabilidade no emprego por 12 meses após o retorno ao trabalho e benefícios previdenciários. É essencial procurar um advogado para avaliar seu caso.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Meu patrão pode me demitir por estar doente?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não. Isso é discriminação. Você pode questionar e cobrar indenização.</p>
+                        </div>
                     </div>
 
-                    <button class="faq-question">
-                        O que é assédio moral no trabalho e como provar?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Assédio moral é a exposição do trabalhador a situações humilhantes e vexatórias, repetitivas e prolongadas, durante a jornada de trabalho. Para provar, é importante reunir evidências como e-mails, mensagens, testemunhas, gravações (se permitidas por lei), atestados médicos e relatórios psicológicos. Um advogado pode te ajudar a construir um caso sólido.</p>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como provar horas extras?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Documentos, testemunhas, registros de ponto, mensagens, emails. Tudo que prove que você trabalhou além do horário.</p>
+                        </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Posso recusar fazer horas extras?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Depende do seu contrato. Mas se fizer, tem direito a compensação ou pagamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            O que fazer se sofrer acidente no trabalho?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Comunique imediatamente, procure médico, registre tudo e procure um advogado. Você tem direitos.</p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
-
-            <section class="blog-related-posts-section">
-                <h2 class="section-title">Publicações Relacionadas</h2>
-                <p class="section-subtitle">Confira artigos do nosso blog que podem te interessar.</p>
-                <div class="posts-grid">
-                    <div class="blog-post-card">
-                        <a href="blog/posts/rescisao-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demissao-com-direitos.html">
-                            <img src="blog/images/TRABALHISTA_rescisao.jpg" alt="Rescisão Indireta">
-                            <h3>Rescisão Indireta: Quando o empregador comete a falta e o trabalhador pode pedir demissão com direitos.</h3>
-                            <p>Entenda seus direitos em caso de falta grave do empregador.</p>
-                        </a>
-                    </div>
-                    <div class="blog-post-card">
-                        <a href="blog/posts/horas-extras-nao-pagas-o-que-fazer-e-como-garantir-seus-direitos.html">
-                            <img src="blog/images/TRABALHISTA_horas.jpg" alt="Horas Extras">
-                            <h3>Horas Extras Não Pagas: O que fazer e como garantir seus direitos.</h3>
-                            <p>Saiba como reclamar suas horas extras e receber o que é seu.</p>
-                        </a>
-                    </div>
-                    <div class="blog-post-card">
-                        <a href="blog/posts/acidente-de-trabalho-seus-direitos-e-como-buscar-indenizacao.html">
-                            <img src="blog/images/TRABALHISTA_acidente.jpg" alt="Acidente de Trabalho">
-                            <h3>Acidente de Trabalho: Seus direitos e como buscar indenização.</h3>
-                            <p>Guia completo sobre como agir em caso de acidente de trabalho.</p>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact-section-area">
-                <div class="contact-content">
-                    <h2>Seus direitos trabalhistas estão sendo desrespeitados?</h2>
-                    <p>Não deixe que a injustiça prevaleça. Conte com nossa equipe especializada para lutar por você e garantir que todos os seus direitos sejam respeitados e devidamente pagos.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
-                </div>
-            </section>
-
 
             <section class="related-posts-section">
                 <div class="related-posts-wrapper">
@@ -250,49 +330,37 @@
                     <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
                 </div>
             </section>
+
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-grid">
             <div class="footer-col">
-                <img src="assets/img/logo-white.png" alt="Logo Gabriel Corrêa Advocacia" class="footer-logo">
-                <p>Compromisso, ética e excelência na defesa dos seus direitos. Atendimento personalizado e focado em resultados.</p>
+                <h4>Advogado Gabriel Corrêa</h4>
+                <p>OAB/SC 63.737</p>
+                <p>Atendimento 100% Online em todo o Brasil</p>
             </div>
             <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Áreas de Atuação</h4>
-                <ul>
-                    <li><a href="familia.html">Direito de Família</a></li>
-                    <li><a href="trabalhista.html">Direito Trabalhista</a></li>
-                    <li><a href="criminal.html">Direito Criminal</a></li>
-                    <li><a href="contrato.html">Contratos</a></li>
-                    <li><a href="busca-e-apreensao.html">Busca e Apreensão</a></li>
-                </ul>
+                <h4>Links Úteis</h4>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html">Contato</a>
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Rua 123, Sala 456, Centro, Cidade-UF</p>
-                <p><i class="fas fa-phone"></i> (47) 99675-6766</p>
-                <p><i class="fas fa-envelope"></i> contato@gabrielcorrea.adv.br</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <p>(47) 99675-6766</p>
+                <p>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
         </div>
     </footer>
+
+    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="assets/js/main.js"></script>
 </body>
