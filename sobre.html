@@ -3,314 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim | Advogado Gabriel Corrêa | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Conheça o Dr. Gabriel Corrêa, advogado com foco em soluções jurídicas práticas e eficientes. Proximidade, clareza e compromisso real com seus direitos.">
-    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
+    <title>Sobre o Escritório | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Conheça o escritório e a trajetória do Advogado Gabriel Corrêa. Advocacia estratégica, humanizada e focada em resultados — atendimento 100% online em todo o Brasil.">
     <link rel="canonical" href="https://www.gabrielcorrea.adv.br/sobre.html">
-    
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="pages-style.css">
+
     <style>
-        
-:root {
-    --primary-blue: #172B41;
-    --accent-gold: #C9A961;
-    --bg-light: #F8F8F8;
-    --whatsapp-green: #25D366;
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --white: #FFFFFF;
-}
+        /* ============================================================
+           SOBRE — estilos específicos
+           ============================================================ */
+        .about-hero {
+            padding: 120px 5% 100px;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(201,169,97,0.20) 0%, transparent 45%),
+                radial-gradient(circle at 10% 80%, rgba(23,43,65,0.10) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg-paper) 0%, var(--accent-gold-soft) 100%);
+            position: relative; overflow: hidden;
+        }
+        .about-hero::after {
+            content: ''; position: absolute; inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(23,43,65,0.06) 1px, transparent 0);
+            background-size: 28px 28px; opacity: 0.5; pointer-events: none;
+        }
+        .about-hero-content {
+            max-width: 1200px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 70px;
+            align-items: center;
+            position: relative; z-index: 1;
+        }
+        .about-hero-text .eyebrow {
+            font-size: 0.74rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3.5px;
+            color: var(--accent-gold-deep); margin-bottom: 22px;
+            font-family: var(--font-sans); display: inline-block;
+        }
+        .about-hero-text .eyebrow::after {
+            content: ''; display: inline-block; width: 36px; height: 1px;
+            background: var(--accent-gold); vertical-align: middle; margin-left: 14px;
+        }
+        .about-hero h1 {
+            font-size: clamp(2.4rem, 5.2vw, 3.6rem);
+            line-height: 1.06;
+            margin-bottom: 26px;
+            color: var(--primary-blue);
+        }
+        .about-hero h1 em {
+            color: var(--accent-gold-deep);
+            font-style: italic; font-weight: 600;
+        }
+        .about-hero p {
+            font-size: 1.12rem;
+            color: var(--text-body);
+            line-height: 1.78;
+            margin-bottom: 28px;
+            max-width: 540px;
+        }
+        .about-hero-meta {
+            display: flex; gap: 32px; flex-wrap: wrap;
+            padding-top: 24px; border-top: 1px solid rgba(23,43,65,0.12);
+            margin-top: 8px;
+        }
+        .about-hero-meta div { display: flex; flex-direction: column; gap: 2px; }
+        .about-hero-meta strong {
+            font-family: var(--font-serif);
+            font-size: 1.6rem; color: var(--primary-blue);
+        }
+        .about-hero-meta span {
+            font-size: 0.78rem; text-transform: uppercase;
+            letter-spacing: 1.5px; color: var(--text-muted);
+            font-family: var(--font-sans); font-weight: 500;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* Imagem do perfil */
+        .profile-frame {
+            position: relative;
+            aspect-ratio: 4/5;
+            max-width: 460px;
+            margin-left: auto;
+        }
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            top: 24px; left: 24px;
+            width: 100%; height: 100%;
+            border: 2px solid var(--accent-gold);
+            border-radius: var(--radius-lg);
+            z-index: 0;
+        }
+        .profile-image {
+            position: relative; z-index: 1;
+            width: 100%; height: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--accent-gold-soft), #e8e2d2);
+            box-shadow: var(--shadow-elegant);
+        }
+        .profile-image img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .profile-image-placeholder {
+            width: 100%; height: 100%;
+            display: grid; place-items: center;
+            color: var(--accent-gold-deep);
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, var(--accent-gold-soft) 0%, #ede5cd 100%);
+        }
+        .profile-badge {
+            position: absolute;
+            bottom: -20px; left: -20px;
+            background: var(--white);
+            padding: 18px 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-elevated);
+            border-left: 4px solid var(--accent-gold);
+            z-index: 2;
+            display: flex; align-items: center; gap: 14px;
+            font-family: var(--font-sans);
+        }
+        .profile-badge i {
+            color: var(--accent-gold-deep);
+            font-size: 1.5rem;
+        }
+        .profile-badge .pb-text strong {
+            display: block; color: var(--primary-blue);
+            font-size: 0.95rem; font-weight: 700;
+        }
+        .profile-badge .pb-text span {
+            font-size: 0.78rem; color: var(--text-muted);
+        }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
+        /* Manifesto / valores em cards editorial */
+        .manifesto-section {
+            padding: 110px 5%;
+            background: var(--white);
+        }
+        .manifesto-wrapper { max-width: 1200px; margin: 0 auto; }
+        .section-eyebrow {
+            text-align: center;
+            display: block;
+            font-size: 0.74rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3.5px;
+            color: var(--accent-gold-deep); margin-bottom: 14px;
+            font-family: var(--font-sans);
+        }
+        .section-title-large {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+            line-height: 1.15;
+        }
+        .section-title-large em {
+            color: var(--accent-gold-deep);
+            font-style: italic; font-weight: 600;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.08rem;
+            color: var(--text-muted);
+            max-width: 640px; margin: 0 auto 64px;
+            line-height: 1.7;
+        }
 
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .value-card {
+            background: var(--bg-paper);
+            border: 1px solid var(--border-soft);
+            padding: 40px 32px;
+            border-radius: var(--radius-lg);
+            transition: all 0.4s var(--ease);
+            position: relative;
+            overflow: hidden;
+        }
+        .value-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 4px; height: 0;
+            background: var(--accent-gold);
+            transition: height 0.4s var(--ease);
+        }
+        .value-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-elevated);
+            background: var(--white);
+        }
+        .value-card:hover::before { height: 100%; }
+        .value-icon {
+            width: 56px; height: 56px;
+            background: var(--primary-blue);
+            color: var(--accent-gold);
+            border-radius: var(--radius-md);
+            display: grid; place-items: center;
+            font-size: 1.4rem;
+            margin-bottom: 22px;
+            transition: all 0.4s var(--ease);
+        }
+        .value-card:hover .value-icon {
+            background: var(--accent-gold);
+            color: var(--white);
+            transform: rotate(-6deg) scale(1.05);
+        }
+        .value-card h3 {
+            font-size: 1.35rem;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
+        }
+        .value-card p {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            line-height: 1.7;
+        }
 
-/* Top Bar */
-.top-bar {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 8px 5%;
-    font-size: 0.85rem;
-    text-align: right;
-}
+        /* Trajetória / timeline */
+        .journey-section {
+            padding: 110px 5%;
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .journey-section::before {
+            content: '';
+            position: absolute; top: 0; right: -100px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(201,169,97,0.18), transparent 70%);
+            pointer-events: none;
+        }
+        .journey-wrapper {
+            max-width: 880px; margin: 0 auto;
+            position: relative; z-index: 1;
+        }
+        .timeline { position: relative; padding-left: 48px; }
+        .timeline::before {
+            content: ''; position: absolute;
+            left: 14px; top: 8px; bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-gold), transparent);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 44px;
+            padding-left: 8px;
+        }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -41px; top: 6px;
+            width: 14px; height: 14px;
+            background: var(--white);
+            border: 3px solid var(--accent-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(201,169,97,0.18);
+        }
+        .timeline-year {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--accent-gold);
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 0.78rem;
+            font-weight: 700;
+            font-family: var(--font-sans);
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .timeline-item h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        .timeline-item p {
+            color: var(--text-body);
+            font-size: 1rem;
+            line-height: 1.75;
+        }
 
-/* Header & Navigation */
-header {
-    background-color: var(--white);
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 80px;
-}
+        /* Áreas de atuação compactas */
+        .expertise-section {
+            padding: 110px 5%;
+            background: var(--white);
+        }
+        .expertise-wrapper { max-width: 1200px; margin: 0 auto; }
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 960px; margin: 0 auto;
+        }
+        .expertise-item {
+            display: flex;
+            gap: 22px;
+            padding: 28px;
+            background: var(--bg-paper);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-soft);
+            transition: all 0.3s var(--ease);
+            text-decoration: none;
+            color: inherit;
+        }
+        .expertise-item:hover {
+            border-color: var(--accent-gold);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-card);
+        }
+        .expertise-number {
+            flex-shrink: 0;
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-deep) 100%);
+            border-radius: var(--radius-sm);
+            display: grid; place-items: center;
+            color: var(--accent-gold);
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .expertise-content h4 {
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+            font-family: var(--font-serif);
+        }
+        .expertise-content p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
 
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
+        /* CTA Final */
+        .about-cta {
+            padding: 100px 5%;
+            background: linear-gradient(135deg, var(--primary-blue-deep) 0%, var(--primary-blue) 50%, #1a3350 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-cta::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: radial-gradient(circle at 50% 30%, rgba(201,169,97,0.18) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .about-cta-content {
+            max-width: 720px; margin: 0 auto;
+            position: relative; z-index: 1;
+        }
+        .about-cta h2 {
+            color: white;
+            font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+            margin-bottom: 18px;
+        }
+        .about-cta h2 em {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+        .about-cta p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.08rem;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .about-cta-buttons {
+            display: flex; gap: 14px;
+            justify-content: center; flex-wrap: wrap;
+        }
+        .btn-cta-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.4);
+            padding: 14.5px 30px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center; gap: 10px;
+            transition: all 0.3s var(--ease);
+            font-family: var(--font-sans);
+        }
+        .btn-cta-outline:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
 
-.logo img {
-    height: 34px;
-    width: auto;
-    max-width: 260px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--accent-gold);
-}
-
-/* Hamburger menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    background: none;
-    border: none;
-    padding: 5px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-blue);
-    border-radius: 3px;
-    transition: all 0.3s;
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    z-index: 1;
-    top: 100%;
-    border-top: 3px solid var(--accent-gold);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: var(--text-dark);
-    padding: 12px 16px;
-    display: block;
-    font-size: 0.9rem;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--bg-light);
-}
-
-.btn-nav-whatsapp {
-    background-color: var(--whatsapp-green);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.btn-nav-whatsapp:hover {
-    transform: translateY(-2px);
-    color: white !important;
-}
-
-/* Page Header (for subpages) */
-.page-header {
-    padding: 60px 5%;
-    background-color: var(--primary-blue);
-    color: white;
-    text-align: center;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* Content Sections */
-.content-section {
-    padding: 80px 5%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.cta-box {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top: 40px;
-}
-
-.btn-cta {
-    background-color: var(--whatsapp-green);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 60px 5% 20px;
-    margin-top: 80px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-col h4 {
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-}
-
-.footer-col a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.8rem;
-    color: #888;
-}
-
-/* Floating WhatsApp */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp-green);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-decoration: none;
-}
-
-/* Profile Section */
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.profile-image {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background-color: #ddd;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 20px 20px 0 var(--accent-gold);
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
-    .hamburger { display: flex; }
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding-bottom: 15px;
-    }
-    nav.open { display: flex; }
-    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-    .top-bar { text-align: center; font-size: 0.75rem; }
-    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
-    .profile-image { max-width: 250px; margin: 0 auto; box-shadow: 10px 10px 0 var(--accent-gold); }
-    .page-header h1 { font-size: 1.8rem; }
-    .content-section { padding: 40px 5%; }
-}
-
+        @media (max-width: 980px) {
+            .about-hero-content { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+            .about-hero p { margin-left: auto; margin-right: auto; }
+            .about-hero-meta { justify-content: center; }
+            .profile-frame { margin: 0 auto; max-width: 380px; }
+            .values-grid { grid-template-columns: 1fr; }
+            .expertise-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .about-hero { padding: 70px 5% 80px; }
+            .manifesto-section, .journey-section, .expertise-section, .about-cta {
+                padding: 70px 5%;
+            }
+            .timeline { padding-left: 36px; }
+            .timeline::before { left: 10px; }
+            .timeline-item::before { left: -33px; width: 12px; height: 12px; }
+            .profile-badge { left: -10px; bottom: -16px; padding: 14px 18px; }
+            .profile-badge i { font-size: 1.2rem; }
+            .profile-badge .pb-text strong { font-size: 0.85rem; }
+            .profile-badge .pb-text span { font-size: 0.7rem; }
+        }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
 
-    <header>
-        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+    <header id="siteHeader">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa" onerror="this.outerHTML='Advogado Gabriel Corrêa'"></a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </button>
@@ -318,70 +441,216 @@ footer {
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li class="dropdown">
-                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 4px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
-                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                        <a href="familia.html">Direito de Família</a>
-                        <a href="criminal.html">Direito Criminal</a>
-                        <a href="contrato.html">Contratos</a>
-                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i>Trabalhista — Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i>Trabalhista — Empresa</a>
+                        <a href="familia.html"><i class="fas fa-heart"></i>Direito de Família</a>
+                        <a href="criminal.html"><i class="fas fa-balance-scale"></i>Criminal</a>
+                        <a href="contrato.html"><i class="fas fa-file-contract"></i>Contratos</a>
+                        <a href="busca-e-apreensao.html"><i class="fas fa-search-location"></i>Busca e Apreensão</a>
                     </div>
                 </li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </nav>
     </header>
 
     <main>
-        
-            <section class="page-header">
-                <h1>Sobre o Advogado</h1>
-                <p>Ética, transparência e dedicação em cada caso.</p>
-            </section>
-            <section class="content-section">
-                <div class="profile-grid">
-                    <div class="profile-image">
-                        <img src="assets/img/advogado-gabriel.webp" alt="Dr. Gabriel Corrêa">
-                    </div>
-                    <div class="profile-text">
-                        <h2 style="color: var(--primary-blue); margin-bottom: 15px;">Dr. Gabriel Corrêa</h2>
-                        <p style="color: var(--accent-gold); font-weight: 700; margin-bottom: 20px;">OAB/SC 63.737</p>
-                        <p style="margin-bottom: 20px;">Com uma trajetória pautada pela ética e pela busca incessante por justiça, o Dr. Gabriel Corrêa fundou seu escritório com um propósito claro: humanizar o atendimento jurídico e entregar resultados reais através de uma advocacia estratégica e moderna.</p>
-                        <p style="margin-bottom: 20px;">Especialista em lidar com questões complexas de forma simples e direta, Gabriel acredita que a tecnologia deve ser uma aliada para aproximar o advogado do cliente, permitindo um atendimento ágil e eficiente em qualquer lugar do Brasil.</p>
-                        <p>Seja em questões de família, contratos ou defesa criminal, cada caso é tratado com a máxima dedicação e sigilo, garantindo que você tenha não apenas um advogado, mas um parceiro estratégico na defesa dos seus direitos.</p>
-                        <div class="cta-box">
-                            <h3>Precisa de uma avaliação do seu caso?</h3>
-                            <p>Fale diretamente com o Dr. Gabriel pelo WhatsApp.</p>
-                            <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Iniciar Atendimento</a>
+        <!-- HERO -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <div class="about-hero-text fade-up">
+                    <span class="eyebrow">Sobre o escritório</span>
+                    <h1>Advocacia <em>estratégica</em>, atendimento <em>humano</em>.</h1>
+                    <p>Acreditamos que cada caso carrega uma história — e que o papel do advogado é traduzir o Direito em soluções claras, próximas e eficazes para a vida real do cliente.</p>
+                    <div class="about-hero-meta">
+                        <div>
+                            <strong>+8</strong>
+                            <span>Anos de atuação</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Atendimento online</span>
+                        </div>
+                        <div>
+                            <strong>SC&nbsp;63.737</strong>
+                            <span>OAB Santa Catarina</span>
                         </div>
                     </div>
                 </div>
-            </section>
-        
+
+                <div class="profile-frame fade-up-2">
+                    <div class="profile-image">
+                        <img src="assets/img/gabriel-correa.jpg" alt="Dr. Gabriel Corrêa"
+                             onerror="this.outerHTML='<div class=&quot;profile-image-placeholder&quot;>Dr. Gabriel Corrêa</div>'">
+                    </div>
+                    <div class="profile-badge">
+                        <i class="fas fa-balance-scale"></i>
+                        <div class="pb-text">
+                            <strong>OAB/SC 63.737</strong>
+                            <span>Inscrição ativa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MANIFESTO / VALORES -->
+        <section class="manifesto-section">
+            <div class="manifesto-wrapper">
+                <span class="section-eyebrow">Nosso Manifesto</span>
+                <h2 class="section-title-large">Princípios que <em>orientam</em> cada caso</h2>
+                <p class="section-subtitle">Não acreditamos em advocacia distante. Acreditamos em escuta, técnica e estratégia — nessa ordem.</p>
+
+                <div class="values-grid">
+                    <div class="value-card fade-up">
+                        <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Proximidade real</h3>
+                        <p>Você fala diretamente com o advogado responsável pelo seu caso. Sem intermediários, sem retornos vagos — comunicação clara em cada etapa.</p>
+                    </div>
+                    <div class="value-card fade-up-2">
+                        <div class="value-icon"><i class="fas fa-chess-knight"></i></div>
+                        <h3>Estratégia primeiro</h3>
+                        <p>Antes de protocolar qualquer ação, analisamos viabilidade, riscos e cenários. Litígio é o caminho certo apenas quando é o melhor caminho.</p>
+                    </div>
+                    <div class="value-card fade-up-3">
+                        <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Ética como base</h3>
+                        <p>Promessas realistas, prazos respeitados e total transparência sobre honorários. A confiança se constrói no detalhe, não no discurso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAJETÓRIA -->
+        <section class="journey-section">
+            <div class="journey-wrapper">
+                <span class="section-eyebrow">Trajetória</span>
+                <h2 class="section-title-large">Uma carreira construída <em>com propósito</em></h2>
+                <p class="section-subtitle">Da formação técnica à atuação contenciosa em todo o Brasil — uma trajetória feita de estudo contínuo e cuidado com cada cliente.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">Formação</span>
+                        <h3>Bacharelado em Direito</h3>
+                        <p>Graduação com foco em Direito Civil, Trabalhista e de Família. Início do interesse pela atuação consultiva e contenciosa próxima do cliente.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Especialização</span>
+                        <h3>Pós-graduação e formação contínua</h3>
+                        <p>Estudos avançados em áreas estratégicas, com participação em cursos, congressos e atualizações constantes sobre legislação e jurisprudência.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Atuação</span>
+                        <h3>Inscrição na OAB/SC 63.737</h3>
+                        <p>Início efetivo da advocacia, com atuação em diversas comarcas e construção de uma base sólida em direito trabalhista, família e contratos.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Hoje</span>
+                        <h3>Escritório 100% digital, atuação nacional</h3>
+                        <p>Estrutura digital completa que permite atender clientes em qualquer estado do Brasil, com a mesma qualidade, segurança jurídica e proximidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÁREAS -->
+        <section class="expertise-section">
+            <div class="expertise-wrapper">
+                <span class="section-eyebrow">Áreas de Atuação</span>
+                <h2 class="section-title-large">Onde podemos <em>te ajudar</em></h2>
+                <p class="section-subtitle">Cada área exige profundidade técnica. Atuamos em frentes que exigem dedicação real — e somente nelas.</p>
+
+                <div class="expertise-grid">
+                    <a href="trabalhista-empregado.html" class="expertise-item">
+                        <div class="expertise-number">01</div>
+                        <div class="expertise-content">
+                            <h4>Trabalhista — Empregado</h4>
+                            <p>Verbas rescisórias, horas extras, assédio, reconhecimento de vínculo e mais.</p>
+                        </div>
+                    </a>
+                    <a href="trabalhista-empresa.html" class="expertise-item">
+                        <div class="expertise-number">02</div>
+                        <div class="expertise-content">
+                            <h4>Trabalhista — Empresa</h4>
+                            <p>Defesa em reclamatórias, compliance trabalhista e consultoria preventiva.</p>
+                        </div>
+                    </a>
+                    <a href="familia.html" class="expertise-item">
+                        <div class="expertise-number">03</div>
+                        <div class="expertise-content">
+                            <h4>Direito de Família</h4>
+                            <p>Divórcio, guarda, pensão, inventário e planejamento sucessório com sensibilidade.</p>
+                        </div>
+                    </a>
+                    <a href="contrato.html" class="expertise-item">
+                        <div class="expertise-number">04</div>
+                        <div class="expertise-content">
+                            <h4>Contratos</h4>
+                            <p>Elaboração, revisão e contencioso contratual para pessoas e empresas.</p>
+                        </div>
+                    </a>
+                    <a href="criminal.html" class="expertise-item">
+                        <div class="expertise-number">05</div>
+                        <div class="expertise-content">
+                            <h4>Direito Criminal</h4>
+                            <p>Defesa técnica em inquéritos, ações penais e medidas cautelares.</p>
+                        </div>
+                    </a>
+                    <a href="busca-e-apreensao.html" class="expertise-item">
+                        <div class="expertise-number">06</div>
+                        <div class="expertise-content">
+                            <h4>Busca e Apreensão</h4>
+                            <p>Atuação ágil em ações de busca e apreensão e defesa de devedores fiduciários.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="about-cta">
+            <div class="about-cta-content">
+                <h2>Pronto para conversar sobre <em>o seu caso</em>?</h2>
+                <p>Uma conversa inicial é o primeiro passo para entender o cenário e identificar o melhor caminho. Atendimento direto, sem formulários longos.</p>
+                <div class="about-cta-buttons">
+                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Falar pelo WhatsApp</a>
+                    <a href="contato.html" class="btn-cta-outline"><i class="fas fa-envelope"></i> Outros canais de contato</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Advogado Gabriel Corrêa</h4>
+                <h4>Escritório</h4>
+                <p>Advogado Gabriel Corrêa</p>
                 <p>OAB/SC 63.737</p>
-                <p>Atendimento 100% Online em todo o Brasil</p>
+                <p>Atendimento 100% online em todo o Brasil.</p>
             </div>
             <div class="footer-col">
-                <h4>Links Úteis</h4>
+                <h4>Navegação</h4>
                 <a href="index.html">Início</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="blog.html">Blog</a>
                 <a href="contato.html">Contato</a>
             </div>
             <div class="footer-col">
+                <h4>Áreas de Atuação</h4>
+                <a href="trabalhista-empregado.html">Trabalhista</a>
+                <a href="familia.html">Direito de Família</a>
+                <a href="contrato.html">Contratos</a>
+                <a href="criminal.html">Criminal</a>
+            </div>
+            <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(47) 99675-6766</p>
-                <p>escritorio.gabrielcorrea@gmail.com</p>
+                <p><i class="fas fa-phone"></i>(47) 99675-6766</p>
+                <p><i class="fas fa-envelope"></i>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -394,10 +663,8 @@ footer {
     </a>
 
     <script>
-        // Menu Sanduíche
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');
-        
         if (hamburgerBtn && mainNav) {
             hamburgerBtn.addEventListener('click', () => {
                 mainNav.classList.toggle('open');
@@ -413,22 +680,9 @@ footer {
                 }
             });
         }
-
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                } else {
-                    answer.style.display = 'block';
-                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                }
-            });
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
         });
     </script>
 </body>

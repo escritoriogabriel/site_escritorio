@@ -4,313 +4,380 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Agende sua Consulta | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Entre em contato com o escritório do Dr. Gabriel Corrêa. Atendimento online em todo o Brasil via WhatsApp, e-mail ou formulário.">
-    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
+    <meta name="description" content="Entre em contato com o escritório do Dr. Gabriel Corrêa. Atendimento 100% online em todo o Brasil via WhatsApp, e-mail ou formulário.">
+    <meta name="keywords" content="advogado, advocacia, direito trabalhista, civil, família, consumidor, escritório de advocacia">
     <link rel="canonical" href="https://www.gabrielcorrea.adv.br/contato.html">
-    
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="pages-style.css">
+
     <style>
-        
-:root {
-    --primary-blue: #172B41;
-    --accent-gold: #C9A961;
-    --bg-light: #F8F8F8;
-    --whatsapp-green: #25D366;
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --white: #FFFFFF;
-}
+        /* ============================================================
+           CONTATO — estilos específicos
+           ============================================================ */
+        .contact-hero {
+            padding: 110px 5% 90px;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(201,169,97,0.20) 0%, transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(23,43,65,0.10) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg-paper) 0%, var(--accent-gold-soft) 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .contact-hero::after {
+            content: ''; position: absolute; inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(23,43,65,0.06) 1px, transparent 0);
+            background-size: 28px 28px; opacity: 0.5; pointer-events: none;
+        }
+        .contact-hero-content { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+        .contact-hero .eyebrow {
+            display: inline-block;
+            font-size: 0.74rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3.5px;
+            color: var(--accent-gold-deep); margin-bottom: 22px;
+            font-family: var(--font-sans);
+        }
+        .contact-hero .eyebrow::before,
+        .contact-hero .eyebrow::after {
+            content: ''; display: inline-block; width: 32px; height: 1px;
+            background: var(--accent-gold); vertical-align: middle; margin: 0 14px;
+        }
+        .contact-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            color: var(--primary-blue);
+            margin-bottom: 22px;
+            line-height: 1.06;
+        }
+        .contact-hero h1 em {
+            color: var(--accent-gold-deep);
+            font-style: italic; font-weight: 600;
+        }
+        .contact-hero p {
+            font-size: 1.12rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 580px;
+            margin: 0 auto;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* Canais de atendimento — cards principais */
+        .channels-section {
+            padding: 90px 5%;
+            background: var(--white);
+        }
+        .channels-wrapper { max-width: 1200px; margin: 0 auto; }
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .channel-card {
+            background: var(--bg-paper);
+            border: 1px solid var(--border-soft);
+            border-radius: var(--radius-lg);
+            padding: 36px 30px;
+            text-align: center;
+            transition: all 0.4s var(--ease);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .channel-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+            transform: scaleX(0); transform-origin: left;
+            transition: transform 0.4s var(--ease);
+        }
+        .channel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--accent-gold);
+            background: var(--white);
+        }
+        .channel-card:hover::before { transform: scaleX(1); }
+        .channel-card.featured {
+            background: linear-gradient(135deg, #1ec05a 0%, var(--whatsapp-green-deep) 100%);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 10px 28px rgba(37,211,102,0.30);
+        }
+        .channel-card.featured::before {
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+            transform: scaleX(1);
+        }
+        .channel-card.featured:hover {
+            box-shadow: 0 16px 40px rgba(37,211,102,0.42);
+        }
+        .channel-icon {
+            width: 70px; height: 70px;
+            margin: 0 auto 22px;
+            background: var(--primary-blue);
+            color: var(--accent-gold);
+            border-radius: 50%;
+            display: grid; place-items: center;
+            font-size: 1.8rem;
+            transition: all 0.4s var(--ease);
+        }
+        .channel-card.featured .channel-icon {
+            background: rgba(255,255,255,0.18);
+            color: white;
+        }
+        .channel-card:hover .channel-icon {
+            transform: scale(1.06) rotate(-4deg);
+        }
+        .channel-card h3 {
+            font-size: 1.35rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        .channel-card.featured h3 { color: white; }
+        .channel-card .channel-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            font-family: var(--font-sans);
+        }
+        .channel-card.featured .channel-subtitle {
+            color: rgba(255,255,255,0.78);
+        }
+        .channel-card .channel-value {
+            font-size: 1.08rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-family: var(--font-sans);
+            word-break: break-word;
+        }
+        .channel-card.featured .channel-value { color: white; font-size: 1.18rem; }
+        .channel-action {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center; justify-content: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--accent-gold-deep);
+            font-family: var(--font-sans);
+            transition: gap 0.25s var(--ease);
+        }
+        .channel-card.featured .channel-action {
+            color: white;
+            background: rgba(255,255,255,0.16);
+            padding: 12px 22px;
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(8px);
+        }
+        .channel-card:hover .channel-action { gap: 12px; }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
+        /* Atendimento split — info + mapa */
+        .info-section {
+            padding: 90px 5%;
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .info-section::before {
+            content: '';
+            position: absolute; top: -100px; left: -100px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(201,169,97,0.15), transparent 70%);
+            pointer-events: none;
+        }
+        .info-wrapper {
+            max-width: 1200px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative; z-index: 1;
+        }
+        .info-text .eyebrow {
+            font-size: 0.74rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3.5px;
+            color: var(--accent-gold-deep); margin-bottom: 18px;
+            font-family: var(--font-sans); display: inline-block;
+        }
+        .info-text h2 {
+            font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+            color: var(--primary-blue);
+            margin-bottom: 22px;
+            line-height: 1.15;
+        }
+        .info-text h2 em { color: var(--accent-gold-deep); font-style: italic; }
+        .info-text > p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.78;
+            margin-bottom: 32px;
+        }
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .info-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 18px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-soft);
+            transition: all 0.3s var(--ease);
+        }
+        .info-list li:hover {
+            border-color: var(--accent-gold);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-card);
+        }
+        .info-list li .ico {
+            flex-shrink: 0;
+            width: 42px; height: 42px;
+            background: var(--accent-gold-soft);
+            color: var(--primary-blue);
+            border-radius: var(--radius-sm);
+            display: grid; place-items: center;
+            font-size: 1.05rem;
+        }
+        .info-list li strong {
+            display: block;
+            color: var(--primary-blue);
+            font-size: 0.96rem;
+            margin-bottom: 3px;
+            font-family: var(--font-sans);
+        }
+        .info-list li span {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
 
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
+        /* Card lateral de "Atendimento Nacional" */
+        .nationwide-card {
+            background: linear-gradient(135deg, var(--primary-blue-deep) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 48px 40px;
+            border-radius: var(--radius-xl);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-elegant);
+        }
+        .nationwide-card::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(circle at 70% 20%, rgba(201,169,97,0.25), transparent 55%);
+            pointer-events: none;
+        }
+        .nationwide-card .nw-icon {
+            width: 64px; height: 64px;
+            background: var(--accent-gold);
+            color: var(--primary-blue-deep);
+            border-radius: var(--radius-md);
+            display: grid; place-items: center;
+            font-size: 1.6rem;
+            margin-bottom: 22px;
+            position: relative; z-index: 1;
+        }
+        .nationwide-card h3 {
+            color: white;
+            font-size: 1.65rem;
+            margin-bottom: 14px;
+            position: relative; z-index: 1;
+            line-height: 1.2;
+        }
+        .nationwide-card h3 em { color: var(--accent-gold); font-style: italic; }
+        .nationwide-card p {
+            color: rgba(255,255,255,0.82);
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative; z-index: 1;
+        }
+        .nationwide-features {
+            display: flex; flex-direction: column; gap: 12px;
+            position: relative; z-index: 1;
+        }
+        .nationwide-features div {
+            display: flex; align-items: center; gap: 12px;
+            color: rgba(255,255,255,0.92);
+            font-size: 0.94rem;
+            font-family: var(--font-sans);
+        }
+        .nationwide-features i {
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
 
-/* Top Bar */
-.top-bar {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 8px 5%;
-    font-size: 0.85rem;
-    text-align: right;
-}
+        /* CTA FINAL */
+        .contact-final-cta {
+            padding: 100px 5%;
+            background: var(--white);
+            text-align: center;
+        }
+        .contact-final-content {
+            max-width: 720px; margin: 0 auto;
+        }
+        .contact-final-cta .eyebrow {
+            display: inline-block;
+            font-size: 0.74rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3.5px;
+            color: var(--accent-gold-deep); margin-bottom: 18px;
+            font-family: var(--font-sans);
+        }
+        .contact-final-cta h2 {
+            font-size: clamp(1.9rem, 3.8vw, 2.6rem);
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+            line-height: 1.15;
+        }
+        .contact-final-cta h2 em { color: var(--accent-gold-deep); font-style: italic; }
+        .contact-final-cta p {
+            font-size: 1.08rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .final-cta-buttons {
+            display: flex; gap: 14px;
+            justify-content: center; flex-wrap: wrap;
+        }
 
-/* Header & Navigation */
-header {
-    background-color: var(--white);
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 80px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo img {
-    height: 34px;
-    width: auto;
-    max-width: 260px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-blue);
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--accent-gold);
-}
-
-/* Hamburger menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    background: none;
-    border: none;
-    padding: 5px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-blue);
-    border-radius: 3px;
-    transition: all 0.3s;
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    z-index: 1;
-    top: 100%;
-    border-top: 3px solid var(--accent-gold);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: var(--text-dark);
-    padding: 12px 16px;
-    display: block;
-    font-size: 0.9rem;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--bg-light);
-}
-
-.btn-nav-whatsapp {
-    background-color: var(--whatsapp-green);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.btn-nav-whatsapp:hover {
-    transform: translateY(-2px);
-    color: white !important;
-}
-
-/* Page Header (for subpages) */
-.page-header {
-    padding: 60px 5%;
-    background-color: var(--primary-blue);
-    color: white;
-    text-align: center;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* Content Sections */
-.content-section {
-    padding: 80px 5%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.cta-box {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top: 40px;
-}
-
-.btn-cta {
-    background-color: var(--whatsapp-green);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 60px 5% 20px;
-    margin-top: 80px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-col h4 {
-    color: var(--accent-gold);
-    margin-bottom: 20px;
-}
-
-.footer-col a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.8rem;
-    color: #888;
-}
-
-/* Floating WhatsApp */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp-green);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-decoration: none;
-}
-
-/* Profile Section */
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.profile-image {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background-color: #ddd;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 20px 20px 0 var(--accent-gold);
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
-    .hamburger { display: flex; }
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding-bottom: 15px;
-    }
-    nav.open { display: flex; }
-    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-    .top-bar { text-align: center; font-size: 0.75rem; }
-    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
-    .profile-image { max-width: 250px; margin: 0 auto; box-shadow: 10px 10px 0 var(--accent-gold); }
-    .page-header h1 { font-size: 1.8rem; }
-    .content-section { padding: 40px 5%; }
-}
-
+        @media (max-width: 980px) {
+            .channels-grid { grid-template-columns: 1fr; }
+            .info-wrapper { grid-template-columns: 1fr; gap: 50px; }
+        }
+        @media (max-width: 768px) {
+            .contact-hero { padding: 60px 5% 70px; }
+            .channels-section, .info-section, .contact-final-cta { padding: 60px 5%; }
+            .nationwide-card { padding: 36px 28px; }
+            .channel-card { padding: 30px 24px; }
+        }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
 
-    <header>
-        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+    <header id="siteHeader">
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa" onerror="this.outerHTML='Advogado Gabriel Corrêa'"></a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </button>
@@ -318,14 +385,14 @@ footer {
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li class="dropdown">
-                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 4px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
-                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                        <a href="familia.html">Direito de Família</a>
-                        <a href="criminal.html">Direito Criminal</a>
-                        <a href="contrato.html">Contratos</a>
-                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i>Trabalhista — Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i>Trabalhista — Empresa</a>
+                        <a href="familia.html"><i class="fas fa-heart"></i>Direito de Família</a>
+                        <a href="criminal.html"><i class="fas fa-balance-scale"></i>Criminal</a>
+                        <a href="contrato.html"><i class="fas fa-file-contract"></i>Contratos</a>
+                        <a href="busca-e-apreensao.html"><i class="fas fa-search-location"></i>Busca e Apreensão</a>
                     </div>
                 </li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -337,51 +404,140 @@ footer {
     </header>
 
     <main>
-        
-            <section class="page-header">
-                <h1>Fale Conosco</h1>
-                <p>Estamos prontos para ouvir você e buscar a melhor solução.</p>
-            </section>
-            <section class="content-section">
-                <div class="profile-grid">
-                    <div class="contact-info">
-                        <h2 style="color: var(--primary-blue); margin-bottom: 20px;">Canais de Atendimento</h2>
-                        <p style="margin-bottom: 30px;">Escolha a forma mais confortável para você. Nosso atendimento inicial é rápido e focado em entender sua necessidade.</p>
-                        <div style="margin-bottom: 20px;">
-                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5547996756766" style="color: var(--whatsapp-green); text-decoration: none; font-weight: 700;">(47) 99675-6766</a></p>
-                            <p><strong>E-mail:</strong> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: var(--primary-blue); text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a></p>
-                            <p><strong>Horário:</strong> Seg a Sex, das 08h às 18h (Atendimento online 24h)</p>
-                        </div>
-                        <a href="https://wa.me/5547996756766" class="btn-cta" style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Iniciar Conversa Agora</a>
-                    </div>
-                    <div class="contact-form-placeholder" style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                        <h3 style="color: var(--primary-blue); margin-bottom: 20px;">Localização</h3>
-                        <p style="margin-bottom: 15px;">Atendimento 100% Online em todo o Brasil.</p>
-                        <p>Nossa estrutura digital permite que você tenha acesso à melhor defesa jurídica sem precisar sair de casa, com total segurança e validade jurídica.</p>
-                    </div>
+        <!-- HERO -->
+        <section class="contact-hero">
+            <div class="contact-hero-content fade-up">
+                <span class="eyebrow">Fale Conosco</span>
+                <h1>Estamos prontos para <em>ouvir você</em>.</h1>
+                <p>Escolha o canal mais confortável. Nossa primeira conversa é direta, objetiva e focada em entender o que você precisa.</p>
+            </div>
+        </section>
+
+        <!-- CANAIS DE ATENDIMENTO -->
+        <section class="channels-section">
+            <div class="channels-wrapper">
+                <div class="channels-grid">
+                    <a href="https://wa.me/5547996756766" class="channel-card featured fade-up">
+                        <div class="channel-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h3>WhatsApp</h3>
+                        <span class="channel-subtitle">Resposta mais rápida</span>
+                        <div class="channel-value">(47) 99675-6766</div>
+                        <span class="channel-action">Iniciar conversa <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="channel-card fade-up-2">
+                        <div class="channel-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>E-mail</h3>
+                        <span class="channel-subtitle">Para casos detalhados</span>
+                        <div class="channel-value">escritorio.gabrielcorrea<br>@gmail.com</div>
+                        <span class="channel-action">Enviar e-mail <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="tel:+5547996756766" class="channel-card fade-up-3">
+                        <div class="channel-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Telefone</h3>
+                        <span class="channel-subtitle">Atendimento direto</span>
+                        <div class="channel-value">(47) 99675-6766</div>
+                        <span class="channel-action">Ligar agora <i class="fas fa-arrow-right"></i></span>
+                    </a>
                 </div>
-            </section>
-        
+            </div>
+        </section>
+
+        <!-- INFORMAÇÕES + ATENDIMENTO NACIONAL -->
+        <section class="info-section">
+            <div class="info-wrapper">
+                <div class="info-text">
+                    <span class="eyebrow">Como funcionamos</span>
+                    <h2>Atendimento <em>simples</em>, organizado e seguro.</h2>
+                    <p>Sabemos que procurar um advogado pode parecer intimidador. Por isso, estruturamos um processo claro: você fala, escutamos, analisamos e então definimos juntos o melhor caminho.</p>
+
+                    <ul class="info-list">
+                        <li>
+                            <div class="ico"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Horário de atendimento</strong>
+                                <span>Seg. a Sex., das 08h às 18h. WhatsApp recebe mensagens 24h e respondemos no próximo horário comercial.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ico"><i class="fas fa-comments"></i></div>
+                            <div>
+                                <strong>Primeiro contato</strong>
+                                <span>Conversa rápida para entender seu caso. Esse alinhamento inicial não tem custo nem compromisso.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ico"><i class="fas fa-lock"></i></div>
+                            <div>
+                                <strong>Sigilo profissional</strong>
+                                <span>Todas as informações compartilhadas são protegidas pelo sigilo profissional previsto no Estatuto da OAB.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ico"><i class="fas fa-file-signature"></i></div>
+                            <div>
+                                <strong>Honorários transparentes</strong>
+                                <span>Apresentamos a proposta de honorários por escrito antes de qualquer ação, sem surpresas.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="nationwide-card fade-up-2">
+                    <div class="nw-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>Atendimento <em>100% online</em><br>em todo o Brasil</h3>
+                    <p>Nossa estrutura digital permite que você tenha acesso à melhor defesa jurídica sem precisar sair de casa, com total segurança jurídica e validade legal.</p>
+                    <div class="nationwide-features">
+                        <div><i class="fas fa-check-circle"></i> Reuniões por videochamada</div>
+                        <div><i class="fas fa-check-circle"></i> Assinatura digital de documentos</div>
+                        <div><i class="fas fa-check-circle"></i> Acompanhamento processual remoto</div>
+                        <div><i class="fas fa-check-circle"></i> Atuação em qualquer estado</div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="contact-final-cta">
+            <div class="contact-final-content">
+                <span class="eyebrow">Vamos conversar</span>
+                <h2>Cada caso começa com <em>uma conversa</em>.</h2>
+                <p>Quanto antes entendermos sua situação, mais rápido podemos definir a estratégia certa. Sem formulários longos, sem etapas desnecessárias.</p>
+                <div class="final-cta-buttons">
+                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Iniciar conversa agora</a>
+                    <a href="sobre.html" class="btn-secondary"><i class="fas fa-user-tie"></i> Conhecer o escritório</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>Advogado Gabriel Corrêa</h4>
+                <h4>Escritório</h4>
+                <p>Advogado Gabriel Corrêa</p>
                 <p>OAB/SC 63.737</p>
-                <p>Atendimento 100% Online em todo o Brasil</p>
+                <p>Atendimento 100% online em todo o Brasil.</p>
             </div>
             <div class="footer-col">
-                <h4>Links Úteis</h4>
+                <h4>Navegação</h4>
                 <a href="index.html">Início</a>
                 <a href="sobre.html">Sobre</a>
                 <a href="blog.html">Blog</a>
                 <a href="contato.html">Contato</a>
             </div>
             <div class="footer-col">
+                <h4>Áreas de Atuação</h4>
+                <a href="trabalhista-empregado.html">Trabalhista</a>
+                <a href="familia.html">Direito de Família</a>
+                <a href="contrato.html">Contratos</a>
+                <a href="criminal.html">Criminal</a>
+            </div>
+            <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(47) 99675-6766</p>
-                <p>escritorio.gabrielcorrea@gmail.com</p>
+                <p><i class="fas fa-phone"></i>(47) 99675-6766</p>
+                <p><i class="fas fa-envelope"></i>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -394,10 +550,8 @@ footer {
     </a>
 
     <script>
-        // Menu Sanduíche
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');
-        
         if (hamburgerBtn && mainNav) {
             hamburgerBtn.addEventListener('click', () => {
                 mainNav.classList.toggle('open');
@@ -413,22 +567,9 @@ footer {
                 }
             });
         }
-
-        // FAQ Accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                if (answer.style.display === 'block') {
-                    answer.style.display = 'none';
-                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
-                } else {
-                    answer.style.display = 'block';
-                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
-                }
-            });
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
         });
     </script>
 </body>
