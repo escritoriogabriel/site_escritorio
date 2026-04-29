@@ -4,13 +4,14 @@
 import json
 from pathlib import Path
 
-# Conteúdos específicos para cada página
+# Conteúdos específicos para cada página - REESCRITO COM 60% TEXTO E 40% CARDS
 PAGE_CONTENTS = {
     'criminal.html': {
         'badge': 'Direito Criminal',
         'badge_icon': 'fas fa-gavel',
         'title': 'Quando você está em perigo jurídico, <span>nós defendemos sua liberdade</span>.',
         'subtitle': 'Acusações criminais, prisão, processos complexos... Situações que podem mudar sua vida para sempre. Você precisa de alguém que não apenas conheça a lei, mas que realmente lute pelos seus direitos e liberdade.',
+        'intro_text': 'O sistema criminal é complexo e intimidador. Quando você enfrenta uma acusação ou está preso, cada minuto conta. Você tem direitos fundamentais que precisam ser protegidos desde o primeiro momento. Nossa abordagem combina conhecimento profundo da lei penal com uma defesa agressiva dos seus interesses. Entendemos que por trás de cada caso existe uma pessoa com medo, com família, com futuro em jogo. Por isso, não apenas seguimos procedimentos legais — nós realmente lutamos pela sua liberdade e pelo seu futuro.',
         'scenarios': [
             {
                 'icon': 'fas fa-handcuffs',
@@ -52,7 +53,7 @@ PAGE_CONTENTS = {
         'solutions': [
             {
                 'title': 'Defesa em Crimes Graves',
-                'description': 'Crimes como homicídio, roubo, tráfico e outros delitos graves exigem defesa especializada. Trabalhamos para proteger seus direitos constitucionais.',
+                'description': 'Crimes como homicídio, roubo, tráfico e outros delitos graves exigem defesa especializada. Trabalhamos para proteger seus direitos constitucionais. Cada caso é único e merece estratégia própria. Investigamos a fundo, questionamos provas, identificamos inconsistências e construímos defesa sólida. Não aceitamos condenações injustas.',
                 'steps': [
                     'Análise imediata do caso e avaliação de riscos',
                     'Coleta de provas e investigação defensiva',
@@ -63,7 +64,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Liberdade Provisória e Habeas Corpus',
-                'description': 'Se você foi preso, pode ter direito à liberdade provisória. Atuamos rapidamente para conseguir sua soltura.',
+                'description': 'Se você foi preso, pode ter direito à liberdade provisória. Atuamos rapidamente para conseguir sua soltura. A prisão preventiva deve ser exceção, não regra. Analisamos se há motivo legal para sua prisão e, se não houver, pedimos imediatamente sua libertação. Cada dia preso é um dia a menos com sua família.',
                 'steps': [
                     'Avaliação imediata da legalidade da prisão',
                     'Preparação de petição de habeas corpus',
@@ -74,7 +75,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Negociação de Penas e Acordos',
-                'description': 'Nem sempre ir a julgamento é a melhor opção. Negociamos acordos que reduzem penas e evitam prisão.',
+                'description': 'Nem sempre ir a julgamento é a melhor opção. Às vezes, um acordo bem negociado protege mais seus interesses do que um julgamento incerto. Analisamos as forças e fraquezas do caso e negociamos com a promotoria para reduzir penas, evitar prisão ou conseguir alternativas penais.',
                 'steps': [
                     'Análise da força da acusação',
                     'Negociação com promotoria',
@@ -85,7 +86,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Crimes de Trânsito e Embriaguez',
-                'description': 'Dirigir embriagado, causar acidente, suspensão de CNH. Defendemos seus direitos em crimes de trânsito.',
+                'description': 'Dirigir embriagado, causar acidente, suspensão de CNH. Defendemos seus direitos em crimes de trânsito. Questionamos testes de embriaguez, analisamos procedimentos policiais e construímos defesa baseada em evidências. Seu direito de dirigir é importante.',
                 'steps': [
                     'Análise dos testes de embriaguez',
                     'Questionamento de procedimentos policiais',
@@ -127,6 +128,7 @@ PAGE_CONTENTS = {
         'badge_icon': 'fas fa-file-contract',
         'title': 'Contratos bem feitos <span>protegem seu negócio e sua paz de espírito</span>.',
         'subtitle': 'Compra, venda, aluguel, parcerias, empréstimos... Cada acordo precisa estar claro e protegido. Um contrato bem elaborado evita conflitos futuros e garante que todos saibam seus direitos e deveres.',
+        'intro_text': 'Contratos são a base de qualquer negócio ou acordo importante. Um contrato bem redigido protege você, deixa claro o que cada parte deve fazer e evita conflitos futuros. Mas muitas pessoas assinam contratos sem entender o que estão assinando, ou deixam de incluir proteções importantes. Nós ajudamos você a criar contratos que realmente protegem seus interesses, ou a revisar contratos antes de você assinar algo que possa prejudicá-lo.',
         'scenarios': [
             {
                 'icon': 'fas fa-handshake',
@@ -168,7 +170,7 @@ PAGE_CONTENTS = {
         'solutions': [
             {
                 'title': 'Elaboração de Contratos Personalizados',
-                'description': 'Cada situação é única. Criamos contratos que refletem exatamente o que você quer, com proteção total.',
+                'description': 'Cada situação é única e merece um contrato feito especialmente para ela. Não usamos modelos genéricos. Conversamos com você, entendemos exatamente o que você quer, e criamos um contrato que reflete isso com clareza e proteção total. Incluímos cláusulas que protegem seus interesses e deixamos tudo bem documentado.',
                 'steps': [
                     'Entendemos sua situação e necessidades',
                     'Redigimos contrato claro e completo',
@@ -179,7 +181,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Análise e Revisão de Contratos',
-                'description': 'Antes de assinar qualquer contrato, deixe um advogado revisar. Pode economizar muito dinheiro.',
+                'description': 'Antes de assinar qualquer contrato, deixe um advogado revisar. Pode economizar muito dinheiro e evitar problemas futuros. Lemos tudo com atenção, identificamos cláusulas problemáticas ou injustas, explicamos em linguagem simples o que significa cada parte, e sugerimos modificações que protejam você melhor.',
                 'steps': [
                     'Leitura completa e análise crítica',
                     'Identificação de cláusulas problemáticas',
@@ -190,7 +192,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Execução de Contratos',
-                'description': 'Se alguém não está cumprindo o contrato, podemos cobrar judicialmente.',
+                'description': 'Se alguém não está cumprindo o contrato, podemos cobrar judicialmente. Primeiro tentamos resolver de forma amigável, mas se necessário, entramos com ação na justiça para garantir que você receba o que é devido ou que o contrato seja cumprido.',
                 'steps': [
                     'Análise do contrato e do descumprimento',
                     'Tentativa de resolução amigável',
@@ -201,7 +203,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Contratos Imobiliários',
-                'description': 'Compra, venda, aluguel de imóvel. Documentamos tudo com segurança.',
+                'description': 'Transações imobiliárias envolvem valores grandes e precisam de cuidado extra. Revisamos toda a documentação, verificamos se o imóvel está regular, elaboramos contrato seguro e acompanhamos até o registro. Sua segurança é nossa prioridade.',
                 'steps': [
                     'Revisão de toda documentação',
                     'Verificação de regularidade',
@@ -243,6 +245,7 @@ PAGE_CONTENTS = {
         'badge_icon': 'fas fa-car',
         'title': 'O oficial de justiça bateu na sua porta? <span>Você tem direitos</span>.',
         'subtitle': 'Busca e apreensão de bens, veículos, imóveis... Situações que causam pânico. Mas você não está indefeso. Existem direitos que o protegem e formas de questionar uma apreensão injusta.',
+        'intro_text': 'Quando o oficial de justiça chega para apreender seus bens, é uma situação assustadora. Mas você não está indefeso. A lei protege você de apreensões abusivas e garante que você tenha direitos mesmo quando deve. Você pode questionar a apreensão, negociar com o credor, recuperar seus bens ou proteger o que é essencial. Temos experiência em defender pessoas nessa situação e sabemos exatamente o que fazer para protegê-lo.',
         'scenarios': [
             {
                 'icon': 'fas fa-car',
@@ -284,7 +287,7 @@ PAGE_CONTENTS = {
         'solutions': [
             {
                 'title': 'Recuperação de Bens Apreendidos',
-                'description': 'Se seu bem foi apreendido, podemos ajudar a recuperá-lo ou questionar a legalidade da apreensão.',
+                'description': 'Se seu bem foi apreendido, podemos ajudar a recuperá-lo ou questionar a legalidade da apreensão. Analisamos todo o processo, verificamos se houve irregularidades, e se encontrarmos, pedimos ao juiz que devolva seu bem. Você pode pagar a dívida, negociar ou questionar a apreensão.',
                 'steps': [
                     'Análise do processo de apreensão',
                     'Verificação de irregularidades',
@@ -295,7 +298,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Defesa em Execução Judicial',
-                'description': 'Quando você está sendo executado, podemos apresentar defesa para proteger seus direitos.',
+                'description': 'Quando você está sendo executado, não está indefeso. Podemos apresentar defesa para proteger seus direitos, questionar a validade da dívida, apontar irregularidades no processo e proteger bens que são essenciais para sua sobrevivência.',
                 'steps': [
                     'Análise da dívida e da execução',
                     'Apresentação de embargos à execução',
@@ -306,7 +309,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Negociação de Dívidas',
-                'description': 'Antes que seus bens sejam apreendidos, negociamos com credores para encontrar soluções.',
+                'description': 'Antes que seus bens sejam apreendidos, podemos negociar com credores para encontrar soluções. Às vezes é possível renegociar prazos, reduzir valores ou criar um plano de pagamento que você possa cumprir. Isso evita apreensão e protege seu patrimônio.',
                 'steps': [
                     'Avaliação da situação financeira',
                     'Contato com credores',
@@ -317,7 +320,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Proteção de Bens Essenciais',
-                'description': 'Alguns bens são essenciais e têm proteção legal. Usamos isso para protegê-lo.',
+                'description': 'A lei protege certos bens que são essenciais para sua vida. Sua casa de moradia, ferramentas de trabalho e alguns móveis não podem ser apreendidos. Usamos esses direitos para protegê-lo e garantir que você tenha o mínimo necessário para viver.',
                 'steps': [
                     'Identificação de bens protegidos',
                     'Argumentação legal de proteção',
@@ -359,6 +362,7 @@ PAGE_CONTENTS = {
         'badge_icon': 'fas fa-briefcase',
         'title': 'Seus direitos trabalhistas <span>precisam ser respeitados</span>.',
         'subtitle': 'Demissão injusta, falta de pagamento, assédio, acidente de trabalho... O trabalho é essencial para sua vida, e você merece ser tratado com justiça e respeito. Defendemos seus direitos como trabalhador.',
+        'intro_text': 'O trabalho ocupa a maior parte do nosso tempo e é essencial para nossa vida. Por isso, você merece ser tratado com respeito, receber tudo que é devido e ter um ambiente seguro. Infelizmente, nem sempre isso acontece. Demissões injustas, atrasos de salário, assédio, acidentes — essas situações são mais comuns do que deveriam ser. Mas você não está sozinho. Temos experiência em defender trabalhadores e sabemos exatamente quais são seus direitos e como cobrar por eles.',
         'scenarios': [
             {
                 'icon': 'fas fa-ban',
@@ -400,7 +404,7 @@ PAGE_CONTENTS = {
         'solutions': [
             {
                 'title': 'Cobrança de Verbas Rescisórias',
-                'description': 'Quando você é demitido, tem direito a várias verbas. Cobramos tudo que é devido.',
+                'description': 'Quando você é demitido, tem direito a várias verbas: aviso prévio, décimo terceiro proporcional, férias não usadas, FGTS e mais. Cobramos tudo que é devido. Analisamos como você foi demitido, calculamos cada centavo que você tem direito, e se a empresa não pagar, entramos com ação na justiça.',
                 'steps': [
                     'Análise de como você foi demitido',
                     'Cálculo de todas as verbas devidas',
@@ -411,7 +415,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Ação por Horas Extras',
-                'description': 'Você trabalhou além do horário? Tem direito a compensação. Cobramos tudo.',
+                'description': 'Você trabalhou além do horário? Tem direito a compensação — 50% de acréscimo sobre o valor normal. Cobramos tudo. Documentamos as horas que você trabalhou, calculamos com os acréscimos legais, reunimos provas, e se necessário, entramos com ação na justiça.',
                 'steps': [
                     'Levantamento de horas trabalhadas',
                     'Cálculo com acréscimos legais',
@@ -422,7 +426,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Proteção contra Assédio',
-                'description': 'Ninguém merece ser assediado. Protegemos você e cobramos indenização.',
+                'description': 'Ninguém merece ser assediado ou discriminado no trabalho. Protegemos você e cobramos indenização por danos morais. Documentamos o assédio, coletamos provas, comunicamos à empresa, e se necessário, entramos com ação na justiça para garantir que você seja indenizado.',
                 'steps': [
                     'Documentação do assédio',
                     'Coleta de provas e testemunhas',
@@ -433,7 +437,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Indenização por Acidente de Trabalho',
-                'description': 'Se você sofreu acidente ou tem doença ocupacional, tem direitos.',
+                'description': 'Se você sofreu acidente ou tem doença ocupacional, tem direitos. Além dos benefícios do INSS, você pode cobrar indenização da empresa por danos morais e materiais. Analisamos o acidente, coletamos provas, e se necessário, processamos a empresa.',
                 'steps': [
                     'Análise do acidente ou doença',
                     'Comunicação ao INSS',
@@ -475,6 +479,7 @@ PAGE_CONTENTS = {
         'badge_icon': 'fas fa-hard-hat',
         'title': 'Como empregado, <span>seus direitos são sagrados</span>.',
         'subtitle': 'Você trabalha todos os dias para ganhar seu salário. Merece ser tratado com respeito, receber tudo que é devido e ter um ambiente seguro. Se seus direitos estão sendo violados, estamos aqui para defender você.',
+        'intro_text': 'Você trabalha todos os dias, cumpre seu horário, faz seu trabalho. Merece ser tratado com respeito, receber tudo que é devido e ter um ambiente seguro. Infelizmente, muitos empregadores não respeitam esses direitos básicos. Demissões injustas, atrasos de salário, horas extras não pagas, assédio — essas violações prejudicam você e sua família. Mas você não está sozinho. Temos experiência em defender empregados e sabemos exatamente como cobrar por seus direitos.',
         'scenarios': [
             {
                 'icon': 'fas fa-ban',
@@ -516,7 +521,7 @@ PAGE_CONTENTS = {
         'solutions': [
             {
                 'title': 'Cobrança de Verbas Rescisórias',
-                'description': 'Demitido? Você tem direito a: aviso prévio, 13º proporcional, férias não usadas, FGTS e mais.',
+                'description': 'Demitido? Você tem direito a: aviso prévio, 13º proporcional, férias não usadas, FGTS e mais. Cobramos tudo. Analisamos sua demissão, calculamos cada centavo que você tem direito, negociamos com a empresa, e se necessário, entramos com ação na justiça.',
                 'steps': [
                     'Análise da demissão',
                     'Cálculo de todas as verbas',
@@ -527,7 +532,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Ação por Horas Extras',
-                'description': 'Trabalhou além do horário? Tem direito a 50% de acréscimo. Cobramos tudo.',
+                'description': 'Trabalhou além do horário? Tem direito a 50% de acréscimo. Cobramos tudo. Documentamos as horas, calculamos com os acréscimos, reunimos provas, e se necessário, processamos a empresa.',
                 'steps': [
                     'Documentação das horas',
                     'Cálculo com acréscimos',
@@ -538,7 +543,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Proteção contra Assédio e Discriminação',
-                'description': 'Ninguém merece ser assediado ou discriminado. Agimos rápido.',
+                'description': 'Ninguém merece ser assediado ou discriminado. Agimos rápido para protegê-lo e cobrar indenização. Documentamos tudo, coletamos provas, comunicamos à empresa, e se necessário, processamos para garantir sua indenização.',
                 'steps': [
                     'Documentação do assédio',
                     'Coleta de provas',
@@ -549,7 +554,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Benefícios Previdenciários',
-                'description': 'Acidente de trabalho ou doença ocupacional? Tem direito a benefícios.',
+                'description': 'Acidente de trabalho ou doença ocupacional? Tem direito a benefícios. Comunicamos ao INSS, coletamos laudos médicos, acompanhamos o processo, e se necessário, processamos a empresa para indenização adicional.',
                 'steps': [
                     'Comunicação ao INSS',
                     'Coleta de laudos médicos',
@@ -591,6 +596,7 @@ PAGE_CONTENTS = {
         'badge_icon': 'fas fa-building',
         'title': 'Sua empresa protegida, <span>seus negócios seguros</span>.',
         'subtitle': 'No complexo mundo das relações de trabalho, a prevenção é a melhor estratégia. Oferecemos assessoria jurídica completa para empresas, garantindo conformidade com a legislação, minimizando riscos e protegendo seu patrimônio.',
+        'intro_text': 'Gerenciar uma empresa envolve muitas responsabilidades legais. Contratos de trabalho, rescisões, fiscalizações, reclamações trabalhistas — tudo isso pode se tornar complicado e custoso se não for feito corretamente. A melhor estratégia é a prevenção: ter contratos bem feitos, políticas claras, compliance com a lei. Isso evita processos, protege seu patrimônio e deixa você tranquilo para focar no seu negócio. Oferecemos assessoria completa para empresas, desde a prevenção até a defesa em processos.',
         'scenarios': [
             {
                 'icon': 'fas fa-shield-alt',
@@ -632,7 +638,7 @@ PAGE_CONTENTS = {
         'solutions': [
             {
                 'title': 'Consultoria Preventiva e Compliance',
-                'description': 'Evitar problemas é mais barato que resolvê-los. Fazemos auditoria e implementamos compliance.',
+                'description': 'Evitar problemas é mais barato que resolvê-los. Fazemos auditoria completa de conformidade, identificamos riscos, implementamos políticas, treinamos gestores e acompanhamos continuamente. Isso protege sua empresa e reduz drasticamente o risco de processos.',
                 'steps': [
                     'Análise completa de conformidade',
                     'Identificação de riscos',
@@ -643,7 +649,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Defesa em Reclamações Trabalhistas',
-                'description': 'Se sua empresa está sendo processada, defendemos com estratégia sólida.',
+                'description': 'Se sua empresa está sendo processada, defendemos com estratégia sólida. Analisamos o processo, coletamos provas, preparamos defesa forte, representamos em audiências e recorremos em todas as instâncias se necessário.',
                 'steps': [
                     'Análise do processo',
                     'Coleta de provas',
@@ -654,7 +660,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Elaboração de Contratos e Políticas',
-                'description': 'Contratos bem feitos protegem sua empresa. Elaboramos com segurança jurídica.',
+                'description': 'Contratos bem feitos protegem sua empresa. Elaboramos com segurança jurídica, incluindo cláusulas que protegem seus interesses, deixando tudo claro para o funcionário. Também criamos políticas internas, códigos de conduta e regimentos que deixam claro como sua empresa funciona.',
                 'steps': [
                     'Análise de necessidades',
                     'Redação de contratos',
@@ -665,7 +671,7 @@ PAGE_CONTENTS = {
             },
             {
                 'title': 'Gestão de Demissões e Rescisões',
-                'description': 'Demitir é delicado. Orientamos para fazer de forma legal e segura.',
+                'description': 'Demitir é delicado e precisa ser feito corretamente. Orientamos sobre procedimentos legais, documentação correta, cálculo de verbas devidas e proteção contra futuras ações. Fazer isso certo evita processos e protege sua empresa.',
                 'steps': [
                     'Análise da situação',
                     'Orientação sobre procedimentos',
@@ -771,7 +777,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
             <section class="content-section">
                 <div class="content-wrapper">
                     <h2>Situações que você pode estar vivendo agora</h2>
-                    <p>Cada caso é único, mas muitas pessoas enfrentam desafios semelhantes. Aqui estão alguns cenários comuns que atendemos e como podemos ajudar:</p>
+                    <p>{intro_text}</p>
 
                     <div class="scenarios-grid" id="scenarios">
 {scenarios_html}
@@ -902,14 +908,15 @@ def generate_faq_html(faq_items):
 
 def generate_related_posts_html(category):
     """Gera HTML para posts relacionados"""
-    with open('blog/posts/index.json', 'r', encoding='utf-8') as f:
-        posts_data = json.load(f)
-    
-    related = [p for p in posts_data if category in p.get('categories', [])][:3]
-    
-    html = ""
-    for post in related:
-        html += f'''
+    try:
+        with open('blog/posts/index.json', 'r', encoding='utf-8') as f:
+            posts_data = json.load(f)
+        
+        related = [p for p in posts_data if category in p.get('categories', [])][:3]
+        
+        html = ""
+        for post in related:
+            html += f'''
                         <a href="{post['url']}" class="related-post-card">
                             <div class="related-post-image">
                                 <img src="{post.get('image', 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')}" alt="{post['title']}">
@@ -923,7 +930,9 @@ def generate_related_posts_html(category):
                             </div>
                         </a>
 '''
-    return html
+        return html
+    except:
+        return ""
 
 # Gerar páginas
 pages_to_generate = ['criminal.html', 'contrato.html', 'busca-e-apreensao.html', 'trabalhista.html', 'trabalhista-empregado.html', 'trabalhista-empresa.html']
@@ -961,6 +970,7 @@ for page_file in pages_to_generate:
         badge_icon=content['badge_icon'],
         title_main=content['title'],
         subtitle=content['subtitle'],
+        intro_text=content['intro_text'],
         scenarios_html=scenarios_html,
         solutions_html=solutions_html,
         faq_html=faq_html,
@@ -973,4 +983,4 @@ for page_file in pages_to_generate:
     
     print(f"✅ Gerada: {page_file}")
 
-print("\n🎉 Todas as páginas foram geradas!")
+print("\n🎉 Todas as páginas foram geradas com conteúdo reescrito!")
