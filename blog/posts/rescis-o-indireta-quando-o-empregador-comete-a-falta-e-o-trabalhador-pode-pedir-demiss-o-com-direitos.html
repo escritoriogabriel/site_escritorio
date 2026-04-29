@@ -5,42 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos | Blog Jurídico Gabriel Corrêa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root { 
             --primary: #172B41; 
+            --primary-light: #1f3a52;
+            --primary-dark: #0f1f2e;
             --accent: #C9A961; 
+            --accent-light: #e0c9a0;
             --text: #2D3748; 
             --text-light: #718096;
-            --bg: #F7FAFC; 
-            --white: #FFFFFF;
+            --text-lighter: #a0aec0;
+            --bg: #F7FAFC;
+            --bg-light: #FFFFFF;
+            --border: #e2e8f0;
             --whatsapp: #25D366;
+            --success: #48bb78;
+            --warning: #ed8936;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
         
         body { 
             font-family: 'Inter', sans-serif; 
             line-height: 1.8; 
             color: var(--text); 
-            background: var(--bg); 
+            background: var(--bg);
         }
 
-        /* Top Bar */
+        /* ===== TOP BAR ===== */
         .top-bar {
-            background-color: var(--primary);
+            background-color: var(--primary-dark);
             color: white;
-            padding: 8px 5%;
-            font-size: 0.85rem;
+            padding: 10px 5%;
+            font-size: 0.8rem;
             text-align: right;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .top-bar a { color: white; text-decoration: none; }
+        .top-bar a { color: var(--accent-light); text-decoration: none; transition: color 0.3s; }
+        .top-bar a:hover { color: var(--accent); }
+        .top-bar i { margin-right: 5px; }
 
-        /* Header & Navigation */
+        /* ===== HEADER & NAVIGATION ===== */
         header { 
-            background: var(--white); 
+            background: var(--bg-light); 
             padding: 0 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
@@ -54,23 +66,25 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            transition: transform 0.3s;
         }
+        .logo:hover { transform: scale(1.02); }
         .logo img {
-            height: 34px;
+            height: 36px;
             width: auto;
-            max-width: 260px;
+            max-width: 280px;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 32px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 22px;
+            gap: 28px;
             align-items: center;
         }
 
@@ -78,9 +92,21 @@
             text-decoration: none;
             color: var(--primary);
             font-weight: 600;
-            font-size: 0.92rem;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
         }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
         .nav-links a:hover { color: var(--accent); }
 
         /* Dropdown */
@@ -88,32 +114,48 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: var(--white);
-            min-width: 260px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            background-color: var(--bg-light);
+            min-width: 280px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
             z-index: 100;
             top: 100%;
             left: 0;
-            border-top: 3px solid var(--accent);
-            border-radius: 0 0 8px 8px;
+            border-top: 4px solid var(--accent);
+            border-radius: 8px;
+            margin-top: 8px;
+            overflow: hidden;
         }
         .dropdown:hover .dropdown-content { display: block; }
         .dropdown-content a {
             color: var(--text);
-            padding: 11px 16px;
-            display: block;
-            font-size: 0.88rem;
-            border-bottom: 1px solid #f0f0f0;
-            transition: background 0.2s;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s;
+            position: relative;
         }
+        .dropdown-content a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--accent);
+            transform: scaleY(0);
+            transition: transform 0.2s;
+        }
+        .dropdown-content a:hover::before { transform: scaleY(1); }
         .dropdown-content a:last-child { border-bottom: none; }
-        .dropdown-content a:hover { background-color: #f8f8f8; color: var(--accent); }
+        .dropdown-content a:hover { background-color: var(--bg); color: var(--accent); }
 
         .btn-nav-whatsapp {
-            background-color: var(--whatsapp);
+            background: linear-gradient(135deg, var(--whatsapp) 0%, #1da851 100%);
             color: white !important;
-            padding: 12px 22px;
-            border-radius: 8px;
+            padding: 12px 24px;
+            border-radius: 50px;
             transition: all 0.3s ease;
             white-space: nowrap;
             font-size: 0.9rem;
@@ -122,14 +164,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             border: none;
             cursor: pointer;
         }
         .btn-nav-whatsapp:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            background-color: #22c55e;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
         }
 
         /* Hamburger */
@@ -137,140 +178,554 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            gap: 5px;
+            gap: 6px;
             background: none;
             border: none;
-            padding: 5px;
+            padding: 8px;
         }
         .hamburger span {
-            width: 25px;
+            width: 26px;
             height: 3px;
             background-color: var(--primary);
             border-radius: 3px;
             transition: all 0.3s;
         }
 
-        .container { 
-            max-width: 900px; 
-            margin: 60px auto; 
-            background: var(--white); 
-            padding: 60px; 
-            border-radius: 16px; 
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
-        }
-
-        .btn-back { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 8px;
-            margin-bottom: 40px; 
-            color: var(--primary); 
-            text-decoration: none; 
-            font-weight: 600;
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            background: var(--bg-light);
+            padding: 16px 5%;
+            border-bottom: 1px solid var(--border);
             font-size: 0.9rem;
-            transition: transform 0.2s;
         }
-        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb span { color: var(--text-light); margin: 0 8px; }
 
-        .post-header { margin-bottom: 50px; text-align: center; }
-        .post-header h1 { 
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary); 
-            font-size: 2.5rem;
-            line-height: 1.2;
-            margin-bottom: 20px; 
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .post-meta { 
-            color: var(--text-light); 
-            font-size: 0.95rem; 
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        .hero-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 40px 5%;
+            max-width: 900px;
+        }
+        .hero-category {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .hero-meta {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            opacity: 0.95;
         }
-        .post-meta span { display: flex; align-items: center; gap: 6px; }
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        .post-content { font-size: 1.15rem; color: #333; }
+        /* ===== MAIN CONTENT ===== */
+        .post-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 5%;
+        }
+
+        .post-main {
+            background: var(--bg-light);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        /* ===== POST CONTENT ===== */
+        .post-content {
+            font-size: 1.1rem;
+            color: var(--text);
+            line-height: 1.9;
+        }
+
         .post-content h2 { 
+            font-family: 'Montserrat', sans-serif;
             color: var(--primary); 
             margin: 50px 0 25px 0; 
-            font-size: 1.8rem;
+            font-size: 1.9rem;
+            font-weight: 700;
             border-left: 5px solid var(--accent);
             padding-left: 20px;
+            transition: all 0.3s;
         }
-        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
-        .post-content p { margin-bottom: 25px; }
-        
-        /* Estilização de Tabelas */
+
+        .post-content h3 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            margin: 40px 0 18px 0; 
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .post-content h4 {
+            color: var(--primary-light);
+            margin: 30px 0 12px 0;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .post-content p { 
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--accent);
+            margin-right: 2px;
+        }
+
+        /* Listas */
+        .post-content ul, .post-content ol { 
+            margin: 25px 0 25px 30px; 
+            padding-left: 20px;
+        }
+        .post-content li { 
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        .post-content ul li::marker {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Tabelas */
         .post-content table { 
             width: 100%; 
             border-collapse: collapse; 
             margin: 40px 0; 
-            font-size: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             border-radius: 8px;
             overflow: hidden;
         }
-        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
-        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
-        .post-content tr:nth-child(even) td { background: #f8fafc; }
+        .post-content th { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white; 
+            padding: 16px; 
+            text-align: left;
+            font-weight: 700;
+        }
+        .post-content td { 
+            padding: 14px 16px; 
+            border-bottom: 1px solid var(--border); 
+            background: var(--bg-light);
+        }
+        .post-content tr:hover td { background: var(--bg); }
+        .post-content tr:nth-child(even) td { background: var(--bg); }
 
-        /* Citações / Destaques */
+        /* Blockquotes / Destaques */
         .post-content blockquote { 
-            background: #f0f4f8; 
-            border-left: 5px solid var(--primary); 
-            padding: 30px; 
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.1) 0%, rgba(201, 169, 97, 0.05) 100%);
+            border-left: 5px solid var(--accent); 
+            padding: 25px 30px; 
             margin: 40px 0; 
             font-style: italic;
             border-radius: 0 8px 8px 0;
+            color: var(--text);
         }
-        
+        .post-content blockquote strong {
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Imagens */
         .post-content img { 
             width: 100%; 
             border-radius: 12px; 
             margin: 40px 0; 
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+        .post-content img:hover {
+            transform: scale(1.02);
         }
 
-        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
-        .post-content li { margin-bottom: 12px; }
+        /* Código */
+        .post-content code {
+            background: var(--bg);
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .post-content pre {
+            background: var(--primary-dark);
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+        .post-content pre code {
+            background: none;
+            color: #e0e0e0;
+            padding: 0;
+        }
 
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-box {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+
+        .sidebar-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Índice de Conteúdo */
+        .toc-list {
+            list-style: none;
+        }
+        .toc-list li {
+            margin-bottom: 10px;
+        }
+        .toc-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: block;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        .toc-list a:hover {
+            color: var(--accent);
+            background: var(--bg);
+            padding-left: 14px;
+        }
+
+        /* Tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .tag {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            text-transform: capitalize;
+        }
+        .tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+        }
+
+        /* Autor */
+        .author-card {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(23, 43, 65, 0.05) 0%, rgba(201, 169, 97, 0.05) 100%);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .author-info {
+            flex: 1;
+        }
+        .author-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        .author-role {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ===== CTA SECTION ===== */
         .cta-section { 
             margin-top: 80px; 
-            padding: 50px; 
-            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            padding: 60px 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white; 
-            border-radius: 16px; 
-            text-align: center; 
+            border-radius: 12px; 
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(23, 43, 65, 0.2);
+            position: relative;
+            overflow: hidden;
         }
-        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(circle, rgba(201, 169, 97, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        .cta-content {
+            position: relative;
+            z-index: 10;
+        }
+        .cta-section h2 { 
+            margin-bottom: 15px; 
+            color: white; 
+            border: none; 
+            padding: 0; 
+            font-size: 2.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        .cta-section p {
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
         .cta-whatsapp { 
             background: var(--whatsapp); 
             color: white; 
-            padding: 18px 35px; 
+            padding: 16px 40px; 
             border-radius: 50px; 
             text-decoration: none; 
             font-weight: 700; 
             display: inline-flex; 
             align-items: center; 
             gap: 12px;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-top: 20px;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
-        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+        .cta-whatsapp:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+            background: #1da851;
+        }
 
-        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
-        
+        /* ===== FOOTER ===== */
+        footer { 
+            background: var(--primary-dark); 
+            color: var(--text-lighter); 
+            padding: 60px 5%; 
+            text-align: center; 
+            margin-top: 100px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        footer p {
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 1024px) {
+            .post-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+
         @media (max-width: 768px) {
-            .container { padding: 30px; margin: 20px; }
-            .post-header h1 { font-size: 1.8rem; }
-            .post-content { font-size: 1.05rem; }
+            header {
+                height: 70px;
+            }
+            .hamburger {
+                display: flex;
+            }
+            nav {
+                display: none;
+            }
+            .top-bar {
+                font-size: 0.75rem;
+                padding: 8px 3%;
+            }
+            .breadcrumb {
+                font-size: 0.8rem;
+                padding: 12px 3%;
+            }
+            .hero {
+                height: 300px;
+            }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .hero-meta {
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+            .post-main {
+                padding: 30px;
+            }
+            .post-content {
+                font-size: 1rem;
+            }
+            .post-content h2 {
+                font-size: 1.5rem;
+                margin: 35px 0 18px 0;
+            }
+            .post-content h3 {
+                font-size: 1.2rem;
+                margin: 28px 0 12px 0;
+            }
+            .post-wrapper {
+                margin: 40px auto;
+            }
+            .cta-section {
+                padding: 40px 25px;
+            }
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+            .sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 240px;
+            }
+            .hero-title {
+                font-size: 1.4rem;
+            }
+            .hero-category {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+            .post-main {
+                padding: 20px;
+                border-radius: 8px;
+            }
+            .post-content {
+                font-size: 0.95rem;
+            }
+            .post-content h2 {
+                font-size: 1.3rem;
+                padding-left: 15px;
+            }
+            .post-content table {
+                font-size: 0.85rem;
+            }
+            .post-content th, .post-content td {
+                padding: 10px 8px;
+            }
+            .cta-section {
+                padding: 30px 15px;
+            }
+            .cta-section h2 {
+                font-size: 1.3rem;
+            }
+            .cta-whatsapp {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
 
     <header>
@@ -286,10 +741,10 @@
                     <div class="dropdown-content">
                         <a href="/trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
                         <a href="/trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                        <a href="/familia.html">Direito de Família</a>
-                        <a href="/criminal.html">Direito Criminal</a>
-                        <a href="/contrato.html">Contratos</a>
-                        <a href="/busca-e-apreensao.html">Busca e Apreensão</a>
+                        <a href="/familia.html"><i class="fas fa-heart"></i> Direito de Família</a>
+                        <a href="/criminal.html"><i class="fas fa-gavel"></i> Direito Criminal</a>
+                        <a href="/contrato.html"><i class="fas fa-file-contract"></i> Contratos</a>
+                        <a href="/busca-e-apreensao.html"><i class="fas fa-search"></i> Busca e Apreensão</a>
                     </div>
                 </li>
                 <li><a href="/sobre.html">Sobre</a></li>
@@ -299,20 +754,33 @@
             <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         </nav>
     </header>
-    
-    <div class="container">
-        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
-        <article>
-            <div class="post-header">
-                <h1>Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos</h1>
-                <div class="post-meta">
-                    <span><i class="far fa-user"></i> Advogado Gabriel Corrêa</span>
-                    <span><i class="far fa-calendar-alt"></i> 2026-04-27</span>
-                    <span><i class="far fa-folder"></i> Direito Trabalhista</span>
+
+    <div class="breadcrumb">
+        <a href="/index.html">Início</a> <span>/</span> <a href="/blog.html">Blog</a> <span>/</span> <span>Direito Trabalhista</span>
+    </div>
+
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos" class="hero-image">
+        <div class="hero-content">
+            <div class="hero-category">Direito Trabalhista</div>
+            <h1 class="hero-title">Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos</h1>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <i class="far fa-user"></i> <span>Advogado Gabriel Corrêa</span>
+                </div>
+                <div class="hero-meta-item">
+                    <i class="far fa-calendar-alt"></i> <span>2026-04-27</span>
+                </div>
+                <div class="hero-meta-item">
+                    <i class="far fa-clock"></i> <span>~8 min de leitura</span>
                 </div>
             </div>
-            
-            <div class="post-content">
+        </div>
+    </div>
+
+    <div class="post-wrapper">
+        <div class="post-main">
+            <article class="post-content">
                 <p><strong>Categoria:</strong> Direito Trabalhista | <strong>Público:</strong> Trabalhadores</p>
 <hr />
 <h2>Introdução</h2>
@@ -438,21 +906,97 @@
 <p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547996756766">📞 (47) 99675-6766</a></p>
 <hr />
 <p><em>Este artigo tem caráter exclusivamente informativo e não substitui a orientação jurídica individualizada.</em></p>
-            </div>
-            
+            </article>
+
             <div class="cta-section">
-                <h2>Precisa de ajuda com este assunto?</h2>
-                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
-                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
-                </a>
+                <div class="cta-content">
+                    <h2>Precisa de ajuda com este assunto?</h2>
+                    <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                    <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                    </a>
+                </div>
             </div>
-        </article>
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <div class="sidebar-title">
+                    <i class="fas fa-list"></i> Índice
+                </div>
+                <ul class="toc-list">
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#topico-1">Tópico Principal</a></li>
+                    <li><a href="#topico-2">Considerações</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <div class="sidebar-title">
+                    <i class="fas fa-tags"></i> Tags
+                </div>
+                <div class="tags-container">
+                    <a href="/blog.html?tag=rescisão indireta" class="tag">rescisão indireta</a><a href="/blog.html?tag=direitos do trabalhador" class="tag">direitos do trabalhador</a><a href="/blog.html?tag=CLT" class="tag">CLT</a>
+                </div>
+            </div>
+
+            <div class="sidebar-box author-card">
+                <div class="author-avatar">GC</div>
+                <div class="author-info">
+                    <div class="author-name">Advogado Gabriel Corrêa</div>
+                    <div class="author-role">Advogado Especialista</div>
+                </div>
+            </div>
+        </aside>
     </div>
 
     <footer>
         <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+        <p style="font-size: 0.9rem; margin-top: 8px;">Atendimento em todo o Brasil.</p>
     </footer>
+
+    <script>
+        // Gera índice dinâmico baseado nos h2 e h3
+        document.addEventListener('DOMContentLoaded', function() {
+            const headings = document.querySelectorAll('.post-content h2, .post-content h3');
+            const tocList = document.querySelector('.toc-list');
+            if (tocList) {
+                tocList.innerHTML = '';
+                headings.forEach((heading, index) => {
+                    const id = 'heading-' + index;
+                    heading.id = id;
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = '#' + id;
+                    a.textContent = heading.textContent;
+                    a.style.paddingLeft = heading.tagName === 'H3' ? '20px' : '0px';
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+            }
+            
+            // Menu Mobile
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mainNav = document.getElementById('mainNav');
+            if (hamburgerBtn && mainNav) {
+                hamburgerBtn.addEventListener('click', function() {
+                    mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+                    if (mainNav.style.display === 'flex') {
+                        mainNav.style.position = 'absolute';
+                        mainNav.style.top = '80px';
+                        mainNav.style.left = '0';
+                        mainNav.style.width = '100%';
+                        mainNav.style.backgroundColor = 'white';
+                        mainNav.style.flexDirection = 'column';
+                        mainNav.style.padding = '20px';
+                        mainNav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
+                        document.querySelector('.nav-links').style.flexDirection = 'column';
+                        document.querySelector('.nav-links').style.width = '100%';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
