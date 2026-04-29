@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fui Demitido: Quais São Meus Direitos e Como Calcular a Rescisão? | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --accent: #C9A961; 
+            --text: #2D3748; 
+            --text-light: #718096;
+            --bg: #F7FAFC; 
+            --white: #FFFFFF;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg); 
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            text-align: right;
+        }
+        .top-bar a { color: white; text-decoration: none; }
+
+        /* Header & Navigation */
+        header { 
+            background: var(--white); 
+            padding: 0 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .logo img {
+            height: 34px;
+            width: auto;
+            max-width: 260px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 260px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            z-index: 100;
+            top: 100%;
+            left: 0;
+            border-top: 3px solid var(--accent);
+            border-radius: 0 0 8px 8px;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a {
+            color: var(--text);
+            padding: 11px 16px;
+            display: block;
+            font-size: 0.88rem;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: #f8f8f8; color: var(--accent); }
+
+        .btn-nav-whatsapp {
+            background-color: var(--whatsapp);
+            color: white !important;
+            padding: 12px 22px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        .btn-nav-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            background-color: #22c55e;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            background: var(--white); 
+            padding: 60px; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
+        }
+
+        .btn-back { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px;
+            margin-bottom: 40px; 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+
+        .post-header { margin-bottom: 50px; text-align: center; }
+        .post-header h1 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px; 
+        }
+        .post-meta { 
+            color: var(--text-light); 
+            font-size: 0.95rem; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .post-meta span { display: flex; align-items: center; gap: 6px; }
+
+        .post-content { font-size: 1.15rem; color: #333; }
+        .post-content h2 { 
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+        }
+        .post-content h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
+        .post-content p { margin-bottom: 25px; }
+        
+        /* Estilização de Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .post-content td { padding: 15px; border-bottom: 1px solid #edf2f7; background: #fff; }
+        .post-content tr:nth-child(even) td { background: #f8fafc; }
+
+        /* Citações / Destaques */
+        .post-content blockquote { 
+            background: #f0f4f8; 
+            border-left: 5px solid var(--primary); 
+            padding: 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .post-content ul, .post-content ol { margin-bottom: 25px; padding-left: 30px; }
+        .post-content li { margin-bottom: 12px; }
+
+        .cta-section { 
+            margin-top: 80px; 
+            padding: 50px; 
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
+            color: white; 
+            border-radius: 16px; 
+            text-align: center; 
+        }
+        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
+        .cta-whatsapp { 
+            background: var(--whatsapp); 
+            color: white; 
+            padding: 18px 35px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 12px;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 30px; margin: 20px; }
+            .post-header h1 { font-size: 1.8rem; }
+            .post-content { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+    </div>
+
+    <header>
+        <a href="/index.html" class="logo"><img src="/assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="/index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="/trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
+                        <a href="/familia.html">Direito de Família</a>
+                        <a href="/criminal.html">Direito Criminal</a>
+                        <a href="/contrato.html">Contratos</a>
+                        <a href="/busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="/sobre.html">Sobre</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contato.html">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <a href="/blog.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para o Blog</a>       
+        <article>
+            <div class="post-header">
+                <h1>Fui Demitido: Quais São Meus Direitos e Como Calcular a Rescisão?</h1>
+                <div class="post-meta">
+                    <span><i class="far fa-user"></i> Escritório de Advocacia [NOME DO ESCRITÓRIO]</span>
+                    <span><i class="far fa-calendar-alt"></i> 2026-04-29</span>
+                    <span><i class="far fa-folder"></i> Direito do Trabalho</span>
+                </div>
+            </div>
+            
+            <div class="post-content">
+                <p>Receber a notícia da demissão é, para a maioria dos trabalhadores, um momento de incerteza, medo e dúvidas. Seja inesperada ou não, a perda do emprego gera uma dor real: como pagar as contas? Os meus direitos estão sendo respeitados? A empresa calculou minha rescisão corretamente?</p>
+<p>Neste artigo, você vai entender <strong>todos os direitos de quem foi demitido sem justa causa</strong>, aprender a conferir os principais valores da rescisão trabalhista e descobrir como um advogado especialista pode ajudar você a sair dessa situação com a segurança que precisa. Continue lendo e tome as rédeas da sua situação.</p>
+<hr />
+<h2>O que significa demissão sem justa causa e quem tem direito à rescisão?</h2>
+<p>A <strong>demissão sem justa causa</strong> ocorre quando o empregador decide encerrar o contrato de trabalho sem que o funcionário tenha cometido uma falta grave. Em outras palavras: a empresa simplesmente dispensou você, sem necessidade de motivo disciplinar.</p>
+<p>Nesses casos, a <strong>Consolidação das Leis do Trabalho (CLT)</strong> garante ao trabalhador o recebimento de uma série de verbas rescisórias. São valores que funcionam como uma "almofada financeira" para que a pessoa tenha tempo e recursos para se reorganizar profissionalmente.</p>
+<p>As principais verbas de quem foi demitido sem justa causa incluem:</p>
+<ul>
+<li><strong>Saldo de salário</strong> referente aos dias trabalhados no mês da demissão;</li>
+<li><strong>Aviso prévio</strong> (trabalhado ou indenizado);</li>
+<li><strong>13º salário proporcional</strong>;</li>
+<li><strong>Férias vencidas + 1/3</strong> (se houver);</li>
+<li><strong>Férias proporcionais + 1/3</strong>;</li>
+<li><strong>Depósitos do FGTS</strong> (incluindo o do mês da rescisão);</li>
+<li><strong>Multa de 40% sobre o saldo do FGTS</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Importante:</strong> se você foi demitido por <strong>justa causa</strong>, o cenário muda completamente. Neste artigo, tratamos especificamente da <strong>demissão sem justa causa</strong>, que é a situação mais comum e que garante o maior número de direitos ao trabalhador.</p>
+</blockquote>
+<hr />
+<h2>Como calcular a rescisão trabalhista passo a passo?</h2>
+<p>Entender o <strong>cálculo de rescisão</strong> pode parecer complicado à primeira vista, mas vamos simplificar. Veja o passo a passo para você mesmo fazer uma estimativa e saber se o valor pago pela empresa está correto.</p>
+<h3>1. Saldo de Salário</h3>
+<p>Divida o seu salário bruto mensal por 30 e multiplique pelos dias efetivamente trabalhados no mês em que foi demitido.</p>
+<h3>2. Aviso Prévio</h3>
+<p>Se a empresa não exigir que você cumpra os 30 dias de trabalho após o comunicado da demissão, ela deve <strong>indenizar</strong> esse período, pagando um salário inteiro a mais. Se você cumpriu o aviso prévio, recebe normalmente pelo período.</p>
+<h3>3. 13º Salário Proporcional</h3>
+<p>Divide o salário bruto por 12 e multiplica pelos meses trabalhados no ano corrente. Se você trabalhou 15 dias ou mais em um mês, ele conta como mês inteiro.</p>
+<h3>4. Férias Proporcionais e Vencidas</h3>
+<ul>
+<li><strong>Férias vencidas:</strong> se você não tirou férias no período aquisitivo anterior, tem direito ao valor integral + 1/3.</li>
+<li><strong>Férias proporcionais:</strong> divide o salário por 12, multiplica pelos meses do período aquisitivo atual e adiciona 1/3 sobre o resultado.</li>
+</ul>
+<h3>5. FGTS e Multa de 40%</h3>
+<p>A empresa deve depositar o FGTS do mês da rescisão e liberar o saque total dos depósitos acumulados. Além disso, deve pagar uma <strong>multa de 40% sobre todo o saldo do FGTS</strong> depositado durante o contrato (incluindo os meses anteriores, mesmo de outros empregos se houver movimentação unificada).</p>
+<h3>Exemplo Prático</h3>
+<p>Imagine que <strong>Carlos</strong> recebe R$ 3.000,00 de salário bruto, foi demitido no dia 15 de abril e tinha 2 anos de empresa. Veja uma estimativa:</p>
+<table>
+<thead>
+<tr>
+<th>Verba</th>
+<th>Cálculo Simplificado</th>
+<th>Valor Estimado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Saldo de salário</td>
+<td>R$ 3.000 / 30 × 15</td>
+<td>R$ 1.500,00</td>
+</tr>
+<tr>
+<td>Aviso prévio indenizado</td>
+<td>1 salário</td>
+<td>R$ 3.000,00</td>
+</tr>
+<tr>
+<td>13º proporcional</td>
+<td>R$ 3.000 / 12 × 4</td>
+<td>R$ 1.000,00</td>
+</tr>
+<tr>
+<td>Férias proporcionais + 1/3</td>
+<td>R$ 3.000 / 12 × 4 + 1/3</td>
+<td>R$ 1.333,33</td>
+</tr>
+<tr>
+<td>Multa 40% FGTS</td>
+<td>40% sobre saldo acumulado</td>
+<td>Depende do histórico</td>
+</tr>
+</tbody>
+</table>
+<p>Esse é apenas um cálculo de referência. A presença de insalubridade, periculosidade, comissões, horas extras e outros adicionais altera significativamente o valor final.</p>
+<hr />
+<h2>Quanto tempo a empresa tem para pagar a rescisão trabalhista?</h2>
+<p>Aqui entramos em um ponto crítico: o <strong>prazo para pagamento da rescisão</strong>. Segundo a CLT, quando a demissão é sem justa causa e o aviso prévio é indenizado (o trabalhador não precisa cumprir), o prazo é de:</p>
+<p><strong>Até 10 dias corridos</strong> após o término do contrato.</p>
+<p>Se a empresa optar pelo aviso prévio trabalhado, o prazo passa a ser <strong>10 dias corridos após o fim do aviso prévio</strong>.</p>
+<p>Caso o pagamento seja feito fora do prazo, o trabalhador tem direito a uma <strong>multa de 1 salário</strong>, conforme entendimento consolidado do <a href="https://www.tst.jus.br">Tribunal Superior do Trabalho (TST)</a>.</p>
+<blockquote>
+<p><strong>Dica prática:</strong> guarde todos os holerites, contracheques, carteira de trabalho e o termo de rescisão. Esses documentos são essenciais tanto para conferir valores quanto para uma eventual ação trabalhista.</p>
+</blockquote>
+<hr />
+<h2>Mitos e Verdades sobre a Demissão Sem Justa Causa</h2>
+<p>É comum que o trabalhador se confunda com informações de amigos, familiares ou até da internet. Vamos desmistificar algumas crenças populares:</p>
+<table>
+<thead>
+<tr>
+<th>Mito</th>
+<th>Verdade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Quem é demitido perde o direito ao seguro-desemprego."</td>
+<td><strong>Falso.</strong> Quem é demitido sem justa causa tem direito ao seguro-desemprego, desde que preencha os requisitos de tempo de trabalho e carência.</td>
+</tr>
+<tr>
+<td>"A empresa pode descontar do aviso prévio indenizado."</td>
+<td><strong>Falso.</strong> O aviso prévio indenizado é pago integralmente, sem descontos de faltas ou atrasos.</td>
+</tr>
+<tr>
+<td>"Só posso entrar com uma ação trabalhista em até 6 meses."</td>
+<td><strong>Verdade.</strong> O prazo para reclamar na Justiça do Trabalho é de <strong>até 2 anos contados do término do contrato</strong>, respeitado o prazo prescricional de 5 anos para quem ainda está no emprego.</td>
+</tr>
+<tr>
+<td>"O empregador pode exigir assinatura do TRCT sem eu conferir."</td>
+<td><strong>Falso.</strong> Você tem o direito de levar o TRCT (Termo de Rescisão do Contrato de Trabalho) para conferência. Assinar sob pressão pode prejudicar seus direitos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Dicas e Recomendações para Quem Foi Demitido</h2>
+<ol>
+<li>
+<p><strong>Não assine o TRCT no mesmo dia da demissão</strong><br />
+   A lei permite que você leve o documento para casa e o analise com calma — ou com um advogado. Assinar sob coação ou dúvida pode barrar reclamações futuras.</p>
+</li>
+<li>
+<p><strong>Confira o extrato do FGTS</strong><br />
+   Acesse o aplicativo ou site da <a href="https://www.caixa.gov.br">Caixa Econômica Federal</a> para verificar se o saldo está correto e se houve deposito do mês da rescisão.</p>
+</li>
+<li>
+<p><strong>Solicite a carteira de trabalho de volta</strong><br />
+   A empresa deve devolver o documento com a anotação da rescisão. Verifique se a data e o motivo estão corretos.</p>
+</li>
+<li>
+<p><strong>Dê entrada no seguro-desemprego imediatamente</strong><br />
+   O atraso pode prejudicar o recebimento das primeiras parcelas. O cadastro é feito via <a href="https://www.gov.br">Gov.br</a> ou aplicativo do SINE.</p>
+</li>
+<li>
+<p><strong>Consulte um advogado trabalhista</strong><br />
+   Mesmo que os valores pareçam corretos, um profissional pode identificar direitos não pagos, como horas extras indevidamente não anotadas, adicionais de insalubridade não recebidos ou equiparação salarial.</p>
+</li>
+</ol>
+<hr />
+<h2>Quando devo procurar um advogado trabalhista?</h2>
+<p>Você deve considerar a ajuda de um <strong>advogado trabalhista</strong> nas seguintes situações:</p>
+<ul>
+<li>O valor da rescisão parece menor do que o esperado;</li>
+<li>A empresa se recusou a pagar alguma verba ou atrasou o pagamento;</li>
+<li>Houve assédio moral, discriminação ou pressão para demissão "voluntária";</li>
+<li>Você trabalhou de forma precária (sem carteira assinada) e foi dispensado;</li>
+<li>Existem horas extras, comissões ou adicionais não computados na rescisão.</li>
+</ul>
+<p>Um advogado especialista não apenas calcula o valor exato do que você tem a receber, como também negocia com a empresa e, se necessário, leva o caso à Justiça para garantir que seus direitos sejam respeitados.</p>
+<hr />
+<h2>Conclusão</h2>
+<p>Ser demitido sem justa causa é um momento difícil, mas você não está desamparado. A legislação trabalhista brasileira garante uma série de direitos e verbas que servem para proteger o trabalhador nesse período de transição. O segredo está em <strong>saber quais são esses direitos, conferir os valores da rescisão e não ter medo de buscar ajuda jurídica</strong> quando algo parecer incorreto.</p>
+<p>Lembre-se: você não precisa passar por isso sozinho. Entender a situação é o primeiro passo para recomeçar com segurança.</p>
+<hr />
+<h2>📞 Fale com um Advogado Trabalhista</h2>
+<p>Se você foi demitido recentemente e precisa de ajuda para conferir sua rescisão, receber aconselhamento jurídico ou iniciar uma reclamação trabalhista, nossa equipe está pronta para atender você.</p>
+<p><strong>[📅 AGENDE SUA CONSULTA GRATUITA AQUI]</strong><br />
+<em>(Link para formulário de contato ou WhatsApp do escritório)</em></p>
+<p>Ou entre em contato diretamente:<br />
+📧 E-mail: contato@seusite.com.br<br />
+📱 WhatsApp: (XX) XXXXX-XXXX</p>
+<hr />
+<blockquote>
+<p><strong>Leia também:</strong><br />
+- <a href="/seguro-desemprego-2026">Como Funciona o Seguro-Desemprego em 2026</a><br />
+- <a href="/justa-causa-dispensa-arbitraria">Justa Causa vs. Dispensa Arbitrária: Entenda as Diferenças</a><br />
+- <a href="/hora-extra-nao-paga-reclamar">Hora Extra Não Paga: Como Reclamar na Justiça</a><br />
+- <a href="/adicional-insalubridade-direito">Adicional de Insalubridade: Quem Tem Direito</a></p>
+</blockquote>
+<hr />
+<p><em>Este artigo tem caráter informativo e não substitui a consulta a um advogado especializado. Cada caso possui particularidades que devem ser analisadas individualmente.</em></p>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Precisa de ajuda com este assunto?</h2>
+                <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
+                <a href="https://wa.me/5547996756766" class="cta-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em todo o Brasil.</p>
+    </footer>
+</body>
+</html>
