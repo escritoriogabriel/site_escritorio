@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import subprocess
 from pathlib import Path
 import markdown
 import shutil
@@ -374,23 +375,45 @@ def parse_md_with_front_matter(md_path):
         with open(md_path, 'r', encoding='latin-1') as f:
             text = f.read()
 
-    fm_pattern = re.compile(r'---\s*\n(.*?)\n---\s*\n', re.DOTALL)
+    # Normaliza quebras de linha Windows (CRLF -> LF)
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+
+    fm_pattern = re.compile(r'^---\s*\n(.*?)\n---\s*\n', re.DOTALL | re.MULTILINE)
     fm_match = fm_pattern.search(text)
     
     if not fm_match:
+        # Tenta extrair título do primeiro heading # como fallback
+        title_match = re.search(r'^#\s+(.+)', text, re.MULTILINE)
+        if title_match:
+            return {'title': title_match.group(1).strip()}, text
         return None, text
     
     fm_text = fm_match.group(1)
     content_md = text[fm_match.end():].strip()
     
     metadata = {}
+    current_list_key = None
     for line in fm_text.split('\n'):
+        # Linha de item de lista YAML (ex: "  - valor")
+        list_item_match = re.match(r'^\s+-\s+(.+)', line)
+        if list_item_match and current_list_key:
+            metadata[current_list_key].append(list_item_match.group(1).strip().strip('"').strip("'"))
+            continue
+        else:
+            current_list_key = None
+
         if ':' in line:
             key, val = line.split(':', 1)
             key = key.strip().lower()
             val = val.strip().strip('"').strip("'")
-            if key in ['tags', 'categories', 'category']:
-                val = [item.strip() for item in val.replace('[', '').replace(']', '').replace('"', '').split(',') if item.strip()]
+            if key in ['tags', 'categories']:
+                if val:
+                    # Formato inline: tags: [a, b, c] ou tags: a, b, c
+                    val = [item.strip().strip('"').strip("'") for item in val.replace('[', '').replace(']', '').split(',') if item.strip()]
+                else:
+                    # Formato multiline: tags:\n  - a\n  - b
+                    val = []
+                    current_list_key = key
             metadata[key] = val
     
     if metadata.get('title'):
@@ -398,6 +421,46 @@ def parse_md_with_front_matter(md_path):
         content_md = re.sub(r'^#+.*?\n', '', content_md, count=1).strip()
 
     return metadata, content_md
+
+def git_commit_and_push():
+    """Faz git add, commit e push para publicar as alterações no GitHub Pages."""
+    try:
+        # Verifica se está dentro de um repositório git
+        result = subprocess.run(['git', 'rev-parse', '--git-dir'],
+                                capture_output=True, text=True, cwd=PROJECT_ROOT)
+        if result.returncode != 0:
+            print("⚠️  Aviso: Não é um repositório git. Pulando publicação automática.")
+            return
+
+        # Verifica se há alterações para commitar
+        status = subprocess.run(['git', 'status', '--porcelain'],
+                                capture_output=True, text=True, cwd=PROJECT_ROOT)
+        if not status.stdout.strip():
+            print("ℹ️  Nenhuma alteração detectada. O repositório já está atualizado.")
+            return
+
+        print("📦 Adicionando arquivos ao git...")
+        subprocess.run(['git', 'add', 'blog/posts/', 'blog/images/'],
+                       check=True, cwd=PROJECT_ROOT)
+
+        print("💾 Criando commit...")
+        subprocess.run(['git', 'commit', '-m', 'Novo(s) post(s) adicionado(s) via sincronizar_posts'],
+                       check=True, cwd=PROJECT_ROOT)
+
+        print("🚀 Enviando para o GitHub (git push)...")
+        subprocess.run(['git', 'push'],
+                       check=True, cwd=PROJECT_ROOT)
+
+        print("✅ Publicado com sucesso! O site será atualizado em instantes pelo GitHub Pages.")
+
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Erro ao publicar no GitHub: {e}")
+        print("   Verifique se o git está configurado e se você tem permissão de push.")
+        print("   Você pode publicar manualmente com: git add blog/posts/ && git commit -m 'novo post' && git push")
+    except FileNotFoundError:
+        print("⚠️  git não encontrado no PATH. Publicação manual necessária.")
+        print("   Execute: git add blog/posts/ && git commit -m 'novo post' && git push")
+
 
 def find_image(slug, title, metadata_image=None):
     # Se já existe uma imagem definida no metadata, tenta usá-la
@@ -536,7 +599,8 @@ def sync_posts():
     with open(INDEX_FILE, 'w', encoding='utf-8') as f:
         json.dump(all_posts_metadata, f, ensure_ascii=False, indent=2)
     
-    print(f"✨ Sincronização concluída!")
+    print(f"✨ Processamento local concluído! Publicando no GitHub...")
+    git_commit_and_push()
 
 if __name__ == "__main__":
     sync_posts()
