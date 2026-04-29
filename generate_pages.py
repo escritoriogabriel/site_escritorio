@@ -54,11 +54,15 @@ header {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.logo img {
+    height: 34px;
+    width: auto;
+    max-width: 260px;
 }
 
 nav {
@@ -311,7 +315,7 @@ template = f"""<!DOCTYPE html>
     </div>
 
     <header>
-        <a href="index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </button>

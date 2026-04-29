@@ -1,127 +1,12 @@
 [
   {
-    "title": "Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer",
-    "slug": "divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer",
-    "url": "blog/posts/divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer.html",
-    "date": "2026-04-27T18:00:00.000000",
-    "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Sabia que é possível se divorciar sem ir ao tribunal? Entenda quando o divórcio em cartório é permitido, quais documentos você precisa e como o processo funciona.",
-    "image": "/blog/images/FAMILIA_divorcio_tipos.webp",
-    "tags": [
-      "divórcio em cartório",
-      "divórcio extrajudicial",
-      "divórcio consensual",
-      "divórcio rápido",
-      "como se divorciar"
-    ],
-    "categories": [
-      "Direito de Família"
-    ]
-  },
-  {
-    "title": "Guarda Compartilhada: Como Funciona no Dia a Dia e o Que Ninguém Te Conta",
-    "slug": "guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta",
-    "url": "blog/posts/guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta.html",
-    "date": "2026-04-27T18:00:00.000000",
-    "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Seu filho vai morar onde? Quem decide a escola e o médico? Entenda como a guarda compartilhada funciona na prática e proteja o bem-estar dos seus filhos.",
-    "image": "/blog/images/FAMILIA_2.jpg",
-    "tags": [
-      "guarda compartilhada",
-      "guarda unilateral",
-      "direitos dos pais",
-      "convivência com filhos",
-      "divórcio com filhos"
-    ],
-    "categories": [
-      "Direito de Família"
-    ]
-  },
-  {
-    "title": "Inventário: O Passo a Passo Completo para Evitar Problemas e Brigas na Família",
-    "slug": "inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia",
-    "url": "blog/posts/inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia.html",
-    "date": "2026-04-27T18:00:00.000000",
-    "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Alguém da sua família faleceu e você precisa regularizar os bens? Entenda como funciona o inventário no Brasil, prazos, custos e como evitar conflitos entre herdeiros.",
-    "image": "/blog/images/FAMILIA_1.jpg",
-    "tags": [
-      "inventário",
-      "inventário extrajudicial",
-      "inventário judicial",
-      "partilha de herança",
-      "documentos inventário"
-    ],
-    "categories": [
-      "Direito de Família"
-    ]
-  },
-  {
-    "title": "Partilha de Bens no Divórcio: O Que Entra na Divisão em Cada Regime?",
-    "slug": "partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime",
-    "url": "blog/posts/partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime.html",
-    "date": "2026-04-27T18:00:00.000000",
-    "author": "Advogado Gabriel Corrêa",
-    "excerpt": "O que é seu, o que é do casal e o que fica com cada um após o divórcio? A resposta depende do regime de bens. Entenda agora antes que seja tarde.",
-    "image": "/blog/images/FAMILIA_divorcio_direitos.jpg",
-    "tags": [
-      "partilha de bens",
-      "regime de bens",
-      "comunhão parcial",
-      "separação de bens",
-      "divórcio bens"
-    ],
-    "categories": [
-      "Direito de Família"
-    ]
-  },
-  {
-    "title": "Pensão Alimentícia em 2026: Como o Valor é Calculado e Quais São Seus Direitos",
-    "slug": "pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos",
-    "url": "blog/posts/pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos.html",
-    "date": "2026-04-27T18:00:00.000000",
-    "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Quanto deve ser a pensão do seu filho? Entenda em 2026 como o juiz calcula o valor, o que pode ser revisado e o que fazer quando o pagamento atrasa.",
-    "image": "/blog/images/FAMILIA_pensao.webp",
-    "tags": [
-      "pensão alimentícia",
-      "cálculo pensão alimentícia",
-      "revisão de pensão",
-      "pensão para filhos",
-      "alimentos"
-    ],
-    "categories": [
-      "Direito de Família"
-    ]
-  },
-  {
-    "title": "Rescisão Indireta: Seu Patrão Está Errado — e Você Ainda Tem Direito a Receber Tudo",
-    "slug": "resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo",
-    "url": "blog/posts/resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo.html",
-    "date": "2026-04-27T18:00:00.000000",
-    "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Você está sofrendo assédio, atrasos de salário ou humilhações no trabalho? Saiba que a lei permite que você encerre o contrato por culpa do empregador — e receba todos os seus direitos.",
-    "image": "/blog/images/TRABALHISTA_guia.png",
-    "tags": [
-      "rescisão indireta",
-      "direitos trabalhistas",
-      "CLT",
-      "justa causa do empregador",
-      "verbas rescisórias",
-      "FGTS"
-    ],
-    "categories": [
-      "Direito Trabalhista"
-    ]
-  },
-  {
     "title": "Acordo de Não Persecução Penal: Como Evitar um Processo Criminal de Forma Legal",
     "slug": "acordo-de-nao-persecucao-penal-como-evitar-um-processo-criminal-de-forma-legal",
-    "url": "blog/posts/acordo-de-nao-persecucao-penal-como-evitar-um-processo-criminal-de-forma-legal.html",
+    "url": "/blog/posts/acordo-de-nao-persecucao-penal-como-evitar-um-processo-criminal-de-forma-legal.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Sabia que em muitos casos é possível resolver um processo criminal sem julgamento e sem ficha? Entenda o Acordo de Não Persecução Penal e quando ele pode te ajudar.",
-    "image": "/blog/images/CRIMINAL_1.jpg",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "ANPP",
       "acordo não persecução penal",
@@ -136,11 +21,11 @@
   {
     "title": "Adoção no Brasil: Quais São as Etapas, os Requisitos e o Que Ninguém Te Conta",
     "slug": "adocao-no-brasil-quais-sao-as-etapas-os-requisitos-e-o-que-ninguem-te-conta",
-    "url": "blog/posts/adocao-no-brasil-quais-sao-as-etapas-os-requisitos-e-o-que-ninguem-te-conta.html",
+    "url": "/blog/posts/adocao-no-brasil-quais-sao-as-etapas-os-requisitos-e-o-que-ninguem-te-conta.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Quer adotar uma criança mas não sabe por onde começar? Entenda todas as etapas do processo de adoção no Brasil, os requisitos legais e como um advogado pode te ajudar.",
-    "image": "/blog/images/FAMILIA_conceito.jpg",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "adoção",
       "como adotar",
@@ -155,11 +40,11 @@
   {
     "title": "Alienação Parental: Como Identificar, Provar e o Que a Lei Permite Fazer",
     "slug": "alienacao-parental-como-identificar-provar-e-o-que-a-lei-permite-fazer",
-    "url": "blog/posts/alienacao-parental-como-identificar-provar-e-o-que-a-lei-permite-fazer.html",
+    "url": "/blog/posts/alienacao-parental-como-identificar-provar-e-o-que-a-lei-permite-fazer.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Seu filho está sendo afastado de você após a separação? Conheça a alienação parental, como identificá-la e quais medidas legais existem para proteger sua família.",
-    "image": "/blog/images/FAMILIA_direito.png",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "alienação parental",
       "o que é alienação parental",
@@ -174,11 +59,11 @@
   {
     "title": "Audiência de Custódia: O Que é, Como Funciona e o Que Define Sua Liberdade",
     "slug": "audiencia-de-custodia-o-que-e-como-funciona-e-o-que-define-sua-liberdade",
-    "url": "blog/posts/audiencia-de-custodia-o-que-e-como-funciona-e-o-que-define-sua-liberdade.html",
+    "url": "/blog/posts/audiencia-de-custodia-o-que-e-como-funciona-e-o-que-define-sua-liberdade.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Após a prisão, você tem até 24 horas para ser apresentado a um juiz. Entenda o que é a audiência de custódia, o que o juiz decide e como se preparar para ela.",
-    "image": "/blog/images/CRIMINAL_2.jpg",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "audiência de custódia",
       "o que é audiência de custódia",
@@ -193,11 +78,11 @@
   {
     "title": "Busca e Apreensão de Veículo: O Que Fazer Quando o Oficial de Justiça Chega",
     "slug": "busca-e-apreensao-de-veiculo-o-que-fazer-quando-o-oficial-de-justica-chega",
-    "url": "blog/posts/busca-e-apreensao-de-veiculo-o-que-fazer-quando-o-oficial-de-justica-chega.html",
+    "url": "/blog/posts/busca-e-apreensao-de-veiculo-o-que-fazer-quando-o-oficial-de-justica-chega.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "O oficial de justiça bateu na sua porta para pegar seu carro? Saiba exatamente o que fazer, o que não fazer e como um advogado pode mudar essa situação agora.",
-    "image": "/blog/images/BUSCA_veiculo_1.jpeg",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "busca e apreensão veículo",
       "oficial de justiça busca e apreensão",
@@ -211,11 +96,11 @@
   {
     "title": "Crimes Cibernéticos: Como Se Defender de Golpes Online e o Que Fazer se For Acusado",
     "slug": "crimes-ciberneticos-como-se-defender-de-golpes-online-e-o-que-fazer-se-for-acusado",
-    "url": "blog/posts/crimes-ciberneticos-como-se-defender-de-golpes-online-e-o-que-fazer-se-for-acusado.html",
+    "url": "/blog/posts/crimes-ciberneticos-como-se-defender-de-golpes-online-e-o-que-fazer-se-for-acusado.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
     "excerpt": "Caiu num golpe online ou está sendo acusado de um crime digital? Entenda como funcionam os crimes cibernéticos no Brasil e quais são seus direitos em cada situação.",
-    "image": "/blog/images/CRIMINAL_penal_1.webp",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "crimes cibernéticos",
       "estelionato virtual",
@@ -230,74 +115,188 @@
   {
     "title": "Crimes de Trânsito: Embriaguez, Acidente e Suspensão da CNH — Conheça Seus Direitos",
     "slug": "crimes-de-transito-embriaguez-acidente-e-suspensao-da-cnh-conheca-seus-direitos",
-    "url": "blog/posts/crimes-de-transito-embriaguez-acidente-e-suspensao-da-cnh-conheca-seus-direitos.html",
+    "url": "/blog/posts/crimes-de-transito-embriaguez-acidente-e-suspensao-da-cnh-conheca-seus-direitos.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Se envolveu em um acidente ou foi pego na Lei Seca? Entenda as consequências criminais e como garantir uma defesa técnica para proteger sua liberdade e sua CNH.",
-    "image": "/blog/images/TRANSITO_acidente.jpg",
+    "excerpt": "Foi parado bêbado, se envolveu num acidente grave ou perdeu a CNH? Entenda o que o Código de Trânsito diz sobre crimes, penas e como se defender de forma eficaz.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "crimes de trânsito",
-      "lei seca",
       "embriaguez ao volante",
-      "acidente com vítima",
-      "suspensão CNH"
+      "homicídio culposo trânsito",
+      "suspensão CNH",
+      "acidente de carro crime"
     ],
     "categories": [
       "Direito Criminal"
+    ]
+  },
+  {
+    "title": "Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer",
+    "slug": "divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer",
+    "url": "/blog/posts/divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Sabia que é possível se divorciar sem ir ao tribunal? Entenda quando o divórcio em cartório é permitido, quais documentos você precisa e como o processo funciona.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "divórcio em cartório",
+      "divórcio extrajudicial",
+      "divórcio consensual",
+      "divórcio rápido",
+      "como se divorciar"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Fui Preso: O Que Fazer nas Primeiras Horas e Quais São Seus Direitos",
+    "slug": "fui-preso-o-que-fazer-nas-primeiras-horas-e-quais-sao-seus-direitos",
+    "url": "/blog/posts/fui-preso-o-que-fazer-nas-primeiras-horas-e-quais-sao-seus-direitos.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Ser preso é um momento de pânico. Mas o que você faz nas primeiras horas pode mudar tudo. Entenda seus direitos e o que jamais deve fazer ao ser detido.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "fui preso",
+      "direitos do preso",
+      "advogado criminalista urgente",
+      "audiência de custódia",
+      "prisão em flagrante"
+    ],
+    "categories": [
+      "Direito Criminal"
+    ]
+  },
+  {
+    "title": "Guarda Compartilhada: Como Funciona no Dia a Dia e o Que Ninguém Te Conta",
+    "slug": "guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta",
+    "url": "/blog/posts/guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Seu filho vai morar onde? Quem decide a escola e o médico? Entenda como a guarda compartilhada funciona na prática e proteja o bem-estar dos seus filhos.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "guarda compartilhada",
+      "guarda unilateral",
+      "direitos dos pais",
+      "convivência com filhos",
+      "divórcio com filhos"
+    ],
+    "categories": [
+      "Direito de Família"
     ]
   },
   {
     "title": "Habeas Corpus: O Que é, Quando Usar e Como Pode Garantir Sua Liberdade",
     "slug": "habeas-corpus-o-que-e-quando-usar-e-como-pode-garantir-sua-liberdade",
-    "url": "blog/posts/habeas-corpus-o-que-e-quando-usar-e-como-pode-garantir-sua-liberdade.html",
+    "url": "/blog/posts/habeas-corpus-o-que-e-quando-usar-e-como-pode-garantir-sua-liberdade.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "A liberdade é um direito fundamental. Entenda como o Habeas Corpus funciona como uma ferramenta de urgência para combater prisões ilegais ou abusos de autoridade.",
-    "image": "/blog/images/GERAL_direito_1.jpg",
+    "excerpt": "Preso de forma ilegal ou abusiva? O habeas corpus é o remédio jurídico mais poderoso para garantir a liberdade. Entenda quando e como utilizá-lo.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "habeas corpus",
-      "liberdade",
-      "prisão ilegal",
-      "liminar habeas corpus",
-      "advogado criminalista"
+      "o que é habeas corpus",
+      "pedir habeas corpus",
+      "liberdade provisória",
+      "prisão ilegal"
     ],
     "categories": [
       "Direito Criminal"
+    ]
+  },
+  {
+    "title": "Inventário: O Passo a Passo Completo para Evitar Problemas e Brigas na Família",
+    "slug": "inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia",
+    "url": "/blog/posts/inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Alguém da sua família faleceu e você precisa regularizar os bens? Entenda como funciona o inventário no Brasil, prazos, custos e como evitar conflitos entre herdeiros.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "inventário",
+      "inventário extrajudicial",
+      "inventário judicial",
+      "partilha de herança",
+      "documentos inventário"
+    ],
+    "categories": [
+      "Direito de Família"
     ]
   },
   {
     "title": "Lei Maria da Penha: Como Funciona a Proteção à Vítima e a Defesa do Acusado",
     "slug": "lei-maria-da-penha-como-funciona-a-protecao-a-vitima-e-a-defesa-do-acusado",
-    "url": "blog/posts/lei-maria-da-penha-como-funciona-a-protecao-a-vitima-e-a-defesa-do-acusado.html",
+    "url": "/blog/posts/lei-maria-da-penha-como-funciona-a-protecao-a-vitima-e-a-defesa-do-acusado.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Entenda os detalhes da Lei Maria da Penha, as medidas protetivas de urgência e como funciona o processo judicial tanto para quem busca proteção quanto para quem se defende.",
-    "image": "/blog/images/GERAL_direito_2.png",
+    "excerpt": "A Lei Maria da Penha protege vítimas de violência doméstica — mas também exige cuidado quando usada de forma indevida. Entenda seus direitos em ambos os lados.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
-      "lei maria da penha",
+      "Lei Maria da Penha",
+      "medidas protetivas",
       "violência doméstica",
-      "medida protetiva",
-      "defesa criminal",
-      "direitos da mulher"
+      "como denunciar violência",
+      "defesa acusado Maria da Penha"
     ],
     "categories": [
       "Direito Criminal"
     ]
   },
   {
-    "title": "Planejamento Sucessório: Como Proteger o Patrimônio Familiar e Evitar Conflitos",
-    "slug": "planejamento-sucessorio-como-proteger-o-patrimonio-familiar-e-evitar-conflitos",
-    "url": "blog/posts/planejamento-sucessorio-como-proteger-o-patrimonio-familiar-e-evitar-conflitos.html",
+    "title": "Partilha de Bens no Divórcio: O Que Entra na Divisão em Cada Regime?",
+    "slug": "partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime",
+    "url": "/blog/posts/partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Não deixe para depois a organização do que você construiu. Saiba como o planejamento sucessório pode reduzir impostos e evitar brigas judiciais entre herdeiros no futuro.",
-    "image": "/blog/images/FAMILIA_divorcio_recomecar.webp",
+    "excerpt": "O que é seu, o que é do casal e o que fica com cada um após o divórcio? A resposta depende do regime de bens. Entenda agora antes que seja tarde.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "partilha de bens",
+      "regime de bens",
+      "comunhão parcial",
+      "separação de bens",
+      "divórcio bens"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Pensão Alimentícia em 2026: Como o Valor é Calculado e Quais São Seus Direitos",
+    "slug": "pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos",
+    "url": "/blog/posts/pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Quanto deve ser a pensão do seu filho? Entenda em 2026 como o juiz calcula o valor, o que pode ser revisado e o que fazer quando o pagamento atrasa.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "pensão alimentícia",
+      "cálculo pensão alimentícia",
+      "revisão de pensão",
+      "pensão para filhos",
+      "alimentos"
+    ],
+    "categories": [
+      "Direito de Família"
+    ]
+  },
+  {
+    "title": "Planejamento Sucessório: Como Proteger o Patrimônio Familiar e Evitar Conflitos",
+    "slug": "planejamento-sucessorio-como-proteger-o-patrimonio-familiar-e-evitar-conflitos",
+    "url": "/blog/posts/planejamento-sucessorio-como-proteger-o-patrimonio-familiar-e-evitar-conflitos.html",
+    "date": "2026-04-27T18:00:00.000000",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Você sabe o que vai acontecer com seu patrimônio quando você não estiver mais aqui? Entenda como o planejamento sucessório protege sua família e reduz impostos e conflitos.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "planejamento sucessório",
-      "herança",
+      "testamento",
+      "doação em vida",
       "holding familiar",
-      "doação de bens",
-      "evitar inventário"
+      "inventário"
     ],
     "categories": [
       "Direito de Família"
@@ -306,17 +305,17 @@
   {
     "title": "Prisão Preventiva: O Que é, Quando é Legal e Como Pedir a Revogação",
     "slug": "prisao-preventiva-o-que-e-quando-e-legal-e-como-pedir-a-revogacao",
-    "url": "blog/posts/prisao-preventiva-o-que-e-quando-e-legal-e-como-pedir-a-revogacao.html",
+    "url": "/blog/posts/prisao-preventiva-o-que-e-quando-e-legal-e-como-pedir-a-revogacao.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "A prisão preventiva não é uma sentença antecipada. Entenda os requisitos que o juiz deve seguir e quais são os caminhos legais para buscar a liberdade durante o processo.",
-    "image": "/blog/images/GERAL_direito_3.jpg",
+    "excerpt": "Seu familiar foi preso preventivamente e você não sabe o que fazer? Entenda o que é a prisão preventiva, quando ela é legal e como lutar pela liberdade com urgência.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "prisão preventiva",
-      "revogação de prisão",
-      "habeas corpus",
-      "processo penal",
-      "liberdade provisória"
+      "revogação prisão preventiva",
+      "requisitos prisão preventiva",
+      "liberdade provisória",
+      "medidas cautelares"
     ],
     "categories": [
       "Direito Criminal"
@@ -325,55 +324,56 @@
   {
     "title": "Progressão de Regime: Como Funciona o Caminho da Prisão para a Liberdade",
     "slug": "progressao-de-regime-como-funciona-o-caminho-da-prisao-para-a-liberdade",
-    "url": "blog/posts/progressao-de-regime-como-funciona-o-caminho-da-prisao-para-a-liberdade.html",
+    "url": "/blog/posts/progressao-de-regime-como-funciona-o-caminho-da-prisao-para-a-liberdade.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Saiba como funciona a passagem do regime fechado para o semiaberto e aberto. Conheça os prazos, requisitos de comportamento e como garantir que o direito seja aplicado no tempo certo.",
-    "image": "/blog/images/BUSCA_2.jpg",
+    "excerpt": "Seu familiar está preso e você quer entender como funciona a progressão de regime? Saiba quais são os requisitos, prazos e como um advogado pode acelerar esse processo.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "progressão de regime",
-      "execução penal",
       "regime semiaberto",
       "regime aberto",
-      "direitos do preso"
+      "como sair da cadeia",
+      "execução penal"
     ],
     "categories": [
       "Direito Criminal"
     ]
   },
   {
-    "title": "Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos",
-    "slug": "rescis-o-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demiss-o-com-direitos",
-    "url": "blog/posts/rescis-o-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demiss-o-com-direitos.html",
+    "title": "Rescisão Indireta: Seu Patrão Está Errado — e Você Ainda Tem Direito a Receber Tudo",
+    "slug": "resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo",
+    "url": "/blog/posts/resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "O patrão não cumpre o contrato? Saiba como a rescisão indireta permite que você saia da empresa recebendo todas as indenizações, como se tivesse sido demitido.",
-    "image": "/blog/images/TRABALHISTA_1.jpg",
+    "excerpt": "Você está sofrendo assédio, atrasos de salário ou humilhações no trabalho? Saiba que a lei permite que você encerre o contrato por culpa do empregador — e receba todos os seus direitos.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "rescisão indireta",
-      "falta do empregador",
       "direitos trabalhistas",
-      "justa causa patrão",
-      "indenização"
+      "CLT",
+      "justa causa do empregador",
+      "verbas rescisórias",
+      "FGTS"
     ],
     "categories": [
       "Direito Trabalhista"
     ]
   },
   {
-    "title": "Testamento: Por Que Você Deveria Pensar em Fazer um Agora Mesmo, Sendo Jovem",
+    "title": "Testamento: Por Que Você Deveria Pensar em Fazer Um Agora (Mesmo Sendo Jovem)",
     "slug": "testamento-por-que-voce-deveria-pensar-em-fazer-um-agora-mesmo-sendo-jovem",
-    "url": "blog/posts/testamento-por-que-voce-deveria-pensar-em-fazer-um-agora-mesmo-sendo-jovem.html",
+    "url": "/blog/posts/testamento-por-que-voce-deveria-pensar-em-fazer-um-agora-mesmo-sendo-jovem.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Testamento não é coisa de filme ou de quem está no fim da vida. Entenda como essa ferramenta pode garantir que sua vontade seja respeitada e seus entes queridos protegidos.",
-    "image": "/blog/images/FAMILIA_divorcio_2.jpg",
+    "excerpt": "Testamento não é só para idosos ou ricos. Descubra por que fazer um pode proteger as pessoas que você ama e evitar brigas desnecessárias na sua família.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "testamento",
-      "herança",
-      "sucessão",
-      "vontade final",
-      "planejamento sucessório"
+      "como fazer testamento",
+      "testamento público",
+      "planejamento sucessório",
+      "herança"
     ],
     "categories": [
       "Direito de Família"
@@ -382,17 +382,17 @@
   {
     "title": "Tráfico de Drogas: A Diferença Entre Usuário e Traficante Pode Definir Anos da Sua Vida",
     "slug": "trafico-de-drogas-a-diferenca-entre-usuario-e-traficante-pode-definir-anos-da-sua-vida",
-    "url": "blog/posts/trafico-de-drogas-a-diferenca-entre-usuario-e-traficante-pode-definir-anos-da-sua-vida.html",
+    "url": "/blog/posts/trafico-de-drogas-a-diferenca-entre-usuario-e-traficante-pode-definir-anos-da-sua-vida.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "A linha entre consumo e tráfico é tênue e muitas vezes subjetiva. Entenda os critérios da lei e como uma defesa técnica é essencial para evitar condenações injustas.",
-    "image": "/blog/images/BUSCA_1.png",
+    "excerpt": "Pego com droga? A lei faz uma distinção crucial entre usuário e traficante — e essa diferença pode significar anos de prisão ou liberdade. Entenda como funciona.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "tráfico de drogas",
-      "lei de drogas",
-      "usuário vs traficante",
-      "defesa criminal",
-      "posse de drogas"
+      "usuário de drogas",
+      "pena tráfico de drogas",
+      "tráfico privilegiado",
+      "defesa crimes de drogas"
     ],
     "categories": [
       "Direito Criminal"
@@ -401,20 +401,56 @@
   {
     "title": "União Estável: Quais São os Direitos, Deveres e o Que Você Precisa Formalizar",
     "slug": "uniao-estavel-quais-sao-os-direitos-deveres-e-o-que-voce-precisa-formalizar",
-    "url": "blog/posts/uniao-estavel-quais-sao-os-direitos-deveres-e-o-que-voce-precisa-formalizar.html",
+    "url": "/blog/posts/uniao-estavel-quais-sao-os-direitos-deveres-e-o-que-voce-precisa-formalizar.html",
     "date": "2026-04-27T18:00:00.000000",
     "author": "Advogado Gabriel Corrêa",
-    "excerpt": "Viver junto é o mesmo que casar? Entenda as regras da união estável, como formalizar em cartório e quais são os impactos no seu patrimônio e na herança.",
-    "image": "/blog/images/FAMILIA_divorcio_3.png",
+    "excerpt": "Você mora com seu companheiro há anos mas nunca casou? Saiba que a união estável gera direitos e deveres reais — e o que pode acontecer se você não formalizar.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "tags": [
       "união estável",
-      "contrato de convivência",
-      "direitos do companheiro",
-      "regime de bens",
-      "formalização união estável"
+      "direitos união estável",
+      "contrato união estável",
+      "como comprovar união estável",
+      "direito de família"
     ],
     "categories": [
       "Direito de Família"
+    ]
+  },
+  {
+    "title": "Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos",
+    "slug": "rescis-o-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demiss-o-com-direitos",
+    "url": "/blog/posts/rescis-o-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demiss-o-com-direitos.html",
+    "date": "2026-04-27T14:47:26.772572",
+    "author": "Advogado Gabriel Corrêa",
+    "excerpt": "Saiba como funciona a rescisão indireta, a 'justa causa do empregador', e garanta seus direitos mesmo quando a empresa descumpre o contrato.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "rescisão indireta",
+      "direitos do trabalhador",
+      "CLT"
+    ],
+    "categories": [
+      "Direito Trabalhista"
+    ]
+  },
+  {
+    "title": "Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos",
+    "slug": "resciso-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demisso-com-direitos",
+    "url": "/blog/posts/resciso-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demisso-com-direitos.html",
+    "date": "2026-04-27",
+    "author": "Equipe Jurídica",
+    "excerpt": "Entenda o que é rescisão indireta, quais situações configuram falta grave do empregador, quais verbas o trabalhador tem direito e como agir para defender seus direitos.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "tags": [
+      "rescisão indireta",
+      "direitos trabalhistas",
+      "CLT",
+      "FGTS",
+      "demissão"
+    ],
+    "categories": [
+      "Direito Trabalhista"
     ]
   }
 ]

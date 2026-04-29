@@ -3,193 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca e Apreensão de Veículos | Advogado Gabriel Corrêa</title>
+    <title>Busca e Apreensão | Proteja seu Veículo | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Defesa contra busca e apreensão de veículos. Revisão de juros abusivos e estratégias para manter seu patrimônio.">
+    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/busca-e-apreensao.html">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #172B41; 
-            --accent: #C9A961; 
-            --text: #2D3748; 
-            --text-light: #718096;
-            --bg: #F7FAFC; 
-            --white: #FFFFFF;
-            --whatsapp: #25D366;
-        }
         
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.8; 
-            color: var(--text); 
-            background: var(--bg); 
-        }
+:root {
+    --primary-blue: #172B41;
+    --accent-gold: #C9A961;
+    --bg-light: #F8F8F8;
+    --whatsapp-green: #25D366;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --white: #FFFFFF;
+}
 
-        header { 
-            background: var(--white); 
-            padding: 0 5%; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.07); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            height: 72px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .logo { display: flex; align-items: center; text-decoration: none; }
-        .logo img { height: 34px; width: auto; max-width: 260px; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
 
-        .top-bar { background-color: #172B41; color: white; padding: 7px 5%; font-size: 0.82rem; text-align: right; }
-        .top-bar a { color: white; text-decoration: none; }
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
 
-        nav { display: flex; align-items: center; gap: 28px; }
-        .nav-links { display: flex; list-style: none; gap: 22px; align-items: center; }
-        .nav-links a { text-decoration: none; color: #172B41; font-weight: 600; font-size: 0.92rem; transition: color 0.3s; }
-        .nav-links a:hover { color: #C9A961; }
-        .dropdown { position: relative; }
-        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 260px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 100; top: 100%; left: 0; border-top: 3px solid #C9A961; border-radius: 0 0 8px 8px; }
-        .dropdown:hover .dropdown-content { display: block; }
-        .dropdown-content a { color: #333; padding: 11px 16px; display: block; font-size: 0.88rem; border-bottom: 1px solid #f0f0f0; transition: background 0.2s; }
-        .dropdown-content a:last-child { border-bottom: none; }
-        .dropdown-content a:hover { background-color: #F8F8F8; color: #C9A961; }
-        .btn-nav-whatsapp { background-color: #25D366; color: white !important; padding: 9px 18px; border-radius: 6px; transition: transform 0.3s; white-space: nowrap; font-size: 0.88rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-        .btn-nav-whatsapp:hover { transform: translateY(-2px); }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 5px; }
-        .hamburger span { width: 24px; height: 2.5px; background-color: #172B41; border-radius: 3px; transition: all 0.3s; }
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    text-align: right;
+}
 
-        .container { 
-            max-width: 1000px; 
-            margin: 60px auto; 
-            background: var(--white); 
-            padding: 60px; 
-            border-radius: 16px; 
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); 
-        }
+/* Header & Navigation */
+header {
+    background-color: var(--white);
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 80px;
+}
 
-        .btn-back { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 8px;
-            margin-bottom: 40px; 
-            color: var(--primary); 
-            text-decoration: none; 
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: transform 0.2s;
-        }
-        .btn-back:hover { transform: translateX(-5px); color: var(--accent); }
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
-        .page-header { margin-bottom: 50px; text-align: center; }
-        .page-header h1 { 
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary); 
-            font-size: 2.8rem;
-            line-height: 1.2;
-            margin-bottom: 20px; 
-        }
-        .page-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-        }
+.logo img {
+    height: 34px;
+    width: auto;
+    max-width: 260px;
+}
 
-        .content-section { font-size: 1.15rem; color: #333; }
-        .content-section h2 { 
-            color: var(--primary); 
-            margin: 50px 0 25px 0; 
-            font-size: 1.8rem;
-            border-left: 5px solid var(--accent);
-            padding-left: 20px;
-        }
-        .content-section h3 { color: var(--primary); margin: 35px 0 15px 0; font-size: 1.4rem; }
-        .content-section p { margin-bottom: 25px; }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        .feature-card {
-            background: #f8fafc;
-            padding: 30px;
-            border-radius: 12px;
-            border-bottom: 4px solid var(--accent);
-        }
-        .feature-card i {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-        .feature-card h4 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-        .cta-section { 
-            margin-top: 80px; 
-            padding: 50px; 
-            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%); 
-            color: white; 
-            border-radius: 16px; 
-            text-align: center; 
-        }
-        .cta-section h2 { margin-bottom: 20px; color: white; border: none; padding: 0; font-size: 2rem; }
-        .cta-whatsapp { 
-            background: var(--whatsapp); 
-            color: white; 
-            padding: 18px 35px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 700; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 12px;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-top: 20px;
-        }
-        .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
 
-        footer { background: var(--primary); color: #a0aec0; padding: 60px 5%; text-align: center; margin-top: 100px; }
-        
-        @media (max-width: 768px) {
-            .container { padding: 24px 16px; margin: 16px; }
-            .page-header h1 { font-size: 1.7rem; }
-            .content-section { font-size: 1rem; }
-            header { flex-wrap: wrap; height: auto; padding: 12px 5%; gap: 8px; }
-            .hamburger { display: flex; }
-            nav { display: none; flex-direction: column; gap: 12px; width: 100%; padding-bottom: 12px; }
-            nav.open { display: flex; }
-            .nav-links { flex-direction: column; align-items: flex-start; gap: 8px; width: 100%; }
-            .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-            .top-bar { text-align: center; font-size: 0.72rem; padding: 8px 5%; }
-        }
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%;
+    border-top: 3px solid var(--accent-gold);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+}
+
+.btn-nav-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.btn-nav-whatsapp:hover {
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+/* Page Header (for subpages) */
+.page-header {
+    padding: 60px 5%;
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cta-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 40px;
+}
+
+.btn-cta {
+    background-color: var(--whatsapp-green);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+/* Profile Section */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 20px 20px 0 var(--accent-gold);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
+    .hamburger { display: flex; }
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    nav.open { display: flex; }
+    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
+    .top-bar { text-align: center; font-size: 0.75rem; }
+    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
+    .profile-image { max-width: 250px; margin: 0 auto; box-shadow: 10px 10px 0 var(--accent-gold); }
+    .page-header h1 { font-size: 1.8rem; }
+    .content-section { padding: 40px 5%; }
+}
+
     </style>
 </head>
 <body>
+
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a>
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
+
     <header>
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
         <nav id="mainNav">
             <ul class="nav-links">
                 <li><a href="index.html">Início</a></li>
                 <li class="dropdown">
-                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
                     <div class="dropdown-content">
-                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
-                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                        <a href="familia.html">Direito de Família</a>
-                        <a href="criminal.html">Direito Criminal</a>
+                        <a href="familia.html">Família</a>
                         <a href="contrato.html">Contratos</a>
+                        <a href="criminal.html">Criminal</a>
+                        <a href="trabalhista.html">Trabalhista</a>
                         <a href="busca-e-apreensao.html">Busca e Apreensão</a>
                     </div>
                 </li>
@@ -200,84 +334,97 @@
             <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </nav>
     </header>
-    
-    <div class="container">
-        <a href="index.html#servicos" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para Áreas de Atuação</a>       
+
+    <main>
         
-        <div class="page-header">
-            <h1>Busca e Apreensão de Veículos</h1>
-            <p>Proteção imediata contra abusos bancários e estratégias para recuperar ou manter a posse do seu veículo.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>O que abrange esta área?</h2>
-            <p>A busca e apreensão ocorre quando há atraso nas parcelas do financiamento e o banco entra na justiça para retomar o veículo. No entanto, muitos desses processos possuem falhas graves ou cobranças abusivas que podem ser contestadas para evitar a perda do bem ou até mesmo recuperar o veículo já apreendido.</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-car-crash"></i>
-                    <h4>Defesa Imediata</h4>
-                    <p>Contestação da ação de busca e apreensão para identificar erros na notificação ou no contrato.</p>
+            <section class="page-header">
+                <h1>Busca e Apreensão</h1>
+                <p>Defesa ágil para proteger seu patrimônio.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Não perca seu veículo para o banco</h2>
+                <p style="margin-bottom: 20px;">Ações de busca e apreensão muitas vezes contêm irregularidades ou baseiam-se em contratos com juros abusivos. Atuamos de forma rápida para contestar a apreensão, purgar a mora ou renegociar a dívida em condições justas.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Defesa em Busca e Apreensão:</strong> Medidas para evitar a perda do bem.</li>
+                    <li style="margin-bottom: 10px;"><strong>Revisão de Juros Abusivos:</strong> Redução do valor das parcelas e do saldo devedor.</li>
+                    <li style="margin-bottom: 10px;"><strong>Purgação da Mora:</strong> Estratégias para quitar o débito e recuperar o veículo.</li>
+                    <li style="margin-bottom: 10px;"><strong>Negociação Bancária:</strong> Acordos diretos para regularização do contrato.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Recebeu notificação de busca e apreensão?</h3>
+                    <p>O tempo é curto. Fale com um advogado agora para agir rápido.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Proteger meu Veículo</a>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-undo"></i>
-                    <h4>Recuperação de Veículo</h4>
-                    <p>Ações rápidas para tentar reaver o veículo que já foi levado pelo oficial de justiça.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-calculator"></i>
-                    <h4>Revisão de Contrato</h4>
-                    <p>Análise de juros abusivos e taxas ilegais que podem reduzir drasticamente o valor da sua dívida.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Negociação de Dívida</h4>
-                    <p>Intermediação com o banco para conseguir descontos reais e condições de pagamento que você possa cumprir.</p>
-                </div>
-            </div>
-
-            <h2>Como posso ajudar?</h2>
-            <p>Se o oficial de justiça bater à sua porta, ou se você já está com parcelas atrasadas e teme o pior, eu atuo para proteger seu patrimônio. Analisamos se o banco seguiu todos os passos legais obrigatórios — o que muitas vezes eles não fazem — e usamos isso a seu favor para manter o carro com você.</p>
-
-            <h2>Principais cenários de atuação</h2>
-            <ul>
-                <li><strong>Atraso de Parcelas:</strong> Orientação preventiva para evitar que o banco entre com o processo de busca.</li>
-                <li><strong>Veículo Apreendido:</strong> Prazo urgente de 5 dias para pagar a dívida ou apresentar defesa para tentar recuperar o bem.</li>
-                <li><strong>Juros Abusivos:</strong> Quando o valor das parcelas se torna impagável devido a taxas que a lei não permite.</li>
-                <li><strong>Purgação da Mora:</strong> Auxílio no cálculo e depósito dos valores para quitar o contrato e encerrar o processo.</li>
-            </ul>
-
-            <blockquote>
-                "Ter o veículo apreendido é um momento traumático, mas a lei oferece ferramentas poderosas para quem conhece seus direitos e age com rapidez."
-            </blockquote>
-        </div>
+            </section>
         
-        <div class="cta-section">
-            <h2>Seu veículo está em risco ou já foi apreendido?</h2>
-            <p>O tempo é fundamental nesses casos. Fale agora com um especialista e proteja seu patrimônio.</p>
-            <a href="https://wa.me/5547996756766" class="cta-whatsapp">
-                <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
-            </a>
-        </div>
-    </div>
+    </main>
 
     <footer>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:32px; margin-bottom:32px;">
-            <div><h4 style="color:#C9A961; margin-bottom:14px; font-size:0.92rem; font-family:'Montserrat',sans-serif;">Advogado Gabriel Corrêa</h4><p style="color:#bbb; font-size:0.86rem;">OAB/SC 63.737</p><p style="color:#bbb; font-size:0.86rem;">Atendimento 100% Online</p></div>
-            <div><h4 style="color:#C9A961; margin-bottom:14px; font-size:0.92rem; font-family:'Montserrat',sans-serif;">Áreas de Atuação</h4><a href="trabalhista-empregado.html" style="color:#bbb; text-decoration:none; display:block; margin-bottom:8px; font-size:0.86rem;">Trabalhista — Empregado</a><a href="trabalhista-empresa.html" style="color:#bbb; text-decoration:none; display:block; margin-bottom:8px; font-size:0.86rem;">Trabalhista — Empresa</a><a href="familia.html" style="color:#bbb; text-decoration:none; display:block; margin-bottom:8px; font-size:0.86rem;">Direito de Família</a><a href="criminal.html" style="color:#bbb; text-decoration:none; display:block; margin-bottom:8px; font-size:0.86rem;">Direito Criminal</a></div>
-            <div><h4 style="color:#C9A961; margin-bottom:14px; font-size:0.92rem; font-family:'Montserrat',sans-serif;">Contato</h4><p style="color:#bbb; font-size:0.86rem;">(47) 99675-6766</p><p style="color:#bbb; font-size:0.86rem;">escritorio.gabrielcorrea@gmail.com</p></div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Advogado Gabriel Corrêa</h4>
+                <p>OAB/SC 63.737</p>
+                <p>Atendimento 100% Online em todo o Brasil</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Úteis</h4>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(47) 99675-6766</p>
+                <p>escritorio.gabrielcorrea@gmail.com</p>
+            </div>
         </div>
-        <div style="text-align:center; padding-top:16px; border-top:1px solid rgba(255,255,255,0.1); font-size:0.76rem; color:#777;">&copy; 2025 Advogado Gabriel Corrêa. Todos os direitos reservados. | LGPD</div>
+        <div class="footer-bottom">
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
+        </div>
     </footer>
-    <a href="https://wa.me/5547996756766" style="position:fixed; bottom:26px; right:26px; background:#25D366; color:white; width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; box-shadow:2px 2px 14px rgba(37,211,102,0.5); z-index:1000; text-decoration:none;" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <link rel="stylesheet" href="assets/chat-widget.css">
-    <script src="assets/chat-widget.js"></script>
+
+    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mainNav = document.getElementById('mainNav');
-    if (hamburgerBtn && mainNav) {
-        hamburgerBtn.addEventListener('click', () => mainNav.classList.toggle('open'));
-    }
+        // Menu Sanduíche
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (hamburgerBtn && mainNav) {
+            hamburgerBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('open');
+                const spans = hamburgerBtn.querySelectorAll('span');
+                if (mainNav.classList.contains('open')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                }
+            });
+        });
     </script>
 </body>
 </html>

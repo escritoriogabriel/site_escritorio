@@ -59,12 +59,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             z-index: 100;
         }}
 
-        .logo {{ 
-            font-family: 'Playfair Display', serif; 
-            font-weight: 700; 
-            color: var(--primary); 
-            text-decoration: none; 
-            font-size: 1.5rem; 
+        .logo {{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }}
+        .logo img {{
+            height: 34px;
+            width: auto;
+            max-width: 260px;
         }}
 
         .container {{ 
@@ -187,7 +190,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </head>
 <body>
     <header>
-        <a href="/index.html" class="logo">Advogado Gabriel Corrêa</a>
+        <a href="/index.html" class="logo"><img src="/assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
         <a href="/blog.html" style="text-decoration: none; color: var(--primary); font-weight: 600;">Blog</a>
     </header>
     

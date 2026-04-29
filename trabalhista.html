@@ -3,43 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direito Trabalhista | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Direito Trabalhista especializado para empregados e empresas. Atendimento online em todo o Brasil.">
-    <meta http-equiv="refresh" content="3; url=trabalhista-empregado.html">
-    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/trabalhista-empregado.html">
+    <title>Direito Trabalhista | Defesa do Trabalhador | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Recupere seus direitos trabalhistas. Especialista em rescisão indireta, horas extras, assédio moral e acidentes de trabalho.">
+    <meta name="keywords" content="advogado, advocacia, direito trabalhista, previdenciário, civil, família, consumidor, empresarial, escritório de advocacia">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/trabalhista.html">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
-:root { --primary-blue: #172B41; --accent-gold: #C9A961; --whatsapp-green: #25D366; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--primary-blue); color: white; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
-.redirect-box { max-width: 600px; }
-.redirect-box h1 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 14px; }
-.redirect-box h1 span { color: var(--accent-gold); }
-.redirect-box p { color: rgba(255,255,255,0.75); margin-bottom: 32px; font-size: 1rem; }
-.options { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.opt-btn { padding: 14px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.3s; }
-.opt-btn.empregado { background: linear-gradient(135deg, #172B41, #1e3a55); border: 2px solid var(--accent-gold); color: white; }
-.opt-btn.empresa { background: linear-gradient(135deg, #1a3350, #243f5e); border: 2px solid #7eb8d4; color: white; }
-.opt-btn:hover { transform: translateY(-3px); }
-@media (max-width: 480px) { .options { flex-direction: column; } .opt-btn { justify-content: center; } }
+        
+:root {
+    --primary-blue: #172B41;
+    --accent-gold: #C9A961;
+    --bg-light: #F8F8F8;
+    --whatsapp-green: #25D366;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--white);
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 34px;
+    width: auto;
+    max-width: 260px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%;
+    border-top: 3px solid var(--accent-gold);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+}
+
+.btn-nav-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.btn-nav-whatsapp:hover {
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+/* Page Header (for subpages) */
+.page-header {
+    padding: 60px 5%;
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cta-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-top: 40px;
+}
+
+.btn-cta {
+    background-color: var(--whatsapp-green);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--whatsapp-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+/* Profile Section */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 20px 20px 0 var(--accent-gold);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
+    .hamburger { display: flex; }
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    nav.open { display: flex; }
+    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
+    .top-bar { text-align: center; font-size: 0.75rem; }
+    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
+    .profile-image { max-width: 250px; margin: 0 auto; box-shadow: 10px 10px 0 var(--accent-gold); }
+    .page-header h1 { font-size: 1.8rem; }
+    .content-section { padding: 40px 5%; }
+}
+
     </style>
 </head>
 <body>
-    <div class="redirect-box">
-        <h1>Direito do <span>Trabalho</span></h1>
-        <p>Esta página foi atualizada. Escolha a área que melhor descreve sua situação:</p>
-        <div class="options">
-            <a href="trabalhista-empregado.html" class="opt-btn empregado">
-                <i class="fas fa-hard-hat"></i> Sou Empregado
-            </a>
-            <a href="trabalhista-empresa.html" class="opt-btn empresa">
-                <i class="fas fa-building"></i> Sou Empresa
-            </a>
-        </div>
+
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
+
+    <header>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="familia.html">Família</a>
+                        <a href="contrato.html">Contratos</a>
+                        <a href="criminal.html">Criminal</a>
+                        <a href="trabalhista.html">Trabalhista</a>
+                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </nav>
+    </header>
+
+    <main>
+        
+            <section class="page-header">
+                <h1>Direito Trabalhista</h1>
+                <p>Justiça e reparação para quem trabalha.</p>
+            </section>
+            <section class="content-section">
+                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Recupere o que é seu por Direito</h2>
+                <p style="margin-bottom: 20px;">Muitos trabalhadores sofrem irregularidades sem saber que podem buscar reparação. Atuamos para garantir que cada direito seja respeitado, desde o pagamento correto de verbas rescisórias até a indenização por danos sofridos no ambiente de trabalho.</p>
+                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>Rescisão Indireta:</strong> Quando a empresa descumpre o contrato.</li>
+                    <li style="margin-bottom: 10px;"><strong>Verbas Rescisórias:</strong> Cálculo e cobrança de valores não pagos.</li>
+                    <li style="margin-bottom: 10px;"><strong>Assédio Moral e Sexual:</strong> Proteção da dignidade do trabalhador.</li>
+                    <li style="margin-bottom: 10px;"><strong>Acidente de Trabalho:</strong> Indenizações e estabilidade garantida.</li>
+                </ul>
+                <div class="cta-box">
+                    <h3>Acha que seus direitos foram desrespeitados?</h3>
+                    <p>Faça uma análise gratuita do seu caso agora.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Consultar meus Direitos</a>
+                </div>
+            </section>
+        
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Advogado Gabriel Corrêa</h4>
+                <p>OAB/SC 63.737</p>
+                <p>Atendimento 100% Online em todo o Brasil</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Úteis</h4>
+                <a href="index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(47) 99675-6766</p>
+                <p>escritorio.gabrielcorrea@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
-        setTimeout(() => { window.location.href = 'trabalhista-empregado.html'; }, 3000);
+        // Menu Sanduíche
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        if (hamburgerBtn && mainNav) {
+            hamburgerBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('open');
+                const spans = hamburgerBtn.querySelectorAll('span');
+                if (mainNav.classList.contains('open')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                }
+            });
+        });
     </script>
 </body>
 </html>
