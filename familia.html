@@ -48,6 +48,7 @@ h1, h2, h3, h4 {
     font-size: 0.85rem;
     text-align: right;
 }
+.top-bar a { color: white; text-decoration: none; }
 
 /* Header & Navigation */
 header {
@@ -59,7 +60,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
     height: 80px;
 }
 
@@ -68,7 +69,6 @@ header {
     align-items: center;
     text-decoration: none;
 }
-
 .logo img {
     height: 34px;
     width: auto;
@@ -78,28 +78,75 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 22px;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--primary-blue);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     transition: color 0.3s;
 }
+.nav-links a:hover { color: var(--accent-gold); }
 
-.nav-links a:hover {
-    color: var(--accent-gold);
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 260px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    border-top: 3px solid var(--accent-gold);
+    border-radius: 0 0 8px 8px;
+}
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 11px 16px;
+    display: block;
+    font-size: 0.88rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+.dropdown-content a:last-child { border-bottom: none; }
+.dropdown-content a:hover { background-color: var(--bg-light); color: var(--accent-gold); }
+
+.btn-nav-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: white !important;
+    padding: 12px 22px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    border: none;
+    cursor: pointer;
+}
+.btn-nav-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    background-color: #22c55e;
 }
 
-/* Hamburger menu */
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -109,7 +156,6 @@ nav {
     border: none;
     padding: 5px;
 }
-
 .hamburger span {
     width: 25px;
     height: 3px;
@@ -118,192 +164,342 @@ nav {
     transition: all 0.3s;
 }
 
-/* Dropdown */
-.dropdown {
+/* ===== PAGE HERO ===== */
+.page-hero {
+    padding: 80px 5% 60px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
     position: relative;
+    overflow: hidden;
 }
 
-.dropdown-content {
-    display: none;
+.page-hero::before {
+    content: '';
     position: absolute;
-    background-color: var(--white);
-    min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(201,169,97,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(37,211,102,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.page-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
     z-index: 1;
-    top: 100%;
-    border-top: 3px solid var(--accent-gold);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.page-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,169,97,0.15);
+    border: 1px solid rgba(201,169,97,0.35);
+    color: var(--primary-blue);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 20px;
 }
 
-.dropdown-content a {
-    color: var(--text-dark);
-    padding: 12px 16px;
-    display: block;
-    font-size: 0.9rem;
+.page-hero h1 {
+    font-size: 2.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+    line-height: 1.2;
 }
 
-.dropdown-content a:hover {
-    background-color: var(--bg-light);
+.page-hero h1 span {
+    color: var(--accent-gold);
 }
 
-.btn-nav-whatsapp {
+.page-hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.page-hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
     background-color: var(--whatsapp-green);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.btn-nav-whatsapp:hover {
-    transform: translateY(-2px);
-    color: white !important;
-}
-
-/* Page Header (for subpages) */
-.page-header {
-    padding: 60px 5%;
-    background-color: var(--primary-blue);
     color: white;
-    text-align: center;
+    padding: 16px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+    border: none;
+    cursor: pointer;
 }
 
-.page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+    background-color: #22c55e;
 }
 
-/* Content Sections */
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 14px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* ===== CONTENT SECTION ===== */
 .content-section {
     padding: 80px 5%;
+    background: var(--white);
+}
+
+.content-wrapper {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.cta-box {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    margin-top: 40px;
-}
-
-.btn-cta {
-    background-color: var(--whatsapp-green);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 60px 5% 20px;
-    margin-top: 80px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-col h4 {
-    color: var(--accent-gold);
+.content-section h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
     margin-bottom: 20px;
 }
 
-.footer-col a {
-    color: #ccc;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
+.content-section > p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 40px;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.8rem;
-    color: #888;
+/* Scenario Cards */
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
 }
 
-/* Floating WhatsApp */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp-green);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+.scenario-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+    border: 1px solid #e0e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+}
+
+.scenario-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    border-color: var(--accent-gold);
+}
+
+.scenario-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--accent-gold), #e8c87a);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 16px;
 }
 
-/* Profile Section */
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
+.scenario-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+}
+
+.scenario-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.scenario-solution {
+    background: white;
+    border-left: 4px solid var(--accent-gold);
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* Solutions Section */
+.solutions-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
+    padding: 80px 5%;
+    margin: 60px 0;
+}
+
+.solutions-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.solutions-section h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.solution-item {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    border-left: 5px solid var(--accent-gold);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.solution-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+    display: flex;
     align-items: center;
+    gap: 12px;
 }
 
-.profile-image {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background-color: #ddd;
-    border-radius: 15px;
+.solution-item h3 i {
+    color: var(--accent-gold);
+    font-size: 1.4rem;
+}
+
+.solution-item p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.solution-steps {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 16px;
+}
+
+.solution-steps h4 {
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.solution-steps ol {
+    margin-left: 20px;
+}
+
+.solution-steps li {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 5%;
+    background: var(--white);
+}
+
+.faq-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    border-radius: 8px;
     overflow: hidden;
-    position: relative;
-    box-shadow: 20px 20px 0 var(--accent-gold);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.profile-image img {
+.faq-question {
+    padding: 20px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    text-align: left;
+    background: var(--white);
+    border: 1px solid #e0e8f0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
-    .hamburger { display: flex; }
-    nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        padding-bottom: 15px;
-    }
-    nav.open { display: flex; }
-    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-    .top-bar { text-align: center; font-size: 0.75rem; }
-    .profile-grid { grid-template-columns: 1fr; gap: 40px; }
-    .profile-image { max-width: 250px; margin: 0 auto; box-shadow: 10px 10px 0 var(--accent-gold); }
-    .page-header h1 { font-size: 1.8rem; }
-    .content-section { padding: 40px 5%; }
+.faq-question:hover {
+    background: #f8fafc;
+    border-color: var(--accent-gold);
 }
 
+.faq-answer {
+    padding: 0 20px 20px;
+    display: none;
+    color: var(--text-muted);
+    background: #f8fafc;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    border-left: 4px solid var(--accent-gold);
+}
 
-
-/* ===== RELATED POSTS SECTION ===== */
+/* Related Posts Section */
 .related-posts-section {
     padding: 80px 5%;
     background-color: var(--white);
@@ -415,7 +611,7 @@ footer {
     color: var(--accent-gold);
 }
 
-/* ===== CONTACT SECTION AREA ===== */
+/* Contact Section Area */
 .contact-section-area {
     padding: 80px 5%;
     background: linear-gradient(135deg, #0f1f30 0%, #172B41 50%, #1a3350 100%);
@@ -468,52 +664,92 @@ footer {
     margin-bottom: 36px;
 }
 
-.btn-primary {
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 60px 5% 20px;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
     background-color: var(--whatsapp-green);
     color: white;
-    padding: 16px 32px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37,211,102,0.3);
-    border: none;
-    cursor: pointer;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37,211,102,0.4);
-    background-color: #22c55e;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .related-posts-grid {
-        grid-template-columns: 1fr;
+    header { flex-wrap: wrap; height: auto; padding: 15px 5%; gap: 10px; }
+    .hamburger { display: flex; }
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding-bottom: 15px;
     }
-    
-    .related-posts-section h2 {
-        font-size: 1.6rem;
-    }
-    
-    .contact-section-area h2 {
-        font-size: 1.6rem;
-    }
-    
-    .contact-section-area p {
-        font-size: 0.95rem;
-    }
+    nav.open { display: flex; }
+    .nav-links { flex-direction: column; align-items: flex-start; gap: 10px; width: 100%; }
+    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
+    .top-bar { text-align: center; font-size: 0.75rem; }
+    .page-hero h1 { font-size: 2rem; }
+    .content-section { padding: 40px 5%; }
+    .scenarios-grid { grid-template-columns: 1fr; }
+    .solutions-section { padding: 40px 5%; }
+    .faq-section { padding: 40px 5%; }
+    .related-posts-grid { grid-template-columns: 1fr; }
+    .related-posts-section { padding: 40px 5%; }
+    .contact-section-area { padding: 40px 5%; }
+    .contact-section-area h2 { font-size: 1.6rem; }
 }
+
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
     </div>
 
     <header>
@@ -545,26 +781,226 @@ footer {
 
     <main>
         
-            <section class="page-header">
-                <h1>Direito de Família</h1>
-                <p>Protegendo o que é mais importante para você.</p>
-            </section>
-            <section class="content-section">
-                <h2 style="color: var(--primary-blue); margin-bottom: 25px;">Soluções Jurídicas com Empatia</h2>
-                <p style="margin-bottom: 20px;">Questões familiares exigem mais do que conhecimento técnico; exigem sensibilidade e equilíbrio. Atuamos para resolver conflitos de forma estratégica, priorizando sempre o bem-estar dos envolvidos e a segurança jurídica do seu patrimônio.</p>
-                <ul style="margin-bottom: 30px; padding-left: 20px; color: var(--text-muted);">
-                    <li style="margin-bottom: 10px;"><strong>Divórcio e Dissolução de União Estável:</strong> Judicial ou extrajudicial, com foco em agilidade.</li>
-                    <li style="margin-bottom: 10px;"><strong>Pensão Alimentícia:</strong> Fixação, revisão e execução de alimentos.</li>
-                    <li style="margin-bottom: 10px;"><strong>Guarda e Regulamentação de Visitas:</strong> Proteção dos interesses dos menores.</li>
-                    <li style="margin-bottom: 10px;"><strong>Inventários e Partilha de Bens:</strong> Organização sucessória e divisão justa de patrimônio.</li>
-                </ul>
-                <div class="cta-box">
-                    <h3>Dúvidas sobre seus direitos familiares?</h3>
-                    <p>Receba uma orientação inicial agora mesmo.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
+            <section class="page-hero">
+                <div class="page-hero-content">
+                    <span class="page-hero-badge"><i class="fas fa-heart"></i> Direito de Família</span>
+                    <h1>Quando a vida familiar muda, <span>nós estamos aqui</span>.</h1>
+                    <p class="page-hero-subtitle">Separações, divórcios, guarda de filhos, pensão alimentícia... Situações difíceis que exigem mais do que conhecimento jurídico: exigem empatia, sensibilidade e uma verdadeira preocupação com o seu bem-estar e o de sua família.</p>
+                    <div class="page-hero-ctas">
+                        <a href="https://wa.me/5547996756766" class="btn-primary">
+                            <i class="fab fa-whatsapp"></i> Fale com um Especialista
+                        </a>
+                        <a href="#scenarios" class="btn-secondary">Conheça Nossas Soluções</a>
+                    </div>
                 </div>
             </section>
-        
+
+            <section class="content-section">
+                <div class="content-wrapper">
+                    <h2>Situações que você pode estar vivendo agora</h2>
+                    <p>Cada caso é único, mas muitas pessoas enfrentam desafios semelhantes. Aqui estão alguns cenários comuns que atendemos e como podemos ajudar:</p>
+
+                    <div class="scenarios-grid" id="scenarios">
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-ring"></i>
+                            </div>
+                            <h3>Você quer se separar, mas tem dúvidas</h3>
+                            <p>Não sabe se deve fazer divórcio litigioso ou consensual? Tem filhos e não sabe como funciona a guarda? Está preocupado com os bens que serão divididos?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Orientamos sobre as melhores opções para seu caso
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3>Questões sobre guarda e visitas</h3>
+                            <p>Quer compartilhar a guarda? Está com dificuldades para exercer seu direito de visita? Precisa modificar um acordo anterior?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Defendemos seus direitos como pai ou mãe
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3>Pensão alimentícia é complicada</h3>
+                            <p>Precisa fixar, revisar ou cobrar pensão alimentícia? Está pagando e acha que o valor é injusto? Não sabe como calcular o que é justo?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Negociamos valores justos e executamos quando necessário
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Herança e bens da família</h3>
+                            <p>Precisa fazer inventário? Tem conflitos sobre a partilha de bens? Quer proteger o patrimônio familiar?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Organizamos sucessões e evitamos conflitos futuros
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Proteção contra abuso ou alienação</h3>
+                            <p>Está sofrendo abuso? Seu ex está afastando os filhos de você? Precisa de medidas de proteção?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Agimos rápido para proteger você e sua família
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Quer resolver tudo de forma amigável</h3>
+                            <p>Prefere negociar a ir para a justiça? Quer um processo rápido e menos traumático para os filhos?</p>
+                            <div class="scenario-solution">
+                                <i class="fas fa-check-circle"></i> Mediamos acordos que respeitam todos os envolvidos
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="solutions-section">
+                <div class="solutions-wrapper">
+                    <h2>Como resolvemos seus problemas</h2>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-gavel"></i> Divórcio Consensual ou Litigioso</h3>
+                        <p>Se você e seu cônjuge conseguem chegar a um acordo, o divórcio consensual é mais rápido, barato e menos traumático. Se não conseguem, lutamos pelos seus direitos na justiça.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Avaliamos se o caso é consensual ou litigioso</li>
+                                <li>Negociamos os termos quando possível</li>
+                                <li>Preparamos toda a documentação necessária</li>
+                                <li>Representamos você em audiências e julgamentos</li>
+                                <li>Garantimos que seus direitos sejam respeitados</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-users"></i> Guarda e Regulamentação de Visitas</h3>
+                        <p>Queremos que você tenha o máximo de tempo possível com seus filhos. Trabalhamos para estabelecer arranjos de guarda que funcionem para sua família.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Discutimos as melhores opções (guarda unilateral, compartilhada, etc.)</li>
+                                <li>Preparamos argumentos baseados no melhor interesse da criança</li>
+                                <li>Negociamos com a outra parte</li>
+                                <li>Representamos você em juízo se necessário</li>
+                                <li>Modificamos acordos quando as circunstâncias mudam</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-dollar-sign"></i> Pensão Alimentícia</h3>
+                        <p>Ajudamos a fixar valores justos e a garantir que sejam pagos. Se você está recebendo, protegemos seu direito. Se está pagando, buscamos valores equitativos.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Calculamos o valor justo baseado na lei</li>
+                                <li>Negociamos com a outra parte</li>
+                                <li>Executamos judicialmente quando necessário</li>
+                                <li>Revisamos valores quando há mudanças de circunstâncias</li>
+                                <li>Protegemos seus direitos em todas as instâncias</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="solution-item">
+                        <h3><i class="fas fa-scroll"></i> Inventário e Partilha de Bens</h3>
+                        <p>Quando alguém falece, é necessário organizar a sucessão. Fazemos isso de forma clara, justa e sem conflitos desnecessários entre herdeiros.</p>
+                        <div class="solution-steps">
+                            <h4>O que fazemos:</h4>
+                            <ol>
+                                <li>Levantamos todos os bens e direitos do falecido</li>
+                                <li>Preparamos toda a documentação necessária</li>
+                                <li>Negociamos a partilha entre herdeiros</li>
+                                <li>Resolvemos conflitos quando surgem</li>
+                                <li>Finalizamos o processo de forma segura</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <div class="faq-wrapper">
+                    <h2>Dúvidas Frequentes</h2>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quanto tempo leva um divórcio?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Um divórcio consensual pode ser finalizado em poucas semanas ou meses. Um divórcio litigioso pode levar de 1 a 3 anos, dependendo da complexidade do caso e da carga do tribunal. Trabalhamos para agilizar o processo ao máximo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como é calculada a pensão alimentícia?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A pensão é calculada considerando a renda de ambos os pais, as necessidades da criança e o padrão de vida que tinham. Não há uma fórmula fixa, mas a lei estabelece diretrizes. Negociamos valores justos para ambas as partes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Posso mudar a guarda depois de estabelecida?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, a guarda pode ser modificada se houver mudanças significativas nas circunstâncias. Por exemplo, se um dos pais se muda para longe ou se há problemas de comportamento. Precisamos comprovar que a mudança é no melhor interesse da criança.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Preciso de advogado para um divórcio consensual?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tecnicamente não é obrigatório, mas é altamente recomendado. Um advogado garante que você não está abrindo mão de direitos importantes e que todos os documentos estão corretos. Isso protege você a longo prazo.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            O que é alienação parental?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>É quando um dos pais afasta deliberadamente a criança do outro. Pode incluir falar mal do outro pai, impedir visitas ou manipular a criança. É crime e prejudica a criança. Se está acontecendo, podemos ajudar.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Como funciona a mediação familiar?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Na mediação, um terceiro neutro (mediador) ajuda as partes a chegarem a um acordo. É menos adversarial que um processo judicial e geralmente mais rápido e barato. Muitos conflitos familiares são resolvidos assim.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="related-posts-section">
                 <div class="related-posts-wrapper">
@@ -622,6 +1058,7 @@ footer {
                     <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
                 </div>
             </section>
+
     </main>
 
     <footer>
@@ -673,7 +1110,6 @@ footer {
                 }
             });
         }
-
         // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
