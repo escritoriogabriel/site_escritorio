@@ -13,448 +13,230 @@
     <meta property="og:description" content="Assessoria jurídica trabalhista para proteger seu negócio. Consultoria preventiva e defesa em reclamações.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-:root {
-    --primary-blue: #172B41;
-    --accent-gold: #C9A961;
-    --accent-blue: #4a90d9;
-    --bg-light: #F8F8F8;
-    --whatsapp-green: #25D366;
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --white: #FFFFFF;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-
-.top-bar { background-color: var(--primary-blue); color: white; padding: 7px 5%; font-size: 0.82rem; text-align: right; }
-.top-bar a { color: white; text-decoration: none; }
-
-header { background-color: var(--white); padding: 0 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.07); height: 80px; }
-.logo { display: flex; align-items: center; text-decoration: none; }
-.logo img { height: 34px; width: auto; max-width: 260px; }
-nav { display: flex; align-items: center; gap: 28px; }
-.nav-links { display: flex; list-style: none; gap: 22px; align-items: center; }
-.nav-links a { text-decoration: none; color: var(--primary-blue); font-weight: 600; font-size: 0.92rem; transition: color 0.3s; }
-.nav-links a:hover { color: var(--accent-gold); }
-.dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; background-color: var(--white); min-width: 260px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 100; top: 100%; left: 0; border-top: 3px solid var(--accent-gold); border-radius: 0 0 8px 8px; }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { color: var(--text-dark); padding: 11px 16px; display: block; font-size: 0.88rem; border-bottom: 1px solid #f0f0f0; transition: background 0.2s; }
-.dropdown-content a:last-child { border-bottom: none; }
-.dropdown-content a:hover { background-color: var(--bg-light); color: var(--accent-gold); }
-.btn-nav-whatsapp { background-color: var(--whatsapp-green); color: white !important; padding: 9px 18px; border-radius: 6px; transition: transform 0.3s; white-space: nowrap; font-size: 0.88rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-.btn-nav-whatsapp:hover { transform: translateY(-2px); }
-.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 5px; }
-.hamburger span { width: 24px; height: 2.5px; background-color: var(--primary-blue); border-radius: 3px; transition: all 0.3s; }
-
-/* Page Hero - tom diferente para empresa */
-.page-hero {
-    padding: 60px 5% 50px;
-    background: linear-gradient(135deg, #0f1f30 0%, #172B41 50%, #1a3350 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 320px; height: 320px;
-    background: rgba(74,144,217,0.08);
-    border-radius: 50%;
-}
-.page-hero-content { max-width: 820px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
-.page-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: rgba(74,144,217,0.18);
-    border: 1px solid rgba(74,144,217,0.4);
-    color: #7eb8d4;
-    padding: 6px 16px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin-bottom: 18px;
-}
-.page-hero h1 { font-size: 2.4rem; margin-bottom: 16px; line-height: 1.2; }
-.page-hero h1 span { color: #7eb8d4; }
-.page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 28px; max-width: 640px; margin-left: auto; margin-right: auto; }
-.page-hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-primary { background-color: var(--whatsapp-green); color: white; padding: 14px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.35); }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37,211,102,0.45); }
-.btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); padding: 14px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; }
-.btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
-.btn-secondary { background-color: var(--primary-blue); color: white; padding: 14px 26px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.3s; }
-.btn-secondary:hover { transform: translateY(-2px); }
-
-.trust-bar { background: var(--white); padding: 18px 5%; border-bottom: 1px solid #eee; }
-.trust-bar-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
-.trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600; color: var(--primary-blue); }
-.trust-item i { color: var(--accent-gold); }
-
-/* Intro */
-.intro-section { padding: 60px 5%; background: var(--white); }
-.intro-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.intro-text h2 { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 14px; }
-.intro-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; font-size: 0.97rem; }
-.intro-highlight { background: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 100%); border-left: 4px solid var(--accent-blue); padding: 18px 20px; border-radius: 0 10px 10px 0; font-size: 0.95rem; color: var(--primary-blue); font-weight: 600; line-height: 1.6; }
-.risk-cards { display: flex; flex-direction: column; gap: 14px; }
-.risk-card { background: var(--bg-light); border-radius: 12px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; border-left: 4px solid #e74c3c; }
-.risk-card.medium { border-left-color: #f39c12; }
-.risk-card.low { border-left-color: var(--accent-gold); }
-.risk-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
-.risk-card h4 { color: var(--primary-blue); font-size: 0.95rem; margin-bottom: 4px; }
-.risk-card p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; }
-
-/* Services */
-.services-section { padding: 60px 5%; background: var(--bg-light); }
-.services-section h2 { text-align: center; font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 10px; }
-.services-section .sub { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 38px; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-.service-card { background: var(--white); border-radius: 14px; padding: 26px 22px; box-shadow: 0 3px 14px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; border-bottom: 4px solid transparent; }
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); border-bottom-color: var(--accent-gold); }
-.service-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #172B41, #1e3a55); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-.service-icon i { color: var(--accent-gold); font-size: 1.3rem; }
-.service-card h3 { color: var(--primary-blue); font-size: 1.05rem; margin-bottom: 10px; }
-.service-card p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.6; }
-
-/* Benefícios */
-.benefits-section { padding: 60px 5%; background: var(--white); }
-.benefits-section h2 { text-align: center; font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 10px; }
-.benefits-section .sub { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 38px; }
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; max-width: 1000px; margin: 0 auto; }
-.benefit-item { text-align: center; padding: 28px 20px; background: var(--bg-light); border-radius: 14px; }
-.benefit-icon { width: 56px; height: 56px; background: linear-gradient(135deg, var(--accent-gold), #e8c87a); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
-.benefit-icon i { color: white; font-size: 1.4rem; }
-.benefit-item h4 { color: var(--primary-blue); font-size: 1rem; margin-bottom: 8px; }
-.benefit-item p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.6; }
-
-/* FAQ */
-.faq-section { padding: 60px 5%; background: var(--bg-light); }
-.faq-section h2 { text-align: center; font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 10px; }
-.faq-section .sub { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 38px; }
-.faq { max-width: 820px; margin: 0 auto; }
-.faq-item { margin-bottom: 10px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-.faq-question { padding: 17px 20px; width: 100%; text-align: left; background: var(--white); border: none; font-weight: 600; font-size: 0.93rem; color: var(--primary-blue); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; transition: background-color 0.3s; }
-.faq-question:hover { background-color: #f5f8fc; }
-.faq-answer { padding: 0 20px 15px; display: none; color: var(--text-muted); background: var(--white); font-size: 0.9rem; line-height: 1.7; }
-
-/* CTA */
-.cta-section { padding: 70px 5%; background: linear-gradient(135deg, #0f1f30 0%, #172B41 100%); text-align: center; color: white; }
-.cta-section h2 { font-size: 2rem; margin-bottom: 14px; }
-.cta-section p { font-size: 1rem; color: rgba(255,255,255,0.82); margin-bottom: 30px; max-width: 540px; margin-left: auto; margin-right: auto; }
-.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-footer { background-color: var(--primary-blue); color: white; padding: 50px 5% 18px; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; margin-bottom: 32px; }
-.footer-col h4 { color: var(--accent-gold); margin-bottom: 14px; font-size: 0.92rem; }
-.footer-col a { color: #bbb; text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.86rem; transition: color 0.3s; }
-.footer-col a:hover { color: var(--accent-gold); }
-.footer-col p { color: #bbb; font-size: 0.86rem; margin-bottom: 6px; }
-.footer-bottom { text-align: center; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.76rem; color: #777; }
-
-.whatsapp-float { position: fixed; bottom: 26px; right: 26px; background-color: var(--whatsapp-green); color: white; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; box-shadow: 2px 2px 14px rgba(37,211,102,0.5); z-index: 1000; text-decoration: none; transition: transform 0.3s; animation: pulse 2.5s infinite; }
-.whatsapp-float:hover { transform: scale(1.1); }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
-
-@media (max-width: 768px) {
-    header { flex-wrap: wrap; height: auto; padding: 12px 5%; gap: 8px; }
-    .hamburger { display: flex; }
-    nav { display: none; flex-direction: column; gap: 12px; width: 100%; padding-bottom: 12px; }
-    nav.open { display: flex; }
-    .nav-links { flex-direction: column; align-items: flex-start; gap: 8px; width: 100%; }
-    .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
-    .top-bar { text-align: center; font-size: 0.72rem; padding: 8px 5%; }
-    .page-hero { padding: 40px 5% 36px; }
-    .page-hero h1 { font-size: 1.6rem; }
-    .page-hero p { font-size: 0.9rem; }
-    .page-hero-ctas .btn-primary, .page-hero-ctas .btn-outline { width: 100%; justify-content: center; }
-    .trust-bar-inner { gap: 16px; }
-    .trust-item { font-size: 0.82rem; }
-    .intro-section { padding: 44px 5%; }
-    .intro-inner { grid-template-columns: 1fr; gap: 28px; }
-    .intro-text h2 { font-size: 1.45rem; }
-    .services-section { padding: 44px 5%; }
-    .services-grid { grid-template-columns: 1fr; gap: 14px; }
-    .benefits-section { padding: 44px 5%; }
-    .benefits-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .faq-section { padding: 44px 5%; }
-    .faq-question { font-size: 0.88rem; padding: 15px 16px; }
-    .cta-section { padding: 50px 5%; }
-    .cta-section h2 { font-size: 1.5rem; }
-    .cta-btns .btn-primary, .cta-btns .btn-outline { width: 100%; justify-content: center; }
-    .whatsapp-float { width: 50px; height: 50px; font-size: 24px; bottom: 18px; right: 18px; }
-}
-@media (max-width: 480px) {
-    .benefits-grid { grid-template-columns: 1fr; }
-}
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<div class="top-bar">
-    <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a>
-</div>
-
-<header>
-    <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-    <nav id="mainNav">
-        <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li class="dropdown">
-                <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
-                <div class="dropdown-content">
-                    <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
-                    <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                    <a href="familia.html">Direito de Família</a>
-                    <a href="criminal.html">Direito Criminal</a>
-                    <a href="contrato.html">Contratos</a>
-                    <a href="busca-e-apreensao.html">Busca e Apreensão</a>
-                </div>
-            </li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-        <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </nav>
-</header>
-
-<main>
-
-<!-- Hero -->
-<section class="page-hero">
-    <div class="page-hero-content">
-        <div class="page-hero-badge"><i class="fas fa-building"></i> Direito do Trabalho — Para Empresa</div>
-        <h1>Proteja Seu Negócio <span>com Assessoria Trabalhista Especializada</span></h1>
-        <p>Reduza riscos, evite passivos trabalhistas e tenha suporte jurídico estratégico para gerir sua equipe com segurança e conformidade.</p>
-        <div class="page-hero-ctas">
-            <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Falar com um Advogado</a>
-            <a href="#servicos" class="btn-outline"><i class="fas fa-arrow-down"></i> Ver Serviços</a>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt="Logo Gabriel Corrêa Advocacia"></a>
         </div>
-    </div>
-</section>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Áreas de Atuação <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="familia.html">Direito de Família</a>
+                        <a href="trabalhista.html">Direito Trabalhista</a>
+                        <a href="criminal.html">Direito Criminal</a>
+                        <a href="contrato.html">Contratos</a>
+                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+        </nav>
+        <button class="hamburger"><span></span><span></span><span></span></button>
+    </header>
 
-<!-- Trust bar -->
-<div class="trust-bar">
-    <div class="trust-bar-inner">
-        <div class="trust-item"><i class="fas fa-shield-alt"></i> Defesa em Reclamações</div>
-        <div class="trust-item"><i class="fas fa-search"></i> Consultoria Preventiva</div>
-        <div class="trust-item"><i class="fas fa-file-contract"></i> Compliance Trabalhista</div>
-        <div class="trust-item"><i class="fas fa-laptop"></i> Atendimento Online</div>
-    </div>
-</div>
+    <main>
+        
+            <section class="page-hero">
+                <div class="page-hero-content">
+                    <span class="page-hero-badge"><i class="fas fa-building"></i> Direito Trabalhista para Empresas</span>
+                    <h1>Sua empresa protegida, <span>seus negócios seguros</span>.</h1>
+                    <p>No complexo mundo das relações de trabalho, a prevenção é a melhor estratégia. Oferecemos assessoria jurídica completa para empresas, garantindo conformidade com a legislação, minimizando riscos e protegendo seu patrimônio. Conte com nossa expertise para um ambiente de trabalho justo e produtivo.</p>
+                    <div class="page-hero-ctas">
+                        <a href="https://wa.me/5547996756766" class="btn-primary">
+                            <i class="fab fa-whatsapp"></i> Fale Conosco
+                        </a>
+                        <a href="#areas-atuacao" class="btn-outline">Nossas Soluções</a>
+                    </div>
+                </div>
+            </section>
 
-<!-- Intro -->
-<section class="intro-section">
-    <div class="intro-inner">
-        <div class="intro-text">
-            <h2>Passivo Trabalhista é Risco Real para o Seu Negócio</h2>
-            <p>Uma reclamação trabalhista mal gerenciada pode custar muito mais do que o valor da causa. Além dos custos diretos, há impacto na reputação, no clima organizacional e no fluxo de caixa da empresa.</p>
-            <p>Nossa assessoria jurídica trabalhista atua em duas frentes: <strong>prevenção</strong>, para evitar que problemas surjam, e <strong>defesa</strong>, quando a empresa já está diante de uma reclamação.</p>
-            <div class="intro-highlight">
-                <i class="fas fa-lightbulb" style="color: var(--accent-gold); margin-right: 8px;"></i>
-                Empresas que contam com assessoria jurídica preventiva reduzem significativamente o número de reclamações trabalhistas e o valor médio dos acordos.
+            <section class="content-section" id="areas-atuacao">
+                <h2 class="section-title">Nossas Soluções em Direito Trabalhista para Empresas</h2>
+                <p class="section-subtitle">Proteja sua empresa e garanta um ambiente de trabalho saudável e produtivo.</p>
+
+                <div class="service-area">
+                    <h3><i class="fas fa-shield-alt"></i> Consultoria Preventiva e Compliance Trabalhista</h3>
+                    <p>Evitar problemas é sempre mais eficaz do que remediá-los. Nossa consultoria preventiva visa identificar e corrigir falhas antes que se tornem ações trabalhistas. Através do compliance trabalhista, garantimos que sua empresa esteja em total conformidade com as leis, reduzindo significativamente os riscos de litígios e passivos trabalhistas.</p>
+                    <h4>Cenários Comuns:</h4>
+                    <ul>
+                        <li>**Dúvidas sobre Contratação:** Como formalizar contratos, jornada de trabalho, férias.</li>
+                        <li>**Elaboração de Políticas Internas:** Criação de códigos de conduta, regimentos internos.</li>
+                        <li>**Auditoria Trabalhista:** Análise de documentos e práticas para identificar não conformidades.</li>
+                        <li>**Treinamentos:** Capacitação de gestores e RH sobre legislação trabalhista.</li>
+                    </ul>
+                    <h4>Como Podemos Ajudar:</h4>
+                    <p>Oferecemos um diagnóstico completo, elaboramos planos de ação e implementamos as melhores práticas para a segurança jurídica da sua empresa.</p>
+                </div>
+
+                <div class="service-area">
+                    <h3><i class="fas fa-balance-scale"></i> Defesa em Reclamações Trabalhistas</h3>
+                    <p>Mesmo com todas as precauções, sua empresa pode ser alvo de uma reclamação trabalhista. Nesses momentos, ter uma defesa sólida e estratégica é fundamental. Atuamos em todas as instâncias da Justiça do Trabalho, buscando as melhores soluções para sua empresa, seja através de acordos ou da defesa judicial rigorosa.</p>
+                    <h4>Cenários Comuns:</h4>
+                    <ul>
+                        <li>**Reclamações de Ex-Funcionários:** Pedidos de horas extras, adicional de insalubridade/periculosidade, vínculo empregatício.</li>
+                        <li>**Acusações de Assédio:** Defesa em casos de assédio moral ou sexual.</li>
+                        <li>**Acidentes de Trabalho:** Defesa em ações de indenização por acidentes ou doenças ocupacionais.</li>
+                        <li>**Fiscalizações do Ministério do Trabalho:** Suporte e defesa em autuações.</li>
+                    </ul>
+                    <h4>Como Podemos Ajudar:</h4>
+                    <p>Analisamos o processo, coletamos provas, elaboramos a defesa e representamos sua empresa em audiências e julgamentos, sempre buscando a solução mais favorável.</p>
+                </div>
+
+                <div class="service-area">
+                    <h3><i class="fas fa-handshake"></i> Negociação e Mediação</h3>
+                    <p>Muitos conflitos trabalhistas podem ser resolvidos de forma amigável, evitando o desgaste e os custos de um processo judicial. Atuamos na negociação e mediação entre empregados e empregadores, buscando acordos justos e vantajosos para ambas as partes. Nosso objetivo é encontrar soluções consensuais que preservem a imagem da empresa e evitem litígios prolongados.</p>
+                    <h4>Cenários Comuns:</h4>
+                    <ul>
+                        <li>**Acordos Extrajudiciais:** Resolução de pendências antes que se tornem processos.</li>
+                        <li>**Mediação de Conflitos Internos:** Ajuda na resolução de desentendimentos entre colaboradores.</li>
+                        <li>**Termos de Ajustamento de Conduta (TAC):** Negociação com órgãos fiscalizadores.</li>
+                        <li>**Demissões Consensuais:** Orientação para desligamentos que beneficiem ambas as partes.</li>
+                    </ul>
+                    <h4>Como Podemos Ajudar:</h4>
+                    <p>Conduzimos as negociações com profissionalismo e imparcialidade, buscando sempre o melhor resultado para sua empresa.</p>
+                </div>
+
+                <div class="service-area">
+                    <h3><i class="fas fa-file-contract"></i> Elaboração e Revisão de Contratos de Trabalho</h3>
+                    <p>Um contrato de trabalho bem elaborado é a base para uma relação empregatícia saudável e segura. Revisamos e criamos contratos de trabalho, acordos de confidencialidade, termos de rescisão e outros documentos, garantindo que estejam em conformidade com a legislação e que protejam os interesses da sua empresa. Evite surpresas e garanta a clareza nas relações com seus colaboradores.</p>
+                    <h4>Cenários Comuns:</h4>
+                    <ul>
+                        <li>**Contratos de Experiência:** Elaboração de termos claros e legais.</li>
+                        <li>**Contratos por Prazo Determinado:** Adequação às normas específicas.</li>
+                        <li>**Acordos de Confidencialidade:** Proteção de informações estratégicas da empresa.</li>
+                        <li>**Termos de Rescisão:** Garantia de que todos os direitos e deveres sejam cumpridos.</li>
+                    </ul>
+                    <h4>Como Podemos Ajudar:</h4>
+                    <p>Elaboramos documentos jurídicos precisos e personalizados, que oferecem segurança e clareza para todas as partes envolvidas.</p>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Respostas claras para as dúvidas mais comuns das empresas sobre Direito Trabalhista.</p>
+                <div class="faq">
+                    <button class="faq-question">
+                        Como posso evitar ações trabalhistas na minha empresa?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A melhor forma é através da consultoria preventiva e do compliance trabalhista. Revisar contratos, políticas internas, jornadas de trabalho e garantir o correto pagamento de todas as verbas são passos essenciais. Uma auditoria jurídica pode identificar pontos de risco e propor soluções antes que se tornem problemas.</p>
+                    </div>
+
+                    <button class="faq-question">
+                        Minha empresa recebeu uma reclamação trabalhista, o que devo fazer?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O primeiro passo é procurar um advogado especializado imediatamente. Ele analisará o processo, orientará sobre a documentação necessária e elaborará a melhor estratégia de defesa. Agir rapidamente é crucial para proteger os interesses da sua empresa.</p>
+                    </div>
+
+                    <button class="faq-question">
+                        É possível fazer um acordo com o funcionário para evitar um processo?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, a negociação e mediação são excelentes ferramentas para resolver conflitos de forma amigável. Um advogado pode intermediar um acordo extrajudicial que seja justo para ambas as partes, evitando os custos e o desgaste de um processo judicial prolongado.</p>
+                    </div>
+
+                    <button class="faq-question">
+                        Quais os riscos de não estar em conformidade com a legislação trabalhista?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os riscos são altos e incluem multas elevadas, ações trabalhistas, passivos financeiros significativos, danos à imagem da empresa e até mesmo interdição de atividades. Investir em compliance é investir na segurança e sustentabilidade do seu negócio.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog-related-posts-section">
+                <h2 class="section-title">Publicações Relacionadas</h2>
+                <p class="section-subtitle">Confira artigos do nosso blog que podem te interessar.</p>
+                <div class="posts-grid">
+                    <div class="blog-post-card">
+                        <a href="blog/posts/guia-completo-para-empresas-evitar-processos-trabalhistas.html">
+                            <img src="blog/images/EMPRESA_guia.jpg" alt="Guia para Empresas">
+                            <h3>Guia Completo para Empresas: Como Evitar Processos Trabalhistas.</h3>
+                            <p>Dicas essenciais para manter sua empresa em conformidade.</p>
+                        </a>
+                    </div>
+                    <div class="blog-post-card">
+                        <a href="blog/posts/a-importancia-do-compliance-trabalhista-para-a-saude-da-sua-empresa.html">
+                            <img src="blog/images/EMPRESA_compliance.jpg" alt="Compliance Trabalhista">
+                            <h3>A Importância do Compliance Trabalhista para a Saúde da Sua Empresa.</h3>
+                            <p>Entenda como a conformidade protege seu negócio.</p>
+                        </a>
+                    </div>
+                    <div class="blog-post-card">
+                        <a href="blog/posts/como-lidar-com-uma-fiscalizacao-do-ministerio-do-trabalho.html">
+                            <img src="blog/images/EMPRESA_fiscalizacao.jpg" alt="Fiscalização do Trabalho">
+                            <h3>Como Lidar com uma Fiscalização do Ministério do Trabalho.</h3>
+                            <p>Saiba como agir e proteger sua empresa em caso de fiscalização.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section-area">
+                <div class="contact-content">
+                    <h2>Sua empresa precisa de segurança jurídica trabalhista?</h2>
+                    <p>Não espere os problemas surgirem. Conte com nossa assessoria especializada para proteger seu negócio, garantir a conformidade e promover um ambiente de trabalho justo e produtivo.</p>
+                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
+                </div>
+            </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <img src="assets/img/logo-white.png" alt="Logo Gabriel Corrêa Advocacia" class="footer-logo">
+                <p>Compromisso, ética e excelência na defesa dos seus direitos. Atendimento personalizado e focado em resultados.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Áreas de Atuação</h4>
+                <ul>
+                    <li><a href="familia.html">Direito de Família</a></li>
+                    <li><a href="trabalhista.html">Direito Trabalhista</a></li>
+                    <li><a href="criminal.html">Direito Criminal</a></li>
+                    <li><a href="contrato.html">Contratos</a></li>
+                    <li><a href="busca-e-apreensao.html">Busca e Apreensão</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Rua 123, Sala 456, Centro, Cidade-UF</p>
+                <p><i class="fas fa-phone"></i> (47) 99675-6766</p>
+                <p><i class="fas fa-envelope"></i> contato@gabrielcorrea.adv.br</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
-        <div class="risk-cards">
-            <div class="risk-card">
-                <div class="risk-icon">🔴</div>
-                <div>
-                    <h4>Alto Risco: Sem Assessoria</h4>
-                    <p>Contratos irregulares, jornadas mal controladas e demissões sem procedimento adequado geram passivos elevados.</p>
-                </div>
-            </div>
-            <div class="risk-card medium">
-                <div class="risk-icon">🟡</div>
-                <div>
-                    <h4>Risco Moderado: Parcialmente Adequado</h4>
-                    <p>Alguns processos corretos, mas lacunas que podem ser exploradas em reclamações trabalhistas.</p>
-                </div>
-            </div>
-            <div class="risk-card low">
-                <div class="risk-icon">🟢</div>
-                <div>
-                    <h4>Baixo Risco: Com Assessoria Especializada</h4>
-                    <p>Processos conformes, documentação adequada e defesa eficiente quando necessário.</p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Serviços -->
-<section id="servicos" class="services-section">
-    <h2>Serviços para Empresas</h2>
-    <p class="sub">Soluções jurídicas trabalhistas completas para proteger e fortalecer seu negócio.</p>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-gavel"></i></div>
-            <h3>Defesa em Reclamações Trabalhistas</h3>
-            <p>Representação completa em processos na Justiça do Trabalho, desde a contestação até os recursos, com estratégia focada na redução do passivo.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-search"></i></div>
-            <h3>Consultoria Preventiva</h3>
-            <p>Análise dos processos internos de RH, contratos de trabalho, jornadas e políticas da empresa para identificar e corrigir riscos antes que virem processos.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-file-contract"></i></div>
-            <h3>Elaboração de Contratos</h3>
-            <p>Contratos de trabalho, acordos de confidencialidade, cláusulas de não concorrência e documentos de admissão e demissão com segurança jurídica.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-sign-out-alt"></i></div>
-            <h3>Gestão de Demissões</h3>
-            <p>Orientação sobre o procedimento correto para demissões com e sem justa causa, reduzindo o risco de reclamações e garantindo conformidade legal.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-handshake"></i></div>
-            <h3>Negociação e Acordos</h3>
-            <p>Condução de negociações extrajudiciais e homologação de acordos para resolver conflitos com rapidez e menor custo para a empresa.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
-            <h3>Compliance Trabalhista</h3>
-            <p>Implementação de políticas internas, treinamentos e procedimentos para garantir conformidade com a legislação trabalhista vigente.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-users-cog"></i></div>
-            <h3>Terceirização e Prestação de Serviços</h3>
-            <p>Estruturação jurídica de contratos de terceirização, análise de responsabilidade subsidiária e gestão de riscos em contratos de prestação de serviços.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Auditoria Trabalhista</h3>
-            <p>Levantamento completo dos passivos trabalhistas da empresa para due diligence, fusões, aquisições ou reorganização societária.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Benefícios -->
-<section class="benefits-section">
-    <h2>Por Que Contar com Assessoria Especializada</h2>
-    <p class="sub">Vantagens concretas para o seu negócio.</p>
-    <div class="benefits-grid">
-        <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-piggy-bank"></i></div>
-            <h4>Redução de Custos</h4>
-            <p>Prevenção e defesa eficiente reduzem o valor médio de acordos e condenações.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-            <h4>Segurança Jurídica</h4>
-            <p>Processos conformes e documentação adequada protegem a empresa em qualquer auditoria.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-            <h4>Agilidade</h4>
-            <p>Respostas rápidas e estratégicas para situações urgentes, como notificações e prazos processuais.</p>
-        </div>
-        <div class="benefit-item">
-            <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
-            <h4>Parceria Contínua</h4>
-            <p>Assessoria permanente para consultas do dia a dia, não apenas quando surgem problemas.</p>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section">
-    <h2>Dúvidas Frequentes</h2>
-    <p class="sub">Respostas objetivas para empresários e gestores.</p>
-    <div class="faq">
-        <div class="faq-item">
-            <button class="faq-question">Minha empresa recebeu uma reclamação trabalhista. O que fazer? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">O primeiro passo é não ignorar o prazo de resposta. Entre em contato imediatamente com um advogado trabalhista. Analisaremos a reclamação, reuniremos documentos e definiremos a melhor estratégia de defesa — seja contestar, negociar ou propor acordo.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Vale a pena fazer acordo ou é melhor ir a julgamento? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Depende de cada caso. Em geral, acordos bem negociados são mais rápidos e custam menos do que uma condenação judicial. Analisamos o mérito, os riscos e o valor envolvido para recomendar a melhor decisão estratégica para a empresa.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Como posso reduzir o risco de reclamações trabalhistas? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Através de consultoria preventiva: revisão de contratos, adequação de jornadas, treinamento de gestores, procedimentos de demissão corretos e documentação adequada. Nossa assessoria identifica os pontos de risco antes que se tornem processos.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">A empresa pode ser responsabilizada por terceirizados? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Sim. A empresa tomadora de serviços pode ter responsabilidade subsidiária pelas obrigações trabalhistas da prestadora. Por isso, é fundamental estruturar corretamente os contratos de terceirização e monitorar o cumprimento das obrigações.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Como funciona a assessoria trabalhista contínua? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">Oferecemos consultoria mensal ou por demanda, com análise de casos concretos, revisão de documentos, orientação sobre admissões e demissões e suporte para o RH da empresa. Tudo de forma online e ágil.</div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-    <h2>Proteja Sua Empresa Agora</h2>
-    <p>Não espere uma reclamação para buscar assessoria. Fale conosco e descubra como reduzir seus riscos trabalhistas.</p>
-    <div class="cta-btns">
-        <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Falar com um Advogado</a>
-        <a href="contato.html" class="btn-outline"><i class="fas fa-envelope"></i> Solicitar Proposta</a>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="footer-grid">
-        <div class="footer-col">
-            <h4>Advogado Gabriel Corrêa</h4>
-            <p>OAB/SC 63.737</p>
-            <p>Atendimento 100% Online — Brasil</p>
-        </div>
-        <div class="footer-col">
-            <h4>Áreas de Atuação</h4>
-            <a href="trabalhista-empregado.html">Trabalhista — Para Empregado</a>
-            <a href="trabalhista-empresa.html">Trabalhista — Para Empresa</a>
-            <a href="familia.html">Direito de Família</a>
-            <a href="criminal.html">Direito Criminal</a>
-        </div>
-        <div class="footer-col">
-            <h4>Links Úteis</h4>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="blog.html">Blog</a>
-            <a href="contato.html">Contato</a>
-        </div>
-        <div class="footer-col">
-            <h4>Contato</h4>
-            <p>(47) 99675-6766</p>
-            <p>escritorio.gabrielcorrea@gmail.com</p>
-        </div>
-    </div>
-    <div class="footer-bottom">&copy; 2025 Advogado Gabriel Corrêa. Todos os direitos reservados. | LGPD</div>
-</footer>
-
-<a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
-<link rel="stylesheet" href="assets/chat-widget.css">
-<script src="assets/chat-widget.js"></script>
-<script>
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const mainNav = document.getElementById('mainNav');
-if (hamburgerBtn && mainNav) {
-    hamburgerBtn.addEventListener('click', () => mainNav.classList.toggle('open'));
-}
-document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        const icon = q.querySelector('i');
-        const isOpen = answer.style.display === 'block';
-        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-        document.querySelectorAll('.faq-question i').forEach(i => i.className = 'fas fa-chevron-down');
-        if (!isOpen) { answer.style.display = 'block'; icon.className = 'fas fa-chevron-up'; }
-    });
-});
-</script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
