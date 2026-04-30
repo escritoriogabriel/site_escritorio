@@ -23,7 +23,7 @@
     <style>
         /* Estilos específicos para Landing Page de Conversão */
         .lp-hero {
-            padding: 20px 15% 100px;
+            padding: 80px 5% 100px;
             background: linear-gradient(135deg, #fdfcf8 0%, #f3ead2 100%);
             color: var(--primary-blue);
             text-align: center;
@@ -71,6 +71,59 @@
         }
         .sticky-whatsapp:hover { transform: scale(1.05); background: var(--whatsapp-green-deep); }
 
+        /* Cenários Premium Card */
+        .scenarios-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-elegant);
+            border: 1px solid var(--border-soft);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        .scenarios-card h3 {
+            color: var(--accent-gold-deep);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+        }
+        .scenario-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .scenario-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .scenario-icon {
+            background: #fdf8e1;
+            color: var(--primary-blue);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .scenario-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .scenario-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
         /* FAQ Styles */
         .faq-section { padding: 80px 5%; background: var(--bg-paper); }
         .faq-container { max-width: 900px; margin: 0 auto; }
@@ -83,6 +136,7 @@
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
             .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
+            .scenarios-card { padding: 25px; margin: 30px 15px; }
             .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9rem; }
         }
     </style>
@@ -108,8 +162,8 @@
                 </span>
                 <h1>Resolva seu conflito familiar <span>com paz e segurança.</span></h1>
                 <p>Divórcio, Pensão Alimentícia, Guarda e Inventários. Atendimento humanizado focado em proteger o que você mais valoriza.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale com um Especialista</a>
-                    <a href="#desenvolvimento" class="btn-secondary">Conheça nossa abordagem <i class="fas fa-arrow-right"></i></a>
+                <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20de%20Família" class="btn-primary" style="font-size: 1.2rem; padding: 20px 45px;">
+                    <i class="fab fa-whatsapp"></i> Iniciar Conversa Sigilosa
                 </a>
             </div>
         </section>
@@ -119,39 +173,64 @@
             <div class="conversion-item"><i class="fas fa-hand-holding-heart"></i> Atendimento Humanizado</div>
             <div class="conversion-item"><i class="fas fa-laptop"></i> Consulta Online</div>
         </div>
-        
-        <section id="desenvolvimento" class="area-body">
-            <article class="prose-legal" style="text-align: justify;">
-                <p>Poucos momentos na vida exigem tanta clareza quanto uma mudança familiar. Você não está procurando um advogado porque quer — está aqui porque algo mudou, ou precisa mudar, e essa transição mexe com tudo: seus filhos, suas finanças, sua rotina, a casa em que você vive. <strong>O nosso papel é traduzir o jurídico para a sua realidade</strong> e devolver previsibilidade ao que parece caótico.</p>
-                <p>Trabalhamos com a premissa de que a melhor decisão não é necessariamente a mais dura, nem a mais rápida — é a que protege quem precisa ser protegido sem destruir o que ainda pode ser preservado. Quando há acordo possível, mediamos. Quando é hora de litigar, litigamos com técnica e firmeza.</p>
-        </article> </section>
 
-            <aside class="area-sidebar">
-                <div class="sidebar-card">
-                    <span class="label">Cenários que atendemos</span>
-                    <ul>
-                <li>
-                    <span class="ico"><i class="fas fa-balance-scale"></i></span>
-                    <span class="txt"><strong>Divórcio</strong><span>Consensual ou litigioso, com proteção patrimonial.</span></span>
-                </li>
-                <li>
-                    <span class="ico"><i class="fas fa-users"></i></span>
-                    <span class="txt"><strong>Guarda &amp; visitas</strong><span>Acordos centrados no melhor interesse da criança.</span></span>
-                </li>
-                <li>
-                    <span class="ico"><i class="fas fa-coins"></i></span>
-                    <span class="txt"><strong>Pensão alimentícia</strong><span>Fixação, revisão e execução com valores justos.</span></span>
-                </li>
-                <li>
-                    <span class="ico"><i class="fas fa-shield-alt"></i></span>
-                    <span class="txt"><strong>Proteção &amp; urgência</strong><span>Medidas protetivas e combate à alienação parental.</span></span>
-                </li>
-                    </ul>
+        <section class="area-body" style="padding: 60px 5%; max-width: 850px; margin: 0 auto;">
+            <div class="prose-legal" style="text-align: justify;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Atendimento humanizado para momentos decisivos.</h2>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
+                    Conflitos familiares exigem mais do que técnica jurídica; exigem empatia e estratégia para preservar relações e patrimônio. Seja em um divórcio, na definição de uma pensão ou na organização de um inventário, nossa missão é conduzir o processo com o menor desgaste possível, garantindo que seus direitos e os de sua família sejam plenamente respeitados.
+                </p>
+
+                <!-- Cenários Premium Card -->
+                <div class="scenarios-card">
+                    <h3>Cenários que Atendemos</h3>
+                    
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-hands-helping"></i></div>
+                        <div class="scenario-content">
+                            <h4>Divórcio Consensual e Litigioso</h4>
+                            <p>Dissolução do matrimônio com foco em partilha justa e agilidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-child"></i></div>
+                        <div class="scenario-content">
+                            <h4>Pensão Alimentícia e Guarda</h4>
+                            <p>Garantia do sustento e bem-estar dos filhos com equilíbrio.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <div class="scenario-content">
+                            <h4>Inventários e Partilhas</h4>
+                            <p>Organização sucessória e transferência de bens com segurança jurídica.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-home"></i></div>
+                        <div class="scenario-content">
+                            <h4>União Estável</h4>
+                            <p>Reconhecimento e dissolução de união estável com proteção patrimonial.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="scenario-content">
+                            <h4>Alienação Parental</h4>
+                            <p>Medidas judiciais para proteger o vínculo afetivo entre pais e filhos.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
         <!-- Diferenciais Reutilizados -->
         <section class="differentials-section" style="background-color: var(--primary-blue); padding: 80px 5%; text-align: center; color: white;">
-            <h2 class="section-title" style="color: white; margin-bottom: 15px; font-size: 45px;">Por Que Escolher Nosso Escritório</h2>
+            <h2 class="section-title" style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
             <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin-bottom: 40px;">Confiança, técnica e proximidade real com o cliente.</p>
             <div class="differentials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
                 <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-laptop"></i> Atendimento online em todo o Brasil</div>
@@ -162,28 +241,6 @@
                 <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-credit-card"></i> Parcela em até 10x</div>
             </div>
         </section>
-
-        <!-- DIFERENCIAIS -->
-        <section class="differentials">
-            <div class="differentials-grid">
-            <div class="differential-item">
-                <i class="fas fa-handshake"></i>
-                <h3>Acordo antes de litígio</h3>
-                <p>Mediação familiar estruturada. Mais rápido, mais barato, menos doloroso para os filhos.</p>
-            </div>
-            <div class="differential-item">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Urgência tratada como urgência</h3>
-                <p>Medidas protetivas e ações cautelares ajuizadas no mesmo dia quando o caso exige.</p>
-            </div>
-            <div class="differential-item">
-                <i class="fas fa-check-circle"></i>
-                <h3>Transparência total</h3>
-                <h>Você sabe o custo, o prazo e o próximo passo. Sem surpresa, sem juridiquês.</p>
-            </div>
-            </div>
-        </section>
-
 
         <!-- FAQ Seção -->
         <section class="faq-section">

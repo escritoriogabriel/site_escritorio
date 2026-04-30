@@ -71,15 +71,59 @@
         }
         .sticky-whatsapp:hover { transform: scale(1.05); background: var(--whatsapp-green-deep); }
 
-        /* Sidebar Card Dark Custom */
-        .sidebar-card.dark {
+        /* Cenários Premium Card Dark */
+        .scenarios-card {
             background: #0d1b2a;
-            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             border-top: 4px solid var(--accent-gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 40px auto;
+            color: white;
         }
-        .sidebar-card.dark h3 { color: var(--accent-gold); }
-        .sidebar-card.dark p { color: rgba(255,255,255,0.8); }
+        .scenarios-card h3 {
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+        }
+        .scenario-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .scenario-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .scenario-icon {
+            background: rgba(255,255,255,0.1);
+            color: var(--accent-gold);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .scenario-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .scenario-content p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            margin: 0;
+        }
 
         /* FAQ Styles */
         .faq-section { padding: 80px 5%; background: var(--bg-paper); }
@@ -93,6 +137,7 @@
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
             .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
+            .scenarios-card { padding: 25px; margin: 30px 15px; }
             .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9rem; }
         }
     </style>
@@ -130,9 +175,9 @@
             <div class="conversion-item"><i class="fas fa-map-marker-alt"></i> Atuação em todo o Brasil</div>
         </div>
 
-        <section class="area-body" style="padding: 60px 5%; max-width: 1100px; margin: 0 auto;">
-            <div class="prose-legal" style="text-align: justify; margin-bottom: 50px;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue);">Defesa Técnica e Presença Real quando você mais precisa.</h2>
+        <section class="area-body" style="padding: 60px 5%; max-width: 850px; margin: 0 auto;">
+            <div class="prose-legal" style="text-align: justify;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defesa Técnica e Presença Real quando você mais precisa.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 30px;">
                     Ninguém imagina precisar de um advogado criminalista. Quando precisa, geralmente é no meio da madrugada, com a família sem saber direito o que aconteceu, e com decisões importantes acontecendo nas próximas horas — audiência de custódia, requerimento de liberdade provisória, manifestação sobre o flagrante. O que se faz (ou se deixa de fazer) nas primeiras 48 horas pesa em todo o resto do processo.
                 </p>
@@ -140,25 +185,48 @@
                     Atuamos com presença real e técnica em cada fase: investigação, inquérito policial, denúncia, audiências, sentença, recursos, execução penal. Sem promessa milagrosa — porque advogado sério não promete absolvição. Com estratégia transparente, sim: o que dá para fazer, o que não dá, o que está em jogo, a cada decisão.
                 </p>
 
-                <h3 style="text-align: center; margin-bottom: 35px; font-family: 'Montserrat', sans-serif;">Cenários que Atendemos</h3>
-                
-                <!-- Variação 1: Grade de Cards -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
-                        <h3><i class="fas fa-lock"></i> Prisão em Flagrante</h3>
-                        <p>Acompanhamento imediato em delegacias para garantir que nenhum direito seja violado nas primeiras horas.</p>
+                <!-- Cenários Premium Card Dark -->
+                <div class="scenarios-card">
+                    <h3>Cenários que Atendemos</h3>
+                    
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-lock"></i></div>
+                        <div class="scenario-content">
+                            <h4>Prisão em Flagrante</h4>
+                            <p>Acompanhamento imediato em delegacias para garantir direitos.</p>
+                        </div>
                     </div>
-                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
-                        <h3><i class="fas fa-gavel"></i> Audiência de Custódia</h3>
-                        <p>Defesa técnica perante o juiz para buscar a liberdade provisória ou relaxamento da prisão ilegal.</p>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-gavel"></i></div>
+                        <div class="scenario-content">
+                            <h4>Audiência de Custódia</h4>
+                            <p>Defesa técnica para buscar a liberdade provisória imediata.</p>
+                        </div>
                     </div>
-                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
-                        <h3><i class="fas fa-file-contract"></i> Habeas Corpus</h3>
-                        <p>Medidas urgentes nos tribunais para cessar constrangimento ilegal à liberdade de locomoção.</p>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-file-contract"></i></div>
+                        <div class="scenario-content">
+                            <h4>Habeas Corpus</h4>
+                            <p>Medidas urgentes para cessar constrangimento ilegal à liberdade.</p>
+                        </div>
                     </div>
-                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
-                        <h3><i class="fas fa-user-shield"></i> Defesa em Processos</h3>
-                        <p>Atuação completa em todas as instâncias, desde a resposta à acusação até os recursos nos tribunais superiores.</p>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-user-shield"></i></div>
+                        <div class="scenario-content">
+                            <h4>Defesa em Processos</h4>
+                            <p>Atuação completa em todas as instâncias e tribunais.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="scenario-content">
+                            <h4>Crimes Digitais</h4>
+                            <p>Defesa especializada em estelionato digital e crimes de internet.</p>
+                        </div>
                     </div>
                 </div>
             </div>

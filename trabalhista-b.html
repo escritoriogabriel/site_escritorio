@@ -71,6 +71,59 @@
         }
         .sticky-whatsapp:hover { transform: scale(1.05); background: var(--whatsapp-green-deep); }
 
+        /* Cenários Premium Card */
+        .scenarios-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-elegant);
+            border: 1px solid var(--border-soft);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        .scenarios-card h3 {
+            color: var(--accent-gold-deep);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+        }
+        .scenario-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .scenario-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .scenario-icon {
+            background: #fdf8e1;
+            color: var(--primary-blue);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .scenario-content h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .scenario-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
         /* FAQ Styles */
         .faq-section { padding: 80px 5%; background: var(--bg-paper); }
         .faq-container { max-width: 900px; margin: 0 auto; }
@@ -83,6 +136,7 @@
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
             .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
+            .scenarios-card { padding: 25px; margin: 30px 15px; }
             .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9rem; }
         }
     </style>
@@ -120,32 +174,63 @@
             <div class="conversion-item"><i class="fas fa-shield-alt"></i> Sigilo e Transparência Total</div>
         </div>
 
-        <section class="area-body" style="padding: 60px 5%; max-width: 1100px; margin: 0 auto;">
-            <div class="prose-legal" style="text-align: justify; margin-bottom: 50px;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue);">Defendemos quem trabalha com técnica e agilidade.</h2>
+        <section class="area-body" style="padding: 60px 5%; max-width: 850px; margin: 0 auto;">
+            <div class="prose-legal" style="text-align: justify;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defendemos quem trabalha com técnica e agilidade.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
                     Demissão sem justa causa mal calculada, horas extras que nunca caíram na conta, assédio que ninguém quer enxergar. O que parece banal no contracheque pode valer meses de salário no fim da ação. Sua parte é registrar o que viveu — a nossa é transformar isso em direito recebido, garantindo que você não deixe dinheiro real na mesa por falta de orientação especializada.
                 </p>
 
-                <h3 style="text-align: center; margin-bottom: 35px; font-family: 'Montserrat', sans-serif;">Cenários que Atendemos</h3>
-                
-                <!-- Variação 2: Lista Vertical de Cards -->
-                <div style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto;">
-                    <div class="sidebar-card" style="padding: 25px; border-top: 4px solid var(--accent-gold); background: white; box-shadow: var(--shadow-card); border-radius: 12px;">
-                        <h3 style="margin-bottom: 10px;"><i class="fas fa-money-bill-wave"></i> Verbas Rescisórias e Cálculos</h3>
-                        <p>Aviso prévio, FGTS, multa de 40% e 13º salário. Refazemos as contas para garantir o pagamento integral.</p>
+                <!-- Cenários Premium Card -->
+                <div class="scenarios-card">
+                    <h3>Cenários que Atendemos</h3>
+                    
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-ban"></i></div>
+                        <div class="scenario-content">
+                            <h4>Demissão sem justa causa</h4>
+                            <p>Recálculo das verbas e cobrança de diferença.</p>
+                        </div>
                     </div>
-                    <div class="sidebar-card" style="padding: 25px; border-top: 4px solid var(--accent-gold); background: white; box-shadow: var(--shadow-card); border-radius: 12px;">
-                        <h3 style="margin-bottom: 10px;"><i class="fas fa-user-clock"></i> Horas Extras e Intervalos</h3>
-                        <p>Cobramos jornadas extrapoladas e intervalos não concedidos dos últimos 5 anos com os devidos adicionais.</p>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-file-invoice"></i></div>
+                        <div class="scenario-content">
+                            <h4>Rescisão Indireta</h4>
+                            <p>Demitir a empresa por falta grave.</p>
+                        </div>
                     </div>
-                    <div class="sidebar-card" style="padding: 25px; border-top: 4px solid var(--accent-gold); background: white; box-shadow: var(--shadow-card); border-radius: 12px;">
-                        <h3 style="margin-bottom: 10px;"><i class="fas fa-user-shield"></i> Assédio e Rescisão Indireta</h3>
-                        <p>Proteção contra assédio moral e aplicação da "justa causa no empregador" quando seus direitos são violados.</p>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-user-check"></i></div>
+                        <div class="scenario-content">
+                            <h4>Reconhecimento de vínculo</h4>
+                            <p>Quando a empresa não assina sua Carteira, você deixa de ganhar.</p>
+                        </div>
                     </div>
-                    <div class="sidebar-card" style="padding: 25px; border-top: 4px solid var(--accent-gold); background: white; box-shadow: var(--shadow-card); border-radius: 12px;">
-                        <h3 style="margin-bottom: 10px;"><i class="fas fa-briefcase-medical"></i> Acidentes e Doenças</h3>
-                        <p>Indenizações por danos morais e materiais decorrentes de negligência ou falta de segurança no trabalho.</p>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-clock"></i></div>
+                        <div class="scenario-content">
+                            <h4>Horas extras</h4>
+                            <p>Últimos 5 anos, com adicionais e reflexos.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="scenario-content">
+                            <h4>Assédio & discriminação</h4>
+                            <p>Ação por danos morais com prova organizada.</p>
+                        </div>
+                    </div>
+
+                    <div class="scenario-item">
+                        <div class="scenario-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="scenario-content">
+                            <h4>Acidente / doença ocupacional</h4>
+                            <p>Indenização e estabilidade quando cabível.</p>
+                        </div>
                     </div>
                 </div>
             </div>
