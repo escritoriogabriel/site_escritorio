@@ -691,12 +691,6 @@ footer::before {
     .whatsapp-float { bottom: 18px; right: 18px; width: 56px; height: 56px; font-size: 26px; }
 }
 
-@media (max-width: 480px) {
-    .page-hero h1 { font-size: 1.85rem; }
-    .btn-primary, .btn-secondary, .btn-gold { padding: 14px 24px; font-size: 0.95rem; width: 100%; justify-content: center; }
-    .page-hero-ctas { flex-direction: column; width: 100%; }
-}
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
