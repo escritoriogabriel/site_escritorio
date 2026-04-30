@@ -124,15 +124,6 @@
             margin: 0;
         }
 
-        /* FAQ Styles */
-        .faq-section { padding: 80px 5%; background: var(--bg-paper); }
-        .faq-container { max-width: 900px; margin: 0 auto; }
-        .faq-item { background: white; border: 1px solid var(--border-soft); border-radius: var(--radius-md); margin-bottom: 15px; overflow: hidden; }
-        .faq-question { width: 100%; padding: 20px 25px; text-align: left; background: none; border: none; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--primary-blue); cursor: pointer; font-size: 1.05rem; }
-        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.3s ease; color: var(--text-body); line-height: 1.7; }
-        .faq-item.active .faq-answer { padding: 0 25px 25px; max-height: 200px; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); }
-
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
             .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
@@ -174,8 +165,8 @@
             <div class="conversion-item"><i class="fas fa-shield-alt"></i> Sigilo e Transparência Total</div>
         </div>
 
-        <section class="area-body" style="padding: 60px 5%; max-width: 850px; margin: 0 auto;">
-            <div class="prose-legal" style="text-align: justify;">
+        <section class="area-body-landing" style="padding: 60px 5%; max-width: 1000px; margin: 0 auto;">
+            <div class="prose-legal" style="max-width: 100%; text-align: justify;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defendemos quem trabalha com técnica e agilidade.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
                     Demissão sem justa causa mal calculada, horas extras que nunca caíram na conta, assédio que ninguém quer enxergar. O que parece banal no contracheque pode valer meses de salário no fim da ação. Sua parte é registrar o que viveu — a nossa é transformar isso em direito recebido, garantindo que você não deixe dinheiro real na mesa por falta de orientação especializada.
@@ -224,137 +215,105 @@
                             <p>Ação por danos morais com prova organizada.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="scenario-item">
-                        <div class="scenario-icon"><i class="fas fa-heartbeat"></i></div>
-                        <div class="scenario-content">
-                            <h4>Acidente / doença ocupacional</h4>
-                            <p>Indenização e estabilidade quando cabível.</p>
-                        </div>
-                    </div>
+                <!-- Conteúdo Extra para Arrematar -->
+                <div class="pull-quote" style="margin: 60px 0;">
+                    <p>O trabalho é a base da dignidade. Garantir que seus direitos sejam respeitados é nossa prioridade absoluta, com transparência e agilidade.</p>
+                    <cite>Dr. Gabriel Corrêa — Especialista em Direito do Trabalho</cite>
                 </div>
             </div>
         </section>
 
         <!-- Diferenciais Reutilizados -->
-        <section class="differentials-section" style="background-color: var(--primary-blue); padding: 80px 5%; text-align: center; color: white;">
-            <h2 class="section-title" style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin-bottom: 40px;">Confiança, técnica e proximidade real com o cliente.</p>
-            <div class="differentials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-laptop"></i> Atendimento online em todo o Brasil</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-bolt"></i> Resposta rápida e ágil</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-user-tie"></i> Atendimento direto com advogado</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-comments"></i> Comunicação sem juridiquês</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-headset"></i> Suporte online e imediato</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-credit-card"></i> Parcela em até 10x</div>
+        <section class="differentials" style="padding: 80px 5%;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
+                <p style="color: rgba(255,255,255,0.75); margin-bottom: 50px;">Confiança, técnica e proximidade real com o cliente.</p>
+                <div class="differentials-grid">
+                    <div class="differential-item">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Atendimento Online</h3>
+                        <p>Consultas por vídeo e acompanhamento digital em todo o Brasil.</p>
+                    </div>
+                    <div class="differential-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Resposta Ágil</h3>
+                        <p>Análise rápida do seu caso para não perder prazos prescricionais.</p>
+                    </div>
+                    <div class="differential-item">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Foco no Trabalhador</h3>
+                        <p>Defesa especializada para garantir o recebimento de cada centavo devido.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- FAQ Seção -->
         <section class="faq-section">
-            <div class="faq-container">
-                <h2 style="text-align: center; margin-bottom: 10px; font-family: 'Montserrat', sans-serif;">Dúvidas Frequentes</h2>
-                <p style="text-align: center; margin-bottom: 40px; color: var(--text-muted);">Tudo o que você precisa saber sobre seus direitos trabalhistas.</p>
+            <div class="faq-wrapper">
+                <div class="eyebrow">Dúvidas Frequentes</div>
+                <h2>Respostas para suas dúvidas</h2>
                 
-                <div class="faq-item">
-                    <button class="faq-question">Fui demitido, quais são meus direitos básicos? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Você tem direito ao saldo de salário, aviso prévio, 13º proporcional, férias vencidas e proporcionais + 1/3, e saque do FGTS com multa de 40% (se sem justa causa).</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Quanto tempo tenho para entrar com uma ação? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">O prazo é de até 2 anos após o fim do contrato de trabalho para reclamar os últimos 5 anos de direitos.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Trabalhei sem carteira assinada, tenho direitos? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Sim. Se houver subordinação, salário, pessoalidade e habitualidade, podemos pedir o reconhecimento do vínculo e todos os direitos retroativos.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que caracteriza assédio moral no trabalho? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Exposição a situações humilhantes, cobranças abusivas, isolamento ou perseguição de forma reiterada.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Como provar que eu fazia horas extras? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Através de cartões de ponto, mensagens de WhatsApp, e-mails, testemunhas e registros de sistemas da empresa.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">A empresa não depositou meu FGTS, o que fazer? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Isso é falta grave do empregador e pode gerar a rescisão indireta do contrato, onde você sai recebendo tudo como se fosse demitido.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Posso ser demitido estando doente? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Depende. Se a doença tiver relação com o trabalho, você pode ter estabilidade de 12 meses após o retorno do INSS.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que é rescisão indireta? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">É a "justa causa" aplicada pelo empregado ao empregador quando este descumpre a lei ou o contrato.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Quanto custa um processo trabalhista? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Geralmente trabalhamos com honorários sobre o êxito, ou seja, você só paga uma porcentagem do que receber ao final do processo.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O atendimento online é seguro? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Totalmente. Utilizamos sistemas criptografados e assinaturas digitais com validade jurídica total em todo o Brasil.</div>
+                <details class="faq-item">
+                    <summary>Quanto tempo tenho para entrar com uma ação trabalhista?</summary>
+                    <div class="faq-body">Você tem até 2 anos após a saída da empresa para entrar com a ação, podendo cobrar os últimos 5 anos de direitos.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>O que é rescisão indireta?</summary>
+                    <div class="faq-body">É quando o empregado "demite" a empresa por falta grave do patrão (como atraso de salário ou falta de FGTS), recebendo todos os direitos.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Trabalhei sem carteira assinada, tenho direitos?</summary>
+                    <div class="faq-body">Sim. Se comprovados os requisitos do vínculo, você tem direito a receber tudo o que um funcionário registrado receberia.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Como provar as horas extras?</summary>
+                    <div class="faq-body">Através de cartões de ponto, testemunhas, mensagens de WhatsApp, e-mails e registros de sistemas da empresa.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Blog Link Melhorado -->
+        <section class="related-posts-section">
+            <div class="related-posts-wrapper">
+                <div class="eyebrow">Conhecimento</div>
+                <h2>Informação para o trabalhador</h2>
+                <p class="related-posts-subtitle">Confira nossos artigos exclusivos sobre Direitos Trabalhistas.</p>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="blog.html?categoria=trabalhista" class="btn-secondary">
+                        Acessar Blog Trabalhista <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Link -->
-        <section style="padding: 60px 5%; text-align: center; background: var(--white);">
-            <h3>Quer saber mais sobre seus direitos?</h3>
-            <p style="margin-bottom: 25px;">Confira nossos artigos exclusivos sobre Direito do Trabalho.</p>
-            <a href="blog.html?categoria=trabalhista" class="btn-secondary">Acessar Blog Trabalhista <i class="fas fa-arrow-right"></i></a>
-        </section>
-
-        <!-- Contact Wrapper Reutilizado -->
-        <section class="contact-section" id="contato" style="padding: 80px 5%; background: var(--bg-light);">
-            <div class="contact-wrapper" style="max-width: 1100px; margin: 0 auto;">
-                <div class="contact-header" style="text-align: center; margin-bottom: 40px;">
-                    <div class="contact-eyebrow" style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-comments"></i> Atendimento Imediato</div>
-                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Fale com o <span>Advogado</span></h2>
-                    <p>Não deixe seu direito para depois. Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
-                </div>
-                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div class="contact-info-panel">
-                        <a href="https://wa.me/5547996756766" class="contact-info-card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: var(--shadow-card);">
-                            <div class="contact-icon-wrap green" style="background: #e8f5e9; color: #2e7d32; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></div>
-                            <div><strong>WhatsApp</strong><br><span>(47) 99675-6766</span></div>
-                        </a>
-                        <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="contact-info-card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: var(--shadow-card);">
-                            <div class="contact-icon-wrap gold" style="background: #fff8e1; color: #f9a825; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fas fa-envelope"></i></div>
-                            <div><strong>E-mail</strong><br><span>escritorio.gabrielcorrea@gmail.com</span></div>
-                        </a>
-                    </div>
-                    <div class="contact-form-panel" style="background: white; padding: 30px; border-radius: 15px; box-shadow: var(--shadow-elegant);">
-                        <h3 style="margin-bottom: 20px;"><i class="fas fa-paper-plane"></i> Enviar Mensagem</h3>
-                        <form id="lpContactForm">
-                            <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-soft); border-radius: 8px;">
-                            <input type="tel" placeholder="Seu WhatsApp" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-soft); border-radius: 8px;">
-                            <textarea placeholder="Como podemos ajudar?" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-soft); border-radius: 8px; height: 100px;"></textarea>
-                            <button type="button" class="btn-primary" style="width: 100%; justify-content: center;">Enviar pelo WhatsApp</button>
-                        </form>
-                    </div>
+        <!-- Contact Section Melhorada -->
+        <section class="contact-section-area" id="contato">
+            <div class="contact-content">
+                <h2>Fale com o <span>Advogado</span></h2>
+                <p>Dúvidas sobre seus direitos? Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: var(--whatsapp-green);">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 40px 5%; text-align: center; border-top: 1px solid var(--border-soft);">
+    <footer style="padding: 40px 5%; text-align: center; background: var(--primary-blue-deep); color: white;">
         <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>
     </footer>
 
     <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20Trabalhista" class="sticky-whatsapp">
         <i class="fab fa-whatsapp"></i> <span>Falar com Advogado</span>
     </a>
-
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>

@@ -124,15 +124,6 @@
             margin: 0;
         }
 
-        /* FAQ Styles */
-        .faq-section { padding: 80px 5%; background: var(--bg-paper); }
-        .faq-container { max-width: 900px; margin: 0 auto; }
-        .faq-item { background: white; border: 1px solid var(--border-soft); border-radius: var(--radius-md); margin-bottom: 15px; overflow: hidden; }
-        .faq-question { width: 100%; padding: 20px 25px; text-align: left; background: none; border: none; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--primary-blue); cursor: pointer; font-size: 1.05rem; }
-        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: all 0.3s ease; color: var(--text-body); line-height: 1.7; }
-        .faq-item.active .faq-answer { padding: 0 25px 25px; max-height: 200px; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); }
-
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
             .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
@@ -174,8 +165,8 @@
             <div class="conversion-item"><i class="fas fa-laptop"></i> Consulta Online</div>
         </div>
 
-        <section class="area-body" style="padding: 60px 5%; max-width: 850px; margin: 0 auto;">
-            <div class="prose-legal" style="text-align: justify;">
+        <section class="area-body-landing" style="padding: 60px 5%; max-width: 1000px; margin: 0 auto;">
+            <div class="prose-legal" style="max-width: 100%; text-align: justify;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Atendimento humanizado para momentos decisivos.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
                     Conflitos familiares exigem mais do que técnica jurídica; exigem empatia e estratégia para preservar relações e patrimônio. Seja em um divórcio, na definição de uma pensão ou na organização de um inventário, nossa missão é conduzir o processo com o menor desgaste possível, garantindo que seus direitos e os de sua família sejam plenamente respeitados.
@@ -225,128 +216,108 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Conteúdo Extra para Arrematar -->
+                <div class="pull-quote" style="margin: 60px 0;">
+                    <p>Nossa prioridade é transformar conflitos em soluções equilibradas, protegendo o futuro da sua família com discrição e excelência técnica.</p>
+                    <cite>Dr. Gabriel Corrêa — Especialista em Direito de Família</cite>
+                </div>
             </div>
         </section>
 
         <!-- Diferenciais Reutilizados -->
-        <section class="differentials-section" style="background-color: var(--primary-blue); padding: 80px 5%; text-align: center; color: white;">
-            <h2 class="section-title" style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.75); margin-bottom: 40px;">Confiança, técnica e proximidade real com o cliente.</p>
-            <div class="differentials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-laptop"></i> Atendimento online em todo o Brasil</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-bolt"></i> Resposta rápida e ágil</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-user-tie"></i> Atendimento direto com advogado</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-comments"></i> Comunicação sem juridiquês</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-headset"></i> Suporte online e imediato</div>
-                <div class="differential-badge" style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; justify-content: center;"><i class="fas fa-credit-card"></i> Parcela em até 10x</div>
+        <section class="differentials" style="padding: 80px 5%;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
+                <p style="color: rgba(255,255,255,0.75); margin-bottom: 50px;">Confiança, técnica e proximidade real com o cliente.</p>
+                <div class="differentials-grid">
+                    <div class="differential-item">
+                        <i class="fas fa-laptop"></i>
+                        <h3>Atendimento Online</h3>
+                        <p>Consultas por vídeo e acompanhamento digital em todo o Brasil.</p>
+                    </div>
+                    <div class="differential-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Resposta Ágil</h3>
+                        <p>Entendemos a urgência dos temas familiares e respondemos com rapidez.</p>
+                    </div>
+                    <div class="differential-item">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Direto com Advogado</h3>
+                        <p>Seu caso é tratado diretamente pelo especialista, sem intermediários.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- FAQ Seção -->
         <section class="faq-section">
-            <div class="faq-container">
-                <h2 style="text-align: center; margin-bottom: 10px; font-family: 'Montserrat', sans-serif;">Dúvidas Frequentes</h2>
-                <p style="text-align: center; margin-bottom: 40px; color: var(--text-muted);">Respostas para as principais questões de Direito de Família.</p>
+            <div class="faq-wrapper">
+                <div class="eyebrow">Dúvidas Frequentes</div>
+                <h2>Respostas para suas dúvidas</h2>
                 
-                <div class="faq-item">
-                    <button class="faq-question">Quanto tempo demora um divórcio consensual? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Se não houver filhos menores ou incapazes, pode ser feito em cartório de forma muito rápida, muitas vezes em poucos dias.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Como é calculado o valor da pensão alimentícia? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Baseia-se no binômio necessidade (de quem recebe) e possibilidade (de quem paga), analisando cada caso individualmente.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que é guarda compartilhada? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">É a regra no Brasil, onde ambos os pais compartilham as decisões sobre a vida do filho, independentemente de com quem a criança mora.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Posso fazer inventário em cartório? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Sim, desde que todos os herdeiros sejam maiores, capazes e estejam de acordo com a partilha dos bens.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que acontece se o pai não pagar a pensão? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Pode haver protesto em cartório, bloqueio de contas e até prisão civil do devedor.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Como funciona a partilha de bens no regime de comunhão parcial? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Dividem-se os bens adquiridos onerosamente durante o casamento. Bens recebidos por herança ou doação geralmente não entram na partilha.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">O que é alienação parental? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">É a interferência na formação psicológica da criança promovida por um dos pais para que ela repudie o outro genitor.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Posso pedir pensão alimentícia para mim após o divórcio? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Sim, se ficar comprovada a dependência econômica e a necessidade de auxílio para reinserção no mercado de trabalho.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Quanto custa um inventário? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Os custos envolvem imposto (ITCMD), taxas de cartório ou custas judiciais, além dos honorários advocatícios.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">É obrigatória a presença de advogado no divórcio? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Sim, por lei, tanto no divórcio judicial quanto no extrajudicial (em cartório), a presença do advogado é indispensável.</div>
+                <details class="faq-item">
+                    <summary>Quanto tempo demora um divórcio consensual?</summary>
+                    <div class="faq-body">Se não houver filhos menores ou incapazes, pode ser feito em cartório de forma muito rápida, muitas vezes em poucos dias.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Como é calculado o valor da pensão alimentícia?</summary>
+                    <div class="faq-body">Baseia-se no binômio necessidade (de quem recebe) e possibilidade (de quem paga), analisando cada caso individualmente.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>O que é guarda compartilhada?</summary>
+                    <div class="faq-body">É a regra no Brasil, onde ambos os pais compartilham as decisões sobre a vida do filho, independentemente de com quem a criança mora.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Posso fazer inventário em cartório?</summary>
+                    <div class="faq-body">Sim, desde que todos os herdeiros sejam maiores, capazes e estejam de acordo com a partilha dos bens.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>O que acontece se o pai não pagar a pensão?</summary>
+                    <div class="faq-body">Pode haver protesto em cartório, bloqueio de contas e até prisão civil do devedor.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Blog Link Melhorado -->
+        <section class="related-posts-section">
+            <div class="related-posts-wrapper">
+                <div class="eyebrow">Conhecimento</div>
+                <h2>Informação para sua família</h2>
+                <p class="related-posts-subtitle">Confira nossos artigos exclusivos sobre Direito de Família e Sucessões.</p>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="blog.html?categoria=familia" class="btn-secondary">
+                        Acessar Blog de Família <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Link -->
-        <section style="padding: 60px 5%; text-align: center; background: var(--white);">
-            <h3>Informação para sua família</h3>
-            <p style="margin-bottom: 25px;">Confira nossos artigos exclusivos sobre Direito de Família.</p>
-            <a href="blog.html?categoria=familia" class="btn-secondary">Acessar Blog de Família <i class="fas fa-arrow-right"></i></a>
-        </section>
-
-        <!-- Contact Wrapper Reutilizado -->
-        <section class="contact-section" id="contato" style="padding: 80px 5%; background: var(--bg-light);">
-            <div class="contact-wrapper" style="max-width: 1100px; margin: 0 auto;">
-                <div class="contact-header" style="text-align: center; margin-bottom: 40px;">
-                    <div class="contact-eyebrow" style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;"><i class="fas fa-comments"></i> Atendimento Imediato</div>
-                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Fale com o <span>Advogado</span></h2>
-                    <p>Não deixe seu direito para depois. Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
-                </div>
-                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div class="contact-info-panel">
-                        <a href="https://wa.me/5547996756766" class="contact-info-card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: var(--shadow-card);">
-                            <div class="contact-icon-wrap green" style="background: #e8f5e9; color: #2e7d32; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></div>
-                            <div><strong>WhatsApp</strong><br><span>(47) 99675-6766</span></div>
-                        </a>
-                        <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="contact-info-card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: var(--shadow-card);">
-                            <div class="contact-icon-wrap gold" style="background: #fff8e1; color: #f9a825; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fas fa-envelope"></i></div>
-                            <div><strong>E-mail</strong><br><span>escritorio.gabrielcorrea@gmail.com</span></div>
-                        </a>
-                    </div>
-                    <div class="contact-form-panel" style="background: white; padding: 30px; border-radius: 15px; box-shadow: var(--shadow-elegant);">
-                        <h3 style="margin-bottom: 20px;"><i class="fas fa-paper-plane"></i> Enviar Mensagem</h3>
-                        <form id="lpContactForm">
-                            <input type="text" placeholder="Seu Nome" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-soft); border-radius: 8px;">
-                            <input type="tel" placeholder="Seu WhatsApp" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-soft); border-radius: 8px;">
-                            <textarea placeholder="Como podemos ajudar?" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-soft); border-radius: 8px; height: 100px;"></textarea>
-                            <button type="button" class="btn-primary" style="width: 100%; justify-content: center;">Agendar Conversa Sigilosa</button>
-                        </form>
-                    </div>
+        <!-- Contact Section Melhorada -->
+        <section class="contact-section-area" id="contato">
+            <div class="contact-content">
+                <h2>Fale com o <span>Advogado</span></h2>
+                <p>Não deixe seu direito para depois. Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: var(--whatsapp-green);">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 40px 5%; text-align: center; border-top: 1px solid var(--border-soft);">
+    <footer style="padding: 40px 5%; text-align: center; background: var(--primary-blue-deep); color: white;">
         <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>
     </footer>
 
     <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20de%20Família" class="sticky-whatsapp">
         <i class="fab fa-whatsapp"></i> <span>Falar com Advogado</span>
     </a>
-
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
