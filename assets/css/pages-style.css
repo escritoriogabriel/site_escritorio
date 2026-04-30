@@ -354,7 +354,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 .prose-legal h2 { font-size: 2.4rem; line-height: 1.15; margin-bottom: 32px; text-align: left; }
 .prose-legal h3 { font-size: 1.5rem; margin: 32px 0 14px; }
-.prose-legal p { font-size: 1.0625rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1.3rem; }
+.prose-legal p { font-size: 1.2rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1.3rem; }
 .prose-legal strong { color: var(--primary-blue); font-weight: 600; }
 .prose-legal em { font-style: italic; color: var(--text-body); }
 

@@ -23,7 +23,7 @@
     <style>
         /* Estilos específicos para Landing Page de Conversão */
         .lp-hero {
-            padding: 80px 5% 100px;
+            padding: 80px 18% 100px;
             background: linear-gradient(135deg, var(--primary-blue-deep) 0%, var(--primary-blue) 100%);
             color: white;
             text-align: center;
@@ -140,9 +140,29 @@
 
     <header style="height: 84px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: white; border-bottom: 1px solid var(--border-soft); position: sticky; top: 0; z-index: 1000;">
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa" style="height: 36px;"></a>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
+                        <a href="familia.html">Direito de Família</a>
+                        <a href="criminal.html">Direito Criminal</a>
+                        <a href="contrato.html">Contratos</a>
+                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
         <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20Trabalhista" class="btn-nav-whatsapp">
             <i class="fab fa-whatsapp"></i> Falar com Advogado
         </a>
+        
     </header>
 
     <main>
@@ -167,9 +187,10 @@
 
         <section class="area-body-landing" style="padding: 60px 5%; max-width: 1000px; margin: 0 auto;">
             <div class="prose-legal" style="max-width: 100%; text-align: justify;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defendemos quem trabalha com técnica e agilidade.</h2>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defesa do Profissional e Revisão de Verbas.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
-                    Demissão sem justa causa mal calculada, horas extras que nunca caíram na conta, assédio que ninguém quer enxergar. O que parece banal no contracheque pode valer meses de salário no fim da ação. Sua parte é registrar o que viveu — a nossa é transformar isso em direito recebido, garantindo que você não deixe dinheiro real na mesa por falta de orientação especializada.
+                    <p>Conflitos trabalhistas geralmente começam com uma sensação de injustiça pequena — uma hora extra não paga, uma demissão mal explicada, um cálculo que não fecha — e se transformam em incerteza sobre o que realmente é seu por direito. Muitos profissionais deixam de buscar o que lhes é devido por acharem o processo complexo, demorado ou desfavorável diante da empresa.</p>
+                    <p>Nosso trabalho é justamente eliminar essa complexidade. Analisamos contracheques, contratos e verbas rescisórias com precisão técnica, identificando valores que costumam ser omitidos ou subcalculados. Atuamos com objetividade, respeitando prazos processuais e mantendo você informado em cada etapa. O foco é recuperar o que você conquistou com seu trabalho, sem que você precise se tornar especialista em direito para isso.</p>
                 </p>
 
                 <!-- Cenários Premium Card -->
@@ -217,11 +238,56 @@
                     </div>
                 </div>
 
-                <!-- Conteúdo Extra para Arrematar -->
-                <div class="pull-quote" style="margin: 60px 0;">
-                    <p>O trabalho é a base da dignidade. Garantir que seus direitos sejam respeitados é nossa prioridade absoluta, com transparência e agilidade.</p>
-                    <cite>Dr. Gabriel Corrêa — Especialista em Direito do Trabalho</cite>
+            <div class="prose-legal" style="max-width: 100%; text-align: justify;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defendemos quem trabalha com técnica e agilidade.</h2>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
+                    <p>Cada caso trabalhista carrega particularidades que uma planilha genérica não captura: o regime de horário, os adicionais específicos do setor, acordos verbais que nunca constaram em documento. Por isso, tratamos sua situação com a atenção que ela merece, analisando minuciosamente os contracheques, o contrato social da empresa e o histórico completo da relação de trabalho antes de qualquer decisão processual.</p>
+                    <p>Nosso objetivo é que você não deixe de receber o que conquistou com seu esforço. Seja na mesa de negociação ou em juízo, conduzimos sua demanda com estratégia definida e comunicação constante. Direitos trabalhistas têm prazo, e a inércia costuma beneficiar quem deve. Avaliar sua situação agora é o primeiro passo para transformar passivo em recebimento real.</p>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section Melhorada -->
+        <section class="contact-section-area" id="contato">
+            <div class="contact-content">
+                <h2>Fale com o <span>Advogado</span></h2>
+                <p>Dúvidas sobre seus direitos? Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: var(--whatsapp-green);">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
                 </div>
+            </div>
+        
+        </section>
+
+        <!-- FAQ Seção -->
+        <section class="faq-section">
+            <div class="faq-wrapper">
+                <div class="eyebrow">Dúvidas Frequentes</div>
+                <h2>Respostas para suas dúvidas</h2>
+                
+                <details class="faq-item">
+                    <summary>Quanto tempo tenho para entrar com uma ação trabalhista?</summary>
+                    <div class="faq-body">Você tem até 2 anos após a saída da empresa para entrar com a ação, podendo cobrar os últimos 5 anos de direitos.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>O que é rescisão indireta?</summary>
+                    <div class="faq-body">É quando o empregado "demite" a empresa por falta grave do patrão (como atraso de salário ou falta de FGTS), recebendo todos os direitos.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Trabalhei sem carteira assinada, tenho direitos?</summary>
+                    <div class="faq-body">Sim. Se comprovados os requisitos do vínculo, você tem direito a receber tudo o que um funcionário registrado receberia.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Como provar as horas extras?</summary>
+                    <div class="faq-body">Através de cartões de ponto, testemunhas, mensagens de WhatsApp, e-mails e registros de sistemas da empresa.</div>
+                </details>
             </div>
         </section>
 
@@ -250,31 +316,6 @@
             </div>
         </section>
 
-        <!-- FAQ Seção -->
-        <section class="faq-section">
-            <div class="faq-wrapper">
-                <div class="eyebrow">Dúvidas Frequentes</div>
-                <h2>Respostas para suas dúvidas</h2>
-                
-                <details class="faq-item">
-                    <summary>Quanto tempo tenho para entrar com uma ação trabalhista?</summary>
-                    <div class="faq-body">Você tem até 2 anos após a saída da empresa para entrar com a ação, podendo cobrar os últimos 5 anos de direitos.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>O que é rescisão indireta?</summary>
-                    <div class="faq-body">É quando o empregado "demite" a empresa por falta grave do patrão (como atraso de salário ou falta de FGTS), recebendo todos os direitos.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Trabalhei sem carteira assinada, tenho direitos?</summary>
-                    <div class="faq-body">Sim. Se comprovados os requisitos do vínculo, você tem direito a receber tudo o que um funcionário registrado receberia.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Como provar as horas extras?</summary>
-                    <div class="faq-body">Através de cartões de ponto, testemunhas, mensagens de WhatsApp, e-mails e registros de sistemas da empresa.</div>
-                </details>
-            </div>
-        </section>
-
         <!-- Blog Link Melhorado -->
         <section class="related-posts-section">
             <div class="related-posts-wrapper">
@@ -289,24 +330,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contact Section Melhorada -->
-        <section class="contact-section-area" id="contato">
-            <div class="contact-content">
-                <h2>Fale com o <span>Advogado</span></h2>
-                <p>Dúvidas sobre seus direitos? Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
-                
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
-                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: var(--whatsapp-green);">
-                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-                    </a>
-                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
-                        <i class="fas fa-envelope"></i> Enviar E-mail
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <footer style="padding: 40px 5%; text-align: center; background: var(--primary-blue-deep); color: white;">
         <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>

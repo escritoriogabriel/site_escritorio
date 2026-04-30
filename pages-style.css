@@ -354,7 +354,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 .prose-legal h2 { font-size: 2.4rem; line-height: 1.15; margin-bottom: 32px; text-align: left; }
 .prose-legal h3 { font-size: 1.5rem; margin: 32px 0 14px; }
-.prose-legal p { font-size: 1.0625rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1.3rem; }
+.prose-legal p { font-size: 1.2rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1.3rem; }
 .prose-legal strong { color: var(--primary-blue); font-weight: 600; }
 .prose-legal em { font-style: italic; color: var(--text-body); }
 
@@ -545,17 +545,17 @@ nav { display: flex; align-items: center; gap: 30px; }
    CONTACT / CTA FINAL
    ============================================================= */
 .contact-section-area {
-    padding: 100px 5%;
+    padding: 20px 10px 20px 10px;
     background: linear-gradient(135deg, var(--primary-blue-deep) 0%, var(--primary-blue) 50%, #1a3350 100%);
-    text-align: center; color: white;
-    position: relative; overflow: hidden;
+    text-align: left; color: white;
+    position: relative; overflow: hidden; border-radius: 30px;
 }
 .contact-section-area::before {
     content: ''; position: absolute; inset: 0;
     background-image: radial-gradient(circle at 50% 20%, rgba(201,169,97,0.18) 0%, transparent 50%);
     pointer-events: none;
 }
-.contact-content { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
+.contact-content { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; align-content: center; }
 .contact-section-area h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin-bottom: 18px; color: white; }
 .contact-section-area p { font-size: 1.08rem; color: rgba(255,255,255,0.85); margin-bottom: 36px; }
 
