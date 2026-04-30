@@ -64,7 +64,7 @@ def create_contact_section():
                 <div class="contact-content">
                     <h2>Pronto para resolver sua situação?</h2>
                     <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e receba uma orientação personalizada.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
                 </div>
             </section>
 '''

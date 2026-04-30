@@ -21,7 +21,7 @@ class ChatWidget {
     loadConfig() {
         const defaultConfig = {
             businessName: 'Advogado Gabriel Corrêa',
-            whatsapp: '5547996756766',
+            whatsapp: '5547988670233',
             primaryColor: '#172B41',
             accentColor: '#C9A961',
             mode: 'flow', // 'flow' ou 'ia'

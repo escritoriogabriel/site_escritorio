@@ -103,4 +103,4 @@ A alienação parental é uma das formas mais cruéis de violência que uma cria
 
 A lei está do seu lado. O que você precisa é de orientação jurídica especializada para reunir as provas certas e acionar os mecanismos legais no momento certo.
 
-**Precisa de ajuda profissional?** Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: [📞 (47) 99675-6766](https://wa.me/5547996756766)
+**Precisa de ajuda profissional?** Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: [📞 (47) 98867-0233](https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D)

@@ -728,7 +728,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
     </div>
 
     <header>
@@ -754,7 +754,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         </nav>
     </header>
 
@@ -766,7 +766,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
                     <h1>{title}</h1>
                     <p class="page-hero-subtitle">{subtitle}</p>
                     <div class="page-hero-ctas">
-                        <a href="https://wa.me/5547996756766" class="btn-primary">
+                        <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-primary">
                             <i class="fab fa-whatsapp"></i> Fale com um Especialista
                         </a>
                         <a href="#scenarios" class="btn-secondary">Conheça Nossas Soluções</a>
@@ -815,7 +815,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
                 <div class="contact-content">
                     <h2>Pronto para resolver sua situação?</h2>
                     <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e receba uma orientação personalizada.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-primary"><i class="fab fa-whatsapp"></i> Fale Conosco Agora</a>
                 </div>
             </section>
 
@@ -837,7 +837,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(47) 99675-6766</p>
+                <p>(47) 98867-0233</p>
                 <p>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
@@ -846,7 +846,7 @@ PAGE_TEMPLATE = '''<!DOCTYPE html>
         </div>
     </footer>
 
-    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 

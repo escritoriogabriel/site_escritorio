@@ -311,7 +311,7 @@ template = f"""<!DOCTYPE html>
 <body>
 
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547996756766" style="color: white; text-decoration: none;">(47) 99675-6766</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: white; text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" style="color: white; text-decoration: none;">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
     </div>
 
     <header>
@@ -337,7 +337,7 @@ template = f"""<!DOCTYPE html>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547996756766" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
         </nav>
     </header>
 
@@ -361,7 +361,7 @@ template = f"""<!DOCTYPE html>
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p>(47) 99675-6766</p>
+                <p>(47) 98867-0233</p>
                 <p>escritorio.gabrielcorrea@gmail.com</p>
             </div>
         </div>
@@ -370,7 +370,7 @@ template = f"""<!DOCTYPE html>
         </div>
     </footer>
 
-    <a href="https://wa.me/5547996756766" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -440,7 +440,7 @@ pages = [
                         <div class="cta-box">
                             <h3>Precisa de uma avaliação do seu caso?</h3>
                             <p>Fale diretamente com o Dr. Gabriel pelo WhatsApp.</p>
-                            <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Iniciar Atendimento</a>
+                            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta"><i class="fab fa-whatsapp"></i> Iniciar Atendimento</a>
                         </div>
                     </div>
                 </div>
@@ -468,7 +468,7 @@ pages = [
                 <div class="cta-box">
                     <h3>Dúvidas sobre seus direitos familiares?</h3>
                     <p>Receba uma orientação inicial agora mesmo.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
                 </div>
             </section>
         """
@@ -494,7 +494,7 @@ pages = [
                 <div class="cta-box">
                     <h3>Vai assinar um contrato importante?</h3>
                     <p>Não corra riscos. Peça uma análise profissional antes.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Analisar meu Contrato</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta"><i class="fab fa-whatsapp"></i> Analisar meu Contrato</a>
                 </div>
             </section>
         """
@@ -520,7 +520,7 @@ pages = [
                 <div class="cta-box">
                     <h3>Precisa de defesa criminal urgente?</h3>
                     <p>Atendimento imediato e sigiloso 24h via WhatsApp.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Atendimento de Urgência</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta"><i class="fab fa-whatsapp"></i> Atendimento de Urgência</a>
                 </div>
             </section>
         """
@@ -546,7 +546,7 @@ pages = [
                 <div class="cta-box">
                     <h3>Acha que seus direitos foram desrespeitados?</h3>
                     <p>Faça uma análise gratuita do seu caso agora.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Consultar meus Direitos</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta"><i class="fab fa-whatsapp"></i> Consultar meus Direitos</a>
                 </div>
             </section>
         """
@@ -572,7 +572,7 @@ pages = [
                 <div class="cta-box">
                     <h3>Recebeu notificação de busca e apreensão?</h3>
                     <p>O tempo é curto. Fale com um advogado agora para agir rápido.</p>
-                    <a href="https://wa.me/5547996756766" class="btn-cta"><i class="fab fa-whatsapp"></i> Proteger meu Veículo</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta"><i class="fab fa-whatsapp"></i> Proteger meu Veículo</a>
                 </div>
             </section>
         """
@@ -592,11 +592,11 @@ pages = [
                         <h2 style="color: var(--primary-blue); margin-bottom: 20px;">Canais de Atendimento</h2>
                         <p style="margin-bottom: 30px;">Escolha a forma mais confortável para você. Nosso atendimento inicial é rápido e focado em entender sua necessidade.</p>
                         <div style="margin-bottom: 20px;">
-                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5547996756766" style="color: var(--whatsapp-green); text-decoration: none; font-weight: 700;">(47) 99675-6766</a></p>
+                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" style="color: var(--whatsapp-green); text-decoration: none; font-weight: 700;">(47) 98867-0233</a></p>
                             <p><strong>E-mail:</strong> <a href="mailto:escritorio.gabrielcorrea@gmail.com" style="color: var(--primary-blue); text-decoration: none;">escritorio.gabrielcorrea@gmail.com</a></p>
                             <p><strong>Horário:</strong> Seg a Sex, das 08h às 18h (Atendimento online 24h)</p>
                         </div>
-                        <a href="https://wa.me/5547996756766" class="btn-cta" style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Iniciar Conversa Agora</a>
+                        <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-cta" style="width: 100%; text-align: center;"><i class="fab fa-whatsapp"></i> Iniciar Conversa Agora</a>
                     </div>
                     <div class="contact-form-placeholder" style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                         <h3 style="color: var(--primary-blue); margin-bottom: 20px;">Localização</h3>
