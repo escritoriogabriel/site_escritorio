@@ -71,6 +71,16 @@
         }
         .sticky-whatsapp:hover { transform: scale(1.05); background: var(--whatsapp-green-deep); }
 
+        /* Sidebar Card Dark Custom */
+        .sidebar-card.dark {
+            background: #0d1b2a;
+            color: white;
+            border-top: 4px solid var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .sidebar-card.dark h3 { color: var(--accent-gold); }
+        .sidebar-card.dark p { color: rgba(255,255,255,0.8); }
+
         /* FAQ Styles */
         .faq-section { padding: 80px 5%; background: var(--bg-paper); }
         .faq-container { max-width: 900px; margin: 0 auto; }
@@ -119,6 +129,40 @@
             <div class="conversion-item"><i class="fas fa-user-shield"></i> Sigilo Absoluto</div>
             <div class="conversion-item"><i class="fas fa-map-marker-alt"></i> Atuação em todo o Brasil</div>
         </div>
+
+        <section class="area-body" style="padding: 60px 5%; max-width: 1100px; margin: 0 auto;">
+            <div class="prose-legal" style="text-align: justify; margin-bottom: 50px;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue);">Defesa Técnica e Presença Real quando você mais precisa.</h2>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 30px;">
+                    Ninguém imagina precisar de um advogado criminalista. Quando precisa, geralmente é no meio da madrugada, com a família sem saber direito o que aconteceu, e com decisões importantes acontecendo nas próximas horas — audiência de custódia, requerimento de liberdade provisória, manifestação sobre o flagrante. O que se faz (ou se deixa de fazer) nas primeiras 48 horas pesa em todo o resto do processo.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
+                    Atuamos com presença real e técnica em cada fase: investigação, inquérito policial, denúncia, audiências, sentença, recursos, execução penal. Sem promessa milagrosa — porque advogado sério não promete absolvição. Com estratégia transparente, sim: o que dá para fazer, o que não dá, o que está em jogo, a cada decisão.
+                </p>
+
+                <h3 style="text-align: center; margin-bottom: 35px; font-family: 'Montserrat', sans-serif;">Cenários que Atendemos</h3>
+                
+                <!-- Variação 1: Grade de Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
+                        <h3><i class="fas fa-lock"></i> Prisão em Flagrante</h3>
+                        <p>Acompanhamento imediato em delegacias para garantir que nenhum direito seja violado nas primeiras horas.</p>
+                    </div>
+                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
+                        <h3><i class="fas fa-gavel"></i> Audiência de Custódia</h3>
+                        <p>Defesa técnica perante o juiz para buscar a liberdade provisória ou relaxamento da prisão ilegal.</p>
+                    </div>
+                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
+                        <h3><i class="fas fa-file-contract"></i> Habeas Corpus</h3>
+                        <p>Medidas urgentes nos tribunais para cessar constrangimento ilegal à liberdade de locomoção.</p>
+                    </div>
+                    <div class="sidebar-card dark" style="padding: 30px; border-radius: 12px;">
+                        <h3><i class="fas fa-user-shield"></i> Defesa em Processos</h3>
+                        <p>Atuação completa em todas as instâncias, desde a resposta à acusação até os recursos nos tribunais superiores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Diferenciais Reutilizados -->
         <section class="differentials-section" style="background-color: var(--primary-blue); padding: 80px 5%; text-align: center; color: white;">
