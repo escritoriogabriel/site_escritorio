@@ -124,11 +124,43 @@
             margin: 0;
         }
 
+        /* Elemento Surpresa: Timeline de Atendimento */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            padding: 40px;
+            background: var(--bg-paper);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-soft);
+        }
+        .step-item { text-align: center; position: relative; }
+        .step-number {
+            width: 40px; height: 40px; background: var(--accent-gold); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 15px; font-weight: 700; font-size: 1.1rem;
+            box-shadow: var(--shadow-gold);
+        }
+        .step-item h5 { font-family: var(--font-sans); font-size: 1rem; margin-bottom: 8px; color: var(--primary-blue); }
+        .step-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
-            .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
+            .lp-hero h1 { font-size: 2rem; }
+            .lp-hero p { font-size: 1.1rem; margin-bottom: 25px; }
+            .conversion-bar { margin: -30px 20px 40px; padding: 20px; gap: 15px; }
+            .conversion-item { font-size: 0.85rem; }
             .scenarios-card { padding: 25px; margin: 30px 15px; }
-            .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9rem; }
+            .scenario-item { gap: 15px; margin-bottom: 15px; padding-bottom: 15px; }
+            .scenario-icon { width: 40px; height: 40px; font-size: 1rem; }
+            .scenario-content h4 { font-size: 1rem; }
+            .scenario-content p { font-size: 0.85rem; }
+            .area-body-landing { padding: 40px 20px; }
+            .prose-legal h2 { font-size: 1.8rem; }
+            .prose-legal p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; }
+            .sticky-whatsapp { bottom: 20px; right: 20px; padding: 10px 18px; font-size: 0.85rem; }
+            .process-steps { padding: 25px; gap: 20px; }
         }
     </style>
 </head>
@@ -162,7 +194,6 @@
         <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20Trabalhista" class="btn-nav-whatsapp">
             <i class="fab fa-whatsapp"></i> Falar com Advogado
         </a>
-        
     </header>
 
     <main>
@@ -189,8 +220,10 @@
             <div class="prose-legal" style="max-width: 100%; text-align: justify;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defesa do Profissional e Revisão de Verbas.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
-                    <p>Conflitos trabalhistas geralmente começam com uma sensação de injustiça pequena — uma hora extra não paga, uma demissão mal explicada, um cálculo que não fecha — e se transformam em incerteza sobre o que realmente é seu por direito. Muitos profissionais deixam de buscar o que lhes é devido por acharem o processo complexo, demorado ou desfavorável diante da empresa.</p>
-                    <p>Nosso trabalho é justamente eliminar essa complexidade. Analisamos contracheques, contratos e verbas rescisórias com precisão técnica, identificando valores que costumam ser omitidos ou subcalculados. Atuamos com objetividade, respeitando prazos processuais e mantendo você informado em cada etapa. O foco é recuperar o que você conquistou com seu trabalho, sem que você precise se tornar especialista em direito para isso.</p>
+                    Conflitos trabalhistas geralmente começam com uma sensação de injustiça pequena — uma hora extra não paga, uma demissão mal explicada, um cálculo que não fecha — e se transformam em incerteza sobre o que realmente é seu por direito. Muitos profissionais deixam de buscar o que lhes é devido por acharem o processo complexo, demorado ou desfavorável diante da empresa.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
+                    Nosso trabalho é justamente eliminar essa complexidade. Analisamos contracheques, contratos e verbas rescisórias com precisão técnica, identificando valores que costumam ser omitidos ou subcalculados. Atuamos com objetividade, respeitando prazos processuais e mantendo você informado em cada etapa. O foco é recuperar o que você conquistou com seu trabalho, sem que você precise se tornar especialista em direito para isso.
                 </p>
 
                 <!-- Cenários Premium Card -->
@@ -228,27 +261,35 @@
                             <p>Últimos 5 anos, com adicionais e reflexos.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="scenario-item">
-                        <div class="scenario-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                        <div class="scenario-content">
-                            <h4>Assédio & discriminação</h4>
-                            <p>Ação por danos morais com prova organizada.</p>
-                        </div>
+                <!-- Elemento Surpresa: Timeline -->
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h5>Análise</h5>
+                        <p>Revisão técnica de documentos e cálculos.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h5>Estratégia</h5>
+                        <p>Definição da melhor abordagem jurídica.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h5>Resultado</h5>
+                        <p>Busca ativa pela recuperação dos seus direitos.</p>
                     </div>
                 </div>
 
-            <div class="prose-legal" style="max-width: 100%; text-align: justify;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defendemos quem trabalha com técnica e agilidade.</h2>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
-                    <p>Cada caso trabalhista carrega particularidades que uma planilha genérica não captura: o regime de horário, os adicionais específicos do setor, acordos verbais que nunca constaram em documento. Por isso, tratamos sua situação com a atenção que ela merece, analisando minuciosamente os contracheques, o contrato social da empresa e o histórico completo da relação de trabalho antes de qualquer decisão processual.</p>
-                    <p>Nosso objetivo é que você não deixe de receber o que conquistou com seu esforço. Seja na mesa de negociação ou em juízo, conduzimos sua demanda com estratégia definida e comunicação constante. Direitos trabalhistas têm prazo, e a inércia costuma beneficiar quem deve. Avaliar sua situação agora é o primeiro passo para transformar passivo em recebimento real.</p>
-                </p>
+                <div class="pull-quote" style="margin: 60px 0;">
+                    <p>O trabalho é a base da dignidade. Garantir que seus direitos sejam respeitados é nossa prioridade absoluta, com transparência e agilidade.</p>
+                    <cite>Dr. Gabriel Corrêa — Especialista em Direito do Trabalho</cite>
+                </div>
             </div>
         </section>
-    </main>
 
-    <!-- Contact Section Melhorada -->
+        <!-- Contact Section -->
         <section class="contact-section-area" id="contato">
             <div class="contact-content">
                 <h2>Fale com o <span>Advogado</span></h2>
@@ -263,7 +304,6 @@
                     </a>
                 </div>
             </div>
-        
         </section>
 
         <!-- FAQ Seção -->
@@ -284,14 +324,10 @@
                     <summary>Trabalhei sem carteira assinada, tenho direitos?</summary>
                     <div class="faq-body">Sim. Se comprovados os requisitos do vínculo, você tem direito a receber tudo o que um funcionário registrado receberia.</div>
                 </details>
-                <details class="faq-item">
-                    <summary>Como provar as horas extras?</summary>
-                    <div class="faq-body">Através de cartões de ponto, testemunhas, mensagens de WhatsApp, e-mails e registros de sistemas da empresa.</div>
-                </details>
             </div>
         </section>
 
-        <!-- Diferenciais Reutilizados -->
+        <!-- Diferenciais -->
         <section class="differentials" style="padding: 80px 5%;">
             <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
                 <h2 style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
@@ -316,7 +352,7 @@
             </div>
         </section>
 
-        <!-- Blog Link Melhorado -->
+        <!-- Blog Link -->
         <section class="related-posts-section">
             <div class="related-posts-wrapper">
                 <div class="eyebrow">Conhecimento</div>
@@ -330,6 +366,7 @@
                 </div>
             </div>
         </section>
+    </main>
 
     <footer style="padding: 40px 5%; text-align: center; background: var(--primary-blue-deep); color: white;">
         <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>

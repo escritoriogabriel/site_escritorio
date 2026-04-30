@@ -11,7 +11,7 @@
      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advogado Criminalista 24h em SC | Defesa Estratégica e Urgente</title>
+    <title>Defesa Criminal | Plantão 24h | Gabriel Corrêa Advocacia</title>
     <meta name="description" content="Defesa criminal especializada e acompanhamento 24h. Delegacia, audiência de custódia, habeas corpus e processos criminais. Atendimento imediato.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +23,7 @@
     <style>
         /* Estilos específicos para Landing Page de Conversão */
         .lp-hero {
-            padding: 80px 5% 100px;
+            padding: 80px 18% 100px;
             background: linear-gradient(135deg, #0d1b2a 0%, #172b41 100%);
             color: white;
             text-align: center;
@@ -125,11 +125,43 @@
             margin: 0;
         }
 
+        /* Elemento Surpresa: Badge de Urgência Dinâmico */
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(192, 57, 43, 0.1);
+            color: #c0392b;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid rgba(192, 57, 43, 0.2);
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.02); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
-            .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
+            .lp-hero h1 { font-size: 2rem; }
+            .lp-hero p { font-size: 1.1rem; margin-bottom: 25px; }
+            .conversion-bar { margin: -30px 20px 40px; padding: 20px; gap: 15px; }
+            .conversion-item { font-size: 0.85rem; }
             .scenarios-card { padding: 25px; margin: 30px 15px; }
-            .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9rem; }
+            .scenario-item { gap: 15px; margin-bottom: 15px; padding-bottom: 15px; }
+            .scenario-icon { width: 40px; height: 40px; font-size: 1rem; }
+            .scenario-content h4 { font-size: 1rem; }
+            .scenario-content p { font-size: 0.85rem; }
+            .area-body-landing { padding: 40px 20px; }
+            .prose-legal h2 { font-size: 1.8rem; }
+            .prose-legal p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; }
+            .sticky-whatsapp { bottom: 20px; right: 20px; padding: 10px 18px; font-size: 0.85rem; }
+            .urgency-badge { padding: 10px 18px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -141,6 +173,25 @@
 
     <header style="height: 84px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: white; border-bottom: 1px solid var(--border-soft); position: sticky; top: 0; z-index: 1000;">
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa" style="height: 36px;"></a>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
+                        <a href="familia.html">Direito de Família</a>
+                        <a href="criminal.html">Direito Criminal</a>
+                        <a href="contrato.html">Contratos</a>
+                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
         <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20URGENTE%20com%20um%20caso%20Criminal" class="btn-nav-whatsapp">
             <i class="fab fa-whatsapp"></i> Falar com Advogado 24h
         </a>
@@ -152,10 +203,10 @@
                 <span class="page-hero-badge" style="background: rgba(255,255,255,0.1); color: white; border-color: rgba(255,255,255,0.2);">
                     <i class="fas fa-shield-alt"></i> Defesa Criminal Estratégica
                 </span>
-                <h1>Liberdade e Direitos <span>não podem esperar.</span></h1>
-                <p>Atendimento especializado 24 horas para prisões em flagrante, audiências de custódia e defesa em processos criminais. Proteção jurídica imediata.</p>
+                <h1>Defesa Criminal Estratégica: <span>Plantão 24h para Urgências</span></h1>
+                <p>Atendimento imediato para prisões em flagrante, audiências de custódia, habeas corpus e defesa em processos criminais em todas as instâncias. Atuação técnica desde as primeiras horas, quando as decisões são mais decisivas.</p>
                 <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20URGENTE%20com%20um%20caso%20Criminal" class="btn-primary" style="background: #c0392b; font-size: 1.2rem; padding: 20px 45px; box-shadow: 0 10px 25px rgba(192,57,43,0.3);">
-                    <i class="fas fa-phone-alt"></i> Atendimento de Urgência 24h
+                    <i class="fas fa-phone-alt"></i> Acionar Plantão de Urgência 24h
                 </a>
             </div>
         </section>
@@ -168,12 +219,18 @@
 
         <section class="area-body-landing" style="padding: 60px 5%; max-width: 1000px; margin: 0 auto;">
             <div class="prose-legal" style="max-width: 100%; text-align: justify;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defesa Técnica e Presença Real quando você mais precisa.</h2>
+                <div style="text-align: center;">
+                    <div class="urgency-badge">
+                        <i class="fas fa-exclamation-circle"></i> Atendimento Prioritário em Andamento
+                    </div>
+                </div>
+                
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Defesa Técnica e Presença Real.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 30px;">
-                    Ninguém imagina precisar de um advogado criminalista. Quando precisa, geralmente é no meio da madrugada, com a família sem saber direito o que aconteceu, e com decisões importantes acontecendo nas próximas horas — audiência de custódia, requerimento de liberdade provisória, manifestação sobre o flagrante. O que se faz (ou se deixa de fazer) nas primeiras 48 horas pesa em todo o resto do processo.
+                    Ninguém se prepara para uma prisão ou uma notificação criminal. Nas primeiras 48 horas, cada decisão pesa no resultado final do caso — desde o que é dito na delegacia até os argumentos na audiência de custódia. A falta de orientação técnica nesse intervalo costuma comprometer defesas que, em outras condições, teriam chances reais.
                 </p>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
-                    Atuamos com presença real e técnica em cada fase: investigação, inquérito policial, denúncia, audiências, sentença, recursos, execução penal. Sem promessa milagrosa — porque advogado sério não promete absolvição. Com estratégia transparente, sim: o que dá para fazer, o que não dá, o que está em jogo, a cada decisão.
+                    Atuamos com presença real e análise estratégica desde o início, sem promessas de resultado, mas com compromisso de empenho técnico absoluto. Acompanhamos inquéritos, defesas em processos, recursos e execução penal, mantendo sigilo total e comunicação direta em cada fase.
                 </p>
 
                 <!-- Cenários Premium Card Dark -->
@@ -211,17 +268,8 @@
                             <p>Atuação completa em todas as instâncias e tribunais.</p>
                         </div>
                     </div>
-
-                    <div class="scenario-item">
-                        <div class="scenario-icon"><i class="fas fa-balance-scale"></i></div>
-                        <div class="scenario-content">
-                            <h4>Tribunal do Júri</h4>
-                            <p>Defesa especializada em crimes dolosos contra a vida.</p>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Conteúdo Extra para Arrematar -->
                 <div class="pull-quote" style="margin: 60px 0;">
                     <p>A liberdade é o bem mais precioso do ser humano. Nossa missão é garantir que o devido processo legal seja respeitado com o máximo rigor técnico.</p>
                     <cite>Dr. Gabriel Corrêa — Advogado Criminalista</cite>
@@ -229,7 +277,45 @@
             </div>
         </section>
 
-        <!-- Diferenciais Reutilizados -->
+        <!-- Contact Section -->
+        <section class="contact-section-area" id="contato">
+            <div class="contact-content">
+                <h2>Fale com o <span>Advogado</span></h2>
+                <p>Urgência Criminal? Respondemos imediatamente — direto com o Dr. Gabriel Corrêa.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: #c0392b;">
+                        <i class="fas fa-phone-alt"></i> Chamar Plantão 24h
+                    </a>
+                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Seção -->
+        <section class="faq-section">
+            <div class="faq-wrapper">
+                <div class="eyebrow">Dúvidas Frequentes</div>
+                <h2>Respostas para suas dúvidas</h2>
+                
+                <details class="faq-item">
+                    <summary>O que fazer em caso de prisão em flagrante?</summary>
+                    <div class="faq-body">O primeiro passo é manter o silêncio e exigir a presença de um advogado. Não assine nada sem orientação técnica.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Como funciona a audiência de custódia?</summary>
+                    <div class="faq-body">Ocorre em até 24h após a prisão, onde o juiz avalia a legalidade da prisão e a necessidade de manter a pessoa presa ou conceder liberdade.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>O que é um Habeas Corpus?</summary>
+                    <div class="faq-body">É uma medida judicial urgente para proteger o direito de ir e vir de alguém que sofre ou está ameaçado de sofrer uma prisão ilegal.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Diferenciais -->
         <section class="differentials" style="padding: 80px 5%;">
             <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
                 <h2 style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
@@ -254,32 +340,7 @@
             </div>
         </section>
 
-        <!-- FAQ Seção -->
-        <section class="faq-section">
-            <div class="faq-wrapper">
-                <div class="eyebrow">Dúvidas Frequentes</div>
-                <h2>Respostas para suas dúvidas</h2>
-                
-                <details class="faq-item">
-                    <summary>O que fazer em caso de prisão em flagrante?</summary>
-                    <div class="faq-body">O primeiro passo é manter o silêncio e exigir a presença de um advogado. Não assine nada sem orientação técnica.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Como funciona a audiência de custódia?</summary>
-                    <div class="faq-body">Ocorre em até 24h após a prisão, onde o juiz avalia a legalidade da prisão e a necessidade de manter a pessoa presa ou conceder liberdade.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>O que é um Habeas Corpus?</summary>
-                    <div class="faq-body">É uma medida judicial urgente para proteger o direito de ir e vir de alguém que sofre ou está ameaçado de sofrer uma prisão ilegal.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>O advogado pode prometer a soltura?</summary>
-                    <div class="faq-body">Não. O advogado deve prometer empenho técnico e estratégia, mas a decisão final cabe sempre ao Poder Judiciário.</div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Blog Link Melhorado -->
+        <!-- Blog Link -->
         <section class="related-posts-section">
             <div class="related-posts-wrapper">
                 <div class="eyebrow">Conhecimento</div>
@@ -289,23 +350,6 @@
                 <div style="text-align: center; margin-top: 30px;">
                     <a href="blog.html?categoria=criminal" class="btn-secondary">
                         Acessar Blog Criminal <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section Melhorada -->
-        <section class="contact-section-area" id="contato">
-            <div class="contact-content">
-                <h2>Fale com o <span>Advogado</span></h2>
-                <p>Urgência Criminal? Respondemos imediatamente — direto com o Dr. Gabriel Corrêa.</p>
-                
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
-                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: #c0392b;">
-                        <i class="fas fa-phone-alt"></i> Chamar Plantão 24h
-                    </a>
-                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
-                        <i class="fas fa-envelope"></i> Enviar E-mail
                     </a>
                 </div>
             </div>

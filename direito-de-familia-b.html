@@ -11,7 +11,7 @@
      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advogado de Família em SC | Divórcio, Pensão e Inventário</title>
+    <title>Direito de Família | Divórcio, Guarda e Inventário | Gabriel Corrêa</title>
     <meta name="description" content="Atendimento humanizado e estratégico em Direito de Família. Divórcio, guarda, pensão alimentícia e inventários. Fale agora com um especialista.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +23,7 @@
     <style>
         /* Estilos específicos para Landing Page de Conversão */
         .lp-hero {
-            padding: 80px 5% 100px;
+            padding: 80px 18% 100px;
             background: linear-gradient(135deg, #fdfcf8 0%, #f3ead2 100%);
             color: var(--primary-blue);
             text-align: center;
@@ -124,11 +124,43 @@
             margin: 0;
         }
 
+        /* Elemento Surpresa: Timeline de Atendimento */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            padding: 40px;
+            background: var(--bg-paper);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-soft);
+        }
+        .step-item { text-align: center; position: relative; }
+        .step-number {
+            width: 40px; height: 40px; background: var(--accent-gold); color: white;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 15px; font-weight: 700; font-size: 1.1rem;
+            box-shadow: var(--shadow-gold);
+        }
+        .step-item h5 { font-family: var(--font-sans); font-size: 1rem; margin-bottom: 8px; color: var(--primary-blue); }
+        .step-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
         @media (max-width: 768px) {
             .lp-hero { padding: 60px 5% 80px; }
-            .conversion-bar { margin: -30px 20px 40px; padding: 20px; }
+            .lp-hero h1 { font-size: 2rem; }
+            .lp-hero p { font-size: 1.1rem; margin-bottom: 25px; }
+            .conversion-bar { margin: -30px 20px 40px; padding: 20px; gap: 15px; }
+            .conversion-item { font-size: 0.85rem; }
             .scenarios-card { padding: 25px; margin: 30px 15px; }
-            .sticky-whatsapp { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.9rem; }
+            .scenario-item { gap: 15px; margin-bottom: 15px; padding-bottom: 15px; }
+            .scenario-icon { width: 40px; height: 40px; font-size: 1rem; }
+            .scenario-content h4 { font-size: 1rem; }
+            .scenario-content p { font-size: 0.85rem; }
+            .area-body-landing { padding: 40px 20px; }
+            .prose-legal h2 { font-size: 1.8rem; }
+            .prose-legal p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; }
+            .sticky-whatsapp { bottom: 20px; right: 20px; padding: 10px 18px; font-size: 0.85rem; }
+            .process-steps { padding: 25px; gap: 20px; }
         }
     </style>
 </head>
@@ -140,6 +172,25 @@
 
     <header style="height: 84px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: white; border-bottom: 1px solid var(--border-soft); position: sticky; top: 0; z-index: 1000;">
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa" style="height: 36px;"></a>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
+                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
+                        <a href="familia.html">Direito de Família</a>
+                        <a href="criminal.html">Direito Criminal</a>
+                        <a href="contrato.html">Contratos</a>
+                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
+                    </div>
+                </li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
         <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20de%20Família" class="btn-nav-whatsapp">
             <i class="fab fa-whatsapp"></i> Falar com Especialista
         </a>
@@ -151,10 +202,10 @@
                 <span class="page-hero-badge">
                     <i class="fas fa-heart"></i> Direito de Família e Sucessões
                 </span>
-                <h1>Resolva seu conflito familiar <span>com paz e segurança.</span></h1>
-                <p>Divórcio, Pensão Alimentícia, Guarda e Inventários. Atendimento humanizado focado em proteger o que você mais valoriza.</p>
+                <h1>Direito de Família: <span>Divórcio, Guarda, Pensão e Inventário</span></h1>
+                <p>Atendimento humanizado e estratégico focado em proteger seu patrimônio e preservar seus vínculos afetivos.</p>
                 <a href="https://wa.me/5547996756766?text=Olá,%20vi%20seu%20site%20e%20preciso%20de%20ajuda%20com%20um%20caso%20de%20Família" class="btn-primary" style="font-size: 1.2rem; padding: 20px 45px;">
-                    <i class="fab fa-whatsapp"></i> Iniciar Conversa Sigilosa
+                    <i class="fab fa-whatsapp"></i> Agendar Consulta Inicial
                 </a>
             </div>
         </section>
@@ -167,9 +218,12 @@
 
         <section class="area-body-landing" style="padding: 60px 5%; max-width: 1000px; margin: 0 auto;">
             <div class="prose-legal" style="max-width: 100%; text-align: justify;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Atendimento humanizado para momentos decisivos.</h2>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: var(--primary-blue); text-align: center;">Estratégia e Equilíbrio para sua Família.</h2>
                 <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
-                    Conflitos familiares exigem mais do que técnica jurídica; exigem empatia e estratégia para preservar relações e patrimônio. Seja em um divórcio, na definição de uma pensão ou na organização de um inventário, nossa missão é conduzir o processo com o menor desgaste possível, garantindo que seus direitos e os de sua família sejam plenamente respeitados.
+                    Questões familiares envolvem decisões que afetam patrimônio e vínculos por longos períodos. Um acordo mal estruturado ou um processo conduzido sem estratégia pode gerar perdas financeiras e conflitos prolongados. Nossa postura é avaliar candidamente cada situação — seja para construir uma solução extrajudicial sólida ou para defender seus interesses em juízo.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-body); margin-bottom: 40px;">
+                    Tratamos cada caso com a seriedade que a matéria exige: análise documental precisa, cálculos de partilha e pensão revisados e estratégia definida antes de qualquer movimento processual.
                 </p>
 
                 <!-- Cenários Premium Card -->
@@ -207,17 +261,27 @@
                             <p>Reconhecimento e dissolução de união estável com proteção patrimonial.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="scenario-item">
-                        <div class="scenario-icon"><i class="fas fa-user-shield"></i></div>
-                        <div class="scenario-content">
-                            <h4>Alienação Parental</h4>
-                            <p>Medidas judiciais para proteger o vínculo afetivo entre pais e filhos.</p>
-                        </div>
+                <!-- Elemento Surpresa: Timeline -->
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h5>Consulta</h5>
+                        <p>Análise detalhada do caso e documentos.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h5>Estratégia</h5>
+                        <p>Definição da melhor via (judicial ou extrajudicial).</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h5>Execução</h5>
+                        <p>Acompanhamento rigoroso até a solução final.</p>
                     </div>
                 </div>
 
-                <!-- Conteúdo Extra para Arrematar -->
                 <div class="pull-quote" style="margin: 60px 0;">
                     <p>Nossa prioridade é transformar conflitos em soluções equilibradas, protegendo o futuro da sua família com discrição e excelência técnica.</p>
                     <cite>Dr. Gabriel Corrêa — Especialista em Direito de Família</cite>
@@ -225,7 +289,45 @@
             </div>
         </section>
 
-        <!-- Diferenciais Reutilizados -->
+        <!-- Contact Section -->
+        <section class="contact-section-area" id="contato">
+            <div class="contact-content">
+                <h2>Fale com o <span>Advogado</span></h2>
+                <p>Não deixe seu direito para depois. Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
+                
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: var(--whatsapp-green);">
+                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Seção -->
+        <section class="faq-section">
+            <div class="faq-wrapper">
+                <div class="eyebrow">Dúvidas Frequentes</div>
+                <h2>Respostas para suas dúvidas</h2>
+                
+                <details class="faq-item">
+                    <summary>Quanto tempo demora um divórcio consensual?</summary>
+                    <div class="faq-body">Se não houver filhos menores ou incapazes, pode ser feito em cartório de forma muito rápida, muitas vezes em poucos dias.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Como é calculado o valor da pensão alimentícia?</summary>
+                    <div class="faq-body">Baseia-se no binômio necessidade (de quem recebe) e possibilidade (de quem paga), analisando cada caso individualmente.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>O que é guarda compartilhada?</summary>
+                    <div class="faq-body">É a regra no Brasil, onde ambos os pais compartilham as decisões sobre a vida do filho, independentemente de com quem a criança mora.</div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Diferenciais -->
         <section class="differentials" style="padding: 80px 5%;">
             <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
                 <h2 style="color: white; margin-bottom: 15px;">Por Que Escolher Nosso Escritório</h2>
@@ -250,36 +352,7 @@
             </div>
         </section>
 
-        <!-- FAQ Seção -->
-        <section class="faq-section">
-            <div class="faq-wrapper">
-                <div class="eyebrow">Dúvidas Frequentes</div>
-                <h2>Respostas para suas dúvidas</h2>
-                
-                <details class="faq-item">
-                    <summary>Quanto tempo demora um divórcio consensual?</summary>
-                    <div class="faq-body">Se não houver filhos menores ou incapazes, pode ser feito em cartório de forma muito rápida, muitas vezes em poucos dias.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Como é calculado o valor da pensão alimentícia?</summary>
-                    <div class="faq-body">Baseia-se no binômio necessidade (de quem recebe) e possibilidade (de quem paga), analisando cada caso individualmente.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>O que é guarda compartilhada?</summary>
-                    <div class="faq-body">É a regra no Brasil, onde ambos os pais compartilham as decisões sobre a vida do filho, independentemente de com quem a criança mora.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Posso fazer inventário em cartório?</summary>
-                    <div class="faq-body">Sim, desde que todos os herdeiros sejam maiores, capazes e estejam de acordo com a partilha dos bens.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>O que acontece se o pai não pagar a pensão?</summary>
-                    <div class="faq-body">Pode haver protesto em cartório, bloqueio de contas e até prisão civil do devedor.</div>
-                </details>
-            </div>
-        </section>
-
-        <!-- Blog Link Melhorado -->
+        <!-- Blog Link -->
         <section class="related-posts-section">
             <div class="related-posts-wrapper">
                 <div class="eyebrow">Conhecimento</div>
@@ -289,23 +362,6 @@
                 <div style="text-align: center; margin-top: 30px;">
                     <a href="blog.html?categoria=familia" class="btn-secondary">
                         Acessar Blog de Família <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section Melhorada -->
-        <section class="contact-section-area" id="contato">
-            <div class="contact-content">
-                <h2>Fale com o <span>Advogado</span></h2>
-                <p>Não deixe seu direito para depois. Respondemos com agilidade — direto com o Dr. Gabriel Corrêa.</p>
-                
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
-                    <a href="https://wa.me/5547996756766" class="btn-primary" style="background: var(--whatsapp-green);">
-                        <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-                    </a>
-                    <a href="mailto:escritorio.gabrielcorrea@gmail.com" class="btn-secondary" style="border-color: white; color: white;">
-                        <i class="fas fa-envelope"></i> Enviar E-mail
                     </a>
                 </div>
             </div>
