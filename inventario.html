@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário e Sucessões | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Inventário rápido e sem conflitos. Planejamento sucessório para proteger sua família. Extrajudicial ou judicial.">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/inventario.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pages-style.css">
+    <style>
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 30px 0;
+        }
+
+        .benefit-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s var(--ease);
+        }
+
+        .benefit-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-elevated);
+            transform: translateY(-4px);
+        }
+
+        .benefit-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefit-card i {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .timeline-vertical {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-vertical::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--accent-gold);
+        }
+
+        .timeline-vertical-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-vertical-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--accent-gold);
+            border: 3px solid white;
+            border-radius: 50%;
+            top: 0;
+            box-shadow: 0 0 0 3px var(--accent-gold);
+        }
+
+        .timeline-vertical-item-content {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .timeline-vertical-item-content h4 {
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .timeline-vertical-item-content p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(31, 58, 85, 0.05) 0%, rgba(201, 169, 97, 0.08) 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .info-box strong {
+            color: var(--primary-blue);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-gold-soft) 0%, rgba(201, 169, 97, 0.1) 100%);
+            border: 2px solid var(--accent-gold);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h3 {
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .cta-section a {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-soft) 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s var(--ease);
+            box-shadow: 0 6px 20px rgba(23, 43, 65, 0.25);
+        }
+
+        .cta-section a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(23, 43, 65, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-vertical::before {
+                left: 8px;
+            }
+
+            .timeline-vertical-item::before {
+                left: 8px;
+            }
+
+            .timeline-vertical-item-content {
+                margin-left: 40px;
+            }
+        }
+    </style>
+</head>
+<body class="lp-ads">
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20de%20Direito%20de%20Direito%20de%20Fam%C3%ADlia%20e%20gostaria%20de%20resolver%20um%20problema.%20%E2%9A%96%EF%B8%8F">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
+    </div>
+
+    <header>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li class="nav-always-show"><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="familia.html">Direito de Família</a>
+                    </div>
+                </li>
+                <li class="nav-always-show"><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="nav-always-show"><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20uma%20quest%C3%A3o%20de%20direito%20de%20fam%C3%ADlia." class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Falar com Advogado</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <span class="page-hero-badge"><i class="fas fa-file-contract"></i> Inventário e Sucessões</span>
+                <h1>Inventário Rápido, Sem Conflitos e com <span>Segurança Jurídica</span>.</h1>
+                <p class="page-hero-subtitle">Planejamento sucessório e inventário extrajudicial ou judicial. Protegemos o patrimônio e evitamos brigas familiares.</p>
+
+                <div class="page-hero-ctas">
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-primary"><i class="fab fa-whatsapp"></i> Quero Conversar em Particular com o Advogado</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPO -->
+        <section id="desenvolvimento" class="area-body">
+            <article class="prose-legal" style="text-align: justify;">
+                <p class="eyebrow">Sucessões</p>
+                <h2>O luto já é pesado. Não deixe que o processo jurídico o agrave.</h2>
+
+                <p>A morte de um ente querido é uma transição difícil. Quando há bens a partilhar, essa dor pode se transformar em conflito familiar. Nosso papel é organizar o inventário de forma clara, justa e rápida — para que você possa focar no que realmente importa: o luto e a família.</p>
+
+                <h3>O Que é Inventário?</h3>
+                <p>Inventário é o processo de listar todos os bens do falecido, calcular o imposto de transmissão (ITCMD) e partilhar o patrimônio entre os herdeiros. Pode ser feito em cartório (extrajudicial) ou na justiça (judicial).</p>
+
+                <p><strong>Extrajudicial:</strong> Quando há consenso entre todos os herdeiros. Rápido, barato, sem juiz.</p>
+                <p><strong>Judicial:</strong> Quando há desacordo ou herdeiro menor de idade. Mais longo, mas garante proteção total.</p>
+
+                <h3>Por Que Fazer Planejamento Sucessório?</h3>
+                <p>Planejamento sucessório é a melhor forma de proteger sua família. Um testamento bem feito evita conflitos, reduz impostos e garante que seus desejos sejam respeitados.</p>
+
+                <div class="benefit-grid">
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-shield-alt"></i> Proteção Patrimonial</h4>
+                        <p>Seus bens são distribuídos exatamente como você deseja, sem surpresas ou disputas.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-handshake"></i> Evita Conflitos</h4>
+                        <p>Um testamento claro reduz drasticamente a chance de brigas entre herdeiros.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-money-bill-wave"></i> Reduz Impostos</h4>
+                        <p>Planejamento bem feito minimiza o ITCMD e outras despesas sucessórias.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-clock"></i> Acelera o Processo</h4>
+                        <p>Inventário com testamento é mais rápido e simples de ser processado.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-heart"></i> Paz de Espírito</h4>
+                        <p>Você sabe que sua família está protegida e que seus desejos serão respeitados.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-file-signature"></i> Doações Estratégicas</h4>
+                        <p>Doações em vida podem ser mais vantajosas fiscalmente que deixar tudo por testamento.</p>
+                    </div>
+                </div>
+
+                <h3>O Processo de Inventário: Passo a Passo</h3>
+                <div class="timeline-vertical">
+                    <div class="timeline-vertical-item">
+                        <div class="timeline-vertical-item-content">
+                            <h4>1. Reunião Inicial</h4>
+                            <p>Você nos apresenta os herdeiros, o patrimônio do falecido e documentos. Avaliamos se é extrajudicial ou judicial.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-vertical-item">
+                        <div class="timeline-vertical-item-content">
+                            <h4>2. Levantamento de Bens</h4>
+                            <p>Listamos todos os bens: imóveis, veículos, contas bancárias, investimentos. Calculamos o valor total do patrimônio.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-vertical-item">
+                        <div class="timeline-vertical-item-content">
+                            <h4>3. Cálculo de Impostos</h4>
+                            <p>Calculamos o ITCMD (imposto de transmissão) e outras despesas. Orientamos sobre formas de minimizar a carga tributária.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-vertical-item">
+                        <div class="timeline-vertical-item-content">
+                            <h4>4. Negociação entre Herdeiros</h4>
+                            <p>Se há desacordo, mediamos a negociação. Se há consenso, preparamos o termo de partilha.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-vertical-item">
+                        <div class="timeline-vertical-item-content">
+                            <h4>5. Protocolo em Cartório ou Justiça</h4>
+                            <p>Protocolamos o inventário. Se extrajudicial, é resolvido em semanas. Se judicial, acompanhamos todo o processo.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-vertical-item">
+                        <div class="timeline-vertical-item-content">
+                            <h4>6. Partilha e Transferência</h4>
+                            <p>Os bens são transferidos para os herdeiros. Você recebe sua parte e pode seguir em frente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Testamento: Deixe Tudo Claro</h3>
+                <p>Um testamento bem feito é um presente para sua família. Deixa claro quem herda o quê, evita conflitos e reduz custos com impostos.</p>
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong> Você pode fazer testamento a qualquer momento, enquanto estiver vivo e com capacidade mental. Não precisa estar doente ou idoso. Quanto mais cedo, melhor.
+                </div>
+
+                <h3>Tipos de Testamento</h3>
+                <p><strong>Testamento Público:</strong> Feito em cartório, com testemunhas. Mais seguro e reconhecido.</p>
+                <p><strong>Testamento Cerrado:</strong> Você escreve, lacra e entrega ao cartório. Ninguém sabe o conteúdo até sua morte.</p>
+                <p><strong>Testamento Hológrafo:</strong> Escrito de próprio punho. Válido, mas mais fácil de contestar.</p>
+
+            </article>
+
+            <aside class="area-sidebar">
+                <div class="sidebar-card">
+                    <span class="label">Informações Importantes</span>
+                    <ul>
+                        <li>
+                            <span class="ico"><i class="fas fa-hourglass-half"></i></span>
+                            <span class="txt"><strong>Prazo Extrajudicial</strong><span>2 a 4 semanas com consenso.</span></span>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-hourglass-end"></i></span>
+                            <span class="txt"><strong>Prazo Judicial</strong><span>6 meses a 2 anos, dependendo da complexidade.</span></span>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-file-signature"></i></span>
+                            <span class="txt"><strong>Testamento</strong><span>Pode ser feito a qualquer momento, por qualquer pessoa com capacidade mental.</span></span>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-money-bill"></i></span>
+                            <span class="txt"><strong>ITCMD</strong><span>Imposto de transmissão. Varia por estado. Planejamento reduz custos.</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-cta">
+                    <h4>Proteja sua família agora</h4>
+                    <p>Planejamento sucessório sem compromisso.</p>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-nav-whatsapp" style="background-color: #25D366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;"><i class="fab fa-whatsapp"></i> Fale com um Advogado agora</a>
+                </div>
+            </aside>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-section">
+            <h3>Sua família merece proteção jurídica</h3>
+            <p>Não deixe conflitos familiares acontecerem depois. Planeje agora e deixe tudo claro para seus herdeiros.</p>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada."><i class="fab fa-whatsapp"></i> Quero Conversar em Particular com o Advogado</a>
+        </section>
+
+    </main>
+
+    <footer class="footer-global">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/img/logo-white.png" alt="Gabriel Corrêa Advocacia" class="footer-logo">
+                <p>Advocacia estratégica e humanizada, com foco em resultados reais e atendimento 100% digital em todo o Brasil.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/gabrielcorrea.adv/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5547988670233" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre o Escritório</a></li>
+                    <li><a href="blog.html">Blog Jurídico</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h4>Áreas</h4>
+                <ul>
+                    <li><a href="familia.html">Direito de Família</a></li>
+                    <li><a href="divorcio.html">Divórcio</a></li>
+                    <li><a href="inventario.html">Inventário</a></li>
+                    <li><a href="pensao-alimenticia.html">Pensão Alimentícia</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fab fa-whatsapp"></i> (47) 98867-0233</p>
+                <p><i class="fas fa-envelope"></i> escritorio.gabrielcorrea@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Seg - Sex: 09h às 18h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.856.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        hamburgerBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

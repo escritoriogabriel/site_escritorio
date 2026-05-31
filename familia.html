@@ -25,6 +25,177 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pages-style.css">
+    <style>
+        /* Estilos adicionais para design empático */
+        .heading-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .heading-button {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(201, 169, 97, 0.5);
+            color: var(--primary-blue);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s var(--ease);
+            font-family: var(--font-sans);
+        }
+
+        .heading-button:hover {
+            background: rgba(201, 169, 97, 0.2);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Espaçamento generoso para calma visual */
+        .area-body {
+            padding: 100px 5%;
+        }
+
+        .prose-legal p {
+            margin-bottom: 1.8rem;
+        }
+
+        /* Mensagem acolhedora */
+        .welcome-message {
+            background: linear-gradient(135deg, rgba(31, 58, 85, 0.05) 0%, rgba(201, 169, 97, 0.08) 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 32px;
+            border-radius: 12px;
+            margin: 40px 0;
+            font-style: italic;
+            color: var(--text-body);
+            line-height: 1.8;
+        }
+
+        .welcome-message strong {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* FAQ Mitos e Verdades */
+        .faq-myths {
+            background: var(--bg-light);
+            padding: 80px 5%;
+            margin-top: 60px;
+        }
+
+        .faq-myths h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .myths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .myth-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s var(--ease);
+        }
+
+        .myth-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-elevated);
+            transform: translateY(-4px);
+        }
+
+        .myth-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .myth-label.mito {
+            background: #ffe5e5;
+            color: #c41e3a;
+        }
+
+        .myth-label.verdade {
+            background: #e5f5e5;
+            color: #2d7a2d;
+        }
+
+        .myth-card h4 {
+            font-size: 1.1rem;
+            margin: 12px 0 16px;
+            color: var(--primary-blue);
+        }
+
+        .myth-card p {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA Focado em Agendamento */
+        .cta-agendamento {
+            background: linear-gradient(135deg, var(--accent-gold-soft) 0%, rgba(201, 169, 97, 0.1) 100%);
+            border: 2px solid var(--accent-gold);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-agendamento h3 {
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .cta-agendamento p {
+            color: var(--text-body);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .btn-agendamento {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-soft) 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s var(--ease);
+            box-shadow: 0 6px 20px rgba(23, 43, 65, 0.25);
+        }
+
+        .btn-agendamento:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(23, 43, 65, 0.35);
+        }
+
+        /* Espaçamento suave entre seções */
+        .section-spacer {
+            height: 40px;
+        }
+    </style>
 </head>
 <body class="lp-ads">
     <!-- Google Tag Manager (noscript) -->
@@ -72,6 +243,13 @@
                 <h1>Protegendo os Seus Interesses e o <span>Futuro da Sua Família</span>.</h1>
                 <p class="page-hero-subtitle">Atuação humanizada, técnica e ágil em Divórcios, Pensão Alimentícia, Guarda de Menores e Inventários.</p>
                 
+                <!-- Botões de navegação no heading -->
+                <div class="heading-buttons">
+                    <a href="divorcio.html" class="heading-button"><i class="fas fa-ring"></i> Divórcio</a>
+                    <a href="inventario.html" class="heading-button"><i class="fas fa-file-contract"></i> Inventário</a>
+                    <a href="pensao-alimenticia.html" class="heading-button"><i class="fas fa-coins"></i> Pensão Alimentícia</a>
+                </div>
+
                 <div class="grid-dores">
                     <div class="card-dor">
                         <p><strong>Divórcio e Filhos:</strong> Consensual ou litigioso, partilha justa de bens e definição de guarda/pensão.</p>
@@ -82,7 +260,7 @@
                 </div>
 
                 <div class="page-hero-ctas">
-                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20uma%20quest%C3%A3o%20de%20direito%20de%20fam%C3%ADlia." class="btn-primary"><i class="fab fa-whatsapp"></i> Falar com Advogado de Família no WhatsApp</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-primary"><i class="fab fa-whatsapp"></i> Quero Conversar em Particular com o Advogado</a>
                 </div>
             </div>
         </section>
@@ -94,13 +272,24 @@
                 <h2>Direito de Família é, antes de tudo, sobre pessoas.</h2>
 
                 <p>Poucos momentos na vida exigem tanta clareza quanto uma mudança familiar. Você não está procurando um advogado porque quer — está aqui porque algo mudou, ou precisa mudar, e essa transição mexe com tudo: seus filhos, suas finanças, sua rotina, a casa em que você vive. <strong>O nosso papel é traduzir o jurídico para a sua realidade</strong> e devolver previsibilidade ao que parece caótico.</p>
+                
                 <p>Trabalhamos com a premissa de que a melhor decisão não é necessariamente a mais dura, nem a mais rápida — é a que protege quem precisa ser protegido sem destruir o que ainda pode ser preservado. Quando há acordo possível, mediamos. Quando é hora de litigar, litigamos com técnica e firmeza.</p>
+
+                <!-- Mensagem acolhedora assinada -->
+                <div class="welcome-message">
+                    <p><strong>Uma palavra de quem conhece essa jornada:</strong> O papel do nosso escritório é trazer <strong>paz jurídica</strong> para sua vida. Sabemos que conflitos familiares deixam cicatrizes profundas, mas também sabemos que existem caminhos estratégicos para resolvê-los com dignidade. Nosso compromisso é mediar conflitos quando possível e proteger seus direitos com técnica quando for necessário litigar. Você não está sozinho nessa.</p>
+                    <p style="margin-top: 16px; font-size: 0.95rem;">— <strong>Gabriel Corrêa</strong>, Advogado Especializado em Direito de Família</p>
+                </div>
 
                 <h3>As situações mais comuns que você pode estar vivendo</h3>
                 <p>Talvez você tenha aberto esta página depois de uma conversa difícil em casa. Ou de uma audiência marcada às pressas. Ou só porque está pensando: <em>"e se um dia precisar?"</em> Em qualquer dos casos, vale conhecer os cenários mais frequentes — porque entender o terreno é o primeiro passo para escolher o caminho.</p>
+                
                 <p><strong>Divórcio com dúvidas sobre bens e filhos.</strong> A maioria dos casais não sabe se cabe consensual ou litigioso — e essa decisão muda tudo. Avaliamos o regime de casamento, o que foi adquirido, como ficam guarda e visitas, e propomos o caminho mais curto e menos custoso emocionalmente.</p>
+                
                 <p><strong>Guarda compartilhada que não está funcionando.</strong> Acordos antigos envelhecem: muda o trabalho, muda a escola, muda a maturidade da criança. A lei permite revisar, e em geral o juiz acolhe quando há prova de que a mudança atende ao melhor interesse do filho.</p>
+                
                 <p><strong>Pensão alimentícia injusta — para quem paga ou para quem recebe.</strong> Valores fixados há anos podem estar defasados ou desproporcionais. Calculamos o que faz sentido hoje, à luz da renda real, das despesas comprovadas e da jurisprudência do seu estado.</p>
+                
                 <p><strong>Inventário travado por desentendimento entre herdeiros.</strong> O luto já é pesado; não precisa virar processo de 5 anos. Quando há consenso possível, fazemos extrajudicial em cartório. Quando não há, organizamos a partilha com o mínimo de desgaste familiar.</p>
 
                 <blockquote class="pull-quote">
@@ -110,6 +299,7 @@
 
                 <h3>Como conduzimos o seu caso, do primeiro contato à solução</h3>
                 <p>Toda demanda começa com uma conversa franca — sem juridiquês, sem promessa vazia. Ouvimos primeiro. Depois mapeamos riscos, custos e prazos realistas, e só então escolhemos a estratégia: cartório, mediação, ação judicial ou uma combinação delas. Você acompanha tudo por canal direto, com atendimento online em todo o Brasil.</p>
+                
                 <p>Não cobramos consulta inicial e não inflamos processo. Se o caminho mais curto é um acordo de uma página, é isso que vamos perseguir. Se o outro lado obriga a litigar, brigamos com a documentação certa e a tese certa — não no grito.</p>
             </article>
 
@@ -139,7 +329,7 @@
                 <div class="sidebar-cta">
                     <h4>Não tem certeza por onde começar?</h4>
                     <p>Conversa inicial sem custo, 100% online, em até 24h.</p>
-                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20uma%20quest%C3%A3o%20de%20direito%20de%20fam%C3%ADlia." class="btn-nav-whatsapp" style="background-color: #25D366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;"><i class="fab fa-whatsapp"></i> Fale com um Advogado agora</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-nav-whatsapp" style="background-color: #25D366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;"><i class="fab fa-whatsapp"></i> Fale com um Advogado agora</a>
                 </div>
             </aside>
         </section>
@@ -184,11 +374,112 @@
             </div>
         </section>
 
-        <!-- FAQ -->
+        <!-- CTA FOCADO EM AGENDAMENTO -->
+        <section class="cta-agendamento">
+            <h3>Pronto para trazer paz jurídica para sua vida?</h3>
+            <p>Não deixe para depois. Quanto mais cedo você tiver orientação especializada, melhor protegidos estarão seus direitos e os de sua família.</p>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-agendamento"><i class="fab fa-whatsapp"></i> Quero Conversar em Particular com o Advogado</a>
+        </section>
+
+        <!-- FAQ: 12 MITOS E VERDADES -->
+        <section class="faq-myths">
+            <div class="faq-wrapper">
+                <p class="eyebrow">Dúvidas Frequentes</p>
+                <h2>12 Mitos e Verdades sobre Direito de Família</h2>
+                
+                <div class="myths-grid">
+                    <!-- Mito 1 -->
+                    <div class="myth-card">
+                        <span class="myth-label mito">❌ Mito</span>
+                        <h4>"Se eu sair de casa, perco o direito aos bens"</h4>
+                        <p>Falso. O direito à partilha de bens não depende de quem saiu de casa. O que importa é o regime de casamento (comunhão, separação, etc.) e o que foi adquirido durante o casamento. Sair de casa é uma decisão pessoal; seus direitos patrimoniais continuam protegidos.</p>
+                    </div>
+
+                    <!-- Verdade 1 -->
+                    <div class="myth-card">
+                        <span class="myth-label verdade">✓ Verdade</span>
+                        <h4>A guarda compartilhada é o padrão legal hoje</h4>
+                        <p>Verdade. A lei presume que a guarda compartilhada é melhor para a criança. Só não é concedida se houver risco à integridade física ou psicológica do filho, ou se um dos pais não quer. Mesmo sem acordo, o juiz pode impor.</p>
+                    </div>
+
+                    <!-- Mito 2 -->
+                    <div class="myth-card">
+                        <span class="myth-label mito">❌ Mito</span>
+                        <h4>"A mãe sempre fica com a guarda"</h4>
+                        <p>Falso. Essa é uma crença antiga. Hoje, o critério é o melhor interesse da criança, não o gênero do pai ou da mãe. Pais têm conquistado guarda compartilhada e até guarda exclusiva com frequência crescente.</p>
+                    </div>
+
+                    <!-- Verdade 2 -->
+                    <div class="myth-card">
+                        <span class="myth-label verdade">✓ Verdade</span>
+                        <h4>O divórcio consensual é muito mais rápido e barato</h4>
+                        <p>Verdade. Um divórcio consensual em cartório pode ser resolvido em poucas semanas e custa uma fração do litigioso. Se há acordo sobre bens, guarda e pensão, não há motivo para ir a juízo.</p>
+                    </div>
+
+                    <!-- Mito 3 -->
+                    <div class="myth-card">
+                        <span class="myth-label mito">❌ Mito</span>
+                        <h4>"O pai pode rebaixar a pensão por conta própria"</h4>
+                        <p>Falso. A pensão alimentícia só pode ser alterada por decisão judicial. Se o pai quer reduzir, precisa entrar na justiça e provar que sua renda diminuiu. Parar de pagar ou pagar menos sem autorização é crime.</p>
+                    </div>
+
+                    <!-- Verdade 3 -->
+                    <div class="myth-card">
+                        <span class="myth-label verdade">✓ Verdade</span>
+                        <h4>Você pode revisar a pensão alimentícia a qualquer momento</h4>
+                        <p>Verdade. Se sua renda mudou, as despesas da criança aumentaram, ou o filho completou 18 anos e quer estudar, você pode pedir revisão. O critério é sempre a necessidade de quem recebe e a possibilidade de quem paga.</p>
+                    </div>
+
+                    <!-- Mito 4 -->
+                    <div class="myth-card">
+                        <span class="myth-label mito">❌ Mito</span>
+                        <h4>"Inventário só se faz depois de muito tempo"</h4>
+                        <p>Falso. Inventário pode ser feito logo após a morte, até em cartório se houver consenso entre herdeiros. Demora quando há desentendimento ou bens complexos. Quanto antes, melhor.</p>
+                    </div>
+
+                    <!-- Verdade 4 -->
+                    <div class="myth-card">
+                        <span class="myth-label verdade">✓ Verdade</span>
+                        <h4>Você pode fazer testamento a qualquer momento</h4>
+                        <p>Verdade. Testamento é um ato simples, rápido e barato. Você pode fazer a qualquer hora, enquanto estiver vivo e com capacidade mental. Depois, evita conflitos e deixa tudo claro para seus herdeiros.</p>
+                    </div>
+
+                    <!-- Mito 5 -->
+                    <div class="myth-card">
+                        <span class="myth-label mito">❌ Mito</span>
+                        <h4>"Separação e divórcio são a mesma coisa"</h4>
+                        <p>Falso. Separação dissolve a sociedade conjugal, mas você continua casado. Divórcio dissolve o vínculo de casamento. Hoje, a maioria vai direto para o divórcio, pulando a separação.</p>
+                    </div>
+
+                    <!-- Verdade 5 -->
+                    <div class="myth-card">
+                        <span class="myth-label verdade">✓ Verdade</span>
+                        <h4>Medidas protetivas podem ser concedidas em horas</h4>
+                        <p>Verdade. Se há risco de violência doméstica ou alienação parental, o juiz pode conceder medidas protetivas no mesmo dia. É um direito seu se você estiver em perigo.</p>
+                    </div>
+
+                    <!-- Mito 6 -->
+                    <div class="myth-card">
+                        <span class="myth-label mito">❌ Mito</span>
+                        <h4>"Não preciso de advogado se o divórcio é consensual"</h4>
+                        <p>Falso. Mesmo em consensual, ter um advogado garante que seus direitos estão protegidos. Cláusulas mal redigidas podem prejudicá-lo anos depois. Melhor investir agora.</p>
+                    </div>
+
+                    <!-- Verdade 6 -->
+                    <div class="myth-card">
+                        <span class="myth-label verdade">✓ Verdade</span>
+                        <h4>Você tem direito a alimentos enquanto o processo tramita</h4>
+                        <p>Verdade. Se você está em situação de necessidade durante o divórcio ou ação de alimentos, pode pedir alimentos provisórios. O juiz pode conceder logo no início do processo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ ORIGINAL -->
         <section class="faq-section">
             <div class="faq-wrapper">
                 <p class="eyebrow">Perguntas Frequentes</p>
-                <h2>As dúvidas que mais ouvimos</h2>
+                <h2>Dúvidas Adicionais</h2>
                 <details class="faq-item">
                     <summary>Quanto tempo leva um divórcio?</summary>
                     <div class="faq-body"><p>O consensual costuma ser resolvido em poucas semanas, especialmente quando feito em cartório. O litigioso, quando há disputa sobre bens, guarda ou pensão, pode levar de 1 a 3 anos. Trabalhamos para encurtar prazos sempre que possível, priorizando acordos.</p></div>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensão Alimentícia: Fixação, Revisão e Execução | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Pensão alimentícia justa. Fixação, revisão e execução. Proteção para quem recebe e justiça para quem paga.">
+    <link rel="canonical" href="https://www.gabrielcorrea.adv.br/pensao-alimenticia.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pages-style.css">
+    <style>
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 30px 0;
+        }
+
+        .scenario-card {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s var(--ease);
+        }
+
+        .scenario-card:hover {
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-elevated);
+            transform: translateY(-4px);
+        }
+
+        .scenario-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .scenario-card i {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+        }
+
+        .scenario-card p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .calculation-box {
+            background: linear-gradient(135deg, rgba(31, 58, 85, 0.05) 0%, rgba(201, 169, 97, 0.08) 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .calculation-box h4 {
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .calculation-box p {
+            color: var(--text-body);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .calculation-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .formula {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+            margin: 12px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+        }
+
+        .rights-duties {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 30px 0;
+        }
+
+        .rights-box, .duties-box {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .rights-box h4 {
+            color: #2d7a2d;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .duties-box h4 {
+            color: #c41e3a;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rights-box ul, .duties-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rights-box li, .duties-box li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-soft);
+            color: var(--text-body);
+            font-size: 0.95rem;
+        }
+
+        .rights-box li:last-child, .duties-box li:last-child {
+            border-bottom: none;
+        }
+
+        .rights-box li::before {
+            content: '✓ ';
+            color: #2d7a2d;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .duties-box li::before {
+            content: '⚠ ';
+            color: #c41e3a;
+            margin-right: 8px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-gold-soft) 0%, rgba(201, 169, 97, 0.1) 100%);
+            border: 2px solid var(--accent-gold);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h3 {
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .cta-section a {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-soft) 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s var(--ease);
+            box-shadow: 0 6px 20px rgba(23, 43, 65, 0.25);
+        }
+
+        .cta-section a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(23, 43, 65, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .rights-duties {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="lp-ads">
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20de%20Direito%20de%20Direito%20de%20Fam%C3%ADlia%20e%20gostaria%20de%20resolver%20um%20problema.%20%E2%9A%96%EF%B8%8F">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
+    </div>
+
+    <header>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li class="nav-always-show"><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="familia.html">Direito de Família</a>
+                    </div>
+                </li>
+                <li class="nav-always-show"><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="nav-always-show"><a href="contato.html">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20orienta%C3%A7%C3%A3o%20sobre%20uma%20quest%C3%A3o%20de%20direito%20de%20fam%C3%ADlia." class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Falar com Advogado</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <span class="page-hero-badge"><i class="fas fa-coins"></i> Pensão Alimentícia</span>
+                <h1>Pensão Alimentícia Justa e <span>Protegida por Lei</span>.</h1>
+                <p class="page-hero-subtitle">Fixação, revisão e execução com valores que fazem sentido. Proteção para quem recebe, justiça para quem paga.</p>
+
+                <div class="page-hero-ctas">
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-primary"><i class="fab fa-whatsapp"></i> Quero Conversar em Particular com o Advogado</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPO -->
+        <section id="desenvolvimento" class="area-body">
+            <article class="prose-legal" style="text-align: justify;">
+                <p class="eyebrow">Pensão Alimentícia</p>
+                <h2>Valores justos, protegidos por lei.</h2>
+
+                <p>Pensão alimentícia não é punição. É a obrigação legal de quem tem possibilidade financeira de contribuir para as despesas de quem não consegue se sustentar sozinho — geralmente filhos menores. A lei equilibra três coisas: a necessidade de quem recebe, a possibilidade de quem paga e o padrão de vida que a família tinha.</p>
+
+                <h3>Quando é Devida Pensão Alimentícia?</h3>
+                <p>Pensão alimentícia é devida quando há uma relação de dependência econômica. Os casos mais comuns são:</p>
+
+                <div class="scenario-grid">
+                    <div class="scenario-card">
+                        <h4><i class="fas fa-child"></i> Filhos Menores</h4>
+                        <p>Ambos os pais têm obrigação de contribuir para as despesas dos filhos menores. A pensão cobre alimentação, educação, saúde e lazer.</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h4><i class="fas fa-graduation-cap"></i> Filhos em Educação</h4>
+                        <p>Se o filho está estudando e não consegue trabalhar, a pensão pode ser mantida até os 24 anos (em alguns casos).</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h4><i class="fas fa-wheelchair"></i> Filhos com Deficiência</h4>
+                        <p>Filhos com deficiência que não conseguem se sustentar têm direito a pensão vitalícia.</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h4><i class="fas fa-ring"></i> Cônjuge ou Ex-cônjuge</h4>
+                        <p>Em alguns casos, o cônjuge que não consegue trabalhar tem direito a alimentos do outro.</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h4><i class="fas fa-users-alt"></i> Ascendentes (Pais/Avós)</h4>
+                        <p>Filhos têm obrigação de contribuir para as despesas dos pais idosos ou incapazes.</p>
+                    </div>
+
+                    <div class="scenario-card">
+                        <h4><i class="fas fa-hand-holding-heart"></i> Irmãos</h4>
+                        <p>Em casos excepcionais, irmãos podem ter obrigação de contribuir para alimentos.</p>
+                    </div>
+                </div>
+
+                <h3>Como é Calculada a Pensão Alimentícia?</h3>
+                <p>Não existe fórmula fixa. A lei manda equilibrar três fatores:</p>
+
+                <div class="calculation-box">
+                    <h4>Os Três Pilares da Pensão Alimentícia</h4>
+                    <p><strong>1. Necessidade de quem recebe:</strong> Quanto custa viver? Alimentação, educação, saúde, moradia, transporte, lazer.</p>
+                    <p><strong>2. Possibilidade de quem paga:</strong> Qual é a renda real? Salário, bônus, investimentos, patrimônio.</p>
+                    <p><strong>3. Padrão de vida anterior:</strong> Como a família vivia antes? Escola particular ou pública? Viagens? Atividades extras?</p>
+                </div>
+
+                <p>O juiz analisa todos esses fatores e fixa um valor que seja justo para ambas as partes. Não é "ganhar" ou "perder" — é encontrar o equilíbrio.</p>
+
+                <h3>Cenários Comuns</h3>
+                <p><strong>Cenário 1: Pai com renda de R$ 5.000 e filho com despesas de R$ 2.000.</strong> A pensão pode ser de 30% da renda do pai (R$ 1.500), cobrindo as despesas do filho.</p>
+                
+                <p><strong>Cenário 2: Pai com renda de R$ 10.000 e mãe que cuida da criança em tempo integral.</strong> A pensão pode ser maior, porque o pai tem possibilidade e a mãe não consegue trabalhar.</p>
+                
+                <p><strong>Cenário 3: Pai desempregado.</strong> A pensão pode ser reduzida ou suspensa temporariamente, mas o pai precisa comprovar que está procurando emprego.</p>
+
+                <h3>Revisão de Pensão Alimentícia</h3>
+                <p>Pensão alimentícia não é para sempre. Pode ser revisada quando há mudança significativa na renda de quem paga ou nas despesas de quem recebe.</p>
+
+                <p><strong>Motivos para aumentar:</strong> Filho começou a estudar em universidade particular, despesas com saúde aumentaram, renda de quem recebe diminuiu.</p>
+                
+                <p><strong>Motivos para reduzir:</strong> Renda de quem paga diminuiu, filho começou a trabalhar, filho completou 18 anos e parou de estudar.</p>
+                
+                <p><strong>Motivos para cessar:</strong> Filho completou 24 anos e não está mais estudando, filho conseguiu emprego e se sustenta sozinho, morte de quem paga.</p>
+
+                <h3>Direitos e Deveres</h3>
+                <div class="rights-duties">
+                    <div class="rights-box">
+                        <h4><i class="fas fa-check-circle"></i> Direitos de Quem Recebe</h4>
+                        <ul>
+                            <li>Receber a pensão no dia combinado</li>
+                            <li>Pedir revisão se houver mudança de circunstâncias</li>
+                            <li>Receber pensão atrasada com juros e multa</li>
+                            <li>Pedir bloqueio de bens se não pagar</li>
+                            <li>Receber pensão mesmo se o devedor tiver dívidas</li>
+                        </ul>
+                    </div>
+
+                    <div class="duties-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Deveres de Quem Paga</h4>
+                        <ul>
+                            <li>Pagar a pensão no dia e valor combinados</li>
+                            <li>Informar mudanças de renda ou emprego</li>
+                            <li>Não deixar de pagar mesmo em dificuldades (avisar o juiz)</li>
+                            <li>Pagar juros e multa se atrasar</li>
+                            <li>Responder por crime se não pagar (prisão civil)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Execução de Pensão Alimentícia</h3>
+                <p>Se quem paga não cumpre, existem mecanismos legais para cobrar:</p>
+
+                <p><strong>Bloqueio de bens:</strong> O juiz pode bloquear contas bancárias, imóveis ou veículos.</p>
+                <p><strong>Desconto em folha:</strong> Se trabalha com carteira assinada, o desconto pode ser feito direto na folha de pagamento.</p>
+                <p><strong>Prisão civil:</strong> Em último caso, quem não paga pode ser preso por até 3 meses (mas só se comprovadamente tem renda).</p>
+                <p><strong>Negativação:</strong> Nome pode ser incluído em cadastro de inadimplentes.</p>
+
+            </article>
+
+            <aside class="area-sidebar">
+                <div class="sidebar-card">
+                    <span class="label">Informações Práticas</span>
+                    <ul>
+                        <li>
+                            <span class="ico"><i class="fas fa-percent"></i></span>
+                            <span class="txt"><strong>Percentual Comum</strong><span>30% da renda é o percentual mais comum, mas varia.</span></span>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-calendar-days"></i></span>
+                            <span class="txt"><strong>Até Quando?</strong><span>Até os 18 anos (ou 24 se estudando), ou vitalícia se deficiência.</span></span>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-sync"></i></span>
+                            <span class="txt"><strong>Revisão</strong><span>Pode ser revisada a qualquer momento se houver mudança.</span></span>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-gavel"></i></span>
+                            <span class="txt"><strong>Execução</strong><span>Existem mecanismos legais para cobrar atrasos.</span></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-cta">
+                    <h4>Precisa de orientação?</h4>
+                    <p>Conversa inicial sem custo, 100% confidencial.</p>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada." class="btn-nav-whatsapp" style="background-color: #25D366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;"><i class="fab fa-whatsapp"></i> Fale com um Advogado agora</a>
+                </div>
+            </aside>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-section">
+            <h3>Sua situação merece atenção especializada</h3>
+            <p>Seja para fixar, revisar ou executar uma pensão alimentícia, você precisa de um advogado que entenda suas dores e proteja seus direitos.</p>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20uma%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%20sobre%20uma%20quest%C3%A3o%20familiar%2Fsucess%C3%B3ria%20de%20forma%20reservada."><i class="fab fa-whatsapp"></i> Quero Conversar em Particular com o Advogado</a>
+        </section>
+
+    </main>
+
+    <footer class="footer-global">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/img/logo-white.png" alt="Gabriel Corrêa Advocacia" class="footer-logo">
+                <p>Advocacia estratégica e humanizada, com foco em resultados reais e atendimento 100% digital em todo o Brasil.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/gabrielcorrea.adv/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5547988670233" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre o Escritório</a></li>
+                    <li><a href="blog.html">Blog Jurídico</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h4>Áreas</h4>
+                <ul>
+                    <li><a href="familia.html">Direito de Família</a></li>
+                    <li><a href="divorcio.html">Divórcio</a></li>
+                    <li><a href="inventario.html">Inventário</a></li>
+                    <li><a href="pensao-alimenticia.html">Pensão Alimentícia</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p><i class="fab fa-whatsapp"></i> (47) 98867-0233</p>
+                <p><i class="fas fa-envelope"></i> escritorio.gabrielcorrea@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Seg - Sex: 09h às 18h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.856.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        hamburgerBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
