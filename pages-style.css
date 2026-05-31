@@ -797,3 +797,255 @@ footer::before {
     font-weight: 600;
     color: var(--primary-blue);
 }
+
+
+/* =============================================================
+   LINHA DO TEMPO (Timeline)
+   ============================================================= */
+.timeline-section {
+    padding: 80px 5%;
+    background: var(--bg-paper);
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.timeline-section h3 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2rem;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-gold);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+}
+
+.timeline-item::before {
+    content: attr(data-number);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.timeline-item h4 {
+    font-size: 1.3rem;
+    margin: 20px 0 15px;
+    color: var(--primary-blue);
+}
+
+.timeline-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Timeline em dispositivos menores */
+@media (max-width: 768px) {
+    .timeline-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item::before {
+        top: -35px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* =============================================================
+   DESIGN CORPORATIVO (Trabalhista Empresa)
+   ============================================================= */
+.corporate-layout {
+    background: white;
+}
+
+.corporate-header {
+    background: linear-gradient(135deg, #172B41 0%, #0D1B2A 100%);
+    color: white;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.corporate-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.corporate-header p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Alerta Corporativo */
+.alert-corporate {
+    background: #2a2a2a;
+    border: 2px solid var(--accent-gold);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.alert-corporate i {
+    color: var(--accent-gold);
+    margin-right: 10px;
+}
+
+/* Grade de Serviços Corporativa */
+.services-grid-corporate {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.service-card-corporate {
+    background: white;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s var(--ease);
+}
+
+.service-card-corporate:hover {
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-5px);
+}
+
+.service-card-corporate .icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-gold-soft);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.service-card-corporate h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--primary-blue);
+}
+
+.service-card-corporate p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.service-card-corporate ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.service-card-corporate ul li {
+    padding: 8px 0;
+    color: var(--text-body);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-card-corporate ul li::before {
+    content: "✓";
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* CTA Executivo */
+.btn-executive {
+    background: var(--primary-blue);
+    color: white;
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s var(--ease);
+    box-shadow: 0 4px 14px rgba(23,43,65,0.32);
+}
+
+.btn-executive:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(23,43,65,0.42);
+    background: #0D1B2A;
+}
+
+/* Seção de Diferencial Corporativo */
+.corporate-differentials {
+    background: #f5f5f5;
+    padding: 60px 5%;
+    margin: 50px 0;
+}
+
+.corporate-differentials h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.differentials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.differentials-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.differentials-item h4 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.differentials-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
