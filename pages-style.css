@@ -699,3 +699,101 @@ footer::before {
     }
     html { scroll-behavior: auto; }
 }
+
+/* =============================================================
+   OTIMIZAÇÃO DE LANDING PAGES (Google Ads)
+   ============================================================= */
+.lp-ads .nav-links li:not(:last-child):not(.nav-always-show) {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .lp-ads .hamburger {
+        display: none !important;
+    }
+}
+
+/* Badge de Plantão Piscante */
+.badge-plantao {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ff0000;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    animation: blinker 1.5s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes blinker {
+    50% { opacity: 0.3; }
+}
+
+/* Botão Fixo Mobile */
+.btn-fixo-mobile {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: var(--whatsapp-green);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .btn-fixo-mobile.active {
+        display: block;
+    }
+}
+
+/* Alerta de Urgência */
+.alert-urgencia {
+    background: #fff3cd;
+    border: 2px solid #ffeeba;
+    color: #856404;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+    font-weight: 600;
+}
+
+.alert-urgencia-vermelho {
+    background: #f8d7da;
+    border: 2px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Blocos de Dores (Gatilhos) */
+.grid-dores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card-dor {
+    background: var(--bg-paper);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-gold);
+    box-shadow: var(--shadow-card);
+}
+
+.card-dor p {
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
