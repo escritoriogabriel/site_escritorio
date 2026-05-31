@@ -25,6 +25,218 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pages-style.css">
+    <style>
+        .corporate-hero {
+            background: linear-gradient(135deg, #172B41 0%, #0D1B2A 100%);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .corporate-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .corporate-hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .alert-rigido {
+            background: #2a2a2a;
+            border-left: 5px solid #FFC107;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .alert-rigido i {
+            color: #FFC107;
+            margin-right: 12px;
+            font-size: 1.3rem;
+        }
+
+        .services-grid-two {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin: 60px 0;
+        }
+
+        .service-block {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .service-block:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .service-block .icon {
+            width: 70px;
+            height: 70px;
+            background: #f0f4f8;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #172B41;
+            margin-bottom: 25px;
+        }
+
+        .service-block h3 {
+            font-size: 1.4rem;
+            color: #172B41;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-block p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-block ul li {
+            padding: 10px 0;
+            color: #333;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .service-block ul li:last-child {
+            border-bottom: none;
+        }
+
+        .service-block ul li::before {
+            content: "→";
+            color: #172B41;
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        .btn-reuniao {
+            background: #172B41;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(23,43,65,0.3);
+        }
+
+        .btn-reuniao:hover {
+            background: #0D1B2A;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(23,43,65,0.4);
+        }
+
+        .cta-section {
+            background: #f8f9fa;
+            padding: 70px 5%;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            color: #172B41;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .corporate-differentials-section {
+            background: white;
+            padding: 70px 5%;
+        }
+
+        .corporate-differentials-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #172B41;
+            margin-bottom: 50px;
+        }
+
+        .differentials-corporate {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .differential-corporate {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #FFC107;
+        }
+
+        .differential-corporate h4 {
+            font-size: 1.15rem;
+            color: #172B41;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .differential-corporate p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .corporate-hero h1 {
+                font-size: 2rem;
+            }
+
+            .corporate-hero p {
+                font-size: 1rem;
+            }
+
+            .services-grid-two {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body class="lp-ads corporate-layout">
     <!-- Google Tag Manager (noscript) -->
@@ -59,32 +271,30 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li class="nav-always-show"><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebemos%20uma%20demanda%20trabalhista%20no%20escrit%C3%B3rio%20da%20nossa%20empresa%20e%20precisamos%20de%20uma%20avalia%C3%A7%C3%A3o%20estrat%C3%A9gica." class="btn-executive"><i class="fab fa-whatsapp"></i> Agendar Reunião Estratégica</a>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebemos%20uma%20demanda%20trabalhista%20no%20escrit%C3%B3rio%20da%20nossa%20empresa%20e%20precisamos%20de%20uma%20avalia%C3%A7%C3%A3o%20estrat%C3%A9gica." class="btn-reuniao"><i class="fab fa-whatsapp"></i> Agendar Reunião Estratégica</a>
         </nav>
     </header>
 
     <main>
 
         <!-- HERO CORPORATIVO -->
-        <section class="corporate-header">
-            <div class="page-hero-content">
-                <span class="page-hero-badge"><i class="fas fa-building"></i> Trabalhista — Para Empresa</span>
-                <h1>Defesa Trabalhista Empresarial e <span>Redução de Passivo Jurídico</span></h1>
-                <p>Blindagem jurídica para empresas, contestação de reclamatórias trabalhistas e consultoria preventiva para evitar novos processos.</p>
-            </div>
+        <section class="corporate-hero">
+            <span class="page-hero-badge" style="color: white; background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; display: inline-block; margin-bottom: 20px;"><i class="fas fa-building"></i> Trabalhista — Para Empresa</span>
+            <h1>Defesa Trabalhista Empresarial e Redução de Passivo Jurídico</h1>
+            <p>Blindagem jurídica para empresas, contestação de reclamatórias trabalhistas e consultoria preventiva para evitar novos processos.</p>
         </section>
 
-        <!-- ALERTA CORPORATIVO -->
+        <!-- ALERTA RÍGIDO -->
         <section style="max-width: 1240px; margin: 0 auto; padding: 40px 5%;">
-            <div class="alert-corporate">
-                <i class="fas fa-exclamation-triangle"></i> <strong>Sua empresa recebeu uma notificação judicial?</strong> O prazo para apresentar a defesa é curto e rígido. Não corra o risco de sofrer uma condenação à revelia. Agende uma reunião estratégica agora.
+            <div class="alert-rigido">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Sua empresa recebeu uma notificação judicial?</strong> O prazo para apresentar a defesa é curto e rígido. Não corra o risco de sofrer uma condenação à revelia.
             </div>
         </section>
 
         <!-- CORPO PRINCIPAL -->
         <section style="max-width: 1240px; margin: 0 auto; padding: 60px 5%;">
             <article class="prose-legal" style="text-align: justify;">
-                <p class="eyebrow">Para empregadores e departamentos pessoais</p>
+                <p class="eyebrow">Para empregadores e departamentos de recursos humanos</p>
                 <h2>Direito do trabalho para empresa é gestão de risco, não brigas isoladas.</h2>
 
                 <p>A maior parte das ações trabalhistas que vemos chegar a juízo poderia ter sido evitada com decisões simples meses ou anos antes: <strong>um contrato adequado à função, um banco de horas regularizado, uma rescisão calculada com folga e revisada</strong>. O custo de prevenir é uma fração do custo de litigar.</p>
@@ -97,38 +307,40 @@
             </article>
         </section>
 
-        <!-- GRADE DE SERVIÇOS CORPORATIVA -->
-        <section class="corporate-differentials">
-            <h3>Nossas Soluções</h3>
-            <div class="services-grid-corporate">
-                <div class="service-card-corporate">
-                    <div class="icon"><i class="fas fa-gavel"></i></div>
-                    <h4>Contencioso</h4>
-                    <p>Defesa técnica em processos ativos, contestações robustas, recursos estratégicos e negociação de acordos que reduzem exposição.</p>
-                    <ul>
-                        <li>Defesa em reclamatórias</li>
-                        <li>Contestação com teses fortes</li>
-                        <li>Negociação de acordos</li>
-                        <li>Recursos até o TST</li>
-                    </ul>
-                </div>
+        <!-- GRADE DE SERVIÇOS: CONTENCIOSO E CONSULTIVO -->
+        <section style="background: white; padding: 70px 5%;">
+            <div style="max-width: 1240px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 2rem; color: #172B41; margin-bottom: 50px;">Nossas Soluções</h2>
+                <div class="services-grid-two">
+                    <div class="service-block">
+                        <div class="icon"><i class="fas fa-gavel"></i></div>
+                        <h3>Contencioso</h3>
+                        <p>Defesa técnica em processos ativos, contestações robustas, recursos estratégicos e negociação de acordos que reduzem exposição.</p>
+                        <ul>
+                            <li>Defesa em reclamatórias</li>
+                            <li>Contestação com teses fortes</li>
+                            <li>Negociação de acordos</li>
+                            <li>Recursos até o TST</li>
+                        </ul>
+                    </div>
 
-                <div class="service-card-corporate">
-                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Consultivo & Preventivo</h4>
-                    <p>Auditoria de contratos, redução de passivo trabalhista, compliance antiassédio e treinamento de RH para evitar novos processos.</p>
-                    <ul>
-                        <li>Auditoria de folha</li>
-                        <li>Revisão de contratos</li>
-                        <li>Compliance e antiassédio</li>
-                        <li>Treinamento de RH</li>
-                    </ul>
+                    <div class="service-block">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Consultivo & Preventivo</h3>
+                        <p>Auditoria de contratos, redução de passivo trabalhista, compliance antiassédio e treinamento de RH para evitar novos processos.</p>
+                        <ul>
+                            <li>Auditoria de folha</li>
+                            <li>Revisão de contratos</li>
+                            <li>Compliance e antiassédio</li>
+                            <li>Treinamento de RH</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- LINHA DO TEMPO -->
-        <section class="timeline-section" style="background: white;">
+        <section class="timeline-section">
             <h3>Como Funciona Nossa Assessoria</h3>
             <div class="timeline-container">
                 <div class="timeline-item" data-number="1">
@@ -146,34 +358,34 @@
             </div>
         </section>
 
+        <!-- CTA EXECUTIVO -->
+        <section class="cta-section">
+            <h2>Pronto para Proteger Sua Empresa?</h2>
+            <p>Agende uma reunião estratégica com nosso time. Vamos analisar os riscos específicos da sua operação e apresentar um plano de ação realista.</p>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebemos%20uma%20demanda%20trabalhista%20no%20escrit%C3%B3rio%20da%20nossa%20empresa%20e%20precisamos%20de%20uma%20avalia%C3%A7%C3%A3o%20estrat%C3%A9gica." class="btn-reuniao"><i class="fab fa-whatsapp"></i> Agendar Reunião Estratégica (Online ou Presencial)</a>
+        </section>
+
         <!-- DIFERENCIAIS CORPORATIVOS -->
-        <section class="corporate-differentials">
-            <h3>Por Que Escolher Nossa Assessoria</h3>
-            <div class="differentials-list">
-                <div class="differentials-item">
+        <section class="corporate-differentials-section">
+            <h2>Por Que Escolher Nossa Assessoria</h2>
+            <div class="differentials-corporate">
+                <div class="differential-corporate">
                     <h4><i class="fas fa-shield-alt"></i> Prevenção Primeiro</h4>
                     <p>Prevenir custa 1/10 do que litigar. Começamos pelo que mais sangra.</p>
                 </div>
-                <div class="differentials-item">
+                <div class="differential-corporate">
                     <h4><i class="fas fa-bolt"></i> Resposta no Mesmo Dia</h4>
                     <p>Demitir, advertir, contratar — você não para a operação esperando parecer.</p>
                 </div>
-                <div class="differentials-item">
+                <div class="differential-corporate">
                     <h4><i class="fas fa-chart-line"></i> Relatório Mensal</h4>
                     <p>Quanto a empresa tem em risco trabalhista, hoje, em reais. Sem suspense.</p>
                 </div>
-                <div class="differentials-item">
+                <div class="differential-corporate">
                     <h4><i class="fas fa-handshake"></i> Parceria Real</h4>
                     <p>Você não é um número. Somos extensão do seu departamento jurídico.</p>
                 </div>
             </div>
-        </section>
-
-        <!-- CTA EXECUTIVO -->
-        <section style="background: #f5f5f5; padding: 60px 5%; text-align: center;">
-            <h3 style="margin-bottom: 20px;">Pronto para Proteger Sua Empresa?</h3>
-            <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Agende uma reunião estratégica com nosso time. Vamos analisar os riscos específicos da sua operação e apresentar um plano de ação realista.</p>
-            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebemos%20uma%20demanda%20trabalhista%20no%20escrit%C3%B3rio%20da%20nossa%20empresa%20e%20precisamos%20de%20uma%20avalia%C3%A7%C3%A3o%20estrat%C3%A9gica." class="btn-executive"><i class="fab fa-whatsapp"></i> Agendar Reunião Estratégica</a>
         </section>
 
         <!-- FAQ -->
@@ -192,6 +404,10 @@
                 <details class="faq-item">
                     <summary>Como reduzir o risco de ação por horas extras?</summary>
                     <div class="faq-body"><p>Controle de jornada confiável (ponto eletrônico ou aplicativo), regulamento escrito sobre banco de horas, autorização prévia para horas extras e — fundamental — pagamento ou compensação correta do que for registrado.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary>Qual é o custo médio de uma reclamatória trabalhista perdida?</summary>
+                    <div class="faq-body"><p>Varia muito, mas em média: 3 a 12 meses de salário do funcionário em verbas rescisórias + danos morais + custas processuais. Para empresas com 10+ funcionários, o risco acumulado é sempre maior que o custo de prevenção.</p></div>
                 </details>
             </div>
         </section>
