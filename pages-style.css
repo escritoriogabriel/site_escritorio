@@ -805,7 +805,7 @@ footer::before {
 .timeline-section {
     padding: 80px 5%;
     background: var(--bg-paper);
-    max-width: 1240px;
+    max-width: 70;
     margin: 0 auto;
 }
 
@@ -1027,7 +1027,7 @@ footer::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 1240px;
+    max-width: 68%;
     margin: 0 auto;
 }
 
