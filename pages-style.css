@@ -336,7 +336,7 @@ nav { display: flex; align-items: center; gap: 30px; }
    ÁREA BODY 70/30 (mantido para áreas de atuação)
    ============================================================= */
 .area-body {
-    max-width: 1240px;
+    max-width: 75%;
     margin: 0 auto;
     padding: 90px 5%;
     display: grid;
