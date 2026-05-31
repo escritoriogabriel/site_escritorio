@@ -11,29 +11,344 @@
      
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ação de Busca e Apreensão de Veículo? Você Tem Apenas 5 Dias para Agir | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Defesa estratégica para reverter a apreensão, identificar juros abusivos e buscar a restituição do seu veículo ou dos valores pagos.">
+    <title>Busca e Apreensão? Você Tem 5 Dias | Defesa Urgente | Advogado Gabriel Corrêa</title>
+    <meta name="description" content="Seu carro foi apreendido? Você tem apenas 5 dias para agir. Defesa contra busca e apreensão, juros abusivos, restituição. Ação imediata.">
     <link rel="canonical" href="https://www.gabrielcorrea.adv.br/busca-e-apreensao.html">
-
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Ação de Busca e Apreensão de Veículo? Você Tem Apenas 5 Dias para Agir | Advogado Gabriel Corrêa">
-    <meta property="og:description" content="Defesa estratégica para reverter a apreensão, identificar juros abusivos e buscar a restituição do seu veículo ou dos valores pagos.">
-    <meta property="og:url" content="https://www.gabrielcorrea.adv.br/busca-e-apreensao.html">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pages-style.css">
+    <style>
+        /* Otimização Mobile Extrema */
+        body { font-size: 16px; }
+
+        /* Alerta Vermelho Urgente */
+        .urgency-banner {
+            background: linear-gradient(90deg, #cc0000 0%, #ff3333 50%, #cc0000 100%);
+            color: #ffff00;
+            padding: 16px 5%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-bottom: 3px solid #ffff00;
+            animation: pulse-banner 2s ease-in-out infinite;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes pulse-banner {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .urgency-banner i {
+            margin-right: 8px;
+            animation: pulse-icon 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-icon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Triagem Rápida */
+        .quick-screening {
+            background: var(--bg-cream);
+            border: 2px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        .quick-screening h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .screening-question {
+            margin-bottom: 20px;
+        }
+
+        .screening-question label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .screening-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .screening-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 12px 16px;
+            border: 2px solid var(--border-soft);
+            background: white;
+            color: var(--primary-blue);
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .screening-btn:hover {
+            border-color: var(--accent-gold);
+            background: var(--accent-gold-soft);
+        }
+
+        .screening-btn.selected {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        /* Fluxo de Defesa */
+        .defense-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border: 2px solid var(--border-soft);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .flow-step:hover {
+            border-color: var(--accent-gold);
+            box-shadow: var(--shadow-card);
+        }
+
+        .flow-step-icon {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+        }
+
+        .flow-step-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            line-height: 1.4;
+        }
+
+        .flow-arrow {
+            flex: 0 0 auto;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin: 0 8px;
+        }
+
+        @media (max-width: 768px) {
+            .defense-flow {
+                flex-direction: column;
+            }
+
+            .flow-arrow {
+                transform: rotate(90deg);
+                margin: 8px 0;
+            }
+        }
+
+        /* Gatilho de Aversão à Perda */
+        .loss-aversion {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe5e5 100%);
+            border-left: 4px solid #ff3333;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .loss-aversion h4 {
+            color: #cc0000;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .loss-aversion p {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .loss-aversion strong {
+            color: #cc0000;
+        }
+
+        /* Juros Abusivos */
+        .abusive-interest {
+            background: white;
+            border: 1px solid var(--border-soft);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-card);
+        }
+
+        .abusive-interest h4 {
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        .interest-example {
+            background: var(--bg-cream);
+            border-left: 3px solid var(--accent-gold);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+
+        /* CTA Impositivo */
+        .cta-urgent {
+            background: linear-gradient(135deg, #ff3333 0%, #cc0000 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 10px 40px rgba(255, 51, 51, 0.3);
+        }
+
+        .cta-urgent h3 {
+            color: #ffff00;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+        }
+
+        .cta-urgent p {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .btn-urgent {
+            background: #ffff00;
+            color: #cc0000;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-urgent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Otimização Mobile */
+        @media (max-width: 768px) {
+            .urgency-banner {
+                font-size: 0.95rem;
+                padding: 12px 5%;
+            }
+
+            .quick-screening {
+                padding: 16px;
+                margin: 20px 0;
+            }
+
+            .screening-buttons {
+                gap: 8px;
+            }
+
+            .screening-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .flow-step {
+                min-width: 100px;
+                padding: 16px 12px;
+            }
+
+            .flow-step-text {
+                font-size: 0.75rem;
+            }
+
+            .cta-urgent {
+                padding: 24px;
+                margin: 30px 0;
+            }
+
+            .cta-urgent h3 {
+                font-size: 1.2rem;
+            }
+
+            .cta-urgent p {
+                font-size: 0.95rem;
+            }
+
+            .btn-urgent {
+                padding: 14px 24px;
+                font-size: 0.95rem;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Sem imagens pesadas */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Performance */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Remover animações em conexões lentas */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 <body class="lp-ads">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FPXN89"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-     
+
+    <!-- ALERTA URGENTE -->
+    <div class="urgency-banner">
+        <i class="fas fa-exclamation-circle"></i> URGENTE: Se o seu carro foi apreendido, você tem apenas 5 dias para apresentar defesa. O relógio está correndo.
+    </div>
+
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebi%20uma%20notifica%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20e%20preciso%20de%20defesa%20urgente.%20%E2%9A%96%EF%B8%8F">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20ajuda%20urgente%2C%20meu%20ve%C3%ADculo%20est%C3%A1%20em%20processo%20ou%20sofreu%20a%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20pelo%20banco.">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
     </div>
 
     <header>
@@ -44,201 +359,162 @@
         <nav id="mainNav">
             <ul class="nav-links">
                 <li class="nav-always-show"><a href="index.html">Início</a></li>
-                <li class="dropdown">
-                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
-                    <div class="dropdown-content">
-                        <a href="trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
-                        <a href="trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                        <a href="familia.html">Direito de Família</a>
-                        <a href="criminal.html">Direito Criminal</a>
-                        <a href="contrato.html">Contratos</a>
-                        <a href="busca-e-apreensao.html">Busca e Apreensão</a>
-                    </div>
-                </li>
-                <li class="nav-always-show"><a href="sobre.html">Sobre</a></li>
-                <li><a href="blog.html">Blog</a></li>
                 <li class="nav-always-show"><a href="contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebi%20uma%20notifica%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20e%20preciso%20de%20defesa%20urgente.%20%E2%9A%96%EF%B8%8F" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Reverter Busca e Apreensão no WhatsApp</a>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20ajuda%20urgente%2C%20meu%20ve%C3%ADculo%20est%C3%A1%20em%20processo%20ou%20sofreu%20a%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20pelo%20banco." class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Acionar Defesa Agora</a>
         </nav>
     </header>
 
     <main>
-
         <!-- HERO -->
         <section class="page-hero">
             <div class="page-hero-content">
                 <span class="page-hero-badge"><i class="fas fa-car-crash"></i> Busca e Apreensão</span>
-                <h1>Ação de Busca e Apreensão de Veículo? <span>Você Tem Apenas 5 Dias para Agir</span>.</h1>
-                <p class="page-hero-subtitle">Defesa estratégica para reverter a apreensão, identificar juros abusivos e buscar a restituição do seu veículo ou dos valores pagos.</p>
-                
-                <div class="alert-urgencia alert-urgencia-vermelho">
-                    <i class="fas fa-exclamation-triangle"></i> <strong>Atenção:</strong> Após a execução da busca e apreensão, a lei concede apenas 5 dias para apresentar a defesa e tentar recuperar o bem. Não espere o prazo esgotar.
-                </div>
+                <h1>Seu Carro Foi Apreendido? <span>Você Tem Apenas 5 Dias</span>.</h1>
+                <p class="page-hero-subtitle">Defesa estratégica para reverter a apreensão, identificar ilegalidades bancárias e recuperar seu veículo ou os valores pagos.</p>
 
                 <div class="page-hero-ctas">
-                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebi%20uma%20notifica%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20e%20preciso%20de%20defesa%20urgente.%20%E2%9A%96%EF%B8%8F" class="btn-primary"><i class="fab fa-whatsapp"></i> Reverter Busca e Apreensão no WhatsApp</a>
+                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20ajuda%20urgente%2C%20meu%20ve%C3%ADculo%20est%C3%A1%20em%20processo%20ou%20sofreu%20a%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20pelo%20banco." class="btn-primary"><i class="fab fa-whatsapp"></i> Acionar Defesa Contra Busca e Apreensão Agora</a>
                 </div>
             </div>
         </section>
 
-        <!-- CORPO 70/30 -->
-        <section id="desenvolvimento" class="area-body">
-            <article class="prose-legal" style="text-align: justify;">
-                <p class="eyebrow">Defesa em busca e apreensão</p>
-                <h2>Atraso de prestação não é, automaticamente, perda do bem.</h2>
-
-                <p>Quando a financeira aciona a busca e apreensão, a sensação é de portas se fechando. Mas o procedimento tem etapas, prazos e direitos do devedor que <strong>raramente são bem aproveitados sem advogado</strong>. Quem age na primeira semana depois da notificação tem opções; quem espera o oficial de justiça chegar com a liminar, perde quase todas.</p>
-                <p>Explique de forma simples que o banco comete erros contratuais e processuais que podem anular a busca e apreensão. Nosso papel é identificar essas falhas e agir rápido para proteger seu patrimônio.</p>
+        <!-- TRIAGEM RÁPIDA -->
+        <section style="padding: 40px 5%; background: var(--white); max-width: 1200px; margin: 0 auto;">
+            <div class="quick-screening">
+                <h3>Qualifique Seu Caso em 30 Segundos</h3>
                 
-                <div class="sidebar-card">
-                    <span class="label">Cenários que atendemos</span>
-                    <ul>
-                        <li>
-                            <span class="ico"><i class="fas fa-bell"></i></span>
-                            <span class="txt"><strong>Notificação recebida</strong><span>15 dias para purgar — defesa começa aqui.</span></span>
-                        </li>
-                        <li>
-                            <span class="ico"><i class="fas fa-gavel"></i></span>
-                            <span class="txt"><strong>Liminar concedida</strong><span>5 dias críticos para purgar ou contestar.</span></span>
-                        </li>
-                        <li>
-                            <span class="ico"><i class="fas fa-percent"></i></span>
-                            <span class="txt"><strong>Ação revisional</strong><span>Juros e tarifas abusivas reduzem o saldo.</span></span>
-                        </li>
-                    </ul>
+                <div class="screening-question">
+                    <label>O oficial de justiça já levou o veículo?</label>
+                    <div class="screening-buttons">
+                        <button class="screening-btn" onclick="this.classList.toggle('selected')">Sim</button>
+                        <button class="screening-btn" onclick="this.classList.toggle('selected')">Não</button>
+                    </div>
                 </div>
 
-                <blockquote class="pull-quote">
-                    <p>Em busca e apreensão, o tempo é literalmente dinheiro. Cada dia depois da notificação, uma porta se fecha. Cada hora antes de o oficial chegar, uma porta ainda está aberta.</p>
-                    <cite>— Gabriel Corrêa, advogado responsável</cite>
-                </blockquote>
-            </article>
-
-            <aside class="area-sidebar">
-                <div class="sidebar-cta">
-                    <h4>O tempo está correndo</h4>
-                    <p>Fale com um especialista agora e saiba como recuperar seu veículo.</p>
-                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Recebi%20uma%20notifica%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20e%20preciso%20de%20defesa%20urgente.%20%E2%9A%96%EF%B8%8F" class="btn-nav-whatsapp" style="background-color: #25D366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px;"><i class="fab fa-whatsapp"></i> Fale com um Advogado agora</a>
+                <div class="screening-question">
+                    <label>Há quantas parcelas em atraso?</label>
+                    <div class="screening-buttons">
+                        <button class="screening-btn" onclick="this.classList.toggle('selected')">1-2</button>
+                        <button class="screening-btn" onclick="this.classList.toggle('selected')">3-5</button>
+                        <button class="screening-btn" onclick="this.classList.toggle('selected')">6+</button>
+                    </div>
                 </div>
-            </aside>
+
+                <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
+                    Após responder, clique no botão abaixo para conversar com um especialista sobre seu caso específico.
+                </p>
+            </div>
         </section>
 
-        <!-- DIFERENCIAIS -->
-        <section class="differentials">
-            <div class="differentials-grid">
-                <div class="differential-item">
-                    <i class="fas fa-stopwatch"></i>
-                    <h3>Atendimento em horas, não dias</h3>
-                    <p>Notificação ou citação chegou hoje? Conversamos hoje. Prazo é a coisa mais frágil aqui.</p>
+        <!-- FLUXO DE DEFESA -->
+        <section style="padding: 40px 5%; background: var(--bg-light); max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-blue);">Nosso Fluxo de Defesa: Rápido e Eficaz</h2>
+            
+            <div class="defense-flow">
+                <div class="flow-step">
+                    <div class="flow-step-icon"><i class="fas fa-car"></i></div>
+                    <div class="flow-step-text">Carro Apreendido</div>
                 </div>
-                <div class="differential-item">
-                    <i class="fas fa-calculator"></i>
-                    <h3>Cálculo paralelo de purgação</h3>
-                    <p>Não confiamos no valor cobrado. Recalculamos, e em mais da metade dos casos o número certo é menor.</p>
+
+                <div class="flow-arrow">➔</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="flow-step-text">Análise do Processo em Horas</div>
                 </div>
-                <div class="differential-item">
-                    <i class="fas fa-balance-scale-right"></i>
-                    <h3>Foco em manter o bem</h3>
-                    <p>A maior parte dos clientes quer o carro de volta — ou nem perdê-lo. É por isso que a gente trabalha.</p>
+
+                <div class="flow-arrow">➔</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-icon"><i class="fas fa-file-contract"></i></div>
+                    <div class="flow-step-text">Protocolo da Defesa Técnica</div>
+                </div>
+
+                <div class="flow-arrow">➔</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-icon"><i class="fas fa-gavel"></i></div>
+                    <div class="flow-step-text">Pedido de Liminar de Devolução</div>
                 </div>
             </div>
         </section>
 
-        <!-- LINHA DO TEMPO -->
-        <section class="timeline-section">
-            <h3>Como Funciona o Processo</h3>
-            <div class="timeline-container">
-                <div class="timeline-item" data-number="1">
-                    <h4>Conversa Inicial e Análise</h4>
-                    <p>Você nos conta sobre a notificação ou liminar, apresenta documentos (contrato, boletos). Fazemos diagnóstico de riscos e calculamos o valor correto.</p>
+        <!-- CORPO PRINCIPAL -->
+        <section id="desenvolvimento" style="padding: 60px 5%; max-width: 1200px; margin: 0 auto;">
+            <h2 style="color: var(--primary-blue); margin-bottom: 30px;">O Banco Errou? Saiba Como Identificar Ilegalidades</h2>
+
+            <p style="font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin-bottom: 24px;">
+                Muitos mandados de busca e apreensão são baseados em <strong>notificações inválidas ou cálculos de juros ilegais</strong> capitalizados incorretamente pelos bancos. Quando essas ilegalidades são identificadas, a busca pode ser anulada e você pode recuperar seu veículo ou receber indenização pelos danos.
+            </p>
+
+            <!-- Juros Abusivos -->
+            <div class="abusive-interest">
+                <h4><i class="fas fa-exclamation-triangle" style="color: var(--accent-gold); margin-right: 8px;"></i> Juros Abusivos e Capitalização Ilegal</h4>
+                
+                <p style="margin-bottom: 16px; color: var(--text-body);">
+                    Os bancos frequentemente capitalizam juros de forma ilegal, aumentando artificialmente a dívida. Isso pode tornar o mandado de busca inválido.
+                </p>
+
+                <div class="interest-example">
+                    <strong>Exemplo Real:</strong> Um financiamento de R$ 30.000 com juros de 2% ao mês. Se o banco capitaliza juros sobre juros (anatocismo), a dívida cresce exponencialmente. Após 12 meses, você pode estar devendo R$ 45.000 em vez de R$ 37.200. Essa diferença é ilegal.
                 </div>
-                <div class="timeline-item" data-number="2">
-                    <h4>Ação Jurídica ou Negociação</h4>
-                    <p>Preparamos a defesa (purgação, revisional ou liminar) ou negociamos diretamente com a financeira em condições reais.</p>
-                </div>
-                <div class="timeline-item" data-number="3">
-                    <h4>Acompanhamento até a Resolução</h4>
-                    <p>Presença em todas as audiências, negociação de acordos e recursos. Você acompanha cada passo pelo WhatsApp.</p>
+
+                <div class="interest-example">
+                    <strong>Notificação Inválida:</strong> Se a notificação de mora não informou corretamente o valor devido ou os juros cobrados, a busca pode ser anulada por vício processual.
                 </div>
             </div>
+
+            <!-- Gatilho de Aversão à Perda -->
+            <div class="loss-aversion">
+                <h4><i class="fas fa-warning" style="margin-right: 8px;"></i> O Que Acontece Se Você Não Se Defender?</h4>
+                <p>
+                    Se você não agir nos próximos 5 dias, o veículo vai a leilão por um preço muito abaixo do valor real (às vezes 30-40% do valor de mercado). <strong>Mesmo assim, você continua devendo o saldo remanescente ao banco</strong>, com juros continuando a acumular. Seu nome fica sujo no cadastro de inadimplentes, prejudicando seu crédito por anos.
+                </p>
+            </div>
+
+            <h3 style="color: var(--primary-blue); margin-top: 40px; margin-bottom: 20px;">Não Entregue Seus Direitos Sem Consultar um Especialista</h3>
+            <p style="font-size: 1.05rem; color: var(--text-body); line-height: 1.75;">
+                <strong>Muitas buscas podem ser revertidas na justiça.</strong> O que parece uma situação perdida pode ter caminhos legais que você não conhece. Um advogado especializado pode identificar ilegalidades que o banco cometeu e usar isso a seu favor.
+            </p>
+
         </section>
 
-        <!-- FAQ -->
-        <section class="faq-section">
-            <div class="faq-wrapper">
-                <p class="eyebrow">Perguntas Frequentes</p>
-                <h2>As dúvidas que mais ouvimos</h2>
-                <details class="faq-item">
-                    <summary>Recebi a notificação. Tenho quanto tempo?</summary>
-                    <div class="faq-body"><p>A notificação extrajudicial concede, geralmente, 15 dias para você purgar a mora. Depois disso, o credor vai a juízo e o prazo cai para apenas 5 dias após a apreensão.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>E se eu contestar dizendo que os juros são abusivos?</summary>
-                    <div class="faq-body"><p>É um caminho real. Uma ação revisional bem fundamentada pode suspender a busca e apreensão até o juiz decidir o valor correto.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>Eles podem entrar na minha casa?</summary>
-                    <div class="faq-body"><p>Para apreender bem em garagem residencial, exige-se mandado judicial específico e ordem expressa. Acompanhar o ato com advogado evita abusos.</p></div>
-                </details>
+        <!-- CTA URGENTE -->
+        <section style="padding: 40px 5%; background: var(--white); max-width: 1200px; margin: 0 auto;">
+            <div class="cta-urgent">
+                <h3>Seu Carro Merece Defesa Técnica</h3>
+                <p>Não deixe o prazo de 5 dias passar. Quanto mais cedo você agir, maiores as chances de reverter a apreensão.</p>
+                <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel.%20Preciso%20de%20ajuda%20urgente%2C%20meu%20ve%C3%ADculo%20est%C3%A1%20em%20processo%20ou%20sofreu%20a%C3%A7%C3%A3o%20de%20busca%20e%20apreens%C3%A3o%20pelo%20banco." class="btn-urgent"><i class="fab fa-whatsapp"></i> Acionar Defesa Agora</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="footer-global">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <img src="assets/img/logo-white.png" alt="Gabriel Corrêa Advocacia" class="footer-logo">
-                <p>Advocacia estratégica e humanizada, com foco em resultados reais e atendimento 100% digital em todo o Brasil.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/gabrielcorrea.adv/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/5547988670233" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="footer-nav">
-                <h4>Navegação</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre o Escritório</a></li>
-                    <li><a href="blog.html">Blog Jurídico</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-            <div class="footer-nav">
-                <h4>Áreas</h4>
-                <ul>
-                    <li><a href="trabalhista-empregado.html">Direito Trabalhista</a></li>
-                    <li><a href="familia.html">Direito de Família</a></li>
-                    <li><a href="criminal.html">Direito Criminal</a></li>
-                    <li><a href="busca-e-apreensao.html">Busca e Apreensão</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contato</h4>
-                <p><i class="fab fa-whatsapp"></i> (47) 98867-0233</p>
-                <p><i class="fas fa-envelope"></i> escritorio.gabrielcorrea@gmail.com</p>
-                <p><i class="fas fa-clock"></i> Seg - Sex: 09h às 18h</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.856.</p>
-        </div>
+    <footer class="footer-global" style="background: var(--primary-blue-deep); color: white; padding: 30px 5%; text-align: center; border-top: 2px solid var(--accent-gold);">
+        <p style="margin: 0; font-size: 0.9rem;">
+            <strong>Plantão Busca e Apreensão</strong> | Gabriel Corrêa Advocacia<br>
+            Telefone: <a href="tel:+5547988670233" style="color: var(--accent-gold);">(47) 98867-0233</a> | 
+            WhatsApp: <a href="https://wa.me/5547988670233" style="color: var(--accent-gold);">Chamar Agora</a><br>
+            OAB/SC 63.856 | Advocacia Estratégica e Humanizada
+        </p>
     </footer>
 
     <script>
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');
-        hamburgerBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            hamburgerBtn.classList.toggle('active');
-        });
+        if (hamburgerBtn) {
+            hamburgerBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                hamburgerBtn.classList.toggle('active');
+            });
+        }
 
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
+            if (header && window.scrollY > 50) {
                 header.classList.add('scrolled');
-            } else {
+            } else if (header) {
                 header.classList.remove('scrolled');
             }
         });
