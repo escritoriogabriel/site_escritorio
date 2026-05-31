@@ -345,7 +345,6 @@ nav { display: flex; align-items: center; gap: 30px; }
     align-items: start;
 }
 
-.prose-legal { max-width: 680px; }
 .prose-legal .eyebrow {
     font-size: 0.72rem; font-weight: 700;
     text-transform: uppercase; letter-spacing: 3px;
