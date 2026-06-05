@@ -453,6 +453,45 @@
         @media (max-width: 640px) {
             .post-cta-box { padding: 40px 24px; }
         }
+        @media (max-width: 768px) {
+            .post-layout { 
+                max-width: 95%; 
+                grid-template-columns: 1fr; 
+                padding: 30px 2.5%;
+            }
+            .post-main { 
+                padding: 24px 20px; 
+                text-align: justify;
+            }
+            .post-content { font-size: 0.9rem; }
+            .post-content h2, .post-content h3, .post-content h4 { 
+                font-size: 1.8rem; 
+                text-align: center; 
+                border-left: none; 
+                padding-left: 0;
+                margin: 32px 0 16px;
+            }
+            
+            /* Centralização de elementos e tabelas */
+            .post-content table, 
+            .post-content img, 
+            .post-content blockquote,
+            .post-content iframe,
+            .post-content video {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                max-width: 100%;
+            }
+            .post-content table { 
+                display: table; 
+                font-size: 0.85rem;
+            }
+            
+            .post-hero { min-height: 280px; }
+            .post-hero-content { padding: 40px 5%; text-align: center; }
+            .post-hero h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>

@@ -973,15 +973,16 @@ footer {
         padding: 12px 5%;
         gap: 8px;
     }
-    .hamburger { display: flex; }
+    .hamburger { display: flex !important; }
     nav {
-        display: none;
+        display: none !important;
         flex-direction: column;
         gap: 12px;
         width: 100%;
         padding-bottom: 12px;
+        background: white;
     }
-    nav.open, nav.active { display: flex; }
+    nav.open, nav.active { display: flex !important; }
     .nav-links {
         flex-direction: column;
         align-items: flex-start;

@@ -675,15 +675,34 @@ footer::before {
     .dropdown-content a { padding: 10px 16px; font-size: 0.85rem; }
     .btn-nav-whatsapp { width: 100%; text-align: center; justify-content: center; }
     .top-bar { text-align: center; font-size: 0.75rem; padding: 9px 5%; }
+    
+    /* Layout e Tipografia Mobile Solicitados */
+    .area-body { 
+        max-width: 95%; 
+        padding: 40px 5%;
+        grid-template-columns: 1fr;
+    }
+    .prose-legal { text-align: justify; }
+    .prose-legal h2, .prose-legal h3, .prose-legal h4 { font-size: 1.8rem; text-align: center; }
+    .prose-legal p, .prose-legal li { font-size: 0.9rem; }
+    
+    /* Centralização de elementos */
+    .prose-legal table, .prose-legal img, .prose-legal .pull-quote, .prose-legal iframe, .prose-legal video {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .prose-legal table { margin-bottom: 24px; }
+    .prose-legal table { font-size: 0.85rem; }
+
     .page-hero { padding: 60px 5% 50px; }
-    .page-hero h1 { font-size: 2.1rem; }
-    .page-hero-subtitle { font-size: 1.02rem; }
-    .prose-legal h2 { font-size: 1.7rem; }
+    .page-hero h1 { font-size: 1.8rem; }
+    .page-hero-subtitle { font-size: 0.9rem; }
     .pull-quote { padding: 36px 26px 28px; }
-    .pull-quote p { font-size: 1.18rem; }
+    .pull-quote p { font-size: 1.1rem; }
     .pull-quote::before { font-size: 5rem; top: -20px; left: 18px; }
     .faq-section { padding: 60px 5%; }
-    .faq-section h2, .related-posts-section h2, .contact-section-area h2 { font-size: 1.7rem; }
+    .faq-section h2, .related-posts-section h2, .contact-section-area h2 { font-size: 1.8rem; }
     .related-posts-section, .contact-section-area { padding: 60px 5%; }
     .differentials { padding: 60px 5%; }
     footer { padding: 50px 5% 24px; }
