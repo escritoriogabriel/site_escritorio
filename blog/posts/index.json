@@ -1,37 +1,858 @@
 [
   {
-    "title": "Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito",
     "slug": "conta-bloqueada-ou-banida-nas-redes-sociais-saiba-como-recuperar-pelo-direito",
     "url": "/blog/posts/conta-bloqueada-ou-banida-nas-redes-sociais-saiba-como-recuperar-pelo-direito.html",
-    "date": "2026-06-05T14:00:00Z",
-    "author": "Advogado Gabriel Corrêa",
+    "title": "Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito",
     "excerpt": "Ter sua conta banida no Instagram, Facebook ou TikTok pode gerar prejuízos reais. Veja como a Justiça brasileira tem obrigado plataformas a restabelecer perfis e indenizar usuários.",
-    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "date": "2026-06-05T14:00:00Z",
+    "image": "conta-bloqueada-redes-sociais.jpg",
+    "categories": [
+      "Direito Digital"
+    ],
     "tags": [
       "Redes Sociais",
       "Conta Bloqueada",
       "Dano Moral",
       "Direito do Consumidor"
-    ],
-    "categories": [
-      "Direito Digital"
     ]
   },
   {
-    "title": "A Importância do Direito Digital na Era Moderna",
     "slug": "a-import-ncia-do-direito-digital-na-era-moderna",
     "url": "/blog/posts/a-import-ncia-do-direito-digital-na-era-moderna.html",
-    "date": "2026-06-05T11:30:00Z",
-    "author": "Gabriel Corrêa",
+    "title": "A Importância do Direito Digital na Era Moderna",
     "excerpt": "Descubra como o Direito Digital protege seus dados e sua privacidade no mundo conectado de hoje.",
-    "image": "/public/images/direito-digital.jpg",
+    "date": "2026-06-05T11:30:00Z",
+    "image": "direito-digital.jpg",
+    "categories": [
+      "Direito Digital",
+      "Tecnologia"
+    ],
     "tags": [
       "LGPD",
       "cibersegurança",
       "privacidade"
-    ],
+    ]
+  },
+  {
+    "slug": "alienacao-parental-como-identificar-e-combater-essa-pratica",
+    "url": "/blog/posts/alienacao-parental-como-identificar-e-combater-essa-pratica.html",
+    "title": "Alienação Parental: Como identificar e combater essa prática?",
+    "excerpt": "\"Alienação Parental: Como identificar e combater essa",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/aliena-o-parental-como-identificar-e-combater-essa-pr-tica.jpg",
     "categories": [
-      "Direito Digital"
+      "Direito de Família"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "apreensao-de-veiculo-com-defeito-o-banco-pode-tomar-o-carro-que",
+    "url": "/blog/posts/apreensao-de-veiculo-com-defeito-o-banco-pode-tomar-o-carro-que.html",
+    "title": "\"Apreensão de Veículo com Defeito: O banco pode tomar o carro que",
+    "excerpt": "\"Apreensão de Veículo com Defeito: O banco pode tomar o",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/apreens-o-de-ve-culo-com-defeito-o-banco-pode-tomar-o-carro-que-n-o-funciona.jpg",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "assedio-moral-no-trabalho-como-identificar-denunciar-e-buscar",
+    "url": "/blog/posts/assedio-moral-no-trabalho-como-identificar-denunciar-e-buscar.html",
+    "title": "\"Assédio Moral no Trabalho: Como identificar, denunciar e buscar",
+    "excerpt": "\"Assédio Moral no Trabalho: Como identificar, denunciar e",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/ass-dio-moral-no-trabalho-como-identificar-denunciar-e-buscar-indeniza-o.jpg",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "busca-e-apreensao-em-local-de-trabalho-e-permitido",
+    "url": "/blog/posts/busca-e-apreensao-em-local-de-trabalho-e-permitido.html",
+    "title": "Busca e Apreensão em Local de Trabalho: É permitido?",
+    "excerpt": "Busca e Apreensão em Local de Trabalho: É permitido?.",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/busca-e-apreens-o-em-local-de-trabalho-permitido.jpg",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "clausula-de-exclusividade-em-contratos-quando-e-valida-e-seus",
+    "url": "/blog/posts/clausula-de-exclusividade-em-contratos-quando-e-valida-e-seus.html",
+    "title": "\"Cláusula de Exclusividade em Contratos: Quando é válida e seus",
+    "excerpt": "\"Cláusula de Exclusividade em Contratos: Quando é válida e",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/cl-usula-de-exclusividade-em-contratos-quando-v-lida-e-seus-limites.jpg",
+    "categories": [
+      "Direito Empresarial"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "contrato-de-namoro-vs-uniao-estavel-qual-a-diferenca-e-por-que",
+    "url": "/blog/posts/contrato-de-namoro-vs-uniao-estavel-qual-a-diferenca-e-por-que.html",
+    "title": "\"Contrato de Namoro vs. União Estável: Qual a diferença e por que",
+    "excerpt": "\"Contrato de Namoro vs. União Estável: Qual a diferença e",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/contrato-de-namoro-vs-uni-o-est-vel-qual-a-diferen-a-e-por-que-importa.jpg",
+    "categories": [
+      "Direito Civil"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "contrato-social-de-empresa-a-base-juridica-do-seu-negocio",
+    "url": "/blog/posts/contrato-social-de-empresa-a-base-juridica-do-seu-negocio.html",
+    "title": "Contrato Social de Empresa: A base jurídica do seu negócio.",
+    "excerpt": "\"Contrato Social de Empresa: A base jurídica do seu",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/contrato-social-de-empresa-a-base-jur-dica-do-seu-neg-cio.jpg",
+    "categories": [
+      "Direito Empresarial"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "crimes-ciberneticos-como-se-defender-de-golpes-e-fraudes",
+    "url": "/blog/posts/crimes-ciberneticos-como-se-defender-de-golpes-e-fraudes.html",
+    "title": "\"Crimes Cibernéticos: Como se defender de golpes e fraudes",
+    "excerpt": "\"Crimes Cibernéticos: Como se defender de golpes e fraudes",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/crimes-cibern-ticos-como-se-defender-de-golpes-e-fraudes-online.jpg",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "defesa-na-busca-e-apreensao-nulidades-e-juros-abusivos",
+    "url": "/blog/posts/defesa-na-busca-e-apreensao-nulidades-e-juros-abusivos.html",
+    "title": "Defesa na Busca e Apreensão: Nulidades e Juros Abusivos.",
+    "excerpt": "Defesa na Busca e Apreensão: Nulidades e Juros Abusivos.",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/defesa-na-busca-e-apreens-o-nulidades-e-juros-abusivos.jpg",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "divorcio-consensual-vs-litigioso-qual-o-melhor-caminho-para",
+    "url": "/blog/posts/divorcio-consensual-vs-litigioso-qual-o-melhor-caminho-para.html",
+    "title": "\"Divórcio Consensual vs. Litigioso: Qual o melhor caminho para",
+    "excerpt": "\"Divórcio Consensual vs. Litigioso: Qual o melhor caminho",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/div-rcio-consensual-vs-litigioso-qual-o-melhor-caminho-para-voc.jpg",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "doencas-ocupacionais-e-acidente-de-trabalho-seus-direitos-e",
+    "url": "/blog/posts/doencas-ocupacionais-e-acidente-de-trabalho-seus-direitos-e.html",
+    "title": "\"Doenças Ocupacionais e Acidente de Trabalho: Seus direitos e",
+    "excerpt": "\"Doenças Ocupacionais e Acidente de Trabalho: Seus direitos",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/doen-as-ocupacionais-e-acidente-de-trabalho-seus-direitos-e-benef-cios.jpg",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "guarda-compartilhada-entenda-seus-direitos-e-deveres-como",
+    "url": "/blog/posts/guarda-compartilhada-entenda-seus-direitos-e-deveres-como.html",
+    "title": "\"Guarda Compartilhada: Entenda seus direitos e deveres como",
+    "excerpt": "\"Guarda Compartilhada: Entenda seus direitos e deveres como",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/guarda-compartilhada-entenda-seus-direitos-e-deveres-como-pai-m-e.jpg",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "habeas-corpus-o-que-e-e-quando-pode-garantir-sua-liberdade",
+    "url": "/blog/posts/habeas-corpus-o-que-e-e-quando-pode-garantir-sua-liberdade.html",
+    "title": "Habeas Corpus: O que é e quando pode garantir sua liberdade.",
+    "excerpt": "\"Habeas Corpus: O que é e quando pode garantir sua",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/habeas-corpus-o-que-e-quando-pode-garantir-sua-liberdade.jpg",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "horas-extras-como-provar-e-cobrar-o-que-e-seu",
+    "url": "/blog/posts/horas-extras-como-provar-e-cobrar-o-que-e-seu.html",
+    "title": "Horas Extras: Como provar e cobrar o que é seu.",
+    "excerpt": "Horas Extras: Como provar e cobrar o que é seu.",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/horas-extras-como-provar-e-cobrar-o-que-seu.jpg",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "juros-abusivos-em-financiamentos-como-identificar-e-buscar-a",
+    "url": "/blog/posts/juros-abusivos-em-financiamentos-como-identificar-e-buscar-a.html",
+    "title": "\"Juros Abusivos em Financiamentos: Como identificar e buscar a",
+    "excerpt": "\"Juros Abusivos em Financiamentos: Como identificar e",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/juros-abusivos-em-financiamentos-como-identificar-e-buscar-a-revis-o.jpg",
+    "categories": [
+      "Direito Bancário"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "lei-maria-da-penha-direitos-da-vitima-e-defesa-do-acusado",
+    "url": "/blog/posts/lei-maria-da-penha-direitos-da-vitima-e-defesa-do-acusado.html",
+    "title": "Lei Maria da Penha: Direitos da vítima e defesa do acusado.",
+    "excerpt": "\"Lei Maria da Penha: Direitos da vítima e defesa do",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/lei-maria-da-penha-direitos-da-v-tima-e-defesa-do-acusado.jpg",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "pensao-alimenticia-como-calcular-pedir-e-revisar-o-valor",
+    "url": "/blog/posts/pensao-alimenticia-como-calcular-pedir-e-revisar-o-valor.html",
+    "title": "Pensão Alimentícia: Como calcular, pedir e revisar o valor?",
+    "excerpt": "\"Pensão Alimentícia: Como calcular, pedir e revisar o",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/pens-o-aliment-cia-como-calcular-pedir-e-revisar-o-valor.jpg",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "prisao-preventiva-como-funciona-e-como-pedir-a-revogacao",
+    "url": "/blog/posts/prisao-preventiva-como-funciona-e-como-pedir-a-revogacao.html",
+    "title": "Prisão Preventiva: Como funciona e como pedir a revogação.",
+    "excerpt": "\"Prisão Preventiva: Como funciona e como pedir a",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/pris-o-preventiva-como-funciona-e-como-pedir-a-revoga-o.jpg",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "progressao-de-regime-entenda-como-sair-da-prisao",
+    "url": "/blog/posts/progressao-de-regime-entenda-como-sair-da-prisao.html",
+    "title": "Progressão de Regime: Entenda como sair da prisão.",
+    "excerpt": "Progressão de Regime: Entenda como sair da prisão.",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/progress-o-de-regime-entenda-como-sair-da-pris-o.jpg",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "purgacao-da-mora-como-reaver-seu-veiculo-em-5-dias",
+    "url": "/blog/posts/purgacao-da-mora-como-reaver-seu-veiculo-em-5-dias.html",
+    "title": "Purgação da Mora: Como reaver seu veículo em 5 dias.",
+    "excerpt": "Purgação da Mora: Como reaver seu veículo em 5 dias.",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/purga-o-da-mora-como-reaver-seu-ve-culo-em-5-dias.jpg",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "rescisao-indireta-como-demitir-seu-patrao-e-receber-todos-os",
+    "url": "/blog/posts/rescisao-indireta-como-demitir-seu-patrao-e-receber-todos-os.html",
+    "title": "\"Rescisão Indireta: Como demitir seu patrão e receber todos os",
+    "excerpt": "\"Rescisão Indireta: Como demitir seu patrão e receber todos",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/rescis-o-indireta-como-demitir-seu-patr-o-e-receber-todos-os-direitos.jpg",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "teoria-do-adimplemento-substancial-quando-o-banco-nao-pode",
+    "url": "/blog/posts/teoria-do-adimplemento-substancial-quando-o-banco-nao-pode.html",
+    "title": "\"Teoria do Adimplemento Substancial: Quando o banco não pode",
+    "excerpt": "\"Teoria do Adimplemento Substancial: Quando o banco não",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/teoria-do-adimplemento-substancial-quando-o-banco-n-o-pode-tomar-seu-carro.jpg",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "termos-de-uso-e-politica-de-privacidade-lgpd-seu-site-esta-em",
+    "url": "/blog/posts/termos-de-uso-e-politica-de-privacidade-lgpd-seu-site-esta-em.html",
+    "title": "\"Termos de Uso e Política de Privacidade (LGPD): Seu site está em",
+    "excerpt": "\"Termos de Uso e Política de Privacidade (LGPD): Seu site",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/termos-de-uso-e-pol-tica-de-privacidade-lgpd-seu-site-est-em-dia.jpg",
+    "categories": [
+      "LGPD"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "trabalho-sem-carteira-assinada-conheca-seus-direitos-e-como",
+    "url": "/blog/posts/trabalho-sem-carteira-assinada-conheca-seus-direitos-e-como.html",
+    "title": "\"Trabalho sem Carteira Assinada: Conheça seus direitos e como",
+    "excerpt": "\"Trabalho sem Carteira Assinada: Conheça seus direitos e",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/trabalho-sem-carteira-assinada-conhe-a-seus-direitos-e-como-regularizar.jpg",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "trafico-de-drogas-diferenca-entre-usuario-e-traficante-e-suas",
+    "url": "/blog/posts/trafico-de-drogas-diferenca-entre-usuario-e-traficante-e-suas.html",
+    "title": "\"Tráfico de Drogas: Diferença entre usuário e traficante e suas",
+    "excerpt": "\"Tráfico de Drogas: Diferença entre usuário e traficante e",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/tr-fico-de-drogas-diferen-a-entre-usu-rio-e-traficante-e-suas-consequ-ncias.jpg",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "uniao-estavel-como-formalizar-e-quais-os-direitos-garantidos",
+    "url": "/blog/posts/uniao-estavel-como-formalizar-e-quais-os-direitos-garantidos.html",
+    "title": "União Estável: Como formalizar e quais os direitos garantidos?",
+    "excerpt": "\"União Estável: Como formalizar e quais os direitos",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/uni-o-est-vel-como-formalizar-e-quais-os-direitos-garantidos.jpg",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "veiculo-apreendido-o-que-acontece-se-o-banco-vender-por-valor",
+    "url": "/blog/posts/veiculo-apreendido-o-que-acontece-se-o-banco-vender-por-valor.html",
+    "title": "\"Veículo Apreendido: O que acontece se o banco vender por valor",
+    "excerpt": "\"Veículo Apreendido: O que acontece se o banco vender por",
+    "date": "2026-04-29T10:00:00.000000",
+    "image": "blog/images/ve-culo-apreendido-o-que-acontece-se-o-banco-vender-por-valor-baixo.jpg",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "fui-demitido-quais-sao-meus-direitos-e-como-calcular-a-rescisao",
+    "url": "/blog/posts/fui-demitido-quais-sao-meus-direitos-e-como-calcular-a-rescisao.html",
+    "title": "Fui Demitido: Quais São Meus Direitos e Como Calcular a Rescisão?",
+    "excerpt": "Saiba todos os direitos de quem foi demitido sem justa causa, como calcular rescisão trabalhista e quando buscar um advogado especialista.",
+    "date": "2026-04-29",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito do Trabalho"
+    ],
+    "tags": [
+      ""
+    ]
+  },
+  {
+    "slug": "acordo-de-nao-persecucao-penal-como-evitar-um-processo-criminal-de-forma-legal",
+    "url": "/blog/posts/acordo-de-nao-persecucao-penal-como-evitar-um-processo-criminal-de-forma-legal.html",
+    "title": "Acordo de Não Persecução Penal: Como Evitar um Processo Criminal de Forma Legal",
+    "excerpt": "Sabia que em muitos casos é possível resolver um processo criminal sem julgamento e sem ficha? Entenda o Acordo de Não Persecução Penal e quando ele pode te ajudar.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "ANPP",
+      "acordo não persecução penal",
+      "como evitar processo criminal",
+      "crimes leves",
+      "alternativas à prisão"
+    ]
+  },
+  {
+    "slug": "adocao-no-brasil-quais-sao-as-etapas-os-requisitos-e-o-que-ninguem-te-conta",
+    "url": "/blog/posts/adocao-no-brasil-quais-sao-as-etapas-os-requisitos-e-o-que-ninguem-te-conta.html",
+    "title": "Adoção no Brasil: Quais São as Etapas, os Requisitos e o Que Ninguém Te Conta",
+    "excerpt": "Quer adotar uma criança mas não sabe por onde começar? Entenda todas as etapas do processo de adoção no Brasil, os requisitos legais e como um advogado pode te ajudar.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "adoção",
+      "como adotar",
+      "processo de adoção",
+      "adoção no Brasil",
+      "ECA"
+    ]
+  },
+  {
+    "slug": "alienacao-parental-como-identificar-provar-e-o-que-a-lei-permite-fazer",
+    "url": "/blog/posts/alienacao-parental-como-identificar-provar-e-o-que-a-lei-permite-fazer.html",
+    "title": "Alienação Parental: Como Identificar, Provar e o Que a Lei Permite Fazer",
+    "excerpt": "Seu filho está sendo afastado de você após a separação? Conheça a alienação parental, como identificá-la e quais medidas legais existem para proteger sua família.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "alienação parental",
+      "o que é alienação parental",
+      "como provar alienação parental",
+      "lei alienação parental",
+      "proteção da criança"
+    ]
+  },
+  {
+    "slug": "audiencia-de-custodia-o-que-e-como-funciona-e-o-que-define-sua-liberdade",
+    "url": "/blog/posts/audiencia-de-custodia-o-que-e-como-funciona-e-o-que-define-sua-liberdade.html",
+    "title": "Audiência de Custódia: O Que é, Como Funciona e o Que Define Sua Liberdade",
+    "excerpt": "Após a prisão, você tem até 24 horas para ser apresentado a um juiz. Entenda o que é a audiência de custódia, o que o juiz decide e como se preparar para ela.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "audiência de custódia",
+      "o que é audiência de custódia",
+      "prisão em flagrante",
+      "liberdade provisória",
+      "direitos do preso"
+    ]
+  },
+  {
+    "slug": "busca-e-apreensao-de-veiculo-o-que-fazer-quando-o-oficial-de-justica-chega",
+    "url": "/blog/posts/busca-e-apreensao-de-veiculo-o-que-fazer-quando-o-oficial-de-justica-chega.html",
+    "title": "Busca e Apreensão de Veículo: O Que Fazer Quando o Oficial de Justiça Chega",
+    "excerpt": "O oficial de justiça bateu na sua porta para pegar seu carro? Saiba exatamente o que fazer, o que não fazer e como um advogado pode mudar essa situação agora.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Busca e Apreensão"
+    ],
+    "tags": [
+      "busca e apreensão veículo",
+      "oficial de justiça busca e apreensão",
+      "carro apreendido",
+      "como evitar busca e apreensão"
+    ]
+  },
+  {
+    "slug": "crimes-ciberneticos-como-se-defender-de-golpes-online-e-o-que-fazer-se-for-acusado",
+    "url": "/blog/posts/crimes-ciberneticos-como-se-defender-de-golpes-online-e-o-que-fazer-se-for-acusado.html",
+    "title": "Crimes Cibernéticos: Como Se Defender de Golpes Online e o Que Fazer se For Acusado",
+    "excerpt": "Caiu num golpe online ou está sendo acusado de um crime digital? Entenda como funcionam os crimes cibernéticos no Brasil e quais são seus direitos em cada situação.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "crimes cibernéticos",
+      "estelionato virtual",
+      "golpe do pix",
+      "invasão de celular",
+      "advogado crimes digitais"
+    ]
+  },
+  {
+    "slug": "crimes-de-transito-embriaguez-acidente-e-suspensao-da-cnh-conheca-seus-direitos",
+    "url": "/blog/posts/crimes-de-transito-embriaguez-acidente-e-suspensao-da-cnh-conheca-seus-direitos.html",
+    "title": "Crimes de Trânsito: Embriaguez, Acidente e Suspensão da CNH — Conheça Seus Direitos",
+    "excerpt": "Foi parado bêbado, se envolveu num acidente grave ou perdeu a CNH? Entenda o que o Código de Trânsito diz sobre crimes, penas e como se defender de forma eficaz.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "crimes de trânsito",
+      "embriaguez ao volante",
+      "homicídio culposo trânsito",
+      "suspensão CNH",
+      "acidente de carro crime"
+    ]
+  },
+  {
+    "slug": "divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer",
+    "url": "/blog/posts/divorcio-em-cartorio-quando-e-possivel-quanto-custa-e-como-fazer.html",
+    "title": "Divórcio em Cartório: Quando é Possível, Quanto Custa e Como Fazer",
+    "excerpt": "Sabia que é possível se divorciar sem ir ao tribunal? Entenda quando o divórcio em cartório é permitido, quais documentos você precisa e como o processo funciona.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "divórcio em cartório",
+      "divórcio extrajudicial",
+      "divórcio consensual",
+      "divórcio rápido",
+      "como se divorciar"
+    ]
+  },
+  {
+    "slug": "fui-preso-o-que-fazer-nas-primeiras-horas-e-quais-sao-seus-direitos",
+    "url": "/blog/posts/fui-preso-o-que-fazer-nas-primeiras-horas-e-quais-sao-seus-direitos.html",
+    "title": "Fui Preso: O Que Fazer nas Primeiras Horas e Quais São Seus Direitos",
+    "excerpt": "Ser preso é um momento de pânico. Mas o que você faz nas primeiras horas pode mudar tudo. Entenda seus direitos e o que jamais deve fazer ao ser detido.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "fui preso",
+      "direitos do preso",
+      "advogado criminalista urgente",
+      "audiência de custódia",
+      "prisão em flagrante"
+    ]
+  },
+  {
+    "slug": "guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta",
+    "url": "/blog/posts/guarda-compartilhada-como-funciona-no-dia-a-dia-e-o-que-ninguem-te-conta.html",
+    "title": "Guarda Compartilhada: Como Funciona no Dia a Dia e o Que Ninguém Te Conta",
+    "excerpt": "Seu filho vai morar onde? Quem decide a escola e o médico? Entenda como a guarda compartilhada funciona na prática e proteja o bem-estar dos seus filhos.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "guarda compartilhada",
+      "guarda unilateral",
+      "direitos dos pais",
+      "convivência com filhos",
+      "divórcio com filhos"
+    ]
+  },
+  {
+    "slug": "habeas-corpus-o-que-e-quando-usar-e-como-pode-garantir-sua-liberdade",
+    "url": "/blog/posts/habeas-corpus-o-que-e-quando-usar-e-como-pode-garantir-sua-liberdade.html",
+    "title": "Habeas Corpus: O Que é, Quando Usar e Como Pode Garantir Sua Liberdade",
+    "excerpt": "Preso de forma ilegal ou abusiva? O habeas corpus é o remédio jurídico mais poderoso para garantir a liberdade. Entenda quando e como utilizá-lo.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "habeas corpus",
+      "o que é habeas corpus",
+      "pedir habeas corpus",
+      "liberdade provisória",
+      "prisão ilegal"
+    ]
+  },
+  {
+    "slug": "inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia",
+    "url": "/blog/posts/inventario-o-passo-a-passo-completo-para-evitar-problemas-e-brigas-na-familia.html",
+    "title": "Inventário: O Passo a Passo Completo para Evitar Problemas e Brigas na Família",
+    "excerpt": "Alguém da sua família faleceu e você precisa regularizar os bens? Entenda como funciona o inventário no Brasil, prazos, custos e como evitar conflitos entre herdeiros.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "inventário",
+      "inventário extrajudicial",
+      "inventário judicial",
+      "partilha de herança",
+      "documentos inventário"
+    ]
+  },
+  {
+    "slug": "lei-maria-da-penha-como-funciona-a-protecao-a-vitima-e-a-defesa-do-acusado",
+    "url": "/blog/posts/lei-maria-da-penha-como-funciona-a-protecao-a-vitima-e-a-defesa-do-acusado.html",
+    "title": "Lei Maria da Penha: Como Funciona a Proteção à Vítima e a Defesa do Acusado",
+    "excerpt": "A Lei Maria da Penha protege vítimas de violência doméstica — mas também exige cuidado quando usada de forma indevida. Entenda seus direitos em ambos os lados.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "Lei Maria da Penha",
+      "medidas protetivas",
+      "violência doméstica",
+      "como denunciar violência",
+      "defesa acusado Maria da Penha"
+    ]
+  },
+  {
+    "slug": "partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime",
+    "url": "/blog/posts/partilha-de-bens-no-divorcio-o-que-entra-na-divisao-em-cada-regime.html",
+    "title": "Partilha de Bens no Divórcio: O Que Entra na Divisão em Cada Regime?",
+    "excerpt": "O que é seu, o que é do casal e o que fica com cada um após o divórcio? A resposta depende do regime de bens. Entenda agora antes que seja tarde.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "partilha de bens",
+      "regime de bens",
+      "comunhão parcial",
+      "separação de bens",
+      "divórcio bens"
+    ]
+  },
+  {
+    "slug": "pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos",
+    "url": "/blog/posts/pensao-alimenticia-em-2026-como-o-valor-e-calculado-e-quais-sao-seus-direitos.html",
+    "title": "Pensão Alimentícia em 2026: Como o Valor é Calculado e Quais São Seus Direitos",
+    "excerpt": "Quanto deve ser a pensão do seu filho? Entenda em 2026 como o juiz calcula o valor, o que pode ser revisado e o que fazer quando o pagamento atrasa.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "pensão alimentícia",
+      "cálculo pensão alimentícia",
+      "revisão de pensão",
+      "pensão para filhos",
+      "alimentos"
+    ]
+  },
+  {
+    "slug": "planejamento-sucessorio-como-proteger-o-patrimonio-familiar-e-evitar-conflitos",
+    "url": "/blog/posts/planejamento-sucessorio-como-proteger-o-patrimonio-familiar-e-evitar-conflitos.html",
+    "title": "Planejamento Sucessório: Como Proteger o Patrimônio Familiar e Evitar Conflitos",
+    "excerpt": "Você sabe o que vai acontecer com seu patrimônio quando você não estiver mais aqui? Entenda como o planejamento sucessório protege sua família e reduz impostos e conflitos.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "planejamento sucessório",
+      "testamento",
+      "doação em vida",
+      "holding familiar",
+      "inventário"
+    ]
+  },
+  {
+    "slug": "prisao-preventiva-o-que-e-quando-e-legal-e-como-pedir-a-revogacao",
+    "url": "/blog/posts/prisao-preventiva-o-que-e-quando-e-legal-e-como-pedir-a-revogacao.html",
+    "title": "Prisão Preventiva: O Que é, Quando é Legal e Como Pedir a Revogação",
+    "excerpt": "Seu familiar foi preso preventivamente e você não sabe o que fazer? Entenda o que é a prisão preventiva, quando ela é legal e como lutar pela liberdade com urgência.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "prisão preventiva",
+      "revogação prisão preventiva",
+      "requisitos prisão preventiva",
+      "liberdade provisória",
+      "medidas cautelares"
+    ]
+  },
+  {
+    "slug": "progressao-de-regime-como-funciona-o-caminho-da-prisao-para-a-liberdade",
+    "url": "/blog/posts/progressao-de-regime-como-funciona-o-caminho-da-prisao-para-a-liberdade.html",
+    "title": "Progressão de Regime: Como Funciona o Caminho da Prisão para a Liberdade",
+    "excerpt": "Seu familiar está preso e você quer entender como funciona a progressão de regime? Saiba quais são os requisitos, prazos e como um advogado pode acelerar esse processo.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "progressão de regime",
+      "regime semiaberto",
+      "regime aberto",
+      "como sair da cadeia",
+      "execução penal"
+    ]
+  },
+  {
+    "slug": "resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo",
+    "url": "/blog/posts/resciso-indireta-seu-patro-est-errado-e-voc-ainda-tem-direito-a-receber-tudo.html",
+    "title": "Rescisão Indireta: Seu Patrão Está Errado — e Você Ainda Tem Direito a Receber Tudo",
+    "excerpt": "Você está sofrendo assédio, atrasos de salário ou humilhações no trabalho? Saiba que a lei permite que você encerre o contrato por culpa do empregador — e receba todos os seus direitos.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      "rescisão indireta",
+      "direitos trabalhistas",
+      "CLT",
+      "justa causa do empregador",
+      "verbas rescisórias",
+      "FGTS"
+    ]
+  },
+  {
+    "slug": "testamento-por-que-voce-deveria-pensar-em-fazer-um-agora-mesmo-sendo-jovem",
+    "url": "/blog/posts/testamento-por-que-voce-deveria-pensar-em-fazer-um-agora-mesmo-sendo-jovem.html",
+    "title": "Testamento: Por Que Você Deveria Pensar em Fazer Um Agora (Mesmo Sendo Jovem)",
+    "excerpt": "Testamento não é só para idosos ou ricos. Descubra por que fazer um pode proteger as pessoas que você ama e evitar brigas desnecessárias na sua família.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "testamento",
+      "como fazer testamento",
+      "testamento público",
+      "planejamento sucessório",
+      "herança"
+    ]
+  },
+  {
+    "slug": "trafico-de-drogas-a-diferenca-entre-usuario-e-traficante-pode-definir-anos-da-sua-vida",
+    "url": "/blog/posts/trafico-de-drogas-a-diferenca-entre-usuario-e-traficante-pode-definir-anos-da-sua-vida.html",
+    "title": "Tráfico de Drogas: A Diferença Entre Usuário e Traficante Pode Definir Anos da Sua Vida",
+    "excerpt": "Pego com droga? A lei faz uma distinção crucial entre usuário e traficante — e essa diferença pode significar anos de prisão ou liberdade. Entenda como funciona.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Criminal"
+    ],
+    "tags": [
+      "tráfico de drogas",
+      "usuário de drogas",
+      "pena tráfico de drogas",
+      "tráfico privilegiado",
+      "defesa crimes de drogas"
+    ]
+  },
+  {
+    "slug": "uniao-estavel-quais-sao-os-direitos-deveres-e-o-que-voce-precisa-formalizar",
+    "url": "/blog/posts/uniao-estavel-quais-sao-os-direitos-deveres-e-o-que-voce-precisa-formalizar.html",
+    "title": "União Estável: Quais São os Direitos, Deveres e o Que Você Precisa Formalizar",
+    "excerpt": "Você mora com seu companheiro há anos mas nunca casou? Saiba que a união estável gera direitos e deveres reais — e o que pode acontecer se você não formalizar.",
+    "date": "2026-04-27T18:00:00.000000",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito de Família"
+    ],
+    "tags": [
+      "união estável",
+      "direitos união estável",
+      "contrato união estável",
+      "como comprovar união estável",
+      "direito de família"
+    ]
+  },
+  {
+    "slug": "rescis-o-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demiss-o-com-direitos",
+    "url": "/blog/posts/rescis-o-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demiss-o-com-direitos.html",
+    "title": "Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos",
+    "excerpt": "Saiba como funciona a rescisão indireta, a 'justa causa do empregador', e garanta seus direitos mesmo quando a empresa descumpre o contrato.",
+    "date": "2026-04-27T14:47:26.772572",
+    "image": "/blog/images/rescisao-indireta.jpg",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      "rescisão indireta",
+      "direitos do trabalhador",
+      "CLT"
+    ]
+  },
+  {
+    "slug": "resciso-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demisso-com-direitos",
+    "url": "/blog/posts/resciso-indireta-quando-o-empregador-comete-a-falta-e-o-trabalhador-pode-pedir-demisso-com-direitos.html",
+    "title": "Rescisão Indireta: Quando o Empregador Comete a Falta e o Trabalhador Pode Pedir Demissão com Direitos",
+    "excerpt": "Entenda o que é rescisão indireta, quais situações configuram falta grave do empregador, quais verbas o trabalhador tem direito e como agir para defender seus direitos.",
+    "date": "2026-04-27",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "categories": [
+      "Direito Trabalhista"
+    ],
+    "tags": [
+      "rescisão indireta",
+      "direitos trabalhistas",
+      "CLT",
+      "FGTS",
+      "demissão"
     ]
   }
 ]

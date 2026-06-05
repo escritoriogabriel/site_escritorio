@@ -1,561 +1,523 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128635569"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18128635569');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito | Blog Jurídico Gabriel Corrêa</title>
+    <meta name="description" content="Ter sua conta banida no Instagram, Facebook ou TikTok pode gerar prejuízos reais. Veja como a Justiça brasileira tem obrigado plataformas a restabelecer perfis e indenizar usuários.">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Design system global -->
+    <link rel="stylesheet" href="/pages-style.css">
+
     <style>
-        :root { 
-            --primary: #172B41; 
-            --primary-light: #1f3a52;
-            --primary-dark: #0f1f2e;
-            --accent: #C9A961; 
-            --accent-light: #e0c9a0;
-            --text: #2D3748; 
-            --text-light: #718096;
-            --text-lighter: #a0aec0;
-            --bg: #F7FAFC;
-            --bg-light: #FFFFFF;
-            --border: #e2e8f0;
-            --whatsapp: #25D366;
-            --success: #48bb78;
-            --warning: #ed8936;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { scroll-behavior: smooth; }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.8; 
-            color: var(--text); 
-            background: var(--bg);
-        }
+        /* ============================================================
+           POST PAGE — estilos específicos
+           ============================================================ */
 
-        /* ===== TOP BAR ===== */
-        .top-bar {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 10px 5%;
-            font-size: 0.8rem;
-            text-align: right;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        /* --- Breadcrumb --- */
+        .breadcrumb-bar {
+            background: var(--bg-paper);
+            border-bottom: 1px solid var(--border-soft);
+            padding: 14px 5%;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-family: var(--font-sans);
         }
-        .top-bar a { color: var(--accent-light); text-decoration: none; transition: color 0.3s; }
-        .top-bar a:hover { color: var(--accent); }
-        .top-bar i { margin-right: 5px; }
-
-        /* ===== HEADER & NAVIGATION ===== */
-        header { 
-            background: var(--bg-light); 
-            padding: 0 5%;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            height: 80px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
+        .breadcrumb-bar a {
+            color: var(--accent-gold-deep);
             text-decoration: none;
-            transition: transform 0.3s;
+            transition: color 0.2s;
         }
-        .logo:hover { transform: scale(1.02); }
-        .logo img {
-            height: 36px;
-            width: auto;
-            max-width: 280px;
-        }
+        .breadcrumb-bar a:hover { color: var(--primary-blue); }
+        .breadcrumb-bar span { margin: 0 8px; color: var(--border-line); }
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s;
+        /* --- Post Hero --- */
+        .post-hero {
             position: relative;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a:hover { color: var(--accent); }
-
-        /* Dropdown */
-        .dropdown { position: relative; }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--bg-light);
-            min-width: 280px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-            z-index: 100;
-            top: 100%;
-            left: 0;
-            border-top: 4px solid var(--accent);
-            border-radius: 8px;
-            margin-top: 8px;
+            width: 100%;
+            min-height: 420px;
+            background: linear-gradient(160deg, var(--primary-blue-deep) 0%, var(--primary-blue) 100%);
+            display: flex;
+            align-items: flex-end;
             overflow: hidden;
         }
-        .dropdown:hover .dropdown-content { display: block; }
-        .dropdown-content a {
-            color: var(--text);
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--border);
-            transition: all 0.2s;
-            position: relative;
-        }
-        .dropdown-content a::before {
-            content: '';
+        .post-hero-bg {
             position: absolute;
-            left: 0;
-            width: 3px;
+            inset: 0;
+            object-fit: cover;
+            width: 100%;
             height: 100%;
-            background: var(--accent);
-            transform: scaleY(0);
-            transition: transform 0.2s;
+            opacity: 0.22;
         }
-        .dropdown-content a:hover::before { transform: scaleY(1); }
-        .dropdown-content a:last-child { border-bottom: none; }
-        .dropdown-content a:hover { background-color: var(--bg); color: var(--accent); }
-
-        .btn-nav-whatsapp {
-            background: linear-gradient(135deg, var(--whatsapp) 0%, #1da851 100%);
-            color: white !important;
-            padding: 12px 24px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            font-size: 0.9rem;
+        .post-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, rgba(23,43,65,0.55) 60%, transparent 100%);
+        }
+        .post-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 5% 56px;
+        }
+        .post-hero-category {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-blue-deep);
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
+            font-size: 0.72rem;
             font-weight: 700;
-            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            font-family: var(--font-sans);
+        }
+        .post-hero h1 {
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-family: var(--font-serif);
+        }
+        .post-hero-meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.84rem;
+            color: rgba(255,255,255,0.75);
+            font-family: var(--font-sans);
+        }
+        .post-hero-meta i { color: var(--accent-gold); margin-right: 6px; }
+
+        /* --- Post Layout --- */
+        .post-layout {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 5% 40px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 48px;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .post-layout { grid-template-columns: 1fr; }
+            .post-sidebar { display: none; }
+        }
+
+        /* --- Post Content --- */
+        .post-main {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 50px 52px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-soft);
+        }
+        @media (max-width: 640px) {
+            .post-main { padding: 28px 22px; }
+        }
+
+        .post-content { font-size: 1.05rem; line-height: 1.9; color: var(--text-body); }
+
+        .post-content h2 {
+            font-family: var(--font-serif);
+            font-size: 1.65rem;
+            color: var(--primary-blue);
+            margin: 48px 0 20px;
+            padding-left: 18px;
+            border-left: 4px solid var(--accent-gold);
+        }
+        .post-content h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin: 36px 0 14px;
+        }
+        .post-content h4 {
+            font-size: 1.1rem;
+            color: var(--primary-blue-soft);
+            margin: 28px 0 10px;
+        }
+        .post-content p { margin-bottom: 22px; }
+        .post-content ul, .post-content ol {
+            margin: 20px 0 24px 24px;
+            padding-left: 16px;
+        }
+        .post-content li { margin-bottom: 10px; line-height: 1.8; }
+        .post-content ul li::marker { color: var(--accent-gold); font-weight: bold; }
+
+        .post-content blockquote {
+            background: var(--accent-gold-soft);
+            border-left: 5px solid var(--accent-gold);
+            padding: 22px 28px;
+            margin: 36px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            font-style: italic;
+            color: var(--primary-blue);
+        }
+
+        .post-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 36px 0;
+            font-size: 0.94rem;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+        .post-content th {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-family: var(--font-sans);
+        }
+        .post-content td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-soft);
+            background: var(--white);
+        }
+        .post-content tr:nth-child(even) td { background: var(--bg-paper); }
+        .post-content tr:hover td { background: var(--accent-gold-soft); }
+
+        .post-content img {
+            width: 100%;
+            border-radius: var(--radius-md);
+            margin: 36px 0;
+            box-shadow: var(--shadow-elevated);
+        }
+        .post-content a {
+            color: var(--accent-gold-deep);
+            text-decoration: underline;
+            text-decoration-color: rgba(201,169,97,0.4);
+            transition: color 0.2s;
+        }
+        .post-content a:hover { color: var(--primary-blue); }
+
+        /* Tags no final do post */
+        .post-tags-section {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-soft);
+        }
+        .post-tags-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            font-family: var(--font-sans);
+            margin-bottom: 12px;
+        }
+        .post-tag-pill {
+            display: inline-block;
+            padding: 5px 14px;
+            background: var(--bg-paper);
+            border: 1px solid var(--border-line);
+            border-radius: var(--radius-pill);
+            font-size: 0.78rem;
+            color: var(--text-body);
+            margin: 4px 4px 4px 0;
+            font-family: var(--font-sans);
+            transition: all 0.2s;
+        }
+        .post-tag-pill:hover {
+            background: var(--accent-gold-soft);
+            border-color: var(--accent-gold);
+            color: var(--primary-blue);
+        }
+
+        /* --- Sidebar --- */
+        .post-sidebar { display: flex; flex-direction: column; gap: 28px; }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-soft);
+        }
+        .sidebar-card-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold-deep);
+            margin-bottom: 18px;
+            font-family: var(--font-sans);
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        /* Sidebar CTA */
+        .sidebar-cta {
+            background: linear-gradient(160deg, var(--primary-blue-deep) 0%, var(--primary-blue) 100%);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            text-align: center;
+            border: none;
+        }
+        .sidebar-cta .sidebar-card-title { color: var(--accent-gold); border-color: rgba(201,169,97,0.25); }
+        .sidebar-cta p {
+            color: rgba(255,255,255,0.78);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+        .sidebar-cta .btn-whatsapp {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-        .btn-nav-whatsapp:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-        }
-
-        /* ===== BREADCRUMB ===== */
-        .breadcrumb {
-            background: var(--bg-light);
-            padding: 16px 5%;
-            border-bottom: 1px solid var(--border);
+            background: var(--whatsapp-green);
+            color: var(--white);
+            padding: 12px 22px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
             font-size: 0.9rem;
-        }
-        .breadcrumb a {
-            color: var(--accent);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.25s var(--ease);
+            font-family: var(--font-sans);
         }
-        .breadcrumb a:hover { color: var(--primary); }
-        .breadcrumb span { color: var(--text-light); margin: 0 8px; }
+        .sidebar-cta .btn-whatsapp:hover {
+            background: var(--whatsapp-green-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37,211,102,0.35);
+        }
 
-        /* ===== HERO SECTION ===== */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 420px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            overflow: hidden;
+        /* --- Related Posts Section --- */
+        .related-posts-section {
+            margin-top: 56px;
+            padding-top: 48px;
+            border-top: 2px solid var(--border-soft);
+        }
+        .related-posts-container { max-width: 100%; }
+        .related-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 28px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: 1fr; }
+        }
+        .related-card {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-card);
+            text-decoration: none;
+            transition: all 0.35s var(--ease);
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
-            opacity: 0.5;
+        .related-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-elegant);
+            border-color: var(--accent-gold);
         }
-        .hero-image {
-            position: absolute;
+        .related-img-wrapper {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            background: var(--accent-gold-soft);
+        }
+        .related-img-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.3;
-            z-index: 0;
+            transition: transform 0.5s var(--ease);
         }
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            color: white;
-            padding: 40px 5%;
-            max-width: 900px;
-        }
-        .hero-category {
+        .related-card:hover .related-img-wrapper img { transform: scale(1.07); }
+        .related-content { padding: 20px; }
+        .related-category {
             display: inline-block;
-            background: var(--accent);
-            color: var(--primary);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.68rem;
             font-weight: 700;
-            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            color: var(--accent-gold-deep);
+            background: var(--accent-gold-soft);
+            padding: 3px 10px;
+            border-radius: var(--radius-pill);
+            margin-bottom: 10px;
+            font-family: var(--font-sans);
         }
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .hero-meta {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-size: 0.95rem;
-            opacity: 0.95;
-        }
-        .hero-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .related-content h4 {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            color: var(--primary-blue);
+            line-height: 1.35;
         }
 
-        /* ===== MAIN CONTENT ===== */
-        .post-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 40px;
-            max-width: 100%;
-            width: 90%;
-            margin: 60px auto;
-            padding: 0 5%;
+        /* --- CTA Premium --- */
+        .post-cta-section {
+            margin-top: 56px;
         }
-
-        .post-main {
-            background: var(--bg-light);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        /* ===== POST CONTENT ===== */
-        .post-content {
-            font-size: 1.1rem;
-            color: var(--text);
-            line-height: 1.9;
-        }
-
-        .post-content h2 { 
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary); 
-            margin: 50px 0 25px 0; 
-            font-size: 1.9rem;
-            font-weight: 700;
-            border-left: 5px solid var(--accent);
-            padding-left: 20px;
-            transition: all 0.3s;
-        }
-
-        .post-content h3 { 
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary); 
-            margin: 40px 0 18px 0; 
-            font-size: 1.4rem;
-            font-weight: 700;
-        }
-
-        .post-content h4 {
-            color: var(--primary-light);
-            margin: 30px 0 12px 0;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .post-content p { 
-            margin-bottom: 22px;
-            text-align: justify;
-        }
-
-        /* Listas */
-        .post-content ul, .post-content ol { 
-            margin: 25px 0 25px 30px; 
-            padding-left: 20px;
-        }
-        .post-content li { 
-            margin-bottom: 12px;
-            line-height: 1.8;
-        }
-        .post-content ul li::marker {
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Tabelas */
-        .post-content table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 40px 0; 
-            font-size: 0.95rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-radius: 8px;
+        .post-cta-box {
+            background: linear-gradient(160deg, var(--primary-blue-deep) 0%, #1a3352 50%, var(--primary-blue) 100%);
+            border-radius: var(--radius-xl);
+            padding: 56px 48px;
+            text-align: center;
+            position: relative;
             overflow: hidden;
         }
-        .post-content th { 
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white; 
-            padding: 16px; 
-            text-align: left;
+        .post-cta-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% -20%, rgba(201,169,97,0.22) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .post-cta-box::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(201,169,97,0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .post-cta-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+        .post-cta-eyebrow {
+            display: inline-block;
+            font-size: 0.7rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            margin-bottom: 18px;
+            font-family: var(--font-sans);
         }
-        .post-content td { 
-            padding: 14px 16px; 
-            border-bottom: 1px solid var(--border); 
-            background: var(--bg-light);
-        }
-        .post-content tr:hover td { background: var(--bg); }
-        .post-content tr:nth-child(even) td { background: var(--bg); }
-
-        /* Blockquotes */
-        .post-content blockquote { 
-            background: linear-gradient(135deg, rgba(201, 169, 97, 0.1) 0%, rgba(201, 169, 97, 0.05) 100%);
-            border-left: 5px solid var(--accent); 
-            padding: 25px 30px; 
-            margin: 40px 0; 
+        .post-cta-box h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.25;
             font-style: italic;
-            border-radius: 0 8px 8px 0;
-            color: var(--text);
         }
-
-        /* Imagens */
-        .post-content img { 
-            width: 100%; 
-            border-radius: 12px; 
-            margin: 40px 0; 
-            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-            transition: transform 0.3s;
+        .post-cta-box p {
+            color: rgba(255,255,255,0.78);
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-bottom: 32px;
         }
-        .post-content img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Código */
-        .post-content code {
-            background: var(--bg);
-            color: var(--primary);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        .post-content pre {
-            background: var(--primary-dark);
-            color: #e0e0e0;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 25px 0;
-            font-size: 0.9rem;
-        }
-        .post-content pre code {
-            background: none;
-            color: #e0e0e0;
-            padding: 0;
-        }
-
-        /* ===== SIDEBAR ===== */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .sidebar-box {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent);
-        }
-
-        .sidebar-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
+        .btn-cta-whatsapp {
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .sidebar-title i {
-            color: var(--accent);
-        }
-
-        .tag {
-            display: inline-block;
-            background: var(--bg);
-            color: var(--primary);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin: 5px 5px 5px 0;
+            background: var(--accent-gold);
+            color: var(--primary-blue-deep);
+            padding: 16px 36px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 1rem;
             text-decoration: none;
-            transition: all 0.3s;
-            border: 1px solid var(--border);
+            transition: all 0.3s var(--ease);
+            font-family: var(--font-sans);
+            box-shadow: 0 8px 28px rgba(201,169,97,0.35);
         }
-        .tag:hover {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
+        .btn-cta-whatsapp:hover {
+            background: var(--accent-gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 36px rgba(201,169,97,0.45);
         }
+        .btn-cta-whatsapp i { font-size: 1.15rem; }
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 40px 5%;
-            text-align: center;
-            margin-top: 80px;
-            border-top: 4px solid var(--accent);
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        footer a {
-            color: var(--accent-light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--accent);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .post-wrapper {
-                grid-template-columns: 1fr;
-                width: 95%;
-                margin: 40px auto;
-            }
-            
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .post-main {
-                padding: 25px;
-            }
-            
-            .post-content h2 {
-                font-size: 1.5rem;
-            }
+        @media (max-width: 640px) {
+            .post-cta-box { padding: 40px 24px; }
         }
     </style>
 </head>
 <body>
+
     <div class="top-bar">
-        <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" target="_blank">
-            <i class="fas fa-phone"></i> Fale com a gente: (47) 98867-0233
-        </a>
+        <i class="fas fa-phone"></i> <a href="tel:47988670233">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20Blog%20Jur%C3%ADdico%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o.%20%E2%9A%96%EF%B8%8F">(47) 98867-0233</a>
     </div>
 
-    <header>
-        <a href="/" class="logo">
-            <img src="/assets/logo.png" alt="Gabriel Corrêa - Advocacia">
-        </a>
-        <nav>
+    <header id="siteHeader">
+        <a href="/index.html" class="logo"><img src="/assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/index.html">Início</a></li>
                 <li class="dropdown">
-                    <a href="#">Áreas de Atuação</a>
+                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.65rem; margin-left: 4px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="/#direito-civil"><i class="fas fa-gavel"></i> Direito Civil</a>
-                        <a href="/#direito-trabalhista"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
-                        <a href="/#direito-penal"><i class="fas fa-shield-alt"></i> Direito Penal</a>
+                        <a href="/trabalhista-empregado.html"><i class="fas fa-hard-hat"></i>Trabalhista — Empregado</a>
+                        <a href="/trabalhista-empresa.html"><i class="fas fa-building"></i>Trabalhista — Empresa</a>
+                        <a href="/familia.html"><i class="fas fa-heart"></i>Direito de Família</a>
+                        <a href="/criminal.html"><i class="fas fa-balance-scale"></i>Criminal</a>
+                        <a href="/contrato.html"><i class="fas fa-file-contract"></i>Contratos</a>
+                        <a href="/busca-e-apreensao.html"><i class="fas fa-search-location"></i>Busca e Apreensão</a>
                     </div>
                 </li>
-                <li><a href="/#sobre">Sobre</a></li>
-                <li><a href="/#contato">Contato</a></li>
+                <li><a href="/sobre.html">Sobre</a></li>
+                <li><a href="/blog.html" class="active">Blog</a></li>
+                <li><a href="/contato.html">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20Blog%20Jur%C3%ADdico%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o.%20%E2%9A%96%EF%B8%8F" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </nav>
     </header>
 
-    <div class="breadcrumb">
-        <a href="/">Home</a>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <a href="/index.html">Início</a>
         <span>/</span>
         <a href="/blog.html">Blog</a>
         <span>/</span>
         <span>Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito</span>
     </div>
 
-    <section class="hero">
-        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito" class="hero-image">
-        <div class="hero-content">
-            <div class="hero-category">Direito Digital</div>
-            <h1 class="hero-title">Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito</h1>
-            <div class="hero-meta">
-                <div class="hero-meta-item">
-                    <i class="fas fa-calendar"></i>
-                    <span>2026-06-05</span>
-                </div>
-                <div class="hero-meta-item">
-                    <i class="fas fa-user"></i>
-                    <span>Advogado Gabriel Corrêa</span>
-                </div>
+    <!-- Post Hero -->
+    <section class="post-hero">
+        <img class="post-hero-bg" src="/conta-bloqueada-redes-sociais.jpg" alt="Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito">
+        <div class="post-hero-overlay"></div>
+        <div class="post-hero-content">
+            <span class="post-hero-category">Direito Digital</span>
+            <h1>Conta Bloqueada ou Banida nas Redes Sociais? Saiba Como Recuperar pelo Direito</h1>
+            <div class="post-hero-meta">
+                <span><i class="far fa-calendar-alt"></i>05/06/2026</span>
+                <span><i class="fas fa-user-tie"></i>Dr. Gabriel Corrêa</span>
+                <span><i class="fas fa-balance-scale"></i>OAB/SC 63.737</span>
             </div>
         </div>
     </section>
 
-    <div class="post-wrapper">
-        <main class="post-main">
-            <article class="post-content">
+    <!-- Post Layout -->
+    <div class="post-layout">
+
+        <!-- Main Content -->
+        <article class="post-main">
+            <div class="post-content">
                 <h2>O Bloqueio Que Ninguém Espera</h2>
 <p>Você abre o aplicativo e descobre que sua conta foi suspensa ou permanentemente banida — sem aviso prévio, sem explicação satisfatória e sem canal eficaz de contestação. Para milhões de brasileiros, essa situação deixou de ser raridade para se tornar rotina. E o que as plataformas chamam de "violação de termos de uso" muitas vezes nada mais é do que uma decisão algorítmica arbitrária, sem análise humana e sem contraditório.</p>
 <p>O Direito brasileiro, no entanto, não está alheio a esse cenário. A jurisprudência avança rapidamente no sentido de responsabilizar as grandes plataformas digitais quando o banimento ou bloqueio se mostra injustificado, desproporcional ou executado sem observância dos princípios elementares do due process.</p>
@@ -646,34 +608,142 @@
 <h3>Sua conta foi bloqueada ou banida?</h3>
 <p>Fale com o Dr. Gabriel Corrêa e avalie seus direitos sem compromisso.</p>
 <p><a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Minha%20conta%20foi%20bloqueada%20nas%20redes%20sociais%20e%20preciso%20de%20orienta%C3%A7%C3%A3o%20jur%C3%ADdica%21">👉 Chamar no WhatsApp (47) 98867-0233</a></p>
-            </article>
-        </main>
-
-        <aside class="sidebar">
-            <div class="sidebar-box">
-                <div class="sidebar-title">
-                    <i class="fas fa-tags"></i> Tags
-                </div>
-                <a href="/blog.html?tag=Redes Sociais" class="tag">Redes Sociais</a><a href="/blog.html?tag=Conta Bloqueada" class="tag">Conta Bloqueada</a><a href="/blog.html?tag=Dano Moral" class="tag">Dano Moral</a><a href="/blog.html?tag=Direito do Consumidor" class="tag">Direito do Consumidor</a>
             </div>
 
-            <div class="sidebar-box">
-                <div class="sidebar-title">
-                    <i class="fas fa-headset"></i> Precisa de Ajuda?
+            <!-- Tags -->
+            <div class="post-tags-section">
+                <p class="post-tags-label">Tags</p>
+                <span class="post-tag-pill">Redes Sociais</span> <span class="post-tag-pill">Conta Bloqueada</span> <span class="post-tag-pill">Dano Moral</span> <span class="post-tag-pill">Direito do Consumidor</span>
+            </div>
+
+            <!-- Related Posts -->
+            
+    <section class="related-posts-section">
+        <div class="related-posts-container">
+            <h3 class="related-title">Leia também:</h3>
+            <div class="related-grid">
+                
+        <a href="/blog/posts/a-import-ncia-do-direito-digital-na-era-moderna.html" class="related-card">
+            <div class="related-img-wrapper">
+                <img src="/direito-digital.jpg" alt="A Importância do Direito Digital na Era Moderna" loading="lazy">
+            </div>
+            <div class="related-content">
+                <span class="related-category">Direito Digital</span>
+                <h4>A Importância do Direito Digital na Era Moderna</h4>
+            </div>
+        </a>
+            </div>
+        </div>
+    </section>
+
+            <!-- CTA Premium -->
+            <div class="post-cta-section">
+                <div class="post-cta-box">
+                    <div class="post-cta-content">
+                        <span class="post-cta-eyebrow">Orientação Jurídica Personalizada</span>
+                        <h2>Tem uma dúvida específica sobre este tema?</h2>
+                        <p>Cada caso exige uma análise minuciosa. Entre em contato diretamente com o Dr. Gabriel Corrêa para receber uma orientação jurídica personalizada para sua situação.</p>
+                        <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Li%20um%20artigo%20no%20Blog%20Jur%C3%ADdico%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20personalizada.%20%E2%9A%96%EF%B8%8F" class="btn-cta-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Falar com o Dr. Gabriel
+                        </a>
+                    </div>
                 </div>
-                <p style="font-size: 0.95rem; margin-bottom: 15px;">
-                    Fale com o advogado Gabriel Corrêa e resolva seu problema jurídico agora mesmo!
-                </p>
-                <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20blog%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp" target="_blank" style="width: 100%; justify-content: center;">
-                    <i class="fab fa-whatsapp"></i> Enviar Mensagem
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="post-sidebar">
+
+            <!-- CTA Sidebar -->
+            <div class="sidebar-card sidebar-cta">
+                <p class="sidebar-card-title">Precisa de Ajuda?</p>
+                <p>Fale diretamente com o Dr. Gabriel Corrêa e receba orientação jurídica personalizada para o seu caso.</p>
+                <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Li%20um%20artigo%20no%20Blog%20Jur%C3%ADdico%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20personalizada.%20%E2%9A%96%EF%B8%8F" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
                 </a>
             </div>
+
+            <!-- About Card -->
+            <div class="sidebar-card">
+                <p class="sidebar-card-title">Sobre o Autor</p>
+                <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;">
+                    <strong style="color: var(--primary-blue);">Dr. Gabriel Corrêa</strong> é advogado inscrito na OAB/SC sob o nº 63.737, com atuação em Direito de Família, Trabalhista, Criminal, Contratos e Direito Digital. Atendimento 100% online em todo o Brasil.
+                </p>
+            </div>
+
+            <!-- Back to Blog -->
+            <div class="sidebar-card" style="text-align: center;">
+                <p class="sidebar-card-title">Navegação</p>
+                <a href="/blog.html" style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent-gold-deep); font-weight: 600; text-decoration: none; font-size: 0.9rem; font-family: var(--font-sans);">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Blog
+                </a>
+            </div>
+
         </aside>
     </div>
 
     <footer>
-        <p>&copy; 2024 Gabriel Corrêa - Advocacia. Todos os direitos reservados.</p>
-        <p><a href="/">Home</a> | <a href="/blog.html">Blog</a> | <a href="/#contato">Contato</a></p>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Escritório</h4>
+                <p>Advogado Gabriel Corrêa</p>
+                <p>OAB/SC 63.737</p>
+                <p>Atendimento 100% online em todo o Brasil.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <a href="/index.html">Início</a>
+                <a href="/sobre.html">Sobre</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/contato.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Áreas de Atuação</h4>
+                <a href="/trabalhista-empregado.html">Trabalhista</a>
+                <a href="/familia.html">Direito de Família</a>
+                <a href="/contrato.html">Contratos</a>
+                <a href="/criminal.html">Criminal</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><i class="fas fa-phone"></i>(47) 98867-0233</p>
+                <p><i class="fas fa-envelope"></i>escritorio.gabrielcorrea@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
+        </div>
     </footer>
+
+    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20Blog%20Jur%C3%ADdico%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o.%20%E2%9A%96%EF%B8%8F" class="whatsapp-float" aria-label="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script defer>
+        // Header scroll shadow
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Hamburger menu
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        if (hamburgerBtn && mainNav) {
+            hamburgerBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('open');
+                const spans = hamburgerBtn.querySelectorAll('span');
+                if (mainNav.classList.contains('open')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
