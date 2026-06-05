@@ -659,7 +659,7 @@ footer::before {
         width: 100%; padding: 18px 0;
         order: 3;
     }
-    nav.open { display: flex; animation: fadeUp 0.3s var(--ease-out); }
+    nav.open, nav.active { display: flex; animation: fadeUp 0.3s var(--ease-out); }
     .nav-links { flex-direction: column; align-items: stretch; gap: 4px; width: 100%; }
     .nav-links > li > a {
         display: block; padding: 12px 8px;
@@ -706,11 +706,12 @@ footer::before {
     display: none !important;
 }
 
-@media (max-width: 991px) {
+/* Removido bloqueio de hambúrguer em LP-ADS para permitir navegação mobile */
+/* @media (max-width: 991px) {
     .lp-ads .hamburger {
         display: none !important;
     }
-}
+} */
 
 /* Badge de Plantão Piscante */
 .badge-plantao {
