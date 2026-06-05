@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Importância do Direito Digital na Era Moderna | Blog Jurídico Gabriel Corrêa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #172B41; 
+            --primary-light: #1f3a52;
+            --primary-dark: #0f1f2e;
+            --accent: #C9A961; 
+            --accent-light: #e0c9a0;
+            --text: #2D3748; 
+            --text-light: #718096;
+            --text-lighter: #a0aec0;
+            --bg: #F7FAFC;
+            --bg-light: #FFFFFF;
+            --border: #e2e8f0;
+            --whatsapp: #25D366;
+            --success: #48bb78;
+            --warning: #ed8936;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background: var(--bg);
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 10px 5%;
+            font-size: 0.8rem;
+            text-align: right;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .top-bar a { color: var(--accent-light); text-decoration: none; transition: color 0.3s; }
+        .top-bar a:hover { color: var(--accent); }
+        .top-bar i { margin-right: 5px; }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header { 
+            background: var(--bg-light); 
+            padding: 0 5%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .logo:hover { transform: scale(1.02); }
+        .logo img {
+            height: 36px;
+            width: auto;
+            max-width: 280px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-light);
+            min-width: 280px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+            z-index: 100;
+            top: 100%;
+            left: 0;
+            border-top: 4px solid var(--accent);
+            border-radius: 8px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a {
+            color: var(--text);
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s;
+            position: relative;
+        }
+        .dropdown-content a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--accent);
+            transform: scaleY(0);
+            transition: transform 0.2s;
+        }
+        .dropdown-content a:hover::before { transform: scaleY(1); }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: var(--bg); color: var(--accent); }
+
+        .btn-nav-whatsapp {
+            background: linear-gradient(135deg, var(--whatsapp) 0%, #1da851 100%);
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        .btn-nav-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            background: var(--bg-light);
+            padding: 16px 5%;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb span { color: var(--text-light); margin: 0 8px; }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        .hero-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 40px 5%;
+            max-width: 900px;
+        }
+        .hero-category {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .post-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 40px;
+            max-width: 100%;
+            width: 90%;
+            margin: 60px auto;
+            padding: 0 5%;
+        }
+
+        .post-main {
+            background: var(--bg-light);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        /* ===== POST CONTENT ===== */
+        .post-content {
+            font-size: 1.1rem;
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        .post-content h2 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            margin: 50px 0 25px 0; 
+            font-size: 1.9rem;
+            font-weight: 700;
+            border-left: 5px solid var(--accent);
+            padding-left: 20px;
+            transition: all 0.3s;
+        }
+
+        .post-content h3 { 
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary); 
+            margin: 40px 0 18px 0; 
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .post-content h4 {
+            color: var(--primary-light);
+            margin: 30px 0 12px 0;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .post-content p { 
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        /* Listas */
+        .post-content ul, .post-content ol { 
+            margin: 25px 0 25px 30px; 
+            padding-left: 20px;
+        }
+        .post-content li { 
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        .post-content ul li::marker {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Tabelas */
+        .post-content table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 40px 0; 
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .post-content th { 
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white; 
+            padding: 16px; 
+            text-align: left;
+            font-weight: 700;
+        }
+        .post-content td { 
+            padding: 14px 16px; 
+            border-bottom: 1px solid var(--border); 
+            background: var(--bg-light);
+        }
+        .post-content tr:hover td { background: var(--bg); }
+        .post-content tr:nth-child(even) td { background: var(--bg); }
+
+        /* Blockquotes */
+        .post-content blockquote { 
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.1) 0%, rgba(201, 169, 97, 0.05) 100%);
+            border-left: 5px solid var(--accent); 
+            padding: 25px 30px; 
+            margin: 40px 0; 
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+            color: var(--text);
+        }
+
+        /* Imagens */
+        .post-content img { 
+            width: 100%; 
+            border-radius: 12px; 
+            margin: 40px 0; 
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+        .post-content img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Código */
+        .post-content code {
+            background: var(--bg);
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .post-content pre {
+            background: var(--primary-dark);
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+        .post-content pre code {
+            background: none;
+            color: #e0e0e0;
+            padding: 0;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-box {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+
+        .sidebar-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-title i {
+            color: var(--accent);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--bg);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 5px 5px 0;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+        .tag:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 4px solid var(--accent);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .post-wrapper {
+                grid-template-columns: 1fr;
+                width: 95%;
+                margin: 40px auto;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .post-main {
+                padding: 25px;
+            }
+            
+            .post-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" target="_blank">
+            <i class="fas fa-phone"></i> Fale com a gente: (47) 98867-0233
+        </a>
+    </div>
+
+    <header>
+        <a href="/" class="logo">
+            <img src="/assets/logo.png" alt="Gabriel Corrêa - Advocacia">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#">Áreas de Atuação</a>
+                    <div class="dropdown-content">
+                        <a href="/#direito-civil"><i class="fas fa-gavel"></i> Direito Civil</a>
+                        <a href="/#direito-trabalhista"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
+                        <a href="/#direito-penal"><i class="fas fa-shield-alt"></i> Direito Penal</a>
+                    </div>
+                </li>
+                <li><a href="/#sobre">Sobre</a></li>
+                <li><a href="/#contato">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog.html">Blog</a>
+        <span>/</span>
+        <span>A Importância do Direito Digital na Era Moderna</span>
+    </div>
+
+    <section class="hero">
+        <img src="/public/images/direito-digital.jpg" alt="A Importância do Direito Digital na Era Moderna" class="hero-image">
+        <div class="hero-content">
+            <div class="hero-category">Direito Digital</div>
+            <h1 class="hero-title">A Importância do Direito Digital na Era Moderna</h1>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2026-06-05</span>
+                </div>
+                <div class="hero-meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Gabriel Corrêa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="post-wrapper">
+        <main class="post-main">
+            <article class="post-content">
+                <h2>Introdução</h2>
+<p>A era digital trouxe consigo uma série de desafios e oportunidades. Com a crescente dependência da tecnologia, a necessidade de <strong>leis e regulamentações</strong> que protejam os indivíduos e as empresas no ambiente online tornou-se crucial. O Direito Digital surge como uma área fundamental para garantir a segurança jurídica neste novo cenário.</p>
+<h2>O que é Direito Digital?</h2>
+<p>O Direito Digital é um ramo do direito que abrange todos os aspectos legais relacionados ao uso da tecnologia da informação e comunicação. Ele lida com questões como privacidade de dados, crimes cibernéticos, contratos eletrônicos, propriedade intelectual na internet e muito mais. Sua principal função é adaptar os princípios jurídicos tradicionais à realidade do mundo digital.</p>
+<h3>LGPD e Proteção de Dados</h3>
+<p>No Brasil, a <strong>Lei Geral de Proteção de Dados (LGPD)</strong> é um marco importante do Direito Digital. Ela estabelece regras sobre a coleta, armazenamento, tratamento e compartilhamento de dados pessoais, visando proteger os direitos fundamentais de liberdade e de privacidade. Empresas que não cumprem a LGPD estão sujeitas a multas e sanções severas.</p>
+<p><img alt="Computador com cadeado" loading="lazy" src="/public/images/computador-seguro.jpg" loading="lazy" /></p>
+<h2>Cibersegurança e Crimes Cibernéticos</h2>
+<p>Com o aumento das atividades online, os crimes cibernéticos também se tornaram mais sofisticados. Fraudes, roubo de dados, invasão de sistemas e difamação online são apenas alguns exemplos. O Direito Digital atua na prevenção e repressão desses crimes, buscando responsabilizar os infratores e proteger as vítimas.</p>
+<h3>Dicas de Segurança Online</h3>
+<p>Para se proteger no ambiente digital, é fundamental adotar algumas práticas:</p>
+<ul>
+<li>Use senhas fortes e únicas.</li>
+<li>Mantenha seus softwares atualizados.</li>
+<li>Desconfie de e-mails e mensagens suspeitas.</li>
+<li>Faça backup de seus dados regularmente.</li>
+</ul>
+<h2>Conclusão</h2>
+<p>O Direito Digital é uma área em constante evolução, essencial para a segurança e o desenvolvimento da sociedade na era da informação. Estar ciente de seus direitos e deveres no ambiente online é o primeiro passo para uma navegação segura e responsável.</p>
+<p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D">📞 (47) 98867-0233</a></p>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <div class="sidebar-title">
+                    <i class="fas fa-tags"></i> Tags
+                </div>
+                <a href="/blog.html?tag=LGPD" class="tag">LGPD</a><a href="/blog.html?tag=cibersegurança" class="tag">cibersegurança</a><a href="/blog.html?tag=privacidade" class="tag">privacidade</a>
+            </div>
+
+            <div class="sidebar-box">
+                <div class="sidebar-title">
+                    <i class="fas fa-headset"></i> Precisa de Ajuda?
+                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">
+                    Fale com o advogado Gabriel Corrêa e resolva seu problema jurídico agora mesmo!
+                </p>
+                <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20blog%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp" target="_blank" style="width: 100%; justify-content: center;">
+                    <i class="fab fa-whatsapp"></i> Enviar Mensagem
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gabriel Corrêa - Advocacia. Todos os direitos reservados.</p>
+        <p><a href="/">Home</a> | <a href="/blog.html">Blog</a> | <a href="/#contato">Contato</a></p>
+    </footer>
+</body>
+</html>
