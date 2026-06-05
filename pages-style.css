@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5 {
 }
 
 a { color: var(--primary-blue); }
-img { max-width: 100%; display: block; }
+img { max-width: 90%; display: inline-grid; }
 
 /* Selection */
 ::selection { background: var(--accent-gold); color: var(--primary-blue); }
@@ -453,7 +453,7 @@ nav { display: flex; align-items: center; gap: 30px; }
 }
 .differentials-grid {
     max-width: 1200px; margin: 0 auto; position: relative;
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
 }
 .differential-item i { color: var(--accent-gold); font-size: 1.9rem; margin-bottom: 16px; display: block; }
 .differential-item h3 { color: white; font-size: 1.3rem; margin-bottom: 10px; }
@@ -647,7 +647,7 @@ footer::before {
 @media (max-width: 980px) {
     .area-body { grid-template-columns: 1fr; gap: 50px; padding: 60px 5%; }
     .area-sidebar { position: static; }
-    .differentials-grid { grid-template-columns: 1fr; gap: 30px; }
+    .differentials-grid { grid-template-columns: 1fr; }
     .related-posts-grid { grid-template-columns: 1fr; }
 }
 
