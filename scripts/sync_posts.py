@@ -1,16 +1,34 @@
+#!/usr/bin/env python3
+"""
+BLOG POST SYNC - Sistema 100% Estático
+Processa arquivos Markdown da pasta /content/blog e gera HTML + index.json
+Sem dependência de APIs externas ou tokens
+"""
+
 import os
 import json
 import re
 import subprocess
 from pathlib import Path
+from datetime import datetime
 import markdown
 import shutil
 
-# Configurações de diretórios
+# Importar processador de imagens
+try:
+    from process_images import process_markdown_images, process_html_images, optimize_image_html, validate_image_references
+except ImportError:
+    print("⚠️  Módulo process_images.py não encontrado. Processamento de imagens desabilitado.")
+    def process_markdown_images(x): return x
+    def process_html_images(x): return x
+    def optimize_image_html(x): return x
+    def validate_image_references(x): return []
+
+# ===== CONFIGURAÇÕES =====
 PROJECT_ROOT = Path(__file__).parent.parent.absolute()
-NEW_POSTS_DIR = PROJECT_ROOT / "blog" / "novos_posts"
-POSTS_DIR = PROJECT_ROOT / "blog" / "posts"
-IMAGES_DIR = PROJECT_ROOT / "blog" / "images"
+CONTENT_BLOG_DIR = PROJECT_ROOT / "content" / "blog"  # Pasta onde o usuário coloca .md
+POSTS_DIR = PROJECT_ROOT / "blog" / "posts"           # Pasta de saída (HTML + MD)
+IMAGES_DIR = PROJECT_ROOT / "public" / "images"       # Pasta de imagens locais
 INDEX_FILE = POSTS_DIR / "index.json"
 
 # Prefixo do site no GitHub Pages
@@ -19,7 +37,7 @@ SITE_PREFIX = "/"
 # Imagem padrão caso nenhuma seja encontrada
 DEFAULT_POST_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
 
-# Template HTML sofisticado para o post
+# Template HTML sofisticado para o post (mantém o design original)
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -195,24 +213,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
         }}
 
-        /* Hamburger */
-        .hamburger {{
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-            background: none;
-            border: none;
-            padding: 8px;
-        }}
-        .hamburger span {{
-            width: 26px;
-            height: 3px;
-            background-color: var(--primary);
-            border-radius: 3px;
-            transition: all 0.3s;
-        }}
-
         /* ===== BREADCRUMB ===== */
         .breadcrumb {{
             background: var(--bg-light);
@@ -355,13 +355,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             text-align: justify;
         }}
 
-        .post-content p:first-of-type::first-letter {{
-            font-size: 1em;
-            font-weight: normal;
-            color: var(--text);
-            margin-right: 0px;
-        }}
-
         /* Listas */
         .post-content ul, .post-content ol {{ 
             margin: 25px 0 25px 30px; 
@@ -401,7 +394,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .post-content tr:hover td {{ background: var(--bg); }}
         .post-content tr:nth-child(even) td {{ background: var(--bg); }}
 
-        /* Blockquotes / Destaques */
+        /* Blockquotes */
         .post-content blockquote {{ 
             background: linear-gradient(135deg, rgba(201, 169, 97, 0.1) 0%, rgba(201, 169, 97, 0.05) 100%);
             border-left: 5px solid var(--accent); 
@@ -410,10 +403,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             font-style: italic;
             border-radius: 0 8px 8px 0;
             color: var(--text);
-        }}
-        .post-content blockquote strong {{
-            color: var(--primary);
-            font-style: normal;
         }}
 
         /* Imagens */
@@ -469,1009 +458,361 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .sidebar-title {{
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
         }}
 
-        /* Índice de Conteúdo */
-        .toc-list {{
-            list-style: none;
-        }}
-        .toc-list li {{
-            margin-bottom: 10px;
-        }}
-        .toc-list a {{
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            display: block;
-            padding: 6px 10px;
-            border-radius: 4px;
-        }}
-        .toc-list a:hover {{
+        .sidebar-title i {{
             color: var(--accent);
-            background: var(--bg);
-            padding-left: 14px;
         }}
 
-        /* Tags */
-        .tags-container {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }}
         .tag {{
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            display: inline-block;
+            background: var(--bg);
             color: var(--primary);
             padding: 6px 12px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 5px 5px 0;
             text-decoration: none;
             transition: all 0.3s;
-            display: inline-block;
-            text-transform: capitalize;
-        }}
-        .tag:hover {{
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
-        }}
-
-        /* Autor */
-        .author-card {{
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(23, 43, 65, 0.05) 0%, rgba(201, 169, 97, 0.05) 100%);
-            border-radius: 8px;
             border: 1px solid var(--border);
         }}
-        .author-avatar {{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .tag:hover {{
+            background: var(--accent);
             color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }}
-        .author-info {{
-            flex: 1;
-        }}
-        .author-name {{
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 0.95rem;
-        }}
-        .author-role {{
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }}
-
-        /* ===== CTA SECTION ===== */
-        .cta-section {{ 
-            margin-top: 80px; 
-            padding: 60px 50px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white; 
-            border-radius: 12px; 
-            text-align: center;
-            box-shadow: 0 12px 30px rgba(23, 43, 65, 0.2);
-            position: relative;
-            overflow: hidden;
-        }}
-        .cta-section::before {{
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background-image: radial-gradient(circle, rgba(201, 169, 97, 0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: float 20s linear infinite;
-        }}
-        @keyframes float {{
-            0% {{ transform: translate(0, 0); }}
-            100% {{ transform: translate(50px, 50px); }}
-        }}
-        .cta-content {{
-            position: relative;
-            z-index: 10;
-        }}
-        .cta-section h2 {{ 
-            margin-bottom: 15px; 
-            color: white; 
-            border: none; 
-            padding: 0; 
-            font-size: 2.2rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-        }}
-        .cta-section p {{
-            margin-bottom: 25px;
-            font-size: 1.05rem;
-            opacity: 0.95;
-        }}
-        .cta-whatsapp {{ 
-            background: var(--whatsapp); 
-            color: white; 
-            padding: 16px 40px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 700; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 12px;
-            font-size: 1.05rem;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }}
-        .cta-whatsapp:hover {{ 
-            transform: translateY(-3px); 
-            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
-            background: #1da851;
+            border-color: var(--accent);
         }}
 
         /* ===== FOOTER ===== */
-        footer {{ 
-            background: var(--primary-dark); 
-            color: var(--text-lighter); 
-            padding: 60px 5%; 
-            text-align: center; 
-            margin-top: 100px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }}
-        footer p {{
-            margin: 8px 0;
-            font-size: 0.95rem;
-        }}
-
-        /* ===== RELATED POSTS ===== */
-        .related-posts {{
-            margin-top: 80px;
-            padding-top: 60px;
-            border-top: 2px solid var(--border);
-        }}
-        .related-posts-title {{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 30px;
-            text-align: center;
-        }}
-        .related-posts-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }}
-        .related-post-card {{
-            background: var(--bg-light);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid var(--border);
-        }}
-        .related-post-card:hover {{
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }}
-        .related-post-image {{
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }}
-        .related-post-content {{
-            padding: 20px;
-        }}
-        .related-post-category {{
-            display: inline-block;
-            background: var(--accent);
-            color: var(--primary);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }}
-        .related-post-title {{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }}
-        .related-post-excerpt {{
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }}
-        .related-post-link {{
-            display: inline-block;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }}
-        .related-post-link:hover {{
-            color: var(--primary);
-            text-decoration: underline;
-        }}
-
-        /* ===== MOBILE TOC BUTTON ===== */
-        .mobile-toc-btn {{
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            color: var(--primary);
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
-            display: none;
-        }}
-        .mobile-toc-btn:hover {{
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(201, 169, 97, 0.5);
-        }}
-        .mobile-toc-btn.active {{
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--accent);
-        }}
-
-        /* ===== MOBILE TOC MODAL ===== */
-        .mobile-toc-modal {{
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            animation: fadeIn 0.3s ease;
-        }}
-        @keyframes fadeIn {{
-            from {{ opacity: 0; }}
-            to {{ opacity: 1; }}
-        }}
-        .mobile-toc-modal.active {{
-            display: block;
-        }}
-        .mobile-toc-content {{
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--bg-light);
-            border-radius: 16px 16px 0 0;
-            padding: 30px 20px;
-            max-height: 70vh;
-            overflow-y: auto;
-            animation: slideUp 0.3s ease;
-            z-index: 1001;
-        }}
-        @keyframes slideUp {{
-            from {{ transform: translateY(100%); }}
-            to {{ transform: translateY(0); }}
-        }}
-        .mobile-toc-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--border);
-        }}
-        .mobile-toc-header h3 {{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-        }}
-        .mobile-toc-close {{
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-light);
-            cursor: pointer;
-            padding: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }}
-        .mobile-toc-list {{
-            list-style: none;
-        }}
-        .mobile-toc-list li {{
-            margin-bottom: 12px;
-        }}
-        .mobile-toc-list a {{
-            color: var(--text);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
-            display: block;
-            padding: 10px 15px;
-            border-radius: 6px;
-        }}
-        .mobile-toc-list a:hover {{
-            background: var(--bg);
-            color: var(--accent);
-            padding-left: 20px;
-        }}
-        .mobile-toc-list li.level-3 a {{
-            padding-left: 30px;
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }}
-
-        /* ===== FLOATING WHATSAPP BUTTON ===== */
-        .floating-whatsapp {{
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--whatsapp) 0%, #1da851 100%);
+        footer {{
+            background: var(--primary);
             color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.8rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 998;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }}
-        .floating-whatsapp:hover {{
-            transform: scale(1.15);
-            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
-        }}
-        .floating-whatsapp:active {{
-            transform: scale(0.95);
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 4px solid var(--accent);
         }}
 
-        /* ===== RESPONSIVIDADE ===== */
-        @media (max-width: 1024px) {{
+        footer p {{
+            margin-bottom: 10px;
+        }}
+
+        footer a {{
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }}
+
+        footer a:hover {{
+            color: var(--accent);
+        }}
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {{
             .post-wrapper {{
                 grid-template-columns: 1fr;
-                gap: 30px;
+                width: 95%;
+                margin: 40px auto;
             }}
+            
             .hero-title {{
-                font-size: 2.2rem;
+                font-size: 2rem;
             }}
-        }}
-
-        @media (max-width: 768px) {{
-            header {{
-                height: 70px;
-            }}
-            .hamburger {{
-                display: flex;
-            }}
-            nav {{
-                display: none;
-            }}
-            .top-bar {{
-                font-size: 0.75rem;
-                padding: 8px 3%;
-            }}
-            .breadcrumb {{
-                font-size: 0.8rem;
-                padding: 12px 3%;
-            }}
-            .hero {{
-                height: 300px;
-            }}
-            .hero-title {{
-                font-size: 1.8rem;
-            }}
-            .hero-meta {{
-                gap: 15px;
-                font-size: 0.85rem;
-            }}
+            
             .post-main {{
-                padding: 30px;
+                padding: 25px;
             }}
-            .post-content {{
-                font-size: 1rem;
-            }}
+            
             .post-content h2 {{
                 font-size: 1.5rem;
-                margin: 35px 0 18px 0;
-            }}
-            .post-content h3 {{
-                font-size: 1.2rem;
-                margin: 28px 0 12px 0;
-            }}
-            .post-wrapper {{
-                margin: 40px auto;
-                width: 95%;
-            }}
-            .cta-section {{
-                padding: 40px 25px;
-            }}
-            .cta-section h2 {{
-                font-size: 1.6rem;
-            }}
-            .sidebar {{
-                display: none;
-            }}
-            .mobile-toc-btn {{
-                display: flex !important;
-            }}
-            .floating-whatsapp {{
-                display: flex !important;
-            }}
-            .related-posts-grid {{
-                grid-template-columns: 1fr;
-            }}
-        }}
-
-        @media (max-width: 480px) {{
-            .hero {{
-                height: 240px;
-            }}
-            .hero-title {{
-                font-size: 1.4rem;
-            }}
-            .hero-category {{
-                font-size: 0.75rem;
-                padding: 6px 12px;
-            }}
-            .post-main {{
-                padding: 20px;
-                border-radius: 8px;
-            }}
-            .post-content {{
-                font-size: 0.95rem;
-            }}
-            .post-content h2 {{
-                font-size: 1.3rem;
-                padding-left: 15px;
-            }}
-            .post-content table {{
-                font-size: 0.85rem;
-            }}
-            .post-content th, .post-content td {{
-                padding: 10px 8px;
-            }}
-            .cta-section {{
-                padding: 30px 15px;
-            }}
-            .cta-section h2 {{
-                font-size: 1.3rem;
-            }}
-            .cta-whatsapp {{
-                padding: 14px 28px;
-                font-size: 0.95rem;
-            }}
-            .post-wrapper {{
-                width: 100%;
-                padding: 0;
-            }}
-            .mobile-toc-btn {{
-                bottom: 90px;
-                right: 15px;
-                width: 50px;
-                height: 50px;
-                font-size: 1.3rem;
-            }}
-            .floating-whatsapp {{
-                width: 55px;
-                height: 55px;
-                right: 15px;
-                font-size: 1.6rem;
             }}
         }}
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online
+        <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" target="_blank">
+            <i class="fas fa-phone"></i> Fale com a gente: (47) 98867-0233
+        </a>
     </div>
 
     <header>
-        <a href="/index.html" class="logo"><img src="/assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
-            <span></span><span></span><span></span>
-        </button>
-        <nav id="mainNav">
+        <a href="/" class="logo">
+            <img src="/assets/logo.png" alt="Gabriel Corrêa - Advocacia">
+        </a>
+        <nav>
             <ul class="nav-links">
-                <li><a href="/index.html">Início</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog.html">Blog</a></li>
                 <li class="dropdown">
-                    <a href="#">Áreas de Atuação <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <a href="#">Áreas de Atuação</a>
                     <div class="dropdown-content">
-                        <a href="/trabalhista-empregado.html"><i class="fas fa-hard-hat"></i> Trabalhista — Para Empregado</a>
-                        <a href="/trabalhista-empresa.html"><i class="fas fa-building"></i> Trabalhista — Para Empresa</a>
-                        <a href="/familia.html"><i class="fas fa-heart"></i> Direito de Família</a>
-                        <a href="/criminal.html"><i class="fas fa-gavel"></i> Direito Criminal</a>
-                        <a href="/contrato.html"><i class="fas fa-file-contract"></i> Contratos</a>
-                        <a href="/busca-e-apreensao.html"><i class="fas fa-search"></i> Busca e Apreensão</a>
+                        <a href="/#direito-civil"><i class="fas fa-gavel"></i> Direito Civil</a>
+                        <a href="/#direito-trabalhista"><i class="fas fa-briefcase"></i> Direito Trabalhista</a>
+                        <a href="/#direito-penal"><i class="fas fa-shield-alt"></i> Direito Penal</a>
                     </div>
                 </li>
-                <li><a href="/sobre.html">Sobre</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li><a href="/contato.html">Contato</a></li>
+                <li><a href="/#sobre">Sobre</a></li>
+                <li><a href="/#contato">Contato</a></li>
             </ul>
-            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp"><i class="fab fa-whatsapp"></i> Fale Conosco</a>
+            <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
         </nav>
     </header>
 
     <div class="breadcrumb">
-        <a href="/index.html">Início</a> <span>/</span> <a href="/blog.html">Blog</a> <span>/</span> <span>{category}</span>
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog.html">Blog</a>
+        <span>/</span>
+        <span>{title}</span>
     </div>
 
-    <div class="hero">
+    <section class="hero">
         <img src="{image}" alt="{title}" class="hero-image">
         <div class="hero-content">
             <div class="hero-category">{category}</div>
             <h1 class="hero-title">{title}</h1>
             <div class="hero-meta">
                 <div class="hero-meta-item">
-                    <i class="far fa-user"></i> <span>{author}</span>
+                    <i class="fas fa-calendar"></i>
+                    <span>{date}</span>
                 </div>
                 <div class="hero-meta-item">
-                    <i class="far fa-calendar-alt"></i> <span>{date}</span>
-                </div>
-                <div class="hero-meta-item">
-                    <i class="far fa-clock"></i> <span>~8 min de leitura</span>
+                    <i class="fas fa-user"></i>
+                    <span>{author}</span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="post-wrapper">
-        <div class="post-main">
+        <main class="post-main">
             <article class="post-content">
                 {content}
             </article>
-
-            <!-- Posts Relacionados -->
-            <div class="related-posts" id="relatedPosts">
-                <h2 class="related-posts-title">Posts Relacionados</h2>
-                <div class="related-posts-grid" id="relatedPostsGrid">
-                    <!-- Preenchido dinamicamente via JavaScript -->
-                </div>
-            </div>
-
-            <div class="cta-section">
-                <div class="cta-content">
-                    <h2>Precisa de ajuda com este assunto?</h2>
-                    <p>Não deixe seus direitos para depois. Fale agora mesmo com um especialista e tire suas dúvidas.</p>
-                    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="cta-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Conversar pelo WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
+        </main>
 
         <aside class="sidebar">
             <div class="sidebar-box">
                 <div class="sidebar-title">
-                    <i class="fas fa-list"></i> Índice
+                    <i class="fas fa-tags"></i> Tags
                 </div>
-                <ul class="toc-list">
-                    <li><a href="#introducao">Introdução</a></li>
-                    <li><a href="#topico-1">Tópico Principal</a></li>
-                    <li><a href="#topico-2">Considerações</a></li>
-                    <li><a href="#conclusao">Conclusão</a></li>
-                </ul>
+                {tags_html}
             </div>
 
             <div class="sidebar-box">
                 <div class="sidebar-title">
-                    <i class="fas fa-tags"></i> Tags
+                    <i class="fas fa-headset"></i> Precisa de Ajuda?
                 </div>
-                <div class="tags-container">
-                    {tags_html}
-                </div>
-            </div>
-
-            <div class="sidebar-box author-card">
-                <div class="author-avatar">GC</div>
-                <div class="author-info">
-                    <div class="author-name">{author}</div>
-                    <div class="author-role">Advogado Especialista</div>
-                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 15px;">
+                    Fale com o advogado Gabriel Corrêa e resolva seu problema jurídico agora mesmo!
+                </p>
+                <a href="https://wa.me/5547988670233?text=Olá%21%20Vim%20através%20do%20blog%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="btn-nav-whatsapp" target="_blank" style="width: 100%; justify-content: center;">
+                    <i class="fab fa-whatsapp"></i> Enviar Mensagem
+                </a>
             </div>
         </aside>
     </div>
 
-    <!-- Mobile ToC Button -->
-    <button class="mobile-toc-btn" id="mobileTocBtn" title="Índice do artigo" aria-label="Abrir índice">
-        <i class="fas fa-list"></i>
-    </button>
-
-    <!-- Mobile ToC Modal -->
-    <div class="mobile-toc-modal" id="mobileTocModal">
-        <div class="mobile-toc-content">
-            <div class="mobile-toc-header">
-                <h3>Índice do Artigo</h3>
-                <button class="mobile-toc-close" id="mobileTocClose" aria-label="Fechar índice">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="mobile-toc-list" id="mobileTocList">
-                <!-- Preenchido dinamicamente via JavaScript -->
-            </ul>
-        </div>
-    </div>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="floating-whatsapp" title="Fale conosco via WhatsApp" aria-label="Abrir WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <footer>
-        <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
-        <p style="font-size: 0.9rem; margin-top: 8px;">Atendimento em todo o Brasil.</p>
+        <p>&copy; 2024 Gabriel Corrêa - Advocacia. Todos os direitos reservados.</p>
+        <p><a href="/">Home</a> | <a href="/blog.html">Blog</a> | <a href="/#contato">Contato</a></p>
     </footer>
-
-    <script>
-        // Função para extrair o slug da URL atual
-        function getCurrentPostSlug() {{
-            const path = window.location.pathname;
-            const match = path.match(/\/blog\/posts\/([^/]+)\.html/);
-            return match ? match[1] : null;
-        }}
-
-        // Função para carregar e exibir posts relacionados
-        function loadRelatedPosts() {{
-            const currentSlug = getCurrentPostSlug();
-            const relatedPostsGrid = document.getElementById('relatedPostsGrid');
-            const relatedPostsSection = document.getElementById('relatedPosts');
-            
-            if (!relatedPostsGrid || !currentSlug) return;
-            
-            fetch('/blog/posts/index.json')
-                .then(response => response.json())
-                .then(posts => {{
-                    // Encontra o post atual
-                    const currentPost = posts.find(p => p.slug === currentSlug);
-                    if (!currentPost) return;
-                    
-                    // Filtra posts relacionados pela mesma categoria
-                    const related = posts.filter(p => 
-                        p.slug !== currentSlug && 
-                        p.categories && currentPost.categories &&
-                        p.categories.some(cat => currentPost.categories.includes(cat))
-                    ).slice(0, 3);
-                    
-                    if (related.length === 0) {{
-                        relatedPostsSection.style.display = 'none';
-                        return;
-                    }}
-                    
-                    relatedPostsGrid.innerHTML = related.map(post => `
-                        <div class="related-post-card">
-                            <img src="${{post.image}}" alt="${{post.title}}" class="related-post-image">
-                            <div class="related-post-content">
-                                <div class="related-post-category">${{post.categories[0]}}</div>
-                                <h3 class="related-post-title">${{post.title}}</h3>
-                                <p class="related-post-excerpt">${{post.excerpt}}</p>
-                                <a href="${{post.url}}" class="related-post-link">Leia mais →</a>
-                            </div>
-                        </div>
-                    `).join('');
-                }}
-                ).catch(err => console.error('Erro ao carregar posts relacionados:', err));
-        }}
-
-        // Gera índice dinâmico baseado nos h2 e h3
-        document.addEventListener('DOMContentLoaded', function() {{
-            const headings = document.querySelectorAll('.post-content h2, .post-content h3');
-            const tocList = document.querySelector('.toc-list');
-            const mobileTocList = document.getElementById('mobileTocList');
-            
-            if (tocList || mobileTocList) {{
-                const tocItems = [];
-                headings.forEach((heading, index) => {{
-                    const id = 'heading-' + index;
-                    heading.id = id;
-                    const isH3 = heading.tagName === 'H3';
-                    tocItems.push({{
-                        id: id,
-                        text: heading.textContent,
-                        isH3: isH3
-                    }});
-                }});
-                
-                if (tocList) {{
-                    tocList.innerHTML = '';
-                    tocItems.forEach(item => {{
-                        const li = document.createElement('li');
-                        const a = document.createElement('a');
-                        a.href = '#' + item.id;
-                        a.textContent = item.text;
-                        a.style.paddingLeft = item.isH3 ? '20px' : '0px';
-                        li.appendChild(a);
-                        tocList.appendChild(li);
-                    }});
-                }}
-                
-                if (mobileTocList) {{
-                    mobileTocList.innerHTML = '';
-                    tocItems.forEach(item => {{
-                        const li = document.createElement('li');
-                        if (item.isH3) li.classList.add('level-3');
-                        const a = document.createElement('a');
-                        a.href = '#' + item.id;
-                        a.textContent = item.text;
-                        li.appendChild(a);
-                        mobileTocList.appendChild(li);
-                        
-                        // Fecha o modal ao clicar em um link
-                        a.addEventListener('click', () => {{
-                            document.getElementById('mobileTocModal').classList.remove('active');
-                            document.getElementById('mobileTocBtn').classList.remove('active');
-                        }});
-                    }});
-                }}
-            }}
-            
-            // Mobile ToC Button
-            const mobileTocBtn = document.getElementById('mobileTocBtn');
-            const mobileTocModal = document.getElementById('mobileTocModal');
-            const mobileTocClose = document.getElementById('mobileTocClose');
-            
-            if (mobileTocBtn && mobileTocModal) {{
-                mobileTocBtn.addEventListener('click', () => {{
-                    mobileTocModal.classList.toggle('active');
-                    mobileTocBtn.classList.toggle('active');
-                }});
-                
-                mobileTocClose.addEventListener('click', () => {{
-                    mobileTocModal.classList.remove('active');
-                    mobileTocBtn.classList.remove('active');
-                }});
-                
-                mobileTocModal.addEventListener('click', (e) => {{
-                    if (e.target === mobileTocModal) {{
-                        mobileTocModal.classList.remove('active');
-                        mobileTocBtn.classList.remove('active');
-                    }}
-                }});
-            }}
-            
-            // Carrega posts relacionados
-            loadRelatedPosts();
-            
-            // Menu Mobile
-            const hamburgerBtn = document.getElementById('hamburgerBtn');
-            const mainNav = document.getElementById('mainNav');
-            if (hamburgerBtn && mainNav) {{
-                hamburgerBtn.addEventListener('click', function() {{
-                    mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
-                    if (mainNav.style.display === 'flex') {{
-                        mainNav.style.position = 'absolute';
-                        mainNav.style.top = '80px';
-                        mainNav.style.left = '0';
-                        mainNav.style.width = '100%';
-                        mainNav.style.backgroundColor = 'white';
-                        mainNav.style.flexDirection = 'column';
-                        mainNav.style.padding = '20px';
-                        mainNav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.1)';
-                        document.querySelector('.nav-links').style.flexDirection = 'column';
-                        document.querySelector('.nav-links').style.width = '100%';
-                    }}
-                }});
-            }}
-        }});
-    </script>
 </body>
-</html>"""
+</html>
+"""
+
 
 def slugify(text):
+    """Converter texto para slug válido"""
     text = text.lower()
-    text = re.sub(r'[áàâãä]', 'a', text)
-    text = re.sub(r'[éèêë]', 'e', text)
-    text = re.sub(r'[íìîï]', 'i', text)
-    text = re.sub(r'[óòôõö]', 'o', text)
-    text = re.sub(r'[úùûü]', 'u', text)
-    text = re.sub(r'[ç]', 'c', text)
-    text = re.sub(r'[^a-z0-9\s-]', '', text)
-    text = re.sub(r'[\s-]+', '-', text).strip('-')
-    return text
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
 
-def parse_md_with_front_matter(md_path):
+
+def parse_md_with_front_matter(file_path):
+    """
+    Parsear arquivo Markdown com front matter YAML
+    Retorna (metadata_dict, content_string)
+    """
     try:
-        with open(md_path, 'r', encoding='utf-8') as f:
-            text = f.read()
-    except UnicodeDecodeError:
-        with open(md_path, 'r', encoding='latin-1') as f:
-            text = f.read()
-
-    # Normaliza quebras de linha Windows (CRLF -> LF)
-    text = text.replace('\r\n', '\n').replace('\r', '\n')
-
-    fm_pattern = re.compile(r'^---\s*\n(.*?)\n---\s*\n', re.DOTALL | re.MULTILINE)
-    fm_match = fm_pattern.search(text)
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Verificar se existe front matter
+        if not content.startswith('---'):
+            print(f"⚠️  Arquivo sem front matter: {file_path}")
+            return None, content
+        
+        # Extrair front matter
+        parts = content.split('---', 2)
+        if len(parts) < 3:
+            print(f"⚠️  Front matter inválido: {file_path}")
+            return None, content
+        
+        front_matter_str = parts[1].strip()
+        content_md = parts[2].strip()
+        
+        # Parse YAML manual (simples)
+        metadata = {}
+        for line in front_matter_str.split('\n'):
+            if ':' in line:
+                key, value = line.split(':', 1)
+                key = key.strip()
+                value = value.strip().strip('"\'')
+                
+                # Converter tipos
+                if value.lower() == 'true':
+                    value = True
+                elif value.lower() == 'false':
+                    value = False
+                elif value.startswith('[') and value.endswith(']'):
+                    # Parse array simples
+                    value = [v.strip().strip('"\'') for v in value[1:-1].split(',')]
+                
+                metadata[key] = value
+        
+        return metadata, content_md
     
-    if not fm_match:
-        # Tenta extrair título do primeiro heading # como fallback
-        title_match = re.search(r'^#\s+(.+)', text, re.MULTILINE)
-        if title_match:
-            return {'title': title_match.group(1).strip()}, text
-        return None, text
-    
-    fm_text = fm_match.group(1)
-    content_md = text[fm_match.end():].strip()
-    
-    metadata = {}
-    current_list_key = None
-    for line in fm_text.split('\n'):
-        # Linha de item de lista YAML (ex: "  - valor")
-        list_item_match = re.match(r'^\s+-\s+(.+)', line)
-        if list_item_match and current_list_key:
-            metadata[current_list_key].append(list_item_match.group(1).strip().strip('"').strip("'"))
-            continue
-        else:
-            current_list_key = None
-
-        if ':' in line:
-            key, val = line.split(':', 1)
-            key = key.strip().lower()
-            val = val.strip().strip('"').strip("'")
-            if key in ['tags', 'categories']:
-                if val:
-                    # Formato inline: tags: [a, b, c] ou tags: a, b, c
-                    val = [item.strip().strip('"').strip("'") for item in val.replace('[', '').replace(']', '').split(',') if item.strip()]
-                else:
-                    # Formato multiline: tags:\n  - a\n  - b
-                    val = []
-                    current_list_key = key
-            metadata[key] = val
-    
-    if metadata.get('title'):
-        content_md = re.sub(r'^#\s+.*?\n', '', content_md, flags=re.MULTILINE).strip()
-        content_md = re.sub(r'^#+.*?\n', '', content_md, count=1).strip()
-
-    return metadata, content_md
-
-def git_commit_and_push():
-    """Faz git add, commit e push para publicar as alterações no GitHub Pages."""
-    try:
-        # Verifica se está dentro de um repositório git
-        result = subprocess.run(['git', 'rev-parse', '--git-dir'],
-                                capture_output=True, text=True, cwd=PROJECT_ROOT)
-        if result.returncode != 0:
-            print("⚠️  Aviso: Não é um repositório git. Pulando publicação automática.")
-            return
-
-        # Verifica se há alterações para commitar
-        status = subprocess.run(['git', 'status', '--porcelain'],
-                                capture_output=True, text=True, cwd=PROJECT_ROOT)
-        if not status.stdout.strip():
-            print("ℹ️  Nenhuma alteração detectada. O repositório já está atualizado.")
-            return
-
-        print("📦 Adicionando arquivos ao git...")
-        subprocess.run(['git', 'add', 'blog/posts/', 'blog/images/'],
-                       check=True, cwd=PROJECT_ROOT)
-
-        print("💾 Criando commit...")
-        subprocess.run(['git', 'commit', '-m', 'Novo(s) post(s) adicionado(s) via sincronizar_posts'],
-                       check=True, cwd=PROJECT_ROOT)
-
-        print("🚀 Enviando para o GitHub (git push)...")
-        subprocess.run(['git', 'push'],
-                       check=True, cwd=PROJECT_ROOT)
-
-        print("✅ Publicado com sucesso! O site será atualizado em instantes pelo GitHub Pages.")
-
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Erro ao publicar no GitHub: {e}")
-        print("   Verifique se o git está configurado e se você tem permissão de push.")
-        print("   Você pode publicar manualmente com: git add blog/posts/ && git commit -m 'novo post' && git push")
-    except FileNotFoundError:
-        print("⚠️  git não encontrado no PATH. Publicação manual necessária.")
-        print("   Execute: git add blog/posts/ && git commit -m 'novo post' && git push")
+    except Exception as e:
+        print(f"❌ Erro ao parsear {file_path}: {e}")
+        return None, ""
 
 
 def find_image(slug, title, metadata_image=None):
-    # Se já existe uma imagem definida no metadata, tenta usá-la
+    """
+    Encontrar imagem para o post
+    Prioridade:
+    1. Imagem definida no front matter
+    2. Arquivo local com nome do slug
+    3. Arquivo local com nome similar ao título
+    4. Imagem padrão (Unsplash)
+    """
+    # Se já existe uma imagem definida no metadata
     if metadata_image:
         # Se for um caminho relativo sem o prefixo, adiciona
         if not metadata_image.startswith('http') and not metadata_image.startswith('/'):
             metadata_image = f"{SITE_PREFIX}{metadata_image}"
         
         # Verifica se o arquivo existe localmente (se for um caminho local)
-        if metadata_image.startswith(f"{SITE_PREFIX}blog/images/"):
+        if metadata_image.startswith(f"{SITE_PREFIX}public/images/"):
             img_name = metadata_image.split('/')[-1]
             if (IMAGES_DIR / img_name).exists():
                 return metadata_image
+        
+        # Se for URL externa, retorna como está
+        if metadata_image.startswith('http'):
+            return metadata_image
 
+    # Procurar em /public/images
     if not IMAGES_DIR.exists():
         return DEFAULT_POST_IMAGE
         
     image_files = list(IMAGES_DIR.glob("*"))
-    clean_slug = slug.replace('-', '')
-    clean_title = slugify(title).replace('-', '')
     
     # Tenta encontrar por nome de arquivo exato primeiro
     for img_file in image_files:
         if img_file.stem.lower() == slug.lower() or img_file.stem.lower() == slugify(title).lower():
-            return f"{SITE_PREFIX}blog/images/{img_file.name}"
+            return f"{SITE_PREFIX}public/images/{img_file.name}"
 
     # Tenta encontrar por similaridade
-    possible_names = [slug, slugify(title), clean_slug, clean_title]
+    possible_names = [slug, slugify(title)]
     for name in possible_names:
         for img_file in image_files:
             if name.lower() in img_file.stem.lower() or img_file.stem.lower() in name.lower():
-                return f"{SITE_PREFIX}blog/images/{img_file.name}"
+                return f"{SITE_PREFIX}public/images/{img_file.name}"
     
     return DEFAULT_POST_IMAGE
 
+
 def sync_posts():
-    print(f"🔍 Iniciando sincronização sofisticada de posts...")
+    """Sincronizar posts Markdown para HTML + JSON"""
     
+    print("\n" + "=" * 70)
+    print("🚀 SINCRONIZADOR DE POSTS - SISTEMA 100% ESTÁTICO")
+    print("=" * 70 + "\n")
+    
+    # Criar diretórios se não existirem
     POSTS_DIR.mkdir(parents=True, exist_ok=True)
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-    NEW_POSTS_DIR.mkdir(parents=True, exist_ok=True)
-
+    CONTENT_BLOG_DIR.mkdir(parents=True, exist_ok=True)
+    
+    print(f"📁 Pasta de conteúdo: {CONTENT_BLOG_DIR}")
+    print(f"📁 Pasta de saída: {POSTS_DIR}")
+    print(f"📁 Pasta de imagens: {IMAGES_DIR}\n")
+    
     all_posts_metadata = []
-    processed_slugs = set()
-
-    for md_file_path in NEW_POSTS_DIR.glob("*.md"):
-        print(f"🆕 Processando: {md_file_path.name}")
+    processed_count = 0
+    
+    # Processar todos os arquivos .md na pasta /content/blog
+    md_files = list(CONTENT_BLOG_DIR.glob("*.md"))
+    
+    if not md_files:
+        print(f"⚠️  Nenhum arquivo .md encontrado em {CONTENT_BLOG_DIR}")
+        print("   Crie arquivos Markdown com front matter YAML nessa pasta.")
+        return
+    
+    print(f"📄 Encontrados {len(md_files)} arquivo(s) Markdown\n")
+    
+    for md_file_path in md_files:
+        print(f"🔄 Processando: {md_file_path.name}")
+        
+        # Parsear front matter e conteúdo
         metadata, content_md = parse_md_with_front_matter(md_file_path)
         
         if not metadata or not metadata.get('title'):
+            print(f"   ⚠️  Arquivo ignorado (sem título no front matter)\n")
             continue
         
+        # Validar referências de imagens
+        image_issues = validate_image_references(content_md)
+        if image_issues:
+            for issue in image_issues:
+                print(f"   {issue}")
+        
+        # Processar referências de imagens em Markdown
+        content_md = process_markdown_images(content_md)
+        
+        # Gerar slug
         slug = slugify(metadata['title'])
-        dest_md_path = POSTS_DIR / f"{slug}.md"
-        dest_html_path = POSTS_DIR / f"{slug}.html"
-
-        if dest_md_path.exists(): dest_md_path.unlink()
-        shutil.move(str(md_file_path), str(dest_md_path))
-
-        content_html = markdown.markdown(content_md, extensions=['extra', 'tables', 'nl2br'])
         
-        full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
-        display_date = full_date.split('T')[0]
-        category = metadata.get('category') or metadata.get('categories')
-        if isinstance(category, list): category = category[0]
-        if not category: category = "Direito"
-
+        # Converter Markdown para HTML
+        content_html = markdown.markdown(
+            content_md,
+            extensions=['extra', 'tables', 'nl2br', 'codehilite']
+        )
+        
+        # Processar referências de imagens em HTML
+        content_html = process_html_images(content_html)
+        
+        # Otimizar HTML de imagens (lazy loading, etc)
+        content_html = optimize_image_html(content_html)
+        
+        # Extrair metadados
+        full_date = metadata.get('date', datetime.now().isoformat())
+        display_date = full_date.split('T')[0] if 'T' in full_date else full_date
+        category = metadata.get('category', metadata.get('categories', 'Direito'))
+        if isinstance(category, list):
+            category = category[0]
+        
+        # Encontrar imagem
         image_url = find_image(slug, metadata['title'], metadata.get('image'))
         
+        # Extrair tags
         tags = metadata.get('tags', ['Geral'])
+        if isinstance(tags, str):
+            tags = [tags]
         tags_html = "".join([f'<a href="/blog.html?tag={t}" class="tag">{t}</a>' for t in tags])
-
+        
+        # Gerar HTML final
         final_html = HTML_TEMPLATE.format(
             title=metadata['title'],
             author=metadata.get('author', 'Gabriel Corrêa'),
@@ -1482,74 +823,57 @@ def sync_posts():
             tags_html=tags_html
         )
         
-        with open(dest_html_path, 'w', encoding='utf-8') as f:
+        # Salvar arquivo HTML
+        html_path = POSTS_DIR / f"{slug}.html"
+        with open(html_path, 'w', encoding='utf-8') as f:
             f.write(final_html)
         
+        # Copiar arquivo MD original para a pasta de posts
+        md_dest_path = POSTS_DIR / f"{slug}.md"
+        shutil.copy(md_file_path, md_dest_path)
+        
+        # Adicionar metadados ao índice
         post_data = {
             "title": metadata['title'],
             "slug": slug,
             "url": f"{SITE_PREFIX}blog/posts/{slug}.html",
             "date": full_date,
             "author": metadata.get('author', 'Gabriel Corrêa'),
-            "excerpt": metadata.get('excerpt') or metadata.get('description', 'Clique para ler mais...'),
+            "excerpt": metadata.get('excerpt', metadata.get('description', 'Clique para ler mais...')),
             "image": image_url,
-            "tags": metadata.get('tags', ['Geral']),
-            "categories": [category]
+            "tags": tags,
+            "categories": [category] if isinstance(category, str) else category
         }
         all_posts_metadata.append(post_data)
-        processed_slugs.add(slug)
-
-    for md_file_path in POSTS_DIR.glob("*.md"):
-        slug = md_file_path.stem
-        if slug in processed_slugs: continue
-
-        metadata, content_md = parse_md_with_front_matter(md_file_path)
-        if not metadata or not metadata.get('title'): continue
-
-        content_html = markdown.markdown(content_md, extensions=['extra', 'tables', 'nl2br'])
-        full_date = metadata.get('date', '2026-04-27T00:00:00.000000')
-        display_date = full_date.split('T')[0]
-        category = metadata.get('category') or metadata.get('categories')
-        if isinstance(category, list): category = category[0]
-        if not category: category = "Direito"
         
-        image_url = find_image(slug, metadata['title'], metadata.get('image'))
+        print(f"   ✅ HTML gerado: {html_path.name}")
+        print(f"   📋 Slug: {slug}")
+        print(f"   🖼️  Imagem: {image_url}\n")
         
-        tags = metadata.get('tags', ['Geral'])
-        tags_html = "".join([f'<a href="/blog.html?tag={t}" class="tag">{t}</a>' for t in tags])
-
-        final_html = HTML_TEMPLATE.format(
-            title=metadata['title'],
-            author=metadata.get('author', 'Gabriel Corrêa'),
-            date=display_date,
-            category=category,
-            content=content_html,
-            image=image_url,
-            tags_html=tags_html
-        )
-        
-        with open(POSTS_DIR / f"{slug}.html", 'w', encoding='utf-8') as f:
-            f.write(final_html)
-
-        post_data = {
-            "title": metadata['title'],
-            "slug": slug,
-            "url": f"{SITE_PREFIX}blog/posts/{slug}.html",
-            "date": full_date,
-            "author": metadata.get('author', 'Gabriel Corrêa'),
-            "excerpt": metadata.get('excerpt') or metadata.get('description', 'Clique para ler mais...'),
-            "image": image_url,
-            "tags": metadata.get('tags', ['Geral']),
-            "categories": [category]
-        }
-        all_posts_metadata.append(post_data)
-
+        processed_count += 1
+    
+    # Ordenar por data (mais recentes primeiro)
     all_posts_metadata.sort(key=lambda x: x['date'], reverse=True)
+    
+    # Salvar índice JSON
     with open(INDEX_FILE, 'w', encoding='utf-8') as f:
         json.dump(all_posts_metadata, f, ensure_ascii=False, indent=2)
     
-    print(f"✨ Processamento local concluído! Publicando no GitHub...")
-    git_commit_and_push()
+    print("=" * 70)
+    print(f"✅ SINCRONIZAÇÃO CONCLUÍDA!")
+    print("=" * 70)
+    print(f"Posts processados: {processed_count}")
+    print(f"Índice salvo em: {INDEX_FILE}")
+    print(f"Posts HTML em: {POSTS_DIR}")
+    print("=" * 70 + "\n")
+    
+    # Sugerir commit
+    if processed_count > 0:
+        print("📝 Para publicar no GitHub, execute:")
+        print("   git add blog/ content/")
+        print("   git commit -m 'Novos posts de blog'")
+        print("   git push\n")
+
 
 if __name__ == "__main__":
     sync_posts()
