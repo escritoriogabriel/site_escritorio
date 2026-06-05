@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128635569"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18128635569');
+    </script>
+
+    <!-- Event snippet for Contato conversion -->
+    <script>
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18128635569/3wa0CMCl7aQcELGNtMRD',
+            'event_callback': callback
+        });
+        return false;
+    }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direito Digital | Recuperação de Contas e Defesa da Imagem | Gabriel Corrêa</title>
+    <meta name="description" content="Especialista em Recuperação de Contas Banidas ou Hackeadas, Retirada de Conteúdo Ofensivo e Defesa da Imagem Online. Atuação jurídica imediata com liminares.">
+    
+    <!-- Estilos Base do Site -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0B132B;
+            --secondary-dark: #1C2541;
+            --cyber-blue: #00B4D8;
+            --whatsapp-green: #25D366;
+            --accent-neon: #00F5D4;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --text-muted: #ADB5BD;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        /* Header / Nav Adaptado */
+        header {
+            background-color: rgba(11, 19, 43, 0.95);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo img { height: 34px; }
+
+        .btn-nav-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
+        }
+        .btn-nav-whatsapp:hover { transform: translateY(-2px); }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            background: radial-gradient(circle at top right, rgba(0, 180, 216, 0.1), transparent);
+        }
+
+        @media (max-width: 968px) {
+            .hero { grid-template-columns: 1fr; text-align: center; padding: 60px 0; }
+            .hero-image { order: -1; }
+        }
+
+        .kicker {
+            color: var(--cyber-blue);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; max-width: 540px; }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 180, 216, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .btn-cta {
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 18px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            transition: all 0.3s;
+        }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4); }
+
+        .cta-subtext { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 10px; }
+
+        /* Tabela de Urgência */
+        .urgency-section { padding: 80px 0; background-color: var(--secondary-dark); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
+
+        .table-container { overflow-x: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--primary-dark);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        th { background-color: rgba(0, 180, 216, 0.1); color: var(--cyber-blue); font-weight: 700; }
+        
+        .highlight-td { color: var(--accent-neon); font-weight: 700; }
+        .danger-td { color: #ff4d4d; }
+
+        /* Pilares de Atuação */
+        .pilares-section { padding: 80px 0; }
+        .pilares-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        @media (max-width: 768px) { .pilares-grid { grid-template-columns: 1fr; } }
+
+        .pilar-card {
+            background-color: var(--secondary-dark);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--cyber-blue);
+            transition: transform 0.3s;
+        }
+        .pilar-card:hover { transform: translateY(-5px); }
+        .pilar-card i { font-size: 2.5rem; color: var(--cyber-blue); margin-bottom: 20px; display: block; }
+        .pilar-card h3 { font-size: 1.5rem; margin-bottom: 20px; }
+        .pilar-card ul { list-style: none; }
+        .pilar-card li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; }
+        .pilar-card li::before { content: "✔"; color: var(--accent-neon); font-weight: bold; }
+
+        /* Gráfico de Impacto */
+        .impact-section { padding: 80px 0; background-color: var(--secondary-dark); text-align: center; }
+        .graph-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(0,0,0,0.2);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+        .graph-svg { width: 100%; height: auto; }
+        .graph-note { font-size: 0.9rem; color: var(--text-muted); max-width: 700px; margin: 20px auto; }
+
+        /* Método 3 Passos */
+        .method-section { padding: 80px 0; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
+        
+        .step-item { text-align: center; }
+        .step-number {
+            font-size: 4rem;
+            color: var(--cyber-blue);
+            font-weight: 800;
+            opacity: 0.3;
+            margin-bottom: -30px;
+            display: block;
+        }
+        .step-item h4 { font-size: 1.2rem; margin-bottom: 15px; position: relative; z-index: 1; }
+        .step-item p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* FAQ */
+        .faq-section { padding: 80px 0; background-color: var(--secondary-dark); }
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item { margin-bottom: 15px; border-radius: 10px; overflow: hidden; background: var(--primary-dark); }
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+        .faq-question:hover { background: rgba(0, 180, 216, 0.05); }
+        .faq-answer { padding: 0 20px 20px; display: none; color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Footer */
+        footer { padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { margin-bottom: 20px; color: var(--cyber-blue); }
+        .footer-col p, .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 10px; }
+        .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.8rem; color: var(--text-muted); }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="index.html" class="logo">
+                <img src="https://www.gabrielcorrea.adv.br/assets/logo-escritorio.png" alt="Gabriel Corrêa Advocacia" onerror="this.src='https://via.placeholder.com/200x50/0B132B/00B4D8?text=Gabriel+Correa+Advocacia'">
+            </a>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Preciso%20de%20ajuda%20urgente%20com%20Direito%20Digital." class="btn-nav-whatsapp">
+                <i class="fab fa-whatsapp"></i> Falar com Advogado
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <span class="kicker">🚨 Atuação Jurídica Imediata e Digital</span>
+                <h1>Conta Banida, Hackeada ou Imagem Atacada na Internet?</h1>
+                <p>Recupere seus direitos na justiça. Atuamos com liminares urgentes para devolver o controle do seu negócio digital em poucas horas.</p>
+                <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Preciso%20de%20ajuda%20urgente%20com%20Direito%20Digital." class="btn-cta">
+                    <i class="fab fa-whatsapp"></i> FALE COM UM ADVOGADO DIGITAL
+                </a>
+                <span class="cta-subtext">Atendimento imediato 24h para urgências digitais.</span>
+            </div>
+            <div class="hero-image">
+                <img src="assets/direito-digital-hero.jpg" alt="Segurança Digital e Direito">
+            </div>
+        </section>
+
+        <!-- Urgency Table -->
+        <section class="urgency-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Como funciona a solução do seu problema?</h2>
+                    <p>Entenda por que o suporte comum não resolve e como a via judicial é o caminho mais rápido.</p>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cenário do Cliente</th>
+                                <th>Suporte Comum da Plataforma</th>
+                                <th>Ação Judicial com Especialista</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Prazos</strong></td>
+                                <td class="danger-td">Semanas de respostas automáticas.</td>
+                                <td class="highlight-td">Pedido de liminar entre 24h e 72h.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Análise</strong></td>
+                                <td>Avaliação genérica feita por IA.</td>
+                                <td class="highlight-td">Análise humana baseada na Lei.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dinheiro Preso</strong></td>
+                                <td class="danger-td">Saldo retido sem justificativa.</td>
+                                <td class="highlight-td">Liberação imediata sob pena de multa.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Resultado</strong></td>
+                                <td class="danger-td">Conta perdida para sempre.</td>
+                                <td class="highlight-td">Devolução e Indenização.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilares de Atuação -->
+        <section class="pilares-section container">
+            <div class="section-header">
+                <h2>Nossas Frentes de Especialidade</h2>
+            </div>
+            <div class="pilares-grid">
+                <div class="pilar-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Recuperação de Contas e Ativos</h3>
+                    <ul>
+                        <li><strong>Instagram & Facebook:</strong> Contas desativadas ou invadidas.</li>
+                        <li><strong>Meta/Google Ads:</strong> Desbloqueio de BM's e contas de anúncios.</li>
+                        <li><strong>Plataformas de Vendas:</strong> Hotmart, Kiwify, Mercado Livre e Shopee.</li>
+                        <li><strong>WhatsApp Business:</strong> Recuperação de números banidos.</li>
+                    </ul>
+                </div>
+                <div class="pilar-card">
+                    <i class="fas fa-user-lock"></i>
+                    <h3>Remoção de Conteúdo e Defesa da Imagem</h3>
+                    <ul>
+                        <li><strong>Retirada de Perfis Fakes:</strong> Derrubada de perfis falsos e golpistas.</li>
+                        <li><strong>Combate à Difamação:</strong> Remoção de links e vídeos ofensivos.</li>
+                        <li><strong>Vazamento de Conteúdo:</strong> Atuação cirúrgica (LGPD e Penal).</li>
+                        <li><strong>Direito ao Esquecimento:</strong> Desindexação de links no Google.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Graph -->
+        <section class="impact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O Custo da Espera</h2>
+                    <p>Cada hora offline é um prejuízo acumulado para o seu negócio.</p>
+                </div>
+                <div class="graph-container">
+                    <svg viewBox="0 0 800 400" class="graph-svg">
+                        <!-- Eixos -->
+                        <line x1="50" y1="350" x2="750" y2="350" stroke="#ADB5BD" stroke-width="2" />
+                        <line x1="50" y1="350" x2="50" y2="50" stroke="#ADB5BD" stroke-width="2" />
+                        
+                        <!-- Linha de Prejuízo -->
+                        <path d="M 50 350 L 250 300 L 450 150 L 750 50" fill="none" stroke="#ff4d4d" stroke-width="4" stroke-dasharray="1000" stroke-dashoffset="1000">
+                            <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="3s" fill="freeze" />
+                        </path>
+                        
+                        <!-- Ponto de Liminar -->
+                        <circle cx="250" cy="300" r="8" fill="#00B4D8">
+                            <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                        <text x="265" y="290" fill="#00B4D8" font-weight="bold" font-size="14">🚨 Liminar Judicial (Estabiliza o Risco)</text>
+                        
+                        <!-- Labels -->
+                        <text x="50" y="380" fill="#ADB5BD" font-size="12">Dia 1: Bloqueio</text>
+                        <text x="700" y="380" fill="#ADB5BD" font-size="12">Dias de Bloqueio</text>
+                        <text x="10" y="40" fill="#ff4d4d" font-size="12" transform="rotate(-90, 10, 40)">Prejuízo Financeiro ▲</text>
+                    </svg>
+                    <p class="graph-note">
+                        "Cada hora com sua estrutura digital fora do ar representa perda de leads e queda drástica no faturamento. O tempo médio para obtermos uma decisão judicial que restabeleça suas atividades é de até 3 dias úteis."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Método -->
+        <section class="method-section container">
+            <div class="section-header">
+                <h2>O Método de 3 Passos</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span class="step-number">01</span>
+                    <h4>Análise de Viabilidade</h4>
+                    <p>Avaliação imediata da legalidade do caso via WhatsApp.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">02</span>
+                    <h4>Peticionamento de Urgência</h4>
+                    <p>Ação fundamentada no Marco Civil e LGPD com pedido de Liminar.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-number">03</span>
+                    <h4>Cumprimento Forçado</h4>
+                    <p>Notificação das Big Techs para cumprimento imediato sob pena de multa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perguntas Frequentes</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">Quanto tempo demora para recuperar um Instagram? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Extrajudicialmente tentamos em até 24h. Caso a plataforma recuse, entramos com pedido de liminar na Justiça, onde os juízes costumam dar uma resposta entre 2 a 5 dias.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">A plataforma pode me banir se eu processá-la? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Não. Isso configuraria retaliação ilegal. A Justiça obriga a plataforma a cumprir a lei e restabelecer a conta nos conformes jurídicos.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Consigo pedir indenização por danos morais? <i class="fas fa-chevron-down"></i></div>
+                        <div class="faq-answer">Sim. Se o bloqueio ou invasão gerou perda financeira comprovada ou abalo à imagem, pedimos a reparação integral dos danos e lucros cessantes.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Gabriel Corrêa Advocacia</h4>
+                <p>OAB/SC 63.737</p>
+                <p>Atendimento 100% Online — Todo o Brasil</p>
+            </div>
+            <div class="footer-col">
+                <h4>Especialidades</h4>
+                <a href="#">Direito Digital</a>
+                <a href="trabalhista.html">Direito Trabalhista</a>
+                <a href="familia.html">Direito de Família</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>(47) 98867-0233</p>
+                <p>escritorio.gabrielcorrea@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados. | Proteção de Dados LGPD.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Preciso%20de%20ajuda%20urgente%20com%20Direito%20Digital." class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('i');
+                const isOpen = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                document.querySelectorAll('.faq-question i').forEach(i => i.classList.replace('fa-chevron-up', 'fa-chevron-down'));
+
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
