@@ -282,7 +282,8 @@
             display: grid;
             grid-template-columns: 1fr 280px;
             gap: 40px;
-            max-width: 1100px;
+            max-width: 100%;
+            width: 90%;
             margin: 60px auto;
             padding: 0 5%;
         }
@@ -333,10 +334,10 @@
         }
 
         .post-content p:first-of-type::first-letter {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: var(--accent);
-            margin-right: 2px;
+            font-size: 1em;
+            font-weight: normal;
+            color: var(--text);
+            margin-right: 0px;
         }
 
         /* Listas */
@@ -615,6 +616,231 @@
             font-size: 0.95rem;
         }
 
+        /* ===== RELATED POSTS ===== */
+        .related-posts {
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 2px solid var(--border);
+        }
+        .related-posts-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .related-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .related-post-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+        .related-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .related-post-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .related-post-content {
+            padding: 20px;
+        }
+        .related-post-category {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .related-post-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .related-post-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .related-post-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .related-post-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* ===== MOBILE TOC BUTTON ===== */
+        .mobile-toc-btn {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: var(--primary);
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            display: none;
+        }
+        .mobile-toc-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(201, 169, 97, 0.5);
+        }
+        .mobile-toc-btn.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--accent);
+        }
+
+        /* ===== MOBILE TOC MODAL ===== */
+        .mobile-toc-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .mobile-toc-modal.active {
+            display: block;
+        }
+        .mobile-toc-content {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-light);
+            border-radius: 16px 16px 0 0;
+            padding: 30px 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+            z-index: 1001;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        .mobile-toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+        .mobile-toc-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .mobile-toc-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .mobile-toc-list {
+            list-style: none;
+        }
+        .mobile-toc-list li {
+            margin-bottom: 12px;
+        }
+        .mobile-toc-list a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+        .mobile-toc-list a:hover {
+            background: var(--bg);
+            color: var(--accent);
+            padding-left: 20px;
+        }
+        .mobile-toc-list li.level-3 a {
+            padding-left: 30px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .floating-whatsapp {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--whatsapp) 0%, #1da851 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 998;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+        .floating-whatsapp:active {
+            transform: scale(0.95);
+        }
+
         /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 1024px) {
             .post-wrapper {
@@ -670,6 +896,7 @@
             }
             .post-wrapper {
                 margin: 40px auto;
+                width: 95%;
             }
             .cta-section {
                 padding: 40px 25px;
@@ -679,6 +906,15 @@
             }
             .sidebar {
                 display: none;
+            }
+            .mobile-toc-btn {
+                display: flex !important;
+            }
+            .floating-whatsapp {
+                display: flex !important;
+            }
+            .related-posts-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -719,6 +955,23 @@
             .cta-whatsapp {
                 padding: 14px 28px;
                 font-size: 0.95rem;
+            }
+            .post-wrapper {
+                width: 100%;
+                padding: 0;
+            }
+            .mobile-toc-btn {
+                bottom: 90px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+            .floating-whatsapp {
+                width: 55px;
+                height: 55px;
+                right: 15px;
+                font-size: 1.6rem;
             }
         }
     </style>
@@ -881,6 +1134,14 @@
 <p><strong>Precisa de ajuda profissional?</strong> Fale agora com o Advogado Gabriel Corrêa pelo WhatsApp: <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D">📞 (47) 98867-0233</a></p>
             </article>
 
+            <!-- Posts Relacionados -->
+            <div class="related-posts" id="relatedPosts">
+                <h2 class="related-posts-title">Posts Relacionados</h2>
+                <div class="related-posts-grid" id="relatedPostsGrid">
+                    <!-- Preenchido dinamicamente via JavaScript -->
+                </div>
+            </div>
+
             <div class="cta-section">
                 <div class="cta-content">
                     <h2>Precisa de ajuda com este assunto?</h2>
@@ -924,30 +1185,164 @@
         </aside>
     </div>
 
+    <!-- Mobile ToC Button -->
+    <button class="mobile-toc-btn" id="mobileTocBtn" title="Índice do artigo" aria-label="Abrir índice">
+        <i class="fas fa-list"></i>
+    </button>
+
+    <!-- Mobile ToC Modal -->
+    <div class="mobile-toc-modal" id="mobileTocModal">
+        <div class="mobile-toc-content">
+            <div class="mobile-toc-header">
+                <h3>Índice do Artigo</h3>
+                <button class="mobile-toc-close" id="mobileTocClose" aria-label="Fechar índice">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-toc-list" id="mobileTocList">
+                <!-- Preenchido dinamicamente via JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20resolver%20um%20problema%20que%20eu%20tenho%21%20%F0%9F%A4%9D" class="floating-whatsapp" title="Fale conosco via WhatsApp" aria-label="Abrir WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <footer>
         <p>&copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.</p>
         <p style="font-size: 0.9rem; margin-top: 8px;">Atendimento em todo o Brasil.</p>
     </footer>
 
     <script>
+        // Função para extrair o slug da URL atual
+        function getCurrentPostSlug() {
+            const path = window.location.pathname;
+            const match = path.match(/\/blog\/posts\/([^/]+)\.html/);
+            return match ? match[1] : null;
+        }
+
+        // Função para carregar e exibir posts relacionados
+        function loadRelatedPosts() {
+            const currentSlug = getCurrentPostSlug();
+            const relatedPostsGrid = document.getElementById('relatedPostsGrid');
+            const relatedPostsSection = document.getElementById('relatedPosts');
+            
+            if (!relatedPostsGrid || !currentSlug) return;
+            
+            fetch('/blog/posts/index.json')
+                .then(response => response.json())
+                .then(posts => {
+                    // Encontra o post atual
+                    const currentPost = posts.find(p => p.slug === currentSlug);
+                    if (!currentPost) return;
+                    
+                    // Filtra posts relacionados pela mesma categoria
+                    const related = posts.filter(p => 
+                        p.slug !== currentSlug && 
+                        p.categories && currentPost.categories &&
+                        p.categories.some(cat => currentPost.categories.includes(cat))
+                    ).slice(0, 3);
+                    
+                    if (related.length === 0) {
+                        relatedPostsSection.style.display = 'none';
+                        return;
+                    }
+                    
+                    relatedPostsGrid.innerHTML = related.map(post => `
+                        <div class="related-post-card">
+                            <img src="${post.image}" alt="${post.title}" class="related-post-image">
+                            <div class="related-post-content">
+                                <div class="related-post-category">${post.categories[0]}</div>
+                                <h3 class="related-post-title">${post.title}</h3>
+                                <p class="related-post-excerpt">${post.excerpt}</p>
+                                <a href="${post.url}" class="related-post-link">Leia mais →</a>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+                ).catch(err => console.error('Erro ao carregar posts relacionados:', err));
+        }
+
         // Gera índice dinâmico baseado nos h2 e h3
         document.addEventListener('DOMContentLoaded', function() {
             const headings = document.querySelectorAll('.post-content h2, .post-content h3');
             const tocList = document.querySelector('.toc-list');
-            if (tocList) {
-                tocList.innerHTML = '';
+            const mobileTocList = document.getElementById('mobileTocList');
+            
+            if (tocList || mobileTocList) {
+                const tocItems = [];
                 headings.forEach((heading, index) => {
                     const id = 'heading-' + index;
                     heading.id = id;
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = '#' + id;
-                    a.textContent = heading.textContent;
-                    a.style.paddingLeft = heading.tagName === 'H3' ? '20px' : '0px';
-                    li.appendChild(a);
-                    tocList.appendChild(li);
+                    const isH3 = heading.tagName === 'H3';
+                    tocItems.push({
+                        id: id,
+                        text: heading.textContent,
+                        isH3: isH3
+                    });
+                });
+                
+                if (tocList) {
+                    tocList.innerHTML = '';
+                    tocItems.forEach(item => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = '#' + item.id;
+                        a.textContent = item.text;
+                        a.style.paddingLeft = item.isH3 ? '20px' : '0px';
+                        li.appendChild(a);
+                        tocList.appendChild(li);
+                    });
+                }
+                
+                if (mobileTocList) {
+                    mobileTocList.innerHTML = '';
+                    tocItems.forEach(item => {
+                        const li = document.createElement('li');
+                        if (item.isH3) li.classList.add('level-3');
+                        const a = document.createElement('a');
+                        a.href = '#' + item.id;
+                        a.textContent = item.text;
+                        li.appendChild(a);
+                        mobileTocList.appendChild(li);
+                        
+                        // Fecha o modal ao clicar em um link
+                        a.addEventListener('click', () => {
+                            document.getElementById('mobileTocModal').classList.remove('active');
+                            document.getElementById('mobileTocBtn').classList.remove('active');
+                        });
+                    });
+                }
+            }
+            
+            // Mobile ToC Button
+            const mobileTocBtn = document.getElementById('mobileTocBtn');
+            const mobileTocModal = document.getElementById('mobileTocModal');
+            const mobileTocClose = document.getElementById('mobileTocClose');
+            
+            if (mobileTocBtn && mobileTocModal) {
+                mobileTocBtn.addEventListener('click', () => {
+                    mobileTocModal.classList.toggle('active');
+                    mobileTocBtn.classList.toggle('active');
+                });
+                
+                mobileTocClose.addEventListener('click', () => {
+                    mobileTocModal.classList.remove('active');
+                    mobileTocBtn.classList.remove('active');
+                });
+                
+                mobileTocModal.addEventListener('click', (e) => {
+                    if (e.target === mobileTocModal) {
+                        mobileTocModal.classList.remove('active');
+                        mobileTocBtn.classList.remove('active');
+                    }
                 });
             }
+            
+            // Carrega posts relacionados
+            loadRelatedPosts();
             
             // Menu Mobile
             const hamburgerBtn = document.getElementById('hamburgerBtn');
