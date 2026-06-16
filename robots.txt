@@ -1,9 +1,14 @@
 User-agent: *
+Disallow: /blog/
+Disallow: /depoimentos.html
+Disallow: /sobre.html
+Disallow: /contato.html
+Disallow: /trabalhista-b.html
+Disallow: /criminal-b.html
+Disallow: /divorcio.html
+Disallow: /inventario.html
+Disallow: /pensao-alimenticia.html
+
 Allow: /
+
 Sitemap: https://www.gabrielcorrea.adv.br/sitemap.xml
-
-User-agent: *
-Allow: /
-
-User-agent: Googlebot
-Allow: /

@@ -48,7 +48,7 @@
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-* { margin: 0; padding: 0; box-sizing: content-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
@@ -295,7 +295,7 @@ nav { display: flex; align-items: center; gap: 30px; }
     transform: translateY(-3px);
     box-shadow: 0 10px 28px rgba(37,211,102,0.42);
 }
-66416209000149
+
 .btn-secondary {
     background: transparent;
     color: var(--primary-blue);

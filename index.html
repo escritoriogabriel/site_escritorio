@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128635569">
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=AW-18128635569">
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -73,6 +73,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pages-style.css">
@@ -913,6 +914,7 @@ footer {
     text-decoration: none;
     transition: transform 0.3s;
     animation: pulse 2.5s infinite;
+    will-change: transform;
 }
 .whatsapp-float:hover { transform: scale(1.1); }
 .whatsapp-bubble {
@@ -944,9 +946,9 @@ footer {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-    70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1133,7 +1135,7 @@ footer {
     </div>
 
     <header>
-        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa" width="1376" height="260"></a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
             <span></span><span></span><span></span>
         </button>
@@ -1291,7 +1293,7 @@ footer {
     <section class="about-summary">
         <div class="about-container">
             <div class="about-image">
-                <img src="assets/img/advogado-gabriel.webp" alt="Dr. Gabriel Corrêa">
+                <img src="assets/img/advogado-gabriel.webp" alt="Dr. Gabriel Corrêa" width="1024" height="1536">
             </div>
             <div class="about-text">
                 <h2>Dr. Gabriel Corrêa</h2>
