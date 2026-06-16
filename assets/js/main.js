@@ -18,6 +18,18 @@ if (hamburgerBtn && mainNav) {
     });
 }
 
+// Header Shrink on Scroll (15% da página)
+const header = document.querySelector('header');
+const scrollThreshold = window.innerHeight * 0.15; // 15% da altura da viewport
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > scrollThreshold) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
 // FAQ Accordion
 const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(question => {

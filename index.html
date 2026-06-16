@@ -87,8 +87,12 @@
 .animate-fade-up { animation: fadeInUp 0.7s ease forwards; }
 
 /* Sobrescrita de estilos do header para manter compatibilidade com o markup da Home */
-header { height: 80px; }
-.logo img { height: 34px; }
+header { height: 80px; transition: all 0.3s ease; }
+header.scrolled { height: 68px; }
+header.scrolled .logo img { height: 29px; }
+header.scrolled .btn-primary { padding: 10px 14px; font-size: 0.85rem; }
+.logo img { height: 34px; transition: height 0.3s ease; }
+.btn-primary { transition: all 0.3s ease; }
 .nav-links a { font-weight: 600; }
 .dropdown-content { min-width: 260px; }
 .btn-nav-whatsapp { 
@@ -964,7 +968,7 @@ footer {
     .contact-grid { grid-template-columns: 1fr; gap: 24px; }
     .about-container { grid-template-columns: 1fr; gap: 20px; text-align: center; }
     .about-image { max-width: 260px; margin: 0 auto; }
-    .about-image img { box-shadow: 14px 14px 0 var(--accent-gold); }
+    .about-image img { height: 80%; box-shadow: 14px 14px 0 var(--accent-gold); }
     .about-checks { grid-template-columns: 1fr 1fr; }
     .social-proof-grid { grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
     .blog-magazine-container { grid-template-columns: 1fr; gap: 14px; }
@@ -974,10 +978,37 @@ footer {
 @media (max-width: 768px) {
     /* Header mobile */
     header {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         height: auto;
-        padding: 12px 5%;
-        gap: 8px;
+        padding: 10px 5%;
+        gap: 0;
+        justify-content: space-between;
+    }
+    header.scrolled {
+        padding: 8px 5%;
+    }
+    .logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .logo img {
+        height: 30px;
+        max-width: 100%;
+    }
+    header.scrolled .logo img {
+        height: 25px;
+    }
+    .btn-primary {
+        width: 50%;
+        padding: 12px 8px;
+        font-size: 0.9rem;
+        text-align: center;
+        justify-content: center;
+    }
+    header.scrolled .btn-primary {
+        padding: 10px 6px;
+        font-size: 0.8rem;
     }
 /*     .hamburger { display: flex !important; }
     nav {
@@ -989,6 +1020,9 @@ footer {
         background: white;
     } */
     nav.open, nav.active { display: flex !important; }
+    nav {
+        display: none;
+    }
     .nav-links {
         flex-direction: column;
         align-items: flex-start;
