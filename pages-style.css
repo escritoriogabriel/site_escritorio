@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5 {
 }
 
 a { color: var(--primary-blue); }
-img { max-width: 90%; display: inline-grid; }
+img { max-width: 100%; height: auto; display: block; }
 
 /* Selection */
 ::selection { background: var(--accent-gold); color: var(--primary-blue); }
@@ -108,6 +108,17 @@ header {
     border-bottom: 1px solid var(--border-soft);
     height: 84px;
     transition: box-shadow 0.3s var(--ease);
+}
+
+#mainNav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    margin-right: auto;
+    padding-left: 40px;
 }
 header.scrolled { box-shadow: 0 6px 20px rgba(23,43,65,0.07); }
 
