@@ -38,14 +38,19 @@
     <style>
         /* Estilos específicos para a Landing Page - Design Sofisticado */
         :root {
-            --primary-dark: #112620; /* Verde escuro sofisticado */
-            --primary-light: #1A3A31;
-            --accent-gold: #D4AF37; /* Dourado elegante */
-            --accent-gold-hover: #B5952F;
+            --primary-dark: #172B41; /* Azul marinho conforme padrão do site */
+            --primary-light: #1f3a55;
+            --primary-blue-deep: #0D1B2A;
+            --primary-blue: #172B41;
+            --accent-gold: #C9A961; /* Dourado conforme padrão do site */
+            --accent-gold-deep: #A8884A;
+            --accent-gold-hover: #A8884A;
             --text-light: #F5F5F5;
             --text-dark: #222222;
-            --bg-light: #FAFAFA;
-            --border-color: #E0E0E0;
+            --text-body: #4A4A4A;
+            --text-muted: #6A6A6A;
+            --bg-light: #F8F8F8;
+            --border-color: #EDE9E0;
         }
 
         body.lp-ads {
@@ -59,7 +64,9 @@
         /* Header Enxuto */
         .top-bar { display: none; }
         header {
-            background-color: var(--primary-dark);
+            background-color: rgba(255,255,255,0.96);
+            backdrop-filter: saturate(180%) blur(14px);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -67,36 +74,35 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid #EDE9E0;
         }
         header .logo img {
             max-height: 45px;
-            filter: brightness(0) invert(1); /* Logo branca */
         }
         header #mainNav { display: none; }
         .btn-nav-whatsapp {
-            background-color: transparent;
-            color: var(--text-light);
-            padding: 10px 20px;
-            border: 1px solid var(--text-light);
-            border-radius: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 11px 22px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9em;
+            font-weight: 600;
+            font-size: 0.88rem;
             display: flex;
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(37,211,102,0.32);
         }
         .btn-nav-whatsapp:hover {
-            background-color: var(--text-light);
-            color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(37,211,102,0.42);
         }
 
         /* Hero Section com Card Integrado */
         .hero-container {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
-            color: var(--text-light);
+            background: linear-gradient(180deg, #F8F8F8 0%, #FBF8F1 100%);
+            color: var(--primary-dark);
             padding: 80px 5% 100px;
             position: relative;
             overflow: hidden;
@@ -111,7 +117,7 @@
             width: 800px;
             height: 800px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 70%);
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, rgba(201, 169, 97, 0) 70%);
             z-index: 0;
         }
 
@@ -131,37 +137,41 @@
             max-width: 600px;
         }
         .hero-text .eyebrow {
-            color: var(--accent-gold);
-            font-size: 0.85em;
+            color: var(--accent-gold-deep);
+            font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin-bottom: 20px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 14px;
             display: block;
+            font-family: 'Inter', sans-serif;
         }
         .hero-text h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.8em;
             margin-bottom: 25px;
             line-height: 1.1;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--primary-dark);
         }
         .hero-text h1 span {
-            color: var(--accent-gold);
+            color: var(--accent-gold-deep);
+            font-style: italic;
+            font-weight: 600;
         }
         .hero-text p {
             font-size: 1.15em;
             line-height: 1.6;
             margin-bottom: 40px;
-            color: rgba(255,255,255,0.8);
-            font-weight: 300;
+            color: var(--text-muted);
+            font-weight: 400;
         }
         
         .hero-features {
             display: flex;
             gap: 20px;
             font-size: 0.85em;
-            color: rgba(255,255,255,0.7);
+            color: var(--text-body);
         }
         .hero-features span {
             display: flex;
@@ -169,7 +179,7 @@
             gap: 5px;
         }
         .hero-features i {
-            color: var(--accent-gold);
+            color: #25D366;
         }
 
         /* Card de Triagem (Estilo Formulário) */
@@ -178,8 +188,9 @@
             background-color: #FFFFFF;
             border-radius: 16px;
             padding: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 50px -20px rgba(23,43,65,0.30);
             color: var(--text-dark);
+            border: 1px solid rgba(201,169,97,0.15);
         }
         .triagem-box .eyebrow {
             color: #888;
@@ -208,7 +219,7 @@
         
         .triagem-option {
             padding: 15px 20px;
-            border: 1px solid var(--border-color);
+            border: 1.5px solid var(--border-color);
             border-radius: 8px;
             cursor: pointer;
             font-size: 0.95em;
@@ -217,40 +228,45 @@
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
+            background-color: #FFFFFF;
         }
         
         .triagem-option:hover {
             border-color: var(--accent-gold);
-            background-color: rgba(212, 175, 55, 0.05);
+            background-color: rgba(201, 169, 97, 0.05);
+            box-shadow: 0 2px 8px rgba(201, 169, 97, 0.15);
         }
         
         .triagem-option.selected {
             border-color: var(--accent-gold);
-            background-color: rgba(212, 175, 55, 0.1);
+            background-color: rgba(201, 169, 97, 0.1);
             color: var(--primary-dark);
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(201, 169, 97, 0.2);
         }
 
         .triagem-cta-button {
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            padding: 18px;
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 16px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1em;
+            font-size: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
             width: 100%;
             box-sizing: border-box;
             border: none;
             cursor: pointer;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
         }
         .triagem-cta-button:hover {
-            background-color: var(--accent-gold-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
         }
         .triagem-cta-button.disabled {
             opacity: 0.5;
@@ -269,7 +285,7 @@
         /* Situações que Atendemos */
         .situacoes-section {
             padding: 100px 5%;
-            background-color: var(--bg-light);
+            background-color: #FFFFFF;
         }
         .section-header {
             text-align: center;
@@ -299,14 +315,15 @@
             border-radius: 12px;
             padding: 40px 30px;
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 1px 3px rgba(23,43,65,0.06), 0 8px 24px -8px rgba(23,43,65,0.10);
         }
         .situacao-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-            border-color: transparent;
+            transform: translateY(-8px);
+            box-shadow: 0 4px 8px rgba(23,43,65,0.08), 0 16px 40px -12px rgba(23,43,65,0.18);
+            border-color: var(--accent-gold);
         }
         .situacao-card h3 {
             font-size: 1.3em;
@@ -342,7 +359,7 @@
         /* Diferenciais (Mais clean e sofisticado) */
         .diferenciais-section {
             padding: 80px 5%;
-            background-color: #fff;
+            background-color: var(--bg-light);
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
@@ -376,7 +393,7 @@
         /* Como Funciona */
         .como-funciona-section {
             padding: 100px 5%;
-            background-color: var(--bg-light);
+            background-color: #FFFFFF;
         }
         .passos-container {
             max-width: 1000px;
@@ -392,6 +409,12 @@
             border-radius: 12px;
             padding: 30px 40px;
             border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(23,43,65,0.06), 0 8px 24px -8px rgba(23,43,65,0.10);
+            transition: all 0.3s ease;
+        }
+        .passo-row:hover {
+            box-shadow: 0 4px 8px rgba(23,43,65,0.08), 0 16px 40px -12px rgba(23,43,65,0.18);
+            transform: translateY(-4px);
         }
         .passo-numero {
             font-family: 'Playfair Display', serif;
@@ -417,7 +440,7 @@
         /* FAQ Section */
         .faq-section {
             padding: 100px 5%;
-            background-color: #fff;
+            background-color: var(--bg-light);
         }
         .faq-container {
             max-width: 800px;
@@ -438,6 +461,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover {
+            color: var(--accent-gold-deep);
         }
         .faq-question i {
             color: var(--accent-gold);
@@ -459,7 +486,7 @@
 
         /* Footer CTA */
         .footer-cta {
-            background-color: var(--primary-dark);
+            background: linear-gradient(180deg, #0D1B2A 0%, #172B41 100%);
             color: white;
             padding: 80px 5%;
             text-align: center;
@@ -468,29 +495,32 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.5em;
             margin-bottom: 30px;
+            font-weight: 700;
         }
         .footer-cta .btn-primary {
-            background-color: var(--accent-gold);
-            color: var(--primary-dark);
-            padding: 18px 40px;
-            border-radius: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1em;
+            font-size: 1rem;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
         }
         .footer-cta .btn-primary:hover {
-            background-color: var(--accent-gold-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
         }
         .footer-bottom {
-            background-color: #0a1713;
-            color: rgba(255,255,255,0.5);
+            background-color: #0D1B2A;
+            color: rgba(255,255,255,0.7);
             text-align: center;
             padding: 20px;
-            font-size: 0.8em;
+            font-size: 0.9em;
         }
 
         /* Responsividade */
