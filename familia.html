@@ -42,9 +42,9 @@
             --primary-light: #1f3a55;
             --primary-blue-deep: #0D1B2A;
             --primary-blue: #172B41;
-            --accent-gold: #C9A961;
-            --accent-gold-deep: #A8884A;
-            --accent-gold-hover: #A8884A;
+            --accent-terracota: #C4714F;
+            --accent-terracota-light: #E8B8A0;
+            --accent-terracota-dark: #A85A3F;
             --text-light: #F5F5F5;
             --text-dark: #222222;
             --text-body: #4A4A4A;
@@ -96,6 +96,7 @@
             box-shadow: 0 8px 22px rgba(37,211,102,0.42);
         }
 
+        /* HERO COM VALIDAÇÃO EMOCIONAL */
         .hero-container {
             background: linear-gradient(180deg, #F8F8F8 0%, #FBF8F1 100%);
             color: var(--primary-dark);
@@ -112,7 +113,7 @@
             width: 800px;
             height: 800px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, rgba(201, 169, 97, 0) 70%);
+            background: radial-gradient(circle, rgba(196, 113, 79, 0.06) 0%, rgba(196, 113, 79, 0) 70%);
             z-index: 0;
         }
 
@@ -132,7 +133,7 @@
             max-width: 600px;
         }
         .hero-text .eyebrow {
-            color: var(--accent-gold-deep);
+            color: var(--accent-terracota-dark);
             font-size: 0.72rem;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -142,19 +143,21 @@
         }
         .hero-text h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.8em;
-            margin-bottom: 25px;
+            font-size: 3.2em;
+            margin-bottom: 20px;
             line-height: 1.1;
             font-weight: 700;
             color: var(--primary-dark);
         }
-        .hero-text h1 span {
-            color: var(--accent-gold-deep);
-            font-style: italic;
+        .hero-text .validation-line {
+            font-size: 1.1em;
+            color: var(--accent-terracota);
             font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         .hero-text p {
-            font-size: 1.15em;
+            font-size: 1.05em;
             line-height: 1.6;
             margin-bottom: 40px;
             color: var(--text-muted);
@@ -182,7 +185,7 @@
             padding: 40px;
             box-shadow: 0 20px 50px -20px rgba(23,43,65,0.30);
             color: var(--text-dark);
-            border: 1px solid rgba(201,169,97,0.15);
+            border: 1px solid rgba(196, 113, 79, 0.15);
         }
         .triagem-box .eyebrow {
             color: #888;
@@ -227,18 +230,18 @@
             width: 18px;
             height: 18px;
             cursor: pointer;
-            accent-color: var(--accent-gold);
+            accent-color: var(--accent-terracota);
             flex-shrink: 0;
         }
         
         .triagem-option:hover {
-            border-color: var(--accent-gold);
-            background-color: rgba(201, 169, 97, 0.05);
+            border-color: var(--accent-terracota);
+            background-color: rgba(196, 113, 79, 0.05);
         }
         
         .triagem-option.selected {
-            border-color: var(--accent-gold);
-            background-color: rgba(201, 169, 97, 0.1);
+            border-color: var(--accent-terracota);
+            background-color: rgba(196, 113, 79, 0.1);
             color: var(--primary-dark);
             font-weight: 600;
         }
@@ -280,15 +283,151 @@
             line-height: 1.4;
         }
 
+        /* SEÇÃO DE VALIDAÇÃO EMOCIONAL */
+        .validation-section {
+            background: white;
+            padding: 80px 5%;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .validation-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .validation-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .validation-card .icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(196, 113, 79, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: var(--accent-terracota);
+            margin: 0 auto 25px;
+        }
+
+        .validation-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .validation-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* SEÇÃO DE ORIENTAÇÃO RÁPIDA */
+        .quick-guidance-section {
+            background: #F8F8F8;
+            padding: 80px 5%;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .quick-guidance-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .quick-guidance-section > p {
+            text-align: center;
+            font-size: 1.05rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .guidance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .guidance-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 30px;
+            border-left: 5px solid var(--accent-terracota);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guidance-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(196, 113, 79, 0.15);
+        }
+
+        .guidance-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .guidance-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .guidance-card .cta-link {
+            color: var(--accent-terracota);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .guidance-card .cta-link:hover {
+            gap: 12px;
+            color: var(--accent-terracota-dark);
+        }
+
+        /* SEÇÃO DE SITUAÇÕES */
         .situacoes-section {
             padding: 100px 5%;
             background-color: #FFFFFF;
+            border-top: 1px solid var(--border-color);
         }
+
         .section-header {
             text-align: center;
             max-width: 700px;
             margin: 0 auto 60px;
         }
+
         .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.8em;
@@ -303,6 +442,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .situacao-card {
             background-color: #fff;
             border-radius: 12px;
@@ -313,17 +453,20 @@
             flex-direction: column;
             box-shadow: 0 8px 24px -8px rgba(23,43,65,0.10);
         }
+
         .situacao-card:hover {
             transform: translateY(-8px);
-            border-color: var(--accent-gold);
-            box-shadow: 0 16px 40px -12px rgba(23,43,65,0.18);
+            border-color: var(--accent-terracota);
+            box-shadow: 0 16px 40px -12px rgba(196, 113, 79, 0.25);
         }
+
         .situacao-card h3 {
             font-size: 1.3em;
             color: var(--primary-dark);
             margin-bottom: 15px;
             font-weight: 700;
         }
+
         .situacao-card p {
             font-size: 0.95em;
             color: #666;
@@ -331,8 +474,9 @@
             line-height: 1.6;
             flex-grow: 1;
         }
+
         .situacao-card .mini-cta {
-            color: var(--primary-dark);
+            color: var(--accent-terracota);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9em;
@@ -344,16 +488,90 @@
             padding-bottom: 2px;
             align-self: flex-start;
         }
+
         .situacao-card .mini-cta:hover {
-            color: var(--accent-gold);
-            border-bottom-color: var(--accent-gold);
+            color: var(--accent-terracota-dark);
+            border-bottom-color: var(--accent-terracota);
         }
 
-        .diferenciais-section {
-            padding: 80px 5%;
-            background-color: var(--bg-light);
+        /* SEÇÃO COMO FUNCIONA */
+        .how-it-works-section {
+            background: #F8F8F8;
+            padding: 100px 5%;
             border-top: 1px solid var(--border-color);
         }
+
+        .how-it-works-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-top: 4px solid var(--accent-terracota);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-terracota);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* DIFERENCIAIS */
+        .diferenciais-section {
+            padding: 80px 5%;
+            background-color: white;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .diferenciais-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
         .diferenciais-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -361,38 +579,47 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .diferencial-item {
             text-align: left;
         }
+
         .diferencial-item i {
-            font-size: 1.8em;
-            color: var(--accent-gold);
+            font-size: 2rem;
+            color: var(--accent-terracota);
             margin-bottom: 15px;
         }
+
         .diferencial-item h3 {
             font-size: 1.1em;
             color: var(--primary-dark);
             margin-bottom: 10px;
             font-weight: 700;
         }
+
         .diferencial-item p {
             font-size: 0.9em;
             color: #666;
             line-height: 1.6;
         }
 
+        /* FAQ */
         .faq-section {
             padding: 100px 5%;
-            background-color: #FFFFFF;
+            background-color: #F8F8F8;
+            border-top: 1px solid var(--border-color);
         }
+
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
+
         .faq-item {
             border-bottom: 1px solid var(--border-color);
             padding: 25px 0;
         }
+
         .faq-question {
             font-size: 1.1em;
             font-weight: 600;
@@ -401,7 +628,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: color 0.2s ease;
         }
+
+        .faq-question:hover {
+            color: var(--accent-terracota);
+        }
+
         .faq-answer {
             margin-top: 15px;
             color: #666;
@@ -409,25 +642,30 @@
             line-height: 1.6;
             display: none;
         }
+
         .faq-item.active .faq-answer {
             display: block;
         }
+
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
 
+        /* FOOTER CTA */
         .footer-cta {
             background: linear-gradient(180deg, #0D1B2A 0%, #172B41 100%);
             color: white;
             padding: 80px 5%;
             text-align: center;
         }
+
         .footer-cta h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5em;
             margin-bottom: 30px;
             font-weight: 700;
         }
+
         .footer-bottom {
             background-color: #0D1B2A;
             color: rgba(255,255,255,0.7);
@@ -438,128 +676,239 @@
 
         @media (max-width: 992px) {
             .hero-content-wrapper { flex-direction: column; text-align: center; }
-            .hero-text h1 { font-size: 3em; }
+            .hero-text h1 { font-size: 2.5em; }
             .hero-features { justify-content: center; }
             .triagem-box { width: 100%; max-width: 500px; }
             .diferenciais-grid { grid-template-columns: repeat(2, 1fr); }
         }
+
         @media (max-width: 768px) {
             .diferenciais-grid { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2em; }
+            .validation-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .validation-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body class="lp-ads">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7FPXN89"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+     
+    <div class="top-bar">
+        <i class="fas fa-envelope"></i> <a href="mailto:escritorio.gabrielcorrea@gmail.com">escritorio.gabrielcorrea@gmail.com</a> &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> <a  href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20da%20p%C3%A1gina%20de%20Direito%20de%20Fam%C3%ADlia%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer">(47) 98867-0233</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> Atendimento 100% Online em todo o Brasil
+    </div>
+
     <header>
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-        <a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=Olá! Vim através do site e gostaria de falar com um Advogado." target="_blank" rel="noopener noreferrer">Falar com Advogado</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li class="nav-always-show"><a href="index.html">Início</a></li>
+                <li><a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Conversar</a></li>
+                <li class="nav-always-show"><a href="sobre.html">Sobre</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="nav-always-show"><a href="contato.html">Contato</a></li>
+            </ul>
+            <a class="btn-reuniao" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20da%20p%C3%A1gina%20de%20Direito%20de%20Fam%C3%ADlia%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Agendar Reunião</a>
+        </nav>
     </header>
 
     <main>
+        <!-- HERO COM VALIDAÇÃO EMOCIONAL -->
         <section class="hero-container">
             <div class="hero-content-wrapper">
                 <div class="hero-text">
-                    <span class="eyebrow">Direito de Família Especializado</span>
-                    <h1>Protegendo o que é <span>mais importante para você</span>.</h1>
-                    <p>Momentos de transição familiar exigem clareza, empatia e estratégia técnica. Traduzimos o jurídico para a sua realidade, devolvendo previsibilidade ao seu futuro.</p>
-                    
+                    <span class="eyebrow"><i class="fas fa-heart"></i> Direito de Família</span>
+                    <h1>Separação, guarda dos filhos, pensão — Advogado especializado para cada caso.</h1>
+                    <p class="validation-line">Você não está sozinho nessa. Entendemos a dor e o medo que vêm com essas decisões.</p>
+                    <p>Atendimento humanizado que respeita sua situação emocional antes de falar em processo. Você merece um advogado que entenda que por trás de cada caso há uma história de vida.</p>
                     <div class="hero-features">
-                        <span><i class="fas fa-check"></i> Atendimento humanizado</span>
-                        <span><i class="fas fa-check"></i> 100% online</span>
-                        <span><i class="fas fa-check"></i> Sigilo absoluto</span>
+                        <span><i class="fas fa-check-circle"></i> Análise inicial gratuita</span>
+                        <span><i class="fas fa-check-circle"></i> 100% sigiloso</span>
                     </div>
                 </div>
-
+                
                 <div class="triagem-box">
-                    <span class="eyebrow">Triagem Inicial</span>
-                    <h2>Qual a sua principal necessidade hoje?</h2>
+                    <span class="eyebrow">Qual é sua situação?</span>
+                    <h2>Encontre o caminho certo</h2>
                     
                     <div class="triagem-options">
-                        <label class="triagem-option" data-problema="Divórcio">
-                            <input type="radio" name="triagem" value="Divórcio">
-                            <span>Divórcio (Consensual ou Litigioso)</span>
+                        <label class="triagem-option">
+                            <input type="radio" name="triagem" value="Divórcio e partilha de bens">
+                            <span>Divórcio e partilha de bens</span>
                         </label>
-                        <label class="triagem-option" data-problema="Pensão Alimentícia">
-                            <input type="radio" name="triagem" value="Pensão Alimentícia">
-                            <span>Pensão Alimentícia (Fixação ou Revisão)</span>
+                        <label class="triagem-option">
+                            <input type="radio" name="triagem" value="Guarda de filhos">
+                            <span>Guarda de filhos</span>
                         </label>
-                        <label class="triagem-option" data-problema="Guarda e Visitas">
-                            <input type="radio" name="triagem" value="Guarda e Visitas">
-                            <span>Guarda de Filhos e Visitas</span>
+                        <label class="triagem-option">
+                            <input type="radio" name="triagem" value="Pensão alimentícia">
+                            <span>Pensão alimentícia</span>
                         </label>
-                        <label class="triagem-option" data-problema="Inventário e Herança">
-                            <input type="radio" name="triagem" value="Inventário e Herança">
-                            <span>Inventário e Partilha de Bens</span>
+                        <label class="triagem-option">
+                            <input type="radio" name="triagem" value="Inventário e sucessão">
+                            <span>Inventário e sucessão</span>
                         </label>
-                        <label class="triagem-option" data-problema="Outro problema familiar">
-                            <input type="radio" name="triagem" value="Outro problema familiar">
-                            <span>Outra situação familiar</span>
+                        <label class="triagem-option">
+                            <input type="radio" name="triagem" value="Outro assunto de família">
+                            <span>Outro assunto de família</span>
                         </label>
                     </div>
                     
-                    <a id="triagem-cta" class="triagem-cta-button disabled" href="#" target="_blank" rel="noopener noreferrer">
-                        Solicitar orientação <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <button id="triagem-cta" class="triagem-cta-button disabled" href="#">
+                        <i class="fab fa-whatsapp"></i> Falar com Especialista
+                    </button>
                     
                     <p class="triagem-disclaimer">A análise inicial é gratuita e totalmente sigilosa.</p>
                 </div>
             </div>
         </section>
 
-        <section class="diferenciais-section">
-            <div class="diferenciais-grid">
-                <div class="diferencial-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>Atuação Humanizada</h3>
-                    <p>Entendemos que por trás de cada processo existem pessoas e histórias que merecem respeito.</p>
+        <!-- SEÇÃO DE VALIDAÇÃO EMOCIONAL -->
+        <section class="validation-section">
+            <h2>Você não precisa resolver isso sozinho</h2>
+            <div class="validation-grid">
+                <div class="validation-card">
+                    <div class="icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Análise sem custo e sem julgamento</h3>
+                    <p>Conversamos sobre sua situação sem pressão. Você entende suas opções antes de tomar qualquer decisão.</p>
                 </div>
-                <div class="diferencial-item">
-                    <i class="fas fa-handshake"></i>
-                    <h3>Foco na Mediação</h3>
-                    <p>Sempre que possível, buscamos o acordo. É mais rápido, mais barato e menos doloroso.</p>
+                <div class="validation-card">
+                    <div class="icon"><i class="fas fa-video"></i></div>
+                    <h3>Atendimento por videochamada</h3>
+                    <p>Não precisa sair de casa. Atendimento 100% online, no horário que funciona melhor para você.</p>
                 </div>
-                <div class="diferencial-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Transparência Total</h3>
-                    <p>Você sabe exatamente o que está acontecendo, sem surpresas e sem 'juridiquês'.</p>
+                <div class="validation-card">
+                    <div class="icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3>Você decide o ritmo</h3>
+                    <p>Sem pressa artificial. Cada caso tem seu tempo. Você está no controle do processo.</p>
                 </div>
-                <div class="diferencial-item">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Agilidade em Urgências</h3>
-                    <p>Medidas protetivas e ações cautelares tratadas com a prioridade que o caso exige.</p>
+                <div class="validation-card">
+                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <h3>Sigilo total</h3>
+                    <p>Inclusive de familiares. Tudo que você compartilha é protegido pelo sigilo profissional.</p>
                 </div>
             </div>
         </section>
 
+        <!-- SEÇÃO DE ORIENTAÇÃO RÁPIDA -->
+        <section class="quick-guidance-section">
+            <h2>Orientação rápida por situação</h2>
+            <p>Identifique seu caso e saiba o que fazer agora</p>
+            
+            <div class="guidance-grid">
+                <div class="guidance-card">
+                    <h3>Você quer se separar</h3>
+                    <p>Você está com medo de perder os bens? Ou de não conseguir uma partilha justa? Existe um caminho claro para isso — e pode ser bem mais rápido do que você imagina.</p>
+                    <a class="cta-link" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20divor%C3%A7io%20e%20gostaria%20de%20saber%20o%20que%20fazer%20agora." target="_blank" rel="noopener noreferrer">Saiba o que fazer agora <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="guidance-card">
+                    <h3>Você está com medo de perder os filhos</h3>
+                    <p>Ou de não conseguir protegê-los? Existe uma ordem jurídica para isso, e ela tem prazo. Quanto mais cedo você agir, mais seguro está.</p>
+                    <a class="cta-link" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20guarda%20de%20filhos%20e%20gostaria%20de%20saber%20o%20que%20fazer%20agora." target="_blank" rel="noopener noreferrer">Saiba o que fazer agora <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="guidance-card">
+                    <h3>Você não consegue pagar (ou receber) pensão</h3>
+                    <p>A pensão alimentícia pode ser revista. Se mudou sua situação financeira ou se o valor está defasado, existe caminho jurídico para isso.</p>
+                    <a class="cta-link" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20pens%C3%A3o%20alimenticia%20e%20gostaria%20de%20saber%20o%20que%20fazer%20agora." target="_blank" rel="noopener noreferrer">Saiba o que fazer agora <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="guidance-card">
+                    <h3>Alguém da família faleceu</h3>
+                    <p>Inventário é matemática, não briga. Com a documentação certa e um processo bem conduzido, você evita conflitos que duram anos.</p>
+                    <a class="cta-link" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20d%C3%BAvidas%20sobre%20invent%C3%A1rio%20e%20gostaria%20de%20saber%20o%20que%20fazer%20agora." target="_blank" rel="noopener noreferrer">Saiba o que fazer agora <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE SITUAÇÕES -->
         <section class="situacoes-section">
             <div class="section-header">
                 <h2>Situações que atendemos</h2>
-                <p>Identifique o seu caso e saiba como podemos ajudar a trazer paz jurídica para sua vida.</p>
+                <p>Cada caso é único. Aqui estão os principais cenários que trabalhamos.</p>
             </div>
             
             <div class="situacoes-grid">
                 <div class="situacao-card">
                     <h3>Divórcio e Partilha de Bens</h3>
-                    <p>Avaliamos o regime de bens e propomos o caminho mais curto, seja consensual em cartório ou judicial.</p>
+                    <p>Avaliamos o regime de bens e propomos o caminho mais curto: consensual em cartório (rápido e barato) ou judicial (quando necessário). Você sabe exatamente o que esperar.</p>
                     <a class="mini-cta" href="https://wa.me/5547988670233?text=Olá! Gostaria de falar sobre Divórcio e Partilha de Bens." target="_blank" rel="noopener noreferrer">Falar sobre meu caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Pensão Alimentícia</h3>
-                    <p>Cálculo justo baseado na necessidade de quem recebe e na possibilidade de quem paga. Revisão de valores defasados.</p>
+                    <p>Cálculo justo baseado na necessidade de quem recebe e na possibilidade de quem paga. Se o valor está defasado, revisamos. Se não consegue pagar, negociamos.</p>
                     <a class="mini-cta" href="https://wa.me/5547988670233?text=Olá! Gostaria de falar sobre Pensão Alimentícia." target="_blank" rel="noopener noreferrer">Falar sobre meu caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Guarda e Convivência</h3>
-                    <p>Acordos centrados no melhor interesse da criança, garantindo o direito de convivência e proteção.</p>
+                    <p>Acordos centrados no melhor interesse da criança, garantindo seu direito de convivência com ambos os pais e proteção integral. Sem dramas, com foco no futuro.</p>
                     <a class="mini-cta" href="https://wa.me/5547988670233?text=Olá! Gostaria de falar sobre Guarda e Convivência." target="_blank" rel="noopener noreferrer">Falar sobre meu caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Inventário e Sucessões</h3>
-                    <p>Organização da partilha com o mínimo de desgaste familiar, priorizando a agilidade do inventário extrajudicial.</p>
+                    <p>Organização da partilha com o mínimo de desgaste familiar, priorizando a agilidade do inventário extrajudicial. Quando há conflito, defendemos seus direitos.</p>
                     <a class="mini-cta" href="https://wa.me/5547988670233?text=Olá! Gostaria de falar sobre Inventário e Sucessões." target="_blank" rel="noopener noreferrer">Falar sobre meu caso <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </section>
 
+        <!-- SEÇÃO COMO FUNCIONA O ATENDIMENTO -->
+        <section class="how-it-works-section">
+            <h2>Como funciona o atendimento?</h2>
+            <div class="timeline-container">
+                <div class="timeline-item" data-number="1">
+                    <h3>Conversa Inicial</h3>
+                    <p>Você conta sua história. Ouvimos, entendemos e mapeamos os desafios reais. Sem julgamento, sem pressa. Essa conversa é gratuita.</p>
+                </div>
+                <div class="timeline-item" data-number="2">
+                    <h3>Análise Jurídica</h3>
+                    <p>Analisamos os documentos, a legislação aplicável e as opções disponíveis. Você recebe um parecer claro sobre o melhor caminho.</p>
+                </div>
+                <div class="timeline-item" data-number="3">
+                    <h3>Plano de Ação</h3>
+                    <p>Definimos juntos o que fazer: acordo, mediação, processo judicial ou consultoria. Você sabe exatamente o que vem a seguir.</p>
+                </div>
+                <div class="timeline-item" data-number="4">
+                    <h3>Execução e Acompanhamento</h3>
+                    <p>Nós cuidamos de tudo: documentos, prazos, comunicação com a outra parte. Você está sempre informado e no controle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="diferenciais-section">
+            <h2>Por que escolher nosso escritório?</h2>
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Atuação Humanizada</h3>
+                    <p>Entendemos que por trás de cada processo existem pessoas e histórias que merecem respeito e dignidade.</p>
+                </div>
+                <div class="diferencial-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Foco na Mediação</h3>
+                    <p>Sempre que possível, buscamos o acordo. É mais rápido, mais barato, menos doloroso e melhor para todos.</p>
+                </div>
+                <div class="diferencial-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Transparência Total</h3>
+                    <p>Você sabe exatamente o que está acontecendo, sem surpresas, sem 'juridiquês' e sem custos ocultos.</p>
+                </div>
+                <div class="diferencial-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Agilidade em Urgências</h3>
+                    <p>Medidas protetivas e ações cautelares tratadas com a prioridade que o caso exige. Você não fica desprotegido.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
         <section class="faq-section">
             <div class="section-header">
                 <h2>Dúvidas Frequentes</h2>
@@ -567,19 +916,28 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">Quanto tempo leva um divórcio? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">O consensual em cartório pode levar apenas algumas semanas. O litigioso pode levar de 1 a 3 anos, dependendo da disputa.</div>
+                    <div class="faq-answer">O consensual em cartório pode levar apenas algumas semanas. O litigioso pode levar de 1 a 3 anos, dependendo da complexidade e da disputa. Quanto mais acordo, mais rápido.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Se eu sair de casa, perco direito aos bens? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Não. O direito à partilha depende do regime de casamento, não de quem permanece no imóvel.</div>
+                    <div class="faq-answer">Não. O direito à partilha depende do regime de casamento (comunhão, separação, participação), não de quem permanece no imóvel. Sair de casa não prejudica seus direitos.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Como é calculada a pensão alimentícia? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">É baseada no binômio necessidade de quem recebe e possibilidade de quem paga, buscando um equilíbrio justo.</div>
+                    <div class="faq-answer">É baseada no binômio necessidade de quem recebe e possibilidade de quem paga, buscando um equilíbrio justo. Analisamos renda, despesas e condições de vida de ambos.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Posso perder a guarda dos meus filhos? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">A guarda é decidida com base no melhor interesse da criança. Comportamentos prejudiciais, negligência ou violência podem resultar em perda de guarda. Agir cedo e de forma correta é essencial.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto custa um processo de divórcio? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Depende da complexidade. Consensual em cartório: centenas de reais. Judicial: depende de honorários advocatícios e custas. Oferecemos orçamento claro antes de começar.</div>
                 </div>
             </div>
         </section>
 
+        <!-- FOOTER CTA -->
         <section class="footer-cta">
             <h2>Pronto para trazer paz jurídica para sua vida?</h2>
             <a class="btn-nav-whatsapp" style="padding: 16px 32px; font-size: 1.1rem;" href="https://wa.me/5547988670233?text=Olá! Gostaria de falar sobre uma situação de Direito de Família." target="_blank" rel="noopener noreferrer">
@@ -603,7 +961,7 @@
                     triagemOptions.forEach(opt => opt.classList.remove('selected'));
                     this.closest('.triagem-option').classList.add('selected');
                     triagemCtaButton.classList.remove('disabled');
-                    const mensagem = `Olá! Tenho esse caso: ${this.value}. Gostaria de falar com um advogado.`;
+                    const mensagem = `Olá! Tenho esse caso: ${this.value}. Gostaria de falar com um advogado especializado em Direito de Família.`;
                     triagemCtaButton.href = `https://wa.me/5547988670233?text=${encodeURIComponent(mensagem)}`;
                 });
             });
