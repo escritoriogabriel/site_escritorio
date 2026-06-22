@@ -229,6 +229,15 @@
             display: flex;
             align-items: center;
             background-color: #FFFFFF;
+            gap: 12px;
+        }
+        
+        .triagem-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--accent-gold);
+            flex-shrink: 0;
         }
         
         .triagem-option:hover {
@@ -319,6 +328,7 @@
             display: flex;
             flex-direction: column;
             box-shadow: 0 1px 3px rgba(23,43,65,0.06), 0 8px 24px -8px rgba(23,43,65,0.10);
+            cursor: pointer;
         }
         .situacao-card:hover {
             transform: translateY(-8px);
@@ -354,6 +364,47 @@
         .situacao-card .mini-cta:hover {
             color: var(--accent-gold);
             border-bottom-color: var(--accent-gold);
+        }
+
+        /* CTA após Situações */
+        .situacoes-cta {
+            text-align: center;
+            padding: 60px 5%;
+            background-color: #FFFFFF;
+            border-top: 1px solid var(--border-color);
+        }
+        .situacoes-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .situacoes-cta p {
+            font-size: 1.1em;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .situacoes-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+        }
+        .situacoes-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
         }
 
         /* Diferenciais (Mais clean e sofisticado) */
@@ -599,21 +650,26 @@
                     <h2>Qual situação mais se aproxima da sua?</h2>
                     
                     <div class="triagem-options">
-                        <div class="triagem-option" data-problema="Demissão ou rescisão">
-                            Demissão ou rescisão
-                        </div>
-                        <div class="triagem-option" data-problema="Valores não pagos (Horas extras, etc)">
-                            Valores não pagos
-                        </div>
-                        <div class="triagem-option" data-problema="Trabalho sem carteira assinada">
-                            Trabalho sem carteira assinada
-                        </div>
-                        <div class="triagem-option" data-problema="Assédio no trabalho">
-                            Assédio no trabalho
-                        </div>
-                        <div class="triagem-option" data-problema="Outra situação trabalhista">
-                            Outra situação
-                        </div>
+                        <label class="triagem-option" data-problema="Demissão ou rescisão">
+                            <input type="radio" name="triagem" value="Demissão ou rescisão">
+                            <span>Demissão ou rescisão</span>
+                        </label>
+                        <label class="triagem-option" data-problema="Valores não pagos (Horas extras, etc)">
+                            <input type="radio" name="triagem" value="Valores não pagos (Horas extras, etc)">
+                            <span>Valores não pagos</span>
+                        </label>
+                        <label class="triagem-option" data-problema="Trabalho sem carteira assinada">
+                            <input type="radio" name="triagem" value="Trabalho sem carteira assinada">
+                            <span>Trabalho sem carteira assinada</span>
+                        </label>
+                        <label class="triagem-option" data-problema="Assédio no trabalho">
+                            <input type="radio" name="triagem" value="Assédio no trabalho">
+                            <span>Assédio no trabalho</span>
+                        </label>
+                        <label class="triagem-option" data-problema="Outra situação trabalhista">
+                            <input type="radio" name="triagem" value="Outra situação trabalhista">
+                            <span>Outra situação</span>
+                        </label>
                     </div>
                     
                     <a id="triagem-cta" class="triagem-cta-button disabled" href="#" target="_blank" rel="noopener noreferrer">
@@ -661,35 +717,44 @@
             <div class="situacoes-grid">
                 <div class="situacao-card">
                     <h3>Demissão e rescisão incorreta</h3>
-                    <p>Aviso prévio proporcional ignorado, FGTS sem multa de 40%, férias proporcionais cortadas, 13º mal calculado. Refazemos a conta e cobramos a diferença.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20demiss%C3%A3o%20e%20rescis%C3%A3o." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                    <p>Aviso prévio proporcional ignorado, FGTS sem multa de 40%, férias proporcionais cortadas, 13º mal calculado.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20esse%20caso%20-%20Demiss%C3%A3o%20e%20rescis%C3%A3o%20incorreta." target="_blank" rel="noopener noreferrer">Tenho esse caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Horas extras não pagas</h3>
-                    <p>Se você ficou além do horário, ainda que sem registro de ponto, e tem prova mínima, a hora é devida com adicional. Cobramos os últimos 5 anos.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20horas%20extras%20n%C3%A3o%20pagas." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                    <p>Você ficou além do horário, ainda que sem registro de ponto. Se tem prova mínima, a hora é devida com adicional.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20esse%20caso%20-%20Horas%20extras%20n%C3%A3o%20pagas." target="_blank" rel="noopener noreferrer">Tenho esse caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Trabalho sem carteira assinada</h3>
-                    <p>Se você trabalha sem registro, mas cumpre ordens, horário e tem habitualidade, tem direito a todos os benefícios de um empregado formal (FGTS, férias, INSS).</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20trabalho%20sem%20carteira%20assinada." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                    <p>Você trabalha sem registro, mas cumpre ordens, horário e tem habitualidade. Tem direito a todos os benefícios formais.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20esse%20caso%20-%20Trabalho%20sem%20carteira%20assinada." target="_blank" rel="noopener noreferrer">Tenho esse caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Assédio moral ou sexual</h3>
-                    <p>O ambiente de trabalho não pode ser um pesadelo. Orientamos como documentar, quando e onde guardar provas para buscar a devida indenização.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20ass%C3%A9dio%20no%20trabalho." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                    <p>O ambiente de trabalho não pode ser um pesadelo. Orientamos como documentar e guardar provas para indenização.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20esse%20caso%20-%20Ass%C3%A9dio%20no%20trabalho." target="_blank" rel="noopener noreferrer">Tenho esse caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Acidente ou doença ocupacional</h3>
-                    <p>Vai muito além do auxílio do INSS. Se houve negligência da empresa, cabe indenização por danos morais, materiais e estéticos, além de estabilidade.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20acidente%20de%20trabalho." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                    <p>Vai muito além do auxílio do INSS. Se houve negligência, cabe indenização por danos morais, materiais e estéticos.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20esse%20caso%20-%20Acidente%20de%20trabalho." target="_blank" rel="noopener noreferrer">Tenho esse caso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Rescisão indireta (Justa causa na empresa)</h3>
-                    <p>Atraso de salário, falta de FGTS, assédio. Quando o empregador descumpre o contrato gravemente, você pode pedir a rescisão e receber tudo.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20rescis%C3%A3o%20indireta." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                    <p>Atraso de salário, falta de FGTS, assédio. Quando o empregador descumpre gravemente, você pode pedir rescisão.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20esse%20caso%20-%20Rescis%C3%A3o%20indireta." target="_blank" rel="noopener noreferrer">Tenho esse caso <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
+        </section>
+
+        <!-- CTA após Situações -->
+        <section class="situacoes-cta">
+            <h3>Não encontrou seu caso exato?</h3>
+            <p>Cada situação trabalhista é única. Fale conosco e deixe que analisemos sua situação específica. Você pode ter direitos que nem imaginava.</p>
+            <a class="btn-primary" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20minha%20situa%C3%A7%C3%A3o%20trabalhista." target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Descrever meu caso
+            </a>
         </section>
 
         <!-- Como funciona o Atendimento -->
@@ -704,14 +769,14 @@
                     <div class="passo-numero">01</div>
                     <div class="passo-texto">
                         <h3>Primeiro Contato</h3>
-                        <p>Você seleciona sua situação no formulário acima ou clica no botão de WhatsApp e fala diretamente com nossa equipe. Pediremos um breve resumo do que aconteceu.</p>
+                        <p>Você seleciona sua situação acima ou clica no botão de WhatsApp e fala diretamente com nossa equipe. Pediremos um breve resumo do que aconteceu.</p>
                     </div>
                 </div>
                 <div class="passo-row">
                     <div class="passo-numero">02</div>
                     <div class="passo-texto">
                         <h3>Análise Gratuita</h3>
-                        <p>Avaliamos os fatos e documentos de acordo com as particularidades do seu caso. Explicamos quais são seus direitos reais e as chances de êxito, sem falsas promessas.</p>
+                        <p>Avaliamos os fatos e documentos de acordo com as particularidades do seu caso. Explicamos quais são seus direitos reais e as chances de êxito.</p>
                     </div>
                 </div>
                 <div class="passo-row">
@@ -725,7 +790,7 @@
                     <div class="passo-numero">04</div>
                     <div class="passo-texto">
                         <h3>Acompanhamento</h3>
-                        <p>Você não fica no escuro. Recebe atualizações constantes sobre o andamento do processo e é orientado antes de qualquer audiência ou proposta de acordo.</p>
+                        <p>Você não fica no escuro. Recebe atualizações constantes sobre o andamento do processo e é orientado antes de qualquer audiência ou proposta.</p>
                     </div>
                 </div>
             </div>
@@ -774,43 +839,36 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Lógica do Card de Triagem
+            // Lógica do Card de Triagem com Radio Buttons
             const triagemOptions = document.querySelectorAll('.triagem-option');
             const triagemCtaButton = document.getElementById('triagem-cta');
-            let selectedProblem = '';
+            const triagemRadios = document.querySelectorAll('input[name="triagem"]');
 
-            triagemOptions.forEach(option => {
-                option.addEventListener('click', function() {
+            triagemRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Remove selected de todos
                     triagemOptions.forEach(opt => opt.classList.remove('selected'));
-                    this.classList.add('selected');
-                    selectedProblem = this.dataset.problema;
-                    updateTriagemCta();
+                    
+                    // Adiciona selected ao pai do radio selecionado
+                    this.closest('.triagem-option').classList.add('selected');
+                    
+                    // Ativa o botão
+                    triagemCtaButton.classList.remove('disabled');
+                    
+                    // Atualiza o link do WhatsApp
+                    const problema = this.value;
+                    const mensagem = `Olá! Tenho esse caso: ${problema}. Gostaria de falar com um advogado.`;
+                    const whatsappUrl = `https://wa.me/5547988670233?text=${encodeURIComponent(mensagem)}`;
+                    triagemCtaButton.href = whatsappUrl;
                 });
             });
 
-            function updateTriagemCta() {
-                if (selectedProblem) {
-                    const whatsappMessage = encodeURIComponent(`Olá! Vim da Landing Page Trabalhista e minha situação é: "${selectedProblem}". Gostaria de solicitar orientação.`);
-                    triagemCtaButton.href = `https://wa.me/5547988670233?text=${whatsappMessage}`;
-                    triagemCtaButton.classList.remove('disabled');
-                } else {
-                    triagemCtaButton.href = '#';
-                    triagemCtaButton.classList.add('disabled');
-                }
-            }
-
-            // Lógica do FAQ
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    // Fechar todos
-                    faqItems.forEach(faq => faq.classList.remove('active'));
-                    // Abrir o clicado se não estava ativo
-                    if (!isActive) {
-                        item.classList.add('active');
-                    }
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.closest('.faq-item');
+                    faqItem.classList.toggle('active');
                 });
             });
         });
