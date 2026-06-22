@@ -48,7 +48,6 @@
             --bg-dark: #0D1B2A;
             --bg-darker: #050a0f;
             --border-color: #1a2a3a;
-            --alert-dark: #8B0000;
         }
 
         body.lp-ads {
@@ -298,9 +297,10 @@
 
         /* SEÇÃO DE AÇÃO IMEDIATA */
         .immediate-action-section {
-            background: linear-gradient(135deg, #8B0000 0%, #5C0000 100%);
+            background: var(--primary-light);
             padding: 60px 5%;
-            color: white;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
         }
 
         .immediate-action-section h2 {
@@ -308,41 +308,46 @@
             font-size: 2rem;
             margin-bottom: 50px;
             font-weight: 700;
+            color: var(--text-light);
         }
 
         .action-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .action-step {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            background: linear-gradient(135deg, rgba(244, 162, 97, 0.1) 0%, rgba(244, 162, 97, 0.05) 100%);
+            padding: 25px;
             border-radius: 12px;
             border-left: 4px solid var(--accent-amber);
-            backdrop-filter: blur(10px);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
         }
 
         .action-step .step-number {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--accent-amber);
-            margin-bottom: 15px;
+            flex-shrink: 0;
+            min-width: 50px;
         }
 
-        .action-step h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
+        .action-step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
             font-weight: 700;
+            color: var(--text-light);
         }
 
-        .action-step p {
-            font-size: 0.95rem;
+        .action-step-content p {
+            font-size: 0.9rem;
             line-height: 1.6;
-            opacity: 0.95;
+            color: var(--text-body);
         }
 
         /* SEÇÃO DE DIREITOS */
@@ -485,6 +490,54 @@
             border-bottom-color: var(--accent-amber);
         }
 
+        /* FAQ */
+        .faq-section {
+            padding: 100px 5%;
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 25px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-amber);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-body);
+            font-size: 0.95em;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
         /* FOOTER CTA */
         .footer-cta {
             background: linear-gradient(180deg, #0D1B2A 0%, #050a0f 100%);
@@ -499,6 +552,26 @@
             font-size: 2.5em;
             margin-bottom: 30px;
             font-weight: 700;
+        }
+
+        .btn-footer-cta {
+            background: white;
+            color: #0D1B2A;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-footer-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(255, 255, 255, 0.3);
         }
 
         .footer-bottom {
@@ -533,7 +606,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <header>
-        <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
+        <a href="index.html" class="logo"><img src="assets/img/logo-branca.png" alt="Advogado Gabriel Corrêa"></a>
         <a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=URGENTE: Preciso de um Advogado Criminalista." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Plantão 24h</a>
     </header>
 
@@ -595,19 +668,25 @@
             <h2>O que fazer agora</h2>
             <div class="action-steps">
                 <div class="action-step">
-                    <div class="step-number">1</div>
-                    <h3>Não preste depoimento sem advogado</h3>
-                    <p>Você tem direito ao silêncio e ao direito de ter um advogado presente em qualquer depoimento. Não fale com a polícia sem representação legal.</p>
+                    <div class="step-number">1.</div>
+                    <div class="action-step-content">
+                        <h3>Não preste depoimento sem advogado</h3>
+                        <p>Você tem direito ao silêncio e ao direito de ter um advogado presente em qualquer depoimento. Não fale com a polícia sem representação legal.</p>
+                    </div>
                 </div>
                 <div class="action-step">
-                    <div class="step-number">2</div>
-                    <h3>Guarde todos os documentos</h3>
-                    <p>Intimação, mandado, notificação, qualquer comunicação oficial. Tire fotos, guarde cópias. Esses documentos são essenciais para sua defesa.</p>
+                    <div class="step-number">2.</div>
+                    <div class="action-step-content">
+                        <h3>Guarde todos os documentos</h3>
+                        <p>Intimação, mandado, notificação, qualquer comunicação oficial. Tire fotos, guarde cópias. Esses documentos são essenciais para sua defesa.</p>
+                    </div>
                 </div>
                 <div class="action-step">
-                    <div class="step-number">3</div>
-                    <h3>Fale com um advogado agora</h3>
-                    <p>Análise inicial gratuita e sigilosa. Você recebe orientação clara sobre seus direitos e os próximos passos. Sem compromisso, sem julgamento.</p>
+                    <div class="step-number">3.</div>
+                    <div class="action-step-content">
+                        <h3>Fale com um advogado agora</h3>
+                        <p>Análise inicial gratuita e sigilosa. Você recebe orientação clara sobre seus direitos e os próximos passos. Sem compromisso, sem julgamento.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -697,10 +776,39 @@
             </div>
         </section>
 
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2>Dúvidas Frequentes</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Sou obrigado a responder perguntas da polícia? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Não. Você tem direito ao silêncio (Art. 5º, LXIII da Constituição). Pode recusar responder sem que isso seja usado contra você. O ideal é sempre ter um advogado presente.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Posso ser preso sem mandado? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Apenas em flagrante delito (quando você está cometendo o crime ou acabou de cometê-lo). Qualquer outra prisão exige mandado judicial válido. Prisão sem esses requisitos é ilegal.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto tempo tenho para ser levado à audiência de custódia? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Até 24 horas após a prisão. Nesse prazo, você deve ser apresentado a um juiz que decidirá sobre sua liberdade provisória ou manutenção da prisão.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Se confessar um crime, posso ser condenado? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Sim. Confissão é prova. Mas confessar sem advogado é perigoso — você pode estar incriminando-se desnecessariamente. Sempre tenha representação legal.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Qual é o custo de uma defesa criminal? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Depende da complexidade do caso. Oferecemos análise inicial gratuita e orçamento claro antes de qualquer compromisso. Temos opções flexíveis.</div>
+                </div>
+            </div>
+        </section>
+
         <!-- FOOTER CTA -->
         <section class="footer-cta">
             <h2>Precisa de Defesa Criminal Agora?</h2>
-            <a class="btn-nav-whatsapp" style="padding: 16px 32px; font-size: 1.1rem;" href="https://wa.me/5547988670233?text=URGENTE: Preciso de um Advogado Criminalista." target="_blank" rel="noopener noreferrer">
+            <a class="btn-footer-cta" href="https://wa.me/5547988670233?text=URGENTE: Preciso de um Advogado Criminalista." target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Chamar no WhatsApp (Plantão 24h)
             </a>
         </section>
@@ -723,6 +831,13 @@
                     triagemCtaButton.classList.remove('disabled');
                     const msg = `URGENTE: Preciso de atendimento para: ${this.value}.`;
                     triagemCtaButton.href = `https://wa.me/5547988670233?text=${encodeURIComponent(msg)}`;
+                });
+            });
+
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    this.closest('.faq-item').classList.toggle('active');
                 });
             });
         });
