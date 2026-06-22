@@ -36,6 +36,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pages-style.css">
     <style>
+        /* Header Enxuto */
+        .top-bar { display: none; }
+        header {
+            background-color: rgba(255,255,255,0.96);
+            backdrop-filter: saturate(180%) blur(14px);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #EDE9E0;
+        }
+        header .logo img {
+            max-height: 45px;
+        }
+        header #mainNav { display: none; }
+        header .hamburger { display: none; }
+        .btn-nav-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 11px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(37,211,102,0.32);
+        }
+        .btn-nav-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(37,211,102,0.42);
+        }
+
         :root {
             --primary-dark: #172B41;
             --primary-light: #1f3a55;
@@ -190,9 +229,10 @@
     </style>
 </head>
 <body class="lp-ads">
+        <div class="top-bar" style="display: none;"></div>
     <header>
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-        <a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=Olá! Gostaria de falar sobre assessoria jurídica para minha empresa." target="_blank" rel="noopener noreferrer">Falar com Especialista</a>
+        <a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=Olá! Vim através do site e gostaria de falar com um Advogado." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Conversar</a>
     </header>
 
     <main>

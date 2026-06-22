@@ -30,6 +30,45 @@
     <link rel="stylesheet" href="assets/css/pages-style.css">
     
     <style>
+        /* Header Enxuto */
+        .top-bar { display: none; }
+        header {
+            background-color: rgba(255,255,255,0.96);
+            backdrop-filter: saturate(180%) blur(14px);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #EDE9E0;
+        }
+        header .logo img {
+            max-height: 45px;
+        }
+        header #mainNav { display: none; }
+        header .hamburger { display: none; }
+        .btn-nav-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 11px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(37,211,102,0.32);
+        }
+        .btn-nav-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(37,211,102,0.42);
+        }
+
         /* Estilos específicos para Landing Page de Conversão */
         .lp-hero {
             padding: 80px 18% 100px;
