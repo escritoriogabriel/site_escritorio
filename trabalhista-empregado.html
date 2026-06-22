@@ -33,398 +33,506 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pages-style.css">
     <style>
-        /* Estilos específicos para a Landing Page */
+        /* Estilos específicos para a Landing Page - Design Sofisticado */
+        :root {
+            --primary-dark: #112620; /* Verde escuro sofisticado */
+            --primary-light: #1A3A31;
+            --accent-gold: #D4AF37; /* Dourado elegante */
+            --accent-gold-hover: #B5952F;
+            --text-light: #F5F5F5;
+            --text-dark: #222222;
+            --bg-light: #FAFAFA;
+            --border-color: #E0E0E0;
+        }
+
         body.lp-ads {
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .top-bar {
-            display: none; /* Remover top-bar */
-        }
+        
+        /* Header Enxuto */
+        .top-bar { display: none; }
         header {
-            background-color: #fff;
-            padding: 15px 30px;
+            background-color: var(--primary-dark);
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         header .logo img {
-            max-height: 50px;
+            max-height: 45px;
+            filter: brightness(0) invert(1); /* Logo branca */
         }
-        header #mainNav {
-            display: flex;
-            align-items: center;
-        }
-        header #mainNav .nav-links {
-            display: none; /* Remover menu de navegação */
-        }
+        header #mainNav { display: none; }
         .btn-nav-whatsapp {
-            background-color: #25D366;
-            color: white;
+            background-color: transparent;
+            color: var(--text-light);
             padding: 10px 20px;
-            border-radius: 5px;
+            border: 1px solid var(--text-light);
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 0.9em;
             display: flex;
             align-items: center;
             gap: 8px;
+            transition: all 0.3s ease;
         }
         .btn-nav-whatsapp:hover {
-            background-color: #1DA851;
+            background-color: var(--text-light);
+            color: var(--primary-dark);
         }
 
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            padding: 80px 30px;
-            text-align: center;
+        /* Hero Section com Card Integrado */
+        .hero-container {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+            color: var(--text-light);
+            padding: 80px 5% 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Elemento gráfico de fundo */
+        .hero-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0) 70%);
+            z-index: 0;
+        }
+
+        .hero-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        .hero-text .eyebrow {
+            color: var(--accent-gold);
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8em;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            font-weight: 600;
+        }
+        .hero-text h1 span {
+            color: var(--accent-gold);
+        }
+        .hero-text p {
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.8);
+            font-weight: 300;
+        }
+        
+        .hero-features {
+            display: flex;
+            gap: 20px;
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.7);
+        }
+        .hero-features span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .hero-features i {
+            color: var(--accent-gold);
+        }
+
+        /* Card de Triagem (Estilo Formulário) */
+        .triagem-box {
+            flex: 0 0 450px;
+            background-color: #FFFFFF;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            color: var(--text-dark);
+        }
+        .triagem-box .eyebrow {
+            color: #888;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .triagem-box h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        
+        .triagem-options {
             display: flex;
             flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .triagem-option {
+            padding: 15px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s ease;
+            display: flex;
             align-items: center;
-            justify-content: center;
-            min-height: 60vh;
         }
-        .hero-section h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            line-height: 1.2;
+        
+        .triagem-option:hover {
+            border-color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.05);
         }
-        .hero-section p {
-            font-size: 1.3em;
-            max-width: 800px;
-            margin-bottom: 40px;
-            line-height: 1.5;
+        
+        .triagem-option.selected {
+            border-color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--primary-dark);
+            font-weight: 600;
         }
-        .hero-section .main-cta {
-            background-color: #FFD700; /* Dourado */
-            color: #333;
-            padding: 18px 35px;
+
+        .triagem-cta-button {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 18px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.4em;
-            transition: background-color 0.3s ease;
-            display: inline-flex;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: center;
             align-items: center;
             gap: 10px;
-        }
-        .hero-section .main-cta:hover {
-            background-color: #E6C200;
-        }
-        .hero-section .social-proof {
-            margin-top: 30px;
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
-        .hero-section .social-proof span {
-            margin: 0 10px;
-        }
-
-        /* Card de Triagem */
-        .triagem-section {
-            background-color: #f0f0f0;
-            padding: 60px 30px;
-            text-align: center;
-        }
-        .triagem-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #0f2027;
-        }
-        .triagem-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .triagem-card {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            border: 2px solid transparent;
-        }
-        .triagem-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-            border-color: #25D366;
-        }
-        .triagem-card.selected {
-            border-color: #25D366;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            background-color: #e6ffe6;
-        }
-        .triagem-card h3 {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            color: #0f2027;
-        }
-        .triagem-card p {
-            font-size: 1em;
-            color: #555;
-        }
-        .triagem-cta-button {
-            background-color: #0f2027;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2em;
-            margin-top: 40px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: background-color 0.3s ease;
         }
         .triagem-cta-button:hover {
-            background-color: #203a43;
+            background-color: var(--accent-gold-hover);
         }
         .triagem-cta-button.disabled {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .triagem-disclaimer {
+            font-size: 0.7em;
+            color: #999;
+            text-align: center;
+            margin-top: 15px;
+            line-height: 1.4;
         }
 
         /* Situações que Atendemos */
-        .situacoes-atendemos {
-            padding: 60px 30px;
+        .situacoes-section {
+            padding: 100px 5%;
+            background-color: var(--bg-light);
+        }
+        .section-header {
             text-align: center;
-            background-color: #fff;
+            max-width: 700px;
+            margin: 0 auto 60px;
         }
-        .situacoes-atendemos h2 {
+        .section-header h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #0f2027;
+            font-size: 2.8em;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
         }
+        .section-header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
         .situacoes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .situacao-card {
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            text-align: left;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+        }
+        .situacao-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            border-color: transparent;
         }
         .situacao-card h3 {
-            font-size: 1.5em;
-            color: #0f2027;
-            margin-bottom: 10px;
+            font-size: 1.3em;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 600;
         }
         .situacao-card p {
-            font-size: 1em;
-            color: #555;
-            margin-bottom: 20px;
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
             flex-grow: 1;
         }
         .situacao-card .mini-cta {
-            background-color: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            color: var(--primary-dark);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9em;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: background-color 0.3s ease;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
             align-self: flex-start;
         }
         .situacao-card .mini-cta:hover {
-            background-color: #1DA851;
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
         }
 
-        /* Diferenciais */
+        /* Diferenciais (Mais clean e sofisticado) */
         .diferenciais-section {
-            background-color: #f0f0f0;
-            padding: 60px 30px;
-            text-align: center;
-        }
-        .diferenciais-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #0f2027;
+            padding: 80px 5%;
+            background-color: #fff;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
         .diferenciais-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .diferencial-item {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            text-align: center;
+            text-align: left;
         }
         .diferencial-item i {
-            font-size: 3em;
-            color: #0f2027;
-            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
         }
         .diferencial-item h3 {
-            font-size: 1.3em;
-            color: #0f2027;
+            font-size: 1.1em;
+            color: var(--primary-dark);
             margin-bottom: 10px;
+            font-weight: 600;
         }
         .diferencial-item p {
-            font-size: 1em;
-            color: #555;
+            font-size: 0.9em;
+            color: #777;
+            line-height: 1.5;
         }
 
-        /* Como Funciona o Atendimento */
+        /* Como Funciona */
         .como-funciona-section {
-            padding: 60px 30px;
-            text-align: center;
+            padding: 100px 5%;
+            background-color: var(--bg-light);
+        }
+        .passos-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .passo-row {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 40px;
+            border: 1px solid var(--border-color);
+        }
+        .passo-numero {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-right: 40px;
+            opacity: 0.5;
+            min-width: 50px;
+        }
+        .passo-texto h3 {
+            font-size: 1.3em;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+        .passo-texto p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 5%;
             background-color: #fff;
         }
-        .como-funciona-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #0f2027;
-        }
-        .passos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
+        .faq-container {
+            max-width: 800px;
             margin: 0 auto;
         }
-        .passo-item {
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            text-align: left;
-            position: relative;
-            padding-left: 70px;
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 25px 0;
         }
-        .passo-item .numero {
-            position: absolute;
-            left: 20px;
-            top: 30px;
-            font-size: 2.5em;
-            font-weight: 700;
-            color: #FFD700;
+        .faq-item:first-child {
+            border-top: 1px solid var(--border-color);
         }
-        .passo-item h3 {
-            font-size: 1.4em;
-            color: #0f2027;
-            margin-bottom: 10px;
+        .faq-question {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .passo-item p {
-            font-size: 1em;
-            color: #555;
+        .faq-question i {
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
         }
 
-        /* Footer */
-        .footer-conversion {
-            background-color: #0f2027;
+        /* Footer CTA */
+        .footer-cta {
+            background-color: var(--primary-dark);
             color: white;
-            padding: 40px 30px;
+            padding: 80px 5%;
             text-align: center;
         }
-        .footer-conversion h2 {
+        .footer-cta h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            margin-bottom: 20px;
+            font-size: 2.5em;
+            margin-bottom: 30px;
         }
-        .footer-conversion .cta-button {
-            background-color: #25D366;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
+        .footer-cta .btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 18px 40px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.2em;
+            font-weight: 700;
+            font-size: 1.1em;
             display: inline-flex;
             align-items: center;
             gap: 10px;
             transition: background-color 0.3s ease;
         }
-        .footer-conversion .cta-button:hover {
-            background-color: #1DA851;
+        .footer-cta .btn-primary:hover {
+            background-color: var(--accent-gold-hover);
         }
-        .footer-conversion .oab-info {
-            margin-top: 30px;
-            font-size: 0.85em;
-            opacity: 0.7;
-        }
-
-        /* Floating WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-        .floating-whatsapp:hover {
-            background-color: #1DA851;
+        .footer-bottom {
+            background-color: #0a1713;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8em;
         }
 
         /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-content-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 3em;
+            }
+            .hero-features {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .triagem-box {
+                width: 100%;
+                max-width: 500px;
+                flex: auto;
+            }
+            .diferenciais-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5em;
+            .hero-text h1 {
+                font-size: 2.2em;
             }
-            .hero-section p {
-                font-size: 1em;
+            .section-header h2 {
+                font-size: 2.2em;
             }
-            .hero-section .main-cta {
-                font-size: 1.2em;
-                padding: 15px 25px;
-            }
-            .triagem-section h2, .situacoes-atendemos h2, .diferenciais-section h2, .como-funciona-section h2 {
-                font-size: 2em;
-            }
-            .triagem-cards, .situacoes-grid, .diferenciais-grid, .passos-grid {
+            .diferenciais-grid {
                 grid-template-columns: 1fr;
             }
-            .passo-item {
-                padding-left: 20px;
-                padding-top: 60px;
+            .passo-row {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
             }
-            .passo-item .numero {
-                top: 20px;
-                left: 20px;
+            .passo-numero {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -437,164 +545,213 @@
      
     <header>
         <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Advogado Gabriel Corrêa"></a>
-        <a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Trabalhista%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Falar com Advogado</a>
+        <a class="btn-nav-whatsapp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Trabalhista%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer">Falar com Advogado</a>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1>Sente que seus direitos foram ignorados? <span>Recupere o que é seu por direito.</span></h1>
-            <p>Atendimento especializado para trabalhadores que buscam justiça. Analisamos seu caso de forma rápida, sigilosa e 100% online.</p>
-            <a class="main-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Trabalhista%20e%20quero%20analisar%20meu%20caso%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> QUERO ANALISAR MEU CASO AGORA</a>
-            <div class="social-proof">
-                <span>OAB/SC 63.856</span> | <span>Atendimento em todo o Brasil</span> | <span>Nota 5.0 no Google</span>
+        <!-- Hero Section com Card de Triagem -->
+        <section class="hero-container">
+            <div class="hero-content-wrapper">
+                <div class="hero-text">
+                    <span class="eyebrow">Advocacia Trabalhista Especializada</span>
+                    <h1>Sente que seus direitos foram ignorados? <span>Recupere o que é seu.</span></h1>
+                    <p>Demissão, verbas não pagas, horas extras, assédio ou dúvidas sobre seus direitos? Cada situação exige uma análise individual antes de qualquer decisão.</p>
+                    
+                    <div class="hero-features">
+                        <span><i class="fas fa-check"></i> Atendimento 100% online</span>
+                        <span><i class="fas fa-check"></i> Sigilo absoluto</span>
+                        <span><i class="fas fa-check"></i> Sem custo inicial</span>
+                    </div>
+                </div>
+
+                <div class="triagem-box">
+                    <span class="eyebrow">Triagem Inicial</span>
+                    <h2>Qual situação mais se aproxima da sua?</h2>
+                    
+                    <div class="triagem-options">
+                        <div class="triagem-option" data-problema="Demissão ou rescisão">
+                            Demissão ou rescisão
+                        </div>
+                        <div class="triagem-option" data-problema="Valores não pagos (Horas extras, etc)">
+                            Valores não pagos
+                        </div>
+                        <div class="triagem-option" data-problema="Trabalho sem carteira assinada">
+                            Trabalho sem carteira assinada
+                        </div>
+                        <div class="triagem-option" data-problema="Assédio no trabalho">
+                            Assédio no trabalho
+                        </div>
+                        <div class="triagem-option" data-problema="Outra situação trabalhista">
+                            Outra situação
+                        </div>
+                    </div>
+                    
+                    <a id="triagem-cta" class="triagem-cta-button disabled" href="#" target="_blank" rel="noopener noreferrer">
+                        Solicitar orientação <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <p class="triagem-disclaimer">O contato inicial não cria relação advogado-cliente. A análise é gratuita e sigilosa.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Card de Triagem Inicial -->
-        <section class="triagem-section">
-            <h2>Qual situação você está enfrentando hoje?</h2>
-            <div class="triagem-cards">
-                <div class="triagem-card" data-problema="Fui demitido e não recebi tudo (Rescisão)">
-                    <h3>Fui demitido e não recebi tudo</h3>
-                    <p>Verbas rescisórias, aviso prévio, 13º, férias e FGTS.</p>
+        <!-- Diferenciais Clean -->
+        <section class="diferenciais-section">
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <i class="fas fa-laptop-house"></i>
+                    <h3>Atendimento 100% Digital</h3>
+                    <p>Sem precisar sair de casa, fale conosco de onde estiver, com total comodidade e segurança.</p>
                 </div>
-                <div class="triagem-card" data-problema="Trabalho sem carteira assinada">
-                    <h3>Trabalho sem carteira assinada</h3>
-                    <p>Reconhecimento de vínculo, registro e todos os direitos.</p>
+                <div class="diferencial-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Agilidade no Processo</h3>
+                    <p>Processos protocolados com rapidez para você não perder prazos e ter seu caso resolvido logo.</p>
                 </div>
-                <div class="triagem-card" data-problema="Horas extras não pagas ou banco de horas errado">
-                    <h3>Horas extras não pagas</h3>
-                    <p>Jornada excessiva, banco de horas e adicionais devidos.</p>
+                <div class="diferencial-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Transparência Total</h3>
+                    <p>Você entende cada passo do seu processo, sem 'juridiquês', com comunicação direta via WhatsApp.</p>
                 </div>
-                <div class="triagem-card" data-problema="Sofro humilhação ou pressão (Assédio Moral)">
-                    <h3>Sofro humilhação ou pressão</h3>
-                    <p>Assédio moral, sexual ou discriminação no trabalho.</p>
-                </div>
-                <div class="triagem-card" data-problema="Acidente de trabalho ou doença ocupacional">
-                    <h3>Acidente de trabalho ou doença</h3>
-                    <p>Indenização, estabilidade e auxílio-doença.</p>
-                </div>
-                <div class="triagem-card" data-problema="Outra situação trabalhista">
-                    <h3>Outra situação trabalhista</h3>
-                    <p>Desvio de função, insalubridade, periculosidade, etc.</p>
+                <div class="diferencial-item">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Foco no Trabalhador</h3>
+                    <p>Especialista em defender o lado mais fraco da corda, buscando o máximo de resultado para você.</p>
                 </div>
             </div>
-            <a id="triagem-cta" class="triagem-cta-button disabled" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> RECEBER ORIENTAÇÃO ESPECIALIZADA</a>
         </section>
 
         <!-- Situações que Atendemos -->
-        <section class="situacoes-atendemos">
-            <h2>Situações que mais atendemos:</h2>
+        <section class="situacoes-section">
+            <div class="section-header">
+                <h2>Situações que atendemos</h2>
+                <p>Identifique o seu caso. Quanto mais cedo os fatos forem avaliados, mais clara será a compreensão dos caminhos jurídicos disponíveis.</p>
+            </div>
+            
             <div class="situacoes-grid">
                 <div class="situacao-card">
-                    <h3>Demissão sem justa causa com cálculo errado</h3>
-                    <p>A campeã. Aviso prévio proporcional ignorado, FGTS sem multa de 40%, férias proporcionais cortadas, 13º mal calculado. Refazemos a conta e cobramos a diferença, com juros e correção.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20um%20caso%20de%20demiss%C3%A3o%20com%20c%C3%A1lculo%20errado%20e%20gostaria%20de%20falar%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Tenho esse caso > Falar agora</a>
+                    <h3>Demissão e rescisão incorreta</h3>
+                    <p>Aviso prévio proporcional ignorado, FGTS sem multa de 40%, férias proporcionais cortadas, 13º mal calculado. Refazemos a conta e cobramos a diferença.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20demiss%C3%A3o%20e%20rescis%C3%A3o." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
-                    <h3>Horas extras que nunca foram pagas</h3>
-                    <p>Se você ficou além do horário, ainda que sem registro de ponto, e tem prova mínima (mensagens, e-mails, testemunhas, escala), a hora é devida — com 50% ou 100% de adicional. Cobramos os últimos 5 anos.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20um%20caso%20de%20horas%20extras%20n%C3%A3o%20pagas%20e%20gostaria%20de%20falar%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Tenho esse caso > Falar agora</a>
+                    <h3>Horas extras não pagas</h3>
+                    <p>Se você ficou além do horário, ainda que sem registro de ponto, e tem prova mínima, a hora é devida com adicional. Cobramos os últimos 5 anos.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20horas%20extras%20n%C3%A3o%20pagas." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
-                    <h3>Rescisão indireta — a "justa causa do empregador"</h3>
-                    <p>Atraso reiterado de salário, assédio moral, alteração unilateral de função, falta de FGTS depositado. Quando o empregador descumpre o contrato, você pode pedir a rescisão e receber tudo como se tivesse sido demitido sem justa causa.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20um%20caso%20de%20rescis%C3%A3o%20indireta%20e%20gostaria%20de%20falar%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Tenho esse caso > Falar agora</a>
-                </div>
-                <div class="situacao-card">
-                    <h3>Acidente de trabalho ou doença ocupacional</h3>
-                    <p>Vai muito além do auxílio do INSS. Se houve negligência da empresa (falta de EPI, treinamento, ergonomia), cabe indenização por danos morais, materiais e estéticos — em valores que costumam impressionar quem nunca litigou.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20um%20caso%20de%20acidente%20de%20trabalho%20ou%20doen%C3%A7a%20ocupacional%20e%20gostaria%20de%20falar%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Tenho esse caso > Falar agora</a>
+                    <h3>Trabalho sem carteira assinada</h3>
+                    <p>Se você trabalha sem registro, mas cumpre ordens, horário e tem habitualidade, tem direito a todos os benefícios de um empregado formal (FGTS, férias, INSS).</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20trabalho%20sem%20carteira%20assinada." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
                     <h3>Assédio moral ou sexual</h3>
-                    <p>O Brasil reconhece e indeniza. Mas exige prova — e a prova precisa ser construída antes da demissão. Orientamos como documentar, quando e onde guardar, e como agir sem dar pretexto para a empresa demitir por justa causa.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20um%20caso%20de%20ass%C3%A9dio%20moral%20ou%20sexual%20e%20gostaria%20de%20falar%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Tenho esse caso > Falar agora</a>
+                    <p>O ambiente de trabalho não pode ser um pesadelo. Orientamos como documentar, quando e onde guardar provas para buscar a devida indenização.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20ass%C3%A9dio%20no%20trabalho." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="situacao-card">
-                    <h3>Trabalho sem registro na CTPS</h3>
-                    <p>Se você trabalha sem carteira assinada, mas com subordinação, habitualidade e pessoalidade, tem direito a todos os benefícios de um empregado formal.</p>
-                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Tenho%20um%20caso%20de%20trabalho%20sem%20registro%20e%20gostaria%20de%20falar%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Tenho esse caso > Falar agora</a>
+                    <h3>Acidente ou doença ocupacional</h3>
+                    <p>Vai muito além do auxílio do INSS. Se houve negligência da empresa, cabe indenização por danos morais, materiais e estéticos, além de estabilidade.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20acidente%20de%20trabalho." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="situacao-card">
+                    <h3>Rescisão indireta (Justa causa na empresa)</h3>
+                    <p>Atraso de salário, falta de FGTS, assédio. Quando o empregador descumpre o contrato gravemente, você pode pedir a rescisão e receber tudo.</p>
+                    <a class="mini-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20sobre%20rescis%C3%A3o%20indireta." target="_blank" rel="noopener noreferrer">Falar com advogado sobre isso <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Por que escolher o Escritório Gabriel Corrêa? -->
-        <section class="diferenciais-section">
-            <h2>Por que escolher o Escritório Gabriel Corrêa?</h2>
-            <div class="diferenciais-grid">
-                <div class="diferencial-item">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Atendimento 100% Digital</h3>
-                    <p>Sem precisar sair de casa, fale conosco de onde estiver, com total comodidade.</p>
-                </div>
-                <div class="diferencial-item">
-                    <i class="fas fa-hourglass-half"></i>
-                    <h3>Agilidade no Processo</h3>
-                    <p>Processos protocolados com rapidez para você não perder prazos e ter seu caso resolvido.</p>
-                </div>
-                <div class="diferencial-item">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>Transparência e Clareza</h3>
-                    <p>Você entende cada passo do seu processo, sem 'juridiquês', com comunicação direta.</p>
-                </div>
-                <div class="diferencial-item">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Experiência Comprovada</h3>
-                    <p>Especialista em defender o lado mais fraco da corda: o trabalhador, com foco em resultados.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Como funciona o Atendimento (Passo a Passo) -->
+        <!-- Como funciona o Atendimento -->
         <section class="como-funciona-section">
-            <h2>Como funciona o Atendimento?</h2>
-            <div class="passos-grid">
-                <div class="passo-item">
-                    <span class="numero">1</span>
-                    <h3>Primeiro Contato</h3>
-                    <p>Você clica no botão e fala com nossa equipe no WhatsApp. Descreva brevemente sua situação.</p>
+            <div class="section-header">
+                <h2>Como funciona o atendimento?</h2>
+                <p>Um processo simples, transparente e sem burocracia, do primeiro contato à resolução.</p>
+            </div>
+            
+            <div class="passos-container">
+                <div class="passo-row">
+                    <div class="passo-numero">01</div>
+                    <div class="passo-texto">
+                        <h3>Primeiro Contato</h3>
+                        <p>Você seleciona sua situação no formulário acima ou clica no botão de WhatsApp e fala diretamente com nossa equipe. Pediremos um breve resumo do que aconteceu.</p>
+                    </div>
                 </div>
-                <div class="passo-item">
-                    <span class="numero">2</span>
-                    <h3>Análise Gratuita</h3>
-                    <p>Entendemos sua situação, solicitamos documentos e dizemos quais são seus direitos e as chances de êxito.</p>
+                <div class="passo-row">
+                    <div class="passo-numero">02</div>
+                    <div class="passo-texto">
+                        <h3>Análise Gratuita</h3>
+                        <p>Avaliamos os fatos e documentos de acordo com as particularidades do seu caso. Explicamos quais são seus direitos reais e as chances de êxito, sem falsas promessas.</p>
+                    </div>
                 </div>
-                <div class="passo-item">
-                    <span class="numero">3</span>
-                    <h3>Ação Estratégica</h3>
-                    <p>Se houver direito e você aprovar, iniciamos o processo imediatamente de forma digital, sem burocracia.</p>
+                <div class="passo-row">
+                    <div class="passo-numero">03</div>
+                    <div class="passo-texto">
+                        <h3>Ação Estratégica</h3>
+                        <p>Se houver direito e você decidir avançar, iniciamos o processo imediatamente de forma 100% digital. Você assina os documentos pelo celular.</p>
+                    </div>
                 </div>
-                <div class="passo-item">
-                    <span class="numero">4</span>
-                    <h3>Acompanhamento Contínuo</h3>
-                    <p>Você recebe atualizações constantes do seu caso, via WhatsApp, até a resolução final.</p>
+                <div class="passo-row">
+                    <div class="passo-numero">04</div>
+                    <div class="passo-texto">
+                        <h3>Acompanhamento</h3>
+                        <p>Você não fica no escuro. Recebe atualizações constantes sobre o andamento do processo e é orientado antes de qualquer audiência ou proposta de acordo.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas antes de entrar em contato.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Preciso pagar alguma coisa para iniciar o processo? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Na grande maioria dos casos trabalhistas, atuamos com honorários de êxito (contingência). Isso significa que você não paga nada para iniciar a ação; nossos honorários são um percentual descontado apenas no final, sobre o valor que você efetivamente receber e ganhar no processo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">O atendimento é realmente 100% online? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Sim. Hoje a Justiça do Trabalho é totalmente digital. Podemos realizar o atendimento, análise de documentos, assinatura de procuração e até mesmo participar de audiências de forma virtual. Atendemos clientes de todo o Brasil com a mesma eficiência do presencial.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto tempo tenho para entrar com a ação? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Você tem o prazo máximo de 2 anos a partir do seu último dia de trabalho (fim do aviso prévio) para dar entrada no processo. Além disso, você só pode cobrar os direitos referentes aos últimos 5 anos trabalhados contados da data em que a ação for protocolada. Por isso, quanto antes agir, melhor.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Ainda estou trabalhando na empresa. Posso processá-la? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Sim, a lei permite. No entanto, na prática, isso pode desgastar a relação. Em casos de faltas graves da empresa (como não pagar salários ou assédio), o ideal é entrar com um pedido de "Rescisão Indireta", onde você pede a quebra do contrato por culpa do empregador, garantindo todos os direitos de uma demissão sem justa causa.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Entenda sua situação antes de tomar uma decisão.</h2>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Trabalhista%20e%20quero%20falar%20com%20um%20especialista." class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Falar com a equipe agora
+            </a>
+        </section>
     </main>
 
-    <footer class="footer-conversion">
-        <h2>Não deixe seus direitos serem ignorados.</h2>
-        <a class="cta-button" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Trabalhista%20e%20quero%20falar%20com%20um%20especialista%20agora." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> FALE COM UM ESPECIALISTA AGORA</a>
-        <p class="oab-info">&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.856.</p>
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.856.</p>
+        <p style="margin-top: 5px; opacity: 0.6; font-size: 0.9em;">Conteúdo informativo. Cada caso deve ser analisado individualmente.</p>
     </footer>
-
-    <a class="floating-whatsapp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20Landing%20Page%20Trabalhista%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const triagemCards = document.querySelectorAll('.triagem-card');
+            // Lógica do Card de Triagem
+            const triagemOptions = document.querySelectorAll('.triagem-option');
             const triagemCtaButton = document.getElementById('triagem-cta');
             let selectedProblem = '';
 
-            triagemCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    triagemCards.forEach(c => c.classList.remove('selected'));
+            triagemOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    triagemOptions.forEach(opt => opt.classList.remove('selected'));
                     this.classList.add('selected');
                     selectedProblem = this.dataset.problema;
                     updateTriagemCta();
@@ -603,7 +760,7 @@
 
             function updateTriagemCta() {
                 if (selectedProblem) {
-                    const whatsappMessage = encodeURIComponent(`Olá! Vim da Landing Page Trabalhista e selecionei a opção: "${selectedProblem}". Gostaria de receber orientação especializada.`);
+                    const whatsappMessage = encodeURIComponent(`Olá! Vim da Landing Page Trabalhista e minha situação é: "${selectedProblem}". Gostaria de solicitar orientação.`);
                     triagemCtaButton.href = `https://wa.me/5547988670233?text=${whatsappMessage}`;
                     triagemCtaButton.classList.remove('disabled');
                 } else {
@@ -612,8 +769,20 @@
                 }
             }
 
-            // Initial state
-            updateTriagemCta();
+            // Lógica do FAQ
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    // Fechar todos
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    // Abrir o clicado se não estava ativo
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
