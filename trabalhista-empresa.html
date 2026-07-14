@@ -240,6 +240,54 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+        /* Como Funciona */
+        .como-funciona-section {
+            padding: 100px 5%;
+            background-color: #FFFFFF;
+        }
+        .passos-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .passo-row {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(23,43,65,0.06), 0 8px 24px -8px rgba(23,43,65,0.10);
+            transition: all 0.3s ease;
+        }
+        .passo-row:hover {
+            box-shadow: 0 4px 8px rgba(23,43,65,0.08), 0 16px 40px -12px rgba(23,43,65,0.18);
+            transform: translateY(-4px);
+        }
+        .passo-numero {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-right: 40px;
+            opacity: 0.5;
+            min-width: 50px;
+        }
+        .passo-texto h3 {
+            font-size: 1.3em;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+        .passo-texto p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 0;
+        }
+
     </style>
 </head>
 <body class="lp-ads corporate-layout">
@@ -371,6 +419,46 @@
         </section>
 
         <!-- FAQ -->
+        
+        <!-- Como funciona o Atendimento -->
+        <section class="como-funciona-section">
+            <div class="section-header">
+                <h2>Como funciona o atendimento?</h2>
+                <p>Um processo simples, transparente e sem burocracia, do primeiro contato à resolução.</p>
+            </div>
+            
+            <div class="passos-container">
+                <div class="passo-row">
+                    <div class="passo-numero">01</div>
+                    <div class="passo-texto">
+                        <h3>Primeiro Contato</h3>
+                        <p>Você seleciona sua situação acima ou clica no botão de WhatsApp e fala diretamente com nossa equipe. Pediremos um breve resumo do que aconteceu.</p>
+                    </div>
+                </div>
+                <div class="passo-row">
+                    <div class="passo-numero">02</div>
+                    <div class="passo-texto">
+                        <h3>Análise Gratuita</h3>
+                        <p>Avaliamos os fatos e documentos de acordo com as particularidades do seu caso. Explicamos quais são seus direitos reais e as chances de êxito.</p>
+                    </div>
+                </div>
+                <div class="passo-row">
+                    <div class="passo-numero">03</div>
+                    <div class="passo-texto">
+                        <h3>Ação Estratégica</h3>
+                        <p>Se houver direito e você decidir avançar, iniciamos o processo imediatamente de forma 100% digital. Você assina os documentos pelo celular.</p>
+                    </div>
+                </div>
+                <div class="passo-row">
+                    <div class="passo-numero">04</div>
+                    <div class="passo-texto">
+                        <h3>Acompanhamento</h3>
+                        <p>Você não fica no escuro. Recebe atualizações constantes sobre o andamento do processo e é orientado antes de qualquer audiência ou proposta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="faq-section">
             <div class="faq-wrapper" style="max-width: 1240px; margin: 0 auto; padding: 60px 5%;">
                 <p class="eyebrow">Perguntas Frequentes</p>
