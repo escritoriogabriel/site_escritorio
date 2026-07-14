@@ -259,6 +259,85 @@
             margin: 0;
         }
 
+    
+        /* Footer Styles */
+        
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .footer-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+        }
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+        }
+        
+
+    
+        /* Footer Styles - Padronizados */
+        .footer-cta {
+            background: linear-gradient(180deg, #0D1B2A 0%, #172B41 100%);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+            border: none;
+        }
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF !important;
+        }
+        .footer-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white !important;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+            border: none;
+        }
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+            color: white !important;
+        }
+        .footer-bottom {
+            background-color: #0D1B2A;
+            color: rgba(255,255,255,0.7) !important;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-bottom p {
+            color: rgba(255,255,255,0.7) !important;
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -479,9 +558,21 @@
         </section>
     </main>
 
-    <footer style="padding: 40px 5%; text-align: center; background: var(--primary-blue-deep); color: white;">
-        <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.</p>
+    
+
+    <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Pronto para trazer paz jurídica para sua vida?</h2>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista." class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Falar com um Especialista Agora
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.737.</p>
     </footer>
+
 
     <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20de%20Direito%20de%20Direito%20Trabalhista%20e%20gostaria%20de%20resolver%20um%20problema.%20%E2%9A%96%EF%B8%8F" class="sticky-whatsapp">
         <i class="fab fa-whatsapp"></i> <span>Falar com Advogado</span>

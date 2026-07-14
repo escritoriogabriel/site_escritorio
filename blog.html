@@ -518,6 +518,85 @@
             .post-card-content { padding: 22px; }
             .post-card-image { height: 190px; }
         }
+    
+        /* Footer Styles */
+        
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .footer-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+        }
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+        }
+        
+
+    
+        /* Footer Styles - Padronizados */
+        .footer-cta {
+            background: linear-gradient(180deg, #0D1B2A 0%, #172B41 100%);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+            border: none;
+        }
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF !important;
+        }
+        .footer-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white !important;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+            border: none;
+        }
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+            color: white !important;
+        }
+        .footer-bottom {
+            background-color: #0D1B2A;
+            color: rgba(255,255,255,0.7) !important;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-bottom p {
+            color: rgba(255,255,255,0.7) !important;
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -619,38 +698,21 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Escritório</h4>
-                <p>Advogado Gabriel Corrêa</p>
-                <p>OAB/SC 63.737</p>
-                <p>Atendimento 100% online em todo o Brasil.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <a href="index.html">Início</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="blog.html">Blog</a>
-                <a href="contato.html">Contato</a>
-            </div>
-            <div class="footer-col">
-                <h4>Áreas de Atuação</h4>
-                <a href="trabalhista-empregado.html">Trabalhista</a>
-                <a href="familia.html">Direito de Família</a>
-                <a href="contrato.html">Contratos</a>
-                <a href="criminal.html">Criminal</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <p><i class="fas fa-phone"></i>(47) 98867-0233</p>
-                <p><i class="fas fa-envelope"></i>escritorio.gabrielcorrea@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Advogado Gabriel Corrêa. Todos os direitos reservados.
-        </div>
+    
+
+    <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Pronto para trazer paz jurídica para sua vida?</h2>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista." class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Falar com um Especialista Agora
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.737.</p>
     </footer>
+
 
     <a class="whatsapp-float" aria-label="Falar pelo WhatsApp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Estava%20lendo%20o%20Blog%20do%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20jur%C3%ADdica%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>

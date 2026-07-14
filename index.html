@@ -911,13 +911,7 @@ footer {
     margin-bottom: 0;
 }
 .footer-social a:hover { background-color: var(--accent-gold); }
-.footer-bottom {
-    text-align: center;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.78rem;
-    color: #777;
-}
+
 
 /* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
@@ -1175,6 +1169,85 @@ footer {
     .how-it-works { padding: 38px 5%; }
     .blog-carousel-section { padding: 38px 5%; }
 }
+
+    
+        /* Footer Styles */
+        
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .footer-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+        }
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+        }
+        
+
+    
+        /* Footer Styles - Padronizados */
+        .footer-cta {
+            background: linear-gradient(180deg, #0D1B2A 0%, #172B41 100%);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+            border: none;
+        }
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF !important;
+        }
+        .footer-cta .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5A 100%);
+            color: white !important;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.28);
+            border: none;
+        }
+        .footer-cta .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(37,211,102,0.42);
+            color: white !important;
+        }
+        .footer-bottom {
+            background-color: #0D1B2A;
+            color: rgba(255,255,255,0.7) !important;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-bottom p {
+            color: rgba(255,255,255,0.7) !important;
+            margin: 0;
+        }
 
     </style>
 </head>
@@ -1519,60 +1592,19 @@ footer {
     </section>
 
     <!-- 12. CTA FINAL -->
-    <section class="cta-final">
-        <h2>Não Deixe Seu Direito Para Depois.</h2>
-        <p>Quanto antes você agir, maiores são as chances de alcançar o melhor resultado. Fale com nossa equipe agora.</p>
-        <div class="cta-final-btns">
-            <a class="btn-primary" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20da%20p%C3%A1gina%20inicial%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i> Falar com um Advogado Agora
+    <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Pronto para trazer paz jurídica para sua vida?</h2>
+            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20um%20especialista." class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Falar com um Especialista Agora
             </a>
-            <a href="contato.html" class="btn-secondary">
-                <i class="fas fa-calendar-alt"></i> Agendar Atendimento
-            </a>
-        </div>
-    </section>
-
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Advogado Gabriel Corrêa</h4>
-                <p>OAB/SC 63.737</p>
-                <p>Atendimento 100% Online em todo o Brasil</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a aria-label="WhatsApp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20da%20p%C3%A1gina%20inicial%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Áreas de Atuação</h4>
-                <a href="trabalhista-empregado.html">Trabalhista — Para Empregado</a>
-                <a href="trabalhista-empresa.html">Trabalhista — Para Empresa</a>
-                <a href="familia.html">Direito de Família</a>
-                <a href="criminal.html">Direito Criminal</a>
-                <a href="contrato.html">Contratos</a>
-                <a href="busca-e-apreensao.html">Busca e Apreensão</a>
-            </div>
-            <div class="footer-col">
-                <h4>Links Úteis</h4>
-                <a href="index.html">Início</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="blog.html">Blog</a>
-                <a href="contato.html">Contato</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <p>(47) 98867-0233</p>
-                <p>escritorio.gabrielcorrea@gmail.com</p>
-                <p>Atendimento Online — Brasil</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2025 Advogado Gabriel Corrêa. Todos os direitos reservados. | <a href="#" style="color: #777;">Política de Privacidade</a> | LGPD
-        </div>
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. OAB/SC 63.737.</p>
     </footer>
+
 
     <!-- WhatsApp Float -->
     <a class="whatsapp-float" aria-label="Falar pelo WhatsApp" id="whatsappFloat" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20da%20p%C3%A1gina%20inicial%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." target="_blank" rel="noopener noreferrer">
