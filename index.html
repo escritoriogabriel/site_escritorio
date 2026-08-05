@@ -854,6 +854,49 @@ header.scrolled .btn-primary { padding: 10px 14px; font-size: 0.85rem; }
 }
 .form-privacy i { color: var(--accent-gold); }
 
+/* Mapa */
+.contact-map-panel {
+    background: white;
+    border-radius: 20px;
+    padding: 38px 34px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.contact-map-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold) 0%, #e8c87a 50%, var(--accent-gold) 100%);
+}
+.map-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+@media (max-width: 768px) {
+    .contact-map-panel {
+        padding: 20px;
+        height: auto;
+    }
+    .map-container {
+        height: auto;
+    }
+    .map-container iframe {
+        height: 250px; /* Mais horizontal no celular */
+        min-height: 250px;
+    }
+}
+
 /* ===== CTA FINAL ===== */
 .cta-final {
     padding: 90px 5%;
@@ -1314,21 +1357,12 @@ footer {
 
 <!--         Áreas de Atuação -->
         <div class="services-grid">
-            <a href="trabalhista-empregado.html" class="service-card">
+            <a href="trabalhista.html" class="service-card">
                 <div class="service-card-header">
-                    <i class="fas fa-hard-hat"></i>
-                    <h3>Direito do Trabalho — Para Empregado</h3>
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Direito do Trabalho</h3>
                 </div>
-                <p>Demissão injusta, horas extras não pagas, assédio moral, reconhecimento de vínculo e muito mais. Defenda seus direitos trabalhistas.</p>
-                <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
-            </a>
-
-            <a href="trabalhista-empresa.html" class="service-card">
-                <div class="service-card-header">
-                    <i class="fas fa-building"></i>
-                    <h3>Direito do Trabalho — Para Empresa</h3>
-                </div>
-                <p>Consultoria preventiva, defesa em reclamações trabalhistas, compliance e gestão de riscos para proteger seu negócio.</p>
+                <p>Atendimento completo para empregados e empregadores, desde defesas em reclamações trabalhistas até consultoria preventiva e compliance.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
 
@@ -1350,21 +1384,30 @@ footer {
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
 
-            <a href="contrato.html" class="service-card">
+            <a href="#contato" class="service-card">
                 <div class="service-card-header">
-                    <i class="fas fa-file-contract"></i>
-                    <h3>Contratos</h3>
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Defesa de Servidor</h3>
                 </div>
-                <p>Elaboração e revisão de contratos com segurança jurídica total.</p>
+                <p>Defesa em processos administrativos disciplinares (PAD) e proteção dos direitos dos servidores públicos.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
 
-            <a href="busca-e-apreensao.html" class="service-card">
+            <a href="#contato" class="service-card">
                 <div class="service-card-header">
-                    <i class="fas fa-car"></i>
-                    <h3>Busca e Apreensão</h3>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Concurso</h3>
                 </div>
-                <p>Ações de busca e apreensão de veículos e defesa do consumidor financiado.</p>
+                <p>Assessoria jurídica em editais, recursos administrativos e ações judiciais para candidatos em concursos públicos.</p>
+                <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="#contato" class="service-card">
+                <div class="service-card-header">
+                    <i class="fas fa-file-signature"></i>
+                    <h3>Licitações</h3>
+                </div>
+                <p>Consultoria e assessoria completa em processos licitatórios, análise de editais e impugnações.</p>
                 <span class="service-link">Saiba mais <i class="fas fa-arrow-right"></i></span>
             </a>
         </div>
@@ -1547,45 +1590,15 @@ footer {
                     </div>
                 </div>
 
-                <!-- Formulário sofisticado -->
-                <div class="contact-form-panel">
+                <!-- Mapa do Escritório -->
+                <div class="contact-map-panel">
                     <div class="form-panel-header">
-                        <h3><i class="fas fa-paper-plane"></i> Fale Conosco</h3>
-                        <p class="contact-note">Preencha o formulário e entrarei em contato pelo WhatsApp em poucos minutos.</p>
+                        <h3><i class="fas fa-map-marker-alt"></i> Localização</h3>
+                        <p class="contact-note">Benvenutti Business Center — Atendimento Presencial e Online</p>
                     </div>
-                    <form id="contactForm" onsubmit="submitForm(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nome">Nome <span style="color:#c0392b;">*</span></label>
-                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="whatsapp">WhatsApp <span style="color:#c0392b;">*</span></label>
-                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(47) 9 9999-9999" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="area">Área de interesse</label>
-                            <select id="area" name="area">
-                                <option value="">Selecione uma área...</option>
-                                <option value="trabalhista-empregado">Trabalhista — Para Empregado</option>
-                                <option value="trabalhista-empresa">Trabalhista — Para Empresa</option>
-                                <option value="familia">Direito de Família</option>
-                                <option value="criminal">Direito Criminal</option>
-                                <option value="contratos">Contratos</option>
-                                <option value="busca-apreensao">Busca e Apreensão</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="descricao">Descreva seu caso <span style="color:#c0392b;">*</span></label>
-                            <textarea id="descricao" name="descricao" placeholder="Conte brevemente sua situação..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-form">
-                            <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
-                        </button>
-                        <p class="form-privacy"><i class="fas fa-lock"></i> Seus dados são confidenciais e protegidos pela LGPD.</p>
-                    </form>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.23096169121!2d-48.64139469048807!3d-26.991242776502798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8b6077b7b5555%3A0xa21049a4c0b9d8a8!2sBenvenutti%20Business%20Center!5e0!3m2!1spt-BR!2sbr!4v1785943591432!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
