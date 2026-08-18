@@ -311,3 +311,68 @@ body.lp-replicated .lp-float-whatsapp {
         grid-template-columns: 1fr;
     }
 }
+
+
+body.lp-replicated .lp-contact-triage {
+    max-width: 610px;
+    margin: 1.4rem 0;
+}
+
+body.lp-replicated .lp-contact-triage > .lp-eyebrow {
+    margin-bottom: .7rem;
+    color: var(--lp-gold-light);
+}
+
+body.lp-replicated .lp-contact-triage h3 {
+    margin-bottom: .8rem;
+    color: #fff;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.15;
+}
+
+body.lp-replicated .lp-triage-list {
+    display: grid;
+    gap: .55rem;
+}
+
+body.lp-replicated .lp-triage-step {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: .65rem;
+    align-items: start;
+    padding: .65rem 0;
+    border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+body.lp-replicated .lp-triage-number {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 8px;
+    background: rgba(201, 169, 97, .2);
+    color: var(--lp-gold-light);
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+body.lp-replicated .lp-triage-step strong {
+    display: block;
+    margin-bottom: .18rem;
+    color: #fff;
+    font-size: .78rem;
+}
+
+body.lp-replicated .lp-triage-step p {
+    margin: 0;
+    color: rgba(255, 255, 255, .7);
+    font-size: .76rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 639px) {
+    body.lp-replicated .lp-contact-triage {
+        margin-top: 1rem;
+    }
+}
