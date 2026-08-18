@@ -40,7 +40,7 @@ body.teste-a-page p { margin-top: 0; }
 }
 .skip-link:focus { top: 1rem; }
 
-.lp-shell {
+.lp-page-width {
     width: min(1180px, calc(100% - 2rem));
     margin-inline: auto;
 }
@@ -299,7 +299,7 @@ body.teste-a-page p { margin-top: 0; }
 .lp-float-whatsapp:hover { transform: scale(1.06); }
 
 @media (min-width: 640px) {
-    .lp-shell { width: min(1180px, calc(100% - 3rem)); }
+    .lp-page-width { width: min(1180px, calc(100% - 3rem)); }
     .lp-header { min-height: 78px; padding-inline: max(1.5rem, 5vw); }
     .lp-header-cta { padding-inline: 1.25rem; }
     .lp-proof-grid { grid-template-columns: repeat(3, 1fr); }
@@ -314,7 +314,7 @@ body.teste-a-page p { margin-top: 0; }
 }
 
 @media (min-width: 900px) {
-    .lp-shell { width: min(1180px, calc(100% - 5rem)); }
+    .lp-page-width { width: min(1180px, calc(100% - 5rem)); }
     .lp-header { padding-inline: max(2.5rem, 5vw); }
     .lp-hero-grid { grid-template-columns: minmax(0, 1.12fr) minmax(360px, .88fr); gap: clamp(3rem, 7vw, 7rem); }
     .lp-hero-card { margin-right: 0; }

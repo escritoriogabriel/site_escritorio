@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128635569"></script>
-    <script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18128635569"></script>
+<script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'AW-18128635569');
     </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defesa de Servidores Públicos | Advogado Gabriel Corrêa</title>
-    <meta name="description" content="Defesa técnica de servidores públicos em PAD, sindicâncias, aposentadorias e direitos funcionais. Análise inicial gratuita e sigilosa.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons & Tailwind -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Defesa de Servidores Públicos | Advogado Gabriel Corrêa</title>
+<meta content="Defesa técnica de servidores públicos em PAD, sindicâncias, aposentadorias e direitos funcionais. Análise inicial gratuita e sigilosa." name="description"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons & Tailwind -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -66,956 +63,418 @@
         }
     </script>
 
-    <style>
-        .triagem-step { display: none; }
-        .triagem-step.active { display: block; }
-        
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.in { opacity: 1; transform: translateY(0); }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
-        .marquee-content {
-            display: inline-block;
-            animation: marquee 60s linear infinite;
-        }
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .radio-option.selected {
-            border-color: #D4AF37;
-            background-color: rgba(212, 175, 55, 0.05);
-            transform: scale(1.02);
-        }
-        .radio-option.selected .radio-dot {
-            background-color: #D4AF37;
-            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
-        }
-
-        .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 40%),
-                        radial-gradient(circle at bottom left, rgba(26, 46, 68, 0.05), transparent 40%);
-        }
-
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
-
-        /* Mobile responsividade melhorada */
-        @media (max-width: 768px) {
-            .hero-gradient {
-                background: radial-gradient(circle at center, rgba(212, 175, 55, 0.06), transparent 50%);
-            }
-        }
-    </style>
-</head>
-<body class="bg-bg-beige text-primary-dark font-sans antialiased overflow-x-hidden">
-
-    <!-- Header -->
-    <header class="w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-accent-gold/10 py-3 px-4 md:px-12">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2 md:gap-3">
-                <div class="w-9 h-9 md:w-10 md:h-10 bg-primary-dark rounded-lg flex items-center justify-center shadow-lg">
-                    <span class="font-serif text-accent-gold text-lg md:text-xl font-bold">G</span>
-                </div>
-                <div class="hidden sm:block">
-                    <span class="font-bold text-sm md:text-lg tracking-tight block leading-none">Gabriel Corrêa</span>
-                    <span class="text-[8px] md:text-[10px] text-accent-gold uppercase tracking-[0.2em] font-bold">Advocacia</span>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center gap-8 mr-8">
-                <a href="#situacoes" class="text-sm font-semibold hover:text-accent-gold transition-colors">Situações</a>
-                <a href="#analise" class="text-sm font-semibold hover:text-accent-gold transition-colors">Análise Técnica</a>
-                <a href="#faq" class="text-sm font-semibold hover:text-accent-gold transition-colors">Dúvidas</a>
-            </div>
-            <a href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." 
-               class="hidden md:flex items-center gap-2 bg-whatsapp hover:bg-opacity-90 text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 text-sm shadow-lg shadow-whatsapp/20">
-                <i class="fab fa-whatsapp text-lg"></i> Falar com Especialista
-            </a>
-            <a href="https://wa.me/5547988670233" class="md:hidden text-whatsapp text-2xl">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="relative pt-16 pb-20 md:pt-32 md:pb-40 overflow-hidden hero-gradient">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 text-center">
-                <div class="max-w-4xl mx-auto space-y-6 md:space-y-8 animate-fade-in-up">
-                    <div class="inline-flex items-center gap-2 px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-accent-gold/10 text-accent-gold-deep text-[10px] md:text-xs font-bold tracking-widest uppercase border border-accent-gold/20">
-                        <span class="w-2 h-2 bg-accent-gold rounded-full animate-pulse"></span>
-                        Defesa de ra Servidores Públicos
-                    </div>
-                    
-                    <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] md:leading-[1.1] text-primary-dark">
+<link href="assets/css/pages-style.css" rel="stylesheet"/><link href="assets/css/landing-pages.css" rel="stylesheet"/></head>
+<body class="lp-replicated" data-landing-page="Defesa de Servidores Públicos">
+<!-- Header -->
+<header class="lp-header" id="lpHeader"><a aria-label="Voltar para a página inicial" class="lp-logo" href="index.html"><img alt="Advogado Gabriel Corrêa" src="assets/img/logo.png"/></a><a class="lp-header-cta" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i>Falar com advogado</a></header>
+<main id="conteudo"><section aria-labelledby="hero-title" class="lp-hero"><div class="lp-page-width lp-hero-grid"><div aria-label="Resumo do atendimento" class="lp-hero-card"><div class="lp-card-topline">Primeiro passo<i aria-hidden="true" class="fas fa-arrow-up-right-from-square"></i></div><h2>Antes de tomar uma decisão, entenda as possibilidades.</h2><p>Recebeu um PAD, Sindicância ou Notificação? Não arrisque sua carreira. Nossa análise técnica identifica nulidades que podem salvar sua função pública.</p><ul class="lp-check-list"><li><i aria-hidden="true" class="fas fa-check"></i><span>Orientação personalizada</span></li><li><i aria-hidden="true" class="fas fa-check"></i><span>Atendimento online</span></li><li><i aria-hidden="true" class="fas fa-check"></i><span>Comunicação clara</span></li></ul><a class="lp-card-link" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20p%C3%A1gina%20de%20Defesa%20de%20Servidores%20P%C3%BAblicos%20e%20gostaria%20de%20analisar%20meu%20caso." rel="noopener noreferrer" target="_blank">Conversar sobre minha situação<i aria-hidden="true" class="fas fa-arrow-right"></i></a></div><div class="lp-hero-copy"><p class="lp-eyebrow"><span aria-hidden="true"></span>Proteja seu cargo e sua estabilidade antes que o prazo acabe.</p><h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] md:leading-[1.1] text-primary-dark" id="hero-title">
                         Proteja seu cargo e sua estabilidade <span class="text-accent-gold-deep italic">antes que o prazo acabe.</span>
-                    </h1>
-                    
-                    <p class="text-base md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
+</h1><p class="lp-lead">
                         Recebeu um PAD, Sindicância ou Notificação? Não arrisque sua carreira. Nossa análise técnica identifica nulidades que podem salvar sua função pública.
-                    </p>
-                    
-                    <div class="flex flex-col gap-3 md:gap-4 pt-4 md:pt-6">
-                        <a href="#analise-caso" 
-                           class="w-full md:w-auto bg-white text-primary-dark border-2 border-primary-dark/10 px-6 md:px-10 py-3 md:py-4 rounded-2xl font-bold text-sm md:text-base hover:bg-gray-50 transition-all flex items-center justify-center gap-3 mx-auto md:w-fit">
-                            <i class="fas fa-search-plus"></i> Iniciar Análise do Caso
-                        </a>
-                        <a href="https://wa.me/5547988670233?text=Ol%C3%A1%2C%20preciso%20de%20urg%C3%AAncia.%20Meu%20prazo%20de%20defesa%20administrativa%20est%C3%A1%20correndo%20e%20vi%20seu%20site." 
-                           class="w-full md:w-auto bg-whatsapp text-white px-6 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg shadow-xl shadow-whatsapp/20 hover:shadow-whatsapp/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 mx-auto md:w-fit">
-                            <i class="fab fa-whatsapp"></i> Falar com Advogado Agora
-                        </a>
-                    </div>
-                    
-                    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 md:gap-8 text-xs md:text-sm text-gray-500 font-medium pt-4 md:pt-8">
-                        <div class="flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full border border-accent-gold/10 md:bg-transparent md:p-0 md:border-0 w-fit"><i class="fas fa-globe-americas text-accent-gold"></i> Atendimento 100% Online</div>
-                        <div class="flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full border border-accent-gold/10 md:bg-transparent md:p-0 md:border-0 w-fit"><i class="fas fa-clock text-accent-gold"></i> Resposta Imediata</div>
-                        <div class="flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full border border-accent-gold/10 md:bg-transparent md:p-0 md:border-0 w-fit"><i class="fas fa-globe-americas text-accent-gold"></i> Atuação nacional</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Floating Decorative Elements -->
-            <div class="absolute top-1/4 -left-32 md:-left-20 w-48 md:w-64 h-48 md:h-64 bg-accent-gold/5 rounded-full blur-3xl animate-float"></div>
-            <div class="absolute bottom-1/4 -right-32 md:-right-20 w-64 md:w-96 h-64 md:h-96 bg-primary-dark/5 rounded-full blur-3xl animate-float" style="animation-delay: -2s;"></div>
-        </section>
-
-        <!-- Marquee Section -->
-        <div class="bg-primary-dark py-6 md:py-8 overflow-hidden border-y border-accent-gold/20 shadow-2xl relative z-20">
-            <div class="marquee-container">
-                <div class="marquee-content flex gap-12 md:gap-16 items-center text-white/50 font-bold text-xs md:text-sm tracking-[0.2em] uppercase" id="marquee">
-                    <!-- Content will be injected by JS -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Social Proof Stats -->
-        <section class="py-16 md:py-24 bg-white relative">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-16">
-                    <div class="text-center space-y-2 md:space-y-3 reveal">
-                        <div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">100%</div>
-                        <div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Foco em Defesa de<br>Servidores Públicos</div>
-                    </div>
-                    <div class="text-center space-y-2 md:space-y-3 reveal" style="transition-delay: 0.1s;">
-                        <div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">Digital</div>
-                        <div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Atendimento Ágil<br>sem sair de casa</div>
-                    </div>
-                    <div class="text-center space-y-2 md:space-y-3 reveal" style="transition-delay: 0.2s;">
-                        <div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">Gratuita</div>
-                        <div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Primeira Análise<br>Técnica do Caso</div>
-                    </div>
-                    <div class="text-center space-y-2 md:space-y-3 reveal" style="transition-delay: 0.3s;">
-                        <div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">10x</div>
-                        <div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Honorários parcelados sem burocracia</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Common Situations -->
-        <section id="situacoes" class="py-16 md:py-24 bg-bg-beige">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
-                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4 md:space-y-6">
-                    <span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block">Onde Atuamos</span>
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight">Você está enfrentando algum destes problemas?</h2>
-                    <div class="w-20 h-1.5 bg-accent-gold mx-auto mt-6 rounded-full"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal max-w-5xl mx-auto">
-                    <div class="group bg-white p-6 md:p-10 rounded-3xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col">
-                        <div class="flex items-center gap-4 mb-4 md:mb-8 md:block">
-                            <div class="w-12 h-12 md:w-16 md:h-16 bg-accent-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-accent-gold/20 transition-colors shrink-0">
-                                <i class="fas fa-file-invoice text-xl md:text-3xl text-primary-dark group-hover:text-accent-gold-deep"></i>
-                            </div>
-                            <h3 class="font-serif text-xl md:text-2xl font-bold">PAD</h3>
-                        </div>
-                        <p class="text-gray-500 leading-relaxed mb-6 md:mb-8 flex-grow text-sm md:text-base">Processo Administrativo Disciplinar com risco de demissão ou suspensão grave.</p>
-                        <a href="https://wa.me/5547988670233?text=Preciso%20de%20ajuda%20com%20um%20PAD" class="text-sm font-bold text-accent-gold-deep flex items-center gap-2 group-hover:gap-4 transition-all">
+                    </p><div class="lp-actions"><a class="lp-button lp-button-primary" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20da%20p%C3%A1gina%20de%20Defesa%20de%20Servidores%20P%C3%BAblicos%20e%20gostaria%20de%20analisar%20meu%20caso." rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i>Analisar meu caso</a><a class="lp-text-link" href="#faq">Tirar dúvidas<i aria-hidden="true" class="fas fa-arrow-down"></i></a></div><p class="lp-reassurance"><i aria-hidden="true" class="fas fa-shield-halved"></i>Atendimento inicial claro, sigiloso e sem juridiquês.</p></div></div></section><section aria-labelledby="audience-title" class="lp-section lp-audience"><div class="lp-page-width"><div class="lp-section-heading"><p class="lp-eyebrow"><span aria-hidden="true"></span>A quem ajudamos</p><h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight" id="audience-title">Você está enfrentando algum destes problemas?</h2></div><div class="lp-audience-grid"><article class="lp-audience-card"><i aria-hidden="true" class="fas fa-scale-balanced"></i><h3 class="font-serif text-xl md:text-2xl font-bold">PAD</h3><p class="text-gray-500 leading-relaxed mb-6 md:mb-8 flex-grow text-sm md:text-base">Processo Administrativo Disciplinar com risco de demissão ou suspensão grave.</p><a class="lp-text-link" href="https://wa.me/5547988670233?text=Preciso%20de%20ajuda%20com%20um%20PAD">
                             Solicitar Defesa <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="group bg-white p-6 md:p-10 rounded-3xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col">
-                        <div class="flex items-center gap-4 mb-4 md:mb-8 md:block">
-                            <div class="w-12 h-12 md:w-16 md:h-16 bg-accent-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-accent-gold/20 transition-colors shrink-0">
-                                <i class="fas fa-search-dollar text-xl md:text-3xl text-primary-dark group-hover:text-accent-gold-deep"></i>
-                            </div>
-                            <h3 class="font-serif text-xl md:text-2xl font-bold">Sindicância</h3>
-                        </div>
-                        <p class="text-gray-500 leading-relaxed mb-6 md:mb-8 flex-grow text-sm md:text-base">Investigações preliminares que podem se tornar processos punitivos irreversíveis.</p>
-                        <a href="https://wa.me/5547988670233?text=Preciso%20de%20ajuda%20com%20uma%20Sindicância" class="text-sm font-bold text-accent-gold-deep flex items-center gap-2 group-hover:gap-4 transition-all">
+</a></article><article class="lp-audience-card"><i aria-hidden="true" class="fas fa-scale-balanced"></i><h3 class="font-serif text-xl md:text-2xl font-bold">Sindicância</h3><p class="text-gray-500 leading-relaxed mb-6 md:mb-8 flex-grow text-sm md:text-base">Investigações preliminares que podem se tornar processos punitivos irreversíveis.</p><a class="lp-text-link" href="https://wa.me/5547988670233?text=Preciso%20de%20ajuda%20com%20uma%20Sindicância">
                             Blindar Investigação <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="group bg-white p-6 md:p-10 rounded-3xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col">
-                        <div class="flex items-center gap-4 mb-4 md:mb-8 md:block">
-                            <div class="w-12 h-12 md:w-16 md:h-16 bg-accent-gold/5 rounded-2xl flex items-center justify-center group-hover:bg-accent-gold/20 transition-colors shrink-0">
-                                <i class="fas fa-user-check text-xl md:text-3xl text-primary-dark group-hover:text-accent-gold-deep"></i>
-                            </div>
-                            <h3 class="font-serif text-xl md:text-2xl font-bold">Direitos Funcionais</h3>
-                        </div>
-                        <p class="text-gray-500 leading-relaxed mb-6 md:mb-8 flex-grow text-sm md:text-base">Aposentadoria, progressões, licenças e reversão de exonerações ilegais.</p>
-                        <a href="https://wa.me/5547988670233?text=Preciso%20de%20ajuda%20com%20Direitos%20Funcionais" class="text-sm font-bold text-accent-gold-deep flex items-center gap-2 group-hover:gap-4 transition-all">
+</a></article><article class="lp-audience-card"><i aria-hidden="true" class="fas fa-scale-balanced"></i><h3 class="font-serif text-xl md:text-2xl font-bold">Direitos Funcionais</h3><p class="text-gray-500 leading-relaxed mb-6 md:mb-8 flex-grow text-sm md:text-base">Aposentadoria, progressões, licenças e reversão de exonerações ilegais.</p><a class="lp-text-link" href="https://wa.me/5547988670233?text=Preciso%20de%20ajuda%20com%20Direitos%20Funcionais">
                             Garantir Direitos <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Analysis Section -->
-        <section id="analise" class="py-16 md:py-24 bg-primary-dark text-white overflow-hidden relative">
-            <!-- Decor -->
-            <div class="absolute top-0 right-0 w-1/2 h-full bg-accent-gold/5 -skew-x-12 translate-x-1/4"></div>
-            
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-                <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
-                    <div class="reveal">
-                        <span class="text-accent-gold font-bold text-xs tracking-[0.4em] uppercase block mb-4 md:mb-6">Metodologia Técnica</span>
-                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-8 md:mb-10">Não é apenas uma defesa, é estratégia jurídica pura.</h2>
-                        
-                        <div class="space-y-4 md:space-y-6">
-                            <div class="flex gap-4 md:gap-5">
-                                <div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 border border-accent-gold/30">
-                                    <i class="fas fa-history text-accent-gold text-xs md:text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base md:text-lg mb-1">Prescrição e Decadência</h4>
-                                    <p class="text-white/60 text-sm">Verificamos se a Administração Pública ainda possui o direito legal de punir você.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-5">
-                                <div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 border border-accent-gold/30">
-                                    <i class="fas fa-gavel text-accent-gold text-xs md:text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base md:text-lg mb-1">Nulidades Processuais</h4>
-                                    <p class="text-white/60 text-sm">Identificamos falhas no rito que podem anular todo o processo administrativo.</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-5">
-                                <div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 border border-accent-gold/30">
-                                    <i class="fas fa-balance-scale text-accent-gold text-xs md:text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-base md:text-lg mb-1">Proporcionalidade</h4>
-                                    <p class="text-white/60 text-sm">Combatemos penas excessivas que não condizem com a suposta infração.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-10 md:mt-12 p-6 md:p-8 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
-                            <p class="text-white font-medium italic leading-relaxed text-sm md:text-base">
+</a></article></div></div></section><section class="py-16 md:py-24 bg-white relative lp-section lp-standard-section">
+<div class="container mx-auto px-4 md:px-6 max-w-7xl">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-16">
+<div class="text-center space-y-2 md:space-y-3 reveal">
+<div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">100%</div>
+<div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Foco em Defesa de<br/>Servidores Públicos</div>
+</div>
+<div class="text-center space-y-2 md:space-y-3 reveal">
+<div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">Digital</div>
+<div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Atendimento Ágil<br/>sem sair de casa</div>
+</div>
+<div class="text-center space-y-2 md:space-y-3 reveal">
+<div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">Gratuita</div>
+<div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Primeira Análise<br/>Técnica do Caso</div>
+</div>
+<div class="text-center space-y-2 md:space-y-3 reveal">
+<div class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-accent-gold-deep">10x</div>
+<div class="text-[10px] md:text-xs lg:text-sm font-bold text-primary-dark/60 uppercase tracking-widest leading-relaxed">Honorários parcelados sem burocracia</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 md:py-24 bg-primary-dark text-white overflow-hidden relative lp-section lp-standard-section" id="analise">
+<!-- Decor -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-accent-gold/5 -skew-x-12 translate-x-1/4"></div>
+<div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+<div class="reveal">
+<span class="text-accent-gold font-bold text-xs tracking-[0.4em] uppercase block mb-4 md:mb-6">Metodologia Técnica</span>
+<h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-8 md:mb-10">Não é apenas uma defesa, é estratégia jurídica pura.</h2>
+<div class="space-y-4 md:space-y-6">
+<div class="flex gap-4 md:gap-5">
+<div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 border border-accent-gold/30">
+<i class="fas fa-history text-accent-gold text-xs md:text-sm"></i>
+</div>
+<div>
+<h4 class="font-bold text-base md:text-lg mb-1">Prescrição e Decadência</h4>
+<p class="text-white/60 text-sm">Verificamos se a Administração Pública ainda possui o direito legal de punir você.</p>
+</div>
+</div>
+<div class="flex gap-4 md:gap-5">
+<div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 border border-accent-gold/30">
+<i class="fas fa-gavel text-accent-gold text-xs md:text-sm"></i>
+</div>
+<div>
+<h4 class="font-bold text-base md:text-lg mb-1">Nulidades Processuais</h4>
+<p class="text-white/60 text-sm">Identificamos falhas no rito que podem anular todo o processo administrativo.</p>
+</div>
+</div>
+<div class="flex gap-4 md:gap-5">
+<div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-accent-gold/20 flex items-center justify-center shrink-0 border border-accent-gold/30">
+<i class="fas fa-balance-scale text-accent-gold text-xs md:text-sm"></i>
+</div>
+<div>
+<h4 class="font-bold text-base md:text-lg mb-1">Proporcionalidade</h4>
+<p class="text-white/60 text-sm">Combatemos penas excessivas que não condizem com a suposta infração.</p>
+</div>
+</div>
+</div>
+<div class="mt-10 md:mt-12 p-6 md:p-8 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
+<p class="text-white font-medium italic leading-relaxed text-sm md:text-base">
                                 "O servidor público não pode ser refém do arbítrio administrativo. A lei existe para proteger quem serve ao Estado."
                             </p>
-                            <div class="mt-4 md:mt-6 flex items-center gap-4">
-                                <div class="w-10 md:w-12 h-10 md:h-12 bg-accent-gold rounded-full flex items-center justify-center text-primary-dark font-bold text-sm md:text-base shadow-xl shadow-accent-gold/20">GC</div>
-                                <div>
-                                    <div class="font-bold text-white text-sm md:text-base">Gabriel Corrêa</div>
-                                    <div class="text-[9px] md:text-[10px] text-accent-gold uppercase tracking-widest font-bold">Advogado Especialista</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="relative reveal hidden md:block" style="transition-delay: 0.2s;">
-                        <div class="bg-white rounded-[3rem] p-8 md:p-12 text-primary-dark shadow-2xl relative z-10 overflow-hidden">
-                            <!-- Decor -->
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                            
-                            <h3 class="text-xl md:text-2xl font-bold mb-8 md:mb-10 border-b border-accent-gold/20 pb-4 md:pb-6">Cronograma de Risco</h3>
-                            <div class="space-y-8 md:space-y-10 relative">
-                                <div class="absolute left-[15px] top-2 bottom-2 w-0.5 bg-accent-gold/20"></div>
-                                
-                                <div class="flex gap-6 md:gap-8 relative">
-                                    <div class="w-8 h-8 bg-primary-dark text-white rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0">01</div>
-                                    <div>
-                                        <div class="font-bold text-base md:text-lg mb-1">Notificação</div>
-                                        <p class="text-sm text-gray-500 italic">O prazo começa a contar hoje.</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 md:gap-8 relative">
-                                    <div class="w-8 h-8 bg-primary-dark text-white rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0">02</div>
-                                    <div>
-                                        <div class="font-bold text-base md:text-lg mb-1">Defesa Prévia</div>
-                                        <p class="text-sm text-gray-500">Única chance de travar o processo no início.</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 md:gap-8 relative">
-                                    <div class="w-8 h-8 bg-accent-gold text-primary-dark rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0 shadow-lg shadow-accent-gold/30">!</div>
-                                    <div>
-                                        <div class="font-bold text-base md:text-lg mb-1 text-accent-gold-deep uppercase">Risco Máximo</div>
-                                        <p class="text-sm text-primary-dark font-semibold">Sem defesa técnica, a demissão torna-se provável.</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 md:gap-8 relative opacity-30">
-                                    <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0">04</div>
-                                    <div>
-                                        <div class="font-bold text-base md:text-lg mb-1">Decisão Final</div>
-                                        <p class="text-sm">Punição aplicada e registro funcional manchado.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <a href="https://wa.me/5547988670233" class="mt-10 md:mt-12 w-full bg-accent-gold text-white py-4 md:py-5 rounded-2xl font-bold text-center block hover:bg-accent-gold-deep transition-all shadow-xl shadow-accent-gold/20 text-sm md:text-base">
+<div class="mt-4 md:mt-6 flex items-center gap-4">
+<div class="w-10 md:w-12 h-10 md:h-12 bg-accent-gold rounded-full flex items-center justify-center text-primary-dark font-bold text-sm md:text-base shadow-xl shadow-accent-gold/20">GC</div>
+<div>
+<div class="font-bold text-white text-sm md:text-base">Gabriel Corrêa</div>
+<div class="text-[9px] md:text-[10px] text-accent-gold uppercase tracking-widest font-bold">Advogado Especialista</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal hidden md:block">
+<div class="bg-white rounded-[3rem] p-8 md:p-12 text-primary-dark shadow-2xl relative z-10 overflow-hidden">
+<!-- Decor -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-accent-gold/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<h3 class="text-xl md:text-2xl font-bold mb-8 md:mb-10 border-b border-accent-gold/20 pb-4 md:pb-6">Cronograma de Risco</h3>
+<div class="space-y-8 md:space-y-10 relative">
+<div class="absolute left-[15px] top-2 bottom-2 w-0.5 bg-accent-gold/20"></div>
+<div class="flex gap-6 md:gap-8 relative">
+<div class="w-8 h-8 bg-primary-dark text-white rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0">01</div>
+<div>
+<div class="font-bold text-base md:text-lg mb-1">Notificação</div>
+<p class="text-sm text-gray-500 italic">O prazo começa a contar hoje.</p>
+</div>
+</div>
+<div class="flex gap-6 md:gap-8 relative">
+<div class="w-8 h-8 bg-primary-dark text-white rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0">02</div>
+<div>
+<div class="font-bold text-base md:text-lg mb-1">Defesa Prévia</div>
+<p class="text-sm text-gray-500">Única chance de travar o processo no início.</p>
+</div>
+</div>
+<div class="flex gap-6 md:gap-8 relative">
+<div class="w-8 h-8 bg-accent-gold text-primary-dark rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0 shadow-lg shadow-accent-gold/30">!</div>
+<div>
+<div class="font-bold text-base md:text-lg mb-1 text-accent-gold-deep uppercase">Risco Máximo</div>
+<p class="text-sm text-primary-dark font-semibold">Sem defesa técnica, a demissão torna-se provável.</p>
+</div>
+</div>
+<div class="flex gap-6 md:gap-8 relative opacity-30">
+<div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold relative z-10 shrink-0">04</div>
+<div>
+<div class="font-bold text-base md:text-lg mb-1">Decisão Final</div>
+<p class="text-sm">Punição aplicada e registro funcional manchado.</p>
+</div>
+</div>
+</div>
+<a class="mt-10 md:mt-12 w-full bg-accent-gold text-white py-4 md:py-5 rounded-2xl font-bold text-center block hover:bg-accent-gold-deep transition-all shadow-xl shadow-accent-gold/20 text-sm md:text-base" href="https://wa.me/5547988670233">
                                 Evitar a Punição Agora
                             </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Us -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
-                <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
-                    <div class="reveal hidden lg:block">
-                        <div class="relative inline-block w-full">
-                            <div class="aspect-[4/5] bg-bg-beige rounded-[3rem] overflow-hidden relative border border-accent-gold/10 shadow-2xl">
-                                <div class="absolute inset-0 flex flex-col items-center justify-center p-12 text-center text-primary-dark/10">
-                                    <img src="assets/img/advogado-gabriel.webp" alt="Advogado Gabriel Corrêa" class="absolute inset-0 w-full h-full object-cover">
-                                    <span class="text-xs font-bold tracking-[0.3em] uppercase">Gabriel Corrêa</span>
-                                </div>
-                                <div class="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md border border-accent-gold/20 p-8 rounded-3xl shadow-xl">
-                                    <div class="text-primary-dark font-serif font-bold text-lg md:text-xl mb-2 italic">"Excelência técnica para quem dedica a vida ao serviço público."</div>
-                                    <div class="text-accent-gold-deep text-xs font-bold uppercase tracking-widest">Compromisso Ético</div>
-                                </div>
-                            </div>
-                            <div class="absolute -top-10 -left-10 w-32 h-32 bg-accent-gold/10 rounded-full -z-10 animate-pulse"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-8 md:space-y-10 reveal" style="transition-delay: 0.2s;">
-                        <div>
-                            <span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block mb-4 md:mb-6">Diferenciais</span>
-                            <h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight">Por que confiar sua carreira a nós?</h2>
-                        </div>
-                        
-                        <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-4 md:block md:space-y-3">
-                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
-                                        <i class="fas fa-user-shield text-lg md:text-xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-primary-dark text-base md:text-lg">Atendimento Direto</h4>
-                                </div>
-                                <p class="text-sm text-gray-500 leading-relaxed">Você fala diretamente com o advogado, sem intermediários.</p>
-                            </div>
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-4 md:block md:space-y-3">
-                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
-                                        <i class="fas fa-bolt text-lg md:text-xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-primary-dark text-base md:text-lg">Agilidade Total</h4>
-                                </div>
-                                <p class="text-sm text-gray-500 leading-relaxed">Prazos administrativos não esperam. Resposta imediata.</p>
-                            </div>
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-4 md:block md:space-y-3">
-                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
-                                        <i class="fas fa-map-marked-alt text-lg md:text-xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-primary-dark text-base md:text-lg">Brasil Inteiro</h4>
-                                </div>
-                                <p class="text-sm text-gray-500 leading-relaxed">Atuamos digitalmente em qualquer município ou estado.</p>
-                            </div>
-                            <div class="space-y-3">
-                                <div class="flex items-center gap-4 md:block md:space-y-3">
-                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
-                                        <i class="fas fa-hand-holding-usd text-lg md:text-xl"></i>
-                                    </div>
-                                    <h4 class="font-bold text-primary-dark text-base md:text-lg">Transparência</h4>
-                                </div>
-                                <p class="text-sm text-gray-500 leading-relaxed">Honorários justos e contratos claros.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="pt-4 md:pt-6">
-                            <a href="https://wa.me/5547988670233" class="inline-flex items-center gap-3 md:gap-4 text-primary-dark font-bold text-base md:text-lg border-b-2 border-accent-gold pb-2 hover:text-accent-gold-deep transition-all group">
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 md:py-24 bg-white lp-section lp-standard-section">
+<div class="container mx-auto px-4 md:px-6 max-w-7xl">
+<div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+<div class="reveal hidden lg:block">
+<div class="relative inline-block w-full">
+<div class="aspect-[4/5] bg-bg-beige rounded-[3rem] overflow-hidden relative border border-accent-gold/10 shadow-2xl">
+<div class="absolute inset-0 flex flex-col items-center justify-center p-12 text-center text-primary-dark/10">
+<img alt="Advogado Gabriel Corrêa" class="absolute inset-0 w-full h-full object-cover" src="assets/img/advogado-gabriel.webp"/>
+<span class="text-xs font-bold tracking-[0.3em] uppercase">Gabriel Corrêa</span>
+</div>
+<div class="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md border border-accent-gold/20 p-8 rounded-3xl shadow-xl">
+<div class="text-primary-dark font-serif font-bold text-lg md:text-xl mb-2 italic">"Excelência técnica para quem dedica a vida ao serviço público."</div>
+<div class="text-accent-gold-deep text-xs font-bold uppercase tracking-widest">Compromisso Ético</div>
+</div>
+</div>
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-accent-gold/10 rounded-full -z-10 animate-pulse"></div>
+</div>
+</div>
+<div class="space-y-8 md:space-y-10 reveal">
+<div>
+<span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block mb-4 md:mb-6">Diferenciais</span>
+<h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight">Por que confiar sua carreira a nós?</h2>
+</div>
+<div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+<div class="space-y-3">
+<div class="flex items-center gap-4 md:block md:space-y-3">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
+<i class="fas fa-user-shield text-lg md:text-xl"></i>
+</div>
+<h4 class="font-bold text-primary-dark text-base md:text-lg">Atendimento Direto</h4>
+</div>
+<p class="text-sm text-gray-500 leading-relaxed">Você fala diretamente com o advogado, sem intermediários.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 md:block md:space-y-3">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
+<i class="fas fa-bolt text-lg md:text-xl"></i>
+</div>
+<h4 class="font-bold text-primary-dark text-base md:text-lg">Agilidade Total</h4>
+</div>
+<p class="text-sm text-gray-500 leading-relaxed">Prazos administrativos não esperam. Resposta imediata.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 md:block md:space-y-3">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
+<i class="fas fa-map-marked-alt text-lg md:text-xl"></i>
+</div>
+<h4 class="font-bold text-primary-dark text-base md:text-lg">Brasil Inteiro</h4>
+</div>
+<p class="text-sm text-gray-500 leading-relaxed">Atuamos digitalmente em qualquer município ou estado.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 md:block md:space-y-3">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold-deep shrink-0">
+<i class="fas fa-hand-holding-usd text-lg md:text-xl"></i>
+</div>
+<h4 class="font-bold text-primary-dark text-base md:text-lg">Transparência</h4>
+</div>
+<p class="text-sm text-gray-500 leading-relaxed">Honorários justos e contratos claros.</p>
+</div>
+</div>
+<div class="pt-4 md:pt-6">
+<a class="inline-flex items-center gap-3 md:gap-4 text-primary-dark font-bold text-base md:text-lg border-b-2 border-accent-gold pb-2 hover:text-accent-gold-deep transition-all group" href="https://wa.me/5547988670233">
                                 Iniciar Conversa <i class="fas fa-arrow-right group-hover:translate-x-3 transition-transform"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How we work -->
-        <section class="py-16 md:py-24 bg-bg-beige">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl">
-                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4 md:space-y-6">
-                    <span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase">Nosso Método</span>
-                    <h2 class="text-2xl md:text-4xl font-serif font-bold text-primary-dark leading-tight">Como funciona nossa análise?</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 reveal">
-                    <div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">1</div>
-                        <div>
-                            <h4 class="font-bold text-base md:text-lg">Envio</h4>
-                            <p class="text-xs md:text-sm text-gray-500">Você envia os documentos pelo WhatsApp.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">2</div>
-                        <div>
-                            <h4 class="font-bold text-base md:text-lg">Estudo</h4>
-                            <p class="text-xs md:text-sm text-gray-500">Analisamos a legalidade e os prazos.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">3</div>
-                        <div>
-                            <h4 class="font-bold text-base md:text-lg">Diagnóstico</h4>
-                            <p class="text-xs md:text-sm text-gray-500">Explicamos as chances reais.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
-                        <div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">4</div>
-                        <div>
-                            <h4 class="font-bold text-base md:text-lg">Defesa</h4>
-                            <p class="text-xs md:text-sm text-gray-500">Iniciamos a atuação técnica.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Teses Jurídicas Section -->
-        <section id="teses" class="py-16 md:py-24 bg-white relative overflow-hidden">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4 md:space-y-6">
-                    <span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block">Direito do Servidor</span>
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight">Quando vale a pena acionar a Justiça?</h2>
-                    <p class="text-gray-500 text-sm md:text-base">Conheça as teses jurídicas que fundamentam nossas vitórias e protegem seus direitos.</p>
-                    <div class="w-20 h-1.5 bg-accent-gold mx-auto mt-6 rounded-full"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 reveal">
-                    <!-- Tese 1 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">01</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Adicional de Insalubridade sobre o piso</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> O Município paga o adicional com base no salário-mínimo nacional, reduzindo o valor.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Deve incidir sobre o vencimento básico/piso da carreira (EC 120/2022).</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 2 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">02</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Licença-Prêmio não gozada em indenização</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Servidor se aposenta com meses de licença acumulados sem poder gozar.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Tem direito de converter em indenização em dinheiro sem IR.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 3 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">03</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Mudança unilateral de cálculo de adicionais</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> O órgão altera forma de cálculo sem perícia técnica e sem processo.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Exige laudo pericial atualizado e respeito ao contraditório.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 4 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">04</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Atraso em Progressões por LRF</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Servidor cumpre requisitos mas Estado retarda pagamento por Lei de Responsabilidade Fiscal.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Limites orçamentários não podem negar direitos subjetivos de progressão.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 5 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">05</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Restituição do PIS/PASEP</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Saldos de contas PASEP não sofreram atualização monetária ou tiveram saques indevidos.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Banco do Brasil responde por falhas na gestão (Tema 1150 STJ).</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 6 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">06</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Isenção de IR por doença grave</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Aposentado com doença grave continua sofrendo retenção de IR na fonte.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Lei 7.713/88 garante isenção total e restituição dos últimos 5 anos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 7 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">07</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Cobrança indevida de IR e previdência</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Contracheque apresenta descontos sobre terço de férias, auxílio-transporte ou abono.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Verbas indenizatórias não podem sofrer incidência de tributos.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tese 8 -->
-                    <div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">08</div>
-                            <div>
-                                <h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Readaptação com redução salarial</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Servidor readaptado por doença ocupacional tem gratificações cortadas e remuneração reduzida.</p>
-                                <p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Readaptação não pode acarretar decesso remuneratório (irredutibilidade de vencimentos).</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 md:px-6 max-w-4xl">
-                <div class="text-center mb-12 md:mb-20">
-                    <span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block mb-4 md:mb-6">FAQ</span>
-                    <h2 class="text-2xl md:text-4xl font-serif font-bold text-primary-dark">Dúvidas Frequentes</h2>
-                    <div class="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
-                </div>
-                
-                <div class="space-y-4 md:space-y-6 reveal">
-                    <details class="group bg-bg-beige rounded-3xl border border-accent-gold/10 overflow-hidden transition-all shadow-sm hover:shadow-md">
-                        <summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none font-bold text-primary-dark text-base md:text-lg">
-                            Ainda posso recorrer da decisão?
-                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
-                                <i class="fas fa-chevron-down text-xs text-accent-gold"></i>
-                            </span>
-                        </summary>
-                        <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 leading-relaxed text-sm md:text-base">
-                            Sim. Mesmo que já tenha havido uma decisão, existem recursos administrativos e, em muitos casos, a via judicial para anular atos ilegais ou desproporcionais.
-                        </div>
-                    </details>
-                    
-                    <details class="group bg-bg-beige rounded-3xl border border-accent-gold/10 overflow-hidden transition-all shadow-sm hover:shadow-md">
-                        <summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none font-bold text-primary-dark text-base md:text-lg">
-                            Vale a pena contratar advogado para PAD?
-                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
-                                <i class="fas fa-chevron-down text-xs text-accent-gold"></i>
-                            </span>
-                        </summary>
-                        <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 leading-relaxed text-sm md:text-base">
-                            Embora não seja obrigatório por lei em alguns casos, a Súmula Vinculante nº 5 do STF diz que a falta de defesa técnica não anula o PAD. A defesa técnica é o que garante que o rito legal seja seguido.
-                        </div>
-                    </details>
-                    
-                    <details class="group bg-bg-beige rounded-3xl border border-accent-gold/10 overflow-hidden transition-all shadow-sm hover:shadow-md">
-                        <summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none font-bold text-primary-dark text-base md:text-lg">
-                            Como funciona o atendimento online?
-                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
-                                <i class="fas fa-chevron-down text-xs text-accent-gold"></i>
-                            </span>
-                        </summary>
-                        <div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 leading-relaxed text-sm md:text-base">
-                            É simples e seguro. Você envia fotos ou PDFs dos documentos pelo WhatsApp. Nós analisamos, fazemos uma reunião por vídeo ou áudio e protocolamos tudo digitalmente nos sistemas do órgão público.
-                        </div>
-                    </details>
-                </div>
-                
-                <div class="mt-12 md:mt-16 text-center">
-                    <p class="text-gray-400 font-medium text-sm md:text-base">Ainda tem dúvidas? <a href="https://wa.me/5547988670233" class="text-primary-dark font-bold underline decoration-accent-gold underline-offset-4">Fale conosco no WhatsApp</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- MOVED: Triage Section (Análise do Caso) - ANTES DA ÚLTIMA CTA -->
-        <section id="analise-caso" class="py-16 md:py-24 bg-bg-beige relative overflow-hidden">
-            <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-                <div class="grid lg:grid-cols-12 gap-8 md:gap-16 items-center">
-                    <div class="lg:col-span-6 space-y-6 md:space-y-8 reveal">
-                        <span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block">Diagnóstico Gratuito</span>
-                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight">
-                            Vamos analisar seu caso tecnicamente agora.
-                        </h2>
-                        <p class="text-base md:text-lg text-gray-600 leading-relaxed">
-                            Responda a estas 5 perguntas rápidas para que possamos entender a gravidade da sua situação.
-                        </p>
-                        
-                        <div class="space-y-4 md:space-y-6 pt-2 md:pt-4">
-                            <div class="flex items-center gap-3 md:gap-4 text-gray-700">
-                                <div class="w-5 md:w-6 h-5 md:h-6 rounded-full bg-whatsapp/10 text-whatsapp flex items-center justify-center shrink-0">
-                                    <i class="fas fa-check text-[8px] md:text-[10px]"></i>
-                                </div>
-                                <span class="font-medium text-sm md:text-base">Análise 100% gratuita e sem compromisso.</span>
-                            </div>
-                            <div class="flex items-center gap-3 md:gap-4 text-gray-700">
-                                <div class="w-5 md:w-6 h-5 md:h-6 rounded-full bg-whatsapp/10 text-whatsapp flex items-center justify-center shrink-0">
-                                    <i class="fas fa-check text-[8px] md:text-[10px]"></i>
-                                </div>
-                                <span class="font-medium text-sm md:text-base">Dados protegidos por sigilo profissional.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-6 reveal" style="transition-delay: 0.2s;">
-                        <div class="bg-white rounded-[3rem] shadow-2xl border border-accent-gold/10 p-6 md:p-10 lg:p-12 relative overflow-hidden">
-                            <!-- Progress Bar -->
-                            <div class="absolute top-0 left-0 w-full h-2 bg-gray-200">
-                                <div id="triagem-progress-fill" class="h-full bg-accent-gold transition-all duration-700 ease-out shadow-[0_0_10px_rgba(212,175,55,0.5)]" style="width: 0%"></div>
-                            </div>
-                            
-                            <div class="mb-8 md:mb-10">
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold text-accent-gold-deep block mb-2 md:mb-3" id="triagem-counter">PASSO 1 DE 5</span>
-                                <h2 class="text-xl md:text-2xl font-bold text-primary-dark" id="triagem-title">Qual documento você recebeu?</h2>
-                            </div>
-    
-                            <div id="triagem-container" class="min-h-[320px] md:min-h-[350px]">
-                                <!-- Step 1 -->
-                                <div class="triagem-step active" data-step="1">
-                                    <div class="grid gap-3 md:gap-4">
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="PAD">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">PAD (Processo Administrativo)</span>
-                                        </button>
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Sindicância">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">Sindicância</span>
-                                        </button>
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Notificação">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">Notificação / Citação</span>
-                                        </button>
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Outro">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">Outro documento</span>
-                                        </button>
-                                    </div>
-                                </div>
-    
-                                <!-- Step 2 -->
-                                <div class="triagem-step" data-step="2">
-                                    <p class="text-base md:text-lg font-bold text-gray-700 mb-6 md:mb-8 text-center">Você já apresentou alguma defesa?</p>
-                                    <div class="grid grid-cols-2 gap-4 md:gap-6">
-                                        <button class="radio-option p-6 md:p-8 lg:p-10 rounded-3xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all text-center group shadow-sm" data-value="Sim">
-                                            <div class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 mx-auto mb-3 md:mb-4 group-hover:border-accent-gold transition-all"></div>
-                                            <span class="font-black text-gray-700 group-hover:text-primary-dark text-sm md:text-base">SIM</span>
-                                        </button>
-                                        <button class="radio-option p-6 md:p-8 lg:p-10 rounded-3xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all text-center group shadow-sm" data-value="Não">
-                                            <div class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 mx-auto mb-3 md:mb-4 group-hover:border-accent-gold transition-all"></div>
-                                            <span class="font-black text-gray-700 group-hover:text-primary-dark text-sm md:text-base">NÃO</span>
-                                        </button>
-                                    </div>
-                                    <button class="mt-8 md:mt-10 text-xs font-black text-gray-400 hover:text-accent-gold transition-colors flex items-center gap-2 mx-auto" data-back>
-                                        <i class="fas fa-arrow-left"></i> VOLTAR
-                                    </button>
-                                </div>
-    
-                                <!-- Step 3 -->
-                                <div class="triagem-step" data-step="3">
-                                    <p class="text-base md:text-lg font-bold text-gray-700 mb-6 md:mb-8 text-center">Quanto tempo falta para o prazo vencer?</p>
-                                    <div class="grid gap-3 md:gap-4">
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Hoje">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-red-600 group-hover:text-red-700 text-sm md:text-base">VENCE HOJE (URGENTE)</span>
-                                        </button>
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Até 3 dias">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">Até 3 dias</span>
-                                        </button>
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Uma semana">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">Até uma semana</span>
-                                        </button>
-                                        <button class="radio-option w-full text-left p-4 md:p-5 rounded-2xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all flex items-center gap-4 md:gap-5 group shadow-sm" data-value="Não sei">
-                                            <span class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 group-hover:border-accent-gold transition-all shrink-0"></span>
-                                            <span class="font-bold text-gray-700 group-hover:text-primary-dark text-sm md:text-base">Não sei / Já passou</span>
-                                        </button>
-                                    </div>
-                                    <button class="mt-8 md:mt-10 text-xs font-black text-gray-400 hover:text-accent-gold transition-colors flex items-center gap-2 mx-auto" data-back>
-                                        <i class="fas fa-arrow-left"></i> VOLTAR
-                                    </button>
-                                </div>
-    
-                                <!-- Step 4 -->
-                                <div class="triagem-step" data-step="4">
-                                    <p class="text-base md:text-lg font-bold text-gray-700 mb-4 md:mb-6">Qual o órgão ou secretaria da acusação?</p>
-                                    <input type="text" id="triagem-orgao" placeholder="Ex: Secretaria de Saúde de SP" 
-                                           class="w-full p-4 md:p-6 rounded-2xl border-2 border-white bg-white focus:border-accent-gold focus:outline-none transition-all mb-6 md:mb-8 text-primary-dark font-bold shadow-sm text-sm md:text-base">
-                                    
-                                    <div class="flex items-center justify-between">
-                                        <button class="text-xs font-black text-gray-400 hover:text-accent-gold transition-colors flex items-center gap-2" data-back>
-                                            <i class="fas fa-arrow-left"></i> VOLTAR
-                                        </button>
-                                        <button id="triagem-continue" disabled class="bg-primary-dark text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl font-bold disabled:opacity-30 transition-all flex items-center gap-2 shadow-xl text-sm md:text-base">
-                                            PRÓXIMO <i class="fas fa-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-    
-                                <!-- Step 5 -->
-                                <div class="triagem-step" data-step="5">
-                                    <p class="text-base md:text-lg font-bold text-gray-700 mb-6 md:mb-8 text-center">Você possui os documentos em mãos?</p>
-                                    <div class="grid grid-cols-2 gap-4 md:gap-6">
-                                        <button class="radio-option p-6 md:p-8 lg:p-10 rounded-3xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all text-center group shadow-sm" data-value="Sim">
-                                            <div class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 mx-auto mb-3 md:mb-4 group-hover:border-accent-gold transition-all"></div>
-                                            <span class="font-black text-gray-700 group-hover:text-primary-dark text-sm md:text-base">SIM</span>
-                                        </button>
-                                        <button class="radio-option p-6 md:p-8 lg:p-10 rounded-3xl border-2 border-white bg-white/50 hover:border-accent-gold transition-all text-center group shadow-sm" data-value="Não">
-                                            <div class="radio-dot w-5 h-5 rounded-full border-2 border-gray-300 mx-auto mb-3 md:mb-4 group-hover:border-accent-gold transition-all"></div>
-                                            <span class="font-black text-gray-700 group-hover:text-primary-dark text-sm md:text-base">NÃO</span>
-                                        </button>
-                                    </div>
-                                    <button class="mt-8 md:mt-10 text-xs font-black text-gray-400 hover:text-accent-gold transition-colors flex items-center gap-2 mx-auto" data-back>
-                                        <i class="fas fa-arrow-left"></i> VOLTAR
-                                    </button>
-                                </div>
-    
-                                <!-- Result Step -->
-                                <div class="triagem-step" data-step="6">
-                                    <div class="text-center py-4 md:py-6">
-                                        <div class="w-20 md:w-24 h-20 md:h-24 bg-whatsapp/10 text-whatsapp rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8 text-3xl md:text-4xl shadow-inner">
-                                            <i class="fas fa-check-circle"></i>
-                                        </div>
-                                        <h3 class="text-2xl md:text-3xl font-serif font-bold text-primary-dark mb-3 md:mb-4">Análise Pronta!</h3>
-                                        <p class="text-gray-500 mb-8 md:mb-10 leading-relaxed max-w-sm mx-auto text-sm md:text-base">
-                                            Já mapeamos os riscos iniciais. Clique no botão abaixo para falar com o Dr. Gabriel.
-                                        </p>
-                                        
-                                        <a id="triagem-cta" href="#" target="_blank" class="w-full bg-whatsapp text-white py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg shadow-2xl shadow-whatsapp/30 hover:scale-105 transition-all flex items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
-                                            <i class="fab fa-whatsapp text-xl md:text-2xl"></i> Iniciar Defesa Agora
-                                        </a>
-                                        
-                                        <button class="text-xs font-bold text-gray-400 hover:text-accent-gold transition-colors underline decoration-dotted" data-back>
-                                            Revisar minhas respostas
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <p class="mt-6 md:mt-8 text-[9px] md:text-[10px] text-gray-400 text-center leading-relaxed">
-                                <i class="fas fa-lock mr-1"></i> Ambiente 100% seguro. Suas informações são protegidas pelo Estatuto da OAB.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="py-16 md:py-24 px-4 md:px-6">
-            <div class="container mx-auto max-w-6xl bg-primary-dark rounded-[3rem] md:rounded-[4rem] p-8 md:p-16 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
-                <!-- Background decor -->
-                <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)]"></div>
-                
-                <div class="relative z-10 space-y-6 md:space-y-10">
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight">Não enfrente o Estado sozinho. <br><span class="text-accent-gold italic">Nós protegemos você.</span></h2>
-                    <p class="text-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+</a>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 md:py-24 bg-bg-beige lp-section lp-standard-section">
+<div class="container mx-auto px-4 md:px-6 max-w-7xl">
+<div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4 md:space-y-6">
+<span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase">Nosso Método</span>
+<h2 class="text-2xl md:text-4xl font-serif font-bold text-primary-dark leading-tight">Como funciona nossa análise?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 reveal">
+<div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">1</div>
+<div>
+<h4 class="font-bold text-base md:text-lg">Envio</h4>
+<p class="text-xs md:text-sm text-gray-500">Você envia os documentos pelo WhatsApp.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">2</div>
+<div>
+<h4 class="font-bold text-base md:text-lg">Estudo</h4>
+<p class="text-xs md:text-sm text-gray-500">Analisamos a legalidade e os prazos.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">3</div>
+<div>
+<h4 class="font-bold text-base md:text-lg">Diagnóstico</h4>
+<p class="text-xs md:text-sm text-gray-500">Explicamos as chances reais.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 text-left md:text-center md:block md:space-y-4 bg-white p-5 md:p-8 rounded-2xl border border-accent-gold/10 hover:border-accent-gold hover:shadow-lg transition-all">
+<div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 text-lg md:text-xl font-bold text-accent-gold-deep border border-accent-gold/10">4</div>
+<div>
+<h4 class="font-bold text-base md:text-lg">Defesa</h4>
+<p class="text-xs md:text-sm text-gray-500">Iniciamos a atuação técnica.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 md:py-24 bg-white relative overflow-hidden lp-section lp-standard-section" id="teses">
+<div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-12 md:mb-20 space-y-4 md:space-y-6">
+<span class="text-accent-gold-deep font-bold text-xs tracking-[0.4em] uppercase block">Direito do Servidor</span>
+<h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight">Quando vale a pena acionar a Justiça?</h2>
+<p class="text-gray-500 text-sm md:text-base">Conheça as teses jurídicas que fundamentam nossas vitórias e protegem seus direitos.</p>
+<div class="w-20 h-1.5 bg-accent-gold mx-auto mt-6 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 reveal">
+<!-- Tese 1 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">01</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Adicional de Insalubridade sobre o piso</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> O Município paga o adicional com base no salário-mínimo nacional, reduzindo o valor.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Deve incidir sobre o vencimento básico/piso da carreira (EC 120/2022).</p>
+</div>
+</div>
+</div>
+<!-- Tese 2 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">02</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Licença-Prêmio não gozada em indenização</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Servidor se aposenta com meses de licença acumulados sem poder gozar.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Tem direito de converter em indenização em dinheiro sem IR.</p>
+</div>
+</div>
+</div>
+<!-- Tese 3 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">03</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Mudança unilateral de cálculo de adicionais</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> O órgão altera forma de cálculo sem perícia técnica e sem processo.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Exige laudo pericial atualizado e respeito ao contraditório.</p>
+</div>
+</div>
+</div>
+<!-- Tese 4 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">04</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Atraso em Progressões por LRF</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Servidor cumpre requisitos mas Estado retarda pagamento por Lei de Responsabilidade Fiscal.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Limites orçamentários não podem negar direitos subjetivos de progressão.</p>
+</div>
+</div>
+</div>
+<!-- Tese 5 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">05</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Restituição do PIS/PASEP</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Saldos de contas PASEP não sofreram atualização monetária ou tiveram saques indevidos.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Banco do Brasil responde por falhas na gestão (Tema 1150 STJ).</p>
+</div>
+</div>
+</div>
+<!-- Tese 6 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">06</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Isenção de IR por doença grave</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Aposentado com doença grave continua sofrendo retenção de IR na fonte.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Lei 7.713/88 garante isenção total e restituição dos últimos 5 anos.</p>
+</div>
+</div>
+</div>
+<!-- Tese 7 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">07</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Cobrança indevida de IR e previdência</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Contracheque apresenta descontos sobre terço de férias, auxílio-transporte ou abono.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Verbas indenizatórias não podem sofrer incidência de tributos.</p>
+</div>
+</div>
+</div>
+<!-- Tese 8 -->
+<div class="bg-bg-beige p-4 md:p-6 rounded-xl md:rounded-2xl border border-accent-gold/5 hover:border-accent-gold/20 transition-all group">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 md:w-10 md:h-10 bg-primary-dark text-accent-gold rounded-lg md:rounded-xl flex items-center justify-center shrink-0 font-bold text-xs md:text-sm">08</div>
+<div>
+<h4 class="font-serif text-sm md:text-lg font-bold text-primary-dark mb-2">Readaptação com redução salarial</h4>
+<p class="text-xs md:text-sm text-gray-600 leading-relaxed mb-2"><strong>O Problema:</strong> Servidor readaptado por doença ocupacional tem gratificações cortadas e remuneração reduzida.</p>
+<p class="text-xs md:text-sm text-primary-dark font-medium italic bg-accent-gold/5 p-2 md:p-3 rounded-lg border-l-4 border-accent-gold"><strong>A Tese:</strong> Readaptação não pode acarretar decesso remuneratório (irredutibilidade de vencimentos).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-16 md:py-24 px-4 md:px-6 lp-section lp-standard-section">
+<div class="container mx-auto max-w-6xl bg-primary-dark rounded-[3rem] md:rounded-[4rem] p-8 md:p-16 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
+<!-- Background decor -->
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)]"></div>
+<div class="relative z-10 space-y-6 md:space-y-10">
+<h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight">Não enfrente o Estado sozinho. <br/><span class="text-accent-gold italic">Nós protegemos você.</span></h2>
+<p class="text-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
                         A Administração Pública tem recursos ilimitados. Você tem a lei e a nossa técnica. Fale conosco agora e garanta sua defesa.
                     </p>
-                    <div class="pt-4 md:pt-8 flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
-                        <a href="https://wa.me/5547988670233" class="inline-flex items-center gap-3 md:gap-4 bg-whatsapp text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-105 transition-all shadow-2xl shadow-whatsapp/30">
-                            <i class="fab fa-whatsapp text-2xl md:text-3xl"></i> Falar com Advogado
+<div class="pt-4 md:pt-8 flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
+<a class="inline-flex items-center gap-3 md:gap-4 bg-whatsapp text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-105 transition-all shadow-2xl shadow-whatsapp/30" href="https://wa.me/5547988670233">
+<i class="fab fa-whatsapp text-2xl md:text-3xl"></i> Falar com Advogado
                         </a>
-                    </div>
-                    <div class="pt-2 md:pt-4 opacity-50 text-xs md:text-sm font-bold tracking-widest uppercase">
+</div>
+<div class="pt-2 md:pt-4 opacity-50 text-xs md:text-sm font-bold tracking-widest uppercase">
                         OAB/SC 63.737
                     </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-white py-16 md:py-20 border-t border-accent-gold/10">
-        <div class="container mx-auto px-4 md:px-6 max-w-7xl text-center space-y-8 md:space-y-10">
-            <div class="flex items-center justify-center gap-3 md:gap-4">
-                <div class="w-9 md:w-10 h-9 md:h-10 bg-primary-dark rounded-lg flex items-center justify-center shadow-lg">
-                    <span class="font-serif text-accent-gold text-lg md:text-xl font-bold">G</span>
-                </div>
-                <span class="font-bold text-lg md:text-xl tracking-tight">Gabriel Corrêa Advocacia</span>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs md:text-sm font-semibold text-gray-500">
-                <a href="#situacoes" class="hover:text-accent-gold transition-colors">Atuação</a>
-                <a href="#analise" class="hover:text-accent-gold transition-colors">Metodologia</a>
-                <a href="#faq" class="hover:text-accent-gold transition-colors">Dúvidas</a>
-                <a href="https://wa.me/5547988670233" class="hover:text-accent-gold transition-colors">Contato</a>
-            </div>
-
-            <div class="space-y-3 md:space-y-4">
-                <p class="text-gray-400 text-xs md:text-sm">
-                    &copy; 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados.
-                </p>
-                <p class="text-[10px] md:text-[11px] text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                    As informações contidas neste site têm caráter meramente informativo e não constituem aconselhamento jurídico. O contato inicial não estabelece relação advogado-cliente imediata. A atuação profissional é regida pelo Código de Ética e Disciplina da OAB.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Mobile CTA -->
-    <div id="bottom-cta" class="fixed bottom-6 md:bottom-8 left-4 md:left-6 right-4 md:right-6 z-[100] translate-y-32 transition-all duration-700 pointer-events-none opacity-0">
-        <div class="bg-white rounded-[2rem] shadow-2xl border border-whatsapp/20 p-4 md:p-5 flex items-center justify-between gap-3 md:gap-4 pointer-events-auto max-w-md mx-auto">
-            <div class="flex items-center gap-3 md:gap-4 min-w-0">
-                <div class="relative shrink-0">
-                    <div class="w-11 md:w-12 h-11 md:h-12 bg-whatsapp/10 text-whatsapp rounded-2xl flex items-center justify-center text-lg md:text-xl">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <span class="absolute -top-1 -right-1 w-3 md:w-4 h-3 md:h-4 bg-whatsapp rounded-full border-3 md:border-4 border-white animate-pulse"></span>
-                </div>
-                <div class="leading-tight min-w-0">
-                    <div class="text-xs md:text-sm font-bold text-primary-dark truncate">Dr. Gabriel Corrêa</div>
-                    <div class="text-[9px] md:text-[10px] text-accent-gold uppercase font-bold tracking-wider">Online agora</div>
-                </div>
-            </div>
-            <a href="https://wa.me/5547988670233" class="bg-whatsapp text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-bold text-xs md:text-sm shadow-lg shadow-whatsapp/20 shrink-0">
+</div>
+</div>
+</section><section aria-labelledby="differentials-title" class="lp-section lp-differentials diferenciais-section"><div class="lp-page-width lp-differentials-grid"><div class="lp-differentials-intro"><p class="lp-eyebrow"><span aria-hidden="true"></span>Por que escolher este atendimento?</p><h2 id="differentials-title">Estratégia para o caso. Proximidade para a pessoa.</h2><p>Uma atuação clara e personalizada para ajudar você a decidir com mais segurança.</p><a class="lp-button lp-button-gold" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." rel="noopener noreferrer" target="_blank">Quero conversar<i aria-hidden="true" class="fas fa-arrow-right"></i></a></div><div class="lp-differentials-list"><div><span>01</span><p><strong>Atendimento. </strong>Atendimento inicial claro, sigiloso e sem juridiquês.</p></div></div></div></section><section aria-labelledby="faq-title" class="lp-section lp-faq" id="faq"><div class="lp-page-width lp-faq-grid"><div class="lp-faq-intro"><p class="lp-eyebrow"><span aria-hidden="true"></span>Dúvidas frequentes</p><h2 class="text-2xl md:text-4xl font-serif font-bold text-primary-dark" id="faq-title">Dúvidas Frequentes</h2><p class="text-gray-400 font-medium text-sm md:text-base">Ainda tem dúvidas? <a class="text-primary-dark font-bold underline decoration-accent-gold underline-offset-4" href="https://wa.me/5547988670233">Fale conosco no WhatsApp</a></p><a class="lp-text-link" href="#analise-caso">Ainda ficou com dúvida? Fale conosco<i aria-hidden="true" class="fas fa-arrow-right"></i></a></div><div class="lp-faq-list"><details class="group bg-bg-beige rounded-3xl border border-accent-gold/10 overflow-hidden transition-all shadow-sm hover:shadow-md">
+<summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none font-bold text-primary-dark text-base md:text-lg">
+                            Ainda posso recorrer da decisão?
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
+<i class="fas fa-chevron-down text-xs text-accent-gold"></i>
+</span>
+</summary>
+<div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 leading-relaxed text-sm md:text-base">
+                            Sim. Mesmo que já tenha havido uma decisão, existem recursos administrativos e, em muitos casos, a via judicial para anular atos ilegais ou desproporcionais.
+                        </div>
+</details><details class="group bg-bg-beige rounded-3xl border border-accent-gold/10 overflow-hidden transition-all shadow-sm hover:shadow-md">
+<summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none font-bold text-primary-dark text-base md:text-lg">
+                            Vale a pena contratar advogado para PAD?
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
+<i class="fas fa-chevron-down text-xs text-accent-gold"></i>
+</span>
+</summary>
+<div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 leading-relaxed text-sm md:text-base">
+                            Embora não seja obrigatório por lei em alguns casos, a Súmula Vinculante nº 5 do STF diz que a falta de defesa técnica não anula o PAD. A defesa técnica é o que garante que o rito legal seja seguido.
+                        </div>
+</details><details class="group bg-bg-beige rounded-3xl border border-accent-gold/10 overflow-hidden transition-all shadow-sm hover:shadow-md">
+<summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none font-bold text-primary-dark text-base md:text-lg">
+                            Como funciona o atendimento online?
+                            <span class="w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
+<i class="fas fa-chevron-down text-xs text-accent-gold"></i>
+</span>
+</summary>
+<div class="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 leading-relaxed text-sm md:text-base">
+                            É simples e seguro. Você envia fotos ou PDFs dos documentos pelo WhatsApp. Nós analisamos, fazemos uma reunião por vídeo ou áudio e protocolamos tudo digitalmente nos sistemas do órgão público.
+                        </div>
+</details></div></div></section><section aria-labelledby="contact-title" class="lp-contact" id="analise-caso"><div class="lp-page-width lp-contact-grid"><div class="lp-contact-copy"><p class="lp-eyebrow"><span aria-hidden="true"></span>Análise inicial</p><h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-dark leading-tight" id="contact-title">
+                            Vamos analisar seu caso tecnicamente agora.
+                        </h2><p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                            Responda a estas 5 perguntas rápidas para que possamos entender a gravidade da sua situação.
+                        </p><div class="lp-contact-highlights"><div><h2 class="text-xl md:text-2xl font-bold text-primary-dark" id="triagem-title">Qual documento você recebeu?</h2><p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                            Responda a estas 5 perguntas rápidas para que possamos entender a gravidade da sua situação.
+                        </p></div><div><h3 class="text-2xl md:text-3xl font-serif font-bold text-primary-dark mb-3 md:mb-4">Análise Pronta!</h3><p class="text-gray-500 mb-8 md:mb-10 leading-relaxed max-w-sm mx-auto text-sm md:text-base">
+                                            Já mapeamos os riscos iniciais. Clique no botão abaixo para falar com o Dr. Gabriel.
+                                        </p></div><div><h2 class="text-2xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-8 md:mb-10">Não é apenas uma defesa, é estratégia jurídica pura.</h2><p class="text-white/60 text-sm">Verificamos se a Administração Pública ainda possui o direito legal de punir você.</p></div><div><h4 class="font-bold text-base md:text-lg mb-1">Prescrição e Decadência</h4><p class="text-white/60 text-sm">Verificamos se a Administração Pública ainda possui o direito legal de punir você.</p></div><div><h4 class="font-bold text-base md:text-lg mb-1">Nulidades Processuais</h4><p class="text-white/60 text-sm">Identificamos falhas no rito que podem anular todo o processo administrativo.</p></div><div><h4 class="font-bold text-base md:text-lg mb-1">Proporcionalidade</h4><p class="text-white/60 text-sm">Combatemos penas excessivas que não condizem com a suposta infração.</p></div><div><h3 class="text-xl md:text-2xl font-bold mb-8 md:mb-10 border-b border-accent-gold/20 pb-4 md:pb-6">Cronograma de Risco</h3><p class="text-sm text-gray-500 italic">O prazo começa a contar hoje.</p></div></div><div class="lp-contact-notes"><span><i aria-hidden="true" class="fas fa-lock"></i>Seus dados não são publicados.</span><span><i aria-hidden="true" class="fas fa-clock"></i>Resposta conforme disponibilidade da equipe.</span></div></div><form class="lp-contact-form" data-page-name="Defesa de Servidores Públicos" id="contactForm"><div class="lp-form-heading"><span>Fale sobre seu caso</span><strong>É rápido e direto.</strong></div><label for="nome">Seu nome <span>(opcional)</span></label><input autocomplete="name" id="nome" name="nome" placeholder="Como podemos chamar você?" type="text"/><label for="situacao">O que mais se aproxima da sua situação?</label><select id="situacao" name="situacao" required="True"><option disabled="True" selected="True" value="">Selecione uma opção</option><option>PAD</option><option>Sindicância</option><option>Direitos Funcionais</option></select><label for="mensagem">Resumo do caso <span>(opcional)</span></label><textarea id="mensagem" name="mensagem" placeholder="Conte, em poucas linhas, o que aconteceu." rows="4"></textarea><button class="lp-button lp-button-primary lp-form-button" type="submit"><i aria-hidden="true" class="fab fa-whatsapp"></i>Enviar pelo WhatsApp</button><p class="lp-form-helper">Ao continuar, você será direcionado ao WhatsApp para concluir o envio.</p></form></div></section><section aria-labelledby="final-title" class="lp-final-cta"><div class="lp-page-width"><p class="lp-eyebrow"><span aria-hidden="true"></span>Pronto para entender melhor?</p><h2 id="final-title">Mais clareza hoje. Mais segurança para decidir.</h2><p>Reúna o que você já tem, explique a sua situação e descubra qual pode ser o próximo passo.</p><a class="lp-button lp-button-primary" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i>Falar com um advogado</a></div></section><section aria-labelledby="blog-title" class="lp-blog-link"><div class="lp-page-width lp-blog-link-inner"><div><p class="lp-eyebrow"><span aria-hidden="true"></span>Informação para decidir melhor</p><h2 id="blog-title">Leia conteúdos para entender melhor seus direitos.</h2></div><a class="lp-button lp-button-outline" href="blog.html#artigos">Explorar o blog<i aria-hidden="true" class="fas fa-arrow-right"></i></a></div></section></main>
+<footer class="lp-footer"><div class="lp-page-width lp-footer-inner"><div><img alt="Advogado Gabriel Corrêa" class="lp-footer-logo" src="assets/img/logo.png"/><p>G Gabriel Corrêa Advocacia Atuação Metodologia Dúvidas Contato © 2026 Gabriel Corrêa Advocacia. Todos os direitos reservados. As informações contidas neste site têm caráter meramente informativo e não constituem aconselhamento jurídico. O contato inicial não estabelece relação advogado-cliente imediata. A atuação profissional é regida pelo Código de Ética e Disciplina da OAB.</p></div><div class="lp-footer-meta"><span>OAB/SC 63.737</span><a href="index.html">Voltar ao site principal</a><span>© 2026 Gabriel Corrêa Advocacia</span></div></div></footer>
+<!-- Floating Mobile CTA -->
+<div class="fixed bottom-6 md:bottom-8 left-4 md:left-6 right-4 md:right-6 z-[100] translate-y-32 transition-all duration-700 pointer-events-none opacity-0" id="bottom-cta">
+<div class="bg-white rounded-[2rem] shadow-2xl border border-whatsapp/20 p-4 md:p-5 flex items-center justify-between gap-3 md:gap-4 pointer-events-auto max-w-md mx-auto">
+<div class="flex items-center gap-3 md:gap-4 min-w-0">
+<div class="relative shrink-0">
+<div class="w-11 md:w-12 h-11 md:h-12 bg-whatsapp/10 text-whatsapp rounded-2xl flex items-center justify-center text-lg md:text-xl">
+<i class="fab fa-whatsapp"></i>
+</div>
+<span class="absolute -top-1 -right-1 w-3 md:w-4 h-3 md:h-4 bg-whatsapp rounded-full border-3 md:border-4 border-white animate-pulse"></span>
+</div>
+<div class="leading-tight min-w-0">
+<div class="text-xs md:text-sm font-bold text-primary-dark truncate">Dr. Gabriel Corrêa</div>
+<div class="text-[9px] md:text-[10px] text-accent-gold uppercase font-bold tracking-wider">Online agora</div>
+</div>
+</div>
+<a class="bg-whatsapp text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-bold text-xs md:text-sm shadow-lg shadow-whatsapp/20 shrink-0" href="https://wa.me/5547988670233">
                 Chamar
             </a>
-        </div>
-    </div>
+</div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // 1. Marquee
-            const items = ["Processo Administrativo Disciplinar","Sindicância","Defesa Prévia","Aposentadoria","Reintegração","Estabilidade","Mandado de Segurança","Direitos Funcionais","Reversão de Penalidades","OAB/SC 63.737"];
-            const marquee = document.getElementById('marquee');
-            if (marquee) {
-                const full = [...items, ...items, ...items].map(t => `<span>${t}</span>`).join('');
-                marquee.innerHTML = full;
-            }
-
-            // 2. Triage Logic
-            const steps = document.querySelectorAll('.triagem-step');
-            const progress = document.getElementById('triagem-progress-fill');
-            const counter = document.getElementById('triagem-counter');
-            const title = document.getElementById('triagem-title');
-            const orgaoInput = document.getElementById('triagem-orgao');
-            const continueBtn = document.getElementById('triagem-continue');
-            const ctaBtn = document.getElementById('triagem-cta');
-            
-            let currentStep = 1;
-            const totalSteps = 5;
-            const answers = {};
-
-            const stepTitles = {
-                1: "Qual documento você recebeu?",
-                2: "Você já apresentou alguma defesa?",
-                3: "Quanto tempo falta para o prazo vencer?",
-                4: "Qual o órgão ou secretaria da acusação?",
-                5: "Você possui os documentos em mãos?",
-                6: "Tudo pronto para sua análise!"
-            };
-
-            function updateStep(n) {
-                currentStep = n;
-                steps.forEach(s => s.classList.toggle('active', parseInt(s.dataset.step) === n));
-                
-                const pct = n > totalSteps ? 100 : Math.round(((n - 1) / totalSteps) * 100);
-                progress.style.width = pct + '%';
-                
-                if (n <= totalSteps) {
-                    counter.textContent = `PASSO ${n} DE ${totalSteps}`;
-                    title.textContent = stepTitles[n];
-                } else {
-                    counter.textContent = "CONCLUÍDO";
-                    title.textContent = stepTitles[6];
-                    generateWhatsAppLink();
-                }
-            }
-
-            function generateWhatsAppLink() {
-                const base = "https://wa.me/5547988670233?text=";
-                const text = encodeURIComponent(
-                    `Olá! Gostaria de uma análise do meu caso.\n\n` +
-                    `• Documento: ${answers[1] || 'Não informado'}\n` +
-                    `• Já defendeu: ${answers[2] || 'Não informado'}\n` +
-                    `• Prazo: ${answers[3] || 'Não informado'}\n` +
-                    `• Órgão: ${answers[4] || 'Não informado'}\n` +
-                    `• Tem docs: ${answers[5] || 'Não informado'}`
-                );
-                ctaBtn.href = base + text;
-            }
-
-            // Click Handlers
-            document.querySelectorAll('.radio-option').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const step = parseInt(this.closest('.triagem-step').dataset.step);
-                    answers[step] = this.dataset.value;
-                    
-                    // Visual feedback
-                    this.closest('.triagem-step').querySelectorAll('.radio-option').forEach(b => b.classList.remove('selected'));
-                    this.classList.add('selected');
-                    
-                    setTimeout(() => updateStep(step + 1), 300);
-                });
-            });
-
-            document.querySelectorAll('[data-back]').forEach(btn => {
-                btn.addEventListener('click', () => updateStep(currentStep - 1));
-            });
-
-            orgaoInput?.addEventListener('input', (e) => {
-                continueBtn.disabled = e.target.value.length < 3;
-                answers[4] = e.target.value;
-            });
-
-            continueBtn?.addEventListener('click', () => updateStep(5));
-
-            // 3. Reveal on Scroll
-            const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-            // 4. Floating CTA logic
-            window.addEventListener('scroll', () => {
-                const cta = document.getElementById('bottom-cta');
-                if (window.scrollY > 600) {
-                    cta.classList.remove('translate-y-32', 'opacity-0');
-                    cta.classList.add('translate-y-0', 'opacity-100');
-                } else {
-                    cta.classList.add('translate-y-32', 'opacity-0');
-                    cta.classList.remove('translate-y-0', 'opacity-100');
-                }
-            });
-        });
-    </script>
-</body>
+<a aria-label="Falar com um advogado pelo WhatsApp" class="lp-float-whatsapp" href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20do%20site%20e%20gostaria%20de%20falar%20com%20um%20Advogado." rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-whatsapp"></i></a><script defer="True" src="assets/js/landing-pages.js"></script></body>
 </html>
