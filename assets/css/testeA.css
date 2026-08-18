@@ -328,8 +328,11 @@ body.teste-a-page p { margin-top: 0; }
 }
 
 @media (max-width: 480px) {
-    .lp-header-cta { min-height: 42px; padding: .6rem .7rem; font-size: .76rem; }
-    .lp-header-cta i { font-size: 1rem; }
+    .lp-header { flex-wrap: nowrap; gap: .5rem; min-height: 64px; padding: .55rem .75rem; }
+    .lp-logo { flex: 1 1 auto; min-width: 0; }
+    .lp-logo img { width: min(170px, 44vw); }
+    .lp-header-cta { flex: 0 0 auto; min-height: 40px; max-width: 48vw; padding: .55rem .65rem; font-size: .7rem; gap: .35rem; white-space: nowrap; }
+    .lp-header-cta i { font-size: .9rem; }
     .lp-actions .lp-button { width: 100%; }
     .lp-actions { align-items: stretch; }
     .lp-text-link { justify-content: center; }
