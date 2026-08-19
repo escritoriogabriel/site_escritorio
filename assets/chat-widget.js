@@ -33,12 +33,8 @@ class ChatWidget {
             pageMessages: {
                 '/': 'Olá! Precisa de auxílio jurídico? Nossa equipe está pronta para ajudar.',
                 '/sobre.html': 'Conheça melhor nosso trabalho. Tem alguma dúvida?',
-                '/previdenciario.html': 'Quer revisar sua aposentadoria ou benefícios? Podemos ajudar.',
                 '/trabalhista.html': 'Teve seus direitos trabalhistas violados? Converse conosco.',
-                '/civil.html': 'Precisa de orientação em direito civil? Fale conosco.',
                 '/familia.html': 'Está enfrentando questões familiares? Fale agora com um especialista.',
-                '/consumidor.html': 'Sofreu cobrança indevida? Podemos ajudar a resolver.',
-                '/empresarial.html': 'Precisa de consultoria jurídica empresarial? Vamos conversar.',
                 '/contato.html': 'Pronto para dar o próximo passo? Fale conosco agora.'
             },
             flowSteps: [

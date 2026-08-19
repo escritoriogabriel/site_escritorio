@@ -194,7 +194,6 @@ body.teste-a-page p { margin-top: 0; }
 .lp-faq h2,
 .lp-contact h2,
 .lp-final-cta h2,
-.lp-blog-link h2 { max-width: 720px; margin-bottom: 1rem; color: var(--lp-ink); font-size: clamp(2rem, 5vw, 3.6rem); letter-spacing: -.045em; line-height: 1.02; }
 .lp-intro-copy { max-width: 610px; color: var(--lp-muted); font-size: 1rem; line-height: 1.8; }
 .lp-intro-copy p + p { margin-top: 1rem; }
 .lp-section-heading { max-width: 780px; margin-bottom: 2.5rem; }
@@ -283,10 +282,6 @@ body.teste-a-page p { margin-top: 0; }
 .lp-final-cta h2 { margin-inline: auto; }
 .lp-final-cta p:not(.lp-eyebrow) { max-width: 580px; margin: 0 auto 1.6rem; color: var(--lp-muted); line-height: 1.7; }
 .lp-final-cta .lp-button { margin-inline: auto; }
-.lp-blog-link { padding: 2.3rem 0; background: #fff; }
-.lp-blog-link-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; }
-.lp-blog-link h2 { margin-bottom: 0; font-size: clamp(1.6rem, 4vw, 2.3rem); }
-.lp-blog-link .lp-eyebrow { margin-bottom: .6rem; }
 
 .lp-footer { padding: 2.2rem 0; background: var(--lp-ink-deep); color: #fff; }
 .lp-footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.7rem; }
@@ -336,7 +331,6 @@ body.teste-a-page p { margin-top: 0; }
     .lp-actions .lp-button { width: 100%; }
     .lp-actions { align-items: stretch; }
     .lp-text-link { justify-content: center; }
-    .lp-blog-link .lp-button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
