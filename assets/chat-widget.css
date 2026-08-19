@@ -460,3 +460,23 @@
 .chat-widget-messages::-webkit-scrollbar-thumb:hover {
     background: #999;
 }
+
+
+/* Impede que o campo de mensagem force o botão para fora do widget em telas estreitas. */
+.chat-widget-input {
+    min-width: 0;
+    width: 100%;
+}
+
+.chat-widget-send {
+    flex: 0 0 40px;
+    min-width: 40px;
+    max-width: 40px;
+}
+
+@media (max-width: 360px) {
+    .chat-widget-input-area {
+        gap: 8px;
+        padding-inline: 10px;
+    }
+}

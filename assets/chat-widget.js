@@ -281,7 +281,7 @@ class ChatWidget {
             </div>
         `;
         messagesDiv?.insertAdjacentHTML('beforeend', blockHTML);
-        messagesDiv?.scrollTop = messagesDiv?.scrollHeight;
+        if (messagesDiv) messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
         const input = document.getElementById('flowInput');
         input?.focus();
@@ -329,7 +329,7 @@ class ChatWidget {
                 </div>
             `;
             messagesDiv?.insertAdjacentHTML('beforeend', buttonHTML);
-            messagesDiv?.scrollTop = messagesDiv?.scrollHeight;
+            if (messagesDiv) messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }, 1500);
     }
 
@@ -425,7 +425,7 @@ class ChatWidget {
             </div>
         `;
         messagesDiv?.insertAdjacentHTML('beforeend', messageHTML);
-        messagesDiv?.scrollTop = messagesDiv?.scrollHeight;
+        if (messagesDiv) messagesDiv.scrollTop = messagesDiv.scrollHeight;
         this.saveConversationHistory();
     }
 
@@ -444,7 +444,7 @@ class ChatWidget {
             </div>
         `;
         messagesDiv?.insertAdjacentHTML('beforeend', messageHTML);
-        messagesDiv?.scrollTop = messagesDiv?.scrollHeight;
+        if (messagesDiv) messagesDiv.scrollTop = messagesDiv.scrollHeight;
         this.saveConversationHistory();
     }
 
@@ -464,7 +464,7 @@ class ChatWidget {
             </div>
         `;
         messagesDiv?.insertAdjacentHTML('beforeend', typingHTML);
-        messagesDiv?.scrollTop = messagesDiv?.scrollHeight;
+        if (messagesDiv) messagesDiv.scrollTop = messagesDiv.scrollHeight;
     }
 
     /**
