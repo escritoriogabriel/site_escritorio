@@ -27,10 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const pageName = form.dataset.pageName || document.body.dataset.landingPage || document.title.split('|')[0];
         const name = String(formData.get('nome') || '').trim();
         const situation = String(formData.get('situacao') || '').trim();
+        const whatsapp = String(formData.get('whatsapp') || '').trim();
         const message = String(formData.get('mensagem') || '').trim();
         const parts = [
             `Olá! Vim da página de ${pageName} e gostaria de falar com um advogado.`,
             name ? `Meu nome é ${name}.` : '',
+            whatsapp ? `Meu WhatsApp é ${whatsapp}.` : '',
             situation ? `Minha situação se aproxima de: ${situation}.` : '',
             message ? `Resumo: ${message}` : '',
         ].filter(Boolean);
