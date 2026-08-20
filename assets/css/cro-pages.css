@@ -131,7 +131,7 @@ body.cro-page textarea { font: inherit; }
 .cro-authority h2 { margin: 0 0 .8rem; color: #fff; font-family: var(--cro-serif); font-size: clamp(2rem, 4vw, 3.3rem); letter-spacing: -.04em; line-height: 1.08; }
 .cro-authority p { color: rgba(255,255,255,.75); line-height: 1.75; }
 .cro-credential-list { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
-.cro-credential-list li { padding: .55rem .75rem; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 800; }
+.cro-credential-list li { padding: .55rem .75rem; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; color: #fff; font-size: .78rem; font-weight: 800; background-color: rgba(199,164,91,.18) }
 
 .cro-trust-card { text-align: center; }
 .cro-trust-card strong { display: block; margin-bottom: .35rem; color: var(--cro-navy); font-family: var(--cro-serif); font-size: 1.45rem; }
