@@ -149,6 +149,17 @@ body.cro-page textarea { font: inherit; }
 .cro-faq-list details[open] summary { border-bottom: 1px solid var(--cro-line); }
 .cro-faq-list details p { margin: 0; padding: 0 1.1rem 1rem; color: var(--cro-muted); font-size: .85rem; line-height: 1.7; }
 
+.cro-office-location { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .82fr) minmax(360px, 1.18fr); gap: clamp(1.25rem, 4vw, 2rem); align-items: stretch; margin-top: .25rem; }
+.cro-office-location--single { grid-template-columns: 1fr; }
+.cro-office-location-copy { padding: 1.35rem 1.5rem; border: 1px solid rgba(199,164,91,.38); border-radius: var(--cro-radius); background: rgba(255,255,255,.96); color: var(--cro-ink); }
+.cro-office-location-copy h3 { margin: 0 0 .35rem; color: var(--cro-navy); font-family: var(--cro-serif); font-size: clamp(1.35rem, 2.5vw, 1.8rem); }
+.cro-office-location-copy > p:not(.cro-eyebrow) { margin: .25rem 0; color: var(--cro-muted); line-height: 1.6; }
+.cro-office-location-copy .cro-eyebrow { margin-bottom: .55rem; }
+.cro-office-highlight { margin-top: .9rem !important; padding: .75rem .9rem; border-left: 3px solid var(--cro-gold); background: var(--cro-gold-soft); color: var(--cro-navy) !important; }
+.cro-office-highlight strong { font-size: .88rem; line-height: 1.5; }
+.cro-office-map { min-height: 280px; overflow: hidden; border: 1px solid rgba(199,164,91,.38); border-radius: var(--cro-radius); background: #e8edf0; }
+.cro-office-map iframe { display: block; width: 100%; height: 100%; min-height: 280px; border: 0; }
+
 .cro-contact { background: linear-gradient(135deg, var(--cro-navy-deep), var(--cro-navy)); color: #fff; }
 .cro-contact-grid { display: grid; grid-template-columns: minmax(0, .88fr) minmax(360px, 1.12fr); align-items: start; gap: clamp(2rem, 7vw, 6rem); }
 .cro-contact h2 { margin: 0 0 .8rem; color: #fff; font-family: var(--cro-serif); font-size: clamp(2rem, 4vw, 3.3rem); letter-spacing: -.04em; line-height: 1.05; }
@@ -202,8 +213,9 @@ body.cro-page textarea { font: inherit; }
   .cro-proof-grid { grid-template-columns: repeat(2, 1fr); }
   .cro-proof-item:nth-child(2) { border-right: 0; }
   .cro-pain-grid, .cro-card-grid, .cro-benefit-grid, .cro-trust-grid { grid-template-columns: 1fr; }
-  .cro-two-col, .cro-faq, .cro-authority { grid-template-columns: 1fr; gap: 2rem; }
+  .cro-two-col, .cro-faq, .cro-authority, .cro-office-location { grid-template-columns: 1fr; gap: 1.25rem; }
   .cro-authority-photo { width: min(260px, 80vw); margin-inline: auto; }
+  .cro-office-map, .cro-office-map iframe { min-height: 260px; height: 260px; }
   .cro-authority h2 { text-align: center; }
   .cro-credential-list { justify-content: center; }
   .cro-process-grid { grid-template-columns: repeat(2, 1fr); }
