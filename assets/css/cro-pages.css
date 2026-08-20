@@ -96,7 +96,7 @@ body.cro-page textarea { font: inherit; }
 .cro-section--left .cro-section-heading p { margin-left: 0; }
 
 .cro-pain-grid, .cro-card-grid, .cro-benefit-grid, .cro-trust-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.cro-card { height: 100%; padding: 1.45rem; border: 1px solid var(--cro-line); border-radius: var(--cro-radius); background: #fff; box-shadow: var(--cro-shadow-soft); }
+.cro-card { height: 100%; padding: 1.45rem; border: 1px solid var(--cro-line); border-radius: var(--cro-radius); background: #fff; box-shadow: var(--cro-shadow-soft); text-decoration: none; }
 .cro-card i.cro-icon { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; margin-bottom: 1rem; border-radius: 11px; background: var(--cro-gold-soft); color: #957437; font-size: 1.1rem; }
 .cro-card h3 { margin: 0 0 .55rem; color: var(--cro-navy); font-family: var(--cro-sans); font-size: 1.08rem; line-height: 1.25; }
 .cro-card p { margin: 0; color: var(--cro-muted); font-size: .88rem; line-height: 1.7; }
