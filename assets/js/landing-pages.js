@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.cro-faq-list details');
     const whatsappNumber = '5547988670233';
     const conversionSendTo = 'AW-18128635569/1bouCJi_h-UcELGNtMRD';
+    const pageName = document.body.dataset.landingPage || document.title.split('|')[0].trim();
 
     const trackLeadConversion = (eventLabel) => {
         if (typeof window.gtag !== 'function') return;
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.gtag('event', 'conversion', {
             send_to: conversionSendTo,
             event_category: 'lead',
-            event_label: eventLabel,
+            event_label: `${pageName}:${eventLabel}`,
         });
     };
 
@@ -34,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const formData = new FormData(form);
-        const pageName = form.dataset.pageName || document.body.dataset.landingPage || document.title.split('|')[0];
+        const formPageName = form.dataset.pageName || pageName;
         const name = String(formData.get('nome') || '').trim();
         const situation = String(formData.get('situacao') || '').trim();
         const whatsapp = String(formData.get('whatsapp') || '').trim();
         const message = String(formData.get('mensagem') || '').trim();
         const parts = [
-            `Olá! Vim da página de ${pageName} e gostaria de falar com um advogado.`,
+            `Olá! Vim da página de ${formPageName} e gostaria de falar com um advogado.`,
             name ? `Meu nome é ${name}.` : '',
             whatsapp ? `Meu WhatsApp é ${whatsapp}.` : '',
             situation ? `Minha situação se aproxima de: ${situation}.` : '',
