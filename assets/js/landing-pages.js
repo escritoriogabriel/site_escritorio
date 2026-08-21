@@ -1,13 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.getElementById('lpHeader');
     const form = document.getElementById('contactForm');
-    const faqItems = document.querySelectorAll('.lp-faq-list details');
+    const faqItems = document.querySelectorAll('.cro-faq-list details');
     const whatsappNumber = '5547988670233';
     const conversionSendTo = 'AW-18128635569/1bouCJi_h-UcELGNtMRD';
-
-    const updateHeader = () => {
-        if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
-    };
 
     const trackLeadConversion = (eventLabel) => {
         if (typeof window.gtag !== 'function') return;
@@ -18,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
             event_label: eventLabel,
         });
     };
-
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
 
     faqItems.forEach((item) => {
         item.addEventListener('toggle', () => {

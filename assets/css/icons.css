@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fa,
+.fas,
+.fa-solid,
+.fa-arrow-down,
+.fa-arrow-right,
+.fa-ban,
+.fa-bell,
+.fa-bolt,
+.fa-briefcase,
+.fa-building-columns,
+.fa-building-shield,
+.fa-bullseye,
+.fa-calendar-check,
+.fa-calendar-days,
+.fa-chart-line,
+.fa-check,
+.fa-check-circle,
+.fa-children,
+.fa-circle-xmark,
+.fa-clock,
+.fa-comments,
+.fa-compass,
+.fa-envelope,
+.fa-file-circle-check,
+.fa-file-circle-exclamation,
+.fa-file-circle-xmark,
+.fa-file-contract,
+.fa-file-lines,
+.fa-file-signature,
+.fa-folder-open,
+.fa-folder-tree,
+.fa-gavel,
+.fa-globe,
+.fa-graduation-cap,
+.fa-heart-crack,
+.fa-list-check,
+.fa-lock,
+.fa-magnifying-glass,
+.fa-message,
+.fa-paperclip,
+.fa-people-arrows,
+.fa-people-roof,
+.fa-phone,
+.fa-ranking-star,
+.fa-route,
+.fa-scale-balanced,
+.fa-shield-halved,
+.fa-stopwatch,
+.fa-user-check,
+.fa-user-lock,
+.fa-user-shield,
+.fa-user-tie {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.fa-brands,
+.fab,
+.fa-whatsapp {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa-arrow-down::before { content: "\f063"; }
+.fa-arrow-right::before { content: "\f061"; }
+.fa-ban::before { content: "\f05e"; }
+.fa-bell::before { content: "\f0f3"; }
+.fa-bolt::before { content: "\f0e7"; }
+.fa-briefcase::before { content: "\f0b1"; }
+.fa-building-columns::before { content: "\f19c"; }
+.fa-building-shield::before { content: "\e4d8"; }
+.fa-bullseye::before { content: "\f140"; }
+.fa-calendar-check::before { content: "\f274"; }
+.fa-calendar-days::before { content: "\f133"; }
+.fa-chart-line::before { content: "\f201"; }
+.fa-check::before { content: "\f00c"; }
+.fa-check-circle::before { content: "\f058"; }
+.fa-children::before { content: "\e4e1"; }
+.fa-circle-xmark::before { content: "\f057"; }
+.fa-clock::before { content: "\f017"; }
+.fa-comments::before { content: "\f086"; }
+.fa-compass::before { content: "\f14e"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-file-circle-check::before { content: "\e5a0"; }
+.fa-file-circle-exclamation::before { content: "\e4eb"; }
+.fa-file-circle-xmark::before { content: "\e5a1"; }
+.fa-file-contract::before { content: "\f56c"; }
+.fa-file-lines::before { content: "\f15c"; }
+.fa-file-signature::before { content: "\f573"; }
+.fa-folder-open::before { content: "\f07c"; }
+.fa-folder-tree::before { content: "\f802"; }
+.fa-gavel::before { content: "\f0e3"; }
+.fa-globe::before { content: "\f0ac"; }
+.fa-graduation-cap::before { content: "\f19d"; }
+.fa-heart-crack::before { content: "\f7a9"; }
+.fa-list-check::before { content: "\f0ae"; }
+.fa-lock::before { content: "\f023"; }
+.fa-magnifying-glass::before { content: "\f002"; }
+.fa-message::before { content: "\f27a"; }
+.fa-paperclip::before { content: "\f0c6"; }
+.fa-people-arrows::before { content: "\e068"; }
+.fa-people-roof::before { content: "\e537"; }
+.fa-phone::before { content: "\f095"; }
+.fa-ranking-star::before { content: "\e561"; }
+.fa-route::before { content: "\f4d7"; }
+.fa-scale-balanced::before { content: "\f24e"; }
+.fa-shield-halved::before { content: "\f3ed"; }
+.fa-stopwatch::before { content: "\f2f2"; }
+.fa-user-check::before { content: "\f4fc"; }
+.fa-user-lock::before { content: "\f502"; }
+.fa-user-shield::before { content: "\f505"; }
+.fa-user-tie::before { content: "\f508"; }
+.fa-whatsapp::before { content: "\f232"; }
