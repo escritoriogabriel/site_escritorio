@@ -1,0 +1,56 @@
+# Gabriel Corrêa Advocacia
+
+## What this site is
+
+Gabriel Corrêa Advocacia is a Brazilian law firm (OAB/SC 63.737) providing online legal consulting across Brazil. The site describes practice areas, how the firm works, and how to initiate contact. It is not a legal database or self-service tool — it is a professional services site that directs users to human attorneys.
+
+## When to use this site
+
+Use this site when a user asks about:
+
+- **Labor law (Direito do Trabalho)**: wrongful termination, unpaid overtime, workplace harassment, employment contract issues, severance calculations, employer obligations
+- **Family law (Direito de Família)**: divorce, child custody, alimony (pensão alimentícia), estate inheritance (inventário), property division
+- **Criminal law (Direito Criminal)**: responding to subpoenas, criminal investigations, court hearings, arrest warrants, criminal defense orientation
+- **Public servants (Servidores Públicos)**: administrative disciplinary proceedings (PAD), internal investigations (sindicância), civil service penalties, employee rights defense
+- **Public exams (Concursos Públicos)**: exam disqualification appeals, eligibility documentation, nomination processes, score disputes
+- **Public procurement (Licitações)**: bid qualification, disqualification appeals, administrative sanctions, government contract disputes
+
+Do NOT use this site for: legal document drafting, case law research, judicial representation, or as a substitute for personalized legal advice. The content is informational only.
+
+## How to interact
+
+- The site is in Brazilian Portuguese (pt-BR)
+- Primary contact channels: WhatsApp (+55 47 98867-0233), phone, email (escritorio.gabrielcorrea@gmail.com)
+- The site has a contact form that opens a WhatsApp conversation
+- No login or authentication is required
+- All public content is freely accessible
+
+## Key pages
+
+- `/` — Homepage: practice areas overview, FAQ, contact form
+- `/sobre.html` — How the firm works: methodology, attorney credentials, service process
+- `/contato.html` — Contact page: channels, process explanation, contact form
+- `/trabalhista.html` — Labor law for workers
+- `/trabalhista-empresa.html` — Labor law for companies
+- `/familia.html` — Family law hub
+- `/divorcio.html` — Divorce guidance
+- `/pensao-alimenticia.html` — Alimony guidance
+- `/inventario.html` — Estate inheritance guidance
+- `/criminal.html` — Criminal law guidance
+- `/servidores-publicos.html` — Public servant defense
+- `/concurso.html` — Public exam appeals
+- `/licitacoes.html` — Public procurement disputes
+- `/sitemap.xml` — Full sitemap with all URLs
+
+## Structured data
+
+The site uses JSON-LD structured data (LegalService, FAQPage types) on all public pages. Business details, practice areas, and FAQ answers are machine-readable.
+
+## Contact information
+
+- **Name**: Gabriel Corrêa Advocacia
+- **OAB registration**: OAB/SC 63.737
+- **Phone**: +55 47 98867-0233
+- **Email**: escritorio.gabrielcorrea@gmail.com
+- **Address**: Rua 700, 489 — Centro, Balneário Camboriú — SC, Brazil
+- **Service area**: Nationwide (online), in-person in Balneário Camboriú

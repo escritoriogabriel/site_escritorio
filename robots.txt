@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.gabrielcorrea.adv.br/sitemap.xml
+
+# Agent-readable site information
+# https://www.gabrielcorrea.adv.br/llms.txt
