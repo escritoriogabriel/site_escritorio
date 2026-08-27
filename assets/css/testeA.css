@@ -45,8 +45,6 @@ body.teste-a-page p { margin-top: 0; }
     margin-inline: auto;
 }
 .lp-header {
-    position: sticky;
-    top: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
