@@ -461,6 +461,19 @@ body.cro-page textarea {
   background: #fff;
   box-shadow: var(--cro-shadow-soft);
   text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.cro-card:hover,
+.cro-card:focus-visible {
+  border-color: rgba(199, 164, 91, .72);
+  box-shadow: 0 14px 32px rgba(8, 23, 37, .14);
+  transform: translateY(-3px);
+}
+
+.cro-card:focus-visible {
+  outline: 3px solid rgba(199, 164, 91, .38);
+  outline-offset: 3px;
 }
 
 .cro-card i.cro-icon {
