@@ -1436,3 +1436,202 @@ body.cro-page textarea {
     min-height: 280px;
   }
 }
+
+
+/* Contact refresh — lighter CTA + address/map pair */
+.cro-contact {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.25rem, 7vw, 5.25rem) 0 clamp(3.5rem, 7vw, 5.75rem);
+  background: linear-gradient(145deg, #102f68 0%, #163d7d 58%, #214b88 100%);
+  color: #fff;
+}
+.cro-contact::before {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 10%, rgba(255,255,255,.09), transparent 32%), radial-gradient(circle at 90% 85%, rgba(48, 123, 205, .22), transparent 35%);
+  content: '';
+  pointer-events: none;
+}
+.cro-contact > .cro-container {
+  position: relative;
+  z-index: 1;
+}
+.cro-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.7rem, 4vw, 2.75rem);
+  max-width: 1080px;
+}
+.cro-contact-copy {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.cro-contact-copy .cro-eyebrow {
+  margin-bottom: .7rem;
+  color: rgba(255,255,255,.66);
+}
+.cro-contact-copy .cro-eyebrow::before,
+.cro-contact-copy .cro-eyebrow::after {
+  background: rgba(255,255,255,.38);
+}
+.cro-contact h2 {
+  max-width: 760px;
+  margin: 0 0 1.05rem;
+  padding: 0;
+  color: #fff;
+  font-family: var(--cro-serif);
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+.cro-contact-copy > p:not(.cro-eyebrow) {
+  max-width: 640px;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  color: rgba(255,255,255,.76);
+  font-size: .95rem;
+  line-height: 1.65;
+}
+.cro-contact-copy::after {
+  display: block;
+  width: 1px;
+  height: 1.25rem;
+  background: rgba(255,255,255,.25);
+  content: '';
+}
+.cro-contact-cards {
+  display: flex;
+  justify-content: center;
+}
+.cro-channel-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: .72rem 1.35rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #16c44f, #08ad3d);
+  color: #fff !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.2), 0 0 0 5px rgba(30, 211, 83, .12);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.cro-channel-card:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: transparent;
+  box-shadow: 0 14px 28px rgba(0,0,0,.24), 0 0 0 6px rgba(30, 211, 83, .16);
+  filter: brightness(1.04);
+}
+.cro-channel-card:focus-visible,
+.cro-map-link:focus-visible {
+  outline: 3px solid #b8f7c9;
+  outline-offset: 4px;
+}
+.cro-channel-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: auto;
+  height: auto;
+  margin-right: .5rem;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1.15rem;
+}
+.cro-channel-copy {
+  display: block;
+  min-width: 0;
+}
+.cro-channel-copy strong {
+  color: #fff;
+  font-family: var(--cro-sans);
+  font-size: .95rem;
+  line-height: 1.1;
+}
+.cro-channel-copy span,
+.cro-channel-arrow {
+  display: none;
+}
+.cro-office-location {
+  display: grid;
+  grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+.cro-office-location-copy,
+.cro-office-map {
+  min-height: 270px;
+  border-radius: 12px;
+}
+.cro-office-location-copy {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  background: #f2f3f5;
+  color: var(--cro-navy);
+}
+.cro-office-location-copy .cro-eyebrow {
+  margin-bottom: .85rem;
+  color: #6c7077;
+}
+.cro-office-location-copy .cro-eyebrow::before,
+.cro-office-location-copy .cro-eyebrow::after {
+  display: none;
+}
+.cro-office-location-copy h3 {
+  margin: 0 0 .7rem;
+  color: var(--cro-navy);
+  font-family: var(--cro-sans);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  letter-spacing: -.02em;
+}
+.cro-office-address {
+  margin: 0 0 1rem;
+  color: #4f5966;
+  font-size: .92rem;
+  line-height: 1.55;
+}
+.cro-office-address i {
+  color: #2b5e9a;
+}
+.cro-office-highlight {
+  margin: 0 0 .95rem;
+  color: #606975;
+  font-size: .8rem;
+  line-height: 1.5;
+}
+.cro-map-link {
+  margin: 0;
+  min-height: auto;
+  color: #285b94 !important;
+  font-size: .82rem;
+}
+.cro-office-map {
+  min-height: 270px;
+  border: 0;
+  box-shadow: none;
+}
+.cro-office-map iframe {
+  min-height: 270px;
+  border-radius: 12px;
+}
+.cro-map-badge {
+  top: .75rem;
+  left: .75rem;
+}
+@media (max-width: 720px) {
+  .cro-contact { padding-inline: 0; }
+  .cro-office-location { grid-template-columns: 1fr; }
+  .cro-office-location-copy,
+  .cro-office-map,
+  .cro-office-map iframe { min-height: 240px; }
+  .cro-office-map { height: 240px; }
+  .cro-channel-card { min-height: 44px; }
+}
