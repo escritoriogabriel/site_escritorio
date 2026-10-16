@@ -329,7 +329,7 @@ body.link-hub::before {
 }
 
 .link-eyebrow--light {
-  color: #957437;
+  color: #684d1d;
 }
 
 .link-section-heading h2 {
@@ -456,7 +456,7 @@ body.link-hub::before {
 }
 
 .link-topic-list i {
-  color: #957437;
+  color: #684d1d;
   font-size: .58rem;
 }
 
@@ -588,19 +588,19 @@ body.link-hub::before {
 }
 
 .link-footer-actions a > i {
-  color: #957437;
+  color: #684d1d;
 }
 
 .link-footer-actions svg {
   width: .88rem;
   height: .88rem;
   fill: none;
-  stroke: #957437;
+  stroke: #684d1d;
   stroke-width: 1.8;
 }
 
 .link-footer-actions .link-instagram-dot {
-  fill: #957437;
+  fill: #684d1d;
   stroke: none;
 }
 

@@ -482,7 +482,7 @@ body.cro-page textarea {
   margin: 0;
   border-radius: 11px;
   background: var(--cro-gold-soft);
-  color: #957437;
+  color: #684d1d;
   font-size: 1.1rem;
 }
 
@@ -601,7 +601,7 @@ body.cro-page textarea {
   height: 2.25rem;
   border-radius: 9px;
   background: var(--cro-gold-soft);
-  color: #957437;
+  color: #684d1d;
   font-size: .8rem;
   font-weight: 900;
 }
@@ -1359,7 +1359,7 @@ body.cro-page textarea {
 .cro-channel-arrow {
   flex: 0 0 auto;
   margin-left: auto;
-  color: #957437;
+  color: #684d1d;
   font-size: .9rem;
 }
 
@@ -1372,7 +1372,7 @@ body.cro-page textarea {
 .cro-office-address i {
   flex: 0 0 auto;
   margin-top: .28rem;
-  color: #957437;
+  color: #684d1d;
 }
 
 .cro-map-link {
@@ -1421,7 +1421,7 @@ body.cro-page textarea {
 }
 
 .cro-map-badge i {
-  color: #957437;
+  color: #684d1d;
 }
 
 @media (max-width: 720px) {
@@ -1635,3 +1635,69 @@ body.cro-page textarea {
   .cro-office-map { height: 240px; }
   .cro-channel-card { min-height: 44px; }
 }
+
+
+/* Review follow-up: accessible mobile navigation, single persistent mobile CTA, contrast */
+.cro-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-width: 82px;
+  min-height: 44px;
+  padding: .55rem .7rem;
+  border: 1px solid var(--cro-line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--cro-navy);
+  cursor: pointer;
+  font-size: .78rem;
+  font-weight: 800;
+}
+.cro-menu-toggle:focus-visible,
+.cro-nav a:focus-visible {
+  outline: 3px solid #2d6ca8;
+  outline-offset: 3px;
+}
+.cro-persistent-ctas {
+  position: relative;
+  z-index: 1100;
+}
+.cro-persistent-ctas .cro-floating-whatsapp,
+.cro-persistent-ctas .cro-mobile-cta { z-index: auto; }
+body.cro-page .cro-persistent-ctas { isolation: isolate; }
+@media (max-width: 980px) {
+  .cro-menu-toggle { display: inline-flex; }
+  .cro-header-inner { flex-wrap: wrap; }
+  .cro-nav {
+    display: none;
+    order: 3;
+    width: 100%;
+    padding: .5rem 0 .85rem;
+    border-top: 1px solid var(--cro-line);
+  }
+  .cro-nav.is-open { display: grid; gap: .15rem; }
+  .cro-nav a:not(.cro-button) {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .55rem .2rem;
+  }
+  .cro-nav .cro-button { margin-top: .35rem; }
+}
+@media (max-width: 720px) {
+  body.cro-page { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+  .cro-persistent-ctas .cro-floating-whatsapp { display: none; }
+  .cro-persistent-ctas .cro-mobile-cta {
+    padding: .55rem .75rem calc(.55rem + env(safe-area-inset-bottom));
+  }
+}
+@media (min-width: 721px) {
+  .cro-persistent-ctas .cro-mobile-cta { display: none; }
+}
+/* Gold text on the pale gold surface now clears WCAG AA for normal-size text. */
+.cro-proof-item strong,
+.cro-stat strong,
+.cro-highlight-number,
+.cro-number,
+.cro-solution-number { color: #684d1d; }

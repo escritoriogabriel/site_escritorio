@@ -4,7 +4,7 @@ Site institucional estático publicado no GitHub Pages, com páginas orientadas 
 
 ## Páginas públicas
 
-A página inicial apresenta as áreas de atuação por situações concretas. As páginas de área funcionam como landing pages independentes, com H1 orientado à intenção, problemas atendidos, forma de atuação, FAQ, formulário contextualizado e CTAs para WhatsApp.
+A página inicial apresenta as áreas de atuação por situações concretas. As páginas de área funcionam como landing pages independentes, com H1 orientado à intenção, problemas atendidos, forma de atuação, FAQ, informações úteis e CTAs para WhatsApp.
 
 A arquitetura atual inclui as páginas institucionais `/sobre` e `/contato`; a página canônica de Direito do Trabalho para trabalhadores em `/trabalhista`; a página empresarial em `/trabalhista-empresa`; o hub de Direito de Família em `/familia`; e as páginas específicas `/divorcio`, `/pensao-alimenticia` e `/inventario`. Também estão disponíveis `/criminal`, `/servidores-publicos`, `/concurso` e `/licitacoes`.
 
@@ -14,14 +14,14 @@ A URL `/novo` permanece como variante de campanha do Direito do Trabalho, com `n
 
 - `index.html`: página inicial e entrada por problemas.
 - `/sobre`: metodologia, autoridade e forma de trabalho.
-- `/contato`: canais, fluxo pós-contato e formulário geral de qualificação.
+- `/contato`: canais, fluxo pós-contato e canais diretos de atendimento.
 - `/trabalhista`: direitos trabalhistas para trabalhadores.
 - `/trabalhista-empresa`: prevenção, defesa e orientação para empresas.
 - `/familia`: hub de Direito de Família.
 - `/divorcio`, `/pensao-alimenticia` e `/inventario`: landing pages específicas de Família.
 - `/criminal`, `/servidores-publicos`, `/concurso` e `/licitacoes`: landing pages específicas por intenção.
 - `assets/css/cro-pages.css`: identidade visual e comportamento responsivo compartilhados.
-- `assets/js/landing-pages.js`: cabeçalho, FAQ, rastreamento de conversões e formulário integrado ao WhatsApp.
+- `assets/js/landing-pages.js`: cabeçalho, menu mobile acessível, FAQ e rastreamento de conversões.
 - `assets/img/`: imagens usadas nas páginas públicas.
 - `sitemap.xml`: URLs canônicas indexáveis.
 

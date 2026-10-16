@@ -282,7 +282,7 @@ body.site-page-criminal .right-card .icon { display: grid; place-items: center; 
 body.site-page-criminal .right-card h3 { margin: 0 0 .45rem; color: var(--site-ink); font-family: var(--font-sans, Inter, sans-serif); font-size: 1rem; }
 body.site-page-criminal .right-card p { margin: 0; color: var(--site-muted); font-size: .88rem; line-height: 1.65; }
 
-/* Análise: cria uma separação visual clara entre a introdução, triagem e formulário. */
+/* Análise: cria uma separação visual clara entre a introdução, triagem e contato. */
 body.lp-replicated .lp-contact-enhanced { position: relative; }
 body.lp-replicated .lp-contact-enhanced .lp-contact-grid { align-items: stretch; gap: clamp(1.4rem, 4vw, 3rem); }
 body.lp-replicated .lp-contact-enhanced .lp-contact-copy { padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid rgba(201, 169, 97, .28); border-radius: 18px; background: rgba(255, 255, 255, .06); }

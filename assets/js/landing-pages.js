@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const menuToggle = document.querySelector('.cro-menu-toggle');
+    const mainNav = document.querySelector('#cro-main-nav');
+    if (menuToggle && mainNav) {
+        const closeMenu = () => {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            mainNav.classList.remove('is-open');
+        };
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            mainNav.classList.toggle('is-open', !isOpen);
+            if (!isOpen) mainNav.querySelector('a')?.focus();
+        });
+        mainNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') { closeMenu(); menuToggle.focus(); }
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 980) closeMenu();
+        });
+    }
     const faqItems = document.querySelectorAll('.cro-faq-list details');
     const conversionSendTo = 'AW-18128635569/1bouCJi_h-UcELGNtMRD';
     const pageName = document.body.dataset.landingPage || document.title.split('|')[0].trim();

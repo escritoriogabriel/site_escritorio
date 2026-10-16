@@ -46,13 +46,16 @@
 
 <body class="cro-page" data-landing-page="Divórcio, partilha e guarda">
   <a class="cro-skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="cro-topbar"><a href="tel:+5547988670233"><i class="fas fa-phone"></i> (47) 98867-0233</a> · Atendimento
-    online em todo o Brasil</div>
   <header class="cro-header" id="lpHeader">
+    <div class="cro-topbar"><a href="tel:+5547988670233"><i class="fas fa-phone"></i> (47) 98867-0233</a> · Atendimento
+    online em todo o Brasil</div>
     <div class="cro-container cro-header-inner">
       <a class="cro-logo" href="/" aria-label="Gabriel Corrêa Advocacia — página inicial"><img src="../assets/img/logo.png"
           alt="Gabriel Corrêa Advocacia"></a>
-      <nav class="cro-nav" aria-label="Navegação principal">
+      <button class="cro-menu-toggle" type="button" aria-expanded="false" aria-controls="cro-main-nav">
+        <span class="cro-menu-toggle-icon" aria-hidden="true"><i class="fas fa-bars"></i></span><span class="cro-menu-toggle-label">Menu</span>
+      </button>
+      <nav class="cro-nav" id="cro-main-nav" aria-label="Navegação principal">
         <a href="/">Início</a><a href="/sobre">Como atuamos</a><a href="/contato">Contato</a>
         <a class="cro-button cro-button--whatsapp"
           href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Div%C3%B3rcio%20e%20quero%20organizar%20minha%20situa%C3%A7%C3%A3o%20familiar."
@@ -72,7 +75,7 @@
             <a class="cro-button cro-button--whatsapp"
               href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Div%C3%B3rcio%20e%20quero%20organizar%20minha%20situa%C3%A7%C3%A3o%20familiar."
               target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Quero organizar meu divórcio</a>
-            <a class="cro-button cro-button--outline" href="#contato">Enviar meu caso para análise</a>
+            <a class="cro-button cro-button--outline" href="#contato">Iniciar conversa pelo WhatsApp</a>
           </div>
           <ul class="cro-confidence">
             <li><i class="fas fa-user-tie"></i> OAB/SC 63.737</li>
@@ -399,12 +402,14 @@
     <div class="cro-container cro-footer-bottom"><span>© 2026 Gabriel Corrêa Advocacia.</span><span>Conteúdo
         informativo. A análise individual depende dos fatos e documentos.</span></div>
   </footer>
-  <a class="cro-floating-whatsapp"
+  <div class="cro-persistent-ctas" role="region" aria-label="Contato rápido">
+    <a class="cro-floating-whatsapp"
     href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20advogado."
     aria-label="Falar pelo WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-  <div class="cro-mobile-cta"><a class="cro-button cro-button--whatsapp"
+    <div class="cro-mobile-cta"><a class="cro-button cro-button--whatsapp"
       href="https://wa.me/5547988670233?text=Ol%C3%A1%21%20Quero%20falar%20com%20um%20advogado%20agora." target="_blank"
       rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Falar com um advogado agora</a></div>
+  </div>
   <script defer src="../assets/js/landing-pages.js?v=fd9da67"></script>
 </body>
 
