@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
     const faqItems = document.querySelectorAll('.cro-faq-list details');
-    const whatsappNumber = '5547988670233';
     const conversionSendTo = 'AW-18128635569/1bouCJi_h-UcELGNtMRD';
     const pageName = document.body.dataset.landingPage || document.title.split('|')[0].trim();
 
@@ -45,30 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    form?.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const formPageName = form.dataset.pageName || pageName;
-        const name = String(formData.get('nome') || '').trim();
-        const situation = String(formData.get('situacao') || '').trim();
-        const whatsapp = String(formData.get('whatsapp') || '').trim();
-        const message = String(formData.get('mensagem') || '').trim();
-        const parts = [
-            `Olá! Vim da página de ${formPageName} e gostaria de falar com um advogado.`,
-            name ? `Meu nome é ${name}.` : '',
-            whatsapp ? `Meu WhatsApp é ${whatsapp}.` : '',
-            situation ? `Minha situação se aproxima de: ${situation}.` : '',
-            message ? `Resumo: ${message}` : '',
-        ].filter(Boolean);
-
-        // A ação automática do Google Ads cobre a URL explícita /index.html.
-        // Nas demais páginas, o evento direto garante a mensuração do formulário.
-        if (!window.location.pathname.endsWith('/index.html')) {
-            trackLeadConversion('form_submit');
-        }
-
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(parts.join(' '))}`;
-        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    });
 });
