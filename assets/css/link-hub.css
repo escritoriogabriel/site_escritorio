@@ -794,3 +794,35 @@ body.link-hub::before {
     transition-duration: .01ms !important;
   }
 }
+
+/* Links mobile refinement: WhatsApp first, one area per row, concise fallback CTA. */
+.link-area-grid .link-whatsapp--area-card {
+  grid-column: 1 / -1;
+  min-height: 72px;
+  border-color: rgba(30, 189, 98, .5);
+}
+.link-area-grid .link-whatsapp--area-card .link-whatsapp-copy strong {
+  font-size: .9rem;
+}
+.link-help--whatsapp {
+  border-color: rgba(30, 189, 98, .3);
+  background: linear-gradient(110deg, #f4fbf6, #fff);
+}
+.link-help--whatsapp .link-help-icon {
+  background: #168a4b;
+  color: #fff;
+}
+.link-help--whatsapp > a {
+  background: #168a4b;
+}
+.link-help--whatsapp > a:hover {
+  background: #116d3c;
+}
+@media (max-width: 600px) {
+  .link-area-grid {
+    grid-template-columns: 1fr;
+  }
+  .link-area-grid .link-whatsapp--area-card {
+    grid-column: auto;
+  }
+}
