@@ -1701,3 +1701,155 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
 .cro-highlight-number,
 .cro-number,
 .cro-solution-number { color: #684d1d; }
+
+/* Contact redesign: lighter closing section, clearer attorney CTA and integrated map. */
+.cro-contact {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(199, 164, 91, .16), transparent 28rem),
+    linear-gradient(135deg, #f7fafb 0%, #eef4f5 100%);
+  color: var(--cro-ink);
+}
+.cro-contact::before {
+  position: absolute;
+  top: -7rem;
+  left: -5rem;
+  width: 17rem;
+  height: 17rem;
+  border: 1px solid rgba(16, 36, 58, .08);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2rem rgba(16, 36, 58, .025), 0 0 0 4rem rgba(16, 36, 58, .018);
+  content: "";
+  pointer-events: none;
+}
+.cro-contact-grid {
+  position: relative;
+  z-index: 1;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+.cro-contact-copy {
+  padding-top: .45rem;
+}
+.cro-contact .cro-eyebrow {
+  color: #684d1d;
+}
+.cro-contact h2 {
+  max-width: 12ch;
+  padding: 0;
+  color: var(--cro-navy);
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.04;
+}
+.cro-contact-copy > p {
+  max-width: 46ch;
+  padding: 0;
+  color: #526273;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.cro-contact-cards {
+  gap: .8rem;
+}
+.cro-channel-card {
+  min-height: 92px;
+  border: 1px solid rgba(22, 138, 75, .42);
+  background: linear-gradient(135deg, #168a4b, #116d3c);
+  color: #fff !important;
+  box-shadow: 0 16px 30px rgba(17, 109, 60, .18);
+}
+.cro-channel-card:hover {
+  border-color: #0e5b31;
+  background: linear-gradient(135deg, #1a9955, #116d3c);
+  box-shadow: 0 20px 34px rgba(17, 109, 60, .25);
+}
+.cro-channel-copy strong,
+.cro-channel-copy span,
+.cro-channel-arrow {
+  color: #fff !important;
+}
+.cro-channel-icon--whatsapp {
+  border-color: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .14);
+  color: #fff;
+}
+.cro-office-location {
+  gap: clamp(1rem, 3vw, 1.5rem);
+  margin-top: .65rem;
+}
+.cro-office-location-copy {
+  align-self: stretch;
+  padding: clamp(1.2rem, 2.6vw, 1.65rem);
+  border: 1px solid rgba(16, 36, 58, .1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 14px 34px rgba(16, 36, 58, .06);
+}
+.cro-office-location-copy h3 {
+  padding: 0;
+  font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+}
+.cro-office-location-copy > p:not(.cro-eyebrow):not(.cro-office-highlight) {
+  padding: 0;
+}
+.cro-office-highlight {
+  border-left-color: #684d1d;
+  background: #f4ead4;
+}
+.cro-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .85rem;
+  padding: .7rem .85rem;
+  border: 1px solid rgba(16, 36, 58, .14);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--cro-navy) !important;
+  font-size: .78rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.cro-map-link:hover {
+  border-color: rgba(104, 77, 29, .65);
+  background: #fffdf8;
+  transform: translateY(-1px);
+}
+.cro-office-map {
+  position: relative;
+  min-height: 300px;
+  border: 6px solid #fff;
+  border-radius: 18px;
+  background: #dfe8e9;
+  box-shadow: 0 16px 34px rgba(16, 36, 58, .14), 0 0 0 1px rgba(16, 36, 58, .1);
+}
+.cro-office-map iframe {
+  min-height: 300px;
+  filter: saturate(.82) contrast(1.03);
+}
+.cro-map-badge {
+  top: .85rem;
+  left: .85rem;
+  padding: .5rem .7rem;
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 999px;
+  background: rgba(8, 23, 37, .86);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 800;
+  box-shadow: 0 6px 14px rgba(8, 23, 37, .2);
+}
+@media (max-width: 720px) {
+  .cro-contact h2 {
+    max-width: 15ch;
+  }
+  .cro-contact-copy > p {
+    font-size: .92rem;
+  }
+  .cro-office-map,
+  .cro-office-map iframe {
+    min-height: 250px;
+    height: 250px;
+  }
+}
