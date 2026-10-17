@@ -1479,7 +1479,6 @@ body.cro-page textarea {
 }
 .cro-contact h2 {
   max-width: 760px;
-  margin: 0 0 1.05rem;
   padding: 0;
   color: #fff;
   font-family: var(--cro-serif);
@@ -1735,7 +1734,6 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
   color: #684d1d;
 }
 .cro-contact h2 {
-  max-width: 12ch;
   padding: 0;
   color: var(--cro-navy);
   font-size: clamp(2rem, 4vw, 3.15rem);
@@ -1752,11 +1750,9 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
   gap: .8rem;
 }
 .cro-channel-card {
-  min-height: 92px;
-  border: 1px solid rgba(22, 138, 75, .42);
-  background: linear-gradient(135deg, #168a4b, #116d3c);
+  background: linear-gradient(135deg, var(--cro-green), var(--cro-green-deep));
   color: #fff !important;
-  box-shadow: 0 16px 30px rgba(17, 109, 60, .18);
+  box-shadow: 0 8px 20px rgba(31, 189, 98, .25);
 }
 .cro-channel-card:hover {
   border-color: #0e5b31;
