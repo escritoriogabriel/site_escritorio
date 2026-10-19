@@ -1694,6 +1694,275 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
 @media (min-width: 721px) {
   .cro-persistent-ctas .cro-mobile-cta { display: none; }
 }
+
+/* Mobile lead experience: keep the content readable, tappable and inside the viewport. */
+@media (max-width: 720px) {
+  .cro-container {
+    width: min(100% - 2rem, 1160px);
+  }
+
+  .cro-topbar {
+    padding: .55rem .75rem;
+    line-height: 1.35;
+  }
+
+  .cro-header-inner {
+    gap: .7rem;
+  }
+
+  .cro-logo img {
+    width: min(176px, 55vw);
+  }
+
+  .cro-hero {
+    padding: 2.75rem 0 3rem;
+  }
+
+  .cro-hero-grid {
+    gap: 1.75rem;
+  }
+
+  .cro-hero h1 {
+    max-width: none;
+    padding-left: 0;
+    font-size: clamp(2rem, 9.5vw, 2.7rem);
+    line-height: 1.04;
+  }
+
+  .cro-hero-lead {
+    padding-left: 0;
+    font-size: .98rem;
+    line-height: 1.65;
+  }
+
+  .cro-actions {
+    width: 100%;
+    margin-inline: 0;
+    align-items: stretch;
+    gap: .65rem;
+  }
+
+  .cro-actions .cro-button,
+  .cro-actions .cro-text-link {
+    width: 100%;
+    min-height: 50px;
+    justify-content: center;
+  }
+
+  .cro-hero-card {
+    width: 100%;
+    max-width: none;
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  .cro-hero-card h2,
+  .cro-hero-card > p {
+    padding: 0;
+  }
+
+  .cro-hero-card h2 {
+    font-size: 1.55rem;
+  }
+
+  .cro-confidence {
+    gap: .55rem .8rem;
+    margin-top: 1.1rem;
+    padding-left: 0;
+    font-size: .74rem;
+  }
+
+  .cro-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cro-proof-item {
+    min-width: 0;
+    padding: .9rem .55rem;
+    border-right: 1px solid rgba(255, 255, 255, .14);
+  }
+
+  .cro-proof-item:nth-child(even) {
+    border-right: 0;
+  }
+
+  .cro-proof-item strong {
+    font-size: .86rem;
+    line-height: 1.25;
+  }
+
+  .cro-proof-item span {
+    display: block;
+    font-size: .68rem;
+    line-height: 1.35;
+  }
+
+  .cro-section {
+    padding: 3.25rem 0;
+  }
+
+  .cro-section-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .cro-section-heading h2,
+  .cro-two-col h2,
+  .cro-contact h2 {
+    padding: 0;
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+    line-height: 1.08;
+  }
+
+  .cro-section-heading p,
+  .cro-two-col > div > p {
+    padding: 0;
+    font-size: .93rem;
+    line-height: 1.65;
+  }
+
+  .cro-card-grid .cro-card,
+  .cro-pain-grid .cro-card,
+  .cro-benefit-grid .cro-card {
+    grid-template-columns: 2.45rem minmax(0, 1fr);
+    column-gap: .65rem;
+    padding: 1.1rem;
+    border-radius: 13px;
+  }
+
+  .cro-card-grid .cro-card i.cro-icon,
+  .cro-pain-grid .cro-card i.cro-icon,
+  .cro-benefit-grid .cro-card i.cro-icon {
+    width: 2.45rem;
+    height: 2.45rem;
+    font-size: .98rem;
+  }
+
+  .cro-card-grid .cro-card h3,
+  .cro-pain-grid .cro-card h3,
+  .cro-benefit-grid .cro-card h3 {
+    padding: 0;
+    font-size: .98rem;
+    line-height: 1.3;
+  }
+
+  .cro-card-grid .cro-card > p,
+  .cro-pain-grid .cro-card > p,
+  .cro-benefit-grid .cro-card > p {
+    padding: .65rem 0 0;
+    font-size: .84rem;
+    line-height: 1.55;
+  }
+
+  .cro-card-grid .cro-card > .cro-text-link {
+    padding-top: .7rem;
+    font-size: .82rem;
+  }
+
+  .cro-two-col {
+    gap: 1.75rem;
+  }
+
+  .cro-check-list {
+    padding: 0;
+    gap: .7rem;
+  }
+
+  .cro-check-list li {
+    font-size: .86rem;
+    line-height: 1.5;
+  }
+
+  .cro-solution-row h3,
+  .cro-solution-row p {
+    padding: 0;
+  }
+
+  .cro-solution-row p {
+    font-size: .84rem;
+    line-height: 1.55;
+  }
+
+  .cro-process-grid {
+    gap: .7rem;
+    padding-inline: 0;
+  }
+
+  .cro-process-step {
+    padding: .8rem;
+  }
+
+  .cro-process-step h3,
+  .cro-process-step p {
+    padding: 0;
+  }
+
+  .cro-process-step p {
+    font-size: .8rem;
+  }
+
+  .cro-contact-grid {
+    gap: 1.4rem;
+  }
+
+  .cro-channel-card {
+    min-height: 82px;
+    padding: .85rem;
+    gap: .75rem;
+  }
+
+  .cro-channel-icon {
+    flex-basis: 2.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.25rem;
+  }
+
+  .cro-channel-copy strong {
+    font-size: 1.05rem;
+  }
+
+  .cro-channel-copy span {
+    font-size: .76rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .cro-container {
+    width: min(100% - 1.25rem, 1160px);
+  }
+
+  .cro-logo img {
+    width: min(156px, 52vw);
+  }
+
+  .cro-menu-toggle {
+    min-width: 76px;
+    padding-inline: .55rem;
+    font-size: .72rem;
+  }
+
+  .cro-proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cro-proof-item,
+  .cro-proof-item:nth-child(even) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .14);
+  }
+
+  .cro-proof-item:last-child {
+    border-bottom: 0;
+  }
+
+  .cro-hero h1 {
+    font-size: 2rem;
+  }
+
+  .cro-hero-card {
+    padding: 1rem;
+  }
+}
 /* Gold text on the pale gold surface now clears WCAG AA for normal-size text. */
 .cro-proof-item strong,
 .cro-stat strong,
