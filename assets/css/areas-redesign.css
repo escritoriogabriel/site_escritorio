@@ -1566,3 +1566,6 @@ details p {
         padding-bottom: 15px
     }
 }
+/* Badges de confiança — informações rápidas de atendimento */
+.confidence-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.confidence-badge{display:inline-flex;align-items:center;min-height:30px;padding:6px 10px;border:1px solid rgba(8,23,37,.12);border-radius:999px;background:rgba(255,255,255,.72);color:var(--navy);font-size:11px;font-weight:800;line-height:1.2;letter-spacing:.01em;box-shadow:0 4px 12px rgba(16,36,58,.04)}.confidence-badge:before{content:"";width:6px;height:6px;flex:0 0 auto;margin-right:7px;border-radius:50%;background:var(--gold)}
+@media(max-width:820px){.confidence-badges{gap:6px;margin-top:12px}.confidence-badge{min-height:28px;padding:5px 8px;font-size:10px}}
