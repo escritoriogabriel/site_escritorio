@@ -1345,7 +1345,6 @@ details p {
     }
 
     .authority img {
-        width: 100%;
         height: 260px;
         border-radius: 12px 54px 12px 54px;
         box-shadow: 12px 12px 0 rgba(199, 164, 91, .18)
@@ -1430,7 +1429,8 @@ details p {
     }
 
     .authority img {
-        height: 220px
+        height: 250px;
+        width: 55%;
     }
 
     .authority h2 {
