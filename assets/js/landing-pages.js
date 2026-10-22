@@ -66,3 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+    const mobileCtas = document.querySelectorAll('.mobile-cta, .cro-mobile-cta');
+    const updateMobileCtaVisibility = () => {
+        const scrollableHeight = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+        const reachedThreshold = window.scrollY >= scrollableHeight * 0.25;
+        mobileCtas.forEach((cta) => cta.classList.toggle('is-scroll-visible', reachedThreshold));
+    };
+    if (mobileCtas.length) {
+        updateMobileCtaVisibility();
+        window.addEventListener('scroll', updateMobileCtaVisibility, { passive: true });
+        window.addEventListener('resize', updateMobileCtaVisibility);
+    }

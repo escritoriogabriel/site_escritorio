@@ -2127,3 +2127,71 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
 /* Canais de contato — padrão visual replicado nas páginas institucionais */
 .cro-channel-card--phone .cro-channel-icon{background:linear-gradient(135deg,#527b91,#2d526b)}.cro-channel-card--email .cro-channel-icon{background:linear-gradient(135deg,#c7a45b,#95702d)}.cro-channel-card--static{cursor:default}.cro-channel-card--static:hover{transform:none;border-color:rgba(199,164,91,.38);box-shadow:0 18px 42px rgba(0,0,0,.16)}.cro-channel-card--email .cro-channel-copy span{overflow-wrap:anywhere}.cro-channel-card--static .cro-channel-copy span{line-height:1.55}
 @media(max-width:720px){.cro-channel-card{min-height:82px;padding:1rem}.cro-channel-copy strong{font-size:1.05rem}.cro-channel-copy span{font-size:.78rem}}
+
+/* Ajustes finais de responsividade e CTA compartilhados */
+.cro-mobile-cta {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(110%);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+.cro-mobile-cta.is-scroll-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.cro-office-location,
+.cro-office-map,
+.cro-office-location-copy {
+  min-width: 0;
+}
+.cro-office-map {
+  width: 100%;
+  overflow: hidden;
+}
+.cro-office-map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 720px) {
+  .cro-contact .cro-actions,
+  .cro-final-cta .cro-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .7rem;
+  }
+  .cro-contact .cro-actions .cro-button,
+  .cro-final-cta .cro-actions .cro-button {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+  }
+  .cro-office-location {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cro-office-map {
+    min-height: 250px;
+  }
+  .cro-office-map iframe {
+    height: 250px;
+  }
+}
+
+/* Link secundário para reduzir a densidade de CTAs */
+.cro-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--cro-navy);
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  opacity: .84;
+}
+.cro-text-link:hover { opacity: 1; color: var(--cro-navy); }
