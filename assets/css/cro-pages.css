@@ -1504,6 +1504,7 @@ body.cro-page textarea {
 .cro-contact-cards {
   display: flex;
   justify-content: center;
+  padding-bottom: 25px;
 }
 .cro-channel-card {
   display: inline-flex;
@@ -1994,7 +1995,7 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
 .cro-contact-grid {
   position: relative;
   z-index: 1;
-  gap: clamp(2rem, 5vw, 4.5rem);
+  gap: 20px;
 }
 .cro-contact-copy {
   padding-top: .45rem;
