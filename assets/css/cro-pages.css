@@ -1969,7 +1969,7 @@ body.cro-page .cro-persistent-ctas { isolation: isolate; }
 .cro-stat strong,
 .cro-highlight-number,
 .cro-number,
-.cro-solution-number { color: #684d1d; }
+.cro-solution-number { color: #f4ead4; }
 
 /* Contact redesign: lighter closing section, clearer attorney CTA and integrated map. */
 .cro-contact {
